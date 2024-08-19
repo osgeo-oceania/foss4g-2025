@@ -34,7 +34,7 @@ const eventGeoJSON = {
         description: "Conference Dinner",
         name: "Frogmore Creek Wine Bar",
         link: "https://maps.app.goo.gl/hnhztSTp7nrhqT8e6",
-        minZoom: 12,
+        minZoom: 11,
       },
       geometry: {
         coordinates: [147.3358, -42.88206],
@@ -48,7 +48,7 @@ const eventGeoJSON = {
         link: "https://maps.app.goo.gl/NRZsP7jjzYcashz99",
         name: "Deep South Brewing Co.",
         description: "Icebreaker",
-        minZoom: 12,
+        minZoom: 11,
       },
       geometry: {
         coordinates: [147.3211, -42.87504],
@@ -91,7 +91,7 @@ export const MapComponent = (props: MapProps) => {
         const map = e.target;
 
         const image = await map.loadImage("/imgs/marker.png");
-        map.addImage("marker", image.data, { pixelRatio: 3 });
+        map.addImage("marker", image.data, { pixelRatio: 3.5 });
       }}
       mapStyle="https://api.protomaps.com/styles/v2/light.json?key=51cf1275231eb004"
       dragRotate={false}
@@ -141,6 +141,8 @@ export const MapComponent = (props: MapProps) => {
             "text-offset": [0, 0],
             "text-max-width": 16,
             "text-padding": 0,
+            "icon-padding": 0,
+            "icon-allow-overlap": true,
           }}
           paint={{
             "text-color": "#333",
@@ -155,9 +157,9 @@ export const MapComponent = (props: MapProps) => {
           layout={{
             "text-field": ["get", "description"],
             "text-font": ["Noto Sans Italic"],
-            "text-size": 14,
+            "text-size": 13,
             "text-anchor": "top",
-            "text-offset": [0, 1.25],
+            "text-offset": [0, 1.3],
             "text-max-width": 16,
             "text-padding": 0,
           }}

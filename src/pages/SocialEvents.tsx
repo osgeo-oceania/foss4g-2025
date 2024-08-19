@@ -48,7 +48,7 @@ const SocialEvents = () => {
           initialViewState={{
             longitude: 147.32355,
             latitude: -42.8844,
-            zoom: 13,
+            zoom: 12,
           }}
         />
         <section className="mx-auto mt-8 prose-base max-w-none">
