@@ -11,7 +11,9 @@ The general program outline for sessions and social events is as follows...
 | Thursday 7 November  | Day 2 of the Conference | Women in Geospatial Breakfast    |
 | Friday 8 November    | Community Day           | TBC get together                 |
 
-We expect to be able to publish the full schedule of daily conference sessions and workshops on the **16th August 2024**.
+**Call for papers and community voting are now closed**.
+
+We will announce the program and schedule shortly.
 
 <!-- ## Want to be part of our Program?
 
@@ -19,10 +21,10 @@ Presentations and Workshops are the beating heart of the FOSS4G SotM Oceania con
 
 For more information visit our [Call for Papers](/#/call-for-papers) page. -->
 
-## Community Voting
+<!-- ## Community Voting
 
 Community voting is now open for the FOSS4G SotM Oceania 2024 conference. You can vote for your favourite presentations to help shape the conference program.
 
 <button target="https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/">
     Vote now!
-</button>
+</button> -->

@@ -29,7 +29,7 @@ If you decide at the last minute to attend a workshop, that's fine! Just purchas
 | Afternoon | General registration for one Afternoon workshop on Monday 16th October 2023. | $100       |
 
 <br />
-<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2023-workshops">
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops">
     Workshop Registration
 </button>
 <br /><br />

@@ -3,7 +3,6 @@ import Blockquote from "../components/Blockquote";
 import Button from "../components/Button";
 import Table from "../components/Table";
 
-
 export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   blockquote: {
     component: Blockquote,
@@ -45,7 +44,12 @@ export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   },
   img: {
     props: {
-      className: "popout-image"
-    }
-  }
+      className: "popout-image",
+    },
+  },
+  ul: {
+    props: {
+      className: "list-disc list-inside",
+    },
+  },
 };

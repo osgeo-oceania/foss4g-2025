@@ -2,12 +2,12 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import AccommodationMD from "./documents/attend/accommodation.md";
 import OurConferenceVenueMD from "./documents/attend/our-conference-venue.md";
 import RegisterMD from "./documents/attend/register.md";
-import SocialEventsMD from "./documents/attend/social-events.md";
 import TravelGrantProgramMD from "./documents/attend/travel-grant-program.md";
 import CallForPapersMD from "./documents/call-for-papers.md";
 import CodeOfConduct from "./documents/code-of-conduct.md";
 import CommunityDayMD from "./documents/community-day.md";
 import GetInvolvedMD from "./documents/get-involved.md";
+import ScheduleMd from "./documents/schedule-placeholder.md";
 // import LogoCompetitionMD from "./documents/logo-competition.md";
 import OrganisersMD from "./documents/organisers.md";
 import PresentMD from "./documents/present.md";
@@ -21,6 +21,7 @@ import { MailingList } from "./pages/MailingList";
 import { MarkdownPage } from "./pages/MarkdownPage";
 import NoPage from "./pages/NoPage";
 import ProgramMD from "./pages/Program";
+import SocialEvents from "./pages/SocialEvents";
 
 export default function App() {
   return (
@@ -42,6 +43,18 @@ export default function App() {
             element={
               <MarkdownPage
                 markdownUrl={CallForPapersMD}
+                headerImg={{
+                  url: "/imgs/present-header.jpg",
+                  positionY: "30%",
+                }}
+              />
+            }
+          />
+          <Route
+            path="program/schedule"
+            element={
+              <MarkdownPage
+                markdownUrl={ScheduleMd}
                 headerImg={{
                   url: "/imgs/present-header.jpg",
                   positionY: "30%",
@@ -123,18 +136,7 @@ export default function App() {
               />
             }
           />
-          <Route
-            path="program/social-events"
-            element={
-              <MarkdownPage
-                markdownUrl={SocialEventsMD}
-                headerImg={{
-                  url: "/imgs/present_crop_01.png",
-                  positionY: "0px",
-                }}
-              />
-            }
-          />
+          <Route path="program/social-events" element={<SocialEvents />} />
           <Route
             path="program/workshops"
             element={

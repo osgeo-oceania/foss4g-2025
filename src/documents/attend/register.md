@@ -12,7 +12,6 @@
     Conference Registration
 </button>
 
-
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 6th and Thursday 7th November.
 
 It also includes access to the Ice Breaker on Tuesday 5th November and the Community Day on Friday 8th November.
@@ -27,13 +26,12 @@ It also includes access to the Ice Breaker on Tuesday 5th November and the Commu
 
 ## Optional extras
 
-| Type                          | Details                                                                                                                                                                                                                                  | Cost (AUD)   |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| Conference Dinner             | Held on the evening of Wednesday 6th November, location TBA. Includes 3 course meal and drink tickets.                                                                                                                                   | $125         |
-| Women in Geospatial Breakfast | Held on the morning of Thursday 7th November, location TBA.                                                                                                                                                                              | TBA          |
-| Conference T-Shirt            | Limited edition conference T-Shirt. Available in either a men's or women's cut, multiple sizes, and dark or light design (see below).                                                                                                                                    | $40          |
+| Type                          | Details                                                                                                                                                                                                                                          | Cost (AUD)   |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| Conference Dinner             | Held on the evening of Wednesday 6th November, location TBA. Includes 3 course meal and drink tickets.                                                                                                                                           | $125         |
+| Women in Geospatial Breakfast | Held on the morning of Thursday 7th November, location TBA.                                                                                                                                                                                      | TBA          |
+| Conference T-Shirt            | Limited edition conference T-Shirt. Available in either a men's or women's cut, multiple sizes, and dark or light design (see below).                                                                                                            | $40          |
 | Good Mojo                     | FOSS4G SotM Oceania is a community run conference by OSGeo Oceania. As a not-for-profit organisation, any additional donations to our Good Mojo fund will go toward supporting community events, travel grant programmes and future conferences. | Your Choice! |
-
 
 <div>
     <img className="w-28 h-auto md:w-auto md:h-96" src="/imgs/2024/tshirts_mockup.webp">
@@ -51,7 +49,7 @@ Workshops will be held on Tuesday 5th November 2024. We will post more informati
 | Morning   | General registration for one Morning workshop on Monday 16th October 2023.   | $100       |
 | Afternoon | General registration for one Afternoon workshop on Monday 16th October 2023. | $100       |
 
-<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2023-workshops" className="m-auto mt-8 block">
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" className="m-auto mt-8 block">
     Workshop Registration
 </button> -->
 
