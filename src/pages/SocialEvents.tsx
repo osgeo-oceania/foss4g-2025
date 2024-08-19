@@ -1,6 +1,5 @@
 import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
-import { Layer, Source } from "react-map-gl/maplibre";
 import { MapComponent } from "../components/Map";
 import SocialEventsIntroMD from "../documents/attend/social-events-intro.md";
 import SocialEventsMD from "../documents/attend/social-events.md";
