@@ -42,15 +42,17 @@ const SocialEvents = () => {
             children={introMddText}
           />
         </section>
-        <MapComponent
-          width={"auto"}
-          height={400}
-          initialViewState={{
-            longitude: 147.32355,
-            latitude: -42.8844,
-            zoom: 12,
-          }}
-        />
+        <div style={{ marginLeft: "calc((-100vw + 100%) / 2)" }}>
+          <MapComponent
+            width={"100vw"}
+            height={400}
+            initialViewState={{
+              longitude: 147.32355,
+              latitude: -42.8844,
+              zoom: 12,
+            }}
+          />
+        </div>
         <section className="mx-auto mt-8 prose-base max-w-none">
           <Markdown
             options={{
