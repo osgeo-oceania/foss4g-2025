@@ -3,6 +3,7 @@
   - [Register](#/attend)
   - [Travel Grant Program](#/attend/travel-grant-program)
   - [Accommodation](#/attend/accommodation)
+  - [Adventures](#/attend/adventures)
 - [PROGRAM](#/program/outline)
   - [Outline](#/program/outline)
   - [Schedule](#/program/schedule)
