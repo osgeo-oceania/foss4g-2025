@@ -10,7 +10,7 @@ and end with some longer adventures.
 Go to [MONA](https://mona.net.au/visit). This is pretty much required. You'll need
 around half a day and if you can spare the money, take the return ferry from
 Salamanca. Get lunch out there, explore the museum, pay extra for little side
-adventures and get lost in the tunnels or laze about on the lawn. There's 
+adventures and get lost in the tunnels or laze about on the lawn. There's
 usually Jazz on a Saturday afternoon.
 
 ### Mount Wellington
@@ -97,3 +97,5 @@ Maria Island is a national park and wildlife sanctuary accessible by ferry from
 Triabunna. Known for its stunning landscapes, historic ruins, and abundant wildlife
 (including wombats and Tasmanian devils), it's perfect for hiking and exploring.
 The Painted Cliffs and the Fossil Cliffs are highlights of the island.
+
+![Hobart waterfront near CSIRO](/imgs/csiro-waterfront.jpeg)

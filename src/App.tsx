@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import AccommodationMD from "./documents/attend/accommodation.md";
+import AdventuresMD from "./documents/attend/adventures.md";
 import OurConferenceVenueMD from "./documents/attend/our-conference-venue.md";
 import RegisterMD from "./documents/attend/register.md";
 import TravelGrantProgramMD from "./documents/attend/travel-grant-program.md";
@@ -102,11 +103,23 @@ export default function App() {
             }
           />
           <Route
-            path="attend/Accommodation"
+            path="attend/accommodation"
             element={
               <MarkdownPage
                 markdownUrl={AccommodationMD}
                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
+              />
+            }
+          />
+          <Route
+            path="attend/adventures"
+            element={
+              <MarkdownPage
+                markdownUrl={AdventuresMD}
+                headerImg={{
+                  url: "/imgs/sunset.jpeg",
+                  positionY: "20%",
+                }}
               />
             }
           />
