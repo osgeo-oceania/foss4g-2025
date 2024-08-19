@@ -89,6 +89,7 @@ export const MapComponent = (props: MapProps) => {
       cooperativeGestures={true}
       onLoad={async (e) => {
         const map = e.target;
+        map.touchZoomRotate.disableRotation();
 
         const image = await map.loadImage("/imgs/marker.png");
         map.addImage("marker", image.data, { pixelRatio: 3.5 });
