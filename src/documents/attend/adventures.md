@@ -107,4 +107,6 @@ Triabunna. Known for its stunning landscapes, historic ruins, and abundant wildl
 (including wombats and Tasmanian devils), it's perfect for hiking and exploring.
 The Painted Cliffs and the Fossil Cliffs are highlights of the island.
 
+**What you need more inspo? Check the [Hobart Tourism](https://tasmania.com/points-of-interest/hobart/) out.**
+
 ![Hobart waterfront near CSIRO](/imgs/csiro-waterfront.jpeg)
