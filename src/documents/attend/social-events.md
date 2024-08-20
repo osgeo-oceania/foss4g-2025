@@ -27,7 +27,7 @@ Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious br
 - **Wednesday morning 7am**
 - Location TBA
 - Dress: Cool daywear geogeek - no PJs
-- Tickets: $10 [register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)
+- Tickets: $10 <!--[register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)-->- registration will open soon
 
 The WIG breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/nz).
 
