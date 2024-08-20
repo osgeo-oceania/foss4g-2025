@@ -13,17 +13,19 @@ Salamanca. Get lunch out there, explore the museum, pay extra for little side
 adventures and get lost in the tunnels or laze about on the lawn. There's
 usually Jazz on a Saturday afternoon.
 
-### Mount Wellington
+### Mount Wellington/kunanyi
 
 You can drive to the top and catch some fantastic views, but take a jumper as it's
 always cold. About halfway up is called the Springs, and there are a whole bunch
 of [short and long walks](https://tastrails.com/category/location/hobart-and-surrounding/wellington-park/)
 from here. There are tourist buses and bike hiring things, but you can just catch
-a ride with someone and explore too.
+a ride with someone and explore too. Beware that clouds like to hug the top of the
+mountain from time to time, just look up when you are in the city and if the peak
+looks clear it's time to go!
 
 ### Salamanca Market
 
-If you're in Hobart on a Saturday, don't miss the
+If you're in Hobart on a Saturday morning, don't miss the
 [Salamanca Market](https://www.salamancamarket.com.au/). This vibrant market features
 local produce, crafts, and food stalls. It's a great place to experience Tasmanian
 culture and pick up unique souvenirs.
@@ -32,20 +34,34 @@ culture and pick up unique souvenirs.
 
 ### Mount Field National Park
 
-Mount Field National Park is a great day trip from Hobart, offering a variety of
+[Mount Field National Park](https://parks.tas.gov.au/explore-our-parks/mount-field-national-park)
+is a great day trip from Hobart, offering a variety of
 hiking trails through lush rainforests, alpine meadows, and past stunning waterfalls
 like Russell Falls. It's a perfect introduction to Tasmania's diverse landscapes.
+The low part of the park offers easy and beautiful walks through the rainforest,
+but if you are looking for something more challenging you can drive to the top
+and take your pick from a range of stunning mountain hikes.
 
 ### Huon Valley
 
-The Huon Valley, just south of Hobart, is known for its apple orchards, vineyards,
+The [Huon Valley](https://www.huonvalleytas.com/), just south of Hobart, is known for its apple orchards, vineyards,
 and artisanal producers. Take a scenic drive through the countryside, stopping at
 farm gates, cider houses, and charming towns like Cygnet and Geeveston. Don't miss
 the Tahune AirWalk for a bird's-eye view of the Huon River and surrounding forests.
 
+### Tasman Peninsula
+
+The [Tasman Peninsula](https://tasmania.com/points-of-interest/tasman-peninsula/),
+southeast of Hobart, is known for its dramatic sea cliffs, historic
+Port Arthur, and the Three Capes Track. Cruise along the coast to spot wildlife like seals
+and whales, explore the ruins of the former convict settlement, admire impressive geological
+formations such as the Tasman Arch and the Tessellated pavement, and hike a section of the
+Three Capes Track for stunning views of the peninsula's rugged beauty.
+
 ### Freycinet National Park
 
-Freycinet National Park, located on the east coast, is famous for its stunning
+[Freycinet National Park](https://parks.tas.gov.au/explore-our-parks/freycinet-national-park),
+located on the east coast, is famous for its stunning
 beaches, including Wineglass Bay, often rated among the world's best beaches.
 The park offers a variety of hiking trails, including the popular Wineglass Bay
 Lookout walk, which provides breathtaking views. You can also enjoy kayaking,
@@ -83,13 +99,6 @@ white sand beaches, turquoise waters, and orange lichen-covered boulders. It's a
 spot for hiking, swimming, fishing, and kayaking. Stay in one of the beachside campgrounds
 or eco-lodges to fully immerse yourself in the coastal beauty. On the way there from Hobart,
 you can stop at Bicheno for a lobster roll.
-
-### Tasman Peninsula
-
-The Tasman Peninsula, southeast of Hobart, is known for its dramatic sea cliffs, historic
-Port Arthur, and the Three Capes Track. Cruise along the coast to spot wildlife like seals
-and whales, explore the ruins of the former convict settlement, and hike a section of the
-Three Capes Track for stunning views of the peninsula's rugged beauty.
 
 ### Maria Island
 
