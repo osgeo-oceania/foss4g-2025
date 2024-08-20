@@ -54,6 +54,10 @@ const SponsorshipLevels = () => {
                 link: "https://www.tomtom.com/",
                 imgSrc: "./imgs/sponsors/tomtom.png",
               },
+              {
+                link: "https://www.openwork.nz/",
+                imgSrc: "./imgs/sponsors/openwork.png",
+              },
             ]}
           />
           <SponsorshipLevel
