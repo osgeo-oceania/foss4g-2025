@@ -1,9 +1,5 @@
 # Attend FOSS4G SotM Oceania
 
-<!-- [Call for Papers](/#/call-for-papers) is now open. -->
-
-[Community voting](https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/) is now open. You can vote for your favourite presentations to help shape the conference program.
-
 [Join our Mailing List](#/mailing-list) to stay up to date with the latest news and announcements.
 
 ## Registration
@@ -39,26 +35,17 @@ It also includes access to the Ice Breaker on Tuesday 5th November and the Commu
 
 ## Workshop Registration
 
-Workshops will be held on Tuesday 5th November 2024. We will post more information when the program is finalised.
+Workshops will be held on Tuesday 5th November, 2024.
 
-<!--
 **Each workshop will have capacity for a maximum of 25 participants, so register quick!**
 
-| Type      | Details                                                                      | Cost (AUD) |
-| --------- | ---------------------------------------------------------------------------- | ---------- |
-| Morning   | General registration for one Morning workshop on Monday 16th October 2023.   | $100       |
-| Afternoon | General registration for one Afternoon workshop on Monday 16th October 2023. | $100       |
+| Type      | Details                                          | Cost (AUD) |
+| --------- | ------------------------------------------------ | ---------- |
+| Morning   | General registration for one Morning workshop.   | $100       |
+| Afternoon | General registration for one Afternoon workshop. | $100       |
 
 <button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" className="m-auto mt-8 block">
     Workshop Registration
-</button> -->
+</button>
 
 ![Salamanca at Hobart's waterfront](/imgs/waterfront.jpg)
-
-<!-- page name: Attend
-everything needs to be linked to a page
-venues need to be included
-update with Pretalx link
-status: ongoing development
- need to add in links to all - which will change in August when we get the full program
-can this have a index for the child pages-->
