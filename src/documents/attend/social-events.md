@@ -1,6 +1,7 @@
 ## Icebreaker Dinner
 
-Whether you've been toiling the day in the workshops or have just flown in, join us at the Icebreaker get-together. Meet up with old friends and make some new acquaintances. You will be kicking yourself if you miss this one! See you there!
+Whether you've been toiling the day in the workshops or have just flown in, join us at the icebreaker get-together.
+Meet up with old friends and make some new acquaintances. You will be kicking yourself if you miss this one!
 
 - **Tuesday night 5pm till late**
 - [Deep South Brewing Co.](https://www.deepsouthbrewing.co/) — [220 Argyle St, North Hobart](https://maps.app.goo.gl/NRZsP7jjzYcashz99)
@@ -15,7 +16,7 @@ The Icebreaker dinner is proudly sponsored by [North Road](https://north-road.co
 
 If you are a recipient of the **Travel Grant Program** (TGP), this is your breakfast. This is a chance to meet other TGP recipients and for our oganising committee to connect with you.
 
-- **Tuesday morning 7am**
+- **Wednesday morning 7am**
 - Location TBA
 - Dress: Cool daywear geogeek - no PJs
 - Tickets: invite only
@@ -24,10 +25,10 @@ If you are a recipient of the **Travel Grant Program** (TGP), this is your break
 
 Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious breakfast and hear from the amazing experiences of TBC. You do not have to identify as Female to attend this event!
 
-- **Wednesday morning 7am**
+- **Thursday morning 7am**
 - Location TBA
 - Dress: Cool daywear geogeek - no PJs
-- Tickets: $10 <!--[register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)-->- registration will open soon
+- Tickets: $10 [register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)
 
 The WIG breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/au).
 
