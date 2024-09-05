@@ -23,14 +23,15 @@ If you are a recipient of the **Travel Grant Program** (TGP), this is your break
 
 ## Women in Geospatial Breakfast
 
-Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious breakfast and hear from the amazing experiences of TBC. You do not have to identify as Female to attend this event!
+Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious breakfast. You do not have to identify as Female to attend this event!
 
 - **Thursday morning 7am**
-- Location TBA
+- [Hamlet Cafe](https://www.hamlet.org.au/) — [40 Molle St, Hobart](https://maps.app.goo.gl/PuVBpmNjjACjQkb77)
+  - Afterwards is a beautiful 15 minute walk to the C3 Conference Centre up the [Hobart Rivulet walking track](https://maps.app.goo.gl/iZmYwR38tbbWi9NG6).
 - Dress: Cool daywear geogeek - no PJs
 - Tickets: $10 [register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)
 
-The WIG breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/au).
+The Women in Geospatial breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/au).
 
 <img src="/imgs/sponsors/nova.png" width="200px" alt="Nova Systems" style="width:200px; margin-left:-15px; margin-right:0;" />
 
