@@ -18,11 +18,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-white sticky top-0 z-40 flex-none w-full mx-auto">
+    <header className="shadow-sm bg-white sticky top-0 z-40 flex-none w-full mx-auto">
       <nav className="container relative flex px-6 py-1 mx-auto text-black h-16">
         <a href="/" className="flex items-center justify-start">
           <div>
-            <HeaderLogo/>
+            <HeaderLogo />
 
             <p className="hidden">FOSS4G SotM Oceania 2024</p>
           </div>
@@ -64,10 +64,11 @@ const Header = () => {
             </span>
           </button>
           <div
-            className={`${menuOpen
+            className={`${
+              menuOpen
                 ? "translate-x-0 opacity-100"
                 : "opacity-0 -translate-x-full"
-              } absolute inset-x-0 z-30 w-full px-4 py-8 mt-4 space-y-6 transition-all duration-300 ease-in-out text-black bg-white top-10 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:space-y-0 md:-mx-6 md:flex md:items-center md:justify-center`}
+            } absolute inset-x-0 z-30 w-full px-4 py-8 mt-4 space-y-6 transition-all duration-300 ease-in-out text-black bg-white top-10 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:space-y-0 md:-mx-6 md:flex md:items-center md:justify-center`}
           >
             <Markdown
               options={{
