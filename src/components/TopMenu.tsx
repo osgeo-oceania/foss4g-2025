@@ -82,7 +82,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
         <a
           href={menuItem.href}
           onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0 });
             setMenuOpen(false);
           }}
           className="font-semibold block text-sky transition-colors duration-300 md:px-4 lg:px-6 hover:text-black text-center"
@@ -100,7 +100,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
           <a
             href={menuItem.href}
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0 });
               setMenuOpen(false);
             }}
             className="hidden md:block font-semibold text-sky transition-colors duration-300 md:px-4 lg:px-6 hover:text-black text-center min-w-full"
@@ -144,7 +144,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
                   key={subIndex}
                   href={subMenuItem.href}
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0 });
                   }}
                   className="block px-4 py-2 hover:text-blue-700 whitespace-nowrap"
                 >
@@ -161,7 +161,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
                   key={subIndex}
                   href={subMenuItem.href}
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0 });
                     setMenuOpen(false);
                   }}
                   className="block px-4 py-2 text-sky hover:bg-blue-900 text-center"
