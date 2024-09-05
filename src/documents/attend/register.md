@@ -30,22 +30,15 @@ It also includes access to the Ice Breaker on Tuesday 5th November and the Commu
 | Good Mojo                     | FOSS4G SotM Oceania is a community run conference by OSGeo Oceania. As a not-for-profit organisation, any additional donations to our Good Mojo fund will go toward supporting community events, travel grant programmes and future conferences. | Your Choice! |
 
 <div>
-    <img className="w-28 h-auto md:w-auto md:h-96" src="/imgs/2024/tshirts_mockup.webp">
+    <img className="inline-image mx-auto mt-4" width="500px" src="/imgs/2024/tshirts_mockup.webp">
 </div>
 
-## Workshop Registration
+## Workshop Program
 
-Workshops will be held on Tuesday 5th November, 2024.
+The workshop program has been announced!
 
-**Each workshop will have capacity for a maximum of 25 participants, so register quick!**
-
-| Type      | Details                                          | Cost (AUD) |
-| --------- | ------------------------------------------------ | ---------- |
-| Morning   | General registration for one Morning workshop.   | $100       |
-| Afternoon | General registration for one Afternoon workshop. | $100       |
-
-<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" className="m-auto mt-8 block">
-    Workshop Registration
+<button target="/#/program/workshops" >
+    Workshop Program
 </button>
 
-![Salamanca at Hobart's waterfront](/imgs/waterfront.jpg)
+![Hobart waterfront near CSIRO](/imgs/csiro-waterfront.jpeg)

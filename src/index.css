@@ -14,7 +14,7 @@ code {
 @tailwind components;
 @tailwind utilities;
 
-p:has(> .popout-image) {
+p:has(> .popout-image:not(.inline-image)) {
   margin-left: calc((-100vw + 100%) / 2);
   width: 100vw;
 
@@ -27,21 +27,17 @@ p:has(> .popout-image) {
   padding-bottom: 0.75rem /* 12px */;
 }
 
-.popout-image {
+.popout-image:not(.inline-image) {
   margin: auto;
   width: 1080px;
   max-width: 100%;
 }
 
-#attend table {
-  max-width: 850px;
-}
-
-.sponsor-card  {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+.sponsor-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   transition: all 0.15s ease-in-out;
 }
 
 .sponsor-card:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

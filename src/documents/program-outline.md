@@ -28,3 +28,21 @@ Community voting is now open for the FOSS4G SotM Oceania 2024 conference. You ca
 <button target="https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/">
     Vote now!
 </button> -->
+
+## Registration
+
+Conference registration is now open
+
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024">
+    Conference Registration
+</button>
+
+## Workshop Program
+
+The workshop program has been announced!
+
+<button target="/#/program/workshops" >
+    Workshop Program
+</button>
+
+![Salamanca near Hobart's waterfront](/imgs/salamanca-crop.jpeg)

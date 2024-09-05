@@ -56,6 +56,20 @@ const eventGeoJSON = {
       },
       id: 2,
     },
+    {
+      type: "Feature",
+      properties: {
+        link: "https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi",
+        name: "University of Tasmania",
+        description: "Workshops Venue",
+        minZoom: 11,
+      },
+      geometry: {
+        coordinates: [147.3258573388764, -42.903989669246535],
+        type: "Point",
+      },
+      id: 3,
+    },
   ],
 };
 

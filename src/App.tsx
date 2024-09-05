@@ -15,7 +15,6 @@ import PresentMD from "./documents/present.md";
 import ProductShowcaseMD from "./documents/product-showcase.md";
 import ProgramOutlineMD from "./documents/program-outline.md";
 import SponsorshipMD from "./documents/sponsorship.md";
-import WorkshopsMD from "./documents/workshops.md";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
 import { MailingList } from "./pages/MailingList";
@@ -23,6 +22,7 @@ import { MarkdownPage } from "./pages/MarkdownPage";
 import NoPage from "./pages/NoPage";
 import ProgramMD from "./pages/Program";
 import SocialEvents from "./pages/SocialEvents";
+import Workshops from "./pages/Workshops";
 
 export default function App() {
   return (
@@ -150,18 +150,7 @@ export default function App() {
             }
           />
           <Route path="program/social-events" element={<SocialEvents />} />
-          <Route
-            path="program/workshops"
-            element={
-              <MarkdownPage
-                markdownUrl={WorkshopsMD}
-                headerImg={{
-                  url: "/imgs/workshop_crop_01.png",
-                  positionY: "0px",
-                }}
-              />
-            }
-          />
+          <Route path="program/workshops" element={<Workshops />} />
           <Route
             path="program/get-involved"
             element={

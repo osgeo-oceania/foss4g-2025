@@ -14,7 +14,11 @@ const Button: React.FC<ButtonProps> = ({ children, target, className }) => {
         className
       }
     >
-      <a href={target} target="_blank" rel="noreferrer">
+      <a
+        href={target}
+        target={!target?.startsWith("/#") ? "_blank" : undefined}
+        rel="noreferrer"
+      >
         {children}
       </a>
     </button>

@@ -7,6 +7,7 @@
 - [PROGRAM](#/program/outline)
   - [Outline](#/program/outline)
   - [Schedule](#/program/schedule)
+  - [Workshops](#/program/workshops)
   - [Social Events](#/program/social-events)
   <!-- - [Community Voting](https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/) -->
 - [SPONSORSHIP](#/sponsorship)

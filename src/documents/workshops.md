@@ -1,93 +1,33 @@
 # Workshops
 
 Workshops are a great way to get practical experience in a hands-on session, guided by expert practitioners and project developers.
-<br />
-The workshops will be held on **Monday 16th October 2023** and are half day morning or
-afternoon time slots (up to 4 hours long).
-<br />
-We are aiming to offer a diverse range of workshops for a variety of skill levels.
-<br/><br />
 
-> Check out the workshops on our [Schedule](https://2024.foss4g-oceania.org/#/program)
+The workshops will be held on **Tuesday 5 November 2024** and are half day morning or afternoon time slots (up to 4 hours long).
 
-<br /><br />
-
-Workshops will be held in the [WF Building Level 4](https://use.mazemap.com/#v=1&config=AUT&zlevel=4&center=174.765377,-36.853580&zoom=20.3&campusid=103) located opposite the WG Building across the plaza.
-
-<br />
-
-If you decide at the last minute to attend a workshop, that's fine! Just purchase via Registration link below.
-<br /><br />
+Workshops will be held at the University of Tasmania' Sandy Bay campus. Classrooms are in the [Social Sciences building](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi). The regsitration and break area is in the [Studio Theatre](https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi). More details will be posted closer to the event.
 
 ## Workshop Registration
 
 **Each workshop will have capacity for a maximum of 25 participants, so register quick!**
 
-| Type      | Details                                                                      | Cost (NZD) |
-| --------- | ---------------------------------------------------------------------------- | ---------- |
-| Morning   | General registration for one Morning workshop on Monday 16th October 2023.   | $100       |
-| Afternoon | General registration for one Afternoon workshop on Monday 16th October 2023. | $100       |
+| Type      | Coordinator     | Details                                                                                              | Cost (AUD) |
+| --------- | --------------- | ---------------------------------------------------------------------------------------------------- | ---------- |
+| Morning   | Byron Cochrane  | Drama Free GeoNetwork 4.x Migration                                                                  | $100       |
+| Morning   | Elisa Puccioni  | PostGIS 101 - A hands-on introduction to working with spatial data in PostgreSQL                     | $100       |
+| Morning   | John Bryant     | Collecting data in the field with free & open source geospatial tools: QGIS, QField, and Mergin Maps | $100       |
+| Afternoon | Daniel Paez     | Spatial Data Interoperability: Mastering QGIS layers to Illustrator and CAD Integration              | $100       |
+| Afternoon | Nyall Dawson    | Data Processing in QGIS - beyond the basics                                                          | $100       |
+| Afternoon | John HIldebrand | Running and Auto Scaling Geoserver and PostgreSQL/PostGIS without managing servers in the AWS Cloud  | $100       |
 
-<br />
-<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops">
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" className="mt-8 block">
     Workshop Registration
 </button>
-<br /><br />
-N.B. All attendees'email addresses will be passed onto to Workshop Organisers for facilitation of workshop activities only. 
-<br /><br /><br />
+
+If you decide at the last minute to attend a workshop, that's fine! Just purchase via Registration link above.
+
+N.B. All attendees' email addresses will be passed onto to Workshop Organisers for facilitation of workshop activities only.
+
 <hr />
-# Running a workshop?
-<br />
+## Running a workshop?
 
-> Review your workshop details: [here](https://talks.osgeo.org/foss4g-sotm-oceania-2023/cfp).
-
-<!-->
-<br />
-### Call for Proposals
-
-If you're passionate about a topic and you're skillful at conveying your hands-on knowledge and
-experience to others, this is for you!
-<br /><br />
-Workshops are a great opportunity to pass on your knowledge to our enthusiastic community
-members.
-<br /><br />
-The workshops will be held on **Monday 16th October 2023** and are half day morning or
-afternoon time slots (up to 4 hours long).
-<br /><br />
-Each workshop is expected to have capacity for 18-32 participants.
-<br /><br />
-We are aiming to offer a diverse range of workshops for a variety of skill levels.
-<br /><br />
-Check out the list of workshops offered at our previous conferences for some inspiration or feel free
-to propose something completely different!
-
-- [2019 Workshops](https://2019.foss4g-oceania.org/schedule/2019-11-12)
-- [2018 Workshops](https://2018.foss4g-oceania.org/program/workshops.html)
-
-<br />
-### To review your proposal for a workshop
-
-> Visit our call for papers page [here](https://talks.osgeo.org/foss4g-sotm-oceania-2023/cfp).
-
-<br /><br />
-
-> Workshop submissions have now closed. Check back soon to see what workshops we have on offer.
-
-<br /><br />
-Submissions will then be voted on by the community during the month of July. Once community voting has been completed, successful applications will be notified in the first week of August. If you are successful in your application, you will still need to purchase a conference ticket.
-<br /><br />
-For more info contact the workshop team at mailto: workshops@foss4g-oceania.org
-<br /><br />
-
-> Note that all presentations and workshop content is expected to adhere to our [code of conduct](/#/code-of-conduct).
-
-<br /><br />
-
-### Workshop Session Timeframes
-
-**Monday 16th October 2023**
-
-- Morning Session: 9am - 12pm
-- Lunch 12pm - 1pm
-- Afternoon Sessions: 1pm - 5pm
-  -->
+You can review your workshop details [here](https://talks.osgeo.org/foss4g-sotm-oceania-2024/).
