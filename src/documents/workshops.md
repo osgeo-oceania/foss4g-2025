@@ -4,7 +4,7 @@ Workshops are a great way to get practical experience in a hands-on session, gui
 
 The workshops will be held on **Tuesday 5 November 2024** and are half day morning or afternoon time slots (up to 4 hours long).
 
-Workshops will be held at the University of Tasmania' Sandy Bay campus. Classrooms are in the [Social Sciences building](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi). The regsitration and break area is in the [Studio Theatre](https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi). More details will be posted closer to the event.
+Workshops will be held at the University of Tasmania's Sandy Bay campus. Classrooms are in the [Social Sciences building](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi). The regsitration and break area is in the [Studio Theatre](https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi). More details will be posted closer to the event.
 
 ## Workshop Registration
 
