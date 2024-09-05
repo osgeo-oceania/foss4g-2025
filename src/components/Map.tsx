@@ -80,7 +80,7 @@ const eventGeoJSON = {
         link: "https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi",
         name: "University of Tasmania",
         description: "Workshops Venue",
-        minZoom: 11.1,
+        minZoom: 11,
         maxZoom: 16,
         id: "3",
       },
@@ -226,7 +226,7 @@ export const MapComponent = (props: MapProps) => {
             "text-max-width": 16,
             "text-padding": 0,
             "icon-padding": 0,
-            "icon-allow-overlap": true,
+            "symbol-sort-key": ["get", "minZoom"],
           }}
           paint={{
             "text-color": "#333",
@@ -250,6 +250,8 @@ export const MapComponent = (props: MapProps) => {
             "text-offset": [0, 1.3],
             "text-max-width": 16,
             "text-padding": 0,
+            "text-ignore-placement": true,
+            "icon-ignore-placement": true,
           }}
           paint={{
             "text-color": "#555",
