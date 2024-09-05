@@ -62,6 +62,21 @@ const eventGeoJSON = {
     {
       type: "Feature",
       properties: {
+        link: "https://maps.app.goo.gl/whjGxnh8oxksVVq18",
+        name: "Hamlet Cafe",
+        description: "Women in Geo Breakfast",
+        minZoom: 11.1,
+        maxZoom: 24,
+        id: "6",
+      },
+      geometry: {
+        coordinates: [147.32131, -42.88831],
+        type: "Point",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         link: "https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi",
         name: "University of Tasmania",
         description: "Workshops Venue",
@@ -70,7 +85,7 @@ const eventGeoJSON = {
         id: "3",
       },
       geometry: {
-        coordinates: [147.3258573388764, -42.903989669246535],
+        coordinates: [147.32586, -42.90399],
         type: "Point",
       },
     },
@@ -86,7 +101,7 @@ const eventGeoJSON = {
         id: "4",
       },
       geometry: {
-        coordinates: [147.3258573388764, -42.903989669246535],
+        coordinates: [147.32586, -42.90399],
         type: "Point",
       },
     },
@@ -101,7 +116,7 @@ const eventGeoJSON = {
         id: "5",
       },
       geometry: {
-        coordinates: [147.3267384389889, -42.904108107537276],
+        coordinates: [147.32674, -42.90411],
         type: "Point",
       },
     },

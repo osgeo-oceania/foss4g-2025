@@ -47,9 +47,9 @@ const SocialEvents = () => {
             width={"100vw"}
             height={400}
             initialViewState={{
-              longitude: 147.32355,
-              latitude: -42.8844,
-              zoom: 12,
+              longitude: 147.32031,
+              latitude: -42.88898,
+              zoom: 12.3,
             }}
           />
         </div>
