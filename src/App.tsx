@@ -23,7 +23,7 @@ import NoPage from "./pages/NoPage";
 import ProgramMD from "./pages/Program";
 import SocialEvents from "./pages/SocialEvents";
 import Workshops from "./pages/Workshops";
-import Transport from "./documents/attend/transport.md";
+import TransportMD from "./documents/attend/transport.md";
 
 export default function App() {
   return (
