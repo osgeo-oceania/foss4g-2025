@@ -23,6 +23,7 @@ import NoPage from "./pages/NoPage";
 import ProgramMD from "./pages/Program";
 import SocialEvents from "./pages/SocialEvents";
 import Workshops from "./pages/Workshops";
+import Transport from "./documents/attend/transport.md";
 
 export default function App() {
   return (
@@ -108,6 +109,15 @@ export default function App() {
               <MarkdownPage
                 markdownUrl={AccommodationMD}
                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
+              />
+            }
+          />
+          <Route
+            path="attend/transport"
+            element={
+              <MarkdownPage
+                markdownUrl={TransportMD}
+                headerImg={{ url: "/imgs/bus.jpeg", positionY: "40%" }}
               />
             }
           />
