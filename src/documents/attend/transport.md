@@ -1,4 +1,4 @@
-## Getting to the Venue
+# Getting to the Venue
 
 [C3 Convention Centre](https://c3conventioncentre.com.au/)
 
@@ -34,7 +34,7 @@ See the section below [**_Public Transport tickets_**](#public-transport-tickets
 Free off-street parking is available for 200+ vehicles.
 
 
-## Getting to our social venues from the Hobart CBD
+# Getting to our social venues from the Hobart CBD
 
 ### Workshops 
 
@@ -79,7 +79,7 @@ Located in CBD
 See the section below [**_Public Transport tickets_**](#public-transport-tickets-1) for purchasing information.
 
 
-## Getting to and from the Airport to Hobart CBD
+# Getting to and from the Airport to Hobart CBD
 
 Hobart has only one airport that looks after International and Domestic flights. It is located 20 minutes north of the Hobart CBD.
 
@@ -107,6 +107,6 @@ This option cost about AUD $40 into Hobart CBD.
 Renting a car is a great idea if you plan to make side trips and these are all available at the Airport to pick-up. Check your preferred car rental company to see more details. 
 
 
-## Public Transport tickets
+# Public Transport tickets
 
 You can purchase a ticket on the bus as you are travelling or enjoy the 20% discount by using a GreenCard. Pre-paid Adult GreenCards are available in Hobart from the Metro Shop (40 Elizabeth Street or 212 Main Road Moonah) - a short walk north of the SkyBus CDB drop-off point. These cards come ready activated, loaded with credit, and accompanied by a handy tourist guide to using public transport to see the sights of Hobart and surrounds.
