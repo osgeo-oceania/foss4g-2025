@@ -26,7 +26,7 @@ Check out the [transport planner](https://www.metrotas.com.au/planner/) to help 
 
 From the bus stop, walk for 400m north along Anglesea St to the C3 Convention Centre. 
 
-See the section below [**_Public Transport tickets_**](#public-transport-tickets) for purchasing information.
+See the section below **Public Transport tickets** for purchasing information.
 
 
 ## Drive
@@ -76,7 +76,7 @@ Located in CBD
 
 Located in CBD
 
-See the section below [**_Public Transport tickets_**](#public-transport-tickets-1) for purchasing information.
+See the section below **Public Transport tickets** for purchasing information.
 
 
 # Getting to and from the Airport to Hobart CBD
