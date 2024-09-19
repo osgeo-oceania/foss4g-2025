@@ -56,7 +56,7 @@ Free off-street parking is available for 200+ vehicles.
 
 ### TGP Breakfast 
 
-TBA
+[Bear with Me, 399 Macquarie St, Hobart ](https://www.facebook.com/bearwithmecoffeeandfood/)
 
 **Time:** X minute
 
