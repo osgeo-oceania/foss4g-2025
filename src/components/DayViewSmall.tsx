@@ -10,8 +10,6 @@ const DayViewSmall = ({ day }: { day: Day }) => {
       return timeToMinutes(a.start) - timeToMinutes(b.start);
     });
 
-  console.log(allEvents);
-
   return (
     <div className="flex flex-col gap-3">
       {allEvents.map((event, index) => (
