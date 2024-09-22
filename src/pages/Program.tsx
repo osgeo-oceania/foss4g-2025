@@ -86,7 +86,7 @@ const ProgramPage = () => {
           />
         </section>
 
-        <section className="mx-[calc((-100vw+100%)/2)] xl:mx-auto mt-8 prose-base max-w-none bg-gray-50 md:rounded-lg py-4">
+        <section className="mx-[calc((-100vw+100%)/2)] xl:mx-auto mt-8 prose-base max-w-none bg-gray-50 rounded-none xl:rounded-lg py-4">
           {error ? (
             <div className="flex items-center justify-center h-64 font-mono text-red-700 text-4xl">
               {error}
