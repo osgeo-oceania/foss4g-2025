@@ -137,7 +137,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
                 left: "50%",
                 transform: "translateX(-50%)",
               }}
-              className="absolute bg-white rounded-md shadow-lg min-w-full w-fit text-center pt-4 pb-1 hidden md:inline-block"
+              className="absolute bg-white rounded-md shadow-lg min-w-full w-fit text-center pt-4 pb-1 hidden md:inline-block z-50"
             >
               {menuItem.subMenuItems.map((subMenuItem, subIndex) => (
                 <a

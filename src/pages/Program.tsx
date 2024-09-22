@@ -1,123 +1,11 @@
+import Markdown from "markdown-to-jsx";
 import DayView from "../components/DayView";
+import IntroMD from "../documents/schedule-preamble.md";
+
 import DayViewSmall from "../components/DayViewSmall";
-import { Day } from "../components/DayView";
 
 import { useEffect, useState } from "react";
-
-// Define a function to get special events based on the date
-const getDayConfig = (day: Day) => {
-  switch (day.date) {
-    case "2023-10-16":
-      return {
-        specialEvents: [
-          {
-            id: -1,
-            start: "12:00",
-            duration: "01:00",
-            title: "Lunch",
-            track: "lunch",
-          },
-          {
-            id: -2,
-            start: "10:00",
-            duration: "00:15",
-            title: "Morning Tea",
-            track: "break",
-          },
-          {
-            id: -3,
-            start: "15:00",
-            duration: "00:15",
-            title: "Afternoon Tea",
-            track: "break",
-          },
-        ],
-      };
-    case "2023-10-17":
-      return {
-        specialEvents: [
-          {
-            id: -1,
-            start: "12:15",
-            duration: "01:00",
-            title: "Lunch",
-            track: "lunch",
-          },
-          {
-            id: -2,
-            start: "10:30",
-            duration: "00:30",
-            title: "Morning Tea",
-            track: "break",
-          },
-          {
-            id: -3,
-            start: "15:00",
-            duration: "00:30",
-            title: "Afternoon Tea",
-            track: "break",
-          },
-        ],
-      };
-    case "2023-10-18":
-      return {
-        specialEvents: [
-          {
-            id: -1,
-            start: "12:50",
-            duration: "01:00",
-            title: "Lunch",
-            track: "lunch",
-          },
-          {
-            id: -2,
-            start: "10:40",
-            duration: "00:30",
-            title: "Morning Tea",
-            track: "break",
-          },
-          {
-            id: -3,
-            start: "15:05",
-            duration: "00:30",
-            title: "Afternoon Tea",
-            track: "break",
-          },
-        ],
-      };
-    case "2023-10-19":
-      return {
-        specialEvents: [
-          {
-            id: -1,
-            start: "12:35",
-            duration: "01:00",
-            title: "Lunch",
-            track: "lunch",
-          },
-          {
-            id: -2,
-            start: "10:50",
-            duration: "00:30",
-            title: "Morning Tea",
-            track: "break",
-          },
-          {
-            id: -3,
-            start: "14:25",
-            duration: "00:30",
-            title: "Afternoon Tea",
-            track: "break",
-          },
-        ],
-      };
-    default:
-      return {
-        periods: [{ startTime: 8, endTime: 14, timeSlotInterval: 60 }],
-        specialEvents: [],
-      };
-  }
-};
+import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 
 const getToday = (): string => {
   const today = new Date();
@@ -128,24 +16,29 @@ const getToday = (): string => {
   return `${yyyy}-${mm}-${dd}`;
 };
 
-const formatDate = (dateString: string) => {
-  const [year, month, day] = dateString.split("-").map(Number);
-  const date = new Date(Date.UTC(year, month - 1, day)); // month is 0-indexed
-
-  const options: Intl.DateTimeFormatOptions = {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    timeZone: "UTC",
-  };
-
-  return new Intl.DateTimeFormat(undefined, options).format(date);
+const dayTitleMap: { [key: string]: string } = {
+  "2024-11-05": "Tuesday 5th (Workshops)",
+  "2024-11-06": "Wednesday 6th (Conference)",
+  "2024-11-07": "Thursday 7th (Conference)",
+  "2024-11-08": "Friday 8th (Community Day)",
 };
 
 const ProgramPage = () => {
-  const [allDaysData, setAllDaysData] = useState([]);
-  const [days, setDays] = useState([]);
+  const [introMddText, setIntroMddText] = useState("");
+
+  useEffect(() => {
+    fetch(IntroMD)
+      .then((res) => res.text())
+      .then((text) => setIntroMddText(text));
+  }, []);
+
+  const [allDaysData, setAllDaysData] = useState<any>([]);
+  const [days, setDays] = useState<any>([]);
   const [activeDay, setActiveDay] = useState(0);
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
   useEffect(() => {
     // Fetch the data only when the component mounts
     fetch(
@@ -163,11 +56,13 @@ const ProgramPage = () => {
         // If today is not found in the fetched days, default to 0
         todayIndex = todayIndex === -1 ? 0 : todayIndex;
 
-        setDays(fetchedDays.map((day: any) => formatDate(day.date)));
+        setDays(fetchedDays.map((day: any) => dayTitleMap[day.date]));
         setActiveDay(todayIndex);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
+        setError("Error fetching program, please try again later.");
       });
   }, []);
 
@@ -175,44 +70,62 @@ const ProgramPage = () => {
     <>
       <section
         style={{
-          backgroundImage: "url('/imgs/auck_build_3D.jpeg')",
+          backgroundImage: "url('/imgs/present-header.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center 0px",
+          backgroundPosition: "center 30%",
         }}
         className="relative flex items-center justify-center h-64 bg-gray-100 bg-no-repeat bg-cover bg-center"
       ></section>
-      <section className="container px-6 py-8 mx-auto lg:py-16">
-        <div className="grid grid-cols-4 sm:overflow-x-auto sm:overflow-y-hidden border-b border-gray-200 whitespace-nowrap sm:flex">
-          {days.map((day, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveDay(index)}
-              className={`inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 sm:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 ${
-                activeDay === index
-                  ? "border-blue-500 text-blue-600"
-                  : "border-transparent text-gray-700"
-              }`}
-            >
-              {day}
-            </button>
-          ))}
-        </div>
-      </section>
-      <div className="hidden lg:block">
-        {allDaysData[activeDay] && (
-          <DayView
-            day={allDaysData[activeDay]}
-            dayConfig={getDayConfig(allDaysData[activeDay])}
+      <div className="container mx-auto p-6">
+        <section className="mx-auto mt-8 prose-base max-w-none">
+          <Markdown
+            options={{
+              overrides: markdownCommonStyles,
+            }}
+            children={introMddText}
           />
-        )}
-      </div>
-      <div className="block lg:hidden">
-        {allDaysData[activeDay] && (
-          <DayViewSmall
-            day={allDaysData[activeDay]}
-            dayConfig={getDayConfig(allDaysData[activeDay])}
-          />
-        )}
+        </section>
+
+        <section className="mx-auto mt-8 prose-base max-w-none bg-gray-50 rounded-lg p-4">
+          {error ? (
+            <div className="flex items-center justify-center h-64 font-mono text-red-700 text-4xl">
+              {error}
+            </div>
+          ) : loading ? (
+            <div className="flex items-center justify-center h-64 font-mono text-xl font-light">
+              Loading program...
+            </div>
+          ) : (
+            <>
+              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around border-b border-gray-200 whitespace-nowrap mb-8 overflow-x-scroll">
+                {days.map((day: any, index: number) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveDay(index)}
+                    className={`inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 xl:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 ${
+                      activeDay === index
+                        ? "border-blue-950 text-gray-800 font-bold"
+                        : "border-transparent text-gray-700"
+                    }`}
+                  >
+                    {day}
+                  </button>
+                ))}
+              </div>
+
+              <div className="hidden lg:block">
+                {allDaysData[activeDay] && (
+                  <DayView day={allDaysData[activeDay]} />
+                )}
+              </div>
+              <div className="block lg:hidden">
+                {allDaysData[activeDay] && (
+                  <DayViewSmall day={allDaysData[activeDay]} />
+                )}
+              </div>
+            </>
+          )}
+        </section>
       </div>
     </>
   );

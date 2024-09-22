@@ -24,6 +24,7 @@ import ProgramMD from "./pages/Program";
 import SocialEvents from "./pages/SocialEvents";
 import Workshops from "./pages/Workshops";
 import TransportMD from "./documents/attend/transport.md";
+import ProgramPage from "./pages/Program";
 
 export default function App() {
   return (
@@ -64,6 +65,7 @@ export default function App() {
               />
             }
           />
+          <Route path="program/schedule-draft" element={<ProgramPage />} />
           {/* <Route
             path="logo-competition"
             element={
