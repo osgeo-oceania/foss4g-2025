@@ -118,7 +118,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
             <div className="mt-5 sm:flex sm:items-center sm:-mx-2">
               <button
                 onClick={() => setModelOpen(!modelOpen)}
-                className="w-full px-4 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border rounded-md sm:mx-2 text-gray-200 border-gray-700 hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+                className="w-full px-4 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border rounded-md mb-6 sm:mb-0 sm:mx-2 text-gray-200 border-gray-700 hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
               >
                 Close
               </button>
