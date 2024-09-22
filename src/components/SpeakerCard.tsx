@@ -39,45 +39,43 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
 
   return (
     <>
-      <div className="flex flex-row justify-center pb-5">
-        <div
-          onClick={() => setModelOpen(!modelOpen)}
-          className="cursor-pointer w-full max-w-xs mx-2 overflow-hidden bg-gray-900 rounded-lg shadow-lg"
-        >
-          <div className="w-full h-64 overflow-hidden">
-            <img
-              style={{
-                height: imgHeight,
-                objectPosition: `${imgPositionX} ${imgPositionY}`,
-              }}
-              className="min-h-[16rem] object-cover"
-              src={imgSrc}
-              alt="avatar"
-            />
-          </div>
-          <div className="py-5 px-3 text-center">
-            <div className="block text-xl font-bold text-white">{title}</div>
-            <span className="text-sm text-gray-200">{shortDescription}</span>
-          </div>
+      <div
+        onClick={() => setModelOpen(!modelOpen)}
+        className="cursor-pointer w-full max-w-xs overflow-hidden bg-gray-900 rounded-lg shadow-lg"
+      >
+        <div className="w-full h-64 overflow-hidden">
+          <img
+            style={{
+              height: imgHeight,
+              objectPosition: `${imgPositionX} ${imgPositionY}`,
+            }}
+            className="min-h-[16rem] object-cover"
+            src={imgSrc}
+            alt="avatar"
+          />
+        </div>
+        <div className="py-5 px-3 text-center">
+          <div className="block text-xl font-bold text-white">{title}</div>
+          <span className="text-sm text-gray-200">{shortDescription}</span>
         </div>
       </div>
 
       <div
-        className="fixed inset-0 z-10 overflow-y-auto z-40 bg-white bg-opacity-60 "
+        className="fixed top-0 left-0 p-2 items-center justify-center overflow-hidden z-40 bg-white bg-opacity-60 h-screen w-screen"
         aria-labelledby="modal-title"
         role="dialog"
         aria-modal="true"
         style={{
           transition: "opacity .15s ease-in-out",
-          display: modelOpen ? "block" : "none",
+          display: modelOpen ? "flex" : "none",
           opacity: modelOpen ? 1 : 0,
         }}
         onClick={() => setModelOpen(!modelOpen)}
       >
-        <div className="flex items-center justify-center min-h-screen p-4 text-center sm:block sm:p-0">
+        <div className="flex items-center justify-center text-center">
           <div
             style={{ flex: "1 1 auto", maxWidth: "800px" }}
-            className="relative inline-block px-4 pt-5 pb-4 overflow-scroll text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gray-900 sm:align-middle sm:max-w-md sm:w-full sm:p-6 h-full max-h-[calc(100vh-1rem)]"
+            className="relative p-4 overflow-scroll text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gray-900 sm:align-middle sm:max-w-md sm:w-full sm:p-6 h-full max-h-[calc(100vh-1rem)]"
             onClick={(e) => {
               e.stopPropagation();
             }}

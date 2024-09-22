@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     container: {
       screens: {
-        sm: '600px',
-        md: '728px',
-        lg: '984px',
-        xl: '1240px',
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
       },
     },
     extend: {
       fontFamily: {
-        'display': ["Roboto Serif", "serif"],
+        display: ["Roboto Serif", "serif"],
       },
       colors: {
         primary: {
