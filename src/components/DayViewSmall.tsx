@@ -1,4 +1,4 @@
-import { Day, EventCard, timeToMinutes, toAmPm } from "./DayView";
+import { Day, EventCard, timeToMinutes } from "./DayView";
 
 const DayViewSmall = ({ day }: { day: Day }) => {
   const allEvents = Object.values(day.rooms)
