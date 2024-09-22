@@ -11,7 +11,10 @@ const DayViewSmall = ({ day }: { day: Day }) => {
     });
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 items-center w-full">
+      {allEvents.length === 0 && (
+        <div className="text-center text-xl">No events scheduled</div>
+      )}
       {allEvents.map((event, index) => (
         <EventCard
           key={index}

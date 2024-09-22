@@ -100,10 +100,11 @@ export const EventCard = ({
 
   const bgColor = getBackgroundColor(event.track);
 
-  const EventDiv = (
+  return (
     <div
+      onClick={() => handleClick(event.url ? event.url : "")}
       key={event.id}
-      className={`bg-white border-[1px] border-solid rounded-md ${className}`}
+      className={`bg-white border-[1px] border-solid rounded-md ${className} cursor-pointer z-10`}
       style={{
         top: `0px`,
         height,
@@ -153,21 +154,6 @@ export const EventCard = ({
         <span>{event.title}</span>
       )}
     </div>
-  );
-
-  return event.url ? (
-    <div
-      onClick={() => handleClick(event.url ? event.url : "")}
-      key={event.id}
-      style={{
-        cursor: "pointer",
-        zIndex: 10,
-      }}
-    >
-      {EventDiv}
-    </div>
-  ) : (
-    EventDiv
   );
 };
 

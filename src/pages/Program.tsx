@@ -86,7 +86,7 @@ const ProgramPage = () => {
           />
         </section>
 
-        <section className="mx-auto mt-8 prose-base max-w-none bg-gray-50 rounded-lg p-4">
+        <section className="mx-[calc((-100vw+100%)/2)] xl:mx-auto mt-8 prose-base max-w-none bg-gray-50 md:rounded-lg py-4">
           {error ? (
             <div className="flex items-center justify-center h-64 font-mono text-red-700 text-4xl">
               {error}
@@ -97,7 +97,7 @@ const ProgramPage = () => {
             </div>
           ) : (
             <>
-              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-scroll">
+              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-scroll overflow-y-visible h-10 md:px-4">
                 {days.map((day: any, index: number) => (
                   <button
                     key={index}
@@ -113,12 +113,12 @@ const ProgramPage = () => {
                 ))}
               </div>
 
-              <div className="hidden lg:block">
+              <div className="hidden md:block md:px-4">
                 {allDaysData[activeDay] && (
                   <DayView day={allDaysData[activeDay]} />
                 )}
               </div>
-              <div className="block lg:hidden">
+              <div className="block md:hidden">
                 {allDaysData[activeDay] && (
                   <DayViewSmall day={allDaysData[activeDay]} />
                 )}
