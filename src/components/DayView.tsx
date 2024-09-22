@@ -314,7 +314,7 @@ const DayView = ({ day }: { day: Day }) => {
       >
         <thead>
           <tr
-            className={`sticky top-[104px] bg-gray-50 z-20 border-b`}
+            className={`sticky top-[103px] bg-gray-50 z-20 border-b`}
             style={{ height: `${INTERVAL_HEIGHT}px` }}
           >
             <th className="p-2 w-[100px] border-b"></th>

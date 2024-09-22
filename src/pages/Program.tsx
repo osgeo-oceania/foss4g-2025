@@ -97,7 +97,7 @@ const ProgramPage = () => {
             </div>
           ) : (
             <>
-              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around border-b border-gray-200 whitespace-nowrap mb-8 overflow-x-scroll">
+              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-scroll">
                 {days.map((day: any, index: number) => (
                   <button
                     key={index}
