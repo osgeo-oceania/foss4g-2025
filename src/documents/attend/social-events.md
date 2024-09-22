@@ -17,7 +17,8 @@ The Icebreaker dinner is proudly sponsored by [North Road](https://north-road.co
 If you are a recipient of the **Travel Grant Program** (TGP), this is your breakfast. This is a chance to meet other TGP recipients and for our oganising committee to connect with you.
 
 - **Wednesday morning 7am**
-- Location TBA
+- [Bear With Me Cafe](https://www.facebook.com/bearwithmecoffeeandfood/) — [399 Macquarie St, Hobart](https://maps.app.goo.gl/imqmKmN97BQx191M8)
+  - Afterwards is a short 10 minute walk to the C3 Conference Centre up the [Hobart Rivulet walking track](https://maps.app.goo.gl/iZmYwR38tbbWi9NG6).
 - Dress: Cool daywear geogeek - no PJs
 - Tickets: invite only
 

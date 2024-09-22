@@ -77,6 +77,22 @@ const eventGeoJSON = {
     {
       type: "Feature",
       properties: {
+        link: "https://maps.app.goo.gl/imqmKmN97BQx191M8",
+        name: "Bear with Me Cafe",
+        description: "Travel Grant Breakfast",
+        minZoom: 11.1,
+        maxZoom: 24,
+        id: "7",
+      },
+      geometry: {
+        coordinates: [147.31425, -42.89288],
+        type: "Point",
+      },
+    },
+
+    {
+      type: "Feature",
+      properties: {
         link: "https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi",
         name: "University of Tasmania",
         description: "Workshops Venue",
