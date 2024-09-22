@@ -29,7 +29,7 @@ Community voting is now open for the FOSS4G SotM Oceania 2024 conference. You ca
     Vote now!
 </button> -->
 
-## Registration
+## Conference, breakfast and dinner tickets
 
 Conference registration is now open
 
@@ -37,12 +37,12 @@ Conference registration is now open
     Conference Registration
 </button>
 
-## Workshop Program
+## Workshop tickets
 
-The workshop program has been announced!
+Workshop registration is now open
 
-<button target="/#/program/workshops" >
-    Workshop Program
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" >
+    Workshop Registration
 </button>
 
 ![Salamanca near Hobart's waterfront](/imgs/salamanca-crop.jpeg)
