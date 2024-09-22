@@ -10,7 +10,7 @@ Workshops will be held at the University of Tasmania's Sandy Bay campus. Classro
 
 **Each workshop will have capacity for a maximum of 25 participants, so register quick!**
 
-| Type      | Coordinator     | Details                                                                                              | Cost (AUD) |
+| Time      | Coordinator     | Details                                                                                              | Cost (AUD) |
 | --------- | --------------- | ---------------------------------------------------------------------------------------------------- | ---------- |
 | Morning   | Byron Cochrane  | Drama Free GeoNetwork 4.x Migration                                                                  | $100       |
 | Morning   | Elisa Puccioni  | PostGIS 101 - A hands-on introduction to working with spatial data in PostgreSQL                     | $100       |
