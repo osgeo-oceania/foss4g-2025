@@ -4,26 +4,38 @@ import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 
 type SpeakerCardProps = {
   imgSrc: string;
+  imgHeight?: string;
+  imgPositionX?: string;
+  imgPositionY?: string;
+  imgExpandedHeight?: string;
+  imgExpandedPositionX?: string;
+  imgExpandedPositionY?: string;
   title: string;
   shortDescription: string;
-  longDescriptionSrc: string;
+  longDescriptionMd: string;
 };
 
 const SpeakerCard: React.FC<SpeakerCardProps> = ({
   imgSrc,
+  imgHeight,
+  imgPositionX,
+  imgPositionY,
+  imgExpandedHeight,
+  imgExpandedPositionX,
+  imgExpandedPositionY,
   title,
   shortDescription,
-  longDescriptionSrc,
+  longDescriptionMd,
 }) => {
   const [modelOpen, setModelOpen] = useState(false);
   const [mddText, setMddText] = useState("");
   // Fetch Terms of Use
   useEffect(() => {
-    fetch(longDescriptionSrc)
+    fetch(longDescriptionMd)
       .then((res) => res.text())
       .then((text) => setMddText(text))
       .catch((error) => console.error(error));
-  }, [longDescriptionSrc]);
+  }, [longDescriptionMd]);
 
   return (
     <>
@@ -32,16 +44,20 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           onClick={() => setModelOpen(!modelOpen)}
           className="cursor-pointer w-full max-w-xs mx-2 overflow-hidden bg-gray-900 rounded-lg shadow-lg"
         >
-          <img
-            className="object-cover object-top w-full h-64"
-            src={imgSrc}
-            alt="avatar"
-          />
-          <div className="py-5 text-center">
+          <div className="w-full h-64 overflow-hidden">
+            <img
+              style={{
+                height: imgHeight,
+                objectPosition: `${imgPositionX} ${imgPositionY}`,
+              }}
+              className="min-h-[16rem] object-cover"
+              src={imgSrc}
+              alt="avatar"
+            />
+          </div>
+          <div className="py-5 px-3 text-center">
             <div className="block text-xl font-bold text-white">{title}</div>
-            <span className="text-sm text-gray-200 p-3">
-              {shortDescription}
-            </span>
+            <span className="text-sm text-gray-200">{shortDescription}</span>
           </div>
         </div>
       </div>
@@ -58,30 +74,31 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
         }}
         onClick={() => setModelOpen(!modelOpen)}
       >
-        <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-0 text-center sm:block sm:p-0">
-          <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
-            aria-hidden="true"
-          >
-            &#8203;
-          </span>
-
+        <div className="flex items-center justify-center min-h-screen p-4 text-center sm:block sm:p-0">
           <div
             style={{ flex: "1 1 auto", maxWidth: "800px" }}
-            className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gray-900 sm:my-8 sm:align-middle sm:max-w-md sm:w-full sm:p-6"
+            className="relative inline-block px-4 pt-5 pb-4 overflow-scroll text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gray-900 sm:align-middle sm:max-w-md sm:w-full sm:p-6 h-full max-h-[calc(100vh-1rem)]"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
           >
-            <div className="flex flex-wrap">
-              <div className="md:w-1/3 h-96">
+            <div className="flex flex-wrap justify-center">
+              <div className="md:w-1/3 max-h-96">
                 <img
-                  className="object-cover w-full h-full rounded-md"
+                  style={{
+                    height: imgExpandedHeight,
+                    width: "250px",
+                    objectPosition: `${imgExpandedPositionX} ${imgExpandedPositionY}`,
+                  }}
+                  className="object-cover rounded-md"
                   src={imgSrc}
                   alt=""
                 />
               </div>
 
-              <div className="md:w-2/3 mt-4 px-4 flex flex-wrap">
+              <div className="md:w-2/3 mt-8 md:mt-0 px-4 flex flex-wrap">
                 <h3
-                  className="font-medium leading-6 capitalize text-white md:text-2xl lg:text-3xl"
+                  className="font-medium leading-6 capitalize text-white text-2xl lg:text-3xl"
                   id="modal-title"
                 >
                   {title}
@@ -90,7 +107,10 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
                 <div className="mx-auto mt-8 prose-base max-w-none">
                   <Markdown
                     options={{
-                      overrides: markdownCommonStyles,
+                      overrides: {
+                        ...markdownCommonStyles,
+                        p: { props: { className: "text-gray-200 mt-0" } },
+                      },
                     }}
                     children={mddText}
                   />

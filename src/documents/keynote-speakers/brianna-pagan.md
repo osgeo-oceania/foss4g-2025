@@ -1,0 +1,3 @@
+Dr. Brianna R. Pagán is the Deputy Manager at NASA’s Goddard Earth Sciences Center Data and Information Services Center (GES DISC), an Adjunct Professor at Loyola Marymount University, and Board Member of Footprints - a non-profit incubator for climate action within the outdoor industry. Her passion is enabling science for the masses and brings her expertise in the fields of remote sensing, climate and informatics to lead large and diverse teams of software engineers and scientists to effectively distribute geospatial data.
+
+Dr. Pagán is also a strong advocate for open-source science efforts - active within the Pangeo ecosystem and leading efforts like GeoZarr. She also teaches courses on the intersection of technology and climate/social justice issues.

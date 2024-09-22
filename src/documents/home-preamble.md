@@ -1,4 +1,3 @@
-
 ## About nipaluna / Hobart
 
 nipaluna / Hobart, nestled on the southeastern coast of lutruwita / Tasmania, Australia, is a charming city known for its rich history and breathtaking natural surroundings. Tasmania's capital offers visitors a unique blend of cultural experiences, outdoor adventures, and culinary delights.

@@ -4,6 +4,7 @@ import { MapComponent } from "../components/Map";
 import SponsorshipLevels from "../components/SponsorshipLevels";
 import Intro from "../documents/home-preamble.md";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
+import KeynoteSpeakers from "../components/KeynoteSpeakers";
 
 const Home = () => {
   const [introMddText, setIntroMddText] = useState("");
@@ -35,21 +36,44 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="hidden md:block text-center md:text-left text-lg md:text-2xl font-display font-['Roboto Serif']" style={{lineHeight: "3rem"}}>
-              <div>Join us for <span className="text-xl md:text-4xl">FOSS4G SotM Oceania</span> in <span className="text-xl md:text-4xl">Hobart, Tasmania</span> </div>
-              <div>from <span className="text-xl md:text-4xl">5 - 8 November 2024</span>.</div>
+            <div
+              className="hidden md:block text-center md:text-left text-lg md:text-2xl font-display font-['Roboto Serif']"
+              style={{ lineHeight: "3rem" }}
+            >
+              <div>
+                Join us for{" "}
+                <span className="text-xl md:text-4xl">FOSS4G SotM Oceania</span>{" "}
+                in <span className="text-xl md:text-4xl">Hobart, Tasmania</span>{" "}
+              </div>
+              <div>
+                from{" "}
+                <span className="text-xl md:text-4xl">5 - 8 November 2024</span>
+                .
+              </div>
             </div>
-            <div className="md:hidden text-center text-2xl font-bold mb-4 text-white">5 - 8 November 2024</div>
+            <div className="md:hidden text-center text-2xl font-bold mb-4 text-white">
+              5 - 8 November 2024
+            </div>
           </div>
         </div>
       </section>
       <section className="container mx-auto py-8 px-4">
-          <div className="prose-base max-w-none">
-            <p className="text-lg">FOSS4G SotM Oceania is a gathering for our vibrant open geospatial community to come together and geek out over all things open geospatial.
-            </p>
-            <p>FOSS4G events are part of a conference series run by the OSGeo community with the objective of fostering and promoting the adoption of open source geospatial technology. SotM refers to the conference of the OpenStreetMap Foundation (OSMF), supporting the development of the OpenStreetMap project. FOSS4G SotM Oceania is part of the larger global community, and merges the two conferences into one exciting Oceania centered event. 
-            </p>
-          </div>
+        <div className="prose-base max-w-none">
+          <p className="text-lg">
+            FOSS4G SotM Oceania is a gathering for our vibrant open geospatial
+            community to come together and geek out over all things open
+            geospatial.
+          </p>
+          <p>
+            FOSS4G events are part of a conference series run by the OSGeo
+            community with the objective of fostering and promoting the adoption
+            of open source geospatial technology. SotM refers to the conference
+            of the OpenStreetMap Foundation (OSMF), supporting the development
+            of the OpenStreetMap project. FOSS4G SotM Oceania is part of the
+            larger global community, and merges the two conferences into one
+            exciting Oceania centered event.
+          </p>
+        </div>
       </section>
 
       <section className="container mx-auto px-4">
@@ -60,8 +84,10 @@ const Home = () => {
             }}
             children={introMddText}
           />
-          </div>
+        </div>
       </section>
+
+      <KeynoteSpeakers />
 
       <SponsorshipLevels />
 
