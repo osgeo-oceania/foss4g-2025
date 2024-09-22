@@ -41,7 +41,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
     <>
       <div
         onClick={() => setModelOpen(!modelOpen)}
-        className="cursor-pointer w-full max-w-xs overflow-hidden bg-gray-900 rounded-lg shadow-lg"
+        className="cursor-pointer w-full max-w-xs overflow-hidden bg-gray-900 rounded  hover:scale-105 keynote-card"
       >
         <div className="w-full h-64 overflow-hidden">
           <img

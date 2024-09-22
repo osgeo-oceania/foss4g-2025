@@ -33,11 +33,13 @@ p:has(> .popout-image:not(.inline-image)) {
   max-width: 100%;
 }
 
-.sponsor-card {
+.sponsor-card,
+.keynote-card {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   transition: all 0.15s ease-in-out;
 }
 
-.sponsor-card:hover {
+.sponsor-card:hover,
+.keynote-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }

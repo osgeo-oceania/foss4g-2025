@@ -92,7 +92,7 @@ _$12,500 AUD + GST_
 
 **Exclusive - one only**
 
-Get your logo on every participant’s neck. This opportunity gets you everything in the platinum package, in addition to your logo being printed in high quality on every lanyard.
+<s>Get your logo on every participant’s neck. This opportunity gets you everything in the platinum package, in addition to your logo being printed in high quality on every lanyard.</s>&nbsp;<b>This is now sold!</b>
 
 ### Premium coffee sponsor
 
