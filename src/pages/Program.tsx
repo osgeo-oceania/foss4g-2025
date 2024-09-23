@@ -94,9 +94,9 @@ const ProgramPage = () => {
     <>
       <section
         style={{
-          backgroundImage: "url('/imgs/present-header.jpg')",
+          backgroundImage: "url('/imgs/workshop-lunch.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center 30%",
+          backgroundPosition: "center 35%",
         }}
         className="relative flex items-center justify-center h-64 bg-gray-100 bg-no-repeat bg-cover bg-center"
       ></section>

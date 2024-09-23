@@ -65,7 +65,7 @@ export default function App() {
               />
             }
           /> */}
-          <Route path="program/schedule" element={<ProgramPage />} />
+
           {/* <Route
             path="logo-competition"
             element={
@@ -161,6 +161,7 @@ export default function App() {
               />
             }
           />
+          <Route path="program/schedule" element={<ProgramPage />} />
           <Route path="program/social-events" element={<SocialEvents />} />
           <Route path="program/workshops" element={<Workshops />} />
           <Route
