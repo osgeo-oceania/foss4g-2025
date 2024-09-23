@@ -33,12 +33,12 @@ It also includes access to the Ice Breaker on Tuesday 5th November and the Commu
     <img className="inline-image mx-auto mt-4" width="500px" src="/imgs/2024/tshirts_mockup.webp">
 </div>
 
-## Workshop Program
+## Workshop registration
 
-The workshop program has been announced!
+The workshop program has been announced. Workshops run for half a day, for more information, see the [workshops](#/program/workshops) page.
 
-<button target="/#/program/workshops" >
-    Workshop Program
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" >
+    Workshop Registration
 </button>
 
 ![Hobart waterfront near CSIRO](/imgs/csiro-waterfront.jpeg)
