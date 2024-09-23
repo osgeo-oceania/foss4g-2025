@@ -8,7 +8,7 @@ import CallForPapersMD from "./documents/call-for-papers.md";
 import CodeOfConduct from "./documents/code-of-conduct.md";
 import CommunityDayMD from "./documents/community-day.md";
 import GetInvolvedMD from "./documents/get-involved.md";
-import ScheduleMd from "./documents/schedule-placeholder.md";
+// import ScheduleMd from "./documents/schedule-placeholder.md";
 // import LogoCompetitionMD from "./documents/logo-competition.md";
 import OrganisersMD from "./documents/organisers.md";
 import PresentMD from "./documents/present.md";
