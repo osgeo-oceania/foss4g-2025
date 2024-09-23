@@ -8,9 +8,9 @@ const KeynoteSpeakers = () => {
   return (
     <>
       <section className="container px-6 py-8 mx-auto lg:py-16">
-        <h3 className="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl mb-10">
+        <h2 className="text-base md:text-xl lg:text-2xl mb-6">
           Keynote Speakers
-        </h3>
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-2">
           <SpeakerCard
             imgSrc="./imgs/keynote-speakers/andrea.jpeg"

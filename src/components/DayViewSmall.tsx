@@ -1,3 +1,4 @@
+import { noEventsMap } from "../pages/Program";
 import { Day, EventCard, timeToMinutes } from "./DayView";
 
 const DayViewSmall = ({ day }: { day: Day }) => {
@@ -13,7 +14,9 @@ const DayViewSmall = ({ day }: { day: Day }) => {
   return (
     <div className="flex flex-col gap-3 items-center w-full">
       {allEvents.length === 0 && (
-        <div className="text-center text-xl">No events scheduled</div>
+        <div className="text-center text-xl">
+          {noEventsMap[day.date] || "No events"}
+        </div>
       )}
       {allEvents.map((event, index) => (
         <EventCard

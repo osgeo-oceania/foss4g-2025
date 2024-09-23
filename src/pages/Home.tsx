@@ -76,6 +76,8 @@ const Home = () => {
         </div>
       </section>
 
+      <KeynoteSpeakers />
+
       <section className="container mx-auto px-4">
         <div className="prose-base max-w-none">
           <Markdown
@@ -86,8 +88,6 @@ const Home = () => {
           />
         </div>
       </section>
-
-      <KeynoteSpeakers />
 
       <SponsorshipLevels />
 

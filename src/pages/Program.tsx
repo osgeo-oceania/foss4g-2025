@@ -4,7 +4,7 @@ import IntroMD from "../documents/schedule-preamble.md";
 
 import DayViewSmall from "../components/DayViewSmall";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 
 const getToday = (): string => {
@@ -21,6 +21,30 @@ const dayTitleMap: { [key: string]: string } = {
   "2024-11-06": "Wednesday 6th (Conference)",
   "2024-11-07": "Thursday 7th (Conference)",
   "2024-11-08": "Friday 8th (Community Day)",
+};
+
+export const noEventsMap: { [key: string]: ReactNode } = {
+  "2024-11-05": "No workshops today",
+  "2024-11-06": "No events today",
+  "2024-11-07": "No events today",
+  "2024-11-08": (
+    <>
+      <p>
+        We have some great events in the pipeline including a field trip to Mt
+        Wellington.
+      </p>
+      <p>
+        If you would like to propose a hackathon or something, let us know
+        via&nbsp;
+        <a
+          href="mailto:program@foss4g-oceania.org"
+          className="text-blue-500 underline"
+        >
+          program@foss4g-oceania.org
+        </a>
+      </p>
+    </>
+  ),
 };
 
 const ProgramPage = () => {
@@ -97,7 +121,7 @@ const ProgramPage = () => {
             </div>
           ) : (
             <>
-              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-scroll overflow-y-visible h-10 md:px-4">
+              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-auto overflow-y-visible h-10 md:px-4">
                 {days.map((day: any, index: number) => (
                   <button
                     key={index}

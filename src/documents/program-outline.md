@@ -11,9 +11,11 @@ The general program outline for sessions and social events is as follows...
 | Thursday 7 November  | Day 2 of the Conference | Women in Geospatial Breakfast    |
 | Friday 8 November    | Community Day           | TBC get together                 |
 
-**Call for papers and community voting are now closed**.
+Conference schedule is now available
 
-We will announce the program and schedule shortly.
+<button target="/#/program/schedule">
+    Conference schedule
+</button>
 
 <!-- ## Want to be part of our Program?
 

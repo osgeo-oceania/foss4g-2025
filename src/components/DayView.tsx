@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { noEventsMap } from "../pages/Program";
 
 const INTERVAL_HEIGHT = 40;
 
@@ -321,7 +322,7 @@ const DayView = ({ day }: { day: Day }) => {
                 colSpan={Object.keys(day.rooms).length + 1}
                 className="text-center text-xl"
               >
-                No events scheduled
+                {noEventsMap[day.date] || "No events"}
               </td>
             </tr>
           )}
