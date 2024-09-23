@@ -14,7 +14,7 @@ The general program outline for sessions and social events is as follows...
 Conference schedule is now available
 
 <button target="/#/program/schedule">
-    Conference schedule
+    Conference Schedule
 </button>
 
 <!-- ## Want to be part of our Program?
@@ -45,6 +45,14 @@ Workshop registration is now open
 
 <button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" >
     Workshop Registration
+</button>
+
+## Social events
+
+See the social events page for more information on the social events happening during the conference.
+
+<button target="/#/program/social-events">
+    Social Events
 </button>
 
 ![Salamanca near Hobart's waterfront](/imgs/salamanca-crop.jpeg)
