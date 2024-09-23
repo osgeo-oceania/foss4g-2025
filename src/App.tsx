@@ -53,7 +53,7 @@ export default function App() {
               />
             }
           />
-          <Route
+          {/* <Route
             path="program/schedule"
             element={
               <MarkdownPage
@@ -64,8 +64,8 @@ export default function App() {
                 }}
               />
             }
-          />
-          <Route path="program/schedule-draft" element={<ProgramPage />} />
+          /> */}
+          <Route path="program/schedule" element={<ProgramPage />} />
           {/* <Route
             path="logo-competition"
             element={
