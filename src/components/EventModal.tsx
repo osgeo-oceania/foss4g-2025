@@ -155,7 +155,7 @@ export const EventModal = ({
           <div className="mt-5 sm:flex sm:items-center sm:-mx-2">
             <button
               onClick={() => setIsOpen(!open)}
-              className="w-full px-4 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border rounded-md mb-6 sm:mb-0 sm:mx-2 text-gray-700 border-gray-200 hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-700 focus:ring-opacity-40"
+              className="w-full px-4 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border rounded-md mb-16 sm:mb-0 sm:mx-2 text-gray-700 border-gray-200 hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-700 focus:ring-opacity-40"
             >
               Close
             </button>
