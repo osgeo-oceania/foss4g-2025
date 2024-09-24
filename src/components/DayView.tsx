@@ -141,12 +141,12 @@ export const EventCard = ({
             )}
             {toHours(event.duration)}
           </div>
-          <div className="font-semibold text-gray-800 p-2 text-xs lg:text-sm xl:text-base">
+          <div className="font-semibold text-gray-900 p-2 text-xs lg:text-sm xl:text-base">
             {event.title}
           </div>
 
           {showAbstract && event?.abstract && (
-            <div className="max-w-none m-0 text-gray-500 p-2 prose pt-0 text-xs">
+            <div className="max-w-none m-0 text-gray-600 p-2 prose pt-0 text-xs leading-5">
               <Markdown
                 options={{
                   overrides: {
@@ -159,7 +159,7 @@ export const EventCard = ({
           )}
 
           {event.persons && event.persons.length > 0 && (
-            <div className="text-gray-800 text-xs md:test-sm px-2 pb-2">
+            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 pb-2">
               {event.persons && event.persons.length > 0
                 ? event.persons
                     .map((person: any) => person.public_name)
