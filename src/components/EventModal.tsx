@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx";
 import { Event, toHours } from "./DayView";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
+import { useEffect, useRef } from "react";
 
 export const EventModal = ({
   open,
@@ -11,6 +12,7 @@ export const EventModal = ({
   setIsOpen: (open: boolean) => void;
   event: Event | null;
 }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const day = new Date(event?.date ?? 0).toLocaleDateString("en-US", {
     weekday: "long",
   });
@@ -21,6 +23,15 @@ export const EventModal = ({
   });
 
   const duration = toHours(event?.duration ?? "");
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      containerRef.current?.scrollTo(0, 0);
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
 
   return (
     <div
@@ -37,6 +48,7 @@ export const EventModal = ({
     >
       <div className="flex items-center justify-center text-center max-w-full">
         <div
+          ref={containerRef}
           style={{ flex: "1 1 auto" }}
           className="relative p-4 overflow-y-auto text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gray-50 sm:align-middle lg:max-w-6xl w-full sm:p-6 h-full max-h-[calc(100vh-1rem)]"
           onClick={(e) => {
