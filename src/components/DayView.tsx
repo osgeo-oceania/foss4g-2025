@@ -82,11 +82,11 @@ export const toHours = (duration: string) => {
   return `${hours}h${minutes}min`;
 };
 
-const handleClick = (url: string) => {
-  if (url) {
-    window.open(url, "_blank");
-  }
-};
+// const handleClick = (url: string) => {
+//   if (url) {
+//     window.open(url, "_blank");
+//   }
+// };
 
 export const EventCard = ({
   event,
