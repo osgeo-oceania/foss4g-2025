@@ -45,43 +45,43 @@ export const EventModal = ({
         >
           {event && (
             <>
-              <div className="flex flex-wrap justify-center w-full">
+              <div className="flex flex-wrap justify-center w-full gap-4">
                 <div className="mt-4 md:mt-0 flex flex-col w-full gap-4">
                   <h3
-                    className="mt-4 font-bold leading-6 capitalize text-2xl lg:text-3xl"
+                    className="mt-4 font-bold leading-6 capitalize text-xl sm:text-2xl lg:text-3xl"
                     id="modal-title"
                   >
                     {event.title}
                   </h3>
 
-                  <div className="prose-lg font-bold text-gray-500 underline">
+                  <div className="prose-base md:prose-lg text-gray-500">
                     {day} {startTime} ({duration}) in the {event.room}
                   </div>
 
                   {event.abstract && (
                     <>
-                      <div className="prose-lg font-semibold w-full">
+                      <div className="prose-base md:prose-lg font-semibold w-full overflow-x-auto">
                         <Markdown
                           options={{
                             overrides: {
                               ...markdownCommonStyles,
                             },
                           }}
-                          children={event.abstract}
+                          children={event.abstract?.replace("\n", "\n\n")}
                         />
                       </div>
                       <div className="divide-y w-full h-1 border-gray-300 border-solid border-b" />
                     </>
                   )}
-                  {event.description && (
-                    <div className="w-full m-0">
+                  {event?.description && (
+                    <div className="w-full m-0 prose-sm md:prose-base overflow-x-auto">
                       <Markdown
                         options={{
                           overrides: {
                             ...markdownCommonStyles,
                           },
                         }}
-                        children={event.description}
+                        children={event.description.replace("\n", "\n\n")}
                       />
                     </div>
                   )}
@@ -93,18 +93,19 @@ export const EventModal = ({
                 >
                   Open in pretalx
                 </a>
+                <div className="divide-y w-full h-1 border-gray-300 border-solid border-b" />
               </div>
               <div className="flex flex-col mt-10 gap-4">
-                {event.persons?.map((person) => (
-                  <div className="flex flex-row gap-4">
+                {event.persons?.map((person, i) => (
+                  <div key={i} className="flex flex-row gap-4">
                     {person.avatar ? (
                       <img
-                        className="object-cover rounded-md h-36 w-36 m-0 mt-2 flex-shrink-0"
+                        className="hidden sm:inline object-cover rounded-md h-36 w-36 m-0 mt-2 flex-shrink-0"
                         src={person.avatar}
                         alt=""
                       />
                     ) : (
-                      <div className="rounded-md h-36 w-36 m-0 mt-2 bg-gray-300 flex-shrink-0">
+                      <div className="hidden sm:block rounded-md h-36 w-36 m-0 mt-2 bg-gray-300 flex-shrink-0">
                         &nbsp;
                       </div>
                     )}
@@ -113,6 +114,13 @@ export const EventModal = ({
                       <h3 className="mt-0 p-0 font-bold">
                         {person.public_name}
                       </h3>
+                      {person.avatar && (
+                        <img
+                          className="sm:hidden object-cover rounded-md h-36 w-36 my-2 flex-shrink-0"
+                          src={person.avatar}
+                          alt=""
+                        />
+                      )}
                       <div className="w-full m-0">
                         <Markdown
                           options={{
@@ -120,7 +128,9 @@ export const EventModal = ({
                               ...markdownCommonStyles,
                             },
                           }}
-                          children={person.biography ?? "No bio."}
+                          children={
+                            person.biography?.replace("\n", "\n\n") ?? "No bio."
+                          }
                         />
                       </div>
                     </div>
