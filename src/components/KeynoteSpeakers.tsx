@@ -7,11 +7,11 @@ import LanietaRokoMd from "../documents/keynote-speakers/lanieta-roko.md";
 const KeynoteSpeakers = () => {
   return (
     <>
-      <section className="container px-6 py-8 mx-auto lg:py-16">
-        <h2 className="text-base md:text-xl lg:text-2xl mb-6">
+      <section className="container px-4 py-8 mx-auto lg:py-16">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-medium text-gray-800 mb-6">
           Keynote Speakers
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-2">
+        </h1>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-2 justify-center">
           <SpeakerCard
             imgSrc="./imgs/keynote-speakers/andrea.jpeg"
             title="Andrea Jalandoni"
