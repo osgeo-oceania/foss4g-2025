@@ -57,22 +57,22 @@ export const EventModal = ({
         >
           {event && (
             <>
-              <div className="flex flex-wrap justify-center w-full gap-4">
-                <div className="mt-4 md:mt-0 flex flex-col w-full gap-4">
+              <div className="flex flex-wrap justify-center w-full gap-2">
+                <div className="mt-4 md:mt-0 flex flex-col w-full gap-2">
                   <h3
-                    className="mt-4 font-bold leading-6 capitalize text-xl sm:text-2xl lg:text-3xl"
+                    className="m-0 font-bold leading-6 capitalize text-base sm:text-xl lg:text-2xl"
                     id="modal-title"
                   >
                     {event.title}
                   </h3>
 
-                  <div className="prose-base md:prose-lg text-gray-500">
+                  <div className="p-0 prose-base md:prose-xl text-gray-500">
                     {day} {startTime} ({duration}) in the {event.room}
                   </div>
 
                   {event.abstract && (
                     <>
-                      <div className="prose-base md:prose-lg font-semibold w-full overflow-x-auto">
+                      <div className="p-0 prose-sm md:prose-base font-semibold w-full overflow-x-auto">
                         <Markdown
                           options={{
                             overrides: {
