@@ -163,7 +163,7 @@ export const EventCard = ({
           )}
 
           {event.persons && event.persons.length > 0 && (
-            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 pb-2">
+            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 pb-2 pr-20">
               {event.persons && event.persons.length > 0
                 ? event.persons
                     .map((person: any) => person.public_name)
