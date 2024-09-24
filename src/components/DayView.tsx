@@ -132,14 +132,18 @@ export const EventCard = ({
       {event.id > 0 ? (
         <>
           <div
-            className={`text-xs text-white py-1 px-2 rounded-t flex justify-between `}
+            className={`text-xs text-white py-1 px-2 rounded-t flex flex-nowrap items-center justify-center`}
             style={{ backgroundColor: bgColor }}
           >
-            <span className="font-bold">{toAmPm(time)}</span>
+            <span className="font-bold flex-1 flex-grow">{toAmPm(time)}</span>
             {showRoom && event.room && (
-              <span className="ml-2 font-medium">{event.room}</span>
+              <span className="font-medium flex-1 flex-grow text-center">
+                {event.room}
+              </span>
             )}
-            {toHours(event.duration)}
+            <span className="flex-1 flex-grow text-right">
+              {toHours(event.duration)}
+            </span>
           </div>
           <div className="font-semibold text-gray-900 p-2 text-xs lg:text-sm xl:text-base">
             {event.title}
