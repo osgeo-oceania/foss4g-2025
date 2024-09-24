@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import { noEventsMap } from "../pages/Program";
+import { EventModal } from "./EventModal";
 
 const INTERVAL_HEIGHT = 40;
 
-type Event = {
+export type Event = {
   id: number;
   start: string; // HH:mm
   duration: string; // HH:mm
@@ -11,8 +12,11 @@ type Event = {
   track?: string;
   date?: string;
   url?: string;
+  logo?: string;
   room?: string;
-  persons?: { public_name: string }[];
+  abstract?: string;
+  description?: string;
+  persons?: { public_name: string; biography: string; avatar: string }[];
 };
 
 type EventsByRoomAndDate = {
@@ -71,7 +75,7 @@ export const toAmPm = (minute: number) => {
   } ${ampm}`;
 };
 
-const toHours = (duration: string) => {
+export const toHours = (duration: string) => {
   const [hours, minutes] = duration.split(":").map(Number);
   if (hours === 0) return `${minutes}min`;
   if (minutes === 0) return `${hours}h`;
@@ -90,12 +94,14 @@ export const EventCard = ({
   height,
   className,
   showRoom,
+  onClick,
 }: {
   event: Event;
   time: number;
   height: number | string;
   className?: string;
   showRoom?: boolean;
+  onClick: () => void;
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -103,7 +109,7 @@ export const EventCard = ({
 
   return (
     <div
-      onClick={() => handleClick(event.url ? event.url : "")}
+      onClick={onClick}
       key={event.id}
       className={`bg-white border-[1px] border-solid rounded-md ${className} cursor-pointer z-10`}
       style={{
@@ -291,6 +297,8 @@ function parseDays(day: Day): {
 
 const DayView = ({ day }: { day: Day }) => {
   const { events, timeSlots } = useMemo(() => parseDays(day), [day]);
+  const [modelOpen, setModelOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   return (
     <>
@@ -354,6 +362,10 @@ const DayView = ({ day }: { day: Day }) => {
                         }
                         time={time}
                         className="absolute"
+                        onClick={() => {
+                          setSelectedEvent(event);
+                          setModelOpen(true);
+                        }}
                       />
                     )}
                   </td>
@@ -363,6 +375,11 @@ const DayView = ({ day }: { day: Day }) => {
           ))}
         </tbody>
       </table>
+      <EventModal
+        open={modelOpen}
+        setIsOpen={setModelOpen}
+        event={selectedEvent}
+      />
     </>
   );
 };
