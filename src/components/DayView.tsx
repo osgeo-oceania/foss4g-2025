@@ -1,8 +1,10 @@
+import Markdown from "markdown-to-jsx";
 import { useMemo, useState } from "react";
 import { noEventsMap } from "../pages/Program";
+import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 import { EventModal } from "./EventModal";
 
-const INTERVAL_HEIGHT = 40;
+const INTERVAL_HEIGHT = 30;
 
 export type Event = {
   id: number;
@@ -94,6 +96,7 @@ export const EventCard = ({
   height,
   className,
   showRoom,
+  showAbstract,
   onClick,
 }: {
   event: Event;
@@ -101,6 +104,7 @@ export const EventCard = ({
   height: number | string;
   className?: string;
   showRoom?: boolean;
+  showAbstract?: boolean;
   onClick: () => void;
 }) => {
   const [hover, setHover] = useState(false);
@@ -128,7 +132,7 @@ export const EventCard = ({
       {event.id > 0 ? (
         <>
           <div
-            className={`text-sm text-white py-1 px-2 rounded-t flex justify-between `}
+            className={`text-xs text-white py-1 px-2 rounded-t flex justify-between `}
             style={{ backgroundColor: bgColor }}
           >
             <span className="font-bold">{toAmPm(time)}</span>
@@ -137,12 +141,25 @@ export const EventCard = ({
             )}
             {toHours(event.duration)}
           </div>
-          <div className="font-semibold text-gray-800 p-2 lg:text-base xl:text-lg">
+          <div className="font-semibold text-gray-800 p-2 text-xs lg:text-sm xl:text-base">
             {event.title}
           </div>
 
+          {showAbstract && event?.abstract && (
+            <div className="max-w-none m-0 text-gray-500 p-2 prose pt-0 text-xs">
+              <Markdown
+                options={{
+                  overrides: {
+                    ...markdownCommonStyles,
+                  },
+                }}
+                children={event.abstract.replace("\n", "\n\n")}
+              />
+            </div>
+          )}
+
           {event.persons && event.persons.length > 0 && (
-            <div className="text-gray-800 text-sm lg:text-md px-2 pb-2">
+            <div className="text-gray-800 text-xs md:test-sm px-2 pb-2">
               {event.persons && event.persons.length > 0
                 ? event.persons
                     .map((person: any) => person.public_name)
@@ -151,7 +168,7 @@ export const EventCard = ({
             </div>
           )}
           <div
-            className={`absolute text-sm font-bold p-2 bottom-0 right-0`}
+            className={`absolute text-xs font-bold p-2 bottom-0 right-0`}
             style={{ color: bgColor }}
           >
             {event.track}

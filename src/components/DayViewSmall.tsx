@@ -20,7 +20,7 @@ const DayViewSmall = ({ day }: { day: Day }) => {
     <>
       <div className="flex flex-col gap-3 items-center w-full">
         {allEvents.length === 0 && (
-          <div className="text-center text-xl">
+          <div className="text-center text-sm">
             {noEventsMap[day.date] || "No events"}
           </div>
         )}
@@ -32,6 +32,7 @@ const DayViewSmall = ({ day }: { day: Day }) => {
             time={timeToMinutes(event.start)}
             className="relative"
             showRoom
+            showAbstract
             onClick={() => {
               setSelectedEvent(event);
               setModelOpen(true);
