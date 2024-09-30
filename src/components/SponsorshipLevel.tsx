@@ -3,6 +3,7 @@ import React from "react";
 type SponsorshipLevelProps = {
   title: string;
   cards: {
+    name: string;
     link: string;
     imgSrc: string;
   }[];
@@ -30,7 +31,7 @@ const SponsorshipLevel: React.FC<SponsorshipLevelProps> = ({
             {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             <img
               src={card.imgSrc}
-              alt={`Image${index + 1}`}
+              alt={card.name}
               className="p-3 max-w-full max-h-full object-contain"
             />
           </a>
