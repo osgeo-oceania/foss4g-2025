@@ -59,7 +59,7 @@ The Ferry will cost you from $28 return for the plebs - or a bit more for a posh
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
 ### **_OpenStreetMap Workshop_**
-![OSM](/imgs/osm_logo.png?w=200)
+![OSM](/imgs/osm_logo.png?w=500)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
