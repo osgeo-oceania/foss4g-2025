@@ -23,11 +23,11 @@ The **Community Day** is a free, informal event led by participants with shared 
 **Workshops** are structured events led by one or more instructors to learn specific tasks or to teach specific skills. Workshops require registration and cost to attend. There is a limited number of places for each workshop. Community day is open to all.
 
 
-## Community Day Activities
+# Community Day Activities
 
-### Adventures
+## Adventures
 
-#### Kunanyi-Mt Wellington Geological Field Trip
+### Kunanyi-Mt Wellington Geological Field Trip
 ![Mt Wellington](/imgs/mt-wellington.png)
 
 Meet at the C3 Convention Centre at 10am.  
@@ -47,7 +47,7 @@ The trip can be varied depending on walking ability and weather conditions on th
 \- Lunch - or you can purchase at the C3 cafe before we leave or have lunch at the cafe on the mountain.
 
 
-#### MONA self-guided adventure
+### MONA self-guided adventure
 ![MONA](/imgs/MONA.jpg) 
 ![MONA Ferry](/imgs/mona-ferry.png)
 
@@ -56,10 +56,10 @@ The Museum of Old and New Art -MONA- is truly an experience. Gather a group of f
 The Ferry will cost you from $28 return for the plebs - or a bit more for a posh seat. It  departs 15  minutes past the hour and takes about 25 minutes to get there. The last return ferry is at 5pm. [Book here](https://mona.net.au/stuff-to-do/ferry)
 
 
-### C3 Convention Centre Based Activities  
+## C3 Convention Centre Based Activities  
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
-#### OpenStreetMap Workshop
+### OpenStreetMap Workshop
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
@@ -75,8 +75,7 @@ Whether you're new to OpenStreetMap, just dabbled in it or a very active contrib
 
 - Your own laptop
 
-
-#### Data Cube Hack Day
+### Data Cube Hack Day
 ![Data Cube](/imgs/data-cube.png)
 
 Come and join us for the Data Cube Hack Day! If you don’t know about it, we will introduce you to it!
