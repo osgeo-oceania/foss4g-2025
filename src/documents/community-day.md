@@ -78,7 +78,7 @@ Whether you're new to OpenStreetMap, just dabbled in it or a very active contrib
 
 ### Datacube Hackathon
 
-![Data Cube](imgs/datacube-hack.png)
+<div style="max-width:700px"><img src="imgs/datacube-hack.png" alt="Data Cube" style="width:100%"></div>
 
 Come and join us for a Datacube Hack Day! If you don’t know about it, we will introduce you. (And check out the [Cloud Native Geospatial for EO](#/program/workshops) on Tuesday for a primer!)
 
