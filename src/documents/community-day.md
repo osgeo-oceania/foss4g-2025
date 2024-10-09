@@ -11,12 +11,12 @@ Registration at the conference is not a prerequisite for participation in the Co
 We will base the hackathons, mapathons, and working groups at C3 Conference Venue. There are also some active options as well, where we can meet at C3 Conference Venue so you have somewhere to store your bags if you are travelling out later that day.
 
 
-### But it doesn't stop there!
+### **But it doesn't stop there!**
 
 If you have an idea that you would like to have the community engage in with you, you are welcome to propose it at any time leading up to, and throughout the conference. Let us know so we can support you in logistics and getting the message out there email us at <program@foss4g-oceania.org>.
 
 
-#### How is the Community Day (Friday 9th Nov 2024) different from the Workshop Day (Tuesday 5th Nov 2024)?
+***How is the Community Day (Friday 9th Nov 2024) different from the Workshop Day (Tuesday 5th Nov 2024)?***
 
 The **Community Day** is a free, informal event led by participants with shared interests in a particular topic. The emphasis of the day is to give inspired individuals a chance to meet and share their open geospatial knowledge, such as sharing code, troubleshooting problems, helping beginners tackle problems they have encountered or just bonding through adventure.
 
@@ -27,7 +27,7 @@ The **Community Day** is a free, informal event led by participants with shared 
 
 ## Adventures
 
-### Kunanyi-Mt Wellington Geological Field Trip
+### **_Kunanyi-Mt Wellington Geological Field Trip_**
 ![Mt Wellington](/imgs/mt-wellington.png)
 
 Meet at the C3 Convention Centre at 10am.  
@@ -47,7 +47,7 @@ The trip can be varied depending on walking ability and weather conditions on th
 \- Lunch - or you can purchase at the C3 cafe before we leave or have lunch at the cafe on the mountain.
 
 
-### MONA self-guided adventure
+### **_MONA self-guided adventure_**
 ![MONA](/imgs/MONA.jpg) 
 ![MONA Ferry](/imgs/mona-ferry.png)
 
@@ -59,7 +59,7 @@ The Ferry will cost you from $28 return for the plebs - or a bit more for a posh
 ## C3 Convention Centre Based Activities  
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
-### OpenStreetMap Workshop
+### **_OpenStreetMap Workshop_**
 ![OSM](/imgs/osm_logo2.png)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
@@ -76,7 +76,7 @@ Whether you're new to OpenStreetMap, just dabbled in it or a very active contrib
 
 - Your own laptop
 
-### Data Cube Hack Day
+### **_Data Cube Hack Day_**
 ![Data Cube](/imgs/data-cube.png)
 
 Come and join us for the Data Cube Hack Day! If you don’t know about it, we will introduce you to it!
