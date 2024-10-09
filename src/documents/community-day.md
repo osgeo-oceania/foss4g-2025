@@ -38,7 +38,7 @@ For those interested in spending a few hours on Tasmania's most visited  touris
 
 The trip can be varied depending on walking ability and weather conditions on the day. If too inclement, we will trek around the springs. 
 
-**What to bring:**
+**What to bring:**  
 \- Make sure you wear layers that will give you comfort as the temperature up on top of the mountain is usually 10°C than in the Hobart CBD. Pack for wind, rain and sun!   
 \- Sturdy walking shoes  
 \- Sunscreen  
@@ -59,7 +59,7 @@ The Ferry will cost you from $28 return for the plebs - or a bit more for a posh
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
 ### **_OpenStreetMap Workshop_**
-![OSM](/imgs/osm_logo.png?w=100)
+![OSM](/imgs/osm_logo.png?w=25)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
