@@ -39,7 +39,7 @@ For those interested in spending a few hours on Tasmania's most visited  touris
 The trip can be varied depending on walking ability and weather conditions on the day. If too inclement, we will trek around the springs. 
 
 **What to bring:**  
-\- Make sure you wear layers that will give you comfort as the temperature up on top of the mountain is usually 10°C than in the Hobart CBD. Pack for wind, rain and sun!   
+\- Make sure you wear layers that will give you comfort as the temperature up on top of the mountain is usually 10°C than in the Hobart CBD. Pack for wind, rain and sun.     
 \- Sturdy walking shoes  
 \- Sunscreen  
 \- Water  
