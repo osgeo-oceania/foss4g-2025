@@ -39,22 +39,17 @@ For those interested in spending a few hours on Tasmania's most visited  touris
 The trip can be varied depending on walking ability and weather conditions on the day. If too inclement, we will trek around the springs. 
 
 **What to bring:**
-
-- Make sure you wear layers that will give you comfort as the temperature up on top of the mountain is usually 10°C than in the Hobart CBD. Pack for wind, rain and sun! 
-
-- Sturdy walking shoes
-
-- Sunscreen
-
-- Water
-
-- Snacks
-
-- Lunch - or you can purchase at the C3 cafe before we leave or have lunch at the cafe on the mountain.
+\- Make sure you wear layers that will give you comfort as the temperature up on top of the mountain is usually 10°C than in the Hobart CBD. Pack for wind, rain and sun! 
+\- Sturdy walking shoes
+\- Sunscreen
+\- Water
+\- Snacks
+\- Lunch - or you can purchase at the C3 cafe before we leave or have lunch at the cafe on the mountain.
 
 
 #### MONA self-guided adventure
-![MONA](/imgs/MONA.jpg)![MONA Ferry](/imgs/mona-ferry.png)
+![MONA](/imgs/MONA.jpg) 
+![MONA Ferry](/imgs/mona-ferry.png)
 
 The Museum of Old and New Art -MONA- is truly an experience. Gather a group of friends and catch the ferry to MONA and see the sights on the way there. Entry to MONA will cost $39 if you aren’t a Taswegian. [Check out the website](https://mona.net.au/visit) to see if there are any special additional exhibitions to buy tickets to. 
 
@@ -65,7 +60,6 @@ The Ferry will cost you from $28 return for the plebs - or a bit more for a posh
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
 #### OpenStreetMap Workshop
-![OSM](/imgs/osm_logo.png)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
