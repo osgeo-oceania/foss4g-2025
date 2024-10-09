@@ -182,7 +182,7 @@ export default function App() {
               <MarkdownPage
                 markdownUrl={CommunityDayMD}
                 headerImg={{
-                  url: "/imgs/present_crop_01.png",
+                  url: "/imgs/com_day.png",
                   positionY: "0px",
                 }}
               />
