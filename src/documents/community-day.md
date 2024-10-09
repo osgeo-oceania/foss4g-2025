@@ -48,8 +48,8 @@ The trip can be varied depending on walking ability and weather conditions on th
 
 
 ### **_MONA self-guided adventure_**
-![MONA](/imgs/MONA.jpg) 
-![MONA Ferry](/imgs/mona-ferry.png)
+![MONA](/imgs/MONA.jpg)
+![MONA Ferry](/imgs/mona-ferry.jpg)
 
 The Museum of Old and New Art -MONA- is truly an experience. Gather a group of friends and catch the ferry to MONA and see the sights on the way there. Entry to MONA will cost $39 if you aren’t a Taswegian. [Check out the website](https://mona.net.au/visit) to see if there are any special additional exhibitions to buy tickets to. 
 
