@@ -48,8 +48,7 @@ The trip can be varied depending on walking ability and weather conditions on th
 
 
 ### **_MONA self-guided adventure_**
-![MONA](/imgs/MONA.jpg)
-![MONA Ferry](/imgs/mona-ferry.jpg)
+![MONA](/imgs/MONA.jpg) ![MONA Ferry](/imgs/mona-ferry.jpg)
 
 The Museum of Old and New Art -MONA- is truly an experience. Gather a group of friends and catch the ferry to MONA and see the sights on the way there. Entry to MONA will cost $39 if you aren’t a Taswegian. [Check out the website](https://mona.net.au/visit) to see if there are any special additional exhibitions to buy tickets to. 
 
@@ -60,7 +59,7 @@ The Ferry will cost you from $28 return for the plebs - or a bit more for a posh
 These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
 
 ### **_OpenStreetMap Workshop_**
-![OSM](/imgs/osm_logo2.png)
+![OSM](/imgs/osm_logo2.png|width=25)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
