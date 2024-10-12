@@ -63,10 +63,10 @@ These events are self-catered with food available to purchase from the fantastic
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
-* Learn how to contributor to OpenStreetMap
+* Learn how to contribute to OpenStreetMap
 * Learn how to consume OpenStreetMap data
-* Work on documentation,
-* Or join an organised mapping activity
+* Work on documentation
+* Or join an organised mapping activity.
 
 **What to bring:**
 
