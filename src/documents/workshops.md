@@ -10,14 +10,16 @@ Workshops will be held at the University of Tasmania's Sandy Bay campus. Classro
 
 **Each workshop will have capacity for a maximum of 25 participants, so register quick!**
 
-| Time      | Coordinator     | Details                                                                                              | Cost (AUD) |
-| --------- | --------------- | ---------------------------------------------------------------------------------------------------- | ---------- |
-| Morning   | Byron Cochrane  | Drama Free GeoNetwork 4.x Migration                                                                  | $100       |
-| Morning   | Elisa Puccioni  | PostGIS 101 - A hands-on introduction to working with spatial data in PostgreSQL                     | $100       |
-| Morning   | John Bryant     | Collecting data in the field with free & open source geospatial tools: QGIS, QField, and Mergin Maps | $100       |
-| Afternoon | Daniel Paez     | Spatial Data Interoperability: Mastering QGIS layers to Illustrator and CAD Integration              | $100       |
-| Afternoon | Nyall Dawson    | Data Processing in QGIS - beyond the basics                                                          | $100       |
-| Afternoon | John HIldebrand | Running and Auto Scaling Geoserver and PostgreSQL/PostGIS without managing servers in the AWS Cloud  | $100       |
+| Time      | Coordinator       | Details                                                                                                                                                               | Cost (AUD) |
+| --------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Morning   | Byron Cochrane    | [Drama Free GeoNetwork 4.x Migration](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/WEVQZZ/)                                                                  | $100       |
+| Morning   | Elisa Puccioni    | [PostGIS 101 - A hands-on introduction to working with spatial data in PostgreSQL](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/L8HWRK/)                     | $100       |
+| Morning   | John Bryant       | [Collecting data in the field with free & open source geospatial tools: QGIS, QField, and Mergin Maps](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/FTGV8V/) | $100       |
+| Morning   | Nick Forbes-Smith | [Create and Customise Your Own 3D Web Maps with TerriaJS](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/WMGVRM/)                                              | $100       |
+| Afternoon | Daniel Paez       | [Spatial Data Interoperability: Mastering QGIS layers to Illustrator and CAD Integration](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/NHCJ7T/)              | $100       |
+| Afternoon | Nyall Dawson      | [Data Processing in QGIS - beyond the basics](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/WLKQQM/)                                                          | $100       |
+| Afternoon | John Hildebrand   | [Running and Auto Scaling Geoserver and PostgreSQL/PostGIS without managing servers in the AWS Cloud](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/JPAD73/)  | $100       |
+| Afternoon | Caitlin Adams     | [Cloud Native Geospatial for Earth Observation](https://talks.osgeo.org/foss4g-sotm-oceania-2024/talk/ULSWMQ/)                                                        | $100       |
 
 <button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" className="mt-8 block">
     Workshop Registration
