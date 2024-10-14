@@ -377,11 +377,12 @@ const DayView = ({ day }: { day: Day }) => {
                     {event && (
                       <EventCard
                         event={event}
-                        height={
+                        height={Math.max(
+                          64,
                           (timeToMinutes(event.duration) / interval) *
                             INTERVAL_HEIGHT -
-                          6
-                        }
+                            6
+                        )}
                         time={time}
                         className="absolute"
                         onClick={() => {
