@@ -145,7 +145,7 @@ export const EventCard = ({
               {toHours(event.duration)}
             </span>
           </div>
-          <div className="font-semibold text-gray-900 p-2 text-xs lg:text-sm xl:text-base">
+          <div className="font-semibold text-gray-900 px-2 pt-2 mb-2 text-xs xl:text-sm line-clamp-3">
             {event.title}
           </div>
 
@@ -163,7 +163,7 @@ export const EventCard = ({
           )}
 
           {event.persons && event.persons.length > 0 && (
-            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 pb-2 pr-20">
+            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 mb-2 pr-20 line-clamp-2">
               {event.persons && event.persons.length > 0
                 ? event.persons
                     .map((person: any) => person.public_name)
