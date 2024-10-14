@@ -61,7 +61,8 @@ export const timeToMinutes = (time: string): number => {
 const decideInterval = (duration: number): number => {
   if (duration < 0.125) return 1;
   // if (duration < 0.5) return 5;
-  if (duration <= 1) return 5;
+  if (duration < 1) return 5;
+  if (duration < 2) return 10;
 
   return 30;
 };
@@ -245,7 +246,7 @@ function parseDays(day: Day): {
   for (let i = 0; i < events.length; i++) {
     const startTime = timeToMinutes(events[i].start) / 60;
     const duration = timeToMinutes(events[i].duration) / 60;
-    const endTime =
+    let endTime =
       i === events.length - 1
         ? startTime + duration
         : timeToMinutes(events[i + 1].start) / 60;
@@ -324,7 +325,7 @@ const DayView = ({ day }: { day: Day }) => {
   return (
     <>
       <table
-        className="min-w-full border-separate"
+        className="border-separate table-fixed w-full"
         cellPadding={0}
         cellSpacing={0}
       >
