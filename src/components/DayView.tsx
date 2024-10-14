@@ -239,6 +239,16 @@ function parseDays(day: Day): {
     return acc.concat(curr);
   }, []);
 
+  console.log(day);
+
+  if (day.date === "2024-11-06")
+    events.push({
+      id: 99999,
+      start: "17:00",
+      duration: "2:00",
+      title: "Fake event to fix calendar between lightning talks and dinner",
+    });
+
   events.sort((a, b) => timeToMinutes(a.start) - timeToMinutes(b.start));
 
   const intervals: Interval[] = [];
