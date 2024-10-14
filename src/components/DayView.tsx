@@ -116,7 +116,7 @@ export const EventCard = ({
     <div
       onClick={onClick}
       key={event.id}
-      className={`bg-white border-[1px] border-solid rounded-md ${className} cursor-pointer z-10`}
+      className={`bg-white border-[1px] border-solid rounded-md ${className} cursor-pointer z-10 overflow-hidden`}
       style={{
         top: `0px`,
         height,
@@ -146,7 +146,7 @@ export const EventCard = ({
               {toHours(event.duration)}
             </span>
           </div>
-          <div className="font-semibold text-gray-900 px-2 pt-2 mb-2 text-xs xl:text-sm line-clamp-3">
+          <div className="font-semibold text-gray-900 px-2 pt-2 mb-2 text-xs xl:text-sm">
             {event.title}
           </div>
 
@@ -164,7 +164,7 @@ export const EventCard = ({
           )}
 
           {event.persons && event.persons.length > 0 && (
-            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 mb-2 pr-20 line-clamp-2">
+            <div className="text-gray-900 font-medium text-xs sm:test-base px-2 mb-2 pr-20">
               {event.persons && event.persons.length > 0
                 ? event.persons
                     .map((person: any) => person.public_name)
@@ -238,8 +238,6 @@ function parseDays(day: Day): {
   const events = Object.values(day["rooms"]).reduce((acc, curr) => {
     return acc.concat(curr);
   }, []);
-
-  console.log(day);
 
   if (day.date === "2024-11-06")
     events.push({
@@ -332,13 +330,18 @@ const DayView = ({ day }: { day: Day }) => {
   const [modelOpen, setModelOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
+  const overriddenRoomNames: Record<string, string> = {
+    "Hobart CBD and Surrounds": "Other",
+  };
+
+  const roomWidths: Record<string, number> = {
+    "Hobart CBD and Surrounds": 150,
+    Atrium: 150,
+  };
+
   return (
     <>
-      <table
-        className="border-separate table-fixed w-full"
-        cellPadding={0}
-        cellSpacing={0}
-      >
+      <table className="border-separate w-full" cellPadding={0} cellSpacing={0}>
         <thead>
           <tr
             className={`sticky top-[103px] bg-gray-50 z-20 border-b`}
@@ -348,9 +351,14 @@ const DayView = ({ day }: { day: Day }) => {
             {Object.keys(day.rooms).map((roomName, index) => (
               <th
                 key={index}
-                className="p-2 text-lg font-light text-gray-800 border-b"
+                className="p-2 text-lg font-light text-gray-800 border-b min-w-[150px]"
+                style={{
+                  width: roomWidths[roomName]
+                    ? `${roomWidths[roomName]}px`
+                    : "",
+                }}
               >
-                {roomName}
+                {overriddenRoomNames[roomName] || roomName}
               </th>
             ))}
           </tr>
