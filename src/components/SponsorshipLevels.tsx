@@ -18,27 +18,19 @@ const SponsorshipLevels = () => {
               },
             ]}
           />
-          {/* <SponsorshipLevel
-            title="Gold Sponsors"
-            cards={[
-              {
-                link: "https://www.linz.govt.nz/",
-                imgSrc: "./imgs/sponsorship-levels/platinum/linz.png",
-              },
-              {
-                link: "https://www.linz.govt.nz/",
-                imgSrc: "./imgs/sponsorship-levels/platinum/linz.png",
-              },
-            ]}
-          /> */}
           <SponsorshipLevel
-            title="Silver Sponsors"
+            title="Gold Sponsors"
             cards={[
               {
                 link: "https://mra.gov.pg/",
                 imgSrc: "./imgs/sponsors/mra.jpeg",
                 name: "Mineral Resources Authority of Papua New Guinea",
               },
+            ]}
+          />
+          <SponsorshipLevel
+            title="Silver Sponsors"
+            cards={[
               {
                 link: "https://www.terria.io/",
                 imgSrc: "./imgs/sponsors/terria-logo.png",
