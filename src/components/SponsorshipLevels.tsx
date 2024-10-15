@@ -61,6 +61,11 @@ const SponsorshipLevels = () => {
                 imgSrc: "./imgs/sponsors/openwork.png",
                 name: "OpenWork",
               },
+              {
+                link: "https://nre.tas.gov.au/",
+                imgSrc: "./imgs/sponsors/tas_gov.jpg",
+                name: "Tasmanian Government",
+              },
             ]}
           />
           <SponsorshipLevel
