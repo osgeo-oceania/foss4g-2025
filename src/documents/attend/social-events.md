@@ -35,7 +35,7 @@ Have a great evening at our conference dinner at the [The Frogmore Creek Wine Ba
 
 Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious breakfast. You do not have to identify as Female to attend this event!
 
-- **Thursday morning 7am**
+- **Thursday morning 7:30am**
 - [Hamlet Cafe](https://www.hamlet.org.au/) — [40 Molle St, Hobart](https://maps.app.goo.gl/PuVBpmNjjACjQkb77)
   - Afterwards is a beautiful 15 minute walk to the C3 Conference Centre up the [Hobart Rivulet walking track](https://maps.app.goo.gl/iZmYwR38tbbWi9NG6).
 - Dress: Cool daywear geogeek - no PJs
