@@ -9,6 +9,7 @@ import Map, {
   Source,
   Layer,
   GeolocateControl,
+  FullscreenControl,
 } from "react-map-gl/maplibre";
 
 const eventGeoJSON = {
@@ -136,6 +137,36 @@ const eventGeoJSON = {
         type: "Point",
       },
     },
+    {
+      type: "Feature",
+      properties: {
+        link: "https://maps.app.goo.gl/tSkMntQrcBxrg8mL9",
+        name: "MONA",
+        description: "Community Day: Tour",
+        minZoom: 9,
+        maxZoom: 24,
+        id: "8",
+      },
+      geometry: {
+        coordinates: [147.2612, -42.81267],
+        type: "Point",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        link: "https://maps.app.goo.gl/W3XCa7BvfHVuLefM9",
+        name: "kunanyi-Mt Wellington",
+        description: "Community Day: Tour",
+        minZoom: 9,
+        maxZoom: 24,
+        id: "9",
+      },
+      geometry: {
+        coordinates: [147.23744, -42.89612],
+        type: "Point",
+      },
+    },
   ],
 };
 
@@ -224,9 +255,44 @@ export const MapComponent = (props: MapProps) => {
       interactiveLayerIds={["events-name", "events-description"]}
       {...mapProps}
     >
+      <FullscreenControl />
       <GeolocateControl />
       <AttributionControl compact={false} />
       <NavigationControl showCompass={false} />
+
+      <Source id="events-small-marker" type="geojson" data={eventGeoJSON}>
+        <Layer
+          id="events-circle"
+          type="circle"
+          paint={{
+            "circle-color": "#444",
+            "circle-radius": 3,
+            "circle-translate": [0, -7],
+          }}
+        />
+        <Layer
+          id="events-description"
+          type="symbol"
+          layout={{
+            "text-field": ["get", "description"],
+            "text-font": ["Noto Sans Italic"],
+            "text-size": 13,
+            "text-anchor": "top",
+            "text-offset": [0, 1.3],
+            "text-max-width": 16,
+            "text-padding": 0,
+            "text-ignore-placement": true,
+            "icon-ignore-placement": true,
+          }}
+          paint={{
+            "text-color": "#555",
+            "text-halo-color": "#fff",
+            "text-halo-width": 2,
+          }}
+          filter={["in", "id", ...visibleIds]}
+        />
+      </Source>
+
       <Source id="events" type="geojson" data={eventGeoJSON}>
         <Layer
           id="events-name"

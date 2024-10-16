@@ -2,17 +2,14 @@ import { MarkdownToJSX } from "markdown-to-jsx";
 import Blockquote from "../components/Blockquote";
 import Button from "../components/Button";
 import Table from "../components/Table";
+import Link from "../components/Link";
 
 export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   blockquote: {
     component: Blockquote,
   },
   a: {
-    // make links buttons
-    props: {
-      className: "text-blue-500 underline",
-      target: "_blank",
-    },
+    component: Link,
   },
   button: {
     component: Button,
@@ -28,7 +25,7 @@ export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   th: {
     props: {
       className:
-        "px-12 py-3.5 text-sm font-bold text-left rtl:text-right text-gray-400",
+        "px-3 md:px-6 py-2 md:py-3.5 text-xs md:text-sm font-bold text-left rtl:text-right text-gray-200",
     },
   },
   tbody: {
@@ -39,7 +36,7 @@ export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   td: {
     props: {
       className:
-        "px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-200",
+        "px-3 md:px-6 py-2 md:py-3.5 text-xs md:text-sm font-normal text-left rtl:text-right text-gray-200",
     },
   },
   img: {

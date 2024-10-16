@@ -6,6 +6,7 @@ import DayViewSmall from "../components/DayViewSmall";
 
 import { ReactNode, useEffect, useState } from "react";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
+import { MapComponent } from "../components/Map";
 
 const getToday = (): string => {
   const today = new Date();
@@ -150,6 +151,20 @@ const ProgramPage = () => {
             </>
           )}
         </section>
+        <div
+          style={{ marginLeft: "calc((-100vw + 100%) / 2)" }}
+          className="-mb-6 mt-6"
+        >
+          <MapComponent
+            width={"100vw"}
+            height={400}
+            initialViewState={{
+              longitude: 147.32031,
+              latitude: -42.88898,
+              zoom: 12.3,
+            }}
+          />
+        </div>
       </div>
     </>
   );

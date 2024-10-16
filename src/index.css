@@ -43,3 +43,7 @@ p:has(> .popout-image:not(.inline-image)) {
 .keynote-card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+table a.text-blue-500 {
+  color: theme("colors.blue.300");
+}

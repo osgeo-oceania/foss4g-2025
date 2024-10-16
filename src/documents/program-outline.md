@@ -1,58 +1,30 @@
 # Program Outline
 
-The general program outline for sessions and social events is as follows...
+The general program outline for sessions and social events:
 
-<!--All asterixed events can be bought via the register page either at the time of registering or after.-->
+| Date                 | Session                             | Social                                                                                                 |
+| -------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Tuesday 5 November   | Workshops (<i>UTAS</i>)             | <ul><li>Ice Breaker Dinner (_Deep South Brewing Co._)</li></ul>                                        |
+| Wednesday 6 November | Day 1 of the Conference (<i>C3</i>) | <ul><li>TGP Breakfast (_Bear With Me Cafe_)</li><li> Conference Dinner (_Frogmore Wine Bar_)</li></ul> |
+| Thursday 7 November  | Day 2 of the Conference (<i>C3</i>) | <ul><li>Women in Geospatial Breakfast (_Hamlet Cafe_)</li></ul>                                        |
+| Friday 8 November    | Community Day (<i>C3</i>)           | <ul><li>kunanyi-Mt Wellington Geological Field Trip</li><li>MONA self-guided adventure </li></ul>      |
 
-| Date                 | Session                 | Social                           |
-| -------------------- | ----------------------- | -------------------------------- |
-| Tuesday 5 November   | Workshops               | Ice breaker                      |
-| Wednesday 6 November | Day 1 of the Conference | TGP Breakfast, Conference Dinner |
-| Thursday 7 November  | Day 2 of the Conference | Women in Geospatial Breakfast    |
-| Friday 8 November    | Community Day           | TBC get together                 |
+For more information, please see
 
-Conference schedule is now available
+- [Conference Schedule](/#/program/schedule)
+- [Workshop Schedule](/#/program/workshops)
+- [Social Events Schedule](/#/program/social-events)
 
-<button target="/#/program/schedule">
-    Conference Schedule
-</button>
-
-<!-- ## Want to be part of our Program?
-
-Presentations and Workshops are the beating heart of the FOSS4G SotM Oceania conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G SotM Oceania community forward.
-
-For more information visit our [Call for Papers](/#/call-for-papers) page. -->
-
-<!-- ## Community Voting
-
-Community voting is now open for the FOSS4G SotM Oceania 2024 conference. You can vote for your favourite presentations to help shape the conference program.
-
-<button target="https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/">
-    Vote now!
-</button> -->
-
-## Conference, breakfast and dinner tickets
-
-Conference registration is now open
+Conference registration is still open!
 
 <button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024">
     Conference Registration
 </button>
 
-## Workshop tickets
+Workshop registration is also still open!
 
-Workshop registration is now open
-
-<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops" >
+<button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops">
     Workshop Registration
-</button>
-
-## Social events
-
-See the social events page for more information on the social events happening during the conference.
-
-<button target="/#/program/social-events">
-    Social Events
 </button>
 
 ![Salamanca near Hobart's waterfront](/imgs/salamanca-crop.jpeg)

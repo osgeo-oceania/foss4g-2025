@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({ children, target, className }) => {
     <button
       className={
         "not-prose px-6 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 " +
-        className
+        (className ?? "")
       }
     >
       <a
