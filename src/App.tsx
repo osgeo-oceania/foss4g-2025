@@ -120,6 +120,7 @@ export default function App() {
               <MarkdownPage
                 markdownUrl={TransportMD}
                 headerImg={{ url: "/imgs/bus_hobart3.png", positionY: "40%" }}
+                showMap
               />
             }
           />
@@ -158,6 +159,7 @@ export default function App() {
                   url: "/imgs/workshop-lunch.jpg",
                   positionY: "40%",
                 }}
+                showMap
               />
             }
           />
@@ -185,6 +187,7 @@ export default function App() {
                   url: "/imgs/2023_comm_day4.png",
                   positionY: "0px",
                 }}
+                showMap
               />
             }
           />

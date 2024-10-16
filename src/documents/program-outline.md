@@ -26,5 +26,3 @@ Workshop registration is also still open!
 <button target="https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024-workshops">
     Workshop Registration
 </button>
-
-![Salamanca near Hobart's waterfront](/imgs/salamanca-crop.jpeg)

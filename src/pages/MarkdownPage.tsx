@@ -1,7 +1,8 @@
 import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
-import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 import { useLocation } from "react-router-dom";
+import { MapComponent } from "../components/Map";
+import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 
 export const MarkdownPage = (props: {
   markdownUrl: string;
@@ -11,6 +12,7 @@ export const MarkdownPage = (props: {
     positionY?: string;
     height?: string | number;
   };
+  showMap?: boolean;
 }) => {
   // Get current page from react router
   const location = useLocation();
@@ -55,6 +57,22 @@ export const MarkdownPage = (props: {
           />
         </section>
       </div>
+      {props.showMap && (
+        <div
+          style={{ marginLeft: "calc((-100vw + 100%) / 2)" }}
+          className="-mb-6 mt-6"
+        >
+          <MapComponent
+            width={"100vw"}
+            height={400}
+            initialViewState={{
+              longitude: 147.32031,
+              latitude: -42.88898,
+              zoom: 12.3,
+            }}
+          />
+        </div>
+      )}
     </>
   );
 };
