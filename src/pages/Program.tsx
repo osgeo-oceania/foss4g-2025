@@ -122,7 +122,14 @@ const ProgramPage = () => {
             children={introMddText}
           />
         </section>
-        <a type="hidden" id="schedule-top"></a>
+        <a
+          type="hidden"
+          id="schedule-top"
+          href="#schedule-top"
+          className="h-0 overflow-hidden block"
+        >
+          &nbsp;
+        </a>
 
         <section className="mx-[calc((-100vw+100%)/2)] xl:mx-auto mt-8 prose-base max-w-none bg-gray-50 rounded-none xl:rounded-lg py-4">
           {error ? (
