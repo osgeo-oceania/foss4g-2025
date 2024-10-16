@@ -91,7 +91,7 @@ export const EventModal = ({
                         <img
                           src={event.logo}
                           alt="Event logo"
-                          className="m-0 md:max-w-[50%] max-h-[50vh] md:float-right pt-2 md:py-6 md:pl-2"
+                          className="m-0 md:max-w-[50%] md:max-h-[50vh] md:float-right pt-2 md:py-6 md:pl-2"
                         />
                       )}
                       <Markdown
