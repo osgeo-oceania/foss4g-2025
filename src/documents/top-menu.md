@@ -5,7 +5,7 @@
   - [Accommodation](#/attend/accommodation)
   - [Transport](#/attend/transport)
   - [Adventures](#/attend/adventures)
-- [PROGRAM](#/program/schedule)
+- [PROGRAM](#/program/outline)
   - [Outline](#/program/outline)
   - [Schedule](#/program/schedule)
   - [Workshops](#/program/workshops)
