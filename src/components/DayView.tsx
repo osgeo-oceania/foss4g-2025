@@ -351,7 +351,7 @@ const DayView = ({ day }: { day: Day }) => {
             {Object.keys(day.rooms).map((roomName, index) => (
               <th
                 key={index}
-                className="p-2 text-lg font-light text-gray-800 border-b min-w-[150px]"
+                className="p-2 text-sm font-bold text-gray-800 border-b min-w-[150px]"
                 style={{
                   width: roomWidths[roomName]
                     ? `${roomWidths[roomName]}px`

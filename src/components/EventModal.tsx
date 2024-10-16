@@ -87,6 +87,13 @@ export const EventModal = ({
                   )}
                   {event?.description && (
                     <div className="w-full m-0 prose-sm md:prose-base overflow-x-auto">
+                      {open && event.logo && (
+                        <img
+                          src={event.logo}
+                          alt="Event logo"
+                          className="m-0 md:max-w-[50%] max-h-[50vh] md:float-right pt-2 md:py-6 md:pl-2"
+                        />
+                      )}
                       <Markdown
                         options={{
                           overrides: {
@@ -110,7 +117,7 @@ export const EventModal = ({
               <div className="flex flex-col mt-10 gap-4">
                 {event.persons?.map((person, i) => (
                   <div key={i} className="flex flex-row gap-4">
-                    {person.avatar ? (
+                    {open && person.avatar ? (
                       <img
                         className="hidden sm:inline object-cover rounded-md h-36 w-36 m-0 mt-2 flex-shrink-0"
                         src={person.avatar}
@@ -126,7 +133,7 @@ export const EventModal = ({
                       <h3 className="mt-0 p-0 font-bold">
                         {person.public_name}
                       </h3>
-                      {person.avatar && (
+                      {open && person.avatar && (
                         <img
                           className="sm:hidden object-cover rounded-md h-36 w-36 my-2 flex-shrink-0"
                           src={person.avatar}
