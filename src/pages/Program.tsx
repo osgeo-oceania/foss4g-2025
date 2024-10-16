@@ -91,6 +91,18 @@ const ProgramPage = () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (loading) return;
+    const target = window.document.getElementById("schedule-top");
+    // Scroll to top of target
+    target?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    // Don't trigger on load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeDay]);
+
   return (
     <>
       <section
@@ -110,6 +122,7 @@ const ProgramPage = () => {
             children={introMddText}
           />
         </section>
+        <a type="hidden" id="schedule-top"></a>
 
         <section className="mx-[calc((-100vw+100%)/2)] xl:mx-auto mt-8 prose-base max-w-none bg-gray-50 rounded-none xl:rounded-lg py-4">
           {error ? (
@@ -122,20 +135,24 @@ const ProgramPage = () => {
             </div>
           ) : (
             <>
-              <div className="sticky top-16 z-20 bg-gray-50 flex justify-around  whitespace-nowrap mb-8 overflow-x-auto overflow-y-visible h-10 md:px-4">
-                {days.map((day: any, index: number) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveDay(index)}
-                    className={`inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 xl:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 ${
-                      activeDay === index
-                        ? "border-blue-950 text-gray-800 font-bold"
-                        : "border-transparent text-gray-700"
-                    }`}
-                  >
-                    {day}
-                  </button>
-                ))}
+              <div className="sticky top-16 z-20 bg-gray-50 mb-8 overflow-x-auto overflow-y-visible h-10 md:px-4">
+                <div className="flex justify-around whitespace-nowrap w-fit mx-auto">
+                  {days.map((day: any, index: number) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setActiveDay(index);
+                      }}
+                      className={`inline-flex items-center h-10 px-4 -mb-px text-sm text-center text-gray-700 bg-transparent border-b-2 xl:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 ${
+                        activeDay === index
+                          ? "border-blue-950 text-gray-800 font-bold"
+                          : "border-transparent text-gray-700"
+                      }`}
+                    >
+                      {day}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="hidden md:block md:px-4">

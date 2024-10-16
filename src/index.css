@@ -47,3 +47,7 @@ p:has(> .popout-image:not(.inline-image)) {
 table a.text-blue-500 {
   color: theme("colors.blue.300");
 }
+
+.maplibregl-cooperative-gesture-screen {
+  z-index: 10 !important;
+}
