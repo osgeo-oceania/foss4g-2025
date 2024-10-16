@@ -9,9 +9,9 @@ Outline of the general program for sessions and social events:
 | Thursday 7 November  | Day 2 of the Conference (<i>C3</i>) | <ul><li>Women in Geospatial Breakfast (_Hamlet Cafe_)</li></ul>                                        |
 | Friday 8 November    | Community Day (<i>C3</i>)           | <ul><li>kunanyi-Mt Wellington Geological Field Trip</li><li>MONA self-guided adventure </li></ul>      |
 
-For more information, please see
+For more information on Workshops and Social Events, please see
 
-- [Workshop Schedule](/#/program/workshops)
-- [Social Events Schedule](/#/program/social-events)
+- [Workshops page](/#/program/workshops)
+- [Social Events page](/#/program/social-events)
 
 You can also view the conference schedule through [pretalx](https://talks.osgeo.org/foss4g-sotm-oceania-2024/schedule/).
