@@ -6,7 +6,7 @@
   - [Transport](#/attend/transport)
   - [Adventures](#/attend/adventures)
 - [PROGRAM](#/program/schedule)
-  - [Online](#/program/outline)
+  - [Outline](#/program/outline)
   - [Schedule](#/program/schedule)
   - [Workshops](#/program/workshops)
   - [Social Events](#/program/social-events)
