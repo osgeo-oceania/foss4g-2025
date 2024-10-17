@@ -239,6 +239,8 @@ function parseDays(day: Day): {
     return acc.concat(curr);
   }, []);
 
+  let intervalOverride: number | null = null;
+
   if (day.date === "2024-11-06")
     events.push({
       id: 99999,
@@ -246,6 +248,8 @@ function parseDays(day: Day): {
       duration: "2:00",
       title: "Fake event to fix calendar between lightning talks and dinner",
     });
+
+  if (day.date === "2024-11-05") intervalOverride = 30;
 
   events.sort((a, b) => timeToMinutes(a.start) - timeToMinutes(b.start));
 
@@ -259,7 +263,7 @@ function parseDays(day: Day): {
         ? startTime + duration
         : timeToMinutes(events[i + 1].start) / 60;
 
-    const intervalSize = decideInterval(duration);
+    const intervalSize = intervalOverride ?? decideInterval(duration);
 
     // Check if the interval already exists
     if (
@@ -335,6 +339,7 @@ const DayView = ({ day }: { day: Day }) => {
   };
 
   const roomWidths: Record<string, number> = {
+    "University of Tasmania Studio Theatre": 170,
     "Hobart CBD and Surrounds": 150,
     Atrium: 150,
   };
