@@ -4,7 +4,7 @@ import { noEventsMap } from "../pages/Program";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 import { EventModal } from "./EventModal";
 
-const INTERVAL_HEIGHT = 30;
+const INTERVAL_HEIGHT = 32;
 
 export type Event = {
   id: number;
@@ -123,7 +123,7 @@ export const EventCard = ({
         width: "95%",
         zIndex: 10,
         userSelect: "none",
-        marginTop: "3px",
+        marginTop: "2px",
         color: "white",
         borderColor: hover ? bgColor : "rgb(229 231 235)",
       }}
@@ -138,7 +138,7 @@ export const EventCard = ({
           >
             <span className="font-bold flex-1 flex-grow">{toAmPm(time)}</span>
             {showRoom && event.room && (
-              <span className="font-medium flex-1 flex-grow text-center">
+              <span className="font-medium flex-1 flex-grow-[3] text-center">
                 {event.room}
               </span>
             )}
@@ -173,7 +173,7 @@ export const EventCard = ({
             </div>
           )}
           <div
-            className={`absolute text-xs font-bold p-2 bottom-0 right-0`}
+            className={`absolute text-xs font-bold py-[6px] px-2 bottom-0 right-0`}
             style={{ color: bgColor }}
           >
             {event.track}
@@ -339,7 +339,7 @@ const DayView = ({ day }: { day: Day }) => {
   };
 
   const roomWidths: Record<string, number> = {
-    "University of Tasmania Studio Theatre": 170,
+    "University of Tasmania Studio Theatre": 160,
     "Hobart CBD and Surrounds": 150,
     Atrium: 150,
   };
@@ -352,11 +352,11 @@ const DayView = ({ day }: { day: Day }) => {
             className={`sticky top-[103px] bg-gray-50 z-20 border-b`}
             style={{ height: `${INTERVAL_HEIGHT}px` }}
           >
-            <th className="p-2 w-[100px] border-b"></th>
+            <th className="py-2 px-1 min-w-[75px] w-[75px] border-b"></th>
             {Object.keys(day.rooms).map((roomName, index) => (
               <th
                 key={index}
-                className="p-2 text-sm font-bold text-gray-800 border-b min-w-[150px]"
+                className="py-2 px-1 text-sm font-bold text-gray-800 border-b min-w-[150px]"
                 style={{
                   width: roomWidths[roomName]
                     ? `${roomWidths[roomName]}px`
@@ -382,7 +382,7 @@ const DayView = ({ day }: { day: Day }) => {
           {timeSlots.map(({ time, interval }, index) => (
             <tr key={time} style={{ height: `${INTERVAL_HEIGHT}px` }}>
               {time % 15 === 0 ? (
-                <td className="border-t text-left pb-0 align-top">
+                <td className="border-t text-right pr-1 p-0 align-top">
                   {toAmPm(time)}
                 </td>
               ) : (
@@ -401,10 +401,10 @@ const DayView = ({ day }: { day: Day }) => {
                       <EventCard
                         event={event}
                         height={Math.max(
-                          64,
+                          INTERVAL_HEIGHT * 2 - 5,
                           (timeToMinutes(event.duration) / interval) *
                             INTERVAL_HEIGHT -
-                            6
+                            5
                         )}
                         time={time}
                         className="absolute"
