@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SimpleModal } from "./SimpleModal";
 
-interface SponsorCardProps {
+export interface SponsorCardProps {
   name: string;
   link: string;
   imgSrc: string;
@@ -10,10 +10,11 @@ interface SponsorCardProps {
 
 type SponsorshipLevelProps = {
   title: string;
+  description?: string;
   cards: SponsorCardProps[];
 };
 
-const SponsorCard: React.FC<SponsorCardProps> = ({
+export const SponsorCard: React.FC<SponsorCardProps> = ({
   name,
   link,
   imgSrc,
@@ -49,7 +50,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
         <img
           src={imgSrc}
           alt={name}
-          className="p-3 max-w-full max-h-full object-contain"
+          className="p-3 max-w-full max-h-full object-contain m-0"
         />
       </a>
     </div>
@@ -58,6 +59,7 @@ const SponsorCard: React.FC<SponsorCardProps> = ({
 
 const SponsorshipLevel: React.FC<SponsorshipLevelProps> = ({
   title,
+  description,
   cards,
 }) => {
   return (
@@ -65,6 +67,10 @@ const SponsorshipLevel: React.FC<SponsorshipLevelProps> = ({
       <h2 className="text-l font-medium text-gray-800 md:text-xl lg:text-2xl mb-5">
         {title}
       </h2>
+
+      {description && (
+        <p className="text-sm text-gray-600 mb-5">{description}</p>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mb-5  justify-items-center sm:justify-items-normal">
         {cards.map((card, index) => (

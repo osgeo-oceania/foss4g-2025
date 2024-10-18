@@ -13,3 +13,4 @@
   - [Community Day](#/program/community-day)
   <!-- - [Community Voting](https://talks.osgeo.org/foss4g-sotm-oceania-2024/p/voting/signup/) -->
 - [SPONSORSHIP](#/sponsorship)
+- [ORGANISERS](#/organisers)

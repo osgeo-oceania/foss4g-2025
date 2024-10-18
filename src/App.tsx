@@ -10,7 +10,7 @@ import CommunityDayMD from "./documents/community-day.md";
 import GetInvolvedMD from "./documents/get-involved.md";
 // import ScheduleMd from "./documents/schedule-placeholder.md";
 // import LogoCompetitionMD from "./documents/logo-competition.md";
-import OrganisersMD from "./documents/organisers.md";
+import TransportMD from "./documents/attend/transport.md";
 import PresentMD from "./documents/present.md";
 import ProductShowcaseMD from "./documents/product-showcase.md";
 import ProgramOutlineMD from "./documents/program-outline.md";
@@ -20,11 +20,10 @@ import Layout from "./pages/Layout";
 import { MailingList } from "./pages/MailingList";
 import { MarkdownPage } from "./pages/MarkdownPage";
 import NoPage from "./pages/NoPage";
-import ProgramMD from "./pages/Program";
+import Organisers from "./pages/Organisers";
+import { default as ProgramMD, default as ProgramPage } from "./pages/Program";
 import SocialEvents from "./pages/SocialEvents";
 import Workshops from "./pages/Workshops";
-import TransportMD from "./documents/attend/transport.md";
-import ProgramPage from "./pages/Program";
 
 export default function App() {
   return (
@@ -215,18 +214,7 @@ export default function App() {
               />
             }
           />
-          <Route
-            path="organisers"
-            element={
-              <MarkdownPage
-                markdownUrl={OrganisersMD}
-                headerImg={{
-                  url: "/imgs/auck_build_3D.jpeg",
-                  positionY: "0px",
-                }}
-              />
-            }
-          />
+          <Route path="organisers" element={<Organisers />} />
 
           <Route path="mailing-list" element={<MailingList />} />
           <Route path="*" element={<NoPage />} />

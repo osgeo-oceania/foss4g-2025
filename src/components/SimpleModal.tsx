@@ -35,6 +35,7 @@ export const SimpleModal: React.FC<{
     }
   }, [open]);
 
+  const overlayBg = light ? "bg-black bg-opacity-40" : "bg-white bg-opacity-60";
   const bg = light ? "bg-white" : "bg-gray-900";
   const titleText = light ? "text-black" : "text-white";
   const text = light ? "text-gray-900" : "text-gray-200";
@@ -45,7 +46,7 @@ export const SimpleModal: React.FC<{
 
   return (
     <div
-      className={`fixed top-0 left-0 p-2 items-center justify-center overflow-hidden z-40 bg-white bg-opacity-60 h-screen w-screen`}
+      className={`fixed top-0 left-0 p-2 items-center justify-center overflow-hidden z-40 ${overlayBg} h-screen w-screen`}
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"

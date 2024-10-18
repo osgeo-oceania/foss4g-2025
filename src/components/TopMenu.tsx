@@ -78,6 +78,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
 
   const renderedMenuItems = menuItems.map((menuItem, index) => (
     <React.Fragment key={index}>
+      {/* Desktop menu - top level item (no sub items) */}
       {menuItem.subMenuItems.length === 0 && (
         <a
           href={menuItem.href}
@@ -85,7 +86,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
             window.scrollTo({ top: 0 });
             setMenuOpen(false);
           }}
-          className="font-semibold block text-sky transition-colors duration-300 md:px-4 lg:px-6 hover:text-black text-center"
+          className="font-semibold block text-sky transition-colors duration-300 md:px-2 lg:px-6 text-sm lg:text-base hover:text-black text-center"
         >
           {menuItem.text}
         </a>
@@ -96,14 +97,14 @@ const TopMenu: React.FC<TopMenuProps> = ({ children, setMenuOpen }) => {
           onMouseLeave={() => handleMouseLeave(menuItem.text)}
           className="relative"
         >
-          {/* Desktop menu - top level item */}
+          {/* Desktop menu - top level item (with sub items) */}
           <a
             href={menuItem.href}
             onClick={() => {
               window.scrollTo({ top: 0 });
               setMenuOpen(false);
             }}
-            className="hidden md:block font-semibold text-sky transition-colors duration-300 md:px-4 lg:px-6 hover:text-black text-center min-w-full"
+            className="hidden md:block font-semibold text-sky transition-colors duration-300 md:px-2 lg:px-6 text-sm lg:text-base hover:text-black text-center min-w-full"
           >
             {menuItem.text}
             <svg
