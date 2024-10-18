@@ -75,7 +75,7 @@ Nick is committed to open data and open-source tools, and actively contributes t
     name: "Dawn Hendrick",
     description: `I have more than 40 years of cartographic experience starting my professional career as a geologist/seismic geophysicist. Since moving to Tasmania fourteen years ago I have continued to run my own consultancy DH Geodata Services compiling maps for mining, engineering and environmental companies both in Australia and overseas. I am a retired Spatial Science Teacher from TafeNSW.  I have run courses using QGIS for the SSSI (now GCA) and for commercial operations with Alex Leith.
 I attended the first FOSS4G SotM Oceania conference in Melbourne back in 2018 and have attended every year (except 2022 in Fiji) since then.  During COVID I organised the Hobart Hub for 2020 and 2021. I use QGIS software with two volunteer organisations who would not have a mapping capability otherwise.`,
-    role: "Communications/Merch",
+    role: "Communications, Merch",
     image: "/imgs/team/dawn.jpg",
   },
   {
