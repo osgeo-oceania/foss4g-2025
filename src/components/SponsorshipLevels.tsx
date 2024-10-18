@@ -9,7 +9,7 @@ const SponsorshipLevels = () => {
           </h1>
 
           <SponsorshipLevel
-            title="Platinum Sponsors"
+            title="Platinum Sponsor"
             cards={[
               {
                 link: "https://www.ga.gov.au/",
@@ -19,7 +19,7 @@ const SponsorshipLevels = () => {
             ]}
           />
           <SponsorshipLevel
-            title="Gold Sponsors"
+            title="Gold Sponsor"
             cards={[
               {
                 link: "https://mra.gov.pg/",
@@ -29,7 +29,7 @@ const SponsorshipLevels = () => {
             ]}
           />
           <SponsorshipLevel
-            title="Silver Sponsors"
+            title="Silver Sponsor"
             cards={[
               {
                 link: "https://www.terria.io/",
