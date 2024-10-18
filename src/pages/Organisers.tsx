@@ -58,7 +58,7 @@ const organisers: {
     description: `Nick is a Technical Leader and Software Engineer specialising in building Web platforms for data visualisation. He focuses on making data accessible and understandable to all, regardless of expertise.
 
 Nick is committed to open data and open-source tools, and actively contributes to these communities. He’s driven by projects that create meaningful, positive change.`,
-    role: "Chair: Sponsorship, Chair: Venues/Events, Chair: Website",
+    role: "Chair: Sponsorship, Venues/Events, Website",
     image: "/imgs/team/nick.jpg",
     links: [
       {
@@ -75,14 +75,14 @@ Nick is committed to open data and open-source tools, and actively contributes t
     name: "Dawn Hendrick",
     description: `I have more than 40 years of cartographic experience starting my professional career as a geologist/seismic geophysicist. Since moving to Tasmania fourteen years ago I have continued to run my own consultancy DH Geodata Services compiling maps for mining, engineering and environmental companies both in Australia and overseas. I am a retired Spatial Science Teacher from TafeNSW.  I have run courses using QGIS for the SSSI (now GCA) and for commercial operations with Alex Leith.
 I attended the first FOSS4G SotM Oceania conference in Melbourne back in 2018 and have attended every year (except 2022 in Fiji) since then.  During COVID I organised the Hobart Hub for 2020 and 2021. I use QGIS software with two volunteer organisations who would not have a mapping capability otherwise.`,
-    role: "Chair: Communications/Merch",
+    role: "Communications/Merch",
     image: "/imgs/team/dawn.jpg",
   },
   {
     name: "Leo Ghignone",
     description: `Leo is a Data Engineer with a background in Machine Learning, currently working for the Australian Integrated Marine Observing System to manage data from the seas all around Australia. He loves new challenges and new technologies, and strives to make data open and available to all.
 He had his first experience with FOSS4G last year, got fascinated by the community and is now trying to contribute to it.`,
-    role: "Chair: Volunteers, Program, Merch",
+    role: "Volunteers, Program, Merch",
     image: "/imgs/team/leo.jpg",
     links: [
       {
