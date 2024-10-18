@@ -26,7 +26,7 @@ If you are a recipient of the **Travel Grant Program** (TGP), this is your break
 
 Have a great evening at our conference dinner at the [The Frogmore Creek Wine Bar](https://www.frogmorecreek.com.au/) - located down on Hobart's iconic waterfront. You can book your dinner ticket anytime from [here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024) but tickets are limited and don't forget to include any dietary considerations for catering purposes.
 
-- **Wednesday night 6.30pm till late**
+- **Wednesday night 6pm till late**
 - [The Frogmore Creek Wine Bar](https://www.frogmorecreek.com.au/) — [18 Hunter St, Hobart](https://maps.app.goo.gl/iRz3GgsAo2AVFE768)
 - Dress: Spiffy evening wear geogeek
 - Tickets: $125 [register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024)
