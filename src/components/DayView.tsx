@@ -241,13 +241,20 @@ function parseDays(day: Day): {
 
   let intervalOverride: number | null = null;
 
-  if (day.date === "2024-11-06")
+  if (day.date === "2024-11-06") {
+    events.push({
+      id: 99998,
+      start: "16:50",
+      duration: "0:30",
+      title: "Fake event to fix calendar between lightning talks and dinner",
+    });
     events.push({
       id: 99999,
       start: "17:00",
       duration: "2:00",
       title: "Fake event to fix calendar between lightning talks and dinner",
     });
+  }
 
   if (day.date === "2024-11-05") intervalOverride = 30;
 
