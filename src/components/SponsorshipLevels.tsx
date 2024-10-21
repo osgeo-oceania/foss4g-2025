@@ -37,6 +37,11 @@ const SponsorshipLevels = () => {
                 name: "Terria",
                 description: `Terria's mission is to organise and connect the world’s spatial data, making it accessible and useful for everyone. We’re pioneering spatial digital twins—digital replicas of natural and built environments—to address complex challenges like understanding the impact of rising sea levels on coastal cities and planning resilient infrastructure. While digital twins are often costly and complicated, Terria is changing that by making them accessible, powerful, and easy to use. We empower researchers, government leaders, industry experts and open-source developers to leverage spatial data and digital twins for smarter solutions, from building resilient communities to advancing sustainable food and energy systems.\n\nGo to [terria.io](https://www.terria.io/) to learn more!`,
               },
+              {
+                link: "https://www.spc.int/",
+                imgSrc: "./imgs/sponsors/spc.svg",
+                name: "SPC",
+              },
             ]}
           />
           <SponsorshipLevel
@@ -71,6 +76,11 @@ const SponsorshipLevels = () => {
                 link: "https://nre.tas.gov.au/",
                 imgSrc: "./imgs/sponsors/tas_gov.jpg",
                 name: "Tasmanian Government",
+              },
+              {
+                link: "https://eskspatial.com.au",
+                imgSrc: "./imgs/sponsors/esk.png",
+                name: "Esk Spatial",
               },
             ]}
           />
