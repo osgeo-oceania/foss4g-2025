@@ -10,21 +10,29 @@ Registration at the conference is not a prerequisite for participation in the Co
 
 We will base the hackathons, mapathons, and working groups at C3 Convention Centre. There are also some active options as well, where we can meet at C3 so you have somewhere to store your bags if you are travelling out later that day.
 
+**Community Day Adventures:**
+
+- [kunanyi-Mt Wellington Geological Field Trip](#kunanyi-mt-wellington-geological-field-trip)
+- [MONA self-guided adventure](#mona-self-guided-adventure)
+
+**C3 Convention Centre Based Activities:**
+
+- [OpenStreetMap Mapathon](#openstreetmap-mapathon)
+- [Datacube Hackathon](#datacube-hackathon)
+
 ### But it doesn't stop there
 
 If you have an idea that you would like to have the community engage in with you, you are welcome to propose it at any time leading up to, and throughout the conference. Let us know so we can support you in logistics and getting the message out there email us at <program@foss4g-oceania.org>.
 
-***How is the Community Day (Friday 8th Nov 2024) different from the Workshop Day (Tuesday 5th Nov 2024)?***
+**_How is the Community Day (Friday 8th Nov 2024) different from the Workshop Day (Tuesday 5th Nov 2024)?_**
 
 The **Community Day** is a free, informal event led by participants with shared interests in a particular topic. The emphasis of the day is to give inspired individuals a chance to meet and share their open geospatial knowledge, such as sharing code, troubleshooting problems, helping beginners tackle problems they have encountered or just bonding through adventure.
 
 **Workshops** are structured events led by one or more instructors to learn specific tasks or to teach specific skills. Workshops require registration and cost to attend. There is a limited number of places for each workshop. Community day is open to all.
 
-## Community Day Activities
+## Community Day Adventures
 
-### Adventures
-
-#### kunanyi-Mt Wellington Geological Field Trip
+### kunanyi-Mt Wellington Geological Field Trip
 
 ![kunanyi/Mt Wellington](imgs/mt-wellington.png)
 
@@ -40,13 +48,13 @@ The trip can be varied depending on walking ability and weather conditions on th
 
 Make sure you wear layers that will give you comfort and bring something rain proof as the temperature up on top of the mountain is usually 10°C less than in Hobart. Pack for wind, rain and sun. Other things you need include:
 
-* Sturdy walking shoes
-* Sunscreen  
-* Water  
-* Snacks  
-* Lunch - or you can purchase at the C3 cafe before we leave.  
+- Sturdy walking shoes
+- Sunscreen
+- Water
+- Snacks
+- Lunch - or you can purchase at the C3 cafe before we leave.
 
-#### MONA self-guided adventure
+### MONA self-guided adventure
 
 ![MONA](imgs/Mona-trip2.png)
 
@@ -54,19 +62,20 @@ The Museum of Old and New Art (MONA) is truly an experience. Gather a group of f
 
 The Ferry will cost you from $28 return for the plebs, or you can splash out for a seat posh seat. It departs 15 minutes past the hour and takes about 25 minutes to get there. The last return ferry is at 5pm. [Book here](https://mona.net.au/stuff-to-do/ferry). You also need a separate ticket for the museum, which is world class. They often have music playing on the lawn in the afternoon on Saturdays, which is another great option for visiting MONA.
 
-### C3 Convention Centre Based Activities  
-These events are self-catered with food available to purchase from the fantastic C3 Cafe. 
+## C3 Convention Centre Based Activities
 
-####  OpenStreetMap Mapathon
+These events are self-catered with food available to purchase from the fantastic C3 Cafe.
+
+### OpenStreetMap Mapathon
 
 ![OSM](imgs/osm5.png)
 
 Whether you're new to OpenStreetMap, just dabbled in it or a very active contributor, please join us for an OpenStreetMap workshop where you can:
 
-* Learn how to contribute to OpenStreetMap
-* Learn how to consume OpenStreetMap data
-* Work on documentation
-* Or join an organised mapping activity.
+- Learn how to contribute to OpenStreetMap
+- Learn how to consume OpenStreetMap data
+- Work on documentation
+- Or join an organised mapping activity.
 
 **What to bring:**
 

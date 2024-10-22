@@ -8,6 +8,21 @@ export const markdownCommonStyles: MarkdownToJSX.Overrides = {
   blockquote: {
     component: Blockquote,
   },
+  h1: {
+    props: {
+      className: "text-xl font-medium text-gray-800 md:text-2xl lg:text-4xl",
+    },
+  },
+  h2: {
+    props: {
+      className: "text-l font-bold text-gray-800 md:text-xl lg:text-2xl",
+    },
+  },
+  h3: {
+    props: {
+      className: "text-base font-semibold text-gray-800 md:text-lg lg:text-xl",
+    },
+  },
   a: {
     component: Link,
   },
