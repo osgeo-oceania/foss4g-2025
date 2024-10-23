@@ -54,6 +54,8 @@ Make sure you wear layers that will give you comfort and bring something rain pr
 - Snacks
 - Lunch - or you can purchase at the C3 cafe before we leave.
 
+**Please register your interest [here](https://docs.google.com/forms/d/e/1FAIpQLScRst2P58x57Fnvdlw8e1af6gWz6aQiYmGIqw3soL92ejXXDQ/viewform)**
+
 ### MONA self-guided adventure
 
 ![MONA](imgs/Mona-trip2.png)
