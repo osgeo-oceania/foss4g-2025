@@ -82,6 +82,11 @@ const SponsorshipLevels = () => {
                 imgSrc: "./imgs/sponsors/esk.png",
                 name: "Esk Spatial",
               },
+              {
+                link: "https://www.meta.com/au/",
+                imgSrc: "./imgs/sponsors/meta.png",
+                name: "Meta",
+              },
             ]}
           />
           <SponsorshipLevel
