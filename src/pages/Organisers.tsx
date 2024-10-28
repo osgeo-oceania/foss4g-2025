@@ -93,7 +93,9 @@ He had his first experience with FOSS4G last year, got fascinated by the communi
   },
   {
     name: "Elisa Puccioni",
-    description: `No bio.`,
+    description: `Elisa is the current chair of OsGeo Oceania board and has been contributing to the community since 2019, serving first as board member, then as Grant committee chair and now as the board chair.
+
+Elisa was born in Italy and moved to New Zealand in 2008, where she currently resides. She has over 18 years of experience in GIS and database administration and has been working with most of the proprietors and open-source GIS packages. She is a great supporter of GIS open-source software as she strongly believes that everybody should be able to know and use GIS, especially people belonging to minority groups or living in remote areas.`,
     role: "Travel Grant Program",
     image: "/imgs/team/eli.jpg",
     links: [
@@ -109,6 +111,7 @@ He had his first experience with FOSS4G last year, got fascinated by the communi
 
 Colin has worked for geological survey organisations in New Zealand, Oklahoma and Tasmania, undertaking regional mapping and natural hazards studies. Since 2016 he has run in-person and online training courses teaching QGIS to geotechnical practitioners in Australia, New Zealand and Nepal. He is currently undertaking a geological mapping project in NZ and will be presenting a talk on this at the conference.`,
     role: "Committee Member",
+    image: "/imgs/team/colin.jpg",
     links: [
       {
         name: "Email",
