@@ -48,3 +48,17 @@ Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious br
 The Women in Geospatial breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/au).
 
 <img src="/imgs/sponsors/nova.png" width="200px" alt="Nova Systems" style="width:200px; margin-left:-15px; margin-right:0;" />
+
+## GeoRabble
+
+GeoRabble is an informal gathering of geographically inclined people, held at the Gold Bar pub. It's a chance to meet your fellow geo-enthusiasts from around the world, and catch up in a casual setting.
+
+This event coincides with the FOSS4G SotM Oceania 2024 conference, but it's open to anyone whether or not they're attending the conference.
+
+- **Thursday night 5:30pm**
+  - The first talk scheduled for 6.30pm
+- [Gold Bar](https://goldbarhobart.com.au/) — [11 Morrison St, Hobart (through the alley)](http://maps.google.com/maps?q=-42.8839914%2C147.3314133+%28Gold+Bar%2C+Suite+3%2C+Ground+Floor%2F11+Morrison+St%2C+Hobart+TAS+7000%2C+Australia%29)
+- Tickets: $5 [register here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024/with/georabble)
+  - Note that you can pay what you want, so if times are touch, grab a free ticket. If you’re in abundance, you can help us pay for snacks!
+
+We'll be featuring a number of short presentations about recent GIS projects. If you have a story you'd like to tell in 10 minutes or less, please contact [Stephen.Lead@FullExtent.com.au](mailto:Stephen.Lead@FullExtent.com.au)
