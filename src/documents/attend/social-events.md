@@ -22,6 +22,10 @@ If you are a recipient of the **Travel Grant Program** (TGP), this is your break
 - Dress: Cool daywear geogeek - no PJs
 - Tickets: invite only
 
+The Travel Grant Program breakfast is proudly sponsored by [Esri](https://www.esri.com/en-us/home/).
+
+<img src="/imgs/sponsors/esri.png" width="200px" alt="Esri" style="width:200px; margin-left:-15px; margin-right:0;" />
+
 ## Conference Dinner
 
 Have a great evening at our conference dinner at the [The Frogmore Creek Wine Bar](https://www.frogmorecreek.com.au/) - located down on Hobart's iconic waterfront. You can book your dinner ticket anytime from [here](https://ti.to/osgeo-oceania/foss4g-sotm-oceania-2024) but tickets are limited and don't forget to include any dietary considerations for catering purposes.

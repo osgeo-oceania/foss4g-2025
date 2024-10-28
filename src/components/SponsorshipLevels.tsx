@@ -26,6 +26,11 @@ const SponsorshipLevels = () => {
                 imgSrc: "./imgs/sponsors/mra.jpeg",
                 name: "Mineral Resources Authority of Papua New Guinea",
               },
+              {
+                link: "https://www.esri.com/en-us/home/",
+                imgSrc: "./imgs/sponsors/esri.png",
+                name: "Esri",
+              },
             ]}
           />
           <SponsorshipLevel
@@ -101,6 +106,41 @@ const SponsorshipLevels = () => {
                 link: "https://c3conventioncentre.com.au/",
                 imgSrc: "./imgs/sponsors/c3.png",
                 name: "C3 Convention Centre",
+              },
+            ]}
+          />
+          <SponsorshipLevel
+            title="Event Sponsors"
+            cards={[
+              {
+                link: "https://north-road.com/",
+                imgSrc: "./imgs/sponsors/northroad.png",
+                name: "North Road",
+              },
+              {
+                link: "https://www.novasystems.com/au",
+                imgSrc: "./imgs/sponsors/nova.png",
+                name: "Nova Systems",
+              },
+              {
+                link: "https://www.esri.com/en-us/home/",
+                imgSrc: "./imgs/sponsors/esri.png",
+                name: "Esri",
+              },
+            ]}
+          />
+          <SponsorshipLevel
+            title="Conference Partners"
+            cards={[
+              {
+                link: "https://osgeo-oceania.org/",
+                imgSrc: "./imgs/sponsors/osgeo-oceania.png",
+                name: "OSGeo Oceania",
+              },
+              {
+                link: "https://osmfoundation.org/",
+                imgSrc: "./imgs/sponsors/osmf.png",
+                name: "OpenStreetMap Foundation",
               },
             ]}
           />
