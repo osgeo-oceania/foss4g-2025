@@ -30,6 +30,7 @@ const SponsorshipLevels = () => {
                 link: "https://www.esri.com/en-us/home/",
                 imgSrc: "./imgs/sponsors/esri.png",
                 name: "Esri",
+                description: `Esri, the global market leader in geographic information system (GIS) software, location intelligence, and mapping, helps leaders around the world unlock the full potential of data, and to understand and address important challenges such as climate change, disaster response, public health and education. Founded in 1969 in Redlands, California, USA, Esri software is deployed in more than 350,000 organizations globally and in over 200,000 institutions in the Americas, Asia Pacific, Europe, Africa, and the Middle East, including government agencies, nonprofits, and universities. With its pioneering commitment to geospatial information technology, Esri engineers the most innovative solutions to help solve the world’s most complex problems.  \n\nVisit us at [esri.com](http://www.esri.com/).`,
               },
             ]}
           />

@@ -35,7 +35,7 @@ export const SponsorCard: React.FC<SponsorCardProps> = ({
         />
       )}
       <a
-        href={description ? "#terria" : link}
+        href={description ? "#info" : link}
         onClick={(evt) => {
           if (description) {
             setShowModal(true);
