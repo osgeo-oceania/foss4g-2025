@@ -4,7 +4,15 @@ Workshops are a great way to get practical experience in a hands-on session, gui
 
 The workshops will be held on **Tuesday 5 November 2024** and are half day morning or afternoon time slots (up to 4 hours long).
 
-Workshops will be held at the University of Tasmania's Sandy Bay campus. Classrooms are in the [Social Sciences building](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi). The regsitration and break area is in the [Studio Theatre](https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi). More details will be posted closer to the event.
+Workshops will be held at the University of Tasmania's Sandy Bay campus. Classrooms are in the [Social Sciences building](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi). The registration and break area is in the [Studio Theatre](https://maps.utas.edu.au/?zLevel=1&center=147.32609084788146,-42.90434824160919&zoom=17.68769237106732&sharepoi=1001841&sharepoitype=poi).
+
+## Directions
+
+The workshops are being held at a different location to the Conference. They are at the Sandy Bay Campus of University of Tasmania - here is [the map link](https://maps.utas.edu.au/?zLevel=1&center=147.32661490177793,-42.9042389799388&zoom=19&_gl=1*17g4dze*_gcl_au*MTI4NDI3MDg1LjE3MzAxODE4MzE.*FPAU*MTI4NDI3MDg1LjE3MzAxODE4MzE.&sharepoi=NaN) but if you type in [“University Centre” into Google maps](https://www.google.com/maps/place/University+Centre/@-42.9041686,147.3254259,19z/dat%5B%E2%80%A6%5D1rfdfnsjs?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D), the Studio Theatre is right next to it. Look for the FOSS4G Flag to help guide you.
+
+To get there by public transportation, use the [Trip Planner](https://www.metrotas.com.au/planner/#) and your destination is Churchill Ave (UTAS) Stop 12. Routes are 401/458/501. It takes about 15 minutes from the Hobart CBD.
+
+Come to the registration desk in the Studio Theatre - this is where we will have the breaks and refreshments.
 
 ## Workshop Registration
 
