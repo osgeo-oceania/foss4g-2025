@@ -8,11 +8,49 @@ Workshops will be held at the University of Tasmania's Sandy Bay campus. Classro
 
 ## Directions
 
+### Studio Theatre
+
 The workshops are being held at a different location to the Conference. They are at the Sandy Bay Campus of University of Tasmania - here is [the map link](https://maps.utas.edu.au/?zLevel=1&center=147.32661490177793,-42.9042389799388&zoom=19&_gl=1*17g4dze*_gcl_au*MTI4NDI3MDg1LjE3MzAxODE4MzE.*FPAU*MTI4NDI3MDg1LjE3MzAxODE4MzE.&sharepoi=NaN) but if you type in [“University Centre” into Google maps](https://www.google.com/maps/place/University+Centre/@-42.9041686,147.3254259,19z/dat%5B%E2%80%A6%5D1rfdfnsjs?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D), the Studio Theatre is right next to it. Look for the FOSS4G Flag to help guide you.
 
 To get there by public transportation, use the [Trip Planner](https://www.metrotas.com.au/planner/#) and your destination is Churchill Ave (UTAS) Stop 12. Routes are 401/458/501. It takes about 15 minutes from the Hobart CBD.
 
 Come to the registration desk in the Studio Theatre - this is where we will have the breaks and refreshments.
+
+### Social Sciences Building
+
+The workshops are being held in the Social Sciences Building. The building is located at the Sandy Bay Campus of University of Tasmania - here is [the map link](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi).
+
+<div>
+    <img className="inline-image mt-4" width="800px" src="/imgs/workshop-directions.jpeg">
+</div>
+
+### Workshop Rooms
+
+Workshop room 1 - Social Sciences 212 directions:
+
+- Enter social sciences building
+- Turn left walk down the corridor until room 212
+
+Workshop room 2 - Social Sciences 209 directions:
+
+- Enter social sciences building
+- Turn left walk down corridor until the end
+- Turn left walk down corridor until 209
+
+Workshop room 3 - Social Sciences 109 directions:
+
+- Enter social sciences building
+- Turn left and walk down the corridor
+- Turn left and walk down the stairs
+- Turn right and walk down corridor until room 109
+
+Workshop room 4 - Social Sciences 312 directions:
+
+- Enter social sciences building
+- Turn left walk down the corridor
+- Turn left walk up stairs
+- Turn left and then left again
+- Follow corridor until room 312
 
 ## Workshop Registration
 
