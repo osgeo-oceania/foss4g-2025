@@ -52,6 +52,17 @@ Workshop room 4 - Social Sciences 312 directions:
 - Turn left and then left again
 - Follow corridor until room 312
 
+## Workshop WiFi
+
+UTAS have a “UTAS Guest Network”, which attendees can connect to
+
+- Connect to UTAS Guest Network” on your device
+- A popup will ask to you login or create an account
+- Click create account and fill out name, email and phone number
+  - The phone number will need to be an **Australian number**
+- You will then receive a SMS with your username and password
+- WiFi!
+
 ## Workshop Registration
 
 **Each workshop will have capacity for a maximum of 25 participants, so register quick!**
