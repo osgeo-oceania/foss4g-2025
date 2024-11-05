@@ -15,6 +15,21 @@ const SponsorshipLevels = () => {
                 link: "https://www.ga.gov.au/",
                 imgSrc: "./imgs/sponsors/geoscience_stacked.png",
                 name: "Geoscience Australia",
+                description: `Digital Earth Australia (DEA) is a program of Geoscience Australia, Australia’s national public-sector geoscience organisation. DEA began in 2018 and exists to leverage the power and free use of satellite imagery for the benefit of all Australians.
+
+We know collaboration is key and that the best way to collaborate is to connect with open science.   
+We provide freely available Earth observation (EO) images and data at continental scale for the whole of Australia. We provide data in near real-time, as well as more the refined analysis ready data that provides incredible insight into how our environment changes through time. 
+
+Our scientists and engineers work to create imaginative applications of the EO data supplied by our partners. Our innovative products and services are freely shared with industry, academy and community for use across Australia and even beyond our shores. 
+
+DEA makes nearly four decades of landscape imagery and data freely available on interactive maps, to download, and to access via web tools and services. DEA users can use this data as they choose.  
+Delivered through our freely available products and services, we process and provide national-scale imagery that shows Australian landscapes in unprecedented detail, revealing how our lands, waters, coasts and broader environments have changed over four decades.
+
+We equip government, industry and communities with organised, analysis ready data and high-performance computing infrastructure, unlocking the value of satellite observations for planning, monitoring and problem solving. Across environmental management, agriculture, emergency management, government and the natural resources sector, satellite data products and services are increasing efficiency, improving productivity, and opening-up new ways of working with Australian lands and waters.  
+
+DEA’s mission is to embed EO imagery and data into decisions that support a sustainable Australian environment, resilient society and communities, and a strong economy.
+
+Find out more about DEA at [ga.gov.au/dea](https://www.ga.gov.au/scientific-topics/dea).`,
               },
             ]}
           />
