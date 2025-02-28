@@ -1,8 +1,8 @@
 import SpeakerCard from "./SpeakerCard";
-import AndreaJalandoniMD from "../documents/keynote-speakers/andrea-jalandoni.md";
-import BriannaPaganMd from "../documents/keynote-speakers/brianna-pagan.md";
-import KateFickasMd from "../documents/keynote-speakers/kate-fickas.md";
-import LanietaRokoMd from "../documents/keynote-speakers/lanieta-roko.md";
+import AndreaJalandoniMD from "../content/keynote-speakers/andrea-jalandoni.md";
+import BriannaPaganMd from "../content/keynote-speakers/brianna-pagan.md";
+import KateFickasMd from "../content/keynote-speakers/kate-fickas.md";
+import LanietaRokoMd from "../content/keynote-speakers/lanieta-roko.md";
 
 const KeynoteSpeakers = () => {
   return (

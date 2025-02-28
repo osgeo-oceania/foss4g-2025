@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { noEventsMap } from "../pages/Program";
+import { noEventsMap } from "../pages/program";
 import { Day, Event, EventCard, timeToMinutes } from "./DayView";
 import { EventModal } from "./EventModal";
 

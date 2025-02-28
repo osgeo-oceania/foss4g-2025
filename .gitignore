@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-package-lock.json
 
 # testing
 /coverage
@@ -24,3 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode
+.next
+next-env.d.ts
+
+yarn.lock

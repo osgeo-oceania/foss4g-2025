@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import { useMemo, useState } from "react";
-import { noEventsMap } from "../pages/Program";
+import { noEventsMap } from "../pages/program";
 import { markdownCommonStyles } from "../utils/markdownCommonStyles";
 import { EventModal } from "./EventModal";
 
@@ -116,7 +116,7 @@ export const EventCard = ({
     <div
       onClick={onClick}
       key={event.id}
-      className={`bg-white border-[1px] border-solid rounded-md ${className} cursor-pointer z-10 overflow-hidden`}
+      className={`bgbg-slate-50 border-[1px] border-solid rounded-md ${className} cursor-pointer z-10 overflow-hidden`}
       style={{
         top: `0px`,
         height,
@@ -133,7 +133,7 @@ export const EventCard = ({
       {event.id > 0 ? (
         <>
           <div
-            className={`text-xs text-white py-1 px-2 rounded-t flex flex-nowrap items-center justify-center`}
+            className={`text-xs text-slate-50 py-1 px-2 rounded-t flex flex-nowrap items-center justify-center`}
             style={{ backgroundColor: bgColor }}
           >
             <span className="font-bold flex-1 flex-grow">{toAmPm(time)}</span>

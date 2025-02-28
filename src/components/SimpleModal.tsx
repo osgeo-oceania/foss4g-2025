@@ -35,9 +35,11 @@ export const SimpleModal: React.FC<{
     }
   }, [open]);
 
-  const overlayBg = light ? "bg-black bg-opacity-40" : "bg-white bg-opacity-60";
-  const bg = light ? "bg-white" : "bg-gray-900";
-  const titleText = light ? "text-black" : "text-white";
+  const overlayBg = light
+    ? "bg-black bg-opacity-40"
+    : "bgbg-slate-50 bg-opacity-60";
+  const bg = light ? "bgbg-slate-50" : "bg-gray-900";
+  const titleText = light ? "text-black" : "text-slate-50";
   const text = light ? "text-gray-900" : "text-gray-200";
   const btnText = light ? "text-gray-500" : "text-gray-400";
   const btnTextHover = light ? "hover:text-gray-800" : "hover:text-gray-300";

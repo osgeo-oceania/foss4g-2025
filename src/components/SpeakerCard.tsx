@@ -54,7 +54,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           />
         </div>
         <div className="py-5 px-3 text-center">
-          <div className="block text-xl font-bold text-white">{title}</div>
+          <div className="block text-xl font-bold text-slate-50">{title}</div>
           <span className="text-sm text-gray-200">{shortDescription}</span>
         </div>
       </div>

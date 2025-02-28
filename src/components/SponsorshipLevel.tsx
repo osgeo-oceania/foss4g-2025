@@ -44,7 +44,7 @@ export const SponsorCard: React.FC<SponsorCardProps> = ({
         }}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex cursor-pointer w-full h-full bg-white rounded overflow-hidden hover:scale-105 sponsor-card justify-center"
+        className="flex cursor-pointer w-full h-full bgbg-slate-50 rounded overflow-hidden hover:scale-105 sponsor-card justify-center"
       >
         {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
         <img

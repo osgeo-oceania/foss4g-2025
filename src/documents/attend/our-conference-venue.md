@@ -1,3 +1,0 @@
-# Our conference venue
-
-TBC
