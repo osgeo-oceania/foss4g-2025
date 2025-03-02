@@ -195,8 +195,8 @@ export const MapComponent = (props: MapProps) => {
       ref={mapRef}
       style={{ width: props.width, height: props.height }}
       initialViewState={{
-        longitude: 174.7635,
-        latitude: -36.8735,
+        longitude: 174.7628,
+        latitude: -36.8504,
         zoom: 11,
       }}
       cooperativeGestures={true}
