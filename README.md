@@ -19,7 +19,7 @@ npm run dev
 We are using [MDX](https://mdxjs.com/) pages, which is markdown with JSX support.
 
 - Pages are in the [`pages/`](/pages/) directory
-- The navigation menu is in [`pages/\_menu.ts](/pages/_menu.ts)
+- The navigation menu is in [`pages/_menu.ts`](/pages/_menu.ts)
 
 There are a few custom components you can add to pages
 
