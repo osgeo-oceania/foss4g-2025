@@ -21,7 +21,7 @@ const mdxComponents: MDXComponents = {
   HeaderImage: HeaderImage,
   FooterImage: FooterImage,
   DividerImage: DividerImage,
-  Columns: (props) => <div className=" columns-2">{props.children}</div>,
+  StyledButton: Button,
   blockquote: Blockquote,
   h1: (props) => (
     <h1
@@ -50,7 +50,6 @@ const mdxComponents: MDXComponents = {
     />
   ),
   a: Link,
-  StyledButton: Button,
   table: Table,
   thead: (props) => <thead {...props} className="bg-primary-600" />,
   th: (props) => (
