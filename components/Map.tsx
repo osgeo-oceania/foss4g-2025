@@ -204,7 +204,7 @@ export const MapComponent = (props: MapProps) => {
         const map = e.target;
         map.touchZoomRotate.disableRotation();
 
-        const image = await map.loadImage("imgs/marker.png");
+        const image = await map.loadImage("/imgs/marker.png");
         map.addImage("marker", image.data, { pixelRatio: 3.5 });
       }}
       mapStyle="https://api.protomaps.com/styles/v5/light/en.json?key=51cf1275231eb004"

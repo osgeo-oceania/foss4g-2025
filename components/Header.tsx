@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { useState } from "react";
-import { HeaderLogo } from "./HeaderLogo";
-import TopMenu from "./TopMenu";
 import { MENU } from "../pages/_menu";
+import { HeaderLogo } from "./HeaderLogo";
 import PopupMenu from "./PopupMenu";
+import TopMenu from "./TopMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,13 +11,13 @@ const Header = () => {
   return (
     <header className="shadow-sm bg-slate-800 text-slate-50 sticky top-0 z-40 flex-none w-full mx-auto">
       <nav className="container relative flex px-6 py-1 mx-auto h-16">
-        <a href="/" className="flex items-center justify-start">
+        <Link href="/" className="flex items-center justify-start">
           <div>
             <HeaderLogo />
 
             <p className="hidden">FOSS4G 2025</p>
           </div>
-        </a>
+        </Link>
         <div className="flex items-center justify-end flex-grow">
           <button
             onClick={() => setMenuOpen(!menuOpen)}

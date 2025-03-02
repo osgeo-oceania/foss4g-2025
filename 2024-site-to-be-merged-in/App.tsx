@@ -36,7 +36,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={CodeOfConduct}
-//                 headerImg={{ url: "imgs/office_with_paper_work.png" }}
+//                 headerImg={{ url: "/imgs/office_with_paper_work.png" }}
 //               />
 //             }
 //           />
@@ -46,7 +46,7 @@
 //               <MarkdownPage
 //                 markdownUrl={CallForPapersMD}
 //                 headerImg={{
-//                   url: "imgs/present-header.jpg",
+//                   url: "/imgs/present-header.jpg",
 //                   positionY: "30%",
 //                 }}
 //               />
@@ -58,7 +58,7 @@
 //               <MarkdownPage
 //                 markdownUrl={ScheduleMd}
 //                 headerImg={{
-//                   url: "imgs/present-header.jpg",
+//                   url: "/imgs/present-header.jpg",
 //                   positionY: "30%",
 //                 }}
 //               />
@@ -71,7 +71,7 @@
 //               <MarkdownPage
 //                 markdownUrl={LogoCompetitionMD}
 //                 headerImg={{
-//                   url: "imgs/Logo_design_sketching.jpg",
+//                   url: "/imgs/Logo_design_sketching.jpg",
 //                   positionY: "60%",
 //                 }}
 //               />
@@ -82,7 +82,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={PresentMD}
-//                 headerImg={{ url: "imgs/group photo.jpeg", positionY: "40%" }}
+//                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
 //               />
 //             }
 //           />
@@ -91,7 +91,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={TravelGrantProgramMD}
-//                 headerImg={{ url: "imgs/group photo.jpeg", positionY: "40%" }}
+//                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
 //               />
 //             }
 //           />
@@ -100,7 +100,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={OurConferenceVenueMD}
-//                 headerImg={{ url: "imgs/group photo.jpeg", positionY: "40%" }}
+//                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
 //               />
 //             }
 //           />
@@ -109,7 +109,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={AccommodationMD}
-//                 headerImg={{ url: "imgs/group photo.jpeg", positionY: "40%" }}
+//                 headerImg={{ url: "/imgs/group photo.jpeg", positionY: "40%" }}
 //               />
 //             }
 //           />
@@ -118,7 +118,7 @@
 //             element={
 //               <MarkdownPage
 //                 markdownUrl={TransportMD}
-//                 headerImg={{ url: "imgs/bus_hobart3.png", positionY: "40%" }}
+//                 headerImg={{ url: "/imgs/bus_hobart3.png", positionY: "40%" }}
 //                 showMap
 //               />
 //             }
@@ -129,7 +129,7 @@
 //               <MarkdownPage
 //                 markdownUrl={AdventuresMD}
 //                 headerImg={{
-//                   url: "imgs/sunset.jpeg",
+//                   url: "/imgs/sunset.jpeg",
 //                   positionY: "20%",
 //                 }}
 //               />
@@ -141,7 +141,7 @@
 //               <MarkdownPage
 //                 markdownUrl={RegisterMD}
 //                 headerImg={{
-//                   url: "imgs/group photo.jpeg",
+//                   url: "/imgs/group photo.jpeg",
 //                   positionY: "40%",
 //                   height: "20rem",
 //                 }}
@@ -155,7 +155,7 @@
 //               <MarkdownPage
 //                 markdownUrl={ProgramOutlineMD}
 //                 headerImg={{
-//                   url: "imgs/workshop-lunch.jpg",
+//                   url: "/imgs/workshop-lunch.jpg",
 //                   positionY: "40%",
 //                 }}
 //                 showMap
@@ -171,7 +171,7 @@
 //               <MarkdownPage
 //                 markdownUrl={GetInvolvedMD}
 //                 headerImg={{
-//                   url: "imgs/workshop_crop_01.png",
+//                   url: "/imgs/workshop_crop_01.png",
 //                   positionY: "0px",
 //                 }}
 //               />
@@ -183,7 +183,7 @@
 //               <MarkdownPage
 //                 markdownUrl={CommunityDayMD}
 //                 headerImg={{
-//                   url: "imgs/2023_comm_day4.png",
+//                   url: "/imgs/2023_comm_day4.png",
 //                   positionY: "0px",
 //                 }}
 //                 showMap
@@ -196,7 +196,7 @@
 //               <MarkdownPage
 //                 markdownUrl={ProductShowcaseMD}
 //                 headerImg={{
-//                   url: "imgs/present_crop_01.png",
+//                   url: "/imgs/present_crop_01.png",
 //                   positionY: "0px",
 //                 }}
 //               />
@@ -208,7 +208,7 @@
 //               <MarkdownPage
 //                 markdownUrl={SponsorshipMD}
 //                 headerImg={{
-//                   url: "imgs/sponsor-header.jpeg",
+//                   url: "/imgs/sponsor-header.jpeg",
 //                   positionY: "50%",
 //                 }}
 //               />

@@ -12,13 +12,14 @@ console.log(`Using BASE_PATH: ${BASE_PATH}`);
 
 const nextConfig: NextConfig = {
   basePath: BASE_PATH,
-  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : "/",
+  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : "",
 
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 
   output: "export",
   distDir: "build",
+  images: { unoptimized: true },
 };
 
 const withMDX = createMDX({

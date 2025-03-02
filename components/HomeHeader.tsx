@@ -1,19 +1,30 @@
+import Image from "next/image";
+import logoImage from "../public/imgs/2025/foss4g_2025_logo_interim.png";
+import backgroundImage from "../public/imgs/2025/auckland.jpg";
+
 export const HomeHeader = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/imgs/2025/auckland.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 30%",
         marginLeft: "calc((-100vw + 100%) / 2)",
       }}
       className="relative -mt-4 w-screen mb-8"
     >
-      <div className="bg-primary-base opacity-30 absolute w-full h-full"></div>
+      <div className="bg-primary-base opacity-30 absolute w-full h-full z-10"></div>
+      <Image
+        src={backgroundImage}
+        alt={"Background image of Auckland"}
+        style={{
+          objectPosition: "center 30%",
+        }}
+        className={
+          "m-0 absolute top-0 left-0 mx-auto justify-center object-cover w-full h-full"
+        }
+      />
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:py-16 z-10 relative">
         <div className="flex flex-col px-4">
-          <img
-            src="imgs/2025/foss4g_2025_logo_interim.png"
+          <Image
+            src={logoImage}
             alt="FOSS4G 2025"
             className="md:m-0 w-auto h-44 md:h-64 lg:h-96 object-contain"
           />

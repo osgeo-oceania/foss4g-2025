@@ -1,23 +1,27 @@
 import cx from "classnames";
+import Image from "next/image";
 
 interface ImageProps {
   url: string;
   positionX?: string;
   positionY?: string;
-  height?: string | number;
+  height?: number;
+  width?: number;
   alt?: string;
   className?: string;
 }
 
 const ImageBase = (props: ImageProps) => (
-  <img
+  <Image
     src={props.url}
-    alt={props.alt}
+    alt={props.alt ?? ""}
+    width={props.width ?? 1920}
+    height={props.height ?? 1080}
     style={{
       objectPosition: `${props.positionX ?? "center"} ${
         props.positionY ?? "center"
       }`,
-      height: props.height ?? "16rem",
+      height: props.height ? `${props.height}px` : "16rem",
     }}
     className={cx(
       "m-auto relative flex items-center justify-center object-cover w-full",
