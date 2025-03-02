@@ -64,7 +64,14 @@ jobs:
       #     echo UMAMI_WEBSITE_ID=${{ secrets.UMAMI_WEBSITE_ID }} >> .env
       #     echo SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }} >> .env
       - name: Build with Next.js
-        run: pnpm run build
+        run: |
+          pnpm run build
+          # If dev, then create robots.txt to disallow search engines
+          if [ ${{ github.repository }} == 'osgeo-oceania/foss4g-2025-dev' ]; then
+            echo "Disabling search engine indexing for dev site"
+            echo "User-agent: *" > out/robots.txt
+            echo "Disallow: /" >> out/robots.txt
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
