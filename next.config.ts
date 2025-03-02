@@ -6,7 +6,12 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import remarkGfm from "remark-gfm";
 
+const BASE_PATH = process.env.BASE_PATH ?? "";
+
 const nextConfig: NextConfig = {
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : "/",
+
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 
