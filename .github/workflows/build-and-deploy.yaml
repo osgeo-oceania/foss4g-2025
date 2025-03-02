@@ -74,10 +74,11 @@ jobs:
             echo "User-agent: *" > build/robots.txt
             echo "Disallow: /" >> build/robots.txt
           fi
+          ls -l build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: build/
 
   # Deployment job
   deploy:

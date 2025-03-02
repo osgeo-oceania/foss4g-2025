@@ -4,8 +4,12 @@ Auckland, New Zealand - 17th to 23rd November 2025
 
 ## Dev
 
-```bash
-yarn install # Install dependencies
+Install NodeJS (version 22) - https://nodejs.org/en/download
 
-yarn run start # Start dev server
+Install dependencies, and then run development server
+
+```bash
+npm install
+
+npm run dev
 ```
