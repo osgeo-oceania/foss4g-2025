@@ -8,18 +8,20 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 const BASE_PATH = process.env.BASE_PATH ?? "";
 
-console.log(`Using BASE_PATH: ${BASE_PATH}`);
+if (BASE_PATH) console.log(`Using BASE_PATH: ${BASE_PATH}`);
 
 const nextConfig: NextConfig = {
   basePath: BASE_PATH,
   assetPrefix: BASE_PATH ? `${BASE_PATH}/` : "",
 
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  pageExtensions: ["md", "mdx", "tsx"],
 
   output: "export",
   distDir: "build",
   images: { unoptimized: true },
+  publicRuntimeConfig: {
+    baseUrl: BASE_PATH,
+  },
 };
 
 const withMDX = createMDX({

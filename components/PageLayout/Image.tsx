@@ -1,5 +1,9 @@
 import cx from "classnames";
 import Image from "next/image";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+const baseUrl = publicRuntimeConfig.baseUrl;
 
 interface ImageProps {
   url: string;
@@ -13,7 +17,7 @@ interface ImageProps {
 
 const ImageBase = (props: ImageProps) => (
   <Image
-    src={props.url}
+    src={props.url.startsWith("/") ? `${baseUrl}${props.url}` : props.url}
     alt={props.alt ?? ""}
     width={props.width ?? 1920}
     height={props.height ?? 1080}

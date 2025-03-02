@@ -10,6 +10,11 @@ import { HomeHeader } from "../HomeHeader";
 import { InlineMap } from "./InlineMap";
 import { DividerImage, FooterImage, HeaderImage } from "./Image";
 
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+const baseUrl = publicRuntimeConfig.baseUrl;
+
 const mdxComponents: MDXComponents = {
   InlineMap: InlineMap,
   HomeHeader: HomeHeader,
@@ -70,6 +75,7 @@ const mdxComponents: MDXComponents = {
   img: (props) => (
     <img
       {...props}
+      src={props.src?.startsWith("/") ? `${baseUrl}${props.src}` : props.src}
       className={cx({ "popout-image": !props.width && !props.height })}
     />
   ),
