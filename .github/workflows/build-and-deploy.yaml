@@ -69,13 +69,15 @@ jobs:
           # If dev, then create robots.txt to disallow search engines
           if [ ${{ github.repository }} == 'osgeo-oceania/foss4g-2025-dev' ]; then
             echo "Disabling search engine indexing for dev site"
-            echo "User-agent: *" > out/robots.txt
-            echo "Disallow: /" >> out/robots.txt
+            rm -f build/robots.txt
+            touch build/robots.txt
+            echo "User-agent: *" > build/robots.txt
+            echo "Disallow: /" >> build/robots.txt
           fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./build
 
   # Deployment job
   deploy:
