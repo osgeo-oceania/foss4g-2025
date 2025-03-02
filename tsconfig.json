@@ -29,5 +29,9 @@
     "pages/index.tsx",
     "pages/index.tsx"
   ],
-  "exclude": ["node_modules", "src/**/*.tsx", "src/**/*.ts"]
+  "exclude": [
+    "node_modules",
+    "2024-site-to-be-merged-in/**/*.tsx",
+    "2024-site-to-be-merged-in/**/*.ts"
+  ]
 }

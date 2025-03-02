@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { HeaderLogo } from "./HeaderLogo";
 import TopMenu from "./TopMenu";
+import { MENU } from "../pages/_menu";
+import PopupMenu from "./PopupMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +14,7 @@ const Header = () => {
           <div>
             <HeaderLogo />
 
-            <p className="hidden">FOSS4G SotM Oceania 2024</p>
+            <p className="hidden">FOSS4G 2025</p>
           </div>
         </a>
         <div className="flex items-center justify-end flex-grow">
@@ -51,28 +53,15 @@ const Header = () => {
               </svg>
             </span>
           </button>
-          <div
-            className={`${
-              menuOpen
-                ? "translate-x-0 opacity-100"
-                : "opacity-0 -translate-x-full"
-            } absolute inset-x-0 z-30 w-full px-4 py-8 mt-4 space-y-6 transition-all duration-300 ease-in-out bg-primary-600 top-10 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:space-y-0 md:-mx-6 md:flex md:items-center md:justify-center`}
-          >
-            <TopMenu
-              menuItems={[
-                {
-                  text: "Logo Competition",
-                  href: "logo-competition",
-                  items: [
-                    {
-                      text: "Test",
-                      href: "test",
-                    },
-                  ],
-                },
-              ]}
+
+          <TopMenu menuItems={MENU} className="hidden md:flex" />
+          {menuOpen && (
+            <PopupMenu
+              menuItems={MENU}
+              className="flex md:hidden"
+              setOpen={setMenuOpen}
             />
-          </div>
+          )}
         </div>
       </nav>
     </header>

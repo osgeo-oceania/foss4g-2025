@@ -1,6 +1,6 @@
-# FOSS4G SotM Oceania 2024 website
+# FOSS4G 2025 website
 
-Hobart, Tasmania, Australia. November 5-8 2024
+Auckland, New Zealand - 17th to 23rd November 2025
 
 ## Dev
 

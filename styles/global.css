@@ -14,6 +14,16 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+/* Add spacing to last p in container */
+.container > p:last-child,
+.container > ul:last-child,
+.container > ol:last-child,
+.container > blockquote:last-child,
+.container > button:last-child {
+  margin-bottom: 3rem;
+}
+
+/* Popout image from container */
 p:has(> .popout-image:not(.inline-image)) {
   margin-left: calc((-100vw + 100%) / 2);
   width: 100vw;
@@ -30,7 +40,7 @@ p:has(> .popout-image:not(.inline-image)) {
 .popout-image:not(.inline-image) {
   margin: auto;
   width: 1080px;
-  max-width: 100%;
+  max-width: fit-content;
 }
 
 .sponsor-card,

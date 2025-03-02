@@ -195,8 +195,8 @@ export const MapComponent = (props: MapProps) => {
       ref={mapRef}
       style={{ width: props.width, height: props.height }}
       initialViewState={{
-        longitude: 174.7485,
-        latitude: -36.9011,
+        longitude: 174.7635,
+        latitude: -36.8735,
         zoom: 11,
       }}
       cooperativeGestures={true}
@@ -209,7 +209,6 @@ export const MapComponent = (props: MapProps) => {
       }}
       mapStyle="https://api.protomaps.com/styles/v5/light/en.json?key=51cf1275231eb004"
       maplibreLogo
-      hash
       dragRotate={false}
       touchPitch={false}
       pitchWithRotate={false}

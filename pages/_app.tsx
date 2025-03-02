@@ -23,12 +23,11 @@ const openSans = Open_Sans({
 // Otherwise we get hydration issues in dev
 // This doesn't matter as we are exporting the app as a static site
 const MdxComponentsProvider = dynamic(
-  () => import("../components/MdxComponentsProvider"),
+  () => import("../components/PageLayout/MdxComponentsProvider"),
   { ssr: false }
 );
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  console.log(Component.frontmatter);
   return (
     <>
       <style jsx global>{`
@@ -41,16 +40,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }
       `}</style>
       <main
-        className={`${openSans.variable} ${robotoSerifFont.variable} font-sans bg-slate-50 text-slate-800  `}
+        className={`${openSans.variable} ${robotoSerifFont.variable} font-sans bg-slate-50 text-slate-800 w-screen min-h-screen flex flex-col justify-between`}
       >
         <MdxComponentsProvider>
           <Header />
-          <div className="container mx-auto px-4 py-4">
-            <div className="prose-base max-w-none">
-              <Component {...pageProps} />
-            </div>
+          <div className="container mx-auto px-4 py-4 flex-1">
+            <Component {...pageProps} />
           </div>
-
           <Footer />
         </MdxComponentsProvider>
       </main>

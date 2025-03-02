@@ -4,6 +4,7 @@ import createMDX from "@next/mdx";
 import rehypeSlug from "rehype-slug";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import remarkGfm from "remark-gfm";
 
 const nextConfig: NextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
@@ -18,7 +19,7 @@ const withMDX = createMDX({
 
   options: {
     rehypePlugins: [rehypeSlug],
-    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
   },
 });
 

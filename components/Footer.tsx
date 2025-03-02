@@ -115,7 +115,7 @@ const Footer = () => {
                 <div>
                   <h3 className="uppercase text-slate-50">Event Resources</h3>
                   <a
-                    href="/#/code-of-conduct"
+                    href="code-of-conduct"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Code Of Conduct
@@ -124,7 +124,7 @@ const Footer = () => {
                 <div>
                   <h3 className="uppercase text-slate-50">Contact</h3>
                   <a
-                    href="#/mailing-list"
+                    href="https://mailchi.mp/foss4g/mailing-list"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Join our Mailing List
@@ -142,7 +142,7 @@ const Footer = () => {
           <hr className="h-px my-6 border-none bg-primary-600" />
           <div>
             <p className="text-center text-primary-50">
-              © FOSS4G Oceania - All rights reserved
+              © FOSS4G - All rights reserved
             </p>
           </div>
         </div>
