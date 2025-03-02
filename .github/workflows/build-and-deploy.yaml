@@ -67,6 +67,7 @@ jobs:
         run: |
           # Set BASE_PATH to the repository name
           echo "BASE_PATH=/${{ github.repository }}" > .env.local
+          echo "Using BASE_PATH: $BASE_PATH"
           npm run build
           # If dev, then create robots.txt to disallow search engines
           if [ ${{ github.repository }} == 'osgeo-oceania/foss4g-2025-dev' ]; then
