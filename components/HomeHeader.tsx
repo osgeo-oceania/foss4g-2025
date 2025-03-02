@@ -13,7 +13,7 @@ export const HomeHeader = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:py-16 z-10 relative">
         <div className="flex flex-col px-4">
           <img
-            src="/imgs/2025/foss4g_2025_logo_interim.png"
+            src="imgs/2025/foss4g_2025_logo_interim.png"
             alt="FOSS4G 2025"
             className="md:m-0 w-auto h-44 md:h-64 lg:h-96 object-contain"
           />

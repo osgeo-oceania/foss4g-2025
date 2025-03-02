@@ -10,7 +10,7 @@ Meet up with old friends and make some new acquaintances. You will be kicking yo
 
 The Icebreaker dinner is proudly sponsored by [North Road](https://north-road.com/).
 
-<img src="/imgs/sponsors/northroad.png" width="200px" alt="Nova Systems" style="width:200px; margin:0" />
+<img src="imgs/sponsors/northroad.png" width="200px" alt="Nova Systems" style="width:200px; margin:0" />
 
 ## TGP Breakfast
 
@@ -24,7 +24,7 @@ If you are a recipient of the **Travel Grant Program** (TGP), this is your break
 
 The Travel Grant Program breakfast is proudly sponsored by [Esri](https://www.esri.com/en-us/home/).
 
-<img src="/imgs/sponsors/esri.png" width="200px" alt="Esri" style="width:200px; margin-left:-15px; margin-right:0;" />
+<img src="imgs/sponsors/esri.png" width="200px" alt="Esri" style="width:200px; margin-left:-15px; margin-right:0;" />
 
 ## Conference Dinner
 
@@ -47,7 +47,7 @@ Come along and celebrate **Women in Geospatial** whilst you enjoy a delicious br
 
 The Women in Geospatial breakfast is proudly sponsored by [Nova Systems](https://www.novasystems.com/au).
 
-<img src="/imgs/sponsors/nova.png" width="200px" alt="Nova Systems" style="width:200px; margin-left:-15px; margin-right:0;" />
+<img src="imgs/sponsors/nova.png" width="200px" alt="Nova Systems" style="width:200px; margin-left:-15px; margin-right:0;" />
 
 ## GeoRabble
 

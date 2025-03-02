@@ -21,7 +21,7 @@ Come to the registration desk in the Studio Theatre - this is where we will have
 The workshops are being held in the Social Sciences Building. The building is located at the Sandy Bay Campus of University of Tasmania - here is [the map link](https://maps.utas.edu.au/?zLevel=1&center=147.3263210247295,-42.90448702917851&zoom=18.23861301789611&sharepoi=1000552568&sharepoitype=poi).
 
 <div>
-    <img className="inline-image mt-4" width="800px" src="/imgs/workshop-directions.jpeg">
+    <img className="inline-image mt-4" width="800px" src="imgs/workshop-directions.jpeg">
 </div>
 
 ### Workshop Rooms

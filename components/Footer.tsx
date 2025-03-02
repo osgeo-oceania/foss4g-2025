@@ -23,7 +23,7 @@ const Footer = () => {
                 {/* <a href="/">
                 <img
                   className="w-auto h-24"
-                  src="/imgs/FOSS4G-2024-Logo-White.png "
+                  src="imgs/FOSS4G-2024-Logo-White.png "
                   alt=""
                 />
               </a> */}

@@ -44,11 +44,7 @@ export const MENU: RootMenuItem[] = [
     ],
   },
   {
-    text: "Sponsors",
+    text: "Sponsorship",
     href: "/sponsorship",
-  },
-  {
-    text: "Organisers",
-    href: "/organisers",
   },
 ];
