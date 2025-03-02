@@ -65,11 +65,13 @@ jobs:
       #     echo SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }} >> .env
       - name: Build with Next.js
         run: |
+          # If dev, then set basepath to the repo
+          if [ ${{ github.repository }} == 'osgeo-oceania/foss4g-2025-dev' ]; then
+            echo "BASE_PATH=/foss4g-2025-dev" > .env.local
+          fi
           npm run build
           # If dev, then create robots.txt to disallow search engines
           if [ ${{ github.repository }} == 'osgeo-oceania/foss4g-2025-dev' ]; then
-            echo "BASE_PATH=/foss4g-2025-dev" > .env.local
-            echo "Using BASE_PATH: $BASE_PATH"
             echo "Disabling search engine indexing for dev site"
             rm -f build/robots.txt
             touch build/robots.txt
