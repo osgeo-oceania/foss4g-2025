@@ -1,5 +1,16 @@
-FOSS4G 2025 is taking place in nipaluna, lutruwita – now known as Hobart, Tasmania.
+FOSS4G 2025 is taking place in Tāmaki Makaurau Auckland, Aotearoa New Zealand.
 
-In recognition of the deep history and culture of this Island, we would like to acknowledge the Muwinina people, the traditional owners of the Land upon which we gather. We acknowledge and pay our respects to all Tasmanian Aboriginal Communities; all of whom have survived invasion and dispossession, and continue to maintain their identity and culture.
+<span className="font-display italic">
+  Tāmaki Makaurau — A place desired by many.
+</span>
+<span className="font-display italic">
+  Tāmaki Herenga Waka — The place where many canoes gather
+</span>
 
-_lutruwita milaythina Pakana_ – Tasmania is Aboriginal land.
+These are the Māori names given to Auckland. They speak of our diverse landscapes, beautiful harbours, and fertile soils. They speak of the coming together of different iwi (tribes) to meet and trade.
+
+<span className="font-display italic">
+  Tēnā koutou katoa — Greetings to you all
+</span>
+
+In the spirit of manaakitanga — hospitality, generosity, and openness of spirit — we welcome our visitors as guests. We are dedicated to providing an inclusive, safe and inspiring environment for the FOSS4G community to collaborate, learn, and share.
