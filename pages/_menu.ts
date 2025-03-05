@@ -28,6 +28,10 @@ export const MENU: RootMenuItem[] = [
         href: "/attend/conference-venue",
       },
       {
+        text: "Terms and Conditions",
+        href: "/attend/terms-and-conditions",
+      },
+      {
         text: "Code of Conduct",
         href: "/attend/code-of-conduct",
       },

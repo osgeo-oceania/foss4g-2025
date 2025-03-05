@@ -5,6 +5,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import AcknowledgeMd from "../content/acknowledgement-country.md";
 
 const Footer = () => {
@@ -20,18 +21,18 @@ const Footer = () => {
           <div className="lg:flex">
             <div className="w-full -mx-6 lg:w-2/5">
               <div className="px-6">
-                {/* <a href="/">
+                {/* <Link href="/">
                 <img
                   className="w-auto h-24"
                   src="/imgs/FOSS4G-2024-Logo-White.png "
                   alt=""
                 />
-              </a> */}
+              </Link> */}
                 <p className="max-w-sm mt-2 text-primary-50">
                   Join us as we discover what's new in FOSS4G!
                 </p>
                 <div className="flex mt-6 -mx-2">
-                  <a
+                  <Link
                     href="https://twitter.com/foss4g_oceania/"
                     target="_blank"
                     rel="noreferrer"
@@ -39,8 +40,8 @@ const Footer = () => {
                     aria-label="Twitter"
                   >
                     <FontAwesomeIcon icon={faTwitter} />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.youtube.com/channel/UCbqmnF77HxLCmO9d7LrEbpg"
                     target="_blank"
                     rel="noreferrer"
@@ -48,8 +49,8 @@ const Footer = () => {
                     aria-label="YouTube"
                   >
                     <FontAwesomeIcon icon={faYoutube} />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.linkedin.com/company/18396595/"
                     target="_blank"
                     rel="noreferrer"
@@ -57,8 +58,8 @@ const Footer = () => {
                     aria-label="LinkedIn"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.facebook.com/FOSS4GOceania/"
                     target="_blank"
                     rel="noreferrer"
@@ -66,7 +67,7 @@ const Footer = () => {
                     aria-label="Facebook"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -74,67 +75,67 @@ const Footer = () => {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div>
                   <h3 className="uppercase text-slate-50">About</h3>
-                  <a
+                  <Link
                     href="https://www.osgeo.org/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Open Source Geospatial Foundation (OSGeo)
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://osmfoundation.org/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     OpenStreetMap Foundation
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <h3 className="uppercase text-slate-50">
                     Related Conferences
                   </h3>
-                  <a
+                  <Link
                     href="https://www.osgeo.org/events/foss4g-2024-belem-brazil/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Global FOSS4G: Belém, Brazil
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://foss4g-perth.org/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     FOSS4G Perth
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <h3 className="uppercase text-slate-50">Event Resources</h3>
-                  <a
-                    href="code-of-conduct"
+                  <Link
+                    href="/attend/code-of-conduct"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Code Of Conduct
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <h3 className="uppercase text-slate-50">Contact</h3>
-                  <a
+                  <Link
                     href="https://mailchi.mp/foss4g/mailing-list"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Join our Mailing List
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="mailto:chair@foss4g-oceania.org"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     chair@foss4g-oceania.org
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
