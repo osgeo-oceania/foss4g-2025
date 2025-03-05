@@ -22,7 +22,7 @@ We will base the hackathons, mapathons, and working groups at C3 Convention Cent
 
 ### But it doesn't stop there
 
-If you have an idea that you would like to have the community engage in with you, you are welcome to propose it at any time leading up to, and throughout the conference. Let us know so we can support you in logistics and getting the message out there email us at <program@foss4g-oceania.org>.
+If you have an idea that you would like to have the community engage in with you, you are welcome to propose it at any time leading up to, and throughout the conference. Let us know so we can support you in logistics and getting the message out there email us at <program@foss4g.org>.
 
 **_How is the Community Day (Friday 8th Nov 2024) different from the Workshop Day (Tuesday 5th Nov 2024)?_**
 
@@ -97,4 +97,4 @@ The Open Data Cube ([ODC](https://www.opendatacube.org/)) is a free, open-source
 
 ## Got an idea?
 
-If you would like to lead an activity on Community Day, please get in touch at <program@foss4g-oceania.org>.
+If you would like to lead an activity on Community Day, please get in touch at <program@foss4g.org>.

@@ -102,7 +102,7 @@ Presentations are delivered in consecutive sessions over the three conference da
 - Time limits will be enforced by the MCs.
 - Please seek out your session MC prior to your session to help them get to know you.<br />
   > We are still determining the best manner to upload Presentations, it will possibly be uploaded via a DropBox, or worst case a USB if there are any late changed - so keep checking back and look our for an email from the Program Committee. <br />
-  > If you require your laptop to demonstrate an element of your talk, ensure you bring a HDMI connection cord. Please [let us know](mailto:program@foss4g-oceania.org) in advance so we can be prepared.
+  > If you require your laptop to demonstrate an element of your talk, ensure you bring a HDMI connection cord. Please [let us know](mailto:program@foss4g.org) in advance so we can be prepared.
   > <br /><br />
 
 ## Lightning talks
@@ -112,13 +112,13 @@ Lightning talks are rapid presentations strictly limited to 5 mins. Lightning ta
 - You talk is to talk 5 minutes and there will be no questions.
 - You can set up your slides to transition automatically so it helps you keep to the 5 minutes.
 - Lightning talks bring about a bit of fun and interaction with the audience. It is meant to be under pressure to get your message out. So don't dig down too much into details. Check out the [2018 lightning talks](https://www.youtube.com/watch?v=WPJC0VDceMk).<br />
-  > Lightning talks will need be submitted the day prior to your talk in order to prepare the session. Please [email them to the program chair](mailto:program@foss4g-oceania.org) > <br /><br />
+  > Lightning talks will need be submitted the day prior to your talk in order to prepare the session. Please [email them to the program chair](mailto:program@foss4g.org) > <br /><br />
 
 ### Tips for speakers
 
 <!-- The OSGeo community is characterized for its dynamic way of growing and we are proud of welcoming a variety of voices and ideas. If you are considering sending a proposal to our call for papers, consider the following: -->
 
-- Submissions are open for editing, feel free to add your subbmission and add in images. <!--once they have been accepted. Until then, you cannot edit your submission. If you would like to update it in the meantime, please email the [program coordinator](mailto:program@foss4g-oceania.org?subject=[Submission]).-->
+- Submissions are open for editing, feel free to add your subbmission and add in images. <!--once they have been accepted. Until then, you cannot edit your submission. If you would like to update it in the meantime, please email the [program coordinator](mailto:program@foss4g.org?subject=[Submission]).-->
 - FOSS4G’s backbone is free and open source, so make sure you clearly indicate what is (are) the open source project(s) essential in your talk
 - If you present new developments or a completely new open source project, make sure you point to its repository(ies) so people can follow up. You can add in links to your submission.
 - Add in a photo of yourself and for your presentation. We will link to your presentation from the schedule page and list you as a speaker as per the [2019 FOSS4G](https://2019.foss4g-oceania.org/speakers/).
