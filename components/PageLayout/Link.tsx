@@ -13,7 +13,7 @@ const Link: React.FC<LinkProps> = ({ children, href, className }) => {
       className={"text-blue-500 underline " + (className ?? "")}
       href={href ?? "#"}
       target={
-        !href?.startsWith("/#") && !href?.startsWith("#") ? "_blank" : undefined
+        !href?.startsWith("/") && !href?.startsWith("#") ? "_blank" : undefined
       }
       onClick={(e) => {
         if (href?.startsWith("#")) {

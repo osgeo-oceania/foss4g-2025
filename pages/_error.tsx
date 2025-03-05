@@ -16,7 +16,7 @@ const NoPage = () => {
 
           <div className="flex justify-center mt-6">
             <a
-              href="mailto:admin@foss4g-oceania.org"
+              href="mailto:chair@foss4g.org"
               className="px-4 py-2 text-slate-50 transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
             >
               Send Message
