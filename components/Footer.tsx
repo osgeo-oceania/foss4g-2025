@@ -129,10 +129,10 @@ const Footer = () => {
                     Join our Mailing List
                   </Link>
                   <Link
-                    href="mailto:chair@foss4g-oceania.org"
+                    href="mailto:chair@foss4g.org"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
-                    chair@foss4g-oceania.org
+                    chair@foss4g.org
                   </Link>
                 </div>
               </div>

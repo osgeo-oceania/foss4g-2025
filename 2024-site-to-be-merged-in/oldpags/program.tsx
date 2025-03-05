@@ -36,10 +36,10 @@ export const noEventsMap: { [key: string]: ReactNode } = {
         If you would like to propose a hackathon or something, let us know
         via&nbsp;
         <a
-          href="mailto:program@foss4g-oceania.org"
+          href="mailto:program@foss4g.org"
           className="text-blue-500 underline"
         >
-          program@foss4g-oceania.org
+          program@foss4g.org
         </a>
       </p>
     </>
