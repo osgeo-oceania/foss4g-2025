@@ -33,7 +33,7 @@ const Footer = () => {
                 </p>
                 <div className="flex mt-6 -mx-2">
                   <Link
-                    href="https://twitter.com/foss4g_oceania/"
+                    href="https://x.com/foss4g"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
@@ -42,7 +42,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faTwitter} />
                   </Link>
                   <Link
-                    href="https://www.youtube.com/channel/UCbqmnF77HxLCmO9d7LrEbpg"
+                    href="https://www.youtube.com/c/FOSS4G"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
@@ -51,7 +51,7 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faYoutube} />
                   </Link>
                   <Link
-                    href="https://www.linkedin.com/company/18396595/"
+                    href="https://www.linkedin.com/company/foss4g2025/"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
@@ -59,7 +59,7 @@ const Footer = () => {
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Link>
-                  <Link
+                  {/* <Link
                     href="https://www.facebook.com/FOSS4GOceania/"
                     target="_blank"
                     rel="noreferrer"
@@ -67,7 +67,7 @@ const Footer = () => {
                     aria-label="Facebook"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -84,12 +84,12 @@ const Footer = () => {
                     Open Source Geospatial Foundation (OSGeo)
                   </Link>
                   <Link
-                    href="https://osmfoundation.org/"
+                    href="https://osgeo-oceania.org/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
-                    OpenStreetMap Foundation
+                    OSGeo Oceania
                   </Link>
                 </div>
                 <div>
@@ -97,20 +97,12 @@ const Footer = () => {
                     Related Conferences
                   </h3>
                   <Link
-                    href="https://www.osgeo.org/events/foss4g-2024-belem-brazil/"
+                    href="https://pgrsc.org/"
                     target="_blank"
                     rel="noreferrer"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
-                    Global FOSS4G: Belém, Brazil
-                  </Link>
-                  <Link
-                    href="https://foss4g-perth.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block mt-2 text-sm text-primary-50 hover:underline"
-                  >
-                    FOSS4G Perth
+                    Pacific GIS and Remote Sensing User Conference
                   </Link>
                 </div>
                 <div>
@@ -119,7 +111,13 @@ const Footer = () => {
                     href="/attend/code-of-conduct"
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
-                    Code Of Conduct
+                    Code of Conduct
+                  </Link>
+                  <Link
+                    href="/attend/terms-and-conditions"
+                    className="block mt-2 text-sm text-primary-50 hover:underline"
+                  >
+                    Terms and Conditions
                   </Link>
                 </div>
                 <div>
