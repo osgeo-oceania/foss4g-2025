@@ -33,7 +33,7 @@ export const HomeHeader = () => {
           <div>
             Join us for{" "}
             <span className="text-2xl lg:text-4xl text-secondary-400 font-medium">
-              FOSS4G SotM
+              FOSS4G
             </span>{" "}
             in{" "}
           </div>
