@@ -76,7 +76,7 @@ const mdxComponents: MDXComponents = {
     <img
       {...props}
       src={props.src?.startsWith("/") ? `${baseUrl}${props.src}` : props.src}
-      className={cx({ "popout-image": !props.width && !props.height })}
+      className={cx("max-w-full mx-auto")}
     />
   ),
   ul: (props) => <ul {...props} className="list-disc list-inside" />,
