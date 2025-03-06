@@ -79,6 +79,13 @@ const mdxComponents: MDXComponents = {
       className={cx("max-w-full mx-auto")}
     />
   ),
+  Image: (props) => (
+    <img
+      {...props}
+      src={props.src?.startsWith("/") ? `${baseUrl}${props.src}` : props.src}
+      className={cx("max-w-full mx-auto", props.className)}
+    />
+  ),
   ul: (props) => <ul {...props} className="list-disc list-inside" />,
   wrapper: (props) => (
     <section
