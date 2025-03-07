@@ -59,15 +59,15 @@ const Footer = () => {
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </Link>
-                  {/* <Link
-                    href="https://www.facebook.com/FOSS4GOceania/"
+                  <Link
+                    href="https://www.facebook.com/foss4g2025"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
                     aria-label="Facebook"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -118,6 +118,12 @@ const Footer = () => {
                     className="block mt-2 text-sm text-primary-50 hover:underline"
                   >
                     Terms and Conditions
+                  </Link>
+                  <Link
+                    href="/attend/privacy-policy"
+                    className="block mt-2 text-sm text-primary-50 hover:underline"
+                  >
+                    Privacy Policy
                   </Link>
                 </div>
                 <div>
