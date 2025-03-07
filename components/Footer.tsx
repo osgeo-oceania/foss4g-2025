@@ -119,6 +119,12 @@ const Footer = () => {
                   >
                     Terms and Conditions
                   </Link>
+                  <Link
+                    href="/attend/privacy-policy"
+                    className="block mt-2 text-sm text-primary-50 hover:underline"
+                  >
+                    Privacy Policy
+                  </Link>
                 </div>
                 <div>
                   <h3 className="uppercase text-slate-50">Contact</h3>

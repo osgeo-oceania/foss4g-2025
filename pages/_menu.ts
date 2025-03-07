@@ -28,6 +28,10 @@ export const MENU: RootMenuItem[] = [
         href: "/attend/conference-venue",
       },
       {
+        text: "Travel Guide",
+        href: "/attend/nz-travel-guide",
+      },
+      {
         text: "Terms and Conditions",
         href: "/attend/terms-and-conditions",
       },
@@ -36,8 +40,8 @@ export const MENU: RootMenuItem[] = [
         href: "/attend/code-of-conduct",
       },
       {
-        text: "Travel Guide",
-        href: "/attend/nz-travel-guide",
+        text: "Privacy Policy",
+        href: "/attend/privacy-policy",
       },
     ],
   },
