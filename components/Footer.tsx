@@ -1,8 +1,8 @@
 import {
   faFacebook,
   faLinkedin,
-  faTwitter,
   faYoutube,
+  faBluesky,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -33,19 +33,19 @@ const Footer = () => {
                 </p>
                 <div className="flex mt-6 -mx-2">
                   <Link
-                    href="https://x.com/foss4g"
+                    href="https://bsky.app/profile/foss4g.org"
                     target="_blank"
                     rel="noreferrer"
-                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
-                    aria-label="Twitter"
+                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-300"
+                    aria-label="Bluesky"
                   >
-                    <FontAwesomeIcon icon={faTwitter} />
+                    <FontAwesomeIcon icon={faBluesky} />
                   </Link>
                   <Link
                     href="https://www.youtube.com/c/FOSS4G"
                     target="_blank"
                     rel="noreferrer"
-                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
+                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-300"
                     aria-label="YouTube"
                   >
                     <FontAwesomeIcon icon={faYoutube} />
@@ -54,7 +54,7 @@ const Footer = () => {
                     href="https://www.linkedin.com/company/foss4g2025/"
                     target="_blank"
                     rel="noreferrer"
-                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
+                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-300"
                     aria-label="LinkedIn"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
@@ -63,7 +63,7 @@ const Footer = () => {
                     href="https://www.facebook.com/foss4g2025"
                     target="_blank"
                     rel="noreferrer"
-                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-800"
+                    className="mx-2 transition-colors duration-300 text-primary-100 hover:text-primary-300"
                     aria-label="Facebook"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
