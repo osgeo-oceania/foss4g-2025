@@ -35,6 +35,10 @@ export const MENU: RootMenuItem[] = [
         text: "Code of Conduct",
         href: "/attend/code-of-conduct",
       },
+      {
+        text: "Travel Guide",
+        href: "/attend/nz-travel-guide",
+      },
     ],
   },
   {
