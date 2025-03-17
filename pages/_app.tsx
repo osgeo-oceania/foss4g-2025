@@ -43,7 +43,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const metadata: PageMetadata = {
     ...{
       title: "FOSS4G 2025 Auckland",
-      description: "FOSS4G Conference in Auckland, New Zealand",
+      description: "FOSS4G 2025 Conference in Auckland, New Zealand from 17-23 November 2025",
       image: DefaultSocialMediaImage,
     },
     ...(pageProps?.metadata ?? {}),
