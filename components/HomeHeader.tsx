@@ -50,7 +50,6 @@ export const HomeHeader = () => {
             </div>
           </div>
           <div>
-            from{" "}
             <span className="text-2xl lg:text-4xl text-secondary-400 font-medium">
               17 – 23 November 2025
             </span>

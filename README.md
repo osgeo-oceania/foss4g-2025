@@ -1,6 +1,6 @@
 # FOSS4G 2025 website
 
-Auckland, New Zealand - 17th to 23rd November 2025
+Auckland, New Zealand - 17th to 23rd November 2025.
 
 ## Dev
 
