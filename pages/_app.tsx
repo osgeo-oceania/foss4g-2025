@@ -64,11 +64,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={metadata.title} />
         <meta
           property="og:url"
-          content={`${process.env.baseUrl}${router.asPath}`}
+          content={`${process.env.urlOrigin}${router.asPath}`}
         />
         <meta
           property="og:image"
-          content={`${process.env.baseUrl}${metadata.image.src}`}
+          content={`${process.env.urlOrigin}${metadata.image.src}`}
         />
 
         {/* twitter */}
@@ -77,11 +77,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:url"
-          content={`${process.env.baseUrl}${router.asPath}`}
+          content={`${process.env.urlOrigin}${router.asPath}`}
         />
         <meta
           name="twitter:image"
-          content={`${process.env.baseUrl}${metadata.image.src}`}
+          content={`${process.env.urlOrigin}${metadata.image.src}`}
         />
       </Head>
       <style jsx global>{`
