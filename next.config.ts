@@ -22,6 +22,9 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     baseUrl: BASE_PATH,
   },
+  env: {
+    baseUrl: BASE_PATH
+  }
 };
 
 const withMDX = createMDX({
