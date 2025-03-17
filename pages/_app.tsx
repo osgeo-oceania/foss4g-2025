@@ -62,6 +62,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         {/* og */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
         <meta
           property="og:url"
           content={`${process.env.urlOrigin}${router.asPath}`}
