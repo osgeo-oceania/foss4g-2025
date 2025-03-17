@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 const BASE_PATH = process.env.BASE_PATH ?? "";
+const URL_ORIGIN = process.env.URL_ORIGIN ?? "";
 
 if (BASE_PATH) console.log(`Using BASE_PATH: ${BASE_PATH}`);
 
@@ -21,6 +22,9 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   publicRuntimeConfig: {
     baseUrl: BASE_PATH,
+  },
+  env: {
+    urlOrigin: URL_ORIGIN,
   },
 };
 

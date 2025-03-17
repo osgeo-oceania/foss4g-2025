@@ -1,9 +1,13 @@
 "use client";
+import type { StaticImageData } from "next/image";
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 import { Open_Sans, Roboto_Serif } from "next/font/google";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import DefaultSocialMediaImage from "../public/imgs/2025/foss4g_2025_logo_interim.png";
 import "../styles/global.css";
 
 const robotoSerifFont = Roboto_Serif({
@@ -27,9 +31,59 @@ const MdxComponentsProvider = dynamic(
   { ssr: false }
 );
 
+interface PageMetadata {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  
+  const metadata: PageMetadata = {
+    ...{
+      title: "FOSS4G 2025 Auckland",
+      description: "FOSS4G 2025 Conference in Auckland, New Zealand from 17-23 November 2025",
+      image: DefaultSocialMediaImage,
+    },
+    ...(pageProps?.metadata ?? {}),
+  };
+
   return (
     <>
+      <Head>
+        {/* 
+          Page metadata included in static exports. Any URL has to be absolute
+          (include the link's url origin)
+        */}
+        <title>{metadata.title}</title>
+        <meta property="description" content={metadata.description} />
+
+        {/* og */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta
+          property="og:url"
+          content={`${process.env.urlOrigin}${router.asPath}`}
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.urlOrigin}${metadata.image.src}`}
+        />
+
+        {/* twitter */}
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta
+          name="twitter:url"
+          content={`${process.env.urlOrigin}${router.asPath}`}
+        />
+        <meta
+          name="twitter:image"
+          content={`${process.env.urlOrigin}${metadata.image.src}`}
+        />
+      </Head>
       <style jsx global>{`
         html {
           font-family: ${openSans.style.fontFamily};
@@ -44,7 +98,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       >
         <MdxComponentsProvider>
           <Header />
-          <div className="container mx-auto px-4 py-4 flex-1">
+          <div className="container flex-1 px-4 py-4 mx-auto">
             <Component {...pageProps} />
           </div>
           <Footer />
