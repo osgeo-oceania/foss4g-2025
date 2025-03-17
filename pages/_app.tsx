@@ -53,8 +53,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* 
-          Metadata included in static exports. Any URL has to be absolute
-          (include the link's base URL as well as path)
+          Page metadata included in static exports. Any URL has to be absolute
+          (include the link's url origin)
         */}
         <title>{metadata.title}</title>
         <meta property="description" content={metadata.description} />
