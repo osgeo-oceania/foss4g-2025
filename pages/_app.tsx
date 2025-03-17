@@ -39,7 +39,7 @@ interface PageMetadata {
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  console.log(pageProps);
+  
   const metadata: PageMetadata = {
     ...{
       title: "FOSS4G 2025 Auckland",
@@ -52,6 +52,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        {/* 
+          Metadata included in static exports. Any URL has to be absolute
+          (include the link's base URL as well as path)
+        */}
         <title>{metadata.title}</title>
         <meta property="description" content={metadata.description} />
 
@@ -94,7 +98,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       >
         <MdxComponentsProvider>
           <Header />
-          <div className="container mx-auto px-4 py-4 flex-1">
+          <div className="container flex-1 px-4 py-4 mx-auto">
             <Component {...pageProps} />
           </div>
           <Footer />
