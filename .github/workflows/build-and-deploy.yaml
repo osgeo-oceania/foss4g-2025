@@ -8,6 +8,9 @@
 #
 name: Deploy Next.js site to Pages
 
+env:
+  URL_ORIGIN: https://2025.foss4g.org
+
 on:
   # Runs on pushes targeting the default branch
   push:
