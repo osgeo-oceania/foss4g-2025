@@ -32,6 +32,10 @@ export const MENU: RootMenuItem[] = [
         href: "/attend/nz-travel-guide",
       },
       {
+        text: "Adventure Guide",
+        href: "/attend/nz-adventures",
+      },
+      {
         text: "Terms and Conditions",
         href: "/attend/terms-and-conditions",
       },
