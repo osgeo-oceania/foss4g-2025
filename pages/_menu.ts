@@ -7,6 +7,10 @@ export const MENU: RootMenuItem[] = [
     text: "Logo Competition",
     href: "/logo-competition",
   },
+      {
+        text: "Call for Papers",
+        href: "/attend/call-for-papers",
+      },
   {
     text: "Attend",
     href: "/attend/register",
@@ -14,10 +18,6 @@ export const MENU: RootMenuItem[] = [
       {
         text: "Register",
         href: "/attend/register",
-      },
-      {
-        text: "Call for Papers",
-        href: "/attend/call-for-papers",
       },
       {
         text: "Travel Grant Program",
