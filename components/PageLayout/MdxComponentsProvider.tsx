@@ -1,21 +1,22 @@
 import { MDXProvider } from "@mdx-js/react";
 import cx from "classnames";
 import { MDXComponents } from "mdx/types";
-import Blockquote from "./Blockquote";
-import Button from "./Button";
-import Link from "./Link";
-import Table from "./Table";
+import getConfig from "next/config";
 import Head from "next/head";
 import { HomeHeader } from "../HomeHeader";
-import { InlineMap } from "./InlineMap";
+import SponsorshipLevels from "../SponsorshipLevels";
+import Blockquote from "./Blockquote";
+import Button from "./Button";
 import { DividerImage, FooterImage, HeaderImage } from "./Image";
-
-import getConfig from "next/config";
+import { InlineMap } from "./InlineMap";
+import Link from "./Link";
+import Table from "./Table";
 
 const { publicRuntimeConfig } = getConfig();
 const baseUrl = publicRuntimeConfig.baseUrl;
 
 const mdxComponents: MDXComponents = {
+  SponsorshipLevels: SponsorshipLevels,
   InlineMap: InlineMap,
   HomeHeader: HomeHeader,
   Title: (props) => (
