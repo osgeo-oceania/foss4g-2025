@@ -51,7 +51,7 @@ const SponsorshipLevels = () => {
         title="Venue Sponsors"
         cards={[
           {
-            link: "https://www.auckland.ac.nz/",
+            link: "https://www.aut.ac.nz/study/study-options/architecture-and-built-environment",
             image: AutLogo,
             name: "AUT School of Future Environments",
           },
