@@ -3,6 +3,7 @@ import GeoCatLogo from "../public/imgs/sponsors/geocat.png";
 import AutLogo from "../public/imgs/sponsors/aut.png";
 import OsgeoOceaniaLogo from "../public/imgs/sponsors/osgeo-oceania.png";
 import OsgeoLogo from "../public/imgs/sponsors/osgeo.png";
+import WdcLogo from "../public/imgs/sponsors/wdc.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -79,6 +80,11 @@ const SponsorshipLevels = () => {
             link: "https://osgeo.org/",
             image: OsgeoLogo,
             name: "OSGeo Oceania",
+          },
+          {
+            link: "https://geospatial.whanganui.govt.nz/",
+            image: WdcLogo,
+            name: "Whanganui District Council",
           },
         ]}
       />
