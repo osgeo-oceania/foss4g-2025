@@ -4,6 +4,7 @@ import AutLogo from "../public/imgs/sponsors/aut.png";
 import OsgeoOceaniaLogo from "../public/imgs/sponsors/osgeo-oceania.png";
 import OsgeoLogo from "../public/imgs/sponsors/osgeo.png";
 import WdcLogo from "../public/imgs/sponsors/wdc.png";
+import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -25,6 +26,11 @@ const SponsorshipLevels = () => {
             link: "https://www.geocat.net/",
             image: GeoCatLogo,
             name: "GeoCat",
+          },
+          {
+            link: "https://www.newzealand.com/int/",
+            image: NZLogo,
+            name: "Tourism New Zealand",
           },
         ]}
       />
