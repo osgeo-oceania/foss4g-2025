@@ -5,6 +5,7 @@ import OsgeoOceaniaLogo from "../public/imgs/sponsors/osgeo-oceania.png";
 import OsgeoLogo from "../public/imgs/sponsors/osgeo.png";
 import WdcLogo from "../public/imgs/sponsors/wdc.png";
 import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
+import QfieldCloudLogo from "../public/imgs/sponsors/qfieldcloud.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -34,16 +35,16 @@ const SponsorshipLevels = () => {
           },
         ]}
       />
-      {/* <SponsorshipLevel
-            title="Silver Sponsors"
-            cards={[
-              {
-                link: "https://example.com/",
-                image: SomeLogo,
-                name: "Some Company",
-              },
-            ]}
-          /> */}
+      <SponsorshipLevel
+        title="Silver Sponsors"
+        cards={[
+          {
+            link: "https://qfield.cloud/",
+            image: QfieldCloudLogo,
+            name: "QfieldCloud",
+          },
+        ]}
+      />
       {/* <SponsorshipLevel
             title="Bronze Sponsors"
             cards={[
