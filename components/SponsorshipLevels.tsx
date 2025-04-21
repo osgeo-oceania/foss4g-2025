@@ -7,6 +7,9 @@ import WdcLogo from "../public/imgs/sponsors/wdc.png";
 import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
 import QfieldCloudLogo from "../public/imgs/sponsors/qfieldcloud.png";
 
+
+import LinzLogo from "../public/imgs/sponsors/linz.png";
+
 const SponsorshipLevels = () => {
   return (
     <>
@@ -27,6 +30,11 @@ const SponsorshipLevels = () => {
             link: "https://www.geocat.net/",
             image: GeoCatLogo,
             name: "GeoCat",
+          },
+          {
+            link: "https://www.linz.govt.nz/",
+            image: LinzLogo,
+            name: "Toitū Te Whenua - Land Information New Zealand",
           },
           {
             link: "https://www.newzealand.com/int/",
