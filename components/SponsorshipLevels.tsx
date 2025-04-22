@@ -6,6 +6,7 @@ import OsgeoLogo from "../public/imgs/sponsors/osgeo.png";
 import WdcLogo from "../public/imgs/sponsors/wdc.png";
 import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
 import QfieldCloudLogo from "../public/imgs/sponsors/qfieldcloud.png";
+import Sotm2025Logo from "../public/imgs/sponsors/sotm2025.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -95,6 +96,17 @@ const SponsorshipLevels = () => {
           },
         ]}
       />
+      <SponsorshipLevel
+        title="Supporters"
+        cards={[
+          {
+            link: "https://2025.stateofthemap.org/",
+            image: Sotm2025Logo,
+            name: "State of the Map 2025 confernece, Manila, Philippines",
+          },
+        ]}
+      />
+
     </>
   );
 };
