@@ -10,6 +10,9 @@ import Sotm2025Logo from "../public/imgs/sponsors/sotm2025.png";
 
 import SparkGeoLogo from "../public/imgs/sponsors/sparkgeo.png";
 
+
+import LinzLogo from "../public/imgs/sponsors/linz.png";
+
 const SponsorshipLevels = () => {
   return (
     <>
@@ -30,6 +33,11 @@ const SponsorshipLevels = () => {
             link: "https://www.geocat.net/",
             image: GeoCatLogo,
             name: "GeoCat",
+          },
+          {
+            link: "https://www.linz.govt.nz/",
+            image: LinzLogo,
+            name: "Toitū Te Whenua - Land Information New Zealand",
           },
           {
             link: "https://www.newzealand.com/int/",
