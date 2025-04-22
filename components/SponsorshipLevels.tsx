@@ -8,6 +8,8 @@ import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
 import QfieldCloudLogo from "../public/imgs/sponsors/qfieldcloud.png";
 import Sotm2025Logo from "../public/imgs/sponsors/sotm2025.png";
 
+import SparkGeoLogo from "../public/imgs/sponsors/sparkgeo.png";
+
 const SponsorshipLevels = () => {
   return (
     <>
@@ -44,6 +46,11 @@ const SponsorshipLevels = () => {
             image: QfieldCloudLogo,
             name: "QfieldCloud",
           },
+          {
+            link: "https://sparkgeo.com/",
+            image: SparkGeoLogo,
+            name: "SparkGeo",
+          },
         ]}
       />
       {/* <SponsorshipLevel
@@ -56,6 +63,16 @@ const SponsorshipLevels = () => {
               },
             ]}
           /> */}
+      <SponsorshipLevel
+        title="Childcare Programme Sponsors"
+        cards={[
+          {
+            link: "https://sparkgeo.com/",
+            image: SparkGeoLogo,
+            name: "SparkGeo",
+          },
+        ]}
+      />
       <SponsorshipLevel
         title="Venue Sponsors"
         cards={[
