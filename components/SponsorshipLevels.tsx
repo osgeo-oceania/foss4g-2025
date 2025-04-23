@@ -7,11 +7,9 @@ import WdcLogo from "../public/imgs/sponsors/wdc.png";
 import NZLogo from "../public/imgs/sponsors/newzealand-com-shared-white.png";
 import QfieldCloudLogo from "../public/imgs/sponsors/qfieldcloud.png";
 import Sotm2025Logo from "../public/imgs/sponsors/sotm2025.png";
-
 import SparkGeoLogo from "../public/imgs/sponsors/sparkgeo.png";
-
-
 import LinzLogo from "../public/imgs/sponsors/linz.png";
+import PgrscLogo from "../public/imgs/sponsors/pgrsc.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -129,7 +127,12 @@ const SponsorshipLevels = () => {
             image: Sotm2025Logo,
             name: "State of the Map 2025 confernece, Manila, Philippines",
           },
-        ]}
+          {
+            link: "https://pgrsc.org/",
+            image: PgrscLogo,
+            name: "Paciﬁc GIS and Remote Sensing Council (PGRSC)",
+          },
+       ]}
       />
 
     </>
