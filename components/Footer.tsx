@@ -104,6 +104,14 @@ const Footer = () => {
                   >
                     Pacific GIS and Remote Sensing User Conference
                   </Link>
+                  <Link
+                    href="https://2025.stateofthemap.org/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block mt-2 text-sm text-primary-50 hover:underline"
+                  >
+                    State of the Map 2025 conference, Manila, Philippines
+                  </Link>
                 </div>
                 <div>
                   <h3 className="uppercase text-slate-50">Event Resources</h3>
