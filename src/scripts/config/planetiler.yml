@@ -79,6 +79,8 @@ layers:
         11:
           hway_num: ""
     attributes:
+    - key: name
+      tag_value: name
     - key: hway_num
       tag_value: hway_num
   tile_post_process:
