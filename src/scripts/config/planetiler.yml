@@ -1,0 +1,72 @@
+schema_name: Auckland Map
+schema_description: Auckland Map
+attribution: <a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>
+
+args:
+  minzoom: 0
+  maxzoom: 14
+
+sources:
+  linz-buildings:
+    type: geopackage
+    local_path: src/data/raw/lds-nz-building-outlines-GPKG.zip
+  linz-landcover:
+    type: geopackage
+    local_path: src/data/raw/lris-lcdb-v50-land-cover-database-version-50-mainland-new-zealand-GPKG.zip
+  linz-coastline:
+    type: shapefile
+    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
+  linz-road-centrelines:
+    type: geopackage
+    local_path: src/data/raw/lds-nz-road-centrelines-topo-150k-GPKG.zip
+
+layers:
+
+- id: coastline
+  features:
+  - source: linz-coastline
+    geometry: polygon
+    min_zoom: 0
+
+- id: landcover
+  features:
+  - source: linz-landcover
+    geometry: polygon
+    min_zoom: 0
+    attributes:
+    - key: class
+      tag_value: Class_2018
+  tile_post_process:
+    merge_polygons:
+      min_area: 1
+
+- id: buildings
+  features:
+  - source: linz-buildings
+    geometry: polygon
+    min_zoom: 14
+  tile_post_process:
+    merge_polygons:
+      min_area: 0
+
+- id: roads
+  features:
+  - source: linz-road-centrelines
+    geometry: line
+    min_zoom:
+      default_value: 11
+      overrides:
+        6:
+          hway_num: 1
+        8:
+          hway_num: __any__
+        11:
+          hway_num: ""
+    attributes:
+    - key: name
+      tag_value: name
+    - key: hway_num
+      tag_value: hway_num
+  tile_post_process:
+    merge_line_strings:
+      min_length: 0
