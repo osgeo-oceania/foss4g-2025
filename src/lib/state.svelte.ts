@@ -3,6 +3,7 @@ import { Protocol } from 'pmtiles';
 import type { Map } from 'maplibre-gl';
 import { PUBLIC_BASE_ORIGIN, PUBLIC_BASE_PATH } from '$env/static/public';
 import AucklandPmtiles from "../data/auckland.pmtiles";
+import Bounds from "../data/bounds.json";
 
 import type { MapConfig, MapViewport } from './types';
 import MapStyle from './style';
@@ -16,36 +17,37 @@ export class AppState {
 	mapViewport: MapViewport | null = $state(null);
 	mapConfig: MapConfig = $state({
 		lang: 'en',
+		bounds: Bounds,
 		pmtiles: {
 			auckland: AucklandPmtiles
 		},
 		landcover: {
 			ocean: {
-				color: 'lightblue',
+				color: '#e2e8f0',
 				classes: [-99]
 			},
 			'built-up': {
-				color: 'red',
+				color: '#e5e7eb',
 				classes: [1, 5, 6]
 			},
 			water: {
-				color: 'blue',
+				color: '#e2e8f0',
 				classes: [20, 21, 22]
 			},
 			cropland: {
-				color: 'yellow',
+				color: '#fed7aa',
 				classes: [30, 33]
 			},
 			grassland: {
-				color: 'orange',
+				color: '#fde68a',
 				classes: [40, 41, 43, 44]
 			},
 			forest: {
-				color: 'green',
+				color: '#a7f3d0',
 				classes: [64, 68, 69, 71]
 			},
 			default: {
-				color: 'white',
+				color: '#fecdd3',
 				classes: [-99]
 			}
 		}

@@ -20,6 +20,9 @@ export interface MapConfig {
   pmtiles: {
     [sourceName: string]: string
   },
+  bounds: {
+    [type in "mapdata" | "viewport"]: number[]
+  },
 	landcover: {
 		[type in LandcoverType]: LandcoverStyle;
 	};
