@@ -35,10 +35,26 @@ layers:
     min_zoom: 0
     attributes:
     - key: class
-      tag_value: Class_2018
+      value:
+        - if:
+            Class_2018: [1, 5, 6]
+          value: "built-up"
+        - value: "water"
+          if:
+            Class_2018: [20, 21, 22]
+        - value: "cropland"
+          if:
+            Class_2018: [30, 33]
+        - value: "grassland"
+          if:
+            Class_2018: [40, 41, 43, 44]
+        - value: "forest"
+          if:
+            Class_2018: [64, 68, 69, 71]
+        - else: "other"
   tile_post_process:
     merge_polygons:
-      min_area: 1
+      min_area: 0
 
 - id: buildings
   features:
@@ -63,8 +79,6 @@ layers:
         11:
           hway_num: ""
     attributes:
-    - key: name
-      tag_value: name
     - key: hway_num
       tag_value: hway_num
   tile_post_process:

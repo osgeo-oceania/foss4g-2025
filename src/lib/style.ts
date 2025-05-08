@@ -16,10 +16,10 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 	const landcoverFillColor = [
 		Object.entries(config.landcover)
 			.filter(([lcName]) => !['ocean', 'default'].includes(lcName))
-			.map(([lcName, lcStyle]) => lcStyle.classes.map((lcClass) => [lcClass, lcStyle.color]))
+			.map(([lcName, lcStyle]) => [lcName, lcStyle.color])
 	].flat(3);
-  
-  console.log(config)
+
+	console.log(config);
 
 	return {
 		version: 8,
@@ -27,10 +27,10 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
 		glyphs: '{base_url}/glyphs/{fontstack}/{range}.pbf',
 		sources: {
-      auckland: {
-        type: 'vector',
-        url: `pmtiles://${config.pmtiles.auckland}`
-      },
+			auckland: {
+				type: 'vector',
+				url: `pmtiles://${config.pmtiles.auckland}`
+			}
 		},
 		layers: [
 			{
@@ -46,7 +46,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				'source-layer': 'coastline',
 				type: 'fill',
 				paint: {
-					'fill-color': config.landcover.default.color
+					'fill-color': '#fff'
 				}
 			},
 			{
@@ -55,12 +55,23 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				'source-layer': 'landcover',
 				type: 'fill',
 				paint: {
+          "fill-antialias": false,
 					'fill-color': [
 						'match',
 						['get', 'class'],
 						...landcoverFillColor,
 						config.landcover.default.color
 					]
+				}
+			},
+			{
+				id: 'major-roads',
+				source: 'auckland',
+				'source-layer': 'roads',
+				type: 'line',
+				filter: ['has', 'hway_num'],
+				paint: {
+					'line-color': 'black'
 				}
 			}
 		]
