@@ -29,7 +29,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		sources: {
       auckland: {
         type: 'vector',
-        url: `pmtiles://http://{base_url}${config.pmtiles.auckland}`
+        url: `pmtiles://${config.pmtiles.auckland}`
       },
 		},
 		layers: [
