@@ -1,6 +1,6 @@
 schema_name: Auckland Map
 schema_description: Auckland Map
-attribution: <a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>
+attribution: <a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>, <a href="https://www.aucklandcouncil.govt.nz/" target="_blank">Auckland Council</a>
 
 args:
   minzoom: 4
