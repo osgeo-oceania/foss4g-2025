@@ -50,6 +50,24 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				}
 			},
 			{
+				id: 'alcohol-control-area',
+				source: 'auckland',
+        'source-layer': 'alcohol-control-area',
+				type: 'fill',
+				paint: {
+					'fill-color': 'red'
+				}
+			},
+			{
+				id: 'parks',
+				source: 'auckland',
+        'source-layer': 'parks',
+				type: 'fill',
+				paint: {
+					'fill-color': 'lightgreen'
+				}
+			},
+			{
 				id: 'minor-roads',
 				source: 'auckland',
 				'source-layer': 'roads',
@@ -57,7 +75,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				filter: ['!', ['has', 'hway_num']],
 				paint: {
 					'line-color': 'black',
-          'line-width': 1
+					'line-width': 1
 				}
 			},
 			{
@@ -68,27 +86,27 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				filter: ['has', 'hway_num'],
 				paint: {
 					'line-color': 'black',
-          'line-width': 2
+					'line-width': 2
 				}
 			},
-      {
-        id: 'buildings-fill',
-        source: 'auckland',
-        "source-layer": 'buildings',
-        type: 'fill',
-        paint: {
-          'fill-color': '#eee',
-        }
-      },
-      {
-        id: 'buildings-outline',
-        source: 'auckland',
-        "source-layer": 'buildings',
-        type: 'line',
-        paint: {
-          'line-color': '#ccc',
-        }
-      }
+			{
+				id: 'buildings-fill',
+				source: 'auckland',
+				'source-layer': 'buildings',
+				type: 'fill',
+				paint: {
+					'fill-color': '#eee'
+				}
+			},
+			{
+				id: 'buildings-outline',
+				source: 'auckland',
+				'source-layer': 'buildings',
+				type: 'line',
+				paint: {
+					'line-color': '#ccc'
+				}
+			}
 		]
 	} as StyleSpecification;
 }
