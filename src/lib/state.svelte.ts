@@ -3,6 +3,7 @@ import { Protocol } from 'pmtiles';
 import type { Map } from 'maplibre-gl';
 import { PUBLIC_BASE_ORIGIN, PUBLIC_BASE_PATH } from '$env/static/public';
 import AucklandPmtiles from "../data/auckland.pmtiles";
+import BellTopoSansRegular from "../data/glyphs/BellTopo Sans Regular/0-255.pbf";
 import Bounds from "../data/bounds.json";
 
 import type { MapConfig, MapViewport } from './types';

@@ -25,7 +25,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		version: 8,
 		projection: { type: 'globe' },
 		sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
-		glyphs: '{base_url}/glyphs/{fontstack}/{range}.pbf',
+		glyphs: 'http://{base_url}/src/data/glyphs/{fontstack}/{range}.pbf',
 		sources: {
 			auckland: {
 				type: 'vector',
@@ -46,7 +46,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				'source-layer': 'coastline',
 				type: 'fill',
 				paint: {
-					'fill-color': '#fff'
+					'fill-color': '#eee'
 				}
 			},
 			{
@@ -54,6 +54,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
         'source-layer': 'alcohol-control-area',
 				type: 'fill',
+				layout: {
+					'visibility': 'none',
+				},
 				paint: {
 					'fill-color': 'red'
 				}
@@ -74,7 +77,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				type: 'line',
 				filter: ['!', ['has', 'hway_num']],
 				paint: {
-					'line-color': 'black',
+					'line-color': '#fff',
 					'line-width': 1
 				}
 			},
@@ -85,7 +88,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				type: 'line',
 				filter: ['has', 'hway_num'],
 				paint: {
-					'line-color': 'black',
+					'line-color': '#fff',
 					'line-width': 2
 				}
 			},
@@ -106,7 +109,43 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				paint: {
 					'line-color': '#ccc'
 				}
-			}
+			},
+			{
+				id: 'places-suburb',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "Suburb"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Italic']],
+					'text-size': 8
+				},
+				paint: {
+					'text-color': '#222',
+					'text-halo-color': '#fff',
+					'text-halo-width': 1,
+					'text-halo-blur': 2
+				}
+			},
+			{
+				id: 'places-city',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "City"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Bold']],
+					'text-size': 18
+				},
+				paint: {
+					'text-color': '#111',
+					'text-halo-color': '#fff',
+					'text-halo-width': 2,
+					'text-halo-blur': 2
+				}
+			},
 		]
 	} as StyleSpecification;
 }
