@@ -35,9 +35,13 @@ def build_pmtiles(jar_path: Path,
                   gb_ram: int = 1,
                   overwrite: bool = False):
     
-    if out_path.exists() and not overwrite:
-        print(f"not overwriting {out_path}")
-        return
+    if out_path.exists():
+        if overwrite:
+            print(f"overwriting {out_path}")
+            out_path.unlink()
+        else:
+            print(f"not overwriting {out_path}")
+            return
     
     bounds = json.loads(config["BOUNDS_PATH"].read_bytes())
     bounds_str = ','.join([str(lonlat) for lonlat in bounds['mapdata']])
