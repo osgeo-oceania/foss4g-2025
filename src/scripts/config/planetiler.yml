@@ -10,9 +10,6 @@ sources:
   linz-buildings:
     type: geopackage
     local_path: src/data/raw/lds-nz-building-outlines-GPKG.zip
-  linz-landcover:
-    type: geopackage
-    local_path: src/data/raw/lris-lcdb-v50-land-cover-database-version-50-mainland-new-zealand-GPKG.zip
   linz-coastline:
     type: shapefile
     local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
@@ -28,39 +25,12 @@ layers:
     geometry: polygon
     min_zoom: 0
 
-- id: landcover
-  features:
-  - source: linz-landcover
-    geometry: polygon
-    min_zoom: 0
-    attributes:
-    - key: class
-      value:
-        - if:
-            Class_2018: [1, 5, 6]
-          value: "built-up"
-        - value: "water"
-          if:
-            Class_2018: [20, 21, 22]
-        - value: "cropland"
-          if:
-            Class_2018: [30, 33]
-        - value: "grassland"
-          if:
-            Class_2018: [40, 41, 43, 44]
-        - value: "forest"
-          if:
-            Class_2018: [64, 68, 69, 71]
-        - else: "other"
-  tile_post_process:
-    merge_polygons:
-      min_area: 0
-
 - id: buildings
   features:
   - source: linz-buildings
     geometry: polygon
-    min_zoom: 14
+    min_zoom: 13
+    min_size: 0
   tile_post_process:
     merge_polygons:
       min_area: 0
@@ -69,6 +39,7 @@ layers:
   features:
   - source: linz-road-centrelines
     geometry: line
+    min_size: 0
     min_zoom:
       default_value: 11
       overrides:
