@@ -16,6 +16,10 @@ import os
 ##   linz-buildings: https://data.linz.govt.nz/layer/101290-nz-building-outlines/
 ##   linz-coastline: https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
 ##   linz-road-centrelines: https://data.linz.govt.nz/layer/50329-nz-road-centrelines-topo-150k/
+##   linz-place-names: https://data.linz.govt.nz/layer/51681-nz-place-names-nzgb/
+##   auckland-parks: https://data-aucklandcouncil.opendata.arcgis.com/datasets/3135043373ba48b7a9b5240370cb53ac_0/explore
+##   auckland-alcohol-control-area: https://data-aucklandcouncil.opendata.arcgis.com/datasets/af300c4cc33b4dff8218394a1eeefe50_0/explore
+
 
 config = {
     "TILES_OUT_PATH": Path("src/data/auckland.pmtiles"),

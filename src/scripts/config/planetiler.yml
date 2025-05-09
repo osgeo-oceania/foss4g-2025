@@ -3,7 +3,7 @@ schema_description: Auckland Map
 attribution: <a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>
 
 args:
-  minzoom: 0
+  minzoom: 4
   maxzoom: 14
 
 sources:
@@ -16,6 +16,15 @@ sources:
   linz-road-centrelines:
     type: geopackage
     local_path: src/data/raw/lds-nz-road-centrelines-topo-150k-GPKG.zip
+  linz-places:
+    type: geopackage
+    local_path: src/data/raw/lds-nz-place-names-nzgb-GPKG.zip
+  auckland-parks:
+    type: geopackage
+    local_path: src/data/raw/Park_Extents_-7199821735159879240.gpkg
+  auckland-alcohol-control-area:
+    type: geopackage
+    local_path: src/data/raw/Alcohol_Control_Area_5418379122398555621.gpkg
 
 layers:
 
@@ -23,7 +32,7 @@ layers:
   features:
   - source: linz-coastline
     geometry: polygon
-    min_zoom: 0
+    min_zoom: 4
 
 - id: buildings
   features:
@@ -34,6 +43,24 @@ layers:
   tile_post_process:
     merge_polygons:
       min_area: 0
+
+- id: parks
+  features:
+  - source: auckland-parks
+    geometry: polygon
+    min_zoom: 10
+    attributes: 
+    - key: name
+      tag_value: "Site Description"
+    - key: area
+      tag_value: "Shape__Area"
+
+
+- id: alcohol-control-area
+  features:
+  - source: auckland-alcohol-control-area
+    geometry: polygon
+    min_zoom: 10
 
 - id: roads
   features:
@@ -57,3 +84,28 @@ layers:
   tile_post_process:
     merge_line_strings:
       min_length: 0
+
+- id: places
+  features:
+  - source: linz-places
+    geometry: point
+    min_zoom: 4
+    include_when:
+      feat_type:
+        - Bay
+        - Suburb
+        - Hill
+        - City
+        - Town
+        - Village
+        - Island
+        - Point
+        - Railway Station
+        - Locality
+        - Beach
+        - Lake
+    attributes:
+    - key: name
+      tag_value: name
+    - key: type
+      tag_value: feat_type
