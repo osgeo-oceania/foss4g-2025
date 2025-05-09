@@ -111,6 +111,40 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				}
 			},
 			{
+				id: 'places-bay',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "Bay"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Italic']],
+					'text-size': 10
+				},
+				paint: {
+					'text-color': 'darkblue',
+					'text-halo-color': '#fff',
+					'text-halo-width': 1,
+				}
+			},
+			{
+				id: 'places-hill',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "Hill"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Regular']],
+					'text-size': 10
+				},
+				paint: {
+					'text-color': 'darkgreen',
+					'text-halo-color': '#fff',
+					'text-halo-width': 1,
+				}
+			},
+			{
 				id: 'places-suburb',
 				source: 'auckland',
 				'source-layer': 'places',
@@ -119,13 +153,47 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				layout: {
 					'text-field': ["get", "name"],
 					'text-font': ['literal', ['BellTopo Sans Italic']],
-					'text-size': 8
+					'text-size': 10
 				},
 				paint: {
 					'text-color': '#222',
 					'text-halo-color': '#fff',
 					'text-halo-width': 1,
 					'text-halo-blur': 2
+				}
+			},
+			{
+				id: 'places-island',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "Island"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Regular']],
+					'text-size': 12
+				},
+				paint: {
+					'text-color': '#aaa',
+					'text-halo-color': '#fff',
+					'text-halo-width': 2,
+				}
+			},
+			{
+				id: 'places-town',
+				source: 'auckland',
+				'source-layer': 'places',
+				type: 'symbol',
+				filter: ["==", ["get", "type"], "Town"],
+				layout: {
+					'text-field': ["get", "name"],
+					'text-font': ['literal', ['BellTopo Sans Bold']],
+					'text-size': 14
+				},
+				paint: {
+					'text-color': '#111',
+					'text-halo-color': '#fff',
+					'text-halo-width': 2
 				}
 			},
 			{
@@ -143,7 +211,6 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 					'text-color': '#111',
 					'text-halo-color': '#fff',
 					'text-halo-width': 2,
-					'text-halo-blur': 2
 				}
 			},
 		]
