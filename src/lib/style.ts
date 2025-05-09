@@ -50,18 +50,14 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				}
 			},
 			{
-				id: 'landcover',
+				id: 'minor-roads',
 				source: 'auckland',
-				'source-layer': 'landcover',
-				type: 'fill',
+				'source-layer': 'roads',
+				type: 'line',
+				filter: ['!', ['has', 'hway_num']],
 				paint: {
-          "fill-antialias": false,
-					'fill-color': [
-						'match',
-						['get', 'class'],
-						...landcoverFillColor,
-						config.landcover.default.color
-					]
+					'line-color': 'black',
+          'line-width': 1
 				}
 			},
 			{
@@ -71,9 +67,28 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				type: 'line',
 				filter: ['has', 'hway_num'],
 				paint: {
-					'line-color': 'black'
+					'line-color': 'black',
+          'line-width': 2
 				}
-			}
+			},
+      {
+        id: 'buildings-fill',
+        source: 'auckland',
+        "source-layer": 'buildings',
+        type: 'fill',
+        paint: {
+          'fill-color': '#eee',
+        }
+      },
+      {
+        id: 'buildings-outline',
+        source: 'auckland',
+        "source-layer": 'buildings',
+        type: 'line',
+        paint: {
+          'line-color': '#ccc',
+        }
+      }
 		]
 	} as StyleSpecification;
 }
