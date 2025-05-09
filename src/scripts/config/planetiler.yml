@@ -21,10 +21,10 @@ sources:
     local_path: src/data/raw/lds-nz-place-names-nzgb-GPKG.zip
   auckland-parks:
     type: geopackage
-    local_path: src/data/raw/Park_Extents_-7199821735159879240.gpkg
+    local_path: src/data/raw/Park_Extents.gpkg
   auckland-alcohol-control-area:
     type: geopackage
-    local_path: src/data/raw/Alcohol_Control_Area_5418379122398555621.gpkg
+    local_path: src/data/raw/Alcohol_Control_Area.gpkg
 
 layers:
 
@@ -51,9 +51,9 @@ layers:
     min_zoom: 10
     attributes: 
     - key: name
-      tag_value: "Site Description"
+      tag_value: 'Site Description'
     - key: area
-      tag_value: "Shape__Area"
+      tag_value: 'Shape__Area'
 
 
 - id: alcohol-control-area
