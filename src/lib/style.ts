@@ -25,7 +25,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		version: 8,
 		projection: { type: 'globe' },
 		sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
-		glyphs: 'http://{base_url}/src/data/glyphs/{fontstack}/{range}.pbf',
+		glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
 		sources: {
 			auckland: {
 				type: 'vector',
