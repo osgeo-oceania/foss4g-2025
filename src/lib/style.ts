@@ -8,8 +8,8 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		['get', `name:${config['lang']}`],
 		['in', ' / ', ['get', 'name']],
 		config['lang'] == 'en'
-			? ['slice', ['get', 'name'], 0, ['index-of', ' / ', ['get', 'name']]]
-			: ['slice', ['get', 'name'], ['+', ['index-of', ' / ', ['get', 'name']], 3]],
+			? ['slice', ['get', 'name'], ['+', ['index-of', ' / ', ['get', 'name']], 3]]
+			: ['slice', ['get', 'name'], 0, ['index-of', ' / ', ['get', 'name']]],
 		['get', 'name']
 	];
 
@@ -52,10 +52,10 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 			{
 				id: 'alcohol-control-area',
 				source: 'auckland',
-        'source-layer': 'alcohol-control-area',
+				'source-layer': 'alcohol-control-area',
 				type: 'fill',
 				layout: {
-					'visibility': 'none',
+					visibility: 'none'
 				},
 				paint: {
 					'fill-color': 'red'
@@ -64,7 +64,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 			{
 				id: 'parks',
 				source: 'auckland',
-        'source-layer': 'parks',
+				'source-layer': 'parks',
 				type: 'fill',
 				paint: {
 					'fill-color': 'lightgreen'
@@ -116,16 +116,16 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "Bay"],
+				filter: ['==', ['get', 'type'], 'Bay'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Italic']],
 					'text-size': 10
 				},
 				paint: {
 					'text-color': 'darkblue',
 					'text-halo-color': '#fff',
-					'text-halo-width': 1,
+					'text-halo-width': 1
 				}
 			},
 			{
@@ -133,16 +133,16 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "Hill"],
+				filter: ['==', ['get', 'type'], 'Hill'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Regular']],
 					'text-size': 10
 				},
 				paint: {
 					'text-color': 'darkgreen',
 					'text-halo-color': '#fff',
-					'text-halo-width': 1,
+					'text-halo-width': 1
 				}
 			},
 			{
@@ -150,9 +150,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "Suburb"],
+				filter: ['==', ['get', 'type'], 'Suburb'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Italic']],
 					'text-size': 10
 				},
@@ -168,16 +168,16 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "Island"],
+				filter: ['==', ['get', 'type'], 'Island'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Regular']],
 					'text-size': 12
 				},
 				paint: {
 					'text-color': '#aaa',
 					'text-halo-color': '#fff',
-					'text-halo-width': 2,
+					'text-halo-width': 2
 				}
 			},
 			{
@@ -185,9 +185,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "Town"],
+				filter: ['==', ['get', 'type'], 'Town'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Bold']],
 					'text-size': 14
 				},
@@ -202,18 +202,18 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 				source: 'auckland',
 				'source-layer': 'places',
 				type: 'symbol',
-				filter: ["==", ["get", "type"], "City"],
+				filter: ['==', ['get', 'type'], 'City'],
 				layout: {
-					'text-field': ["get", "name"],
+					'text-field': name,
 					'text-font': ['literal', ['BellTopo Sans Bold']],
 					'text-size': 18
 				},
 				paint: {
 					'text-color': '#111',
 					'text-halo-color': '#fff',
-					'text-halo-width': 2,
+					'text-halo-width': 2
 				}
-			},
+			}
 		]
 	} as StyleSpecification;
 }
