@@ -5,7 +5,6 @@ import { PUBLIC_BASE_ORIGIN, PUBLIC_BASE_PATH } from '$env/static/public';
 import AucklandPmtiles from "../data/auckland.pmtiles";
 import Bounds from "../data/bounds.json";
 
-import type { MapConfig, MapViewport } from './types';
 import MapStyle from './style';
 
 const protocol = new Protocol();

@@ -1,5 +1,4 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import type { MapConfig } from './types';
 
 export default function MapStyle(config: MapConfig): StyleSpecification {
 	const name = [
