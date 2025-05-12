@@ -1,16 +1,18 @@
 <script lang="ts">
-	import AppState from '$lib/state.svelte';
-	import { onMount } from 'svelte';
+  import AppState from '$lib/state.svelte';
+	import Attribution from './Attribution.svelte';
+  import { onMount } from 'svelte';
 
-	let mapContainer: HTMLDivElement;
+  let mapContainer: HTMLDivElement;
 
-	let { children = null } = $props();
+  let { children = null } = $props();
 
-	onMount(() => {
-		AppState.initializeMap(mapContainer);
-	});
+  onMount(() => {
+    AppState.initializeMap(mapContainer);
+  });
 </script>
 
-<div bind:this={mapContainer} class="w-full h-full">
-	{@render children?.()}
+<div bind:this={mapContainer} class="h-full w-full">
+  {@render children?.()}
+	<Attribution />
 </div>
