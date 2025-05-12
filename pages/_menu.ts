@@ -3,14 +3,14 @@ import NoPage from "./_error";
 export default NoPage;
 
 export const MENU: RootMenuItem[] = [
+  // {
+  //   text: "Logo Competition",
+  //   href: "/logo-competition",
+  // },
   {
-    text: "Logo Competition",
-    href: "/logo-competition",
+    text: "Call for Papers",
+    href: "/attend/call-for-papers",
   },
-      {
-        text: "Call for Papers",
-        href: "/attend/call-for-papers",
-      },
   {
     text: "Attend",
     href: "/attend/register",
