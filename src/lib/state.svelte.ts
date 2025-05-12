@@ -15,9 +15,14 @@ export class AppState {
   mapConfig: MapConfig = $state(defaultMapConfig);
 
   mapStyle: StyleSpecification = $derived(MapStyle(this.mapConfig));
-  mapAttribution = $derived(
-    Object.values(this.mapStyle.sources).map((src) => src?.attribution ?? null)
-  );
+  mapAttribution = $derived([
+    ...new Set(
+      Object.values(this.mapStyle.sources)
+        .filter((src) => src.type != 'video' && src.type != 'image')
+        .map((src) => src?.attribution?.split(', ') ?? null)
+        .flat()
+    )
+  ]);
 
   initializeMap = (mapContainer: HTMLDivElement) => {
     this.map = new MapLibreMap({
@@ -37,7 +42,7 @@ export class AppState {
 
       zoom: 14,
       hash: true,
-      style: MapStyle(this.mapConfig)
+      style: this.mapStyle
     });
   };
 }
