@@ -1,4 +1,44 @@
 import type { StyleSpecification } from 'maplibre-gl';
+import AucklandPmtiles from "../data/auckland.pmtiles";
+import Bounds from "../data/bounds.json";
+
+export const defaultMapConfig: MapConfig = {
+	lang: 'en',
+	bounds: Bounds,
+	pmtiles: {
+		auckland: AucklandPmtiles
+	},
+	landcover: {
+		ocean: {
+			color: '#e2e8f0',
+			classes: [-99]
+		},
+		'built-up': {
+			color: '#e5e7eb',
+			classes: [1, 5, 6]
+		},
+		water: {
+			color: '#e2e8f0',
+			classes: [20, 21, 22]
+		},
+		cropland: {
+			color: '#fed7aa',
+			classes: [30, 33]
+		},
+		grassland: {
+			color: '#fde68a',
+			classes: [40, 41, 43, 44]
+		},
+		forest: {
+			color: '#a7f3d0',
+			classes: [64, 68, 69, 71]
+		},
+		default: {
+			color: '#fecdd3',
+			classes: [-99]
+		}
+	}
+};
 
 export default function MapStyle(config: MapConfig): StyleSpecification {
 	const name = [
@@ -12,13 +52,11 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 		['get', 'name']
 	];
 
-	const landcoverFillColor = [
-		Object.entries(config.landcover)
-			.filter(([lcName]) => !['ocean', 'default'].includes(lcName))
-			.map(([lcName, lcStyle]) => [lcName, lcStyle.color])
-	].flat(3);
-
-	console.log(config);
+	// const landcoverFillColor = [
+	// 	Object.entries(config.landcover)
+	// 		.filter(([lcName]) => !['ocean', 'default'].includes(lcName))
+	// 		.map(([lcName, lcStyle]) => [lcName, lcStyle.color])
+	// ].flat(3);
 
 	return {
 		version: 8,
