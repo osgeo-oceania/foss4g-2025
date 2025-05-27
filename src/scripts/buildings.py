@@ -10,6 +10,7 @@
 import geopandas as gpd
 from pathlib import Path
 import typer
+import shlex
 import shpyx
 import json
 
@@ -53,35 +54,39 @@ def build(gdal_path: str = "gdal"):
     ## height calculation dem-dsm
     HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
-    # build vrt for dem and dsm separately
-    vrt_paths = []
+    gdalgs = {
+        "dem": Path(".") / "dem.gdalg.json",
+        "dsm": Path(".") / "dsm.gdalg.json",
+    }
 
+    # make gdalgs for dem and dsm raster mosaics
     for demdsm in DEMDSM_DIR.glob("*/"):
         model = "dem" if "dem" in demdsm.stem else "dsm"
         tifs = list(demdsm.glob("**/*.tiff"))
-        vrt_path = TMP_DATA_DIR / f"{model}.vrt"
 
         cmd = [
             f"{gdal_path} raster mosaic",
             "--overwrite",
-            "--resolution highest",
-            " ".join([str(tif) for tif in tifs]),
-            str(vrt_path),
+            "--src-nodata -9999",
+            "--dst-nodata -9999",
+            f"--bbox=1750497,5909801,1769263,5922342",
+            f'{" ".join([str(tif) for tif in tifs])}',
+            f"{gdalgs[model]}",
         ]
 
         shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
-        vrt_paths.append(vrt_path)
 
-    # stack and clip rasters, save output
+    # calculate height and output
     cmd = [
-        f"{gdal_path} raster stack",
+        f"{gdal_path} raster calc",
         "--overwrite",
         "--output-format=GTiff",
         "--creation-option COMPRESS=DEFLATE",
         "--creation-option PREDICTOR=3",
-        "--bbox=1750497,5909801,1769263,5922342",  # TODO auto calculate
-        " ".join([str(vrt_path) for vrt_path in vrt_paths]),
-        str(HEIGHT_RASTER),
+        # subtract DSM from DEM; nodata is -9999
+        f'--calc "(dsm>=0)*dsm - (dem>=0)*dem"',
+        " ".join([f'--input "{key}={val}"' for key, val in gdalgs.items()]),
+        f"{HEIGHT_RASTER}",
     ]
 
     shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
