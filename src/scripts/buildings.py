@@ -55,6 +55,7 @@ def build(gdal_path: str = "gdal"):
     HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
     gdalgs = {
+        # TODO bug with any other path than current directory
         "dem": Path(".") / "dem.gdalg.json",
         "dsm": Path(".") / "dsm.gdalg.json",
     }
