@@ -10,6 +10,7 @@ import Sotm2025Logo from "../public/imgs/sponsors/sotm2025.png";
 import SparkGeoLogo from "../public/imgs/sponsors/sparkgeo.png";
 import LinzLogo from "../public/imgs/sponsors/linz.png";
 import PgrscLogo from "../public/imgs/sponsors/pgrsc.png";
+import TomTomLogo from "../public/imgs/sponsors/tomtom.png";
 
 const SponsorshipLevels = () => {
   return (
@@ -59,16 +60,16 @@ const SponsorshipLevels = () => {
           },
         ]}
       />
-      {/* <SponsorshipLevel
-            title="Bronze Sponsors"
-            cards={[
-              {
-                link: "https://example.com/",
-                image: SomeLogo,
-                name: "Some Company",
-              },
-            ]}
-          /> */}
+      <SponsorshipLevel
+        title="Bronze Sponsors"
+        cards={[
+          {
+            link: "https://www.tomtom.com/",
+            image: TomTomLogo,
+            name: "TomTom",
+          },
+        ]}
+      />
       <SponsorshipLevel
         title="Childcare Programme Sponsors"
         cards={[
@@ -132,9 +133,8 @@ const SponsorshipLevels = () => {
             image: PgrscLogo,
             name: "Paciﬁc GIS and Remote Sensing Council (PGRSC)",
           },
-       ]}
+        ]}
       />
-
     </>
   );
 };
