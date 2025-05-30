@@ -1,7 +1,7 @@
 import MapLibre from 'maplibre-gl';
 import { Protocol } from 'pmtiles';
 import type { Map, StyleSpecification } from 'maplibre-gl';
-import { PUBLIC_BASE_ORIGIN, PUBLIC_BASE_PATH } from '$env/static/public';
+import { PUBLIC_BASE_PATH } from '$env/static/public';
 
 import MapStyle, { defaultMapConfig } from './style';
 
@@ -33,7 +33,7 @@ export class AppState {
       },
       transformRequest: (url) => {
         return {
-          url: url.replace('http://{base_url}/', `${PUBLIC_BASE_ORIGIN}${PUBLIC_BASE_PATH}`)
+          url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}`)
         };
       },
       attributionControl: false, // TODO add custom control
