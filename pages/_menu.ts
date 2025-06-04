@@ -36,6 +36,10 @@ export const MENU: RootMenuItem[] = [
         href: "/attend/nz-adventures",
       },
       {
+        text: "Travelling to New Zealand (visa information)",
+        href: "/attend/travelling-to-nz",
+      },
+      {
         text: "Terms and Conditions",
         href: "/attend/terms-and-conditions",
       },
