@@ -4,9 +4,11 @@
 #     "shpyx",
 #     "typer",
 #     "geopandas",
+#     "exactextract",
 # ]
 # ///
 
+from exactextract import exact_extract
 import geopandas as gpd
 from pathlib import Path
 import typer
@@ -54,43 +56,44 @@ def build(gdal_path: str = "gdal"):
     ## height calculation dem-dsm
     HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
-    gdalgs = {
-        # TODO bug with any other path than current directory
-        "dem": Path(".") / "dem.gdalg.json",
-        "dsm": Path(".") / "dsm.gdalg.json",
-    }
+    if not HEIGHT_RASTER.exists():
+        gdalgs = {
+            # TODO bug with any other path than current directory
+            "dem": Path(".") / "dem.gdalg.json",
+            "dsm": Path(".") / "dsm.gdalg.json",
+        }
 
-    # make gdalgs for dem and dsm raster mosaics
-    for demdsm in DEMDSM_DIR.glob("*/"):
-        model = "dem" if "dem" in demdsm.stem else "dsm"
-        tifs = list(demdsm.glob("**/*.tiff"))
+        # make gdalgs for dem and dsm raster mosaics
+        for demdsm in DEMDSM_DIR.glob("*/"):
+            model = "dem" if "dem" in demdsm.stem else "dsm"
+            tifs = list(demdsm.glob("**/*.tiff"))
 
+            cmd = [
+                f"{gdal_path} raster mosaic",
+                "--overwrite",
+                "--src-nodata -9999",
+                "--dst-nodata -9999",
+                f"--bbox=1750497,5909801,1769263,5922342",
+                f'{" ".join([str(tif) for tif in tifs])}',
+                f"{gdalgs[model]}",
+            ]
+
+            shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
+
+        # calculate height and output
         cmd = [
-            f"{gdal_path} raster mosaic",
+            f"{gdal_path} raster calc",
             "--overwrite",
-            "--src-nodata -9999",
-            "--dst-nodata -9999",
-            f"--bbox=1750497,5909801,1769263,5922342",
-            f'{" ".join([str(tif) for tif in tifs])}',
-            f"{gdalgs[model]}",
+            "--output-format=GTiff",
+            "--creation-option COMPRESS=DEFLATE",
+            "--creation-option PREDICTOR=3",
+            # subtract DSM from DEM; nodata is -9999
+            f'--calc "(dsm>=0)*dsm - (dem>=0)*dem"',
+            " ".join([f'--input "{key}={val}"' for key, val in gdalgs.items()]),
+            f"{HEIGHT_RASTER}",
         ]
 
         shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
-
-    # calculate height and output
-    cmd = [
-        f"{gdal_path} raster calc",
-        "--overwrite",
-        "--output-format=GTiff",
-        "--creation-option COMPRESS=DEFLATE",
-        "--creation-option PREDICTOR=3",
-        # subtract DSM from DEM; nodata is -9999
-        f'--calc "(dsm>=0)*dsm - (dem>=0)*dem"',
-        " ".join([f'--input "{key}={val}"' for key, val in gdalgs.items()]),
-        f"{HEIGHT_RASTER}",
-    ]
-
-    shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
 
 
 @app.command()
