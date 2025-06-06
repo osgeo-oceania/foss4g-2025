@@ -5,12 +5,16 @@
 #     "typer",
 #     "geopandas",
 #     "exactextract",
+#     "numpy",
+#     "rasterio"
 # ]
 # ///
 
 from exactextract import exact_extract
 import geopandas as gpd
 from pathlib import Path
+import numpy as np
+import rasterio
 import typer
 import shlex
 import shpyx
@@ -20,6 +24,7 @@ BOUNDS_PATH = Path("src/data/bounds.geojson")
 TMP_DATA_DIR = Path("src/data/tmp/")
 RAW_DATA_DIR = Path("src/data/raw/")
 BUILDINGS_PATH = RAW_DATA_DIR / "lds-nz-building-outlines-GPKG.zip"
+OUTPUT_PATH = Path("src/data/buildings.gpkg")
 DEMDSM_DIR = RAW_DATA_DIR / "demdsm/"
 
 LINZ_QUAD_IDS = ["BA31", "BA32"]
@@ -46,7 +51,7 @@ def build(gdal_path: str = "gdal"):
             # filter out null geometries
             'filter --where "OGR_GEOMETRY IS NOT NULL"',
             # make sure all output is multi polygon (some negative buffers result in >1 polygon)
-            "geom set-type --multi",
+            "geom set-type --single",
             # write as gpkg
             f"write --overwrite --output-format=GPKG {AUCKLAND_BUILDINGS}",
         ]
@@ -94,6 +99,59 @@ def build(gdal_path: str = "gdal"):
         ]
 
         shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
+
+    if not OUTPUT_PATH.exists():
+        raster = rasterio.open(str(HEIGHT_RASTER))
+        buildings = gpd.read_file(str(AUCKLAND_BUILDINGS))
+        buildings = buildings[
+            ~(buildings.geometry.is_empty | buildings.geometry.isna())
+        ].to_crs("EPSG:2193")
+
+        results = exact_extract(
+            raster,
+            buildings,
+            extract_building_height,
+            include_cols=["building_id"],
+            include_geom=True,
+            progress=True,
+            output="pandas",
+        )
+
+        results.to_file(str(OUTPUT_PATH), driver="GPKG")
+
+        print(results)
+
+
+def extract_building_height(values, coverage_fractions):
+    values = np.array(values)
+
+    # remove invalid values
+    valid_mask = np.isfinite(values) & (values >= 0)
+    valid_values = values[valid_mask]
+
+    # remove outliers
+    if len(valid_values) >= 5:
+        q1 = np.percentile(valid_values, 25)
+        q3 = np.percentile(valid_values, 75)
+        iqr = q3 - q1
+
+        # outlier bounds
+        lower_bound = q1 - 1.5 * iqr
+        upper_bound = q3 + 1.5 * iqr
+
+        # remove outliers
+        outlier_mask = (valid_values >= lower_bound) & (valid_values <= upper_bound)
+        cleaned_values = valid_values[outlier_mask]
+    else:
+        cleaned_values = valid_values
+
+    if len(cleaned_values) < 1:
+        return np.nan
+
+    # use 98th percentile
+    height_98th = np.percentile(cleaned_values, 98)
+
+    return height_98th
 
 
 @app.command()
