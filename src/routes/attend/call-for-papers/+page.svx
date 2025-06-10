@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Call For Papers</Title>
+---
+title: Call For Papers
+---
 
 <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
 

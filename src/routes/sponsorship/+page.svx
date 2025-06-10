@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Sponsorship</Title>
+---
+title: Sponsorship
+---
 
 <HeaderImage
   url="/imgs/sponsor-header.jpeg"

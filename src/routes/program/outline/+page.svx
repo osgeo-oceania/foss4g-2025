@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Program Outline</Title>
+---
+title: Program Outline
+---
 
 <HeaderImage url="/imgs/main-room.jpg" positionY="20%"  />
 

@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Logo Competition</Title>
+---
+title: Logo Competition
+---
 
 <HeaderImage
   url="/imgs/Logo_design_sketching.jpg"

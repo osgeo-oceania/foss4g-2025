@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Code Of Conduct</Title>
+---
+title: Code Of Conduct
+---
 
 <HeaderImage url="/imgs/Logo_design_sketching.jpg" positionY="60%" />
 

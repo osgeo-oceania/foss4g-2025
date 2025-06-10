@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Terms and Conditions</Title>
+---
+title: Terms and Conditions
+---
 
 <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
 

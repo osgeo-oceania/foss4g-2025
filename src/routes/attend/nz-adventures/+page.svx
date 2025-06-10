@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Adventures in Auckland</Title>
+---
+title: Adventures in Auckland
+---
 
 <HeaderImage
   url="/imgs/2025/auckland.jpg"

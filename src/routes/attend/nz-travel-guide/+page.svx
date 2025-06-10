@@ -1,4 +1,6 @@
-<Title>FOSS4G 2025 - Travel Essentials</Title>
+---
+title: Travel Essentials
+---
 
 <HeaderImage
   url="/imgs/2025/auckland.jpg"
