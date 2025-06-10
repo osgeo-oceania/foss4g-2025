@@ -6,7 +6,8 @@ const config = {
   preprocess: [
     vitePreprocess(),
     mdsvex({
-      extensions: ['.svx']
+      extensions: ['.svx'],
+      layout: './src/lib/svx-layout.svelte'
     })
   ],
   extensions: ['.svelte', '.svx'],
