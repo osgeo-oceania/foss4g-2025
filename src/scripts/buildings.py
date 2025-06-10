@@ -51,7 +51,7 @@ def build(gdal_path: str = "gdal"):
             # filter out null geometries
             'filter --where "OGR_GEOMETRY IS NOT NULL"',
             # make sure all output is multi polygon (some negative buffers result in >1 polygon)
-            "geom set-type --single",
+            "geom set-type --multi",
             # write as gpkg
             f"write --overwrite --output-format=GPKG {AUCKLAND_BUILDINGS}",
         ]
