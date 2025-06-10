@@ -2,7 +2,7 @@
 title: Privacy Policy
 ---
 
-<HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
+<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
 
 # Privacy Policy for FOSS4G 2025
 
@@ -48,4 +48,4 @@ We may update this Privacy Policy to reflect changes in our practices, technolog
 
 By registering for or attending FOSS4G 2025, you acknowledge and agree to the collection and use of your personal information as described in this Privacy Policy.
 
-<FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" />
+<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->

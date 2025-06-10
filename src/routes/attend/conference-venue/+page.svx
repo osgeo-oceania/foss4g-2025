@@ -2,12 +2,12 @@
 title: Conference Venue
 ---
 
-<HeaderImage
+<!-- <HeaderImage
   url="/imgs/2025/aut.jpg"
   alt="The AUT Conference Venue"
   positionY="60%"
   height="450"
-/>
+/> -->
 
 # Our Conference Venue
 
@@ -48,4 +48,4 @@ AUT’s sustainability team and Sustainability Steering Group develop, action an
 More information on [Sustainability, Environmental and Social Responsibility at AUT](https://www.aut.ac.nz/about/sustainability-environmental-and-social-responsibility)
 
 
-<InlineMap bottom />
+<!-- <InlineMap bottom /> -->

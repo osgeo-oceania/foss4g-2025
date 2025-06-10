@@ -2,12 +2,12 @@
 title: Adventures in Auckland
 ---
 
-<HeaderImage
+<!-- <HeaderImage
   url="/imgs/2025/auckland.jpg"
   alt="Auckland"
   positionY="30%"
   height="450"
-/>
+/> -->
 
 
 # Family-Friendly Events and Activities in Auckland 
@@ -156,11 +156,11 @@ About an hour and a half south of Auckland, this enchanting set of ‘garden roo
 *Please note that prices are subject to change, and it's advisable to check the official websites for the most current information.*
 
 
-<InlineMap
+<!-- <InlineMap
   bottom
   initialViewState={{
     longitude: 173.1,
     latitude: -41.35,
     zoom: 3.87,
   }}
-/>
+/> -->

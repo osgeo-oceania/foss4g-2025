@@ -2,7 +2,7 @@
 title: Travel Grant Program
 ---
 
-<HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
+<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
 
 # Travel Grant Program
 
@@ -10,9 +10,9 @@ The FOSS4G 2025 local organising committee is pleased to announce that it is aga
 
 Applications for the first round will open on the 17th of March and will be accepted until midnight on the 30th April 2025.
 
-<StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9" center>
+<!-- <StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9" center>
   Apply for the Travel Grant Program
-</StyledButton>
+</StyledButton> -->
 
 | Timeline                       | Round 1       | Round 2      |
 | ------------------------------ | ------------- | ------------ |
@@ -75,15 +75,15 @@ The Oceania FOSS4G Travel Grant Program initiative was established in 2018 by th
 
 The TGP is managed by the FOSS4G 2025 LOC Committee, in collaboration with the OSGeo Oceania Board. For more information, either on the disbursement of grants or guidance on the application process, please email us at tgp@foss4g.org and we will do our best to assist and accommodate you.
 
-<StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9">
+<!-- <StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9">
   Apply for the Travel Grant Program
-</StyledButton>
+</StyledButton> -->
 
 
 If you have a query or require more information, please email the [TPG Committee](mailto:tgp@foss4g.org).
-<FooterImage
+<!-- <FooterImage
   url="/imgs/tg-breakfast.jpeg"
   alt="Travel Grant Program Breakfast"
   positionY="20%"
   height="300"
-/>
+/> -->

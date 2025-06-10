@@ -2,7 +2,7 @@
 title: Entry into New Zealand
 ---
 
-<HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
+<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
 
 # Entry into New Zealand
 
@@ -66,4 +66,4 @@ To receive this letter:
 5. **Apply for your visa** through the [Immigration New Zealand website](https://www.immigration.govt.nz/visas/visitor-visa/)
 
 
-<FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" />
+<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->

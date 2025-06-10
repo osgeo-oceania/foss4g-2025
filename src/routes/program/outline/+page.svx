@@ -2,7 +2,7 @@
 title: Program Outline
 ---
 
-<HeaderImage url="/imgs/main-room.jpg" positionY="20%"  />
+<!-- <HeaderImage url="/imgs/main-room.jpg" positionY="20%"  /> -->
 
 # Program Outline
 
@@ -25,7 +25,7 @@ The general program outline for sessions and social events:
 
 We expect to have the first full detailed schedule released by the end of August 2025.
 
-<FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" />
+<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
 
 {/* For more information, please see
 

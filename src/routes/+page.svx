@@ -2,7 +2,7 @@
 title: FOSS4G 2025
 ---
 
-<HomeHeader />
+<!-- <HomeHeader /> -->
 
 FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
@@ -34,7 +34,7 @@ The Auckland FOSS4G 2025 Conference Organising Committee
 
 # Our sponsors and partners
 
-<SponsorshipLevels />
+<!-- <SponsorshipLevels /> -->
 
 
-<InlineMap bottom />
+<!-- <InlineMap bottom /> -->

@@ -2,13 +2,13 @@
 title: Register
 ---
 
-<HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" />
+<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
 
 ## Registration
 
-<StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025">
+<!-- <StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025">
   Conference Registration
-</StyledButton>{" "}
+</StyledButton> -->{" "}
 
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 19th, Thursday 20th and Friday 21st November.
 
@@ -38,7 +38,7 @@ Please note our [Privacy Policy.](/attend/privacy-policy)
 
 [Join our Mailing List](https://mailchi.mp/foss4g/mailing-list) to stay up-to-date with the latest news and announcements.
 
-<FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" />
+<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
 
 {/* 
 <div>

@@ -2,12 +2,12 @@
 title: Travel Essentials
 ---
 
-<HeaderImage
+<!-- <HeaderImage
   url="/imgs/2025/auckland.jpg"
   alt="Auckland"
   positionY="30%"
   height="450"
-/>
+/> -->
 
 # Essentials for Travelling to New Zealand
 
@@ -71,11 +71,11 @@ In New Zealand it is illegal to smoke indoors. Many cafés, bars, restaurants, p
 
 i-SITE is New Zealand’s official visitor information centre network with more than 80 i-SITEs nationwide, including locations in Auckland. i-SITEs provide free expert local knowledge and services including itinerary planning and nationwide accommodation and activity bookings.
 
-<InlineMap
+<!-- <InlineMap
   bottom
   initialViewState={{
     longitude: 173.1,
     latitude: -41.35,
     zoom: 3.87,
   }}
-/>
+/> -->

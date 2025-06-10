@@ -2,7 +2,7 @@
 title: Code Of Conduct
 ---
 
-<HeaderImage url="/imgs/Logo_design_sketching.jpg" positionY="60%" />
+<!-- <HeaderImage url="/imgs/Logo_design_sketching.jpg" positionY="60%" /> -->
 
 # Code of Conduct
 
@@ -80,4 +80,4 @@ The Berlin Code of Conduct is distributed under a Creative Commons Attribution-S
 
 You can email the FOSS4G organizing team with any concerns at [chair@foss4g.org](mailto:chair@foss4g.org).
 
-<FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" />
+<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
