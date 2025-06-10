@@ -8,7 +8,7 @@ title: Program Outline
 
 The general program outline for sessions and social events:
 
-{/*
+<!-- {/*
 | Date                  | Session       | Social                             | Other       |
 | --------------------- | ------------- | ---------------------------------- | ----------- |
 | Monday 17 November    | Workshops     | Informal Meetup                    |             |
@@ -18,7 +18,7 @@ The general program outline for sessions and social events:
 | Friday 21 November    | Conference    |                                    | OSGeo AGM   |
 | Saturday 22 November  | Community Day |                                    |             |
 | Sunday 23 November    | Community Day |                                    |             |
-*/}
+*/} -->
 
 ![Program Outline](/imgs/2025/foss4g2025_program_outline.png)
 
@@ -27,7 +27,7 @@ We expect to have the first full detailed schedule released by the end of August
 
 <!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
 
-{/* For more information, please see
+<!-- {/* For more information, please see
 
 - [Conference Schedule](program/schedule)
 - [Workshop Schedule](program/workshops)
@@ -43,4 +43,4 @@ Workshop registration is also still open!
 
 <StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025-workshops">
   Workshop Registration
-</StyledButton> */}
+</StyledButton> */} -->

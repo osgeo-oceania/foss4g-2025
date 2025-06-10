@@ -28,7 +28,7 @@ solutions, and a warm Kiwi welcome. Let's work together to make FOSS4G 2025 in A
 
 The Auckland FOSS4G 2025 Conference Organising Committee
 
-{/* <KeynoteSpeakers /> */}
+<!-- {/* <KeynoteSpeakers /> */} -->
 
 <hr className="my-8" />
 

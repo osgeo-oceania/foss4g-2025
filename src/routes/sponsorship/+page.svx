@@ -10,7 +10,7 @@ title: Sponsorship
 
 # Information for Sponsors
 
-<div className="">
+<div>
   <!-- <StyledButton target="https://drive.google.com/file/d/1eD39UmTijPJju1mvjlVVrJbQNoauN2FL/view">
     Access the Sponsorship Prospectus
   </StyledButton> -->
