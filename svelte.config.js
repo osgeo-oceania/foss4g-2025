@@ -12,7 +12,15 @@ const config = {
     })
   ],
   extensions: ['.svelte', '.svx'],
-  kit: { adapter: adapter() }
+  kit: {
+    adapter: adapter(),
+    alias: {
+      $lib: 'src/lib',
+      $components: 'src/components',
+      $images: 'src/images',
+      $data: 'src/data'
+    }
+  }
 };
 
 export default config;
