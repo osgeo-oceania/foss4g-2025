@@ -14,6 +14,10 @@ const config = {
   extensions: ['.svelte', '.svx'],
   kit: {
     adapter: adapter(),
+    paths: {
+      base: process.env.BASE_PATH ?? '',
+      assets: process.env.BASE_PATH ?? ''
+    },
     prerender: {
       handleHttpError: 'warn'
     },
