@@ -15,8 +15,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: process.env.BASE_PATH ?? '',
-      assets: process.env.BASE_PATH ?? ''
+      base: process.env.PUBLIC_BASE_PATH ?? '',
     },
     prerender: {
       handleHttpError: 'warn'
