@@ -1,13 +1,14 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
   import Sponsors from '$lib/sponsors';
+  import Team from '$lib/team';
 </script>
 
 <!-- Hero -->
 
 <div class="hero">
-  <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl">
-    <div class="[&_path]:!fill-primary absolute right-4 bottom-2 -z-10 h-96 w-96">
+  <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl p-8">
+    <div class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-86 w-86 pr-8 pb-8">
       {@html Foss4g2025Logo}
     </div>
     <div class="flex w-full flex-shrink flex-row justify-between space-y-4">
@@ -25,10 +26,7 @@
         <a
           class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
           href="/attend/register"
-          >Early Bird Tickets <span
-            class="icon-[lucide--arrow-up-right] block"
-            style="color: var(--color-primary);"
-          ></span>
+          >Early Bird Tickets <span class="icon-[lucide--arrow-up-right] block"></span>
         </a>
       </div>
     </div>
@@ -53,10 +51,65 @@
 
 <!-- Cards -->
 
-<div class="grid grid-cols-2">
+<div class="grid grid-cols-2 space-x-8 pb-8">
   <div class="card bg-secondary rounded-2xl">
-    <div class="card-body">
-      <div class="text-2xl">Speakers</div>
+    <div class="card-body space-y-2 p-8">
+      <div class="text-3xl">Speakers</div>
+      <div class="flex space-x-2">
+        <div class="items-center justify-center">
+          <div class="btn btn-circle m-2">
+            <span class="icon-[lucide--arrow-up-right] block h-5 w-5"></span>
+          </div>
+        </div>
+        <div>
+          Hear from geospatial leaders, researchers, and developers who are defining the future of
+          open source geospatial.
+        </div>
+      </div>
+      <div class="flex flex-grow flex-row flex-wrap items-end justify-between">
+        <div class="avatar-group -space-x-5">
+          {#each Object.values(Team).slice(0, 5) as person}
+            {#await person.photo() then module}
+              <div class="avatar border-0">
+                <div class="aspect-square w-12 rounded-full">
+                  <enhanced:img src={module.default} alt={person.name} />
+                </div>
+              </div>
+            {/await}
+          {/each}
+          <div class="avatar avatar-placeholder border-0">
+            <div class="bg-neutral text-neutral-content w-12">
+              <span>+99</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="/speakers" class="btn bg-secondary border-primary rounded-full"
+            >and more <span class="icon-[lucide--arrow-up-right] block"></span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-rows-2 space-y-8">
+    <div class="card bg-secondary rounded-2xl">
+      <div class="card-body space-y-2 p-8">
+        <div class="text-3xl">Auckland</div>
+        <div>
+          nipaluna / Hobart, nestled on the southeastern coast of lutruwita / Tasmania, Australia,
+          is a charming city known for its rich history and breathtaking natural surroundings.
+        </div>
+      </div>
+    </div>
+    <div class="card bg-primary rounded-2xl">
+      <div class="card-body text-primary-content space-y-2 p-8">
+        <div class="text-3xl">Community Events</div>
+        <div>
+          Workshops are a great way to get practical experience in a hands-on session, guided by
+          expert practitioners developers.
+        </div>
+      </div>
     </div>
   </div>
 </div>
