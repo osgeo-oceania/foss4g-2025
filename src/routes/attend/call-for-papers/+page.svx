@@ -25,7 +25,7 @@ Community voting is now open for the FOSS4G 2025 conference. You can vote for yo
 
 Presentations and Workshops are the beating heart of the FOSS4G conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees' own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G community forward.
 
-![Call for papers timeline](/imgs/2025/foss4g2025_program_cfp_timeline.png)
+![Call for papers timeline]($images/foss4g2025_program_cfp_timeline.png)
 
 
 ## Presentations and Lightning Talks
