@@ -3,6 +3,8 @@
   import Sponsors from '$lib/sponsors';
 </script>
 
+<!-- Hero -->
+
 <div class="hero">
   <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl">
     <div class="[&_path]:!fill-primary absolute right-4 bottom-2 -z-10 h-96 w-96">
@@ -19,17 +21,23 @@
         in partnership with OSGeo. FOSS4G brings open source geospatial users, software developers,
         decision makers and researchers together from around the world
       </div>
-      <div class="w-[200px]">
+      <div class="w-[240px]">
         <a
           class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-          href="/attend/register">Early Bird Tickets</a
-        >
+          href="/attend/register"
+          >Early Bird Tickets <span
+            class="icon-[lucide--arrow-up-right] block"
+            style="color: var(--color-primary);"
+          ></span>
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="grid grid-cols-5">
+<!-- Sponsor Grid -->
+
+<div class="my-6 grid grid-cols-5">
   {#each Object.values(Sponsors)
     .sort((a, b) => a.level - b.level)
     .slice(0, 5) as sponsor}
@@ -41,6 +49,16 @@
       </div>
     {/await}
   {/each}
+</div>
+
+<!-- Cards -->
+
+<div class="grid grid-cols-2">
+  <div class="card bg-secondary rounded-2xl">
+    <div class="card-body">
+      <div class="text-2xl">Speakers</div>
+    </div>
+  </div>
 </div>
 
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
