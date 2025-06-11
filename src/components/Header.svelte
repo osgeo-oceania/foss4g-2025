@@ -1,7 +1,8 @@
 <script lang="ts">
+  import Link from '$components/Link.svelte';
   import { page } from '$app/state';
 
-  $inspect(page)
+  $inspect(page);
 
   let menuItems = [
     {
@@ -36,11 +37,11 @@
 
   <div class="navbar-end space-x-1">
     {#each menuItems as menuItem}
-      <a
+      <Link
         aria-label={menuItem.label}
         href={menuItem.url}
-        class="btn font-normal rounded-full text-base"
-        class:border-black={page.route.id === menuItem.url}>{menuItem.label}</a
+        class={`btn rounded-full text-base font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+        >{menuItem.label}</Link
       >
     {/each}
   </div>
