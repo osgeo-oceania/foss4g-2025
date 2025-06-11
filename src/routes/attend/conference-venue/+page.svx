@@ -13,8 +13,6 @@ title: Conference Venue
 
 FOSS4G 2025 is proudly supported by Auckland University of Technology's School of Future Environments.
 
-[![AUT School of Future Environments](/imgs/2025/aut-future-enviroments-logo.png)](https://www.aut.ac.nz/study/study-options/architecture-and-built-environment)
-
 Located in the heart of Auckland City, the AUT City Campus is within minutes of the central business district, has excellent public transport and accommodation options.
 
 High Speed internet access is available across the entire AUT campus and supports live streaming and hybrid conferencing.

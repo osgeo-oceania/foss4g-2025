@@ -20,7 +20,7 @@ The general program outline for sessions and social events:
 | Sunday 23 November    | Community Day |                                    |             |
 */} -->
 
-![Program Outline](/imgs/2025/foss4g2025_program_outline.png)
+![Program Outline]($images/foss4g2025_program_outline.png)
 
 
 We expect to have the first full detailed schedule released by the end of August 2025.
