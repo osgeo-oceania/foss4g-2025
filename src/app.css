@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+@plugin "@iconify/tailwind4";
 @plugin "daisyui" {
   themes: light --default;
 }
@@ -8,6 +9,8 @@
   default: true;
   --color-primary: "#1B2430";
   --color-secondary: "#57A9BB";
+
+  --color-primary-content: var(--color-secondary);
   --color-success: "#88F15E";
   --color-success-content: var(--color-primary);
 
