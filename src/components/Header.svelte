@@ -10,7 +10,7 @@
     },
     {
       label: 'Schedule',
-      url: '/schedule'
+      url: '/program/outline'
     },
     {
       label: 'Speakers',
@@ -18,11 +18,11 @@
     },
     {
       label: 'Tickets',
-      url: '/tickets'
+      url: '/attend/register'
     },
     {
       label: 'Venue',
-      url: '/venue'
+      url: '/attend/conference-venue'
     },
     {
       label: 'Organisers',
@@ -34,12 +34,12 @@
 <div class="navbar">
   <div class="navbar-start">FOSS4G</div>
 
-  <div class="navbar-end">
+  <div class="navbar-end space-x-1">
     {#each menuItems as menuItem}
       <a
         aria-label={menuItem.label}
         href={menuItem.url}
-        class="btn font-normal rounded-full"
+        class="btn font-normal rounded-full text-base"
         class:border-black={page.route.id === menuItem.url}>{menuItem.label}</a
       >
     {/each}
