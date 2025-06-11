@@ -6,8 +6,11 @@
 @plugin "daisyui/theme" {
   name: light;
   default: true;
-  --color-primary: blue;
-  --color-secondary: teal;
+  --color-primary: "#1B2430";
+  --color-secondary: "#57A9BB";
+  --color-success: "#88F15E";
+  --color-success-content: var(--color-primary);
+
 }
 
 html,
