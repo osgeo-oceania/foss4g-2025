@@ -32,7 +32,7 @@
   ];
 </script>
 
-<div class="navbar">
+<div class="navbar bg-white z-20">
   <div class="navbar-start">FOSS4G</div>
 
   <div class="navbar-end space-x-1">
