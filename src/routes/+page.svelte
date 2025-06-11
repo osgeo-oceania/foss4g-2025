@@ -1,5 +1,6 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
   import Team from '$lib/team';
 </script>
@@ -114,6 +115,7 @@
   </div>
 </div>
 
+<Agenda />
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
 brings open source geospatial users, software developers, decision makers and
