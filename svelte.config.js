@@ -14,6 +14,9 @@ const config = {
   extensions: ['.svelte', '.svx'],
   kit: {
     adapter: adapter(),
+    prerender: {
+      handleHttpError: 'warn'
+    },
     alias: {
       $lib: 'src/lib',
       $components: 'src/components',
