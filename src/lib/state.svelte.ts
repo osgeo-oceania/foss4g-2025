@@ -33,7 +33,7 @@ export class AppState {
       },
       transformRequest: (url) => {
         return {
-          url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}`)
+          url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}/`)
         };
       },
       attributionControl: false, // TODO add custom control
