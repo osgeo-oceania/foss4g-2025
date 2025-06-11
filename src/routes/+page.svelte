@@ -36,7 +36,7 @@
     {#await sponsor.logo() then module}
       <div class="flex items-center justify-center px-8">
         <div class="harmonized-logo">
-          <enhanced:img src={module.default} alt={sponsor.level} />
+          <enhanced:img src={module.default} alt={sponsor.name} />
         </div>
       </div>
     {/await}

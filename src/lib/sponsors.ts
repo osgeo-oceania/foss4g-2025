@@ -10,19 +10,52 @@ export const LEVELS = {
 };
 
 export default {
-  aut: { logo: () => import('$images/logos/aut.png?enhanced'), level: LEVELS.VENUE },
-  geocat: { logo: () => import('$images/logos/geocat.png?enhanced'), level: LEVELS.GOLD },
-  linz: { logo: () => import('$images/logos/linz.png?enhanced'), level: LEVELS.GOLD },
+  aut: { name: 'AUT', logo: () => import('$images/logos/aut.png?enhanced'), level: LEVELS.VENUE },
+  geocat: {
+    name: 'GeoCAT',
+    logo: () => import('$images/logos/geocat.png?enhanced'),
+    level: LEVELS.GOLD
+  },
+  linz: { name: 'LINZ', logo: () => import('$images/logos/linz.png?enhanced'), level: LEVELS.GOLD },
   'newzealand-com': {
+    name: 'newzealand.com',
     logo: () => import('$images/logos/newzealand-com-shared-white.png?enhanced'),
     level: LEVELS.GOLD
   },
-  'osgeo-oceania': { logo: () => import('$images/logos/osgeo-oceania.png?enhanced'), level: LEVELS.PARTNER },
-  osgeo: { logo: () => import('$images/logos/osgeo.png?enhanced'), level: LEVELS.PARTNER },
-  pgrsc: { logo: () => import('$images/logos/pgrsc.png?enhanced'), level: LEVELS.SUPPORTER },
-  qfieldcloud: { logo: () => import('$images/logos/qfieldcloud.png?enhanced'), level: LEVELS.SILVER },
-  sotm2025: { logo: () => import('$images/logos/sotm2025.png?enhanced'), level: LEVELS.SUPPORTER },
-  sparkgeo: { logo: () => import('$images/logos/sparkgeo.png?enhanced'), level: LEVELS.SILVER + LEVELS.CHILDCARE },
-  tomtom: { logo: () => import('$images/logos/tomtom.png?enhanced'), level: LEVELS.BRONZE },
-  wdc: { logo: () => import('$images/logos/wdc.png?enhanced'), level: LEVELS.PARTNER }
+  'osgeo-oceania': {
+    name: 'OSGeo Oceania',
+    logo: () => import('$images/logos/osgeo-oceania.png?enhanced'),
+    level: LEVELS.PARTNER
+  },
+  osgeo: {
+    name: 'OSGeo',
+    logo: () => import('$images/logos/osgeo.png?enhanced'),
+    level: LEVELS.PARTNER
+  },
+  pgrsc: {
+    name: 'PGRSC',
+    logo: () => import('$images/logos/pgrsc.png?enhanced'),
+    level: LEVELS.SUPPORTER
+  },
+  qfieldcloud: {
+    name: 'QFieldCloud',
+    logo: () => import('$images/logos/qfieldcloud.png?enhanced'),
+    level: LEVELS.SILVER
+  },
+  sotm2025: {
+    name: 'SOTM2025',
+    logo: () => import('$images/logos/sotm2025.png?enhanced'),
+    level: LEVELS.SUPPORTER
+  },
+  sparkgeo: {
+    name: 'SparkGEO',
+    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
+    level: LEVELS.SILVER + LEVELS.CHILDCARE
+  },
+  tomtom: {
+    name: 'TomTom',
+    logo: () => import('$images/logos/tomtom.png?enhanced'),
+    level: LEVELS.BRONZE
+  },
+  wdc: { name: 'WDC', logo: () => import('$images/logos/wdc.png?enhanced'), level: LEVELS.PARTNER }
 };
