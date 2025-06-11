@@ -1,5 +1,6 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import Sponsors from '$lib/sponsors';
 </script>
 
 <div class="hero">
@@ -19,11 +20,27 @@
         decision makers and researchers together from around the world
       </div>
       <div class="w-[200px]">
-        <a class="btn btn-block btn-success py-4 btn-lg font-normal rounded-full" href="/attend/register">Early Bird Tickets</a
+        <a
+          class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+          href="/attend/register">Early Bird Tickets</a
         >
       </div>
     </div>
   </div>
+</div>
+
+<div class="grid grid-cols-5">
+  {#each Object.values(Sponsors)
+    .sort((a, b) => a.level - b.level)
+    .slice(0, 5) as sponsor}
+    {#await sponsor.logo() then module}
+      <div class="flex items-center justify-center px-8">
+        <div class="harmonized-logo">
+          <enhanced:img src={module.default} alt={sponsor.level} />
+        </div>
+      </div>
+    {/await}
+  {/each}
 </div>
 
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
@@ -59,3 +76,8 @@ The Auckland FOSS4G 2025 Conference Organising Committee -->
 <!-- <SponsorshipLevels /> -->
 
 <!-- <InlineMap bottom /> -->
+<style>
+  .harmonized-logo {
+    filter: grayscale(100%) sepia(100%) hue-rotate(180deg);
+  }
+</style>
