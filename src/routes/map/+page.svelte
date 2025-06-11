@@ -2,6 +2,6 @@
   import Map from '../../components/Map.svelte';
 </script>
 
-<div class="w-full h-full">
-<Map />
+<div class="h-full w-full">
+  <Map />
 </div>
