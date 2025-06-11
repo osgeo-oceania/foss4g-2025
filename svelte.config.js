@@ -16,7 +16,8 @@ const config = {
     adapter: adapter(),
     paths: {
       base: process.env.BASE_PATH ?? '',
-      assets: process.env.BASE_PATH ?? ''
+      assets: process.env.BASE_PATH ?? '',
+      relative: true
     },
     prerender: {
       handleHttpError: 'warn'
