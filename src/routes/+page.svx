@@ -30,7 +30,7 @@ The Auckland FOSS4G 2025 Conference Organising Committee
 
 <!-- {/* <KeynoteSpeakers /> */} -->
 
-<hr className="my-8" />
+<hr class="my-8" />
 
 # Our sponsors and partners
 

@@ -10,6 +10,6 @@
   {/if}
 </svelte:head>
 
-<main class="prose">
+<main class="prose max-w-full">
   <slot />
 </main>
