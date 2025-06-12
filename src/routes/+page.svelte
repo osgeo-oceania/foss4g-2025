@@ -115,6 +115,7 @@
   </div>
 </div>
 
+<div class="divider divider-start divider-primary text-2xl">Conference Agenda</div>
 <Agenda />
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
