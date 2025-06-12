@@ -9,21 +9,21 @@
 
 <div class="hero flex">
   <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl p-8">
-    <div class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-86 w-86 pr-8 pb-8">
+    <div class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 sm:h-86 sm:w-86 pr-8 pb-8">
       {@html Foss4g2025Logo}
     </div>
-    <div class="flex w-full flex-shrink flex-row justify-between space-y-4">
+    <div class="flex w-full flex-shrink flex-col sm:flex-row justify-between sm:space-y-4">
       <div>November 17-23, 2025</div>
       <div>Tāmaki Makaurau, Aotearoa New Zealand</div>
     </div>
     <div class="w-full flex-grow space-y-8">
-      <div class="text-7xl text-white">FOSS4G<br />Auckland 2025</div>
-      <div class="text-primary max-w-[400px]">
+      <div class="text-2xl sm:text-7xl text-white">FOSS4G<br />Auckland 2025</div>
+      <div class="text-white sm:text-primary max-w-[400px]">
         FOSS4G stands for Free and Open Source Software for Geospatial, a conference series hosted
         in partnership with OSGeo. FOSS4G brings open source geospatial users, software developers,
         decision makers and researchers together from around the world
       </div>
-      <div class="w-[240px]">
+      <div class="sm:w-[240px]">
         <a
           class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
           href="/attend/register"

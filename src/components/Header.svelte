@@ -33,7 +33,7 @@
   ];
 </script>
 
-<div class="navbar z-20 bg-white">
+<div class="navbar z-20 bg-white h-[30px] mb-1">
   <div class="navbar-start my-4">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
   </div>
