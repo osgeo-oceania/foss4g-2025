@@ -7,7 +7,7 @@
 
 <!-- Hero -->
 
-<div class="hero">
+<div class="hero flex">
   <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl p-8">
     <div class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-86 w-86 pr-8 pb-8">
       {@html Foss4g2025Logo}
@@ -36,12 +36,12 @@
 
 <!-- Sponsor Grid -->
 
-<div class="my-6 grid grid-cols-5">
+<div class="my-6 grid grid-cols-3 sm:grid-cols-6">
   {#each Object.values(Sponsors)
     .sort((a, b) => a.level - b.level)
-    .slice(0, 5) as sponsor}
+    .slice(0, 6) as sponsor}
     {#await sponsor.logo() then module}
-      <div class="flex items-center justify-center px-8">
+      <div class="flex items-center justify-center px-4 sm:px-8">
         <div class="harmonized-logo">
           <enhanced:img src={module.default} alt={sponsor.name} />
         </div>
@@ -52,7 +52,7 @@
 
 <!-- Cards -->
 
-<div class="grid grid-cols-2 space-x-8 pb-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0 pb-4">
   <div class="card bg-secondary rounded-2xl">
     <div class="card-body space-y-2 p-8">
       <div class="text-3xl">Speakers</div>
@@ -69,7 +69,7 @@
       </div>
       <div class="flex flex-grow flex-row flex-wrap items-end justify-between">
         <div class="avatar-group -space-x-5">
-          {#each Object.values(Team).slice(0, 5) as person}
+          {#each Object.values(Team).slice(0, 4) as person}
             {#await person.photo() then module}
               <div class="avatar border-0">
                 <div class="aspect-square w-12 rounded-full">
@@ -93,7 +93,7 @@
     </div>
   </div>
 
-  <div class="grid grid-rows-2 space-y-8">
+  <div class="flex flex-col-reverse sm:flex-col gap-y-4">
     <div class="card bg-secondary rounded-2xl">
       <div class="card-body space-y-2 p-8">
         <div class="text-3xl">Auckland</div>
