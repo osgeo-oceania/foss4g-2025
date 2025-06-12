@@ -54,7 +54,9 @@
         <button
           class="btn bg-primary btn-square rounded"
           aria-label="menu"
-          ontouchstart={() => (isMenuOpen = !isMenuOpen)}
+          ontouchend={() => {
+            isMenuOpen = !isMenuOpen;
+          }}
         >
           <span class="icon-[material-symbols-light--menu] h-12 w-12 bg-white"></span>
         </button>
