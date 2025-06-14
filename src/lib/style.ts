@@ -83,9 +83,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         id: 'coastline',
         source: 'auckland',
         'source-layer': 'coastline',
-        type: 'line',
+        type: 'fill',
         paint: {
-          'line-color': '#4594A3'
+          'fill-color': '#eee'
         }
       },
       {
