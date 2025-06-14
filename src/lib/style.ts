@@ -10,7 +10,7 @@ export const defaultMapConfig: MapConfig = {
   },
   landcover: {
     ocean: {
-      color: '#4594A3',
+      color: '#55B8CB',
       classes: [-99]
     },
     'built-up': {
@@ -18,7 +18,7 @@ export const defaultMapConfig: MapConfig = {
       classes: [1, 5, 6]
     },
     water: {
-      color: '#4594A3',
+      color: '#55B8CB',
       classes: [20, 21, 22]
     },
     cropland: {
@@ -83,9 +83,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         id: 'coastline',
         source: 'auckland',
         'source-layer': 'coastline',
-        type: 'fill',
+        type: 'line',
         paint: {
-          'fill-color': '#eee'
+          'line-color': '#4594A3'
         }
       },
       {
