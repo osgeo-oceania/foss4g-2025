@@ -129,7 +129,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['has', 'hway_num'],
         paint: {
           'line-color': '#5F7676',
-          'line-width': 4
+          'line-width': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            8, 4,   // width 4 at zoom 8
+            14, 10  // width 10 at zoom 14
+            ]
         }
       },
       // major roads fill
@@ -141,7 +147,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['has', 'hway_num'],
         paint: {
           'line-color': '#77969C',
-          'line-width': 2
+          'line-width': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            8, 2,    // width 2 at zoom 8
+            14, 6    // width 6 at zoom 14
+          ]
         }
       },
       {
