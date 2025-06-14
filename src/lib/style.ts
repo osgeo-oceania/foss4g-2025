@@ -117,7 +117,14 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['!', ['has', 'hway_num']],
         paint: {
           'line-color': '#fff',
-          'line-width': 2
+          'line-width': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            12, 0.5,   // width 0.5 at zoom 12
+            18, 20,    // width 20 at zoom 18
+            22, 200
+            ]
         }
       },
       // major roads outline
