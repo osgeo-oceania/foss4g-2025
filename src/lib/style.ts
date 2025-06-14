@@ -120,6 +120,19 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'line-width': 1
         }
       },
+      // major roads outline
+      {
+        id: 'major-roads-outline',
+        source: 'auckland',
+        'source-layer': 'roads',
+        type: 'line',
+        filter: ['has', 'hway_num'],
+        paint: {
+          'line-color': '#242B3D',
+          'line-width': 4
+        }
+      },
+      // major roads fill
       {
         id: 'major-roads',
         source: 'auckland',
@@ -127,7 +140,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'line',
         filter: ['has', 'hway_num'],
         paint: {
-          'line-color': '#fff',
+          'line-color': '#505555',
           'line-width': 2
         }
       },
