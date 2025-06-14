@@ -109,6 +109,25 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'fill-color': '#c6eebe' // park fill
         }
       },
+      // minor-roads outline
+      {
+        id: 'minor-roads',
+        source: 'auckland',
+        'source-layer': 'roads',
+        type: 'line',
+        filter: ['!', ['has', 'hway_num']],
+        paint: {
+          'line-color': '#d1d6e0',
+          'line-width': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            12, 1,   // width 1 at zoom 12
+            18, 11    // width 11 at zoom 18
+            ]
+        }
+      },
+      // minor-roads fill
       {
         id: 'minor-roads',
         source: 'auckland',
@@ -122,11 +141,11 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['linear'],
             ['zoom'],
             12, 0.5,   // width 0.5 at zoom 12
-            18, 10    // width 20 at zoom 18
+            18, 10    // width 10 at zoom 18
             ]
         }
       },
-      // major roads outline
+      // major-roads outline
       {
         id: 'major-roads-outline',
         source: 'auckland',
@@ -144,7 +163,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ]
         }
       },
-      // major roads fill
+      // major-roads fill
       {
         id: 'major-roads',
         source: 'auckland',
