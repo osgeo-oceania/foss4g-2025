@@ -121,23 +121,23 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         }
       },
       // major roads outline
-      {
-        id: 'major-roads-outline',
-        source: 'auckland',
-        'source-layer': 'roads',
-        type: 'line',
-        filter: ['has', 'hway_num'],
-        paint: {
-          'line-color': '#5F7676',
-          'line-width': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            6, 3,   // width 3 at zoom 6
-            18, 10  // width 8 at zoom 18
-            ]
-        }
-      },
+     // {
+     //   id: 'major-roads-outline',
+     //   source: 'auckland',
+     //   'source-layer': 'roads',
+     //   type: 'line',
+     //   filter: ['has', 'hway_num'],
+     //   paint: {
+     //     'line-color': '#5F7676',
+     //     'line-width': [
+     //       'interpolate',
+     //       ['linear'],
+     //       ['zoom'],
+     //       6, 3,   // width 3 at zoom 6
+     //       18, 10  // width 8 at zoom 18
+     //       ]
+     //   }
+     // },
       // major roads fill
       {
         id: 'major-roads',
@@ -146,12 +146,12 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'line',
         filter: ['has', 'hway_num'],
         paint: {
-          'line-color': '#77969C',
+          'line-color': '#c4b7ab',
           'line-width': [
             'interpolate',
             ['linear'],
             ['zoom'],
-            6, 2,    // width 2 at zoom 6
+            3, .8,    // width .8 at zoom 3
             18, 9    // width 9 at zoom 18
           ]
         }
