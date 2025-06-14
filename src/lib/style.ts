@@ -188,18 +188,18 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'fill',
         minzoom: 13.5,
         paint: {
-          'fill-color': '#ccc'
+          'fill-color': '#e3dcd9'
         }
       },
-      // {
-      // 	id: 'buildings-outline',
-      // 	source: 'auckland',
-      // 	'source-layer': 'buildings',
-      // 	type: 'line',
-      // 	paint: {
-      // 		'line-color': '#ccc'
-      // 	}
-      // },
+       {
+       	id: 'buildings-outline',
+       	source: 'auckland',
+       	'source-layer': 'buildings',
+       	type: 'line',
+       	paint: {
+       		'line-color': '#d3cac5'
+       	}
+       },
       {
         id: 'places-bay',
         source: 'auckland',
