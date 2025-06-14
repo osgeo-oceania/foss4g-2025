@@ -128,7 +128,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'line',
         filter: ['has', 'hway_num'],
         paint: {
-          'line-color': '#242B3D',
+          'line-color': '#5F7676',
           'line-width': 4
         }
       },
@@ -140,7 +140,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'line',
         filter: ['has', 'hway_num'],
         paint: {
-          'line-color': '#6A7171',
+          'line-color': '#84A7A7',
           'line-width': 2
         }
       },
