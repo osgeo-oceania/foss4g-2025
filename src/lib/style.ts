@@ -111,7 +111,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       },
       // minor-roads outline
       {
-        id: 'minor-roads',
+        id: 'minor-roads-outline',
         source: 'auckland',
         'source-layer': 'roads',
         type: 'line',
@@ -123,7 +123,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['linear'],
             ['zoom'],
             12, 1,   // width 1 at zoom 12
-            18, 11    // width 11 at zoom 18
+            18, 11   // width 11 at zoom 18
             ]
         }
       },
