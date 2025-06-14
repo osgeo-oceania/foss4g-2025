@@ -106,7 +106,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'parks',
         type: 'fill',
         paint: {
-          'fill-color': 'lightgreen'
+          'fill-color': '#56CC91'
         }
       },
       {
