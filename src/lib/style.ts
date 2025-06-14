@@ -106,7 +106,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'parks',
         type: 'fill',
         paint: {
-          'fill-color': '#56CC91'
+          'fill-color': 'c6eebe' // park fill
         }
       },
       {
@@ -151,8 +151,8 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             'interpolate',
             ['linear'],
             ['zoom'],
-            3, 0.8,    // width .8 at zoom 3
-            18, 8    // width 9 at zoom 18
+            6, 1,    // width 1 at zoom 6
+            18, 9    // width 9 at zoom 18
           ]
         }
       },
