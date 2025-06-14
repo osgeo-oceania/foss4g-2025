@@ -85,7 +85,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'coastline',
         type: 'fill',
         paint: {
-          'fill-color': '#eee'
+          'fill-color': '#f5f1f0' // colour for land fill
         }
       },
       {
@@ -151,8 +151,8 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             'interpolate',
             ['linear'],
             ['zoom'],
-            3, .8,    // width .8 at zoom 3
-            18, 9    // width 9 at zoom 18
+            3, 0.8,    // width .8 at zoom 3
+            18, 8    // width 9 at zoom 18
           ]
         }
       },
