@@ -140,7 +140,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['linear'],
             ['zoom'],
             6, 1.5,   // width 1.5 at zoom 6
-            18, 10  // width 10 at zoom 18
+            18, 11  // width 10 at zoom 18
             ]
         }
       },
