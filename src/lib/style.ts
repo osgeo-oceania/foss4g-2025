@@ -85,7 +85,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'coastline',
         type: 'fill',
         paint: {
-          'fill-color': '#c6eebe' // colour for land fill
+          'fill-color': '#ece7e4' // colour for land fill
         }
       },
       {
@@ -106,7 +106,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'parks',
         type: 'fill',
         paint: {
-          'fill-color': 'c6eebe' // park fill
+          'fill-color': '#c6eebe' // park fill
         }
       },
       {
