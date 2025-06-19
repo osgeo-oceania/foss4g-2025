@@ -294,7 +294,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'City'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['DIN Pro Medium']], // BellTopo Sans BoldD
+          'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
           'text-size': 18
         },
         paint: {
