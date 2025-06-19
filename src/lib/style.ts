@@ -291,11 +291,12 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
+        maxzoom: 13, // set a max zoom level
         filter: ['==', ['get', 'type'], 'City'],
         layout: {
           'text-field': name,
           'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
-          'text-size': 18
+          'text-size': 20 // used to be 18
         },
         paint: {
           'text-color': '#111',
