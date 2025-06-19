@@ -291,7 +291,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
-        maxzoom: 13, // set a max zoom level
+        maxzoom: 14, // set a max zoom level
         filter: ['==', ['get', 'type'], 'City'],
         layout: {
           'text-field': name,
