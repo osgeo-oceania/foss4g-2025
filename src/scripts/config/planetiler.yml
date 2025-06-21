@@ -19,12 +19,27 @@ sources:
   linz-places:
     type: geopackage
     local_path: src/data/raw/lds-nz-place-names-nzgb-GPKG.zip
+  linz-suburbs-localities:
+    type: geopackage
+    local_path: src/data/raw/lds-nz-suburbs-and-localities-GPKG.zip
   auckland-parks:
     type: geopackage
     local_path: src/data/raw/Park_Extents.gpkg
   auckland-alcohol-control-area:
     type: geopackage
     local_path: src/data/raw/Alcohol_Control_Area.gpkg
+  auckland-bus-routes:
+    type: geojson
+    local_path: src/data/raw/Bus_Route.geojson
+  auckland-bus-stops:
+    type: geojson
+    local_path: src/data/raw/Bus_Stop.geojson
+  auckland-ferry-routes:
+    type: geojson
+    local_path: src/data/raw/Ferry_Routes.geojson
+  auckland-train-routes:
+    type: geojson
+    local_path: src/data/raw/Train_Route.geojson
 
 layers:
   - id: coastline
@@ -67,12 +82,6 @@ layers:
             tag_value: 'Site Description'
           - key: area
             tag_value: 'Shape__Area'
-
-  - id: alcohol-control-area
-    features:
-      - source: auckland-alcohol-control-area
-        geometry: polygon
-        min_zoom: 10
 
   - id: roads
     features:
@@ -121,3 +130,9 @@ layers:
             tag_value: name
           - key: type
             tag_value: feat_type
+
+  - id: alcohol-control-area
+    features:
+      - source: auckland-alcohol-control-area
+        geometry: polygon
+        min_zoom: 10
