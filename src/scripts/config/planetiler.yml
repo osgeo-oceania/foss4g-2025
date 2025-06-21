@@ -141,9 +141,49 @@ layers:
         attributes:
           - key: name
             tag_value: name
-            
+
   - id: alcohol-control-area
     features:
       - source: auckland-alcohol-control-area
         geometry: polygon
         min_zoom: 10
+
+  - id: bus-stops
+    features:
+      - source: auckland-bus-stops
+        geometry: point
+        min_zoom: 17
+        attributes:
+          - key: name
+            tag_value: STOPNAME
+
+  - id: bus-routes
+    features:
+      - source: auckland-bus-routes
+        geometry: line
+        min_zoom: 12
+        attributes:
+          - key: number
+            tag_value: ROUTENUMBER
+      
+  - id: ferry-routes
+    features:
+      - source: auckland-ferry-routes
+        geometry: line
+        min_zoom: 12
+        attributes:
+          - key: name
+            tag_value: ROUTENAME
+          - key: number
+            tag_value: ROUTENUMBER
+  
+  - id: train-routes
+    features:
+      - source: auckland-train-routes
+        geometry: line
+        min_zoom: 12
+        attributes:
+          - key: name
+            tag_value: ROUTENAME
+          - key: number
+            tag_value: ROUTENUMBER
