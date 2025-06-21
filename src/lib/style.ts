@@ -112,6 +112,44 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'fill-color': '#c6eebe' // park fill
         }
       },
+
+      //
+      // buildings
+      //
+      {
+        id: 'buildings-fill',
+        source: 'auckland',
+        'source-layer': 'buildings',
+        type: 'fill',
+        minzoom: 12,
+        paint: {
+          'fill-color': '#e3dcd9'
+        }
+      },
+      {
+        id: 'buildings-extrusion',
+        source: 'auckland',
+        'source-layer': 'buildings',
+        type: 'fill-extrusion',
+        minzoom: 12,
+        paint: {
+          'fill-extrusion-color': '#e3dcd9',
+          'fill-extrusion-height': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            14,
+            0,
+            14.05,
+            ['get', 'height']
+          ],
+          'fill-extrusion-vertical-gradient': true,
+          'fill-extrusion-opacity': 0.8
+        }
+      },
+      //
+      // roads
+      //
       // minor-roads outline
       {
         id: 'minor-roads-outline',
@@ -168,7 +206,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             6,
             1.5, // width 1.5 at zoom 6
             18,
-            11 // width 10 at zoom 18
+            10 // width 10 at zoom 18
           ]
         }
       },
@@ -191,44 +229,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['zoom'],
             6,
             1, // width 1 at zoom 6
-            18,
+            14,
             9 // width 9 at zoom 18
           ]
-        }
-      },
-
-      //
-      // buildings
-      //
-      {
-        id: 'buildings-fill',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill',
-        minzoom: 12,
-        paint: {
-          'fill-color': '#e3dcd9'
-        }
-      },
-      {
-        id: 'buildings-extrusion',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill-extrusion',
-        minzoom: 12,
-        paint: {
-          'fill-extrusion-color': '#e3dcd9',
-          'fill-extrusion-height': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            14,
-            0,
-            14.05,
-            ['get', 'height']
-          ],
-          'fill-extrusion-vertical-gradient': true,
-          'fill-extrusion-opacity': 0.8
         }
       },
 
@@ -281,7 +284,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['==', ['get', 'number'], 'EAST'],
             '#fcb52d',
             'black'
-          ], 
+          ],
           'line-offset': [
             'case',
             ['==', ['get', 'number'], 'STH'],
