@@ -10,7 +10,7 @@ sources:
   buildings:
     # https://data.linz.govt.nz/layer/101290-nz-building-outlines/
     type: geopackage
-    local_path: src/data/buildings.gpkg
+    local_path: src/data/raw/lds-nz-building-outlines-GPKG.zip
 
   linz-coastline:
     # https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
@@ -138,6 +138,13 @@ layers:
             value: airport
           - key: name
             tag_value: name
+
+      - source: auckland-parks
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: park
 
   - id: places
     features:
