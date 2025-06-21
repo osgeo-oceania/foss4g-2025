@@ -7,9 +7,9 @@ args:
   maxzoom: 14
 
 sources:
-  linz-buildings:
+  buildings:
     type: geopackage
-    local_path: src/data/raw/lds-nz-building-outlines-GPKG.zip
+    local_path: src/data/buildings.gpkg
   linz-coastline:
     type: shapefile
     local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
@@ -35,10 +35,13 @@ layers:
 
   - id: buildings
     features:
-      - source: linz-buildings
+      - source: buildings
         geometry: polygon
         min_zoom: 13
         min_size: 0
+        attributes:
+          - key: height
+            tag_value: height
     tile_post_process:
       merge_polygons:
         min_area: 0
