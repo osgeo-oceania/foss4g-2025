@@ -114,7 +114,6 @@ layers:
         include_when:
           feat_type:
             - Bay
-            - Suburb
             - Hill
             - City
             - Town
@@ -131,6 +130,18 @@ layers:
           - key: type
             tag_value: feat_type
 
+  - id: suburbs
+    features:
+      - source: linz-suburbs-localities
+        geometry: innermost_point
+        min_zoom: 7
+        include_when:
+          type: Suburb
+          major_name: Auckland
+        attributes:
+          - key: name
+            tag_value: name
+            
   - id: alcohol-control-area
     features:
       - source: auckland-alcohol-control-area
