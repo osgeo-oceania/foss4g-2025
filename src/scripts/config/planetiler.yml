@@ -236,12 +236,11 @@ layers:
           - key: number
             tag_value: ROUTENUMBER
 
-            
   - id: stops
     features:
       - source: auckland-bus-stops
         geometry: point
-        min_zoom: 17
+        min_zoom: 14
         attributes:
           - key: type
             value: bus
@@ -251,7 +250,7 @@ layers:
             tag_value: STOPNAME
 
       - source: auckland-ferry-stops
-        geometry: line
+        geometry: point
         min_zoom: 12
         attributes:
           - key: type
@@ -262,7 +261,7 @@ layers:
             tag_value: STOPNAME
 
       - source: auckland-train-stops
-        geometry: line
+        geometry: point
         min_zoom: 12
         attributes:
           - key: type
