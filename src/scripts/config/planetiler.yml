@@ -56,6 +56,17 @@ layers:
             tag_value: 'Site Description'
           - key: area
             tag_value: 'Shape__Area'
+  
+  - id: parks-label
+    features:
+      - source: auckland-parks
+        geometry: innermost_point
+        min_zoom: 10
+        attributes:
+          - key: name
+            tag_value: 'Site Description'
+          - key: area
+            tag_value: 'Shape__Area'
 
   - id: alcohol-control-area
     features:
