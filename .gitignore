@@ -23,5 +23,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Other
-src/data/raw/
-src/data/tmp/
+src/data
