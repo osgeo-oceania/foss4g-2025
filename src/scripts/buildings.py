@@ -129,11 +129,11 @@ def build(gdal_path: str = "gdal"):
 
         buildings_result = gpd.GeoDataFrame(
             pd.merge(
-                results.rename({"extract_building_height": "height"}),
+                results.rename(columns={"extract_building_height": "height"}),
                 buildings[["building_id", "geometry"]],
                 on=["building_id"],
                 how="left",
-            )
+            ).drop("building_id", axis=1)
         )
 
         buildings_result.to_file(str(OUTPUT_PATH), driver="GPKG")
