@@ -33,18 +33,18 @@
   ];
 </script>
 
-<div class="navbar z-20 bg-white h-[30px] sm:mb-1">
+<div class="navbar z-20 bg-white h-[30px] sm:mb-1 rounded-b-lg px-4">
   <div class="navbar-start my-4">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
   </div>
 
-  <div class="navbar-end space-x-1">
+  <div class="navbar-end">
     <div class="hidden sm:flex space-x-2">
       {#each menuItems as menuItem}
         <Link
           aria-label={menuItem.label}
           href={menuItem.url}
-          class={`btn btn-sm rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+          class={`btn rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
           >{menuItem.label}</Link
         >
       {/each}
