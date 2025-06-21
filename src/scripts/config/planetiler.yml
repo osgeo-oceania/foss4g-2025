@@ -32,6 +32,11 @@ sources:
     type: geopackage
     local_path: src/data/raw/lds-nz-suburbs-and-localities-GPKG.zip
 
+  linz-airports:
+    # https://data.linz.govt.nz/layer/50237-nz-airport-polygons-topo-150k/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-airport-polygons-topo-150k-GPKG.zip
+
   auckland-parks:
     # https://data-aucklandcouncil.opendata.arcgis.com/datasets/3135043373ba48b7a9b5240370cb53ac_0/explore
     type: geopackage
@@ -93,12 +98,6 @@ layers:
       merge_polygons:
         min_area: 0
 
-  - id: alcohol-control-area
-    features:
-      - source: auckland-alcohol-control-area
-        geometry: polygon
-        min_zoom: 10
-
   - id: roads
     features:
       - source: linz-road-centrelines
@@ -122,6 +121,24 @@ layers:
       merge_line_strings:
         min_length: 0
 
+  - id: areas
+    features:
+      - source: auckland-alcohol-control-area
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: alcohol-control-area
+
+      - source: linz-airports
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: airport
+          - key: name
+            tag_value: name
+
   - id: places
     features:
       - source: linz-places
@@ -136,7 +153,6 @@ layers:
             - Village
             - Island
             - Point
-            - Railway Station
             - Locality
             - Beach
             - Lake
