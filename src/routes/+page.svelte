@@ -1,5 +1,6 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import Rangitoto from '$images/svg/rangitoto.svg';
   import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
   import Team from '$lib/team';
@@ -9,16 +10,18 @@
 
 <div class="hero flex">
   <div class="hero-content bg-secondary relative min-h-[500px] w-full flex-col rounded-2xl p-8">
-    <div class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 sm:h-86 sm:w-86 pr-8 pb-8">
+    <div
+      class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 pr-8 pb-8 sm:h-86 sm:w-86"
+    >
       {@html Foss4g2025Logo}
     </div>
-    <div class="flex w-full flex-shrink flex-col sm:flex-row justify-between sm:space-y-4">
+    <div class="flex w-full flex-shrink flex-col justify-between sm:flex-row sm:space-y-4">
       <div>November 17-23, 2025</div>
       <div>Tāmaki Makaurau, Aotearoa New Zealand</div>
     </div>
     <div class="w-full flex-grow space-y-8">
-      <div class="text-2xl sm:text-7xl text-white">FOSS4G<br />Auckland 2025</div>
-      <div class="text-white sm:text-primary max-w-[400px]">
+      <div class="text-2xl text-white sm:text-7xl">FOSS4G<br />Auckland 2025</div>
+      <div class="sm:text-primary max-w-[400px] text-white">
         FOSS4G stands for Free and Open Source Software for Geospatial, a conference series hosted
         in partnership with OSGeo. FOSS4G brings open source geospatial users, software developers,
         decision makers and researchers together from around the world
@@ -52,7 +55,7 @@
 
 <!-- Cards -->
 
-<div class="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4 space-y-4 sm:space-y-0 pb-4">
+<div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
   <div class="card bg-secondary rounded-2xl">
     <div class="card-body space-y-2 p-8">
       <div class="text-3xl">Speakers</div>
@@ -93,7 +96,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col-reverse sm:flex-col gap-y-4">
+  <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
     <div class="card bg-secondary rounded-2xl">
       <div class="card-body space-y-2 p-8">
         <div class="text-3xl">Auckland</div>
@@ -117,6 +120,11 @@
 
 <div class="divider divider-start divider-primary text-2xl">Conference Agenda</div>
 <Agenda />
+
+<div class="max-w-full my-2">
+  <img src={Rangitoto} alt="Rangitoto" />
+</div>
+
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
 brings open source geospatial users, software developers, decision makers and
