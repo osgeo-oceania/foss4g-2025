@@ -8,9 +8,9 @@ args:
 
 sources:
   buildings:
-    # https://data.linz.govt.nz/layer/101290-nz-building-outlines/
+    # source data: https://data.linz.govt.nz/layer/101290-nz-building-outlines/
     type: geopackage
-    local_path: src/data/raw/lds-nz-building-outlines-GPKG.zip
+    local_path: src/data/buildings.gpkg
 
   linz-coastline:
     # https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
@@ -89,7 +89,7 @@ layers:
     features:
       - source: buildings
         geometry: polygon
-        min_zoom: 13
+        min_zoom: 12
         min_size: 0
         attributes:
           - key: height
@@ -167,7 +167,7 @@ layers:
           - key: name
             tag_value: name
           - key: type
-            tag_value: feat_type
+            value: '${ feature.tags.feat_type.lowerAscii() }'
 
       - source: linz-suburbs-localities
         geometry: innermost_point
@@ -179,18 +179,21 @@ layers:
           - key: name
             tag_value: name
           - key: type
-            value: Suburb
+            value: suburb
 
       - source: auckland-parks
         geometry: innermost_point
-        min_zoom: 10
+        min_zoom:
+          default_value: 14
+          overrides:
+            13: '${ double(feature.area("km2")) > 0.1 }'
         attributes:
           - key: name
-            tag_value: 'Site Description'
+            tag_value: SITEDESCRIPTION
           - key: type
-            value: Park
+            value: park
           - key: area
-            tag_value: 'Shape__Area'
+            value: ${ feature.area("km2") }
 
   - id: routes
     features:
@@ -218,10 +221,16 @@ layers:
 
       - source: auckland-train-routes
         geometry: line
-        min_zoom: 12
+        min_zoom: 11
+        include_when:
+          ROUTEPATTERN:
+            - 810006
+            - 800005
+            - 840051
+            - 820002
         attributes:
           - key: type
-            value: ferry
+            value: train
           - key: name
             tag_value: ROUTENAME
           - key: number
