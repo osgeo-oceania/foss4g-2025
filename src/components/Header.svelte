@@ -39,12 +39,12 @@
   </div>
 
   <div class="navbar-end space-x-1">
-    <div class="hidden sm:flex">
+    <div class="hidden sm:flex space-x-2">
       {#each menuItems as menuItem}
         <Link
           aria-label={menuItem.label}
           href={menuItem.url}
-          class={`btn rounded-full text-base font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+          class={`btn btn-sm rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
           >{menuItem.label}</Link
         >
       {/each}
@@ -69,7 +69,7 @@
               <Link
                 aria-label={menuItem.label}
                 href={menuItem.url}
-                class={`text-base font-normal ${page.route.id === menuItem.url ? 'bg-primary text-white' : ''}`}
+                class={`text-sm font-normal ${page.route.id === menuItem.url ? 'bg-primary text-white' : ''}`}
                 >{menuItem.label}</Link
               >
             </li>
