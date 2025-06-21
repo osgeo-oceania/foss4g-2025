@@ -5,6 +5,7 @@
     MapView
   } from '@deck.gl/core';
   import { Tile3DLayer, TileLayer } from '@deck.gl/geo-layers';
+  import { BitmapLayer } from 'deck.gl';
   import { I3SLoader } from '@loaders.gl/i3s';
   import { onMount } from 'svelte';
 
@@ -18,36 +19,34 @@
     const deck = new Deck({
       parent: map3dContainer,
       initialViewState: {
-        longitude: 0,
-        latitude: 0,
-        zoom: -5,
+        longitude: 174.763336,
+        latitude: -36.848461,
+        zoom: 15,
         minZoom: -200,
         maxZoom: 200
       },
       views: new MapView({
         id: '3d',
         controller: true,
-        fovy: 180,
-        orthographic: false
       }),
       controller: true,
       layers: [
-        // new TileLayer({
-        //   data: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-        //   tileSize: 256,
-        //   renderSubLayers: (props) => {
-        //     const {
-        //       // @ts-ignore
-        //       bbox: { west, south, east, north }
-        //     } = props.tile;
+        new TileLayer({
+          data: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+          tileSize: 256,
+          renderSubLayers: (props) => {
+            const {
+              // @ts-ignore
+              bbox: { west, south, east, north }
+            } = props.tile;
 
-        //     return new BitmapLayer(props, {
-        //       data: undefined,
-        //       image: props.data,
-        //       bounds: [west, south, east, north]
-        //     });
-        //   }
-        // }),
+            return new BitmapLayer(props, {
+              data: undefined,
+              image: props.data,
+              bounds: [west, south, east, north]
+            });
+          }
+        }),
         new Tile3DLayer({
           data: dataUrl,
           // @ts-ignore
