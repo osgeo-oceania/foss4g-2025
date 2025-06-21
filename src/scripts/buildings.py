@@ -13,6 +13,7 @@
 from exactextract import exact_extract
 import geopandas as gpd
 from pathlib import Path
+import pandas as pd
 import numpy as np
 import rasterio
 import typer
@@ -36,24 +37,31 @@ app = typer.Typer()
 def build(gdal_path: str = "gdal"):
     TMP_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    ## build clipped & negative buffered buildings
-    AUCKLAND_BUILDINGS = TMP_DATA_DIR / "auckland-buildings.gpkg"
+    ## extract subset of buildings data from nz buildings
+    BUILDINGS_EXTRACT = TMP_DATA_DIR / "buildings-extract.gpkg"
 
-    if not AUCKLAND_BUILDINGS.exists():
+    if not BUILDINGS_EXTRACT.exists():
         cmd = [
             f"{gdal_path} vector pipeline --progress",
-            # read from inside zip file
             f'read --input "/vsizip/{BUILDINGS_PATH}/nz-building-outlines.gpkg"',
-            # clip the source input to features that intersect buildings bounds
             f'clip --like "{BOUNDS_PATH}" --like-where "name=\'buildings\'"',
+            f"write --overwrite --output-format=GPKG {BUILDINGS_EXTRACT}",
+        ]
+
+        shpyx.run(" ! ".join(cmd), log_cmd=True, log_output=True)
+
+    ## build clipped & negative buffered buildings
+    BUILDINGS_INBUFFERED = TMP_DATA_DIR / "buildings-inbuffered.gpkg"
+
+    if not BUILDINGS_INBUFFERED.exists():
+        cmd = [
+            f"{gdal_path} vector pipeline --progress",
+            f'read --input "{BUILDINGS_EXTRACT}"',
             # negative buffer 0.00002 deg (aprox 2m)
             "geom buffer --distance=-0.00002 --endcap-style=flat --join-style=mitre",
-            # filter out null geometries
             'filter --where "OGR_GEOMETRY IS NOT NULL"',
-            # make sure all output is multi polygon (some negative buffers result in >1 polygon)
             "geom set-type --multi",
-            # write as gpkg
-            f"write --overwrite --output-format=GPKG {AUCKLAND_BUILDINGS}",
+            f"write --overwrite --output-format=GPKG {BUILDINGS_INBUFFERED}",
         ]
 
         shpyx.run(" ! ".join(cmd), log_cmd=True, log_output=True)
@@ -93,7 +101,7 @@ def build(gdal_path: str = "gdal"):
             "--creation-option COMPRESS=DEFLATE",
             "--creation-option PREDICTOR=3",
             # subtract DSM from DEM; nodata is -9999
-            f'--calc "(dsm>=0)*dsm - (dem>=0)*dem"',
+            f'--calc "((dsm>=0) && (dem>=0)) * (dsm - dem)"',
             " ".join([f'--input "{key}={val}"' for key, val in gdalgs.items()]),
             f"{HEIGHT_RASTER}",
         ]
@@ -102,24 +110,34 @@ def build(gdal_path: str = "gdal"):
 
     if not OUTPUT_PATH.exists():
         raster = rasterio.open(str(HEIGHT_RASTER))
-        buildings = gpd.read_file(str(AUCKLAND_BUILDINGS))
-        buildings = buildings[
-            ~(buildings.geometry.is_empty | buildings.geometry.isna())
+        buildings = gpd.read_file(str(BUILDINGS_EXTRACT))
+
+        buildings_inbuf = gpd.read_file(str(BUILDINGS_INBUFFERED))
+        buildings_inbuf = buildings_inbuf[
+            ~(buildings_inbuf.geometry.is_empty | buildings_inbuf.geometry.isna())
         ].to_crs("EPSG:2193")
 
         results = exact_extract(
             raster,
-            buildings,
+            buildings_inbuf,
             extract_building_height,
             include_cols=["building_id"],
-            include_geom=True,
-            progress=True,
+            include_geom=False,
+            progress=False,
             output="pandas",
         )
 
-        results.to_file(str(OUTPUT_PATH), driver="GPKG")
+        buildings_result = gpd.GeoDataFrame(
+            pd.merge(
+                results.rename({"extract_building_height": "height"}),
+                buildings[["building_id", "geometry"]],
+                on=["building_id"],
+                how="left",
+            )
+        )
 
-        print(results)
+        buildings_result.to_file(str(OUTPUT_PATH), driver="GPKG")
+        print(f"output {buildings_result}")
 
 
 def extract_building_height(values, coverage_fractions):
