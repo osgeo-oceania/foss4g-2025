@@ -23,11 +23,18 @@ import shpyx
 import json
 
 BOUNDS_PATH = Path("src/data/bounds.geojson")
-TMP_DATA_DIR = Path("src/data/tmp/")
+OUTPUT_PATH = Path("src/data/buildings.gpkg")
+
+## input files
 RAW_DATA_DIR = Path("src/data/raw/")
 BUILDINGS_PATH = RAW_DATA_DIR / "lds-nz-building-outlines-GPKG.zip"
-OUTPUT_PATH = Path("src/data/buildings.gpkg")
 DEMDSM_DIR = RAW_DATA_DIR / "demdsm/"
+
+## temporary files
+TMP_DATA_DIR = Path("src/data/tmp/")
+BUILDINGS_EXTRACT = TMP_DATA_DIR / "buildings-extract.gpkg"
+BUILDINGS_INBUFFERED = TMP_DATA_DIR / "buildings-inbuffered.gpkg"
+HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
 LINZ_QUAD_IDS = ["BA31", "BA32"]
 
@@ -39,7 +46,6 @@ def build(gdal_path: str = "gdal"):
     TMP_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     ## extract subset of buildings data from nz buildings
-    BUILDINGS_EXTRACT = TMP_DATA_DIR / "buildings-extract.gpkg"
 
     if not BUILDINGS_EXTRACT.exists():
         cmd = [
@@ -52,7 +58,6 @@ def build(gdal_path: str = "gdal"):
         shpyx.run(" ! ".join(cmd), log_cmd=True, log_output=True)
 
     ## build clipped & negative buffered buildings
-    BUILDINGS_INBUFFERED = TMP_DATA_DIR / "buildings-inbuffered.gpkg"
 
     if not BUILDINGS_INBUFFERED.exists():
         cmd = [
@@ -68,7 +73,6 @@ def build(gdal_path: str = "gdal"):
         shpyx.run(" ! ".join(cmd), log_cmd=True, log_output=True)
 
     ## height calculation dem-dsm
-    HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
     if not HEIGHT_RASTER.exists():
         ## get bbox of buildings in epsg:2193
@@ -209,6 +213,14 @@ def download():
     ]
 
     shpyx.run(" ".join(cmd), log_cmd=True, log_output=True)
+
+
+@app.command()
+def clean():
+    for file in [BUILDINGS_EXTRACT, BUILDINGS_INBUFFERED, HEIGHT_RASTER, OUTPUT_PATH]:
+        if file.exists():
+            print(f"deleting {file}")
+            file.unlink()
 
 
 if __name__ == "__main__":
