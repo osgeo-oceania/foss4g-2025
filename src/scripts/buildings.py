@@ -11,6 +11,7 @@
 # ///
 
 from exactextract import exact_extract
+from shapely.geometry import Point
 import geopandas as gpd
 from pathlib import Path
 import pandas as pd
@@ -70,6 +71,24 @@ def build(gdal_path: str = "gdal"):
     HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
     if not HEIGHT_RASTER.exists():
+        # get bbox of buildings in epsg:2193
+        #
+        bldgs_bounds = gpd.read_file(str(BUILDINGS_EXTRACT)).total_bounds
+
+        corners_wgs84 = gpd.GeoDataFrame(
+            geometry=[
+                Point(bldgs_bounds[0], bldgs_bounds[1]),
+                Point(bldgs_bounds[2], bldgs_bounds[3]),
+            ],
+            crs="EPSG:4326",
+        )
+
+        corners_2193 = corners_wgs84.to_crs("EPSG:2193")
+        min_coords = corners_2193.geometry.iloc[0].coords[0]
+        max_coords = corners_2193.geometry.iloc[1].coords[0]
+
+        bounds_2193 = [min_coords[0], min_coords[1], max_coords[0], max_coords[1]]
+
         gdalgs = {
             # TODO bug with any other path than current directory
             "dem": Path(".") / "dem.gdalg.json",
@@ -86,7 +105,7 @@ def build(gdal_path: str = "gdal"):
                 "--overwrite",
                 "--src-nodata -9999",
                 "--dst-nodata -9999",
-                f"--bbox=1750497,5909801,1769263,5922342",
+                f"--bbox={','.join(bounds_2193)}",
                 f'{" ".join([str(tif) for tif in tifs])}',
                 f"{gdalgs[model]}",
             ]
