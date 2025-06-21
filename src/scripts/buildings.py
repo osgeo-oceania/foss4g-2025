@@ -71,8 +71,7 @@ def build(gdal_path: str = "gdal"):
     HEIGHT_RASTER = TMP_DATA_DIR / "height.tif"
 
     if not HEIGHT_RASTER.exists():
-        # get bbox of buildings in epsg:2193
-        #
+        ## get bbox of buildings in epsg:2193
         bldgs_bounds = gpd.read_file(str(BUILDINGS_EXTRACT)).total_bounds
 
         corners_wgs84 = gpd.GeoDataFrame(
@@ -105,7 +104,7 @@ def build(gdal_path: str = "gdal"):
                 "--overwrite",
                 "--src-nodata -9999",
                 "--dst-nodata -9999",
-                f"--bbox={','.join(bounds_2193)}",
+                f"--bbox={','.join([str(coord) for coord in bounds_2193])}",
                 f'{" ".join([str(tif) for tif in tifs])}',
                 f"{gdalgs[model]}",
             ]
