@@ -8,16 +8,16 @@
       <div class="text-lg">FOSS4G Auckland 2025</div>
       <div class="grid grid-cols-2 text-xs">
         <ul class="space-y-2">
-          <li><Link href="/agenda">Agenda</Link></li>
+          <li><Link href="/program/outline">Agenda</Link></li>
           <li><Link href="/speakers">Speakers</Link></li>
-          <li><Link href="/register">Register</Link></li>
-          <li><Link href="/venue">Venue</Link></li>
+          <li><Link href="/attend/register">Register</Link></li>
+          <li><Link href="/attend/conference-venue">Venue</Link></li>
           <li><Link href="/faq">FAQ</Link></li>
         </ul>
         <ul class="space-y-2">
-          <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>
-          <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-          <li><Link href="/cookie-policy">Cookie Policy</Link></li>
+          <li><Link href="/attend/terms-and-conditions">Terms &amp; Conditions</Link></li>
+          <li><Link href="/attend/privacy-policy">Privacy Policy</Link></li>
+          <li><Link href="/attend/cookie-policy">Cookie Policy</Link></li>
         </ul>
       </div>
       <div class="mt-8 text-xs">&copy; FOSS4G Oceania - All rights reserved</div>
@@ -33,10 +33,9 @@
       >
       <div class="pt-4 text-sm uppercase">Follow Us</div>
       <div class=" text-2xl space-x-2 uppercase flex">
-        <Link href="https://facebook.com"><span class="block icon-[uil--facebook]"></span></Link>
-        <Link href="https://linkedin.com"><span class="block icon-[uil--linkedin]"></span></Link>
-        <Link href="https://instagram.com"><span class="block icon-[uil--instagram]"></span></Link>
-        <Link href="https://youtube.com"><span class="block icon-[uil--youtube]"></span></Link>
+        <Link href="https://www.facebook.com/foss4g2025/"><span class="block icon-[uil--facebook]"></span></Link>
+        <Link href="https://www.linkedin.com/showcase/foss4g/m"><span class="block icon-[uil--linkedin]"></span></Link>
+        <Link href="https://www.youtube.com/c/FOSS4G"><span class="block icon-[uil--youtube]"></span></Link>
       </div>
     </div>
   </div>
