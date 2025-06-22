@@ -46,8 +46,7 @@
   </div>
 {/snippet}
 
-<div class="divider divider-start divider-primary text-2xl">Conference Agenda</div>
-
+<div class="divider divider-primary text-4xl my-8">Conference Agenda</div>
 <div class="grid divide-y">
   {#each agendaItems as agendaItem}
     {@render agendaItemGrid(agendaItem)}
