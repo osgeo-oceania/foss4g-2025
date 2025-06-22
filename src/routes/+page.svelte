@@ -5,6 +5,33 @@
   import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
   import Team from '$lib/team';
+
+  const whyAttends = [
+    {
+      number: '01',
+      title: 'cutting-edge-insights',
+      description:
+        'Gain firsthand knowledge from top geo experts and pioneers shaping the industry.'
+    },
+    {
+      number: '02',
+      title: 'hands-on learning',
+      description:
+        'Participate in interactive workshops, live demos, and deep-dive sessions to sharpen your skills.'
+    },
+    {
+      number: '03',
+      title: 'exclusive networking',
+      description:
+        'Connect with geo leaders, startups, and fellow professionals at community events.'
+    },
+    {
+      number: '04',
+      title: 'innovation showcase',
+      description:
+        'Explore geo solutions, from emerging startups to tech giants redefining the future.'
+    }
+  ];
 </script>
 
 <!-- Hero -->
@@ -127,6 +154,31 @@
 
 <Keynotes />
 
+{#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
+  <div class="flex h-full w-full flex-1 p-2 text-white">
+    <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-2xl p-4">
+      <div class="text-xs uppercase pb-4">{reason.title}</div>
+      <div class="grid grid-cols-2 h-full" class:reverse-grid={i % 4 >= 2}>
+        <div class="relative text-9xl">
+          <div class="absolute text-secondary -bottom-[20%]">
+            {reason.number}
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+          </div>
+        </div>
+        <div class="text-xs">{reason.description}</div>
+      </div>
+    </div>
+  </div>
+{/snippet}
+
+<div class="divider divider-primary text-4xl text-primary my-8">Why Attend?</div>
+
+<div class="grid grid-cols-2">
+  {#each whyAttends as whyAttend, i}
+    {@render whyAttendGrid(whyAttend, i)}
+  {/each}
+</div>
+
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
 brings open source geospatial users, software developers, decision makers and
@@ -163,5 +215,11 @@ The Auckland FOSS4G 2025 Conference Organising Committee -->
 <style>
   .harmonized-logo {
     filter: grayscale(100%) sepia(100%) hue-rotate(180deg);
+  }
+  .reverse-grid {
+    direction: rtl;
+  }
+  .reverse-grid > * {
+    direction: ltr;
   }
 </style>
