@@ -3,7 +3,7 @@
 </script>
 
 {#snippet keynoteGrid(keynote: (typeof keynotes)[keyof typeof keynotes], i: number)}
-  <div class="grid h-[300px] sm:grid-cols-2" class:reverse-grid={i % 4 >= 2}>
+  <div class="grid h-[240px] sm:h-[300px] sm:grid-cols-2" class:reverse-grid={i % 4 >= 2}>
     <div class="hidden p-1 text-white sm:flex">
       <div class="bg-primary h-full flex flex-1 flex-col rounded-2xl p-4">
         <div class="flex-grow text-xl">{keynote.name}</div>
