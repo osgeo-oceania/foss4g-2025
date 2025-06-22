@@ -35,7 +35,9 @@
 
 <div class="grid grid-cols-2 space-y-2">
   {#each Object.values(keynotes) as keynote, i}
-    {@render keynoteGrid(keynote, i)}
+    {#if i < 4}
+      {@render keynoteGrid(keynote, i)}
+    {/if}
   {/each}
 </div>
 
