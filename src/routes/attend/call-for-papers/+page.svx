@@ -2,8 +2,7 @@
 title: Call For Papers
 ---
 
-![Program Outline]($images/group-photo.jpg)
-<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
+![Group Photo]($images/group-photo.jpg)
 
 # Call for Papers
 
@@ -82,4 +81,4 @@ Check out our videos of [past presentations](https://www.youtube.com/@foss4g-sot
 We believe in equality, so all presenters have the same exact amount of time to present their work, according to their contribution type. Please consider that when preparing your slides and be mindful about the time.
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.
 
-<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
+![Auckland]($images/auckland.jpg)
