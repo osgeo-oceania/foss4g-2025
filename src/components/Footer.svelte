@@ -3,7 +3,7 @@
 </script>
 
 <div class="px-2 pb-2">
-  <div class="bg-primary reverse-grid mt-8 grid rounded-2xl sm:grid-cols-2">
+  <div class="bg-primary mt-8 grid rounded-2xl sm:grid-cols-2">
     <div class="flex flex-col space-y-4 p-8 text-white">
       <div class="text-lg">FOSS4G Auckland 2025</div>
       <div class="grid grid-cols-2 text-xs">
@@ -43,10 +43,4 @@
 </div>
 
 <style>
-  .reverse-grid {
-    direction: rtl;
-  }
-  .reverse-grid > * {
-    direction: ltr;
-  }
 </style>
