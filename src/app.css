@@ -31,8 +31,13 @@
   }
 
   .prose p > picture {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     margin: 0 !important;
     border-radius: 20px;
+    max-height: 400px;
+    object-fit: cover;
     overflow: clip;
   }
 }

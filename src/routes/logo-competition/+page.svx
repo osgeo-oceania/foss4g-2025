@@ -2,11 +2,7 @@
 title: Logo Competition
 ---
 
-<!-- <HeaderImage
-  url="/imgs/Logo_design_sketching.jpg"
-  alt="A person drawing on paper at a desk"
-  positionY="60%"
-/> -->
+![Auckland]($images/logo-design-sketching.jpg)
 
 # FOSS4G 2025/Logo Competition
 

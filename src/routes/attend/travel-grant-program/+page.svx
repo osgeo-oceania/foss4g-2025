@@ -2,7 +2,11 @@
 title: Travel Grant Program
 ---
 
-<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
+<script>
+  import GiantButton from '$components/GiantButton.svelte';
+</script>
+
+![Auckland]($images/group-photo.jpg)
 
 # Travel Grant Program
 
@@ -10,9 +14,9 @@ The FOSS4G 2025 local organising committee is pleased to announce that it is aga
 
 Applications for the first round will open on the 17th of March and will be accepted until midnight on the 30th April 2025.
 
-<!-- <StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9" center>
+<GiantButton href="https://forms.gle/U2VaANxgkqVe48mP9">
   Apply for the Travel Grant Program
-</StyledButton> -->
+</GiantButton>
 
 | Timeline                       | Round 1       | Round 2      |
 | ------------------------------ | ------------- | ------------ |
@@ -81,9 +85,5 @@ The TGP is managed by the FOSS4G 2025 LOC Committee, in collaboration with the O
 
 
 If you have a query or require more information, please email the [TPG Committee](mailto:tgp@foss4g.org).
-<!-- <FooterImage
-  url="/imgs/tg-breakfast.jpeg"
-  alt="Travel Grant Program Breakfast"
-  positionY="20%"
-  height="300"
-/> -->
+
+![Auckland]($images/tg-breakfast.jpg)

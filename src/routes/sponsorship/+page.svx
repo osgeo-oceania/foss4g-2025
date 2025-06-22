@@ -2,25 +2,22 @@
 title: Sponsorship
 ---
 
-<!-- <HeaderImage
-  url="/imgs/sponsor-header.jpeg"
-  alt="Registration table at FOSS4G Oceania 2024"
-  positionY="50%"
-/> -->
+<script>
+  import GiantButton from '$components/GiantButton.svelte';
+</script>
+
+![Auckland]($images/sponsor-header.jpg)
 
 # Information for Sponsors
 
-<div>
-  <!-- <StyledButton target="https://drive.google.com/file/d/1eD39UmTijPJju1mvjlVVrJbQNoauN2FL/view">
-    Access the Sponsorship Prospectus
-  </StyledButton> -->
-</div>
+<GiantButton href="https://drive.google.com/file/d/1eD39UmTijPJju1mvjlVVrJbQNoauN2FL/view">Access the Sponsorship Prospectus</GiantButton>
+
 
 FOSS4G is a global event that brings together the open geospatial community. FOSS4G stands for 'Free and Open Source Software for Geospatial' and the name has been used since 2006 for international and regional conferences of the [Open Source Geospatial Foundation (OSGeo)](http://osgeo.org/) and its chapters. OSGeo supports the development and adoption of open source geospatial technology. FOSS4G is part of the broader [open source software philosophy](https://opensource.com/resources/what-open-source).
 
 In 2025, FOSS4G conference is being held in Auckland, New Zealand.
 
-<!-- <DividerImage url="/imgs/2025/auckland.jpg" positionY="30%" /> -->
+![Auckland]($images/auckland.jpg)
 
 ## Attendee Profile
 
@@ -36,7 +33,7 @@ The workshop days are an opportunity for professionals with deep subject matter 
 
 The main conference runs as a mix of plenary and stream sessions, including academic talks, keynotes and panel sessions.
 
-<!-- <DividerImage url="/imgs/main-room.jpg" positionY="30%" /> -->
+![Auckland]($images/main-room.jpg)
 
 ## Why you should sponsor FOSS4G
 
@@ -52,7 +49,7 @@ The FOSS4G Conference is administered by a non-profit organisation, so any surpl
 
 Sponsorship has allowed us to lower the ticket prices for students and community members financing their attendance with personal funds. This is incredibly important for the sustainability of open source geospatial and the diversity of ideas at the conference. A portion of sponsorship goes towards our travel grant program, helping us to bring people to the event who wouldn't normally be able to come.
 
-<!-- <DividerImage url="/imgs/tg-breakfast.jpeg" positionY="20%" height={300} /> -->
+![Auckland]($images/tg-breakfast.jpg)
 
 ## Who runs FOSS4G?
 
@@ -135,9 +132,4 @@ Please refer to the [sponsorship document](https://drive.google.com/file/d/1eD39
 
 Get in touch with Alex Leith and Greg Lauer at [sponsorship@foss4g.org](mailto:sponsorship@foss4g.org).
 
-<!-- <FooterImage
-  url="/imgs/wig-breakfast.jpeg"
-  alt="Last year's Women In Geospatial Breakfast in Auckland"
-  positionY="25%"
-  height="300"
-/> -->
+![Auckland]($images/wig-breakfast.jpg)

@@ -2,7 +2,7 @@
 title: Terms and Conditions
 ---
 
-<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
+![Auckland]($images/group-photo.jpg)
 
 # Terms and Conditions for Registration
 
@@ -62,4 +62,4 @@ Email: [registration@foss4g.org](mailto://registration@foss4g.org)
 
 By registering for FOSS4G 2025, you acknowledge that you have read and agree to these Terms and Conditions.
 
-<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
+![Auckland]($images/auckland.jpg)
