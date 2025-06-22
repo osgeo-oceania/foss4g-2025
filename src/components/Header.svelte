@@ -28,15 +28,15 @@
         },
         {
           label: 'Travel Guide',
-          url: '/attend/travel-guide'
+          url: '/attend/nz-travel-guide'
         },
         {
           label: 'Adventure Guide',
-          url: '/attend/adventure-guide'
+          url: '/attend/nz-adventures'
         },
         {
           label: 'Entry into New Zealand',
-          url: '/attend/entry-into-new-zealand'
+          url: '/attend/travelling-to-nz'
         },
         {
           label: 'Terms and Conditions',
@@ -57,14 +57,14 @@
       url: '/speakers',
       subMenu: [
         {
-          label: "Outline",
+          label: 'Outline',
           url: '/program/outline'
         }
       ]
     },
     {
       label: 'Sponsorship',
-      url: '/attend/register'
+      url: '/sponsorship'
     },
     {
       label: 'Organisers',
@@ -95,16 +95,22 @@
           <div class="dropdown dropdown-hover">
             <div tabindex="0" role="button" class="btn rounded-full text-sm font-normal">
               {menuItem.label}{#if menuItem.subMenu}
-              <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 w-5 h-5"></span>
+                <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
               {/if}
             </div>
+            <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
             <ul
               tabindex="0"
               class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
             >
               {#each menuItem.subMenu as subItem}
                 <li>
-                  {@render menuItemButton(subItem)}
+                  <Link
+                    aria-label={subItem.label}
+                    href={subItem.url}
+                    class={`btn btn-ghost text-left text-sm font-normal`}
+                    >{subItem.label}
+                  </Link>
                 </li>
               {/each}
             </ul>
