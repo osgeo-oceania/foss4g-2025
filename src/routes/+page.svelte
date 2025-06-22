@@ -1,5 +1,6 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import TicketOptions from '$components/TicketOptions.svelte';
   import Countdown from '$components/Countdown.svelte';
   import Keynotes from '$components/Keynotes.svelte';
   import Rangitoto from '$images/svg/rangitoto.svg';
@@ -182,6 +183,7 @@
 
 <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00"/>
 
+<TicketOptions />
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
 brings open source geospatial users, software developers, decision makers and
