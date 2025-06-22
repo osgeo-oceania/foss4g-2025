@@ -1,5 +1,6 @@
 <script lang="ts">
   import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import Keynotes from '$components/Keynotes.svelte';
   import Rangitoto from '$images/svg/rangitoto.svg';
   import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
@@ -118,12 +119,13 @@
   </div>
 </div>
 
-<div class="divider divider-start divider-primary text-2xl">Conference Agenda</div>
 <Agenda />
 
-<div class="max-w-full my-2">
+<div class="max-w-full">
   <img src={Rangitoto} alt="Rangitoto" />
 </div>
+
+<Keynotes />
 
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
