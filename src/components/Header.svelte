@@ -124,14 +124,17 @@
         <button
           class="btn bg-primary btn-square rounded"
           aria-label="menu"
-          ontouchend={() => {
+          onclick={() => {
+            isMenuOpen = !isMenuOpen;
+          }}
+          ontouchstart={() => {
             isMenuOpen = !isMenuOpen;
           }}
         >
           <span class="icon-[material-symbols-light--menu] h-12 w-12 bg-white"></span>
         </button>
         <ul
-          class="menu dropdown-content bg-base-100 rounded-box z-1 mt-2 w-52 p-2 shadow-sm min-w-[240px] {isMenuOpen ? 'block' : 'hidden'}"
+          class="menu dropdown-content bg-base-100 rounded-box z-1 mt-2 w-52 p-2 shadow-sm min-w-[240px] {isMenuOpen ? 'dropdown-open' : ''}"
         >
           {#each menuItems as menuItem}
             <li>
