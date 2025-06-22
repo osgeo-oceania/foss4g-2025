@@ -42,6 +42,6 @@
     </div>
   </div>
   <div class="flex justify-center absolute right-0 top-0 h-full">
-    <img src={NewZealandSvg} class="w-[80%]"/>
+    <img src={NewZealandSvg} class="w-[80%]" alt="New Zealand"/>
   </div>
 </div>
