@@ -22,11 +22,15 @@
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
   }
   .font-serif {
-    font-family: 'Kameron', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: 'Kameron', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   }
   html,
   body {
     width: 100%;
     height: 100%;
+  }
+
+  .prose p > picture {
+    margin: 0 !important;
   }
 }

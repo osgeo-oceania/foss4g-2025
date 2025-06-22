@@ -7,8 +7,8 @@
 
   let menuItems = [
     {
-      label: 'Home',
-      url: '/'
+      label: 'Call For Papers',
+      url: '/attend/call-for-papers'
     },
     {
       label: 'Attend',
@@ -73,22 +73,14 @@
   ];
 </script>
 
-{#snippet menuItemButton(menuItem)}
-  <Link
-    aria-label={menuItem.label}
-    href={menuItem.url}
-    class={`btn rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
-    >{menuItem.label}
-  </Link>
-{/snippet}
 <div
   class="navbar border-primary/50 z-20 h-[30px] rounded-b-lg border-r-1 border-b-1 border-l-1 bg-white px-4"
 >
-  <div class="navbar-start my-4">
+  <div class="navbar-start w-auto my-4">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
   </div>
 
-  <div class="navbar-end">
+  <div class="navbar-end flex-1">
     <div class="hidden space-x-2 sm:flex">
       {#each menuItems as menuItem}
         {#if menuItem.subMenu}
@@ -116,7 +108,12 @@
             </ul>
           </div>
         {:else}
-          {@render menuItemButton(menuItem)}
+          <Link
+            aria-label={menuItem.label}
+            href={menuItem.url}
+            class={`btn rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+            >{menuItem.label}
+          </Link>
         {/if}
       {/each}
     </div>

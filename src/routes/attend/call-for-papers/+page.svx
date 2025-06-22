@@ -2,6 +2,7 @@
 title: Call For Papers
 ---
 
+![Program Outline]($images/group-photo.jpg)
 <!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
 
 # Call for Papers
