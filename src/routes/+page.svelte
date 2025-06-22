@@ -157,12 +157,12 @@
 {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
   <div class="flex h-full w-full flex-1 p-2 text-white">
     <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-2xl p-4">
-      <div class="text-xs uppercase pb-4">{reason.title}</div>
-      <div class="grid grid-cols-2 h-full" class:reverse-grid={i % 4 >= 2}>
+      <div class="pb-4 text-xs uppercase">{reason.title}</div>
+      <div class="grid h-full grid-cols-2" class:reverse-grid={i % 2 == 1} class:sm:reverse-grid={i % 4 >= 2}>
         <div class="relative text-9xl">
-          <div class="absolute text-secondary -bottom-[20%]">
+          <div class="text-secondary absolute -bottom-[20%]">
             {reason.number}
-            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="from-primary absolute inset-0 bg-gradient-to-t to-transparent"></div>
           </div>
         </div>
         <div class="text-xs">{reason.description}</div>
@@ -171,9 +171,9 @@
   </div>
 {/snippet}
 
-<div class="divider divider-primary text-4xl text-primary my-8">Why Attend?</div>
+<div class="divider divider-primary text-primary my-8 text-4xl">Why Attend?</div>
 
-<div class="grid grid-cols-2">
+<div class="grid sm:grid-cols-2">
   {#each whyAttends as whyAttend, i}
     {@render whyAttendGrid(whyAttend, i)}
   {/each}
@@ -216,10 +216,20 @@ The Auckland FOSS4G 2025 Conference Organising Committee -->
   .harmonized-logo {
     filter: grayscale(100%) sepia(100%) hue-rotate(180deg);
   }
-  .reverse-grid {
-    direction: rtl;
+  @media (max-width: 640px) {
+    .reverse-grid {
+      direction: rtl;
+    }
+    .reverse-grid > * {
+      direction: ltr;
+    }
   }
-  .reverse-grid > * {
-    direction: ltr;
+  @media (min-width: 641px) {
+    .sm\:reverse-grid {
+      direction: rtl;
+    }
+    .sm\:reverse-grid > * {
+      direction: ltr;
+    }
   }
 </style>
