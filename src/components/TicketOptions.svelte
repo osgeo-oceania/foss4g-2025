@@ -48,7 +48,7 @@
     </div>
   </div>
 {/snippet}
-<div class="grid space-y-4 sm:grid-cols-3 sm:space-x-4">
+<div class="grid space-y-4 sm:space-y-0 sm:grid-cols-3 sm:space-x-4">
   {#each ticketOptions as tOption}
     {@render ticketOption(tOption)}
   {/each}
