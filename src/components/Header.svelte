@@ -124,10 +124,7 @@
         <button
           class="btn bg-primary btn-square rounded"
           aria-label="menu"
-          onclick={() => {
-            isMenuOpen = !isMenuOpen;
-          }}
-          ontouchstart={() => {
+          ontouchmove={() => {
             isMenuOpen = !isMenuOpen;
           }}
         >
