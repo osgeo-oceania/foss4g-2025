@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Link from './Link.svelte';
+
   const ticketOptions = [
     {
       title: 'Early Bird Pass',
@@ -31,22 +33,22 @@
         <div class="mb-3 text-sm uppercase">
           {tOption.title}
         </div>
-        <div class="sm:mb-12 text-xs">
+        <div class="text-xs sm:mb-12">
           {tOption.description}
         </div>
       </div>
-      <div class="text-2xl flex justify-end sm:justify-normal flex-1">
+      <div class="flex flex-1 justify-end text-2xl sm:justify-normal">
         {tOption.price}
       </div>
     </div>
-    <div class="flex sm:justify-normal justify-end mt-4">
-      <div class={`btn rounded-full text-sm  font-normal ${tOption.buttonClass}`}>
+    <div class="mt-4 flex justify-end sm:justify-normal">
+      <Link href="/attend/register" class={`btn rounded-full text-sm  font-normal ${tOption.buttonClass}`}>
         Get Your Ticket <span class="icon-[lucide--arrow-up-right] block"></span>
-      </div>
+      </Link>
     </div>
   </div>
 {/snippet}
-<div class="grid space-y-4 sm:space-y-0 sm:grid-cols-3 sm:space-x-4">
+<div class="grid space-y-4 sm:grid-cols-3 sm:space-y-0 sm:space-x-4">
   {#each ticketOptions as tOption}
     {@render ticketOption(tOption)}
   {/each}

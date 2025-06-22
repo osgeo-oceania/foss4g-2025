@@ -2,13 +2,18 @@
 title: Program Outline
 ---
 
+<script lang="ts">
+  import Agenda from '$components/Agenda.svelte';
+</script>
+
+<!-- TODO -->
 <!-- <HeaderImage url="/imgs/main-room.jpg" positionY="20%"  /> -->
 
 # Program Outline
 
 The general program outline for sessions and social events:
 
-<!-- {/*
+
 | Date                  | Session       | Social                             | Other       |
 | --------------------- | ------------- | ---------------------------------- | ----------- |
 | Monday 17 November    | Workshops     | Informal Meetup                    |             |
@@ -18,7 +23,6 @@ The general program outline for sessions and social events:
 | Friday 21 November    | Conference    |                                    | OSGeo AGM   |
 | Saturday 22 November  | Community Day |                                    |             |
 | Sunday 23 November    | Community Day |                                    |             |
-*/} -->
 
 ![Program Outline]($images/foss4g2025_program_outline.png)
 
