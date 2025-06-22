@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.6",
+    "@fontsource/kameron": "^5.2.6",
     "@loaders.gl/i3s": "^4.3.3",
     "deck.gl": "^9.1.12",
     "maplibre-gl": "^5.5.0",
