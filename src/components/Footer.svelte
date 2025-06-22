@@ -17,7 +17,6 @@
         <ul class="space-y-2">
           <li><Link href="/attend/terms-and-conditions">Terms &amp; Conditions</Link></li>
           <li><Link href="/attend/privacy-policy">Privacy Policy</Link></li>
-          <li><Link href="/attend/cookie-policy">Cookie Policy</Link></li>
         </ul>
       </div>
       <div class="mt-8 text-xs">&copy; FOSS4G Oceania - All rights reserved</div>
