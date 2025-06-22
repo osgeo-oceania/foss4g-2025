@@ -76,7 +76,7 @@
 <div
   class="navbar border-primary/50 z-20 h-[30px] rounded-b-lg border-r-1 border-b-1 border-l-1 bg-white px-4"
 >
-  <div class="navbar-start w-auto my-4">
+  <div class="navbar-start my-4 w-auto">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
   </div>
 
@@ -134,7 +134,7 @@
           <span class="icon-[material-symbols-light--menu] h-12 w-12 bg-white"></span>
         </button>
         <ul
-          class="menu dropdown-content bg-base-100 rounded-box z-1 mt-2 w-52 p-2 shadow-sm"
+          class="menu dropdown-content bg-base-100 rounded-box z-1 mt-2 w-52 p-2 shadow-sm min-w-[240px]"
           class:dropdown-open={isMenuOpen}
         >
           {#each menuItems as menuItem}
@@ -142,10 +142,22 @@
               <Link
                 aria-label={menuItem.label}
                 href={menuItem.url}
-                class={`text-sm font-normal ${page.route.id === menuItem.url ? 'bg-primary text-white' : ''}`}
+                class={`text-sm font-normal ${menuItem.subMenu ? 'underline font-bold': ''}`}
                 >{menuItem.label}</Link
               >
             </li>
+            {#if menuItem.subMenu}
+              {#each menuItem.subMenu as subMenuItem}
+                <li>
+                  <Link
+                    aria-label={subMenuItem.label}
+                    href={subMenuItem.url}
+                    class={`text-sm font-normal ml-5`}
+                    >{subMenuItem.label}</Link
+                  >
+                </li>
+              {/each}
+            {/if}
           {/each}
         </ul>
       </div>
