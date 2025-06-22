@@ -81,6 +81,7 @@
   </div>
 
   <div class="navbar-end flex-1">
+    <!-- desktop menu -->
     <div class="hidden space-x-2 sm:flex">
       {#each menuItems as menuItem}
         {#if menuItem.subMenu}
@@ -117,11 +118,15 @@
         {/if}
       {/each}
     </div>
+    <!-- mobile menu -->
     <div class="flex sm:hidden">
       <div class="dropdown dropdown-end">
         <button
           class="btn bg-primary btn-square rounded"
           aria-label="menu"
+          onclick={() => {
+            isMenuOpen = !isMenuOpen;
+          }}
           ontouchend={() => {
             isMenuOpen = !isMenuOpen;
           }}
