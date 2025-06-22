@@ -2,12 +2,7 @@
 title: Conference Venue
 ---
 
-<!-- <HeaderImage
-  url="/imgs/2025/aut.jpg"
-  alt="The AUT Conference Venue"
-  positionY="60%"
-  height="450"
-/> -->
+![AUT]($images/aut.jpg)
 
 # Our Conference Venue
 

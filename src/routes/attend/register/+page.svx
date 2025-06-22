@@ -2,13 +2,31 @@
 title: Register
 ---
 
-<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
+![Auckland]($images/group-photo.jpg)
 
-## Registration
+<div class="text-center font-serif text-xl sm:text-2xl mb-4 sm:underline flex items-center justify-center">
+  <span class="sm:hidden icon-[material-symbols-light--keyboard-double-arrow-down]"></span>
+  <span>Click below to register!</span>
+  <span class="sm:hidden icon-[material-symbols-light--keyboard-double-arrow-down]"></span>
+</div>
 
-<!-- <StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025">
-  Conference Registration
-</StyledButton> -->{" "}
+<div class="flex items-center justify-center">
+  <div class="hidden sm:flex items-center [&>span]:w-10 [&>span]:h-10 -space-x-3">
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-right-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-right-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-right-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-right-rounded]"></span>
+  </div>
+  <a href="https://ti.to/osgeo-oceania/foss4g-2025" target="_blank" class="btn btn-lg btn-success rounded-full">Conference Registration</a>
+  <div class="hidden sm:flex items-center [&>span]:w-10 [&>span]:h-10 -space-x-3">
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-left-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-left-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-left-rounded]"></span>
+    <span class="icon-[material-symbols-light--keyboard-double-arrow-left-rounded]"></span>
+  </div>
+</div>
+
+## Registration Information
 
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 19th, Thursday 20th and Friday 21st November.
 
@@ -28,9 +46,9 @@ Please note our [Privacy Policy.](/attend/privacy-policy)
 ## Optional extras
 
 | Type                          | Details                                                                                                                                                                                                                                | Cost (NZD)   |
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | Conference T-Shirt            | Limited edition conference T-Shirt. Available in either a men's or women's cut and in multiple sizes.                                                                                                                                  | $40          |
-| Conference Dinner             | Held on the evening of Wednesday 19th November, location TBC.                                                                                                                                                                          | $150         |                                                       
+| Conference Dinner             | Held on the evening of Wednesday 19th November, location TBC.                                                                                                                                                                          | $150         |
 | Women in Geospatial Breakfast | Held on the morning of Thursday 20th November, location TBC.                                                                                                                                                                           | $15          |
 | GeoChicas                     | Held on the evening of Thursday 20th November, location TBC.                                                                                                                                                                           | Your Choice! |
 | Business to Business          | Held on the evening of Thursday 20th November, location TBC.                                                                                                                                                                           | $25          |
@@ -40,7 +58,7 @@ Please note our [Privacy Policy.](/attend/privacy-policy)
 
 <!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
 
-<!-- {/* 
+<!-- {/*
 <div>
   <img
     className="inline-image mx-auto mt-4"

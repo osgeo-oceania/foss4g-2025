@@ -2,12 +2,7 @@
 title: Travel Essentials
 ---
 
-<!-- <HeaderImage
-  url="/imgs/2025/auckland.jpg"
-  alt="Auckland"
-  positionY="30%"
-  height="450"
-/> -->
+![Auckland]($images/auckland.jpg)
 
 # Essentials for Travelling to New Zealand
 

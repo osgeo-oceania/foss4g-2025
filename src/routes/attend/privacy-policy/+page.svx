@@ -2,7 +2,7 @@
 title: Privacy Policy
 ---
 
-<!-- <HeaderImage url="/imgs/group photo.jpeg" positionY="40%" height="300" /> -->
+![Auckland]($images/group-photo.jpg)
 
 # Privacy Policy for FOSS4G 2025
 
