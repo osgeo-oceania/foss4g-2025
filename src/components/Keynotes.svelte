@@ -33,7 +33,6 @@
   </div>
 {/snippet}
 
-<div class="divider divider-primary text-4xl my-8">Keynote Speakers</div>
 
 <div class="grid grid-cols-2 ">
   {#each Object.values(keynotes) as keynote, i}

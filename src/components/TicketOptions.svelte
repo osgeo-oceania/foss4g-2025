@@ -24,8 +24,6 @@
   ];
 </script>
 
-<div class="divider divider-primary text-primary my-8 text-4xl">Ticket Options</div>
-
 {#snippet ticketOption(tOption: (typeof ticketOptions)[0])}
   <div class={`card ${tOption.cardClass} rounded-2xl p-6`}>
     <div class="flex sm:flex-col">

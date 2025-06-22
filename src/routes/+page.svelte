@@ -4,6 +4,7 @@
   import Countdown from '$components/Countdown.svelte';
   import Keynotes from '$components/Keynotes.svelte';
   import Rangitoto from '$images/svg/rangitoto.svg';
+  import Divider from '$components/Divider.svelte';
   import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
   import Team from '$lib/team';
@@ -45,13 +46,13 @@
     >
       {@html Foss4g2025Logo}
     </div>
-    <div class="flex w-full flex-shrink flex-col justify-between sm:flex-row sm:space-y-4">
+    <div class="flex w-full flex-shrink flex-col justify-between text-sm sm:flex-row sm:space-y-4">
       <div>November 17-23, 2025</div>
       <div>Tāmaki Makaurau, Aotearoa New Zealand</div>
     </div>
     <div class="w-full flex-grow space-y-8">
-      <div class="text-2xl text-white sm:text-7xl">FOSS4G<br />Auckland 2025</div>
-      <div class="sm:text-primary max-w-[400px] text-white">
+      <div class="font-serif text-2xl text-white sm:text-7xl">FOSS4G<br />Auckland 2025</div>
+      <div class="sm:text-primary max-w-[400px] text-sm text-white">
         FOSS4G stands for Free and Open Source Software for Geospatial, a conference series hosted
         in partnership with OSGeo. FOSS4G brings open source geospatial users, software developers,
         decision makers and researchers together from around the world
@@ -148,11 +149,15 @@
   </div>
 </div>
 
+<Divider>Conference Agenda</Divider>
+
 <Agenda />
 
 <div class="max-w-full">
   <img src={Rangitoto} alt="Rangitoto" />
 </div>
+
+<Divider>Keynote Speakers</Divider>
 
 <Keynotes />
 
@@ -160,7 +165,11 @@
   <div class="flex h-full w-full flex-1 p-2 text-white">
     <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-2xl p-4">
       <div class="pb-4 text-xs uppercase">{reason.title}</div>
-      <div class="grid h-full grid-cols-2" class:reverse-grid={i % 2 == 1} class:sm:reverse-grid={i % 4 >= 2}>
+      <div
+        class="grid h-full grid-cols-2"
+        class:reverse-grid={i % 2 == 1}
+        class:sm:reverse-grid={i % 4 >= 2}
+      >
         <div class="relative text-9xl">
           <div class="text-secondary absolute -bottom-[20%]">
             {reason.number}
@@ -173,7 +182,7 @@
   </div>
 {/snippet}
 
-<div class="divider divider-primary text-primary my-8 text-4xl">Why Attend?</div>
+<Divider>Why Attend?</Divider>
 
 <div class="grid sm:grid-cols-2">
   {#each whyAttends as whyAttend, i}
@@ -181,9 +190,14 @@
   {/each}
 </div>
 
-<Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00"/>
+<Divider>Register Now</Divider>
+
+<Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
+
+<Divider>Ticket Options</Divider>
 
 <TicketOptions />
+
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
 series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
 brings open source geospatial users, software developers, decision makers and

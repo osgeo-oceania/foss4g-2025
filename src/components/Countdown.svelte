@@ -16,8 +16,6 @@
   const seconds = $derived(Math.floor((diff % (1000 * 60)) / 1000));
 </script>
 
-<div class="divider divider-primary my-8 text-4xl">Register Now</div>
-
 <div class="relative bg-primary flex sm:min-h-[300px] flex-col rounded-2xl p-6 sm:p-12 text-white">
   <div class="text-xs text-white">
     {label}
