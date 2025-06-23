@@ -1,1 +1,28 @@
+<script lang="ts">
+  import organisers from '$lib/organisers';
+</script>
+
 # Organisers
+
+{#each Object.values(organisers) as organiser}
+  <div class="grid grid-cols-1 sm:grid-cols-12">
+    <div class="flex col-span-4 h-full justify-end items-start sm:h-[300px] p-2">
+      {#await organiser.photo() then photo}
+        <div class="flex items-start sm:w-[200px] sm:h-[300px]">
+        <enhanced:img src={photo.default} class="grayscale object-cover h-full w-full rounded-2xl" />
+        </div>
+      {/await}
+    </div>
+    <div class="space-y-2 p-2 col-span-6">
+      <div class="text-primary font-bold font-serif text-lg">{organiser.name}</div>
+      <div class="text-secondary uppercase text-sm">{organiser.title}</div>
+      <div class="text-xs">{@html organiser.bio}</div>
+    </div>
+  </div>
+{/each}
+
+<style>
+  picture {
+    margin: 0
+  }
+</style>
