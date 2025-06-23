@@ -86,7 +86,7 @@
       {#each menuItems as menuItem}
         {#if menuItem.subMenu}
           <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="btn rounded-full text-sm font-normal">
+            <div tabindex="0" role="button" class="btn btn-sm rounded-full text-sm font-normal">
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
               {/if}
@@ -101,7 +101,7 @@
                   <Link
                     aria-label={subItem.label}
                     href={subItem.url}
-                    class={`btn btn-ghost text-left text-sm font-normal`}
+                    class={`btn btn-sm btn-ghost text-left text-sm font-normal`}
                     >{subItem.label}
                   </Link>
                 </li>
@@ -112,7 +112,7 @@
           <Link
             aria-label={menuItem.label}
             href={menuItem.url}
-            class={`btn rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+            class={`btn btn-sm rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
             >{menuItem.label}
           </Link>
         {/if}
