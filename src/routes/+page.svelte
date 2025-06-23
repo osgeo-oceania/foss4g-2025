@@ -6,6 +6,7 @@
   import Rangitoto from '$images/svg/rangitoto.svg';
   import Divider from '$components/Divider.svelte';
   import Agenda from '$components/Agenda.svelte';
+  import Link from '$components/Link.svelte';
   import Sponsors from '$lib/sponsors';
   import Team from '$lib/organisers';
 
@@ -64,11 +65,11 @@
           developers, decision makers and researchers together from around the world
         </div>
         <div class="sm:w-[240px]">
-          <a
+          <Link
             class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
             href="/attend/register"
             >Early Bird Tickets <span class="icon-[lucide--arrow-up-right] block"></span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -125,8 +126,8 @@
             </div>
           </div>
           <div>
-            <a href="/speakers" class="btn bg-secondary border-primary rounded-full"
-              >and more <span class="icon-[lucide--arrow-up-right] block"></span></a
+            <Link href="/speakers" class="btn bg-secondary border-primary rounded-full"
+              >and more <span class="icon-[lucide--arrow-up-right] block"></span></Link
             >
           </div>
         </div>
