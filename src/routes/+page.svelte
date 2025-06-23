@@ -7,7 +7,7 @@
   import Divider from '$components/Divider.svelte';
   import Agenda from '$components/Agenda.svelte';
   import Sponsors from '$lib/sponsors';
-  import Team from '$lib/team';
+  import Team from '$lib/organisers';
 
   const whyAttends = [
     {
