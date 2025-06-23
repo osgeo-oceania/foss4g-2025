@@ -114,40 +114,6 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       },
 
       //
-      // buildings
-      //
-      {
-        id: 'buildings-fill',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill',
-        minzoom: 12,
-        paint: {
-          'fill-color': '#e3dcd9'
-        }
-      },
-      {
-        id: 'buildings-extrusion',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill-extrusion',
-        minzoom: 12,
-        paint: {
-          'fill-extrusion-color': '#e3dcd9',
-          'fill-extrusion-height': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            14,
-            0,
-            14.05,
-            ['get', 'height']
-          ],
-          'fill-extrusion-vertical-gradient': true,
-          'fill-extrusion-opacity': 0.8
-        }
-      },
-      //
       // roads
       //
       // minor-roads outline
@@ -232,6 +198,41 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             14,
             9 // width 9 at zoom 18
           ]
+        }
+      },
+
+      //
+      // buildings
+      //
+      {
+        id: 'buildings-fill',
+        source: 'auckland',
+        'source-layer': 'buildings',
+        type: 'fill',
+        minzoom: 12,
+        paint: {
+          'fill-color': '#e3dcd9'
+        }
+      },
+      {
+        id: 'buildings-extrusion',
+        source: 'auckland',
+        'source-layer': 'buildings',
+        type: 'fill-extrusion',
+        minzoom: 12,
+        paint: {
+          'fill-extrusion-color': '#e3dcd9',
+          'fill-extrusion-height': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            14,
+            0,
+            14.05,
+            ['get', 'height']
+          ],
+          'fill-extrusion-vertical-gradient': true,
+          'fill-extrusion-opacity': 0.8
         }
       },
 
