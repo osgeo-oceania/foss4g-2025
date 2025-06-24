@@ -1,9 +1,15 @@
 export default {
   alex: {
     name: 'Alex Leith',
-    title: 'Conference Chair',
+    title: 'Conference Co-Chair',
     photo: () => import('$images/team/alex.jpg?enhanced'),
     bio: "Alex is an open geospatial technologist with extensive expertise in software development, cloud infrastructure, and program governance. Throughout his career, Alex's focus has been on making data more easily accessible. By enabling simpler access to data, he believes we can drive positive change and continue to develop sustainably."
+  },
+  simon: {
+    name: 'Simon Nitz',
+    title: 'Conference Co-Chair',
+    photo: () => import('$images/team/simon.jpg?enhanced'),
+    bio: "Simon is the Geospatial Lead at Whanganui District Council, a local government organisation in New Zealand. With 30+ years in the industry, he is highly regarded throughout Australia and New Zealand as a leader in his field. He has provided GIS consulting services to organisations in the region, focusing on FOSS4G desktop and web mapping solutions. For a stand out 16 years, in the 90’s and 00’s, Simon was chair of the MapInfo User Group in New Zealand. More recently, he has been involved in organising FOSS4G SotM Oceania events."
   },
   dawn: {
     name: 'Dawn Hendrick',
@@ -22,12 +28,6 @@ export default {
     title: 'Travel Grant Program',
     photo: () => import('$images/team/eli.jpg?enhanced'),
     bio: "Elisa is the current chair of OsGeo Oceania board and has been contributing to the community since 2019, serving first as board member, then as Grant committee chair and now as the board chair.<br/><br/>Elisa was born in Italy and moved to New Zealand in 2008, where she currently resides. She has over 18 years of experience in GIS and database administration and has been working with most of the proprietors and open-source GIS packages. She is a great supporter of GIS open-source software as she strongly believes that everybody should be able to know and use GIS, especially people belonging to minority groups or living in remote areas."
-  },
-  em: {
-    name: 'Em Hain',
-    title: "Chair: Program, Website, Volunteers",
-    photo: () => import('$images/team/em.jpg?enhanced'),
-    bio: "Em works at North Road where she assists in the development and integration of QGIS. This is her 3rd year as Program Chair - not planned as she has subbed in for the amazing Simon Nitz who unfortunately needed to step away whilst he got more amazing (#becoming-bionic-man). She is also the contact for QGIS Australia and helps wrangle that group. Herding cats through spreadsheets is her superpower."
   },
   leo: {
     name: 'Leo Ghignone',
