@@ -1,13 +1,13 @@
 export default {
   alex: {
     name: 'Alex Leith',
-    title: 'Conference Co-Chair',
+    title: 'Conference Co-Chair<br />Sponsorship, Finance',
     photo: () => import('$images/team/alex.jpg?enhanced'),
     bio: "Alex is an open geospatial technologist with extensive expertise in software development, cloud infrastructure, and program governance. Throughout his career, Alex's focus has been on making data more easily accessible. By enabling simpler access to data, he believes we can drive positive change and continue to develop sustainably."
   },
   simon: {
     name: 'Simon Nitz',
-    title: 'Conference Co-Chair',
+    title: 'Conference Co-Chair<br />Program, Finance',
     photo: () => import('$images/team/simon.jpg?enhanced'),
     bio: "Simon is the Geospatial Lead at Whanganui District Council, a local government organisation in New Zealand. With 30+ years in the industry, he is highly regarded throughout Australia and New Zealand as a leader in his field. He has provided GIS consulting services to organisations in the region, focusing on FOSS4G desktop and web mapping solutions. For a stand out 16 years, in the 90’s and 00’s, Simon was chair of the MapInfo User Group in New Zealand. More recently, he has been involved in organising FOSS4G SotM Oceania events."
   },
