@@ -83,7 +83,7 @@
       .slice(0, 6) as sponsor}
       {#await sponsor.logo() then module}
         <div class="flex items-center justify-center px-4 sm:px-8">
-          <div class="harmonized-logo">
+          <div class="">
             <enhanced:img src={module.default} alt={sponsor.name} />
           </div>
         </div>
