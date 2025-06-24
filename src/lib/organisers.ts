@@ -3,7 +3,7 @@ export default {
     name: 'Alex Leith',
     title: 'Conference Co-Chair + Sponsorship, Finance',
     photo: () => import('$images/team/alex.jpg?enhanced'),
-    bio: "Alex is an open geospatial technologist; a global leader in the field of Earth observation with a track record in delivering operational data infrastructure. He has extensive expertise in software development, cloud infrastructure, and program governance. Beyond all that, he is a founding Director of OSGeo Oceania and former Chair of the organisation. He enjoys organising small and large events, including as Chair of last year’s FOSS4G SotM Oceania event in Hobart. And... he runs a cloud native geospatial consultancy = https://auspatious.com/"
+    bio: "Alex is an open geospatial technologist; a global leader in the field of Earth observation with a track record in delivering operational data infrastructure. He has extensive expertise in software development, cloud infrastructure, and program governance. Beyond all that, he is a founding Director of OSGeo Oceania and former Chair of the organisation. He enjoys organising small and large events, including as Chair of last year’s FOSS4G SotM Oceania event in Hobart. And... he runs a cloud native geospatial consultancy = <a href='https://auspatious.com/' target=_blank>https://auspatious.com/</a>"
   },
   simon: {
     name: 'Simon Nitz',
