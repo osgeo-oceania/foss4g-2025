@@ -77,10 +77,11 @@
 
   <!-- Sponsor Grid -->
 
-  <div class="my-6 grid grid-cols-3 sm:grid-cols-6">
+  <div class="my-6 grid grid-cols-3 space-y-1 sm:space-y-3 sm:grid-cols-5">
     {#each Object.values(Sponsors)
+      .filter((sponsor) => sponsor.level < 5)
       .sort((a, b) => a.level - b.level)
-      .slice(0, 6) as sponsor}
+      as sponsor}
       {#await sponsor.logo() then module}
         <div class="flex items-center justify-center px-4 sm:px-8">
           <div class="">
