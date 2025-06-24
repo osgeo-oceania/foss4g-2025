@@ -8,25 +8,25 @@
 
   const agendaItems: AgendaItem[] = [
     {
-      days: '1 & 2',
+      days: 'Mon 17 & Tue 18 Nov',
       time: '09:00 - 17:00',
       heading: 'Workshops',
       description:
-        "Workshops will be held at the University of Tasmania's Sandy Bay campus. Classrooms are in the Social Sciences building. The registration and break area is in the Studio Theatre."
+        "Workshops will be held at AUT City Campus in the heart of the Auckland central business district. Classrooms are in the WF building. The registration and break area will also be in the WF Buidling."
     },
     {
-      days: '3 - 5',
+      days: 'Wed 19 - Fri 21 Nov',
       time: '09:00 - 17:00',
       heading: 'Conference',
       description:
-        'Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 6th and Thursday 7th November. It also includes access to the Ice Breaker on Tuesday 5th November and the Community Day on Friday 8th November.'
+        'Conference sessions will be held at AUT City Campus in the heart of the Auckland central business district.  All sessions will be held in the WG building. The registration, exhibition and break areas will also be in the WG Buidling.'
     },
     {
-      days: '6 & 7',
+      days: 'Sat 22 & Sun 23 Nov',
       time: '09:00 - 17:00',
       heading: 'Community Events',
       description:
-        'Registration at the conference is not a prerequisite for participation in the Community Day. Participation in the Community Day is free of charge and all folks interested.'
+        'Registration at the conference is not a prerequisite for participation in the Community Day (including Code Sprints). Participation in the Community Day is free of charge and we welcome all folks interested.'
     }
   ];
 </script>
@@ -34,7 +34,7 @@
 {#snippet agendaItemGrid(item: AgendaItem)}
   <div class="grid sm:grid-cols-12 pl-8 pr-12 py-4">
     <div class="sm:col-span-5 flex sm:flex-col justify-between sm:justify-center sm:text-2xl">
-      <div>Days {item.days}</div>
+      <div>{item.days}</div>
       <div>{item.time}</div>
     </div>
     <div class="sm:col-span-7">
