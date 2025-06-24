@@ -50,61 +50,61 @@ export default {
   greg: {
     name: 'Greg Lauer',
     title: 'Sponsorship, Travel Grant Program',
-    photo: () => import('$images/team/greg.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the word together!"
   },
   hamish: {
     name: 'Hamish Campbell',
     title: 'Venues',
-    photo: () => import('$images/team/hamish.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the word together!"
   },
   daniel: {
     name: 'Daniel Silk',
     title: 'Ticketing',
-    photo: () => import('$images/team/daniel.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the word together!"
   },
   jessie: {
     name: 'Jessie Lindsay',
     title: 'TGP Breakfast',
-    photo: () => import('$images/team/jessie.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   martin: {
     name: 'Martin Tomko',
     title: 'Acadmeic Papers',
-    photo: () => import('$images/team/martin.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   david: {
     name: 'David Ramiro',
     title: 'Website',
-    photo: () => import('$images/team/david.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   byron: {
     name: 'Byron Cochrane',
     title: 'Committee Member',
-    photo: () => import('$images/team/byron.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   lani: {
     name: 'Lanieta Rokotuiwakaya (Lani)',
     title: 'Committee Member',
-    photo: () => import('$images/team/lani.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   colin: {
     name: 'Colin Mazengarb',
     title: 'Committee Member',
-    photo: () => import('$images/team/colin.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   anne: {
     name: 'Anne Harper',
     title: 'Committee Member',
-    photo: () => import('$images/team/xxx.jpg?enhanced'),
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
   michel: {
