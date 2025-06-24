@@ -137,10 +137,9 @@
     <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Auckland</div>
+          <div class="text-3xl">Tāmaki Makaurau Auckland</div>
           <div>
-            nipaluna / Hobart, nestled on the southeastern coast of lutruwita / Tasmania, Australia,
-            is a charming city known for its rich history and breathtaking natural surroundings.
+            These are the Māori names given to Auckland. They speak of our diverse landscapes, beautiful harbours, and fertile soils. They speak of the coming together of different iwi (tribes) to meet and trade.
           </div>
         </div>
       </div>
