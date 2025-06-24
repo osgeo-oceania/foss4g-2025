@@ -15,15 +15,15 @@ title: Program Outline
 The general program outline for sessions and social events:
 
 
-| Date                  | Session       | Social                             | Other       |
-| --------------------- | ------------- | ---------------------------------- | ----------- |
-| Monday 17 November    | Workshops     | Informal Meetup                    |             |
-| Tuesday 18 November   | Workshops     | Ice Breaker                        |             |
-| Wednesday 19 November | Conference    | Conference Dinner                  |             |
-| Thursday 20 November  | Conference    | Geochicas and Women+ in Geospatial | B2B Session |
-| Friday 21 November    | Conference    |                                    | OSGeo AGM   |
-| Saturday 22 November  | Community Day |                                    |             |
-| Sunday 23 November    | Community Day |                                    |             |
+| Date                  | Session       | Social                             | Other             |
+| --------------------- | ------------- | ---------------------------------- | ----------------- |
+| Monday 17 November    | Workshops     | Informal Meetup                    | OSGeo Oceania AGM |
+| Tuesday 18 November   | Workshops     | Ice Breaker                        |                   |
+| Wednesday 19 November | Conference    | Conference Dinner                  |                   |
+| Thursday 20 November  | Conference    | Geochicas and Women+ in Geospatial | B2B Session       |
+| Friday 21 November    | Conference    |                                    | OSGeo AGM         |
+| Saturday 22 November  | Community Day |                                    |                   |
+| Sunday 23 November    | Community Day |                                    |                   |
 
 ![Program Outline]($images/foss4g2025_program_outline.png)
 
