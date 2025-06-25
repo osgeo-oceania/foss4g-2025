@@ -5,21 +5,21 @@
     {
       title: 'Early Bird Pass',
       description: 'Limited Time Offer',
-      price: '$299',
+      price: '$700',
       cardClass: 'bg-success',
       buttonClass: 'bg-white'
     },
     {
-      title: 'Standard Pass',
-      description: 'Standard conference pass',
-      price: '$399',
+      title: 'Student/Retired Pass',
+      description: 'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
+      price: '$500',
       cardClass: 'bg-white border-1 border-primary',
       buttonClass: 'bg-success'
     },
     {
-      title: 'Sponsor Package',
-      description: 'Includes donation to the conference',
-      price: '$699',
+      title: 'Community Contributor',
+      description: 'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
+      price: '$500',
       cardClass: 'bg-white border-1 border-primary',
       buttonClass: 'bg-success'
     }
