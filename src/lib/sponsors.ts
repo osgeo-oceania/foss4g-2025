@@ -42,15 +42,20 @@ export default {
     logo: () => import('$images/logos/qfieldcloud.png?enhanced'),
     level: LEVELS.SILVER
   },
+  sparkgeo: {
+    name: 'SparkGeo',
+    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
+    level: LEVELS.SILVER
+  },
+  sparkgeocc: {
+    name: 'SparkGeo',
+    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
+    level: LEVELS.CHILDCARE
+  },
   sotm2025: {
     name: 'SOTM2025',
     logo: () => import('$images/logos/sotm2025.png?enhanced'),
     level: LEVELS.SUPPORTER
-  },
-  sparkgeo: {
-    name: 'SparkGEO',
-    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
-    level: LEVELS.SILVER + LEVELS.CHILDCARE
   },
   tomtom: {
     name: 'TomTom',
