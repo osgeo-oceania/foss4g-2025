@@ -93,7 +93,7 @@
 
   <!-- Cards -->
 
-<!--
+
   <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
 <!--
