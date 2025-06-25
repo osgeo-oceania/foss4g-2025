@@ -159,7 +159,7 @@
 
     <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
       <div class="card bg-primary rounded-2xl">
-        <div class="card-body space-y-2 p-8">
+        <div class="card-body text-primary-content space-y-2 p-8">
           <div class="text-3xl">Tāmaki Makaurau Auckland</div>
           <div>
             These are the Māori names given to Auckland. They speak of our diverse landscapes,
@@ -169,7 +169,7 @@
         </div>
       </div>
       <div class="card bg-secondary rounded-2xl">
-        <div class="card-body text-primary-content space-y-2 p-8">
+        <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Our Conference Venue</div>
           <div>
             FOSS4G 2025 is proudly supported by Auckland University of Technology's School of Future Environments.<br />Located in the heart of Auckland City, the <a href="https://use.mazemap.com/#v=1&campusid=103&zlevel=1&center=174.765877,-36.853388&zoom=17.6" target="_blank">AUT City Campus</a> is within minutes of the central business district, has excellent public transport and accommodation options.
