@@ -7,7 +7,7 @@
   import Divider from '$components/Divider.svelte';
   import Agenda from '$components/Agenda.svelte';
   import Link from '$components/Link.svelte';
-  import Sponsors from '$lib/sponsors';
+  import Sponsors, { LEVELS as SPONSOR_LEVELS } from '$lib/sponsors';
   import Team from '$lib/organisers';
 
   const whyAttends = [
@@ -77,11 +77,10 @@
 
   <!-- Sponsor Grid -->
 
-  <div class="my-6 grid grid-cols-3 space-y-1 sm:space-y-3 sm:grid-cols-5">
+  <div class="my-6 grid grid-cols-3 space-y-1 sm:grid-cols-5 sm:space-y-3">
     {#each Object.values(Sponsors)
       .filter((sponsor) => sponsor.level < 5)
-      .sort((a, b) => a.level - b.level)
-      as sponsor}
+      .sort((a, b) => a.level - b.level) as sponsor}
       {#await sponsor.logo() then module}
         <div class="flex items-center justify-center px-4 sm:px-8">
           <div class="">
@@ -140,7 +139,9 @@
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Tāmaki Makaurau Auckland</div>
           <div>
-            These are the Māori names given to Auckland. They speak of our diverse landscapes, beautiful harbours, and fertile soils. They speak of the coming together of different iwi (tribes) to meet and trade.
+            These are the Māori names given to Auckland. They speak of our diverse landscapes,
+            beautiful harbours, and fertile soils. They speak of the coming together of different
+            iwi (tribes) to meet and trade.
           </div>
         </div>
       </div>
@@ -204,6 +205,39 @@
   <Divider>Ticket Options</Divider>
 
   <TicketOptions />
+
+  {#snippet sponsorLevel(
+    title: string,
+    level: (typeof SPONSOR_LEVELS)[keyof typeof SPONSOR_LEVELS]
+  )}
+    {@const sponsorsAtLevel = Object.values(Sponsors).filter((sponsor) => sponsor.level == level)}
+
+    {#if sponsorsAtLevel.length > 0}
+      <div class="flex flex-col space-y-2 sm:space-y-0">
+        <Divider>{title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors</Divider>
+
+        <div class="flex items-center justify-center flex-wrap space-y-6 sm:space-y-0">
+          {#each sponsorsAtLevel as sponsorAtLevel}
+            {#await sponsorAtLevel.logo() then module}
+              <div class="flex items-center justify-center px-4 sm:max-w-60 sm:px-8">
+                <enhanced:img
+                  src={module.default}
+                  alt={sponsorAtLevel.name}
+                  class="max-h-20 w-auto"
+                />
+              </div>
+            {/await}
+          {/each}
+        </div>
+      </div>
+    {/if}
+  {/snippet}
+
+  <div class="flex flex-col space-y-2">
+    {#each Object.entries(SPONSOR_LEVELS) as [title, level]}
+      {@render sponsorLevel(title, level)}
+    {/each}
+  </div>
 </main>
 
 <!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
