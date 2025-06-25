@@ -9,7 +9,7 @@ export default {
     name: 'Simon Nitz',
     title: 'Conference Co-Chair + Program, Finance',
     photo: () => import('$images/team/simon.jpg?enhanced'),
-    bio: "Simon is the Geospatial Lead at Whanganui District Council, a local government organisation in New Zealand. With 35+ years in the industry, he is highly regarded throughout Australia and New Zealand as a leader in his field. He has provided GIS consulting services to organisations in the region, focusing on FOSS4G desktop and web mapping solutions. For a stand out 16 years, in the 90’s and 00’s, Simon was chair of the MapInfo User Group in New Zealand. More recently, he has been involved in organising FOSS4G SotM Oceania events.<br/><a href='https://www.linkedin.com/in/hncampbell/' target=_blank>LinkedIn</a><br/><a href='https://geospatial.whanganui.govt.nz' target=_blank>GeoSpatial Whanganui</a>"
+    bio: "Simon is the Geospatial Lead at Whanganui District Council, a local government organisation in New Zealand. With 35+ years in the industry, he is highly regarded throughout Australia and New Zealand as a leader in his field. He has provided GIS consulting services to organisations in the region, focusing on FOSS4G desktop and web mapping solutions. For a stand out 16 years, in the 90’s and 00’s, Simon was chair of the MapInfo User Group in New Zealand. More recently, he has been involved in organising FOSS4G SotM Oceania events.<br/><a href='https://www.linkedin.com/in/simonnitz/' target=_blank>LinkedIn</a><br/><a href='https://geospatial.whanganui.govt.nz' target=_blank>GeoSpatial Whanganui</a>"
   },
   eli: {
     name: 'Elisa Puccioni (Eli)',
