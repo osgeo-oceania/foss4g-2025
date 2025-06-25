@@ -20,7 +20,8 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
 
   <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
-    <div class="card bg-secondary rounded-2xl">
+    <div class="flex flex-col gap-y-4 sm:flex-col">
+
       <div class="card-body space-y-2 p-8">
         <div class="text-3xl">Presentations and Lightning Talks</div>
         <div class="flex space-x-2">
@@ -41,9 +42,6 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
           </Link>
         </div>
       </div>
-    </div>
-
-    <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
 
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
@@ -64,6 +62,11 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
         </div>
       </div>
 
+
+    </div>
+
+
+    <div class="card bg-secondary rounded-2xl">
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Academic Papers</div>
@@ -82,8 +85,8 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
           </div>
         </div>
       </div>
-
     </div>
+
 
   </div>
 
