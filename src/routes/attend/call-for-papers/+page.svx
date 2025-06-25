@@ -1,3 +1,8 @@
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
 ---
 title: Call For Papers
 ---
