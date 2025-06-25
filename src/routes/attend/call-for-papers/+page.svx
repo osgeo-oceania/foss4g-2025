@@ -4,65 +4,89 @@ title: Call For Papers
 
 ![Group Photo]($images/group-photo.jpg)
 
+
 # Call for Papers
 
 **Call for papers is now open**.
 
-<!-- <StyledButton target="https://talks.osgeo.org/foss4g-2025/cfp">
-  Submit your proposal
-</StyledButton> -->
-
 **All applications must be received by midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
 
 
-<!-- {/* **Call for papers is now closed**.
-
-Community voting is now open for the FOSS4G 2025 conference. You can vote for your favourite presentations to help shape the conference program.
-
-<StyledButton target="https://talks.osgeo.org/foss4g-2025/p/voting/signup/">
-  Vote now!
-</StyledButton> */} -->
-
-Presentations and Workshops are the beating heart of the FOSS4G conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees' own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G community forward.
-
-![Call for papers timeline]($images/foss4g2025_program_cfp_timeline.png)
+<!-- Cards -->
 
 
-## Presentations and Lightning Talks
+  <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
-We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
+    <div class="card bg-secondary rounded-2xl">
+      <div class="card-body space-y-2 p-8">
+        <div class="text-3xl">Presentations and Lightning Talks</div>
+        <div class="flex space-x-2">
+          <div>
+            We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
+          </div>
+        </div>
+        <div class="flex space-x-2">
+          <div>
+            Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
+          </div>
+        </div>
+        <div class="sm:w-[240px]">
+          <Link
+            class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            href="https://talks.osgeo.org/foss4g-2025/cfp"
+            >Submit a Presentation<span class="icon-[lucide--arrow-up-right] block"></span>
+          </Link>
+        </div>
+      </div>
+    </div>
 
-Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
+    <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
 
-<!-- <StyledButton target="https://talks.osgeo.org/foss4g-2025/cfp">
-  Submit your Presentation
-</StyledButton> -->
+      <div class="card bg-secondary rounded-2xl">
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">Workshops</div>
+          <div>
+            If you're passionate about a topic and you're skillful at conveying your hands-on knowledge and experience to others, this is for you! We are aiming to offer a diverse range of workshops for a variety of skill levels.
+          </div>
+        </div>
+        <div class="flex space-x-2">
+          <div>
+            The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 18-32 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
+          </div>
+        </div>
+        <div class="sm:w-[240px]">
+          <Link
+            class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            href="https://talks.osgeo.org/foss4g-2025/cfp"
+            >Submit a Workshop<span class="icon-[lucide--arrow-up-right] block"></span>
+          </Link>
+        </div>
+      </div>
 
-**All applications must be received by midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
+      <div class="card bg-secondary rounded-2xl">
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">Academic Papers</div>
+          <div>
+            Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
+          </div>
+        </div>
+        <div class="flex space-x-2">
+          <div>
+            Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
+          </div>
+        </div>
+        <div class="sm:w-[240px]">
+          <Link
+            class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            href="https://talks.osgeo.org/foss4g-2025/cfp"
+            >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
+          </Link>
+        </div>
+      </div>
 
-## Workshops
+    </div>
 
-If you're passionate about a topic and you're skillful at conveying your hands-on knowledge and experience to others, this is for you! We are aiming to offer a diverse range of workshops for a variety of skill levels.
-
-The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 18-32 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
-
-<!-- <StyledButton target="https://talks.osgeo.org/foss4g-2025/cfp">
-  Submit your Workshop
-</StyledButton> -->
-
-**All applications must be received by midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
-
-## Academic Papers
-
-Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
-
-Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
-
-<!-- <StyledButton target="https://talks.osgeo.org/foss4g-2025/page/academic/">
-  Submit your Academic Paper
-</StyledButton> -->
-
-**All applications must be received by midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
+  </div>
 
 
 ## Tips for speakers
