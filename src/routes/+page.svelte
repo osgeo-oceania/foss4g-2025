@@ -93,7 +93,10 @@
 
   <!-- Cards -->
 
+<!--
   <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
+
+<!--
     <div class="card bg-secondary rounded-2xl">
       <div class="card-body space-y-2 p-8">
         <div class="text-3xl">Speakers</div>
@@ -133,6 +136,31 @@
         </div>
       </div>
     </div>
+-->
+
+    <div class="card bg-secondary rounded-2xl">
+      <div class="card-body space-y-2 p-8">
+        <div class="text-3xl">Call For Papers</div>
+        <div class="flex space-x-2">
+          <div class="items-center justify-center">
+            <div class="btn btn-circle m-2">
+              <span class="icon-[lucide--arrow-up-right] block h-5 w-5"></span>
+            </div>
+          </div>
+          <div>
+            Presentations and Workshops are the beating heart of the FOSS4G conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees’ own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G community forward.
+          </div>
+        </div>
+        <div class="sm:w-[240px]">
+          <Link
+            class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            href="/attend/call-for-papers"
+            >Submit a Paper <span class="icon-[lucide--arrow-up-right] block"></span>
+          </Link>
+        </div>
+      </div>
+    </div>
+
 
     <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
       <div class="card bg-secondary rounded-2xl">
@@ -165,9 +193,11 @@
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
 
-  <Divider>Keynote Speakers</Divider>
+<!--
+<Divider>Keynote Speakers</Divider>
 
   <Keynotes />
+-->
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
     <div class="flex h-full w-full flex-1 p-2 text-white">
