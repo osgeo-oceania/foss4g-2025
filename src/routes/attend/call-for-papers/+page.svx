@@ -11,7 +11,7 @@ title: Call For Papers
 
 **All applications must be received by midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
 
-{#snippet snippet(parameter)}
+{#snippet cfp()}
 <main class="my-4 space-y-5">
 
 <!-- Cards -->
@@ -92,6 +92,8 @@ title: Call For Papers
 
 </main>
 {/snippet}
+
+{@render cfp()}
 
 ## Tips for speakers
 
