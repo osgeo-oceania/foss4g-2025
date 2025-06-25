@@ -142,11 +142,6 @@
       <div class="card-body space-y-2 p-8">
         <div class="text-3xl">Call For Papers</div>
         <div class="flex space-x-2">
-          <div class="items-center justify-center">
-            <div class="btn btn-circle m-2">
-              <span class="icon-[lucide--arrow-up-right] block h-5 w-5"></span>
-            </div>
-          </div>
           <div>
             Presentations and Workshops are the beating heart of the FOSS4G conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees’ own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G community forward.
           </div>
