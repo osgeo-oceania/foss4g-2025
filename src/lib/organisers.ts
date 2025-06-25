@@ -73,7 +73,7 @@ export default {
   },
   martin: {
     name: 'Martin Tomko',
-    title: 'Acadmeic Papers',
+    title: 'Academic Papers',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still puttin the words together!"
   },
