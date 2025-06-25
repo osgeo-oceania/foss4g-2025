@@ -1,6 +1,6 @@
 <script lang="ts">
   import Link from '$components/Link.svelte';
-  import LogoText from '$images/svg/foss4g-2025-logo-banner.svg';
+  import LogoText from '$images/svg/foss4g-2025-logo-banner-lores.svg';
   import { page } from '$app/state';
 
   let isMenuOpen = $state(false);
