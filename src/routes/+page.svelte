@@ -143,7 +143,18 @@
         <div class="text-3xl">Call For Papers</div>
         <div class="flex space-x-2">
           <div>
-            Presentations and Workshops are the beating heart of the FOSS4G conference. They offer a platform for experts to share ground-breaking research, innovative ideas, and practical solutions. By attending presentations, attendees gain valuable insights into the latest developments in the FOSS4G arena, learn from leading professionals, and spark inspiration for attendees’ own work. They also foster discussion and debate, allowing attendees to connect with colleagues, ask questions, and exchange perspectives, propelling the entire FOSS4G community forward.
+            We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
+          </div>
+        </div>
+        <div class="flex space-x-2">
+          <div>
+            Now is the time to submit your interest in one or more of the following categories:
+            <ul>
+              <li>Presentations</li>
+              <li>Lightning Talks</li>
+              <li>Workshops</li>
+              <li>Academic Papers</li>
+            </ul>
           </div>
         </div>
         <div class="sm:w-[240px]">
