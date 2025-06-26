@@ -27,11 +27,6 @@ High Speed internet access is available across the entire AUT campus and support
 <main class="my-4 space-y-5">
 
 <!-- Cards -->
-## Workshop facilities
-
-AUT offers modern classroom spaces fully equipped for running workshops from the WF Building which is a multi-story dedicated teaching space.
-Workshops will be run with attendees using Bring Your Own Device (BYOD).
-
 
   <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
@@ -39,16 +34,11 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
 
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Workshop facilities</div>
+          <div class="text-3xl">Workshop Facilities</div>
           <div class="flex space-x-2">
             <div>
               AUT offers modern classroom spaces fully equipped for running workshops from the WF Building which is a multi-story dedicated teaching space.
 Workshops will be run with attendees using Bring Your Own Device (BYOD).
-            </div>
-          </div>
-          <div class="flex space-x-2">
-            <div>
-              Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
             </div>
           </div>
         </div>
@@ -56,7 +46,7 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
 
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Venue accessibility</div>
+          <div class="text-3xl">Venue Accessibility</div>
           <div>
             Auckland is a very accessible city, with public transport featuring ramps, lowered buses, and disability concessions. Many attractions prioritise accessible paths and facilities, while resources like mobility scooter rentals and accessible parking are available.
           </div>
@@ -74,7 +64,7 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
         
       <div class="card bg-primary rounded-2xl">
         <div class="card-body text-primary-content space-y-2 p-8">
-          <div class="text-3xl">Childcare facilities</div>
+          <div class="text-3xl">Childcare Facilities</div>
           <div>
             Providing a child-friendly conference offers a win-win situation for attendees at FOSS4G Auckland 2025. Parents can focus on the conference content knowing their children are safe and engaged in age-appropriate activities. We feel this will lead to increased participation and higher satisfaction. It also demonstrates the conference's commitment to diversity and inclusion, attracting a wider range of professionals.
           </div>
