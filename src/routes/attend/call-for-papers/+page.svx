@@ -22,7 +22,7 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card-body space-y-2 p-8">
+      <div class="card bg-secondary rounded-2xl">
         <div class="text-3xl">Presentations and Lightning Talks</div>
         <div class="flex space-x-2">
           <div>
@@ -64,27 +64,59 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
 
 
     </div>
+    <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-    <div class="card bg-secondary rounded-2xl">
       <div class="card bg-secondary rounded-2xl">
-        <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Academic Papers</div>
-          <div>
-            Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
-          </div>
-          <div>
-            Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
-          </div>
-          <div class="sm:w-[280px]">
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-              href="https://talks.osgeo.org/foss4g-2025/cfp"
-              >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+        <div class="card bg-secondary rounded-2xl">
+          <div class="card-body space-y-2 p-8">
+            <div class="text-3xl">Academic Papers</div>
+            <div>
+              Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
+            </div>
+            <div>
+              Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
+            </div>
+            <div class="sm:w-[280px]">
+              <Link
+                class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+                href="https://talks.osgeo.org/foss4g-2025/cfp"
+                >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="card bg-secondary rounded-2xl">
+        <div class="card bg-secondary rounded-2xl">
+          <div class="card-body space-y-2 p-8">
+            <div class="text-3xl">Academic Papers</div>
+            <div>
+              Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
+            </div>
+            <div>
+              Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
+            </div>
+            <div class="sm:w-[280px]">
+              <Link
+                class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+                href="https://talks.osgeo.org/foss4g-2025/cfp"
+                >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-primary rounded-2xl">
+          <div class="card-body text-primary-content space-y-2 p-8">
+            <div class="text-3xl">Inspiration</div>
+            <div>
+              Check out our videos of [past presentations](https://www.youtube.com/@foss4g-sotm-oceania) for inspiration.
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
@@ -98,10 +130,6 @@ The OSGeo community is characterised for its dynamic way of growing and we are p
 
 - FOSS4G’s backbone is free and open source, so make sure you clearly indicate what is (are) the open source project(s) essential in your talk
 - If you present new developments or a completely new open source project, make sure you point to its repository(ies) so people can follow up.
-
-## Inspiration
-
-Check out our videos of [past presentations](https://www.youtube.com/@foss4g-sotm-oceania) for inspiration.
 
 ## What we expect from you as a speaker
 
