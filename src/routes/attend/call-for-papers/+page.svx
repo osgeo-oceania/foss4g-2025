@@ -116,14 +116,14 @@ title: Call for Papers
 
 </main>
 
-## Tips for speakers
+<Divider>Tips for speakers</Divider>
 
 The OSGeo community is characterised for its dynamic way of growing and we are proud of welcoming a variety of voices and ideas. If you are considering sending a proposal to our call for papers, consider the following:
 
 - FOSS4G’s backbone is free and open source, so make sure you clearly indicate what is (are) the open source project(s) essential in your talk
 - If you present new developments or a completely new open source project, make sure you point to its repository(ies) so people can follow up.
 
-## What we expect from you as a speaker
+<Divider>What we expect from you as a speaker</Divider>
 
 We believe in equality, so all presenters have the same exact amount of time to present their work, according to their contribution type. Please consider that when preparing your slides and be mindful about the time.
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.
