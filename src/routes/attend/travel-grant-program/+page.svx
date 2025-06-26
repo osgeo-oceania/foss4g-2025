@@ -2,13 +2,21 @@
 title: Travel Grant Program
 ---
 
-<script>
+<svelte:head>
+  <title>Travel Grant Program</title>
+</svelte:head>
+
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
+  import Countdown from '$components/Countdown.svelte';
   import GiantButton from '$components/GiantButton.svelte';
 </script>
 
-![Auckland]($images/group-photo.jpg)
 
 # Travel Grant Program
+
+![Auckland]($images/tg-breakfast.jpg)
 
 The FOSS4G 2025 local organising committee is pleased to announce that it is again providing a Travel Grant Program (TGP). You will find below more details about eligibility requirements, what you will receive if successful and the timeline here on this page.
 
@@ -55,7 +63,7 @@ If your application is unsuccessful, we will let you know and possibly offer you
 
 <sup>\* Financial assistance is awarded up to this amount for eligible travel costs e.g. accommodation, flights and meals.</sup>
 
-## Who should apply
+<Divider>Who should apply</Divider>
 
 The aim of the program is to increase the chances of attendance and accessibility of this conference to community members and it especially focuses on facilitating the participation for minority groups and categories usually underrepresented. This includes, but it is not limited to:
 
@@ -66,14 +74,14 @@ The aim of the program is to increase the chances of attendance and accessibilit
 - People who will make use of what they learn to make a positive impact on themselves and their communities.
 - People who contribute to open communities, such as contributing to OpenStreetMap, or open source software.
 
-## How to apply
+<Divider>How to apply</Divider>
 
 You can find the application form [here](https://forms.gle/U2VaANxgkqVe48mP9).
 
 Applicant data will be kept confidential and only used for assessing TGP applications. Please ensure that the email address provided is regularly monitored as the selection committee may seek clarification of your response.
 
 
-## About the TGP
+<Divider>About the TGP</Divider>
 
 The Oceania FOSS4G Travel Grant Program initiative was established in 2018 by the OSGeo Oceania Board to facilitate accessibility and diversity at FOSS4G in Melbourne. It is funded by OSGeo Oceania, OSGeo Foundation, proceeds from our generous sponsors, and contributions from organisations and individuals. Please note that the number of grants available is dependent on this funding and the number of applications we receive.
 
@@ -86,4 +94,4 @@ The TGP is managed by the FOSS4G 2025 LOC Committee, in collaboration with the O
 
 If you have a query or require more information, please email the [TPG Committee](mailto:tgp@foss4g.org).
 
-![Auckland]($images/tg-breakfast.jpg)
+![Auckland]($images/stock/landscape-of-an-auckland-beach.jpg)

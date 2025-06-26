@@ -89,7 +89,7 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
 
 
 
-## Sustainability - environmental and social responsibility
+<Divider>Sustainability - environmental and social responsibility</Divider>
 
 AUT is committed to achieving sustainability and taking regenerative action in light of local and global challenges. AUT continue to nurture a culture of sustainability through learning, teaching, research, partnerships and how we operate our on-campus facilities.
 
