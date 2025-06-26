@@ -3,9 +3,9 @@
   import Link from '$components/Link.svelte';
 </script>
 
-
+<!--
 ![Group Photo]($images/group-photo.jpg)
-
+-->
 
 # Call for Papers
 
@@ -23,23 +23,25 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
       <div class="card bg-secondary rounded-2xl">
-        <div class="text-3xl">Presentations and Lightning Talks</div>
-        <div class="flex space-x-2">
-          <div>
-            We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">Presentations and Lightning Talks</div>
+          <div class="flex space-x-2">
+            <div>
+              We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
+            </div>
           </div>
-        </div>
-        <div class="flex space-x-2">
-          <div>
-            Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
+          <div class="flex space-x-2">
+            <div>
+              Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
+            </div>
           </div>
-        </div>
-        <div class="sm:w-[280px]">
-          <Link
-            class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-            href="https://talks.osgeo.org/foss4g-2025/cfp"
-            >Submit a Presentation<span class="icon-[lucide--arrow-up-right] block"></span>
-          </Link>
+          <div class="sm:w-[280px]">
+            <Link
+              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+              href="https://talks.osgeo.org/foss4g-2025/cfp"
+              >Submit a Presentation<span class="icon-[lucide--arrow-up-right] block"></span>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -62,57 +64,42 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
         </div>
       </div>
 
-
     </div>
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
       <div class="card bg-secondary rounded-2xl">
-        <div class="card bg-secondary rounded-2xl">
-          <div class="card-body space-y-2 p-8">
-            <div class="text-3xl">Academic Papers</div>
-            <div>
-              Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
-            </div>
-            <div>
-              Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
-            </div>
-            <div class="sm:w-[280px]">
-              <Link
-                class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-                href="https://talks.osgeo.org/foss4g-2025/cfp"
-                >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
-              </Link>
-            </div>
+        
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">Academic Papers</div>
+          <div>
+            Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
+          </div>
+          <div>
+            Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
+          </div>
+          <div class="sm:w-[280px]">
+            <Link
+              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+              href="https://talks.osgeo.org/foss4g-2025/cfp"
+              >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div class="card bg-secondary rounded-2xl">
-        <div class="card bg-secondary rounded-2xl">
-          <div class="card-body space-y-2 p-8">
-            <div class="text-3xl">Academic Papers</div>
-            <div>
-              Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
-            </div>
-            <div>
-              Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
-            </div>
-            <div class="sm:w-[280px]">
-              <Link
-                class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-                href="https://talks.osgeo.org/foss4g-2025/cfp"
-                >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
-              </Link>
-            </div>
+      <div class="card bg-primary rounded-2xl">
+        <div class="card-body text-primary-content space-y-2 p-8">
+          <div class="text-3xl">Inspiration</div>
+          <div>
+            Check out our videos of past presentations for inspiration...
           </div>
-        </div>
-        <div class="card bg-primary rounded-2xl">
-          <div class="card-body text-primary-content space-y-2 p-8">
-            <div class="text-3xl">Inspiration</div>
-            <div>
-              Check out our videos of [past presentations](https://www.youtube.com/@foss4g-sotm-oceania) for inspiration.
-            </div>
+          <div class="sm:w-[280px]">
+            <Link
+              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+              href="https://www.youtube.com/@foss4g-sotm-oceania"
+              >Past Presentations<span class="icon-[lucide--arrow-up-right] block"></span>
+            </Link>
           </div>
         </div>
       </div>
