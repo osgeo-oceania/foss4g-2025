@@ -48,10 +48,10 @@ title: Entry into New Zealand
           </div>
           <div>
 
-            If you are an **Australian permanent resident**, you **must have an NZeTA** before you travel
+If you are an **Australian permanent resident**, you **must have an NZeTA** before you travel
 to New Zealand. You must show **evidence at check-in** that you have:
 
-- An **Australian permanent resident visa** or an **Australian resident return visa** in the passport you are travelling on
+- An **Australian permanent resident visa** or an **Australian resident return visa** in the passport you are travelling on.
 
 - **Travel conditions** on the visa allowing you to return to Australia.
 
