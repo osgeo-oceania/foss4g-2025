@@ -1,38 +1,22 @@
-# sv
+# FOSS4G 2025 Auckland Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<img src="/src/images/svg/foss4g-2025-logo-banner.svg" width="460px">
+Link: https://osgeo-oceania.github.io/foss4g-2025-auckland-map/
 
-## Creating a project
+## Website Development
 
-If you're seeing this, you've probably already done this step. Congrats!
-
+* Required software: `git` `nodejs (>=18)` `npm`
+* Used Frameworks: `sveltekit` `svelte` `mdsvex` `daisyui` `tailwind css`
+  
+### Quickstart
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+git clone https://github.com/osgeo-oceania/foss4g-2025-auckland-map/
+cd foss4g-2025-auckland-map
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Editing Page Content
+- Page content is stored in `/src/routes/`
+  - ex. for the url `https://osgeo-oceania.github.io/foss4g-2025-auckland-map/attend/call-for-papers/`
+  - the content is at `/src/routes/attend/call-for-papers/+page.svx`
