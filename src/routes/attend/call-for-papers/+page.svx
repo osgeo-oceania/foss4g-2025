@@ -1,3 +1,11 @@
+---
+title: Call for Papers
+---
+
+<svelte:head>
+  <title>Call for Papers</title>
+</svelte:head>
+
 <script lang="ts">
   import Divider from '$components/Divider.svelte';
   import Link from '$components/Link.svelte';
