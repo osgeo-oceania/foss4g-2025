@@ -2,18 +2,74 @@
 title: Entry into New Zealand
 ---
 
-![Auckland]($images/group-photo.jpg)
+
+<svelte:head>
+  <title>Entry into New Zealand</title>
+</svelte:head>
+
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
+
 
 # Entry into New Zealand
 
+![Auckland]($images/stock/airbus_a320-232_air_new_zealand.jpg)
 
-## Australian Citizens
 
-If you are an **Australian citizen**, you do **not need a visa** to enter New Zealand.
 
-## Visa Waiver Country or Territory
 
-Many people can use a **New Zealand Electronic Travel Authority (NZeTA)** to enter New Zealand
+<main class="my-4 space-y-5">
+
+<!-- Cards -->
+
+  <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
+
+    <div class="flex flex-col gap-y-4 sm:flex-col">
+
+      <div class="card bg-secondary rounded-2xl">
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">Australian Citizens</div>
+          <div class="flex space-x-2">
+            <div>
+              If you are an **Australian citizen**, you do **not need a visa** to enter New Zealand.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-secondary rounded-2xl">
+        <div class="card-body space-y-2 p-8">
+          <div class="text-3xl">YYYYYYYYYYYYYY</div>
+          <div>
+            Australian Permanent Residents
+          </div>
+          <div>
+
+            If you are an **Australian permanent resident**, you **must have an NZeTA** before you travel
+to New Zealand. You must show **evidence at check-in** that you have:
+
+- An **Australian permanent resident visa** or an **Australian resident return visa** in the passport you are travelling on
+- **Travel conditions** on the visa allowing you to return to Australia.
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flex flex-col gap-y-4 sm:flex-col">
+
+
+      <div class="card bg-secondary rounded-2xl">
+        
+      <div class="card bg-primary rounded-2xl">
+        <div class="card-body text-primary-content space-y-2 p-8">
+          <div class="text-3xl">Visa Waiver Country or Territory</div>
+          <div>
+
+            Many people can use a **New Zealand Electronic Travel Authority (NZeTA)** to enter New Zealand
 without applying for a visa first. This depends on:
 
 - Your **passport**
@@ -24,15 +80,20 @@ For further information and a list of eligible countries, visit:
 [New Zealand Electronic Travel Authority (NZeTA)](https://www.immigration.govt.nz/visas/new-zealand-electronic-travel-authority-nzeta/)  
 **Cost**: NZ$17
 
-## Australian Permanent Residents
+          </div>
+        </div>
+      </div>
 
-If you are an **Australian permanent resident**, you **must have an NZeTA** before you travel
-to New Zealand. You must show **evidence at check-in** that you have:
+    </div>
 
-- An **Australian permanent resident visa** or an **Australian resident return visa** in the passport you are travelling on
-- **Travel conditions** on the visa allowing you to return to Australia.
 
-## Other Nationalities
+  </div>
+
+
+</main>
+
+
+<Divider>Other Nationalities</Divider>
 
 If you are **not a New Zealand or Australian citizen** and **not eligible for a NZeTA**, you will need to apply
 for a **New Zealand visitor visa**.
@@ -42,9 +103,8 @@ For more information, visit:
 **Cost**: NZ$441  
 **Processing time**: Up to 4 months
 
----
 
-## Visa Support for FOSS4G 2025 Attendees
+<Divider>Visa Support for FOSS4G 2025 Attendees</Divider>
 
 **OSGeo Oceania**, as the organiser of **FOSS4G 2025**, can issue a **letter of invitation** to
 support your New Zealand visitor visa application.
