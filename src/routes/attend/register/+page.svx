@@ -1,21 +1,30 @@
----
-title: Register
----
+<svelte:head>
+  <title>Register</title>
+</svelte:head>
 
-<script>
-  import GiantButton from '$components/GiantButton.svelte';
+
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
+  import Countdown from '$components/Countdown.svelte';
+  import TicketOptions from '$components/TicketOptions.svelte';
+
 </script>
 
+<!--
 ![Auckland]($images/group-photo.jpg)
+-->
 
-<div class="text-center font-serif text-xl sm:text-2xl mb-4 sm:underline flex items-center justify-center">
-  <span class="sm:hidden icon-[material-symbols-light--keyboard-double-arrow-down]"></span>
-  <span>Click below to register!</span>
-  <span class="sm:hidden icon-[material-symbols-light--keyboard-double-arrow-down]"></span>
-</div>
+<main class="my-4 space-y-5">
 
-<GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025">Conference Registration</GiantButton>
+  <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
 
+  <Divider>Ticket Options</Divider>
+
+  <TicketOptions />
+
+
+</main>
 ## Registration Information
 
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 19th, Thursday 20th and Friday 21st November.
