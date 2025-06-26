@@ -2,7 +2,7 @@
 title: Conference Venue
 ---
 
-![AUT]($images/aut.jpg)
+![AUT]($images/stock/autuni1.jpg)
 
 # Our Conference Venue
 
