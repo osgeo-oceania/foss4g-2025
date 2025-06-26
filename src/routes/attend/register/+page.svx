@@ -15,23 +15,20 @@ title: Register
 
 </script>
 
-<!--
-![Auckland]($images/group-photo.jpg)
--->
+# Register
 
 <main class="my-4 space-y-5">
 
   <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
 
-  <Divider>Ticket Options</Divider>
+  <Divider>Get Your Tickets</Divider>
 
   <TicketOptions />
 
 
 </main>
 
-
-## Registration Information
+<Divider>Registration Information</Divider>
 
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 19th, Thursday 20th and Friday 21st November.
 
@@ -48,7 +45,8 @@ It also includes access to the Icebreaker on Tuesday 18th November and the Commu
 
 Please note our [Privacy Policy.](/attend/privacy-policy)
 
-## Optional extras
+<Divider>Optional extras</Divider>
+
 
 | Type                          | Details                                                                                                                                                                                                                                | Cost (NZD)   |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
