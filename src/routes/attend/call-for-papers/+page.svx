@@ -3,10 +3,6 @@
   import Link from '$components/Link.svelte';
 </script>
 
-<!--
-![Group Photo]($images/group-photo.jpg)
--->
-
 # Call for Papers
 
 **Call for papers is now open**.
@@ -35,7 +31,7 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
               Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
             </div>
           </div>
-          <div class="sm:w-[280px]">
+          <div class="sm:w-[300px]">
             <Link
               class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
               href="https://talks.osgeo.org/foss4g-2025/cfp"
@@ -54,7 +50,7 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
           <div>
             The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 18-32 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
           </div>
-          <div class="sm:w-[280px]">
+          <div class="sm:w-[300px]">
             <Link
               class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
               href="https://talks.osgeo.org/foss4g-2025/cfp"
@@ -78,7 +74,7 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
           <div>
             Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
           </div>
-          <div class="sm:w-[280px]">
+          <div class="sm:w-[300px]">
             <Link
               class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
               href="https://talks.osgeo.org/foss4g-2025/cfp"
@@ -94,7 +90,7 @@ All applications must be received by **midnight Friday 11th July 2025, NZST (New
           <div>
             Check out our videos of past presentations for inspiration...
           </div>
-          <div class="sm:w-[280px]">
+          <div class="sm:w-[300px]">
             <Link
               class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
               href="https://www.youtube.com/@foss4g-sotm-oceania"
@@ -123,5 +119,4 @@ The OSGeo community is characterised for its dynamic way of growing and we are p
 We believe in equality, so all presenters have the same exact amount of time to present their work, according to their contribution type. Please consider that when preparing your slides and be mindful about the time.
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.
 
-![Auckland]($images/auckland.jpg)
-
+![Group Photo]($images/group-photo.jpg)
