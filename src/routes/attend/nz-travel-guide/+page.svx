@@ -12,8 +12,6 @@ title: Travel Essentials
   import Divider from '$components/Divider.svelte';
   import Link from '$components/Link.svelte';
   import Countdown from '$components/Countdown.svelte';
-  import TicketOptions from '$components/TicketOptions.svelte';
-
 </script>
 
 
