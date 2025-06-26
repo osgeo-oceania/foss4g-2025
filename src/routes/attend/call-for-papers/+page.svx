@@ -1,15 +1,16 @@
 <script lang="ts">
   import Divider from '$components/Divider.svelte';
   import Link from '$components/Link.svelte';
+  import Countdown from '$components/Countdown.svelte';
 </script>
 
 # Call for Papers
 
-**Call for papers is now open**.
-
-All applications must be received by **midnight Friday 11th July 2025, NZST (New Zealand Standard Time)**
 
 <main class="my-4 space-y-5">
+
+<Countdown label="Call For Papers ends in:" time="2025-07-11T00:00:00" />
+
 
 <!-- Cards -->
 
