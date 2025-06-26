@@ -42,17 +42,13 @@ title: Entry into New Zealand
 
       <div class="card bg-secondary rounded-2xl">
         <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">YYYYYYYYYYYYYY</div>
-          <div>
-            Australian Permanent Residents
-          </div>
+          <div class="text-3xl">Australian Permanent Residents</div>
           <div>
 
 If you are an **Australian permanent resident**, you **must have an NZeTA** before you travel
 to New Zealand. You must show **evidence at check-in** that you have:
 
 - An **Australian permanent resident visa** or an **Australian resident return visa** in the passport you are travelling on.
-
 - **Travel conditions** on the visa allowing you to return to Australia.
 
           </div>
