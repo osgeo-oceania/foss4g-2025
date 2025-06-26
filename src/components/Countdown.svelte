@@ -17,7 +17,7 @@
 </script>
 
 <div class="relative bg-primary flex sm:min-h-[300px] flex-col rounded-2xl p-6 sm:p-12 text-white">
-  <div class="text-xs text-white">
+  <div class="text-3xl text-white">
     {label}
   </div>
   <div class="flex mt-4 sm:mt-8">
