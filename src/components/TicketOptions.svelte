@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="mt-4 flex justify-end sm:justify-normal">
-      <Link href="/attend/register" class={`btn rounded-full text-sm  font-normal ${tOption.buttonClass}`}>
+      <Link href="https://ti.to/osgeo-oceania/foss4g-2025" class={`btn rounded-full text-sm  font-normal ${tOption.buttonClass}`}>
         Get Your Ticket <span class="icon-[lucide--arrow-up-right] block"></span>
       </Link>
     </div>
