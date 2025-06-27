@@ -80,16 +80,16 @@ title: Entry into New Zealand
                 Whether you are <strong>visiting</strong> or only <strong>transiting</strong>
               </li>
             </ul>
-            
+          </div>
+          <div>
             For further information and a list of eligible countries, visit: 
-
+          </div>
+          <div>
             <Link
               class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
               href="https://www.immigration.govt.nz/visas/new-zealand-electronic-travel-authority-nzeta/"
-              >New Zealand Electronic Travel Authority (NZeTA)<span class="icon-[lucide--arrow-up-right] block"></span>
+              >NZeTA<span class="icon-[lucide--arrow-up-right] block"></span>
             </Link>
-
-            <strong>Cost</strong>: NZ$17
 
           </div>
         </div>
@@ -136,5 +136,3 @@ To receive this letter:
 
 5. **Apply for your visa** through the [Immigration New Zealand website](https://www.immigration.govt.nz/visas/visitor-visa/)
 
-
-![Auckland]($images/auckland.jpg)
