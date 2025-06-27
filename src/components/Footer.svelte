@@ -8,14 +8,15 @@
       <div class="text-lg">FOSS4G Auckland 2025</div>
       <div class="grid grid-cols-2 text-xs">
         <ul class="space-y-2">
-          <li><Link href="/program/outline">Agenda</Link></li>
-          <li><Link href="/speakers">Speakers</Link></li>
+          <li><Link href="/attend/call-for-papers">Call For Papers</Link></li>
           <li><Link href="/attend/register">Register</Link></li>
-          <li><Link href="/attend/conference-venue">Venue</Link></li>
-          <li><Link href="/faq">FAQ</Link></li>
+          <li><Link href="/program/outline">Program</Link></li>
+          <li><Link href="/sponsorship">Sponsorship</Link></li>
+          <li><Link href="/organisers">Organisers</Link></li>
         </ul>
         <ul class="space-y-2">
           <li><Link href="/attend/terms-and-conditions">Terms &amp; Conditions</Link></li>
+          <li><Link href="/attend/code-of-conduct">Code Of Conduct</Link></li>
           <li><Link href="/attend/privacy-policy">Privacy Policy</Link></li>
         </ul>
       </div>
