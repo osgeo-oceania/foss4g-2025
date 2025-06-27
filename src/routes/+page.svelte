@@ -44,10 +44,10 @@
 </svelte:head>
 
 <!-- Hero -->
-<main class="mb-8 space-y-12">
+<main class="m:space-y-12 mb-8 space-y-8">
   <div class="hero flex">
     <div
-      class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-10 sm:min-h-[500px] sm:px-12 sm:py-14"
+      class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-12 sm:py-14"
     >
       <div
         class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 pr-8 pb-8 sm:h-86 sm:w-86"
@@ -139,7 +139,7 @@
 -->
 
     <div class="card bg-secondary mb-4 rounded-4xl sm:mb-0">
-      <div class="card-body flex flex-col justify-between space-y-2 px-6 py-10 sm:px-8 sm:py-10">
+      <div class="card-body flex flex-col justify-between space-y-2 px-6 py-8 sm:px-8 sm:py-10">
         <div class="text-3xl">Call For Papers</div>
         <div class="flex space-x-2">
           <div>
@@ -169,7 +169,7 @@
 
     <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
       <div class="card bg-primary rounded-4xl">
-        <div class="card-body text-primary-content space-y-2 px-6 py-10 sm:px-8 sm:py-10">
+        <div class="card-body text-primary-content space-y-2 px-6 py-8 sm:px-8 sm:py-10">
           <div class="text-3xl">Tāmaki Makaurau Auckland</div>
           <div>
             These are the Māori names given to Auckland. They speak of our diverse landscapes,
@@ -179,7 +179,7 @@
         </div>
       </div>
       <div class="card bg-secondary rounded-4xl">
-        <div class="card-body space-y-2 px-6 py-10 sm:px-8 sm:py-10">
+        <div class="card-body space-y-2 px-6 py-8 sm:px-8 sm:py-10">
           <div class="text-3xl">Our Conference Venue</div>
           <div>
             FOSS4G 2025 is proudly supported by Auckland University of Technology's School of Future
@@ -265,7 +265,7 @@
                 <enhanced:img
                   src={module.default}
                   alt={sponsorAtLevel.name}
-                  class="max-h-20 w-auto"
+                  class="max-h-16 w-auto max-w-40 sm:max-h-20 sm:max-w-60"
                 />
               </div>
             {/await}

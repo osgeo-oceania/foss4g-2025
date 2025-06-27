@@ -10,6 +10,6 @@
   {/if}
 </svelte:head>
 
-<main class="prose prose-headings:font-serif max-w-full px-2 py-4">
+<main class="prose prose-headings:font-serif max-w-full px-2 py-2 sm:py-4">
   <slot />
 </main>
