@@ -34,7 +34,7 @@ title: Entry into New Zealand
           <div class="text-3xl">Australian Citizens</div>
           <div class="flex space-x-2">
             <div>
-              If you are an <strong>Australian citizen</strong>, you do <strong>not need a visa</strong> to enter New Zealand.
+              If you are an Australian citizen, you do not need a visa to enter New Zealand.
             </div>
           </div>
         </div>
