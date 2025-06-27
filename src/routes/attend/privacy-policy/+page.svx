@@ -2,50 +2,63 @@
 title: Privacy Policy
 ---
 
-![Auckland]($images/group-photo.jpg)
+<svelte:head>
+  <title>Privacy Policy</title>
+</svelte:head>
+
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
+</script>
 
 # Privacy Policy for FOSS4G 2025
 
-Last Updated: 4 March, 2025
+
+![Auckland]($images/group-photo.jpg)
+
+Last Updated: **4 March, 2025**
 
 This Privacy Policy explains how FOSS4G 2025 (“we,” “us,” or “our”) collects, uses, and safeguards your personal information when you register for and participate in our conference. By registering for or attending FOSS4G 2025, you agree to the terms of this policy.
 
-## Information We Collect
+<Divider>Information We Collect</Divider>
 
 Personal Details: When you register or propose a session, we may collect your name, email address, and location (city, state, or country).
 Recordings & Photographs: We will record video and audio of conference sessions, and may take photographs during the event.
 
-## How We Use Your Information
+<Divider>How We Use Your Information</Divider>
 
 Event Communications: We use your email address to send you updates and information about the conference, including schedule details, reminders, and post-conference follow-ups.
 Event Operations: Your personal data helps us manage conference logistics such as attendance lists, session planning, and speaker coordination.
 Marketing and Promotion: We may use event recordings or photographs for promotional materials, reports, or future event announcements only if you have not requested otherwise.
 
-## Information Sharing
+<Divider>Information Sharing</Divider>
 
 Third-Party Service Providers: We may work with trusted service providers (e.g., registration platforms or event management tools) who assist in running the conference. These providers are contractually required to safeguard your data in accordance with applicable laws and regulations.
 No Unauthorized Sharing: We do not sell or rent your contact information to third parties. We will not share your name or email with any external entities beyond what is necessary to operate the conference, unless legally required.
 
-## Your Rights and Choices
+<Divider>Your Rights and Choices</Divider>
+
 Opt Out of Recordings: If you do not wish to be photographed or recorded, please notify us in advance or at the time of the event, and we will make reasonable efforts to accommodate your request.
 Request to Withdraw Media: If you appear in photos or video recordings and want them removed from future publications or online postings, please contact us. We will take steps to cease further use or publication of those materials whenever technically feasible.
+
 Data Access and Deletion: You may request access to, correction of, or deletion of your personal information at any time. To do so, please contact us.
 
-## Data Security
+<Divider>Data Security</Divider>
 We follow generally accepted security standards to protect your personal data, including physical, administrative, and technical safeguards. While no method of transmission or storage is 100% secure, we strive to use industry best practices to protect your information.
 
-## Retention
+<Divider>Retention</Divider>
+
 We will retain your information only for as long as necessary to fulfill the purposes outlined in this Policy or to comply with our legal obligations. Once information is no longer required, we will securely delete or anonymize it.
 
-## Contact Us
+<Divider>Contact Us</Divider>
+
 If you have any questions about this Privacy Policy, or if you wish to make a request regarding your personal information, please contact:
 
 * Email: [chair@foss4g.org](mailto://chair@foss4g.org)
 
-## Updates to This Policy
+<Divider>Updates to This Policy</Divider>
 
 We may update this Privacy Policy to reflect changes in our practices, technology, or legal requirements. Any updates will be posted on the FOSS4G 2025 conference website, and the “Last Updated” date at the top of this page will be revised accordingly.
 
 By registering for or attending FOSS4G 2025, you acknowledge and agree to the collection and use of your personal information as described in this Privacy Policy.
 
-<!-- <FooterImage url="/imgs/2025/auckland.jpg" positionY="35%" height="300" /> -->
