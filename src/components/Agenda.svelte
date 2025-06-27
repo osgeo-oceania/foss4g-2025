@@ -12,14 +12,14 @@
       time: '09:00 - 17:00',
       heading: 'Workshops',
       description:
-        "Workshops will be held at AUT City Campus in the heart of the Auckland central business district. Classrooms are in the WF building. The registration and break area will also be in the WF Buidling."
+        "Workshops will be held at AUT City Campus in the heart of the Auckland central business district. Classrooms are in the WF building. The registration and break area will also be in the WF building."
     },
     {
       days: 'Wed 19 - Fri 21 Nov',
       time: '09:00 - 17:00',
       heading: 'Conference',
       description:
-        'Conference sessions will be held at AUT City Campus in the heart of the Auckland central business district.  All sessions will be held in the WG building. The registration, exhibition and break areas will also be in the WG Buidling.'
+        'Conference sessions will be held at AUT City Campus in the heart of the Auckland central business district.  All sessions will be held in the WG building. The registration, exhibition and break areas will also be in the WG building.'
     },
     {
       days: 'Sat 22 & Sun 23 Nov',
