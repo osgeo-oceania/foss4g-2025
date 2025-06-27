@@ -1,15 +1,16 @@
 <script lang="ts">
   import organisers from '$lib/organisers';
+  import Heading from '$components/Heading.svelte';
 </script>
 
-# Organisers
+<Heading>Organisers</Heading>
 
 <div class="grid sm:grid-cols-2 sm:space-x-6 space-y-6">
 {#each Object.values(organisers) as organiser}
   <div>
       {#await organiser.photo() then photo}
         <div class="sm:float-left items-start sm:w-[200px] mr-2 mb-2">
-        <enhanced:img src={photo.default} class=" aspect-square grayscale object-cover h-full w-full rounded-2xl" />
+        <enhanced:img src={photo.default} class=" aspect-square grayscale object-cover h-full w-full rounded-4xl" />
         </div>
       {/await}
       <span class="text-primary font-bold font-serif text-lg">{organiser.name}</span>

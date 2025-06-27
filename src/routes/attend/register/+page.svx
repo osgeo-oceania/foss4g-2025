@@ -8,27 +8,27 @@ title: Register
 
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
+  import Heading from '$components/Heading.svelte';
   import Link from '$components/Link.svelte';
   import Countdown from '$components/Countdown.svelte';
   import TicketOptions from '$components/TicketOptions.svelte';
 
 </script>
 
-# Register
+<Heading>Register</Heading>
 
 <main class="my-4 space-y-5">
 
   <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
 
-  <Divider>Get Your Tickets</Divider>
+  ## Get Your Tickets
 
   <TicketOptions />
 
 
 </main>
 
-<Divider>Registration Information</Divider>
+## Registration Information
 
 Registration includes conference registration to presentations and talks, morning tea, lunch and afternoon tea for Wednesday 19th, Thursday 20th and Friday 21st November.
 
@@ -45,7 +45,7 @@ It also includes access to the Icebreaker on Tuesday 18th November and the Commu
 
 Please note our [Privacy Policy.](/attend/privacy-policy)
 
-<Divider>Optional extras</Divider>
+## Optional extras
 
 
 | Type                          | Details                                                                                                                                                                                                                                | Cost (NZD)   |

@@ -20,7 +20,7 @@
     },
     {
       label: 'Attend',
-      url: '/program/outline',
+      url: '/attend/register',
       subMenu: [
         {
           label: 'Register',
@@ -82,7 +82,7 @@
 </script>
 
 <div
-  class="navbar border-primary/50 sticky top-0 z-20 h-[30px] rounded-b-lg border-r-1 border-b-1 border-l-1 bg-white px-4 sm:relative sm:top-auto"
+  class="navbar border-primary/10 sticky top-0 z-20 h-16 border-b-1 bg-white px-4 py-2 sm:relative sm:top-auto sm:h-22 sm:border-none sm:py-6"
 >
   <div class="navbar-start z-20 my-4 w-auto">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
@@ -94,7 +94,11 @@
       {#each menuItems as menuItem}
         {#if menuItem.subMenu}
           <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="btn btn-sm rounded-full text-sm font-normal">
+            <div
+              tabindex="0"
+              role="button"
+              class={`btn btn-ghost  rounded-full text-sm font-light ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : ''}`}
+            >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
               {/if}
@@ -109,7 +113,7 @@
                   <Link
                     aria-label={subItem.label}
                     href={subItem.url}
-                    class={`btn btn-sm btn-ghost text-left text-sm font-normal`}
+                    class={`btn  btn-ghost text-left text-sm font-normal`}
                     >{subItem.label}
                   </Link>
                 </li>
@@ -120,7 +124,7 @@
           <Link
             aria-label={menuItem.label}
             href={menuItem.url}
-            class={`btn btn-sm rounded-full text-sm font-normal ${page.route.id === menuItem.url ? 'border-primary' : ''}`}
+            class={`btn  btn-ghost rounded-full text-sm font-light ${page.route.id === menuItem.url ? 'border-primary/50' : ''}`}
             >{menuItem.label}
           </Link>
         {/if}
@@ -130,7 +134,7 @@
     <div class="flex sm:hidden">
       <div class="relative">
         <button
-          class="btn bg-primary btn-square relative z-20 rounded"
+          class="btn bg-secondary btn-square relative z-20 rounded border-none"
           aria-label="menu"
           onclick={() => {
             isMenuOpen = !isMenuOpen;

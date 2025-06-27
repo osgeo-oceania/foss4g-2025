@@ -7,14 +7,14 @@ title: Travel Grant Program
 </svelte:head>
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
+  import Heading from '$components/Heading.svelte';
   import Link from '$components/Link.svelte';
   import Countdown from '$components/Countdown.svelte';
   import GiantButton from '$components/GiantButton.svelte';
 </script>
 
 
-# Travel Grant Program
+<Heading>Travel Grant Program</Heading>
 
 ![Auckland]($images/tg-breakfast.jpg)
 
@@ -63,7 +63,7 @@ If your application is unsuccessful, we will let you know and possibly offer you
 
 <sup>\* Financial assistance is awarded up to this amount for eligible travel costs e.g. accommodation, flights and meals.</sup>
 
-<Divider>Who should apply</Divider>
+## Who should apply
 
 The aim of the program is to increase the chances of attendance and accessibility of this conference to community members and it especially focuses on facilitating the participation for minority groups and categories usually underrepresented. This includes, but it is not limited to:
 
@@ -74,14 +74,14 @@ The aim of the program is to increase the chances of attendance and accessibilit
 - People who will make use of what they learn to make a positive impact on themselves and their communities.
 - People who contribute to open communities, such as contributing to OpenStreetMap, or open source software.
 
-<Divider>How to apply</Divider>
+## How to apply
 
 You can find the application form [here](https://forms.gle/U2VaANxgkqVe48mP9).
 
 Applicant data will be kept confidential and only used for assessing TGP applications. Please ensure that the email address provided is regularly monitored as the selection committee may seek clarification of your response.
 
 
-<Divider>About the TGP</Divider>
+## About the TGP
 
 The Oceania FOSS4G Travel Grant Program initiative was established in 2018 by the OSGeo Oceania Board to facilitate accessibility and diversity at FOSS4G in Melbourne. It is funded by OSGeo Oceania, OSGeo Foundation, proceeds from our generous sponsors, and contributions from organisations and individuals. Please note that the number of grants available is dependent on this funding and the number of applications we receive.
 

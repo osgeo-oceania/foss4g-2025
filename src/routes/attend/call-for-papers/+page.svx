@@ -7,12 +7,12 @@ title: Call for Papers
 </svelte:head>
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
-  import Link from '$components/Link.svelte';
   import Countdown from '$components/Countdown.svelte';
+  import Button from '$components/Button.svelte';
+  import Heading from '$components/Heading.svelte';
 </script>
 
-# Call for Papers
+<Heading>Call for Papers</Heading>
 
 
 <main class="my-4 space-y-5">
@@ -27,7 +27,7 @@ title: Call for Papers
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Presentations and Lightning Talks</div>
           <div class="flex space-x-2">
@@ -41,16 +41,14 @@ title: Call for Papers
             </div>
           </div>
           <div class="sm:w-[300px]">
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-              href="https://talks.osgeo.org/foss4g-2025/cfp"
-              >Submit a Presentation<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+            <Button href="https://talks.osgeo.org/foss4g-2025/cfp">
+              Submit a Presentation
+            </Button>
           </div>
         </div>
       </div>
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Workshops</div>
           <div>
@@ -60,11 +58,10 @@ title: Call for Papers
             The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 18-32 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
           </div>
           <div class="sm:w-[300px]">
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            <Button
               href="https://talks.osgeo.org/foss4g-2025/cfp"
-              >Submit a Workshop<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+              >Submit a Workshop
+            </Button>
           </div>
         </div>
       </div>
@@ -73,7 +70,7 @@ title: Call for Papers
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Academic Papers</div>
@@ -84,27 +81,24 @@ title: Call for Papers
             Articles of all types are welcome, including achieved results, case studies, work in progress, reviews, and demonstrations. We advise against, however, mere presentations of technology or use cases without adequately justifying originality against the scientific state of the art and without particular novelty. Furthermore, authors should properly highlight the use of open-source geospatial software. We especially look forward to contributions from doctoral students and researchers.
           </div>
           <div class="sm:w-[300px]">
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            <Button
               href="https://talks.osgeo.org/foss4g-2025/cfp"
-              >Submit an Academic Paper<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+              >Submit an Academic Paper
+            </Button>
           </div>
         </div>
       </div>
 
-      <div class="card bg-primary rounded-2xl">
+      <div class="card bg-primary rounded-4xl">
         <div class="card-body text-primary-content space-y-2 p-8">
           <div class="text-3xl">Inspiration</div>
           <div>
             Check out our videos of past presentations for inspiration...
           </div>
           <div class="sm:w-[300px]">
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
-              href="https://www.youtube.com/@foss4g-sotm-oceania"
-              >Past Presentations<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+            <Button href="https://www.youtube.com/@foss4g-sotm-oceania">
+              Past Presentations
+            </Button>
           </div>
         </div>
       </div>
@@ -116,14 +110,14 @@ title: Call for Papers
 
 </main>
 
-<Divider>Tips for speakers</Divider>
+## Tips for speakers
 
 The OSGeo community is characterised for its dynamic way of growing and we are proud of welcoming a variety of voices and ideas. If you are considering sending a proposal to our call for papers, consider the following:
 
 - FOSS4G’s backbone is free and open source, so make sure you clearly indicate what is (are) the open source project(s) essential in your talk
 - If you present new developments or a completely new open source project, make sure you point to its repository(ies) so people can follow up.
 
-<Divider>What we expect from you as a speaker</Divider>
+## What we expect from you as a speaker
 
 We believe in equality, so all presenters have the same exact amount of time to present their work, according to their contribution type. Please consider that when preparing your slides and be mindful about the time.
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.

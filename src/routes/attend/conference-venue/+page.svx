@@ -7,12 +7,12 @@ title: Conference Venue
 </svelte:head>
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
+  import Heading from '$components/Heading.svelte';
   import Link from '$components/Link.svelte';
 </script>
 
 
-# Our Conference Venue
+<Heading>Our Conference Venue</Heading>
 
 ![AUT]($images/stock/autuni1.jpg)
 
@@ -32,7 +32,7 @@ High Speed internet access is available across the entire AUT campus and support
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Workshop Facilities</div>
           <div class="flex space-x-2">
@@ -44,7 +44,7 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
         </div>
       </div>
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Venue Accessibility</div>
           <div>
@@ -60,9 +60,9 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         
-      <div class="card bg-primary rounded-2xl">
+      <div class="card bg-primary rounded-4xl">
         <div class="card-body text-primary-content space-y-2 p-8">
           <div class="text-3xl">Childcare Facilities</div>
           <div>
@@ -89,7 +89,7 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
 
 
 
-<Divider>Sustainability - environmental and social responsibility</Divider>
+## Sustainability - environmental and social responsibility
 
 AUT is committed to achieving sustainability and taking regenerative action in light of local and global challenges. AUT continue to nurture a culture of sustainability through learning, teaching, research, partnerships and how we operate our on-campus facilities.
 

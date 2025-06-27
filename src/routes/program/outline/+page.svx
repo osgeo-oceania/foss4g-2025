@@ -4,13 +4,14 @@ title: Program Outline
 
 <script lang="ts">
   import Agenda from '$components/Agenda.svelte';
+  import Heading from '$components/Heading.svelte';
 </script>
 
 <!-- TODO -->
 
 ![Auckland]($images/main-room.jpg)
 
-# Program Outline
+<Heading>Program Outline</Heading>
 
 The general program outline for sessions and social events:
 

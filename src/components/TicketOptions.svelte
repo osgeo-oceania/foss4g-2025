@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Button from './Button.svelte';
   import Link from './Link.svelte';
 
   const ticketOptions = [
@@ -11,24 +12,24 @@
     },
     {
       title: 'Student/Retired Pass',
-      description: 'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
+      description:
+        'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
       price: '$500',
-      cardClass: 'bg-white border-1 border-primary',
-      buttonClass: 'bg-success'
+      cardClass: 'bg-white border-1 border-primary/50'
     },
     {
       title: 'Community Contributor',
-      description: 'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
+      description:
+        'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
       price: '$500',
-      cardClass: 'bg-white border-1 border-primary',
-      buttonClass: 'bg-success'
+      cardClass: 'bg-white border-1 border-primary/50'
     }
   ];
 </script>
 
 {#snippet ticketOption(tOption: (typeof ticketOptions)[0])}
-  <div class={`card ${tOption.cardClass} rounded-2xl p-6`}>
-    <div class="flex sm:flex-col">
+  <div class={`card ${tOption.cardClass} flex flex-col justify-between rounded-4xl p-6 sm:p-10`}>
+    <div class="flex grow justify-between sm:flex-col">
       <div>
         <div class="mb-3 text-sm uppercase">
           {tOption.title}
@@ -37,14 +38,17 @@
           {tOption.description}
         </div>
       </div>
-      <div class="flex flex-1 justify-end text-2xl sm:justify-normal">
+      <div class="flex flex-1 items-end justify-end text-2xl sm:justify-normal">
         {tOption.price}
       </div>
     </div>
     <div class="mt-4 flex justify-end sm:justify-normal">
-      <Link href="https://ti.to/osgeo-oceania/foss4g-2025" class={`btn rounded-full text-sm  font-normal ${tOption.buttonClass}`}>
-        Get Your Ticket <span class="icon-[lucide--arrow-up-right] block"></span>
-      </Link>
+      <Button
+        href="https://ti.to/osgeo-oceania/foss4g-2025"
+        class={`text-sm ${tOption.buttonClass}`}
+      >
+        Get Your Ticket
+      </Button>
     </div>
   </div>
 {/snippet}

@@ -8,13 +8,13 @@ title: Entry into New Zealand
 </svelte:head>
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
-  import Link from '$components/Link.svelte';
+  import Heading from '$components/Heading.svelte';
+  import Button from '$components/Button.svelte';
 </script>
 
 
 
-# Entry into New Zealand
+<Heading>Entry into New Zealand</Heading>
 
 ![Auckland]($images/stock/airbus_a320-232_air_new_zealand.jpg)
 
@@ -29,7 +29,7 @@ title: Entry into New Zealand
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card bg-primary rounded-2xl">
+      <div class="card bg-primary rounded-4xl">
         <div class="card-body text-primary-content space-y-2 p-8">
           <div class="text-3xl">Australian Citizens</div>
           <div class="flex space-x-2">
@@ -40,7 +40,7 @@ title: Entry into New Zealand
         </div>
       </div>
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Australian Permanent Residents</div>
           <div>
@@ -63,7 +63,7 @@ title: Entry into New Zealand
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-      <div class="card bg-secondary rounded-2xl">
+      <div class="card bg-secondary rounded-4xl">
         <div class="card-body space-y-2 p-8">
           <div class="text-3xl">Visa Waiver Country or Territory</div>
           <div>
@@ -87,11 +87,10 @@ title: Entry into New Zealand
             For further information and a list of eligible countries, visit: 
           </div>
           <div>
-            <Link
-              class="btn btn-block btn-success btn-lg rounded-full py-4 font-normal"
+            <Button
               href="https://www.immigration.govt.nz/visas/new-zealand-electronic-travel-authority-nzeta/"
-              >NZeTA<span class="icon-[lucide--arrow-up-right] block"></span>
-            </Link>
+              >NZeTA
+            </Button>
 
           </div>
         </div>
@@ -106,7 +105,7 @@ title: Entry into New Zealand
 </main>
 
 
-<Divider>Other Nationalities</Divider>
+## Other Nationalities
 
 If you are **not a New Zealand or Australian citizen** and **not eligible for a NZeTA**, you will need to apply
 for a **New Zealand visitor visa**.
@@ -117,7 +116,7 @@ For more information, visit:
 **Processing time**: Up to 4 months
 
 
-<Divider>Visa Support for FOSS4G 2025 Attendees</Divider>
+## Visa Support for FOSS4G 2025 Attendees
 
 **OSGeo Oceania**, as the organiser of **FOSS4G 2025**, can issue a **letter of invitation** to
 support your New Zealand visitor visa application.

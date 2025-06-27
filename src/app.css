@@ -28,6 +28,7 @@
   body {
     width: 100%;
     height: 100%;
+    color: var(--color-primary);
   }
 
   .prose p > picture {
@@ -40,4 +41,12 @@
     object-fit: cover;
     overflow: clip;
   }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans;
 }

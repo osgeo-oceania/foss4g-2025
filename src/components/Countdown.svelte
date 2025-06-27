@@ -1,6 +1,6 @@
 <script lang="ts">
   const { label, time }: { label: string; time: string } = $props();
-  import NewZealandSvg from '$images/svg/new-zealand.svg?url'
+  import NewZealandSvg from '$images/svg/new-zealand.svg?url';
 
   let currentTime = $state(new Date());
   const targetTime = new Date(time);
@@ -16,32 +16,40 @@
   const seconds = $derived(Math.floor((diff % (1000 * 60)) / 1000));
 </script>
 
-<div class="relative bg-primary flex sm:min-h-[300px] flex-col rounded-2xl p-6 sm:p-12 text-white">
+<div class="bg-primary relative flex flex-col rounded-4xl p-6 text-white sm:min-h-[300px] sm:p-12">
   <div class="text-3xl text-white">
     {label}
   </div>
-  <div class="flex mt-4 sm:mt-8">
+  <div class="mt-4 flex sm:mt-8">
     <div>
-      <div class="sm:text-8xl text-3xl text-center sm:w-[120px] w-[50px]">{days.toString().padStart(2, '0')}</div>
+      <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
+        {days.toString().padStart(2, '0')}
+      </div>
       <div class="text-center text-xs">days</div>
     </div>
-    <div class="sm:text-8xl text-3xl">:</div>
+    <div class="text-3xl sm:text-8xl">:</div>
     <div>
-      <div class="sm:text-8xl text-3xl text-center sm:w-[120px] w-[50px]">{hours.toString().padStart(2, '0')}</div>
+      <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
+        {hours.toString().padStart(2, '0')}
+      </div>
       <div class="text-center text-xs">hours</div>
     </div>
-    <div class="sm:text-8xl text-3xl">:</div>
+    <div class="text-3xl sm:text-8xl">:</div>
     <div>
-      <div class="sm:text-8xl text-3xl text-center sm:w-[120px] w-[50px]">{minutes.toString().padStart(2, '0')}</div>
+      <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
+        {minutes.toString().padStart(2, '0')}
+      </div>
       <div class="text-center text-xs">minutes</div>
     </div>
-    <div class="sm:text-8xl text-3xl">:</div>
+    <div class="text-3xl sm:text-8xl">:</div>
     <div>
-      <div class="sm:text-8xl text-3xl text-center sm:w-[120px] w-[50px]">{seconds.toString().padStart(2, '0')}</div>
+      <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
+        {seconds.toString().padStart(2, '0')}
+      </div>
       <div class="text-center text-xs">seconds</div>
     </div>
   </div>
-  <div class="flex justify-center absolute right-0 top-0 h-full">
-    <img src={NewZealandSvg} class="w-[80%]" alt="New Zealand"/>
+  <div class="absolute top-0 right-0 flex h-full justify-center">
+    <img src={NewZealandSvg} class="w-[80%]" alt="New Zealand" />
   </div>
 </div>

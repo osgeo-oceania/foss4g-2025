@@ -12,7 +12,7 @@
       time: '09:00 - 17:00',
       heading: 'Workshops',
       description:
-        "Workshops will be held at AUT City Campus in the heart of the Auckland central business district. Classrooms are in the WF building. The registration and break area will also be in the WF building."
+        'Workshops will be held at AUT City Campus in the heart of the Auckland central business district. Classrooms are in the WF building. The registration and break area will also be in the WF building.'
     },
     {
       days: 'Wed 19 - Fri 21 Nov',
@@ -32,21 +32,21 @@
 </script>
 
 {#snippet agendaItemGrid(item: AgendaItem)}
-  <div class="grid sm:grid-cols-12 pl-8 pr-12 py-4">
-    <div class="sm:col-span-5 flex sm:flex-col justify-between sm:justify-center sm:text-2xl">
+  <div class="grid py-4 pr-4 pl-2 sm:grid-cols-12 sm:py-8 sm:pr-12 sm:pl-8">
+    <div class="flex justify-between sm:col-span-5 sm:flex-col sm:justify-start sm:text-2xl">
       <div>{item.days}</div>
       <div>{item.time}</div>
     </div>
     <div class="sm:col-span-7">
       <div class="mb-2 text-2xl">{item.heading}</div>
-      <p class="text-sm pr-8">
+      <p class="pr-8 text-sm">
         {item.description}
       </p>
     </div>
   </div>
 {/snippet}
 
-<div class="grid divide-y">
+<div class="bg-primary/5 grid rounded-4xl p-4 sm:px-8 sm:py-12">
   {#each agendaItems as agendaItem}
     {@render agendaItemGrid(agendaItem)}
   {/each}

@@ -1,10 +1,14 @@
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+</script>
+
 ---
 title: Logo Competition
 ---
 
 ![Auckland]($images/logo-design-sketching.jpg)
 
-# FOSS4G 2025/Logo Competition
+<Heading>FOSS4G 2025/Logo Competition</Heading>
 
 The FOSS4G 2025 Logo Competition is now CLOSED!
 

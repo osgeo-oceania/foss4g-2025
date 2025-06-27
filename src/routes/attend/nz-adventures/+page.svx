@@ -8,18 +8,18 @@ title: Adventures in Auckland
 
 
 <script lang="ts">
-  import Divider from '$components/Divider.svelte';
+  import Heading from '$components/Heading.svelte';
   import Link from '$components/Link.svelte';
   import Countdown from '$components/Countdown.svelte';
 </script>
 
 
-# Family-Friendly Events and Activities in Auckland 
+<Heading>Family-Friendly Events and Activities in Auckland </Heading>
 
 ![Auckland]($images/stock/aps_6811_rtf.jpg)
 
 
-<Divider>Cultural & Nature Experiences</Divider>
+## Cultural & Nature Experiences
 
 ### [Auckland Zoo](https://www.aucklandzoo.co.nz/)
 Explore animals from all over the world, with interactive exhibits and kid-friendly activities.
@@ -56,7 +56,7 @@ Great for a relaxing stroll, picnics, and exploring the lush botanical gardens.
 
 ---
 
-<Divider>Adventure Activities</Divider>
+## Adventure Activities
 
 ### [Waiheke Island](https://www.waiheke.co.nz/)
 Take a ferry to this stunning island for beaches, family-friendly vineyards, and walking trails.
@@ -103,7 +103,7 @@ Incredible views of the city, plus the **SkyWalk** and **SkyJump** for thrill-se
 
 ---
 
-<Divider>Day Trips Outside Auckland</Divider>
+## Day Trips Outside Auckland
 
 ### [Rangitoto Island](https://www.newzealand.com/int/rangitoto-island/)
 A volcanic island perfect for hiking and exploring caves (suitable for older children).
