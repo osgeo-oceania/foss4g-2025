@@ -4,6 +4,14 @@
   import { page } from '$app/state';
 
   let isMenuOpen = $state(false);
+  $effect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = '';
+      };
+    }
+  });
 
   let menuItems = [
     {
@@ -74,9 +82,9 @@
 </script>
 
 <div
-  class="navbar border-primary/50 z-20 h-[30px] rounded-b-lg border-r-1 border-b-1 border-l-1 bg-white px-4"
+  class="navbar border-primary/50 sticky top-0 z-20 h-[30px] rounded-b-lg border-r-1 border-b-1 border-l-1 bg-white px-4 sm:relative sm:top-auto"
 >
-  <div class="navbar-start my-4 w-auto">
+  <div class="navbar-start z-20 my-4 w-auto">
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
   </div>
 
@@ -120,42 +128,54 @@
     </div>
     <!-- mobile menu -->
     <div class="flex sm:hidden">
-      <div class="dropdown dropdown-end">
+      <div class="relative">
         <button
-          class="btn bg-primary btn-square rounded"
+          class="btn bg-primary btn-square relative z-20 rounded"
           aria-label="menu"
-          ontouchmove={() => {
+          onclick={() => {
             isMenuOpen = !isMenuOpen;
           }}
         >
-          <span class="icon-[material-symbols-light--menu] h-12 w-12 bg-white"></span>
+          <span
+            class="{isMenuOpen
+              ? 'icon-[material-symbols-light--close]'
+              : 'icon-[material-symbols-light--menu]'} h-12 w-12 bg-white"
+          ></span>
         </button>
-        <ul
-          class="menu dropdown-content bg-base-100 rounded-box z-1 mt-2 w-52 p-2 shadow-sm min-w-[240px] {isMenuOpen ? 'dropdown-open' : ''}"
-        >
-          {#each menuItems as menuItem}
-            <li>
-              <Link
-                aria-label={menuItem.label}
-                href={menuItem.url}
-                class={`text-sm font-normal ${menuItem.subMenu ? 'underline font-bold': ''}`}
-                >{menuItem.label}</Link
-              >
-            </li>
-            {#if menuItem.subMenu}
-              {#each menuItem.subMenu as subMenuItem}
-                <li>
+        {#if isMenuOpen}
+          <div
+            class="border-primary/50 fixed inset-0 z-10 overflow-y-auto border-r-1 border-l-1 bg-white"
+          >
+            <ul class="menu max-w-lg p-8 pt-24">
+              {#each menuItems as menuItem}
+                <li class="mb-2">
                   <Link
-                    aria-label={subMenuItem.label}
-                    href={subMenuItem.url}
-                    class={`text-sm font-normal ml-5`}
-                    >{subMenuItem.label}</Link
+                    aria-label={menuItem.label}
+                    href={menuItem.url}
+                    class={`text-lg font-normal ${menuItem.subMenu ? 'font-bold' : ''}`}
+                    onclick={() => {
+                      if (!menuItem.subMenu) isMenuOpen = false;
+                    }}>{menuItem.label}</Link
                   >
                 </li>
+                {#if menuItem.subMenu}
+                  {#each menuItem.subMenu as subMenuItem}
+                    <li class="ml-8">
+                      <Link
+                        aria-label={subMenuItem.label}
+                        href={subMenuItem.url}
+                        class={`text-base font-normal text-gray-600`}
+                        onclick={() => {
+                          isMenuOpen = false;
+                        }}>{subMenuItem.label}</Link
+                      >
+                    </li>
+                  {/each}
+                {/if}
               {/each}
-            {/if}
-          {/each}
-        </ul>
+            </ul>
+          </div>
+        {/if}
       </div>
     </div>
   </div>
