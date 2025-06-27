@@ -62,7 +62,7 @@
     },
     {
       label: 'Program',
-      url: '/speakers',
+      url: '/program/outline',
       subMenu: [
         {
           label: 'Outline',
@@ -143,18 +143,16 @@
           ></span>
         </button>
         {#if isMenuOpen}
-          <div
-            class="border-primary/50 fixed inset-0 z-10 overflow-y-auto border-r-1 border-l-1 bg-white"
-          >
-            <ul class="menu max-w-lg p-8 pt-24">
+          <div class="fixed inset-0 z-10 mt-16 overflow-y-auto bg-white">
+            <ul class="menu max-w-lg p-8 pt-4">
               {#each menuItems as menuItem}
-                <li class="mb-2">
+                <li class="mt-2">
                   <Link
                     aria-label={menuItem.label}
                     href={menuItem.url}
                     class={`text-lg font-normal ${menuItem.subMenu ? 'font-bold' : ''}`}
                     onclick={() => {
-                      if (!menuItem.subMenu) isMenuOpen = false;
+                      isMenuOpen = false;
                     }}>{menuItem.label}</Link
                   >
                 </li>
