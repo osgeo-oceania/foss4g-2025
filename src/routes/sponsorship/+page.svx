@@ -86,7 +86,7 @@ If you have any questions or suggestions, email us at [sponsorship@foss4g.org](m
 
 ★★★ Dinner tickets are valued at $150 / person
 
-<Divider>Premium sponsor opportunties (Gold+ level only)</Divider>
+<Divider>Premium Opportunties (Gold+ level only)</Divider>
 
 ### Lanyard sponsor
 
@@ -112,7 +112,7 @@ _$8,000 NZD + GST_
 
 Sponsor the conference dinner including "supported by" recognition and an opportunity to speak at the dinner.
 
-<Divider>Extra sponsorship opportunities (Silver+ level only)</Divider>
+<Divider>Extra Opportunities (Silver+ level only)</Divider>
 
 * GeoChicas ($5,000 + GST) - Sponsor the geochickas networking event, including “supported by” recognition and
 an opportunity to speak
@@ -121,9 +121,11 @@ including “supported by” recognition and an opportunity to speak.
 * Travel Grant Program Breakfast ($4,000 + GST) - Support the travel grant program breakfast,
 includes a brief address and attendance at the breakfast for up to 2.
 
-<Divider>Support someone to attend by becoming a travel grant program sponsor</Divider>
+<Divider>Travel Grant Program Sponsorship</Divider>
 
-A program that helps those with fewer financial resources to attend the conference.
+Support someone to attend by becoming a Travel Grant Program sponsor.
+
+The Travel Grant Program that helps those with fewer financial resources to attend the conference.
 
 * Add to the Travel Grant Program Long Distance ($3,500 + GST) - Top up the funds and help another person to
 people come along. Includes attendance at the TGP breakfast for 2.
