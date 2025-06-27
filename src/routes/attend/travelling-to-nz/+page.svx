@@ -29,8 +29,8 @@ title: Entry into New Zealand
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card bg-secondary rounded-2xl">
-        <div class="card-body space-y-2 p-8">
+      <div class="card bg-primary rounded-2xl">
+        <div class="card-body text-primary-content space-y-2 p-8">
           <div class="text-3xl">Australian Citizens</div>
           <div class="flex space-x-2">
             <div>
@@ -68,7 +68,9 @@ title: Entry into New Zealand
           <div class="text-3xl">Visa Waiver Country or Territory</div>
           <div>
             Many people can use a <strong>New Zealand Electronic Travel Authority (NZeTA)</strong> to enter New Zealand without applying for a visa first.
-            <br/>This depends on:
+          </div>
+          <div>
+            This depends on:
             <ul>
               <li>
                 Your <strong>passport</strong>
