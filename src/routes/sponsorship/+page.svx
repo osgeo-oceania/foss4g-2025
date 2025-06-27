@@ -2,13 +2,19 @@
 title: Sponsorship
 ---
 
-<script>
+<svelte:head>
+  <title>Sponsorship</title>
+</svelte:head>
+
+<script lang="ts">
+  import Divider from '$components/Divider.svelte';
+  import Link from '$components/Link.svelte';
   import GiantButton from '$components/GiantButton.svelte';
 </script>
 
-![Auckland]($images/sponsor-header.jpg)
-
 # Information for Sponsors
+
+![Auckland]($images/sponsor-header.jpg)
 
 <GiantButton href="https://drive.google.com/file/d/1eD39UmTijPJju1mvjlVVrJbQNoauN2FL/view">Access the Sponsorship Prospectus</GiantButton>
 
@@ -17,15 +23,15 @@ FOSS4G is a global event that brings together the open geospatial community. FOS
 
 In 2025, FOSS4G conference is being held in Auckland, New Zealand.
 
-![Auckland]($images/auckland.jpg)
+![Auckland]($images/stock/view-of-auckland-city-from-mount-eden.jpg)
 
-## Attendee Profile
+<Divider>Attendee Profile</Divider>
 
 Previous FOSS4G conferences in Belem, Prizren, Florence, Buenos Aires, Bucharest, Dar Es Salaam and many other cities all over the world were a fantastic success, with Florence taking the record of having over 1,200 attendees. Since we are further afar, we aren't expecting that many, but we hope for more than 600 people to come to New Zealand for our event.
 
 Sponsors of FOSS4G gain access to a diverse group of people shaping the evolution of open source geospatial software. The conference is a healthy mix of both software developers, end users, decision makers and scientists.
 
-## What happens at FOSS4G?
+<Divider>What happens at FOSS4G?</Divider>
 
 The conference is formally a five day event, with two days of hands-on workshop followed by three days of conference. The weekend after the conference is an extra two day code sprint or community collaboration opportunity.
 
@@ -35,7 +41,7 @@ The main conference runs as a mix of plenary and stream sessions, including acad
 
 ![Auckland]($images/main-room.jpg)
 
-## Why you should sponsor FOSS4G
+<Divider>Why you should sponsor FOSS4G</Divider>
 
 ### Exposure to a growing community
 
@@ -51,13 +57,13 @@ Sponsorship has allowed us to lower the ticket prices for students and community
 
 ![Auckland]($images/tg-breakfast.jpg)
 
-## Who runs FOSS4G?
+<Divider>Who runs FOSS4G?</Divider>
 
 The success of our regional FOSS4G event in Melbourne 2018 illustrated the need for a longer-term governance structure for Oceania's geospatial community. [OSGeo Oceania](https://wiki.osgeo.org/wiki/Oceania) was formed as a  not-for-profit entity to support the long-term sustainability of our community in the region and is recognised as a local chapter of both the OSGeo foundation and OpenStreetMap Foundations.
 
 A dedicated and experienced conference committee has been established to focus on the delivery of a successful FOSS4G 2025 in Auckland, New Zealand.
 
-## Sponsorship packages
+<Divider>Sponsorship packages</Divider>
 
 |         Benefits         |    Platinum     |      Gold       |     Silver      |      Bronze      |
 | :----------------------: | :-------------: | :-------------: | :-------------: | :--------------: |
@@ -80,7 +86,7 @@ If you have any questions or suggestions, email us at [sponsorship@foss4g.org](m
 
 ★★★ Dinner tickets are valued at $150 / person
 
-## Premium sponsor opportunties (Gold+ level only)
+<Divider>Premium sponsor opportunties (Gold+ level only)</Divider>
 
 ### Lanyard sponsor
 
@@ -106,7 +112,7 @@ _$8,000 NZD + GST_
 
 Sponsor the conference dinner including "supported by" recognition and an opportunity to speak at the dinner.
 
-## Extra sponsorship opportunities (Silver+ level only)
+<Divider>Extra sponsorship opportunities (Silver+ level only)</Divider>
 
 * GeoChicas ($5,000 + GST) - Sponsor the geochickas networking event, including “supported by” recognition and
 an opportunity to speak
@@ -115,7 +121,7 @@ including “supported by” recognition and an opportunity to speak.
 * Travel Grant Program Breakfast ($4,000 + GST) - Support the travel grant program breakfast,
 includes a brief address and attendance at the breakfast for up to 2.
 
-## Support someone to attend by becoming a travel grant program sponsor
+<Divider>Support someone to attend by becoming a travel grant program sponsor</Divider>
 
 A program that helps those with fewer financial resources to attend the conference.
 
@@ -124,11 +130,11 @@ people come along. Includes attendance at the TGP breakfast for 2.
 * Add to the Travel Grant Program Short Distance ($1,500 + GST) - Support someone from nearby with funds to
 support travel. Includes attendance at the TGP breakfast for 1.
 
-## Package specifics
+<Divider>Package specifics</Divider>
 
 Please refer to the [sponsorship document](https://drive.google.com/file/d/1eD39UmTijPJju1mvjlVVrJbQNoauN2FL/view) for all the details.
 
-## Contacts
+<Divider>Contacts</Divider>
 
 Get in touch with Alex Leith and Greg Lauer at [sponsorship@foss4g.org](mailto:sponsorship@foss4g.org).
 
