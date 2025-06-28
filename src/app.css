@@ -51,7 +51,7 @@
     font-weight: 300;
   }
 
-  .prose p > picture {
+  .prose p > picture:not(.no-border-radius) {
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@
 
   /* No border radius for small screens */
   @media (max-width: 640px) {
-    .prose p > picture {
+    .prose p > picture:not(.no-border-radius) {
       border-radius: 0 !important;
       margin-left: -16px !important;
       margin-right: -16px !important;

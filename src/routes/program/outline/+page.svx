@@ -4,14 +4,14 @@ title: Program Outline
 
 <script lang="ts">
   import Agenda from '$components/Agenda.svelte';
-  import Heading from '$components/Heading.svelte';
+  import ProgramOutline from '$images/foss4g2025_program_outline.jpg?enhanced';
 </script>
 
 <!-- TODO -->
 
 ![Auckland]($images/main-room.jpg)
 
-<Heading>Program Outline</Heading>
+# Program Outline
 
 The general program outline for sessions and social events:
 
@@ -26,7 +26,9 @@ The general program outline for sessions and social events:
 | Saturday 22 November  | Community Day |                                    |                   |
 | Sunday 23 November    | Community Day |                                    |                   |
 
-![Program Outline]($images/foss4g2025_program_outline.jpg)
+<picture class="no-border-radius">
+  <enhanced:img src={ProgramOutline} alt="Program Outline" />
+</picture>
 
 
 We expect to have the first full detailed schedule released by the end of August 2025.
