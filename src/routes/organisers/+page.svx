@@ -5,18 +5,19 @@
 
 <Heading>Organisers</Heading>
 
-<div class="grid sm:grid-cols-2 sm:space-x-6 space-y-6">
+<div class="grid sm:grid-cols-4 gap-x-2 sm:gap-x-4 sm:gap-y-12 gap-y-6">
 {#each Object.values(organisers) as organiser}
-  <div>
+
       {#await organiser.photo() then photo}
-        <div class="sm:float-left items-start sm:w-[200px] mr-2 mb-2">
+        <div class="items-start">
         <enhanced:img src={photo.default} class=" aspect-square grayscale object-cover h-full w-full rounded-4xl" />
         </div>
       {/await}
+      <div>
       <span class="text-primary font-bold font-serif text-lg">{organiser.name}</span>
-      <div class="text-secondary uppercase text-sm">{organiser.title}</div>
-      <div class="text-xs">{@html organiser.bio}</div>
+      <div class="text-secondary uppercase text-md">{organiser.title}</div>
     </div>
+    <div class="text-sm col-span-2">{@html organiser.bio}</div>
 {/each}
 </div>
 
