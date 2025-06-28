@@ -5,20 +5,19 @@
 
 <Heading>Organisers</Heading>
 
-<div class="grid sm:grid-cols-4 gap-x-2 sm:gap-x-4 sm:gap-y-12 gap-y-6">
-{#each Object.values(organisers) as organiser}
-
-      {#await organiser.photo() then photo}
-        <div class="items-start">
-        <enhanced:img src={photo.default} class=" aspect-square grayscale object-cover h-full w-full rounded-4xl" />
-        </div>
-      {/await}
-      <div>
-      <span class="text-primary font-bold font-serif text-lg">{organiser.name}</span>
-      <div class="text-secondary uppercase text-md">{organiser.title}</div>
+<div class="-mx-2 sm:bg-primary/5 grid sm:grid-cols-3 gap-y-4 sm:gap-y-16 rounded-4xl p-4 sm:p-12">
+  {#each Object.values(organisers) as organiser}
+    {#await organiser.photo() then photo}
+      <div class="flex items-center justify-center sm:items-start sm:justify-start col-span-2 sm:col-span-1">
+      <enhanced:img src={photo.default} class="grayscale object-cover h-48 sm:h-64 w-48 rounded-4xl" />
+      </div>
+    {/await}
+    <div class="col-span-2 sm:mb-0 mb-12">
+      <div class="text-primary font-serif text-2xl mb-4">{organiser.name}</div>
+      <div class="text-secondary uppercase text-lg mb-2">{organiser.title}</div>
+      <div class="text-sm col-span-2">{@html organiser.bio}</div>
     </div>
-    <div class="text-sm col-span-2">{@html organiser.bio}</div>
-{/each}
+  {/each}
 </div>
 
 <style>
