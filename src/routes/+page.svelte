@@ -81,15 +81,14 @@
   </div>
 
   <!-- Sponsor Grid -->
-
-  <div class="grid grid-cols-3 space-y-3 sm:grid-cols-5 sm:space-y-3">
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
     {#each Object.values(Sponsors)
       .filter((sponsor) => sponsor.level < 5)
       .sort((a, b) => a.level - b.level) as sponsor}
       {#await sponsor.logo() then module}
-        <div class="flex items-center justify-center px-4 sm:px-8">
-          <div class="">
-            <enhanced:img src={module.default} alt={sponsor.name} />
+        <div class="flex items-center justify-center px-4 sm:px-8 w-1/3 sm:w-1/5">
+          <div class="max-w-full">
+            <enhanced:img src={module.default} alt={sponsor.name} class="max-h-16 w-auto sm:max-h-20" />
           </div>
         </div>
       {/await}
@@ -247,14 +246,14 @@
 
     {#if sponsorsAtLevel.length > 0}
       <div class="flex flex-col gap-2 sm:gap-6">
-        <h3 class="text-center uppercase">
-          {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
+          <h3 class="text-center uppercase !font-serif !text-lg">
+            {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
         </h3>
 
-        <div class="flex flex-wrap items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
           {#each sponsorsAtLevel as sponsorAtLevel}
             {#await sponsorAtLevel.logo() then module}
-              <div class="flex items-center justify-center px-4 sm:max-w-60 sm:px-8">
+              <div class="flex items-center justify-center px-6 sm:px-10 sm:max-w-60">
                 <enhanced:img
                   src={module.default}
                   alt={sponsorAtLevel.name}
@@ -284,7 +283,7 @@ researchers together from around the world
 
 **_Tēnā koutou katoa (Greetings to all of you)_**
 
-The passionate geospatial community of OSGeo Oceania extends a warm invitation to the global FOSS4G conference in Auckland, New Zealand in 2025. We envision Auckland as the stage for a vibrant gathering that fosters collaboration and celebrates innovation in the exciting world of Free and Open Source Software for Geospatial (FOSS4G). Our Pacific family is a warm and welcoming group and it’s exciting to have this opportunity to share our place with the global FOSS4G community.
+The passionate geospatial community of OSGeo Oceania extends a warm invitation to the global FOSS4G conference in Auckland, New Zealand in 2025. We envision Auckland as the stage for a vibrant gathering that fosters collaboration and celebrates innovation in the exciting world of Free and Open Source Software for Geospatial (FOSS4G). Our Pacific family is a warm and welcoming group and it's exciting to have this opportunity to share our place with the global FOSS4G community.
 
 **A Commitment to Openness and Inclusion:**
 
