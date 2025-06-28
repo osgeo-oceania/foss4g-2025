@@ -45,17 +45,17 @@
 </svelte:head>
 
 <!-- Hero -->
-<main class="m:space-y-12 mb-8 space-y-16">
+<main class="m:space-y-12 mb-8 space-y-12 sm:space-y-16">
   <div class="hero flex">
     <div
       class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-10 sm:py-12"
     >
       <div
-        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 pr-8 pb-8 sm:h-96 sm:w-96"
+        class="[&_path]:!fill-primary absolute -z-10 h-72 w-72 sm:right-0 sm:bottom-0 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8"
       >
         {@html Foss4g2025Logo}
         <div
-          class="to-secondary/90 absolute inset-0 rounded-4xl bg-gradient-to-b from-transparent"
+          class="to-secondary/90 from-secondary/30 absolute inset-0 rounded-4xl bg-gradient-to-b sm:from-transparent"
         ></div>
       </div>
       <div
@@ -65,7 +65,7 @@
         <div>Tāmaki Makaurau, Aotearoa New Zealand</div>
       </div>
       <div class="w-full flex-grow space-y-4">
-        <div class="font-serif text-2xl leading-tight text-white sm:text-7xl">
+        <div class="font-serif text-4xl leading-tight text-white sm:text-7xl">
           FOSS4G<br />Auckland 2025
         </div>
         <div class="text-md font-serif text-white sm:w-[85%]">
@@ -201,7 +201,7 @@
 -->
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
-    <div class="flex h-full w-full flex-1 p-2 text-white">
+    <div class="flex h-full w-full flex-1 py-1 text-white sm:p-2">
       <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-4xl px-8 py-6">
         <div class="pb-4 text-sm font-normal uppercase">{reason.title}</div>
         <div
@@ -246,12 +246,12 @@
     {@const sponsorsAtLevel = Object.values(Sponsors).filter((sponsor) => sponsor.level == level)}
 
     {#if sponsorsAtLevel.length > 0}
-      <div class="flex flex-col gap-6 sm:space-y-0">
+      <div class="flex flex-col gap-2 sm:gap-6">
         <h3 class="text-center uppercase">
           {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
         </h3>
 
-        <div class="flex flex-wrap items-center justify-center space-y-6 sm:space-y-0">
+        <div class="flex flex-wrap items-center justify-center">
           {#each sponsorsAtLevel as sponsorAtLevel}
             {#await sponsorAtLevel.logo() then module}
               <div class="flex items-center justify-center px-4 sm:max-w-60 sm:px-8">
@@ -268,7 +268,7 @@
     {/if}
   {/snippet}
 
-  <div class="flex flex-col gap-16">
+  <div class="flex flex-col gap-8 sm:gap-16">
     {#each Object.entries(SPONSOR_LEVELS) as [title, level]}
       {@render sponsorLevel(title, level)}
     {/each}
