@@ -97,7 +97,7 @@
             <div
               tabindex="0"
               role="button"
-              class={`btn btn-ghost rounded-full text-sm font-light ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : ''}`}
+              class={`rounded-full text-sm font-light px-4 py-2 hover:bg-success hover:text-primary transition-all duration-200 border flex items-center ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
             >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
@@ -106,14 +106,14 @@
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
             <ul
               tabindex="0"
-              class="dropdown-content menu bg-base-100 rounded-box left-1/2 z-1 -translate-x-1/2 p-2 shadow-sm"
+              class="dropdown-content menu bg-primary text-white rounded-box left-1/2 z-1 -translate-x-1/2 p-2 border border-primary/50 shadow-lg"
             >
               {#each menuItem.subMenu as subItem}
                 <li>
                   <Link
                     aria-label={subItem.label}
                     href={subItem.url}
-                    class={`btn  btn-ghost text-left text-sm font-normal whitespace-nowrap`}
+                    class={`text-left text-sm font-light whitespace-nowrap px-4 py-2 hover:bg-success hover:text-primary hover:border-none transition-all duration-200`}
                     >{subItem.label}
                   </Link>
                 </li>
@@ -124,7 +124,7 @@
           <Link
             aria-label={menuItem.label}
             href={menuItem.url}
-            class={`btn  btn-ghost rounded-full text-sm font-light ${page.route.id === menuItem.url ? 'border-primary/50' : ''}`}
+            class={`rounded-full text-sm font-light px-4 py-2 hover:bg-success hover:text-primary transition-all duration-200 border ${page.route.id === menuItem.url ? 'border-primary/50' : 'border-transparent'}`}
             >{menuItem.label}
           </Link>
         {/if}
@@ -154,7 +154,7 @@
                   <Link
                     aria-label={menuItem.label}
                     href={menuItem.url}
-                    class={`text-lg font-normal ${menuItem.subMenu ? 'font-bold' : ''}`}
+                    class={`text-lg font-light ${menuItem.subMenu ? 'font-bold' : ''}`}
                     onclick={() => {
                       isMenuOpen = false;
                     }}>{menuItem.label}</Link
@@ -166,7 +166,7 @@
                       <Link
                         aria-label={subMenuItem.label}
                         href={subMenuItem.url}
-                        class={`text-base font-normal text-gray-600`}
+                        class={`text-base font-light text-gray-600`}
                         onclick={() => {
                           isMenuOpen = false;
                         }}>{subMenuItem.label}</Link
