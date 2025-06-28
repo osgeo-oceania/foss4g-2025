@@ -38,7 +38,7 @@
       <div>{item.time}</div>
     </div>
     <div class="sm:col-span-7">
-      <div class="mb-2 text-2xl">{item.heading}</div>
+      <div class="mb-4 text-2xl">{item.heading}</div>
       <p class="pr-8 text-sm">
         {item.description}
       </p>

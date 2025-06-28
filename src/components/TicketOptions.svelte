@@ -28,13 +28,15 @@
 </script>
 
 {#snippet ticketOption(tOption: (typeof ticketOptions)[0])}
-  <div class={`card ${tOption.cardClass} flex flex-col justify-between rounded-4xl p-6 sm:p-10`}>
+  <div
+    class={`card ${tOption.cardClass} flex flex-col justify-between rounded-4xl p-6 sm:p-8 sm:py-10`}
+  >
     <div class="flex grow justify-between sm:flex-col">
       <div>
-        <div class="mb-3 text-sm uppercase">
+        <div class="text-md mb-3 font-normal uppercase">
           {tOption.title}
         </div>
-        <div class="text-xs sm:mb-12">
+        <div class="text-sm sm:mb-12">
           {tOption.description}
         </div>
       </div>

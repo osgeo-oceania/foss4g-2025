@@ -7,7 +7,7 @@
   <div class="bg-primary grid rounded-4xl sm:grid-cols-2">
     <div class="flex flex-col space-y-4 p-8 text-white">
       <div class="text-lg">FOSS4G Auckland 2025</div>
-      <div class="grid grid-cols-2 text-xs">
+      <div class="grid grid-cols-2">
         <ul class="space-y-2">
           <li><Link href="/attend/call-for-papers">Call For Papers</Link></li>
           <li><Link href="/attend/register">Register</Link></li>
@@ -24,8 +24,8 @@
       <div class="mt-8 text-xs">&copy; FOSS4G Oceania - All rights reserved</div>
     </div>
     <div class="bg-secondary text-primary space-y-4 rounded-4xl p-8">
-      <div class="mb-2 text-sm uppercase">Stay Updated</div>
-      <div class="text-xs">Subscribe for event updates</div>
+      <div class="text-md mb-2 uppercase">Stay Updated</div>
+      <div class="">Subscribe for event updates</div>
       <Button
         href="https://mailchi.mp/foss4g/mailing-list"
         target="_blank"
@@ -35,7 +35,7 @@
       >
         Join our Mailing List
       </Button>
-      <div class="pt-4 text-sm uppercase">Follow Us</div>
+      <div class="text-md pt-4 uppercase">Follow Us</div>
       <div class=" flex space-x-2 text-2xl uppercase">
         <Link href="https://www.facebook.com/foss4g2025/"
           ><span class="icon-[uil--facebook] block"></span></Link

@@ -25,7 +25,7 @@
   {target}
   class="btn btn-block btn-{color} rounded-full border-none {size === 'sm'
     ? 'btn-sm text-sm'
-    : 'btn-lg py-4 '} font-normal shadow-none {className}"
+    : 'btn-lg py-4 '} min-w-fit font-normal whitespace-nowrap shadow-none {className}"
 >
   {@render children()}
   <span class="icon-[lucide--arrow-up-right] block"></span>

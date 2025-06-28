@@ -10,6 +10,7 @@
   import Sponsors, { LEVELS as SPONSOR_LEVELS } from '$lib/sponsors';
   import Team from '$lib/organisers';
   import Button from '$components/Button.svelte';
+  import Card from '../components/Card.svelte';
 
   const whyAttends = [
     {
@@ -44,13 +45,13 @@
 </svelte:head>
 
 <!-- Hero -->
-<main class="m:space-y-12 mb-8 space-y-8">
+<main class="m:space-y-12 mb-8 space-y-16">
   <div class="hero flex">
     <div
-      class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-12 sm:py-14"
+      class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-10 sm:py-12"
     >
       <div
-        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 pr-8 pb-8 sm:h-86 sm:w-86"
+        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 pr-8 pb-8 sm:h-96 sm:w-96"
       >
         {@html Foss4g2025Logo}
         <div
@@ -58,20 +59,22 @@
         ></div>
       </div>
       <div
-        class="flex w-full flex-shrink flex-col justify-between text-sm sm:flex-row sm:space-y-4"
+        class="flex w-full flex-shrink flex-col justify-between font-serif text-sm sm:flex-row sm:space-y-4"
       >
-        <div>November 17-23, 2025</div>
+        <div class="uppercase">November 17-23, 2025</div>
         <div>Tāmaki Makaurau, Aotearoa New Zealand</div>
       </div>
-      <div class="w-full flex-grow space-y-8">
-        <div class="font-serif text-2xl text-white sm:text-7xl">FOSS4G<br />Auckland 2025</div>
-        <div class="max-w-[400px] text-sm text-white">
+      <div class="w-full flex-grow space-y-4">
+        <div class="font-serif text-2xl leading-tight text-white sm:text-7xl">
+          FOSS4G<br />Auckland 2025
+        </div>
+        <div class="text-md font-serif text-white sm:w-[85%]">
           FOSS4G stands for Free and Open Source Software for Geospatial, a conference series hosted
           in partnership with OSGeo. FOSS4G brings open source geospatial users, software
           developers, decision makers and researchers together from around the world
         </div>
-        <div class="sm:w-[240px]">
-          <Button href="/attend/register">Early Bird Tickets</Button>
+        <div class="pt-4 sm:w-[240px]">
+          <Button href="/attend/register">Early bird tickets</Button>
         </div>
       </div>
     </div>
@@ -138,64 +141,52 @@
     </div>
 -->
 
-    <div class="card bg-secondary mb-4 rounded-4xl sm:mb-0">
-      <div class="card-body flex flex-col justify-between space-y-2 px-6 py-8 sm:px-8 sm:py-10">
-        <div class="text-3xl">Call For Papers</div>
-        <div class="flex space-x-2">
-          <div>
-            We want you to share your fascinating stories about open source geospatial, open data,
-            and open street map. We're looking for a diverse range of presenters including women,
-            people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve
-            this goal, we need you to accept the challenge and put yourself forward, the community
-            can't wait to hear what you have to say!
-          </div>
-        </div>
-        <div class="flex space-x-2">
-          <div>
-            Now is the time to submit your interest in one or more of the following categories:
-            <ul>
-              <li>Presentations</li>
-              <li>Lightning Talks</li>
-              <li>Workshops</li>
-              <li>Academic Papers</li>
-            </ul>
-          </div>
-        </div>
-        <div class="sm:w-[240px]">
-          <Button href="/attend/call-for-papers">Submit a Paper</Button>
-        </div>
+    <Card
+      title="Call For Papers"
+      button={{ href: '/attend/call-for-papers', text: 'Submit a Paper' }}
+    >
+      <div>
+        We want you to share your fascinating stories about open source geospatial, open data, and
+        open street map. We're looking for a diverse range of presenters including women, people
+        from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal,
+        we need you to accept the challenge and put yourself forward, the community can't wait to
+        hear what you have to say!
       </div>
-    </div>
 
-    <div class="flex flex-col-reverse gap-y-4 sm:flex-col">
-      <div class="card bg-primary rounded-4xl">
-        <div class="card-body text-primary-content space-y-2 px-6 py-8 sm:px-8 sm:py-10">
-          <div class="text-3xl">Tāmaki Makaurau Auckland</div>
-          <div>
-            These are the Māori names given to Auckland. They speak of our diverse landscapes,
-            beautiful harbours, and fertile soils. They speak of the coming together of different
-            iwi (tribes) to meet and trade.
-          </div>
-        </div>
+      <div>
+        Now is the time to submit your interest in one or more of the following categories:
+        <ul>
+          <li>Presentations</li>
+          <li>Lightning Talks</li>
+          <li>Workshops</li>
+          <li>Academic Papers</li>
+        </ul>
       </div>
-      <div class="card bg-secondary rounded-4xl">
-        <div class="card-body space-y-2 px-6 py-8 sm:px-8 sm:py-10">
-          <div class="text-3xl">Our Conference Venue</div>
-          <div>
-            FOSS4G 2025 is proudly supported by Auckland University of Technology's School of Future
-            Environments.<br />Located in the heart of Auckland City, the
-            <a
-              href="https://use.mazemap.com/#v=1&campusid=103&zlevel=1&center=174.765877,-36.853388&zoom=17.6"
-              target="_blank">AUT City Campus</a
-            > is within minutes of the central business district, has excellent public transport and
-            accommodation options.
-          </div>
+    </Card>
+
+    <div class="flex flex-col-reverse sm:flex-col sm:gap-y-4">
+      <Card title="Tāmaki Makaurau Auckland" color="primary">
+        <div>
+          These are the Māori names given to Auckland. They speak of our diverse landscapes,
+          beautiful harbours, and fertile soils. They speak of the coming together of different iwi
+          (tribes) to meet and trade.
         </div>
-      </div>
+      </Card>
+      <Card title="Our Conference Venue" color="secondary">
+        <div>
+          FOSS4G 2025 is proudly supported by Auckland University of Technology's School of Future
+          Environments.<br />Located in the heart of Auckland City, the
+          <a
+            href="https://use.mazemap.com/#v=1&campusid=103&zlevel=1&center=174.765877,-36.853388&zoom=17.6"
+            target="_blank">AUT City Campus</a
+          > is within minutes of the central business district, has excellent public transport and accommodation
+          options.
+        </div>
+      </Card>
     </div>
   </div>
 
-  <Heading>Conference Agenda</Heading>
+  <Heading>Agenda</Heading>
 
   <Agenda />
 
@@ -210,9 +201,9 @@
 -->
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
-    <div class="flex h-full w-full flex-1 py-2 text-white">
+    <div class="flex h-full w-full flex-1 p-2 text-white">
       <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-4xl px-8 py-6">
-        <div class="pb-4 text-xs uppercase">{reason.title}</div>
+        <div class="pb-4 text-sm font-normal uppercase">{reason.title}</div>
         <div
           class="grid h-full grid-cols-2"
           class:reverse-grid={i % 2 == 1}
@@ -224,7 +215,9 @@
               <div class="from-primary absolute inset-0 bg-gradient-to-t to-transparent"></div>
             </div>
           </div>
-          <div class="-mt-8 mb-8 flex items-end justify-end text-xs">{reason.description}</div>
+          <div class="-mt-[20%] mb-[20%] flex items-end justify-end text-xs">
+            {reason.description}
+          </div>
         </div>
       </div>
     </div>
@@ -242,7 +235,7 @@
 
   <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
 
-  <Heading>Ticket Options</Heading>
+  <Heading size="md">Ticket Options</Heading>
 
   <TicketOptions />
 
@@ -253,10 +246,10 @@
     {@const sponsorsAtLevel = Object.values(Sponsors).filter((sponsor) => sponsor.level == level)}
 
     {#if sponsorsAtLevel.length > 0}
-      <div class="flex flex-col gap-4 sm:space-y-0">
-        <h2 class="text-center text-xl uppercase">
+      <div class="flex flex-col gap-6 sm:space-y-0">
+        <h3 class="text-center uppercase">
           {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
-        </h2>
+        </h3>
 
         <div class="flex flex-wrap items-center justify-center space-y-6 sm:space-y-0">
           {#each sponsorsAtLevel as sponsorAtLevel}
@@ -275,7 +268,7 @@
     {/if}
   {/snippet}
 
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-16">
     {#each Object.entries(SPONSOR_LEVELS) as [title, level]}
       {@render sponsorLevel(title, level)}
     {/each}

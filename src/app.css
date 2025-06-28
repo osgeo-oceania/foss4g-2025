@@ -1,6 +1,29 @@
 @import 'tailwindcss';
+
+@import '@fontsource/inter/300.css';
 @import '@fontsource/inter/500.css';
+@import '@fontsource/inter/800.css';
+
 @import '@fontsource/kameron/500.css';
+@import '@fontsource/arvo/400.css';
+@import '@fontsource/arvo/700.css';
+@import '@fontsource/arvo/400-italic.css';
+@import '@fontsource/arvo/700-italic.css';
+
+@theme {
+  --font-serif: 'Arvo', 'Kameron', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
+  --text-4xl: 48px;
+}
+
 @plugin "@tailwindcss/typography";
 @plugin "@iconify/tailwind4";
 @plugin "daisyui" {
@@ -15,20 +38,17 @@
   --color-primary-content: 'white';
   --color-success: '#88F15E';
   --color-success-content: var(--color-primary);
+
+  --card-fs: var(--text-sm);
 }
 
 @layer base {
-  html {
-    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  }
-  .font-serif {
-    font-family: 'Kameron', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  }
   html,
   body {
     width: 100%;
     height: 100%;
     color: var(--color-primary);
+    font-weight: 300;
   }
 
   .prose p > picture {
@@ -49,4 +69,17 @@ h4,
 h5,
 h6 {
   @apply font-sans;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
 }

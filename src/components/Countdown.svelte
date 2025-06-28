@@ -16,8 +16,10 @@
   const seconds = $derived(Math.floor((diff % (1000 * 60)) / 1000));
 </script>
 
-<div class="bg-primary relative flex flex-col rounded-4xl p-6 text-white sm:min-h-[300px] sm:p-12">
-  <div class="text-3xl text-white">
+<div
+  class="bg-primary relative flex flex-col rounded-4xl px-6 py-8 text-white sm:min-h-[300px] sm:p-12"
+>
+  <div class="text-xl text-white">
     {label}
   </div>
   <div class="mt-4 flex sm:mt-8">

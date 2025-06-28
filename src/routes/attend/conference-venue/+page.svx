@@ -9,6 +9,7 @@ title: Conference Venue
 <script lang="ts">
   import Heading from '$components/Heading.svelte';
   import Link from '$components/Link.svelte';
+  import Card from '$components/Card.svelte';
 </script>
 
 
@@ -32,39 +33,27 @@ High Speed internet access is available across the entire AUT campus and support
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <div class="card bg-secondary rounded-4xl">
-        <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Workshop Facilities</div>
-          <div class="flex space-x-2">
-            <div>
-              AUT offers modern classroom spaces fully equipped for running workshops from the WF Building which is a multi-story dedicated teaching space.
+      <Card title="Workshop Facilities" color="secondary">
+          <div>
+            AUT offers modern classroom spaces fully equipped for running workshops from the WF Building which is a multi-story dedicated teaching space.
 Workshops will be run with attendees using Bring Your Own Device (BYOD).
-            </div>
           </div>
-        </div>
-      </div>
+      </Card>
 
-      <div class="card bg-secondary rounded-4xl">
-        <div class="card-body space-y-2 p-8">
-          <div class="text-3xl">Venue Accessibility</div>
+      <Card title="Venue Accessibility" color="secondary">
           <div>
             Auckland is a very accessible city, with public transport featuring ramps, lowered buses, and disability concessions. Many attractions prioritise accessible paths and facilities, while resources like mobility scooter rentals and accessible parking are available.
           </div>
           <div>
             All AUT venue areas have modern full accessibility facilities.
           </div>
-        </div>
-      </div>
+      </Card>
 
     </div>
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-      <div class="card bg-secondary rounded-4xl">
-        
-      <div class="card bg-primary rounded-4xl">
-        <div class="card-body text-primary-content space-y-2 p-8">
-          <div class="text-3xl">Childcare Facilities</div>
+      <Card title="Childcare Facilities" color="primary">
           <div>
             Providing a child-friendly conference offers a win-win situation for attendees at FOSS4G Auckland 2025. Parents can focus on the conference content knowing their children are safe and engaged in age-appropriate activities. We feel this will lead to increased participation and higher satisfaction. It also demonstrates the conference's commitment to diversity and inclusion, attracting a wider range of professionals.
           </div>
@@ -76,12 +65,9 @@ Workshops will be run with attendees using Bring Your Own Device (BYOD).
           <div>
             In addition, AUT has a dedicated parent room and also facilities for feeding and changing babies across campus.
           </div>
-        </div>
-      </div>
+      </Card>
 
     </div>
-
-
   </div>
 
 

@@ -85,7 +85,7 @@
   class="navbar border-primary/10 sticky top-0 z-20 h-16 border-b-1 bg-white px-4 py-2 sm:relative sm:top-auto sm:h-22 sm:border-none sm:py-6"
 >
   <div class="navbar-start z-20 my-4 w-auto">
-    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[200px]" /></Link>
+    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[220px]" /></Link>
   </div>
 
   <div class="navbar-end flex-1">
@@ -97,7 +97,7 @@
             <div
               tabindex="0"
               role="button"
-              class={`btn btn-ghost  rounded-full text-sm font-light ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : ''}`}
+              class={`btn btn-ghost rounded-full text-sm font-light ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : ''}`}
             >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
@@ -106,14 +106,14 @@
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
             <ul
               tabindex="0"
-              class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              class="dropdown-content menu bg-base-100 rounded-box left-1/2 z-1 -translate-x-1/2 p-2 shadow-sm"
             >
               {#each menuItem.subMenu as subItem}
                 <li>
                   <Link
                     aria-label={subItem.label}
                     href={subItem.url}
-                    class={`btn  btn-ghost text-left text-sm font-normal`}
+                    class={`btn  btn-ghost text-left text-sm font-normal whitespace-nowrap`}
                     >{subItem.label}
                   </Link>
                 </li>
