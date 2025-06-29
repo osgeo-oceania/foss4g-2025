@@ -142,6 +142,7 @@
 
     <Card
       title="Call For Papers"
+      color="secondary"
       button={{ href: '/attend/call-for-papers', text: 'Submit a Paper' }}
     >
       <div>
@@ -154,7 +155,7 @@
 
       <div>
         Now is the time to submit your interest in one or more of the following categories:
-        <ul>
+        <ul class="list-disc pl-4">
           <li>Presentations</li>
           <li>Lightning Talks</li>
           <li>Workshops</li>

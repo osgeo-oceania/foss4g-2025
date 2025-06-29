@@ -19,8 +19,8 @@
   <div
     class={`card-body flex flex-col justify-between px-6 py-8 sm:px-8 sm:py-10 text-${color === 'primary' ? 'white' : 'primary'} gap-4`}
   >
-    <div class={`flex flex-col gap-4 font-${color === 'primary' ? 'light' : 'normal'}`}>
-      <div class="text-3xl font-light">{title}</div>
+    <div class={`flex flex-col gap-4 font-${color === 'primary' ? 'light' : 'light'}`}>
+      <div class="text-2xl font-light">{title}</div>
       {@render children()}
     </div>
     {#if button}
