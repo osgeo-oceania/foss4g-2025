@@ -106,7 +106,7 @@
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
             <ul
               tabindex="0"
-              class="dropdown-content menu bg-primary text-white rounded-box left-1/2 z-1 -translate-x-1/2 p-2 border border-primary/50 shadow-lg mt-2"
+              class="dropdown-content menu bg-primary text-white rounded-box left-1/2 z-1 -translate-x-1/2 p-2 border border-primary/50 shadow-lg"
             >
               {#each menuItem.subMenu as subItem}
                 <li>
