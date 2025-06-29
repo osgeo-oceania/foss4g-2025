@@ -11,4 +11,6 @@
   const href = origHref.startsWith('/') ? `${PUBLIC_BASE_PATH}${origHref}` : origHref;
 </script>
 
-<a {href} {...props}>{@render children()}</a>
+<a {href} {...props}>
+  {@render children()}
+</a>
