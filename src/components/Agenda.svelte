@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Button from './Button.svelte';
+  
   interface AgendaItem {
     days: string;
     time: string;
@@ -32,14 +34,14 @@
 </script>
 
 {#snippet agendaItemGrid(item: AgendaItem)}
-  <div class="grid py-4 pr-0 pl-2 sm:grid-cols-12 sm:py-8 sm:pr-0 sm:pl-8">
+  <div class="grid py-4 pr-0 pl-2 sm:grid-cols-12 sm:py-8 sm:pr-8 sm:pl-8">
     <div class="flex justify-between sm:col-span-5 sm:flex-col sm:justify-start sm:text-2xl">
       <div>{item.days}</div>
       <div class="text-secondary">{item.time}</div>
     </div>
     <div class="sm:col-span-7">
       <div class="mb-4 text-2xl">{item.heading}</div>
-      <p class="pr-6 text-sm">
+      <p class="pr-0 text-sm">
         {item.description}
       </p>
     </div>
@@ -50,4 +52,8 @@
   {#each agendaItems as agendaItem}
     {@render agendaItemGrid(agendaItem)}
   {/each}
+  
+  <div class="flex justify-end pt-4 sm:pt-8 pr-0">
+    <Button href="/program/outline" class="w-[240px]">View Detailed Program</Button>
+  </div>
 </div>
