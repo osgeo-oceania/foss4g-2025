@@ -251,7 +251,7 @@
           {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
         </h3>
 
-        <div class="flex flex-wrap items-center justify-center">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           {#each sponsorsAtLevel as sponsorAtLevel}
             {#await sponsorAtLevel.logo() then module}
               <div class="flex items-center justify-center px-4 sm:max-w-60 sm:px-8">
