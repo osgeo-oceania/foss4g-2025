@@ -190,7 +190,7 @@
 
   <Agenda />
 
-  <div class="max-w-full">
+  <div class="max-w-full py-8 sm:py-12">
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
 
@@ -202,20 +202,20 @@
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
     <div class="flex h-full w-full flex-1 py-1 text-white sm:p-2">
-      <div class="bg-primary h-full min-h-[160px] w-full overflow-clip rounded-4xl px-8 py-6">
+      <div class="bg-primary h-full min-h-[240px] w-full overflow-clip rounded-4xl px-8 py-8">
         <div class="pb-4 text-sm font-normal uppercase">{reason.title}</div>
         <div
           class="grid h-full grid-cols-2"
           class:reverse-grid={i % 2 == 1}
           class:sm:reverse-grid={i % 4 >= 2}
         >
-          <div class="relative text-9xl">
+          <div class="relative text-9xl font-medium">
             <div class="text-secondary absolute -bottom-[20%]">
               {reason.number}
               <div class="from-primary absolute inset-0 bg-gradient-to-t to-transparent"></div>
             </div>
           </div>
-          <div class="-mt-[20%] mb-[20%] flex items-end justify-end text-xs">
+          <div class="-mt-[20%] mb-[20%] flex items-end justify-end text-sm">
             {reason.description}
           </div>
         </div>
@@ -223,19 +223,19 @@
     </div>
   {/snippet}
 
-  <Heading>Why Attend?</Heading>
+  <Heading class="mt-16 sm:mt-28">Why Attend?</Heading>
 
-  <div class="grid sm:grid-cols-2">
+  <div class="grid gap-2 pt-4 pb-8 sm:grid-cols-2 sm:gap-2 sm:pt-4 sm:pb-8">
     {#each whyAttends as whyAttend, i}
       {@render whyAttendGrid(whyAttend, i)}
     {/each}
   </div>
 
-  <Heading>Register Now</Heading>
+  <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
   <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
 
-  <Heading size="md">Ticket Options</Heading>
+  <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
   <TicketOptions />
 
