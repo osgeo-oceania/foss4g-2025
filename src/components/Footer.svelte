@@ -26,15 +26,14 @@
     <div class="bg-secondary text-primary space-y-4 rounded-4xl p-6 sm:p-12">
       <div class="text-md mb-2 uppercase">Stay Updated</div>
       <div class="text-sm">Subscribe for event updates</div>
-      <Button
+      <Link
         href="https://mailchi.mp/foss4g/mailing-list"
         target="_blank"
-        size="sm"
-        color="primary"
-        class="w-auto px-8 bg-primary text-white hover:bg-success hover:text-primary transition-all duration-200 font-light !bg-primary !text-white hover:!bg-success hover:!text-primary !font-light !py-6"
+        class="btn btn-block rounded-full border-none btn-sm text-sm min-w-fit font-light whitespace-nowrap shadow-none w-auto px-8 py-6 bg-primary text-white hover:bg-success hover:text-primary transition-all duration-200"
       >
         Join our Mailing List
-      </Button>
+        <span class="icon-[lucide--arrow-up-right] block"></span>
+      </Link>
       <div class="text-md pt-8 uppercase">Follow Us</div>
       <div class=" flex space-x-2 text-2xl uppercase">
         <Link href="https://www.facebook.com/foss4g2025/"
