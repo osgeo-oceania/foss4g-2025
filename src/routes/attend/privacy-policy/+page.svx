@@ -11,7 +11,7 @@ title: Privacy Policy
   import Link from '$components/Link.svelte';
 </script>
 
-<Heading>Privacy Policy for FOSS4G 2025</Heading>
+<Heading>Privacy Policy</Heading>
 
 
 ![Auckland]($images/group-photo.jpg)
