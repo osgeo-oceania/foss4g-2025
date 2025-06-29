@@ -86,9 +86,13 @@
       .filter((sponsor) => sponsor.level < 5)
       .sort((a, b) => a.level - b.level) as sponsor}
       {#await sponsor.logo() then module}
-        <div class="flex items-center justify-center px-4 sm:px-8 w-1/3 sm:w-1/5">
+        <div class="flex w-1/3 items-center justify-center px-4 sm:w-1/5 sm:px-8">
           <div class="max-w-full">
-            <enhanced:img src={module.default} alt={sponsor.name} class="max-h-16 w-auto sm:max-h-20" />
+            <enhanced:img
+              src={module.default}
+              alt={sponsor.name}
+              class="max-h-16 w-auto sm:max-h-20"
+            />
           </div>
         </div>
       {/await}
@@ -233,7 +237,7 @@
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
+  <Countdown label="Early Bird Pricing ends in:" time="2025-07-18T00:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
@@ -247,14 +251,14 @@
 
     {#if sponsorsAtLevel.length > 0}
       <div class="flex flex-col gap-2 sm:gap-6">
-          <h3 class="text-center uppercase !font-serif !text-lg">
-            {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
+        <h3 class="text-center !font-serif !text-lg uppercase">
+          {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
         </h3>
 
-        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           {#each sponsorsAtLevel as sponsorAtLevel}
             {#await sponsorAtLevel.logo() then module}
-              <div class="flex items-center justify-center px-6 sm:px-10 sm:max-w-60">
+              <div class="flex items-center justify-center px-6 sm:max-w-60 sm:px-10">
                 <enhanced:img
                   src={module.default}
                   alt={sponsorAtLevel.name}

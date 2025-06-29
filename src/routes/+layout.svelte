@@ -1,9 +1,18 @@
 <script lang="ts">
-  import Header from '$components/Header.svelte';
+  import { afterNavigate } from '$app/navigation';
   import Footer from '$components/Footer.svelte';
+  import Header from '$components/Header.svelte';
   import '../app.css';
 
   let { children } = $props();
+
+  // Force scroll to top after navigation
+  afterNavigate(({ to, type }) => {
+    // Skip if it's a hash change or popstate (back/forward)
+    if (to?.url.hash || type === 'popstate') return;
+
+    document.body.scrollTop = 0;
+  });
 </script>
 
 <div class="mx-auto flex min-h-screen max-w-5xl flex-col gap-8">
