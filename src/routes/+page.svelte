@@ -233,7 +233,7 @@
 
   <Heading>Register Now</Heading>
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-06-28T00:00:00" />
+  <Countdown label="Early Bird Pricing ends in:" time="2025-07-18T00:00:00+12:00" />
 
   <Heading size="md">Ticket Options</Heading>
 
