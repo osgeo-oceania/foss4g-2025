@@ -1,6 +1,6 @@
 <script lang="ts">
   import Link from '$components/Link.svelte';
-  import LogoText from '$images/svg/foss4g-2025-logo-banner-lores.svg';
+  import LogoText from '$images/svg/Nav-Logo.svg';
   import { page } from '$app/state';
 
   let isMenuOpen = $state(false);
@@ -85,7 +85,7 @@
   class="navbar border-primary/10 sticky top-0 z-20 h-16 border-b-1 bg-white px-4 py-2 sm:relative sm:top-auto sm:h-22 sm:border-none sm:py-6"
 >
   <div class="navbar-start z-20 my-4 w-auto">
-    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[220px]" /></Link>
+    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[220px] -ml-3.5" /></Link>
   </div>
 
   <div class="navbar-end flex-1">
