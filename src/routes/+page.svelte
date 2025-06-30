@@ -88,11 +88,13 @@
       {#await sponsor.logo() then module}
         <div class="flex w-1/3 items-center justify-center px-4 sm:w-1/5 sm:px-8">
           <div class="max-w-full">
-            <enhanced:img
-              src={module.default}
-              alt={sponsor.name}
-              class="max-h-16 w-auto sm:max-h-20"
-            />
+            <a href={sponsor.link} aria-label="sponsor link" target="_blank">
+              <enhanced:img
+                src={module.default}
+                alt={sponsor.name}
+                class="max-h-16 w-auto sm:max-h-20"
+              />
+            </a>
           </div>
         </div>
       {/await}
@@ -259,11 +261,13 @@
           {#each sponsorsAtLevel as sponsorAtLevel}
             {#await sponsorAtLevel.logo() then module}
               <div class="flex items-center justify-center px-6 sm:max-w-60 sm:px-10">
-                <enhanced:img
-                  src={module.default}
-                  alt={sponsorAtLevel.name}
-                  class="max-h-16 w-auto max-w-40 sm:max-h-20 sm:max-w-60"
-                />
+                <a href={sponsorAtLevel.link} aria-label="sponsor link" target="_blank">
+                  <enhanced:img
+                    src={module.default}
+                    alt={sponsorAtLevel.name}
+                    class="max-h-16 w-auto max-w-40 sm:max-h-20 sm:max-w-60"
+                  /></a
+                >
               </div>
             {/await}
           {/each}
