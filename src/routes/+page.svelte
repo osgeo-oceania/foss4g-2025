@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Foss4g2025Logo from '$images/svg/foss4g-2025-logo.svg?raw';
+  import Foss4g2025Logo from '$images/svg/Landing-Logo.svg?raw';
   import TicketOptions from '$components/TicketOptions.svelte';
   import Countdown from '$components/Countdown.svelte';
   import Keynotes from '$components/Keynotes.svelte';
