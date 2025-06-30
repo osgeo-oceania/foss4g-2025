@@ -39,7 +39,7 @@
         <Link href="https://www.facebook.com/foss4g2025/"
           ><span class="icon-[uil--facebook] block"></span></Link
         >
-        <Link href="https://www.linkedin.com/showcase/foss4g/m"
+        <Link href="https://www.linkedin.com/company/foss4g2025/"
           ><span class="icon-[uil--linkedin] block"></span></Link
         >
         <Link href="https://www.youtube.com/c/FOSS4G"
