@@ -88,7 +88,7 @@
     <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="-ml-3.5 max-w-[220px]" /></Link>
   </div>
 
-  <div class="navbar-end flex-1 overflow-hidden">
+  <div class="navbar-end flex-1 overflow-hidden sm:overflow-visible">
     <!-- desktop menu -->
     <div class="hidden space-x-2 sm:flex">
       {#each menuItems as menuItem}
