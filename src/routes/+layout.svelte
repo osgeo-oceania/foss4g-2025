@@ -15,6 +15,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>FOSS4G 2025 Auckland</title>
+</svelte:head>
+
 <div class="mx-auto flex min-h-screen max-w-5xl flex-col gap-8">
   <Header />
   <div class="px-2">{@render children()}</div>
