@@ -79,7 +79,7 @@ export default {
   wdc: {
     name: 'WDC',
     logo: () => import('$images/logos/wdc.png?enhanced'),
-    link: 'https://www.wdc.govt.nz/',
+    link: 'https://geospatial.whanganui.govt.nz/',
     level: LEVELS.PARTNER
   }
 };
