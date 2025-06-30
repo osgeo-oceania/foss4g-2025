@@ -31,7 +31,7 @@ jobs:
 
       - name: build
         env:
-          PUBLIC_BASE_PATH: '/${{ github.event.repository.name }}'
+          PUBLIC_BASE_PATH: ${{ env.PUBLIC_BASE_PATH }}
         run: |
           npm run build
 
