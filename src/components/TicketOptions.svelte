@@ -7,6 +7,7 @@
       title: 'Early Bird Pass',
       description: 'Limited Time Offer',
       price: '$700',
+      currency: 'NZD',
       cardClass: 'bg-success',
       buttonClass: 'bg-white'
     },
@@ -15,6 +16,7 @@
       description:
         'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
       price: '$500',
+      currency: 'NZD',
       cardClass: 'bg-white border-1 border-primary/50'
     },
     {
@@ -22,6 +24,7 @@
       description:
         'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
       price: '$500',
+      currency: 'NZD',
       cardClass: 'bg-white border-1 border-primary/50'
     }
   ];
@@ -42,6 +45,7 @@
       </div>
       <div class="flex flex-1 items-end justify-end text-2xl sm:justify-normal">
         {tOption.price}
+        <span class="text-lg">{tOption.currency}</span>
       </div>
     </div>
     <div class="mt-4 flex justify-end sm:justify-normal">
