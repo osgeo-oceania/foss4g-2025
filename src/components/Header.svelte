@@ -85,10 +85,10 @@
   class="navbar border-primary/10 sticky top-0 z-20 h-16 border-b-1 bg-white px-4 py-2 sm:relative sm:top-auto sm:h-22 sm:border-none sm:py-6"
 >
   <div class="navbar-start z-20 my-4 w-auto">
-    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="max-w-[220px] -ml-3.5" /></Link>
+    <Link href="/"><img src={LogoText} alt="FOSS4G Logo" class="-ml-3.5 max-w-[220px]" /></Link>
   </div>
 
-  <div class="navbar-end flex-1">
+  <div class="navbar-end flex-1 overflow-hidden">
     <!-- desktop menu -->
     <div class="hidden space-x-2 sm:flex">
       {#each menuItems as menuItem}
@@ -97,7 +97,7 @@
             <div
               tabindex="0"
               role="button"
-              class={`rounded-full text-sm font-light px-4 py-2 hover:bg-success hover:text-primary transition-all duration-200 border flex items-center ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
+              class={`hover:bg-success hover:text-primary flex items-center rounded-full border px-4 py-2  text-sm font-light whitespace-nowrap transition-all duration-200 ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
             >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
@@ -106,14 +106,14 @@
             <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
             <ul
               tabindex="0"
-              class="dropdown-content menu bg-primary text-white rounded-box left-1/2 z-1 -translate-x-1/2 p-2 border border-primary/50 shadow-lg"
+              class="dropdown-content menu bg-primary rounded-box border-primary/50 left-1/2 z-1 -translate-x-1/2 border p-2 text-white shadow-lg"
             >
               {#each menuItem.subMenu as subItem}
                 <li>
                   <Link
                     aria-label={subItem.label}
                     href={subItem.url}
-                    class={`text-left text-sm font-light whitespace-nowrap px-4 py-2 hover:bg-success hover:text-primary hover:border-none transition-all duration-200`}
+                    class={`hover:bg-success hover:text-primary px-4 py-2 text-left text-sm font-light whitespace-nowrap transition-all duration-200 hover:border-none`}
                     >{subItem.label}
                   </Link>
                 </li>
@@ -124,7 +124,7 @@
           <Link
             aria-label={menuItem.label}
             href={menuItem.url}
-            class={`rounded-full text-sm font-light px-4 py-2 hover:bg-success hover:text-primary transition-all duration-200 border ${page.route.id === menuItem.url ? 'border-primary/50' : 'border-transparent'}`}
+            class={` hover:bg-success hover:text-primary rounded-full border px-4 py-2 text-sm font-light whitespace-nowrap transition-all duration-200 ${page.route.id === menuItem.url ? 'border-primary/50' : 'border-transparent'}`}
             >{menuItem.label}
           </Link>
         {/if}
