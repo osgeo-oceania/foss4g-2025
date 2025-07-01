@@ -1,28 +1,24 @@
-# FOSS4G 2025 website
+# FOSS4G 2025 Auckland Website
 
-Auckland, New Zealand - 17th to 23rd November 2025.
+<img src="/src/images/svg/foss4g-2025-logo-banner.svg" width="460px">
+Link: https://osgeo-oceania.github.io/foss4g-2025-dev/
 
-## Dev
+## Website Development
 
-Install NodeJS (version 22) - https://nodejs.org/en/download
+- Required software: `git` `nodejs (>=18)` `npm`
+- Used Frameworks: `sveltekit` `svelte` `mdsvex` `daisyui` `tailwind css`
 
-Install dependencies, and then run development server
+### Quickstart
 
 ```bash
+git clone https://github.com/osgeo-oceania/foss4g-2025-dev/
+cd foss4g-2025-dev
 npm install
-
 npm run dev
 ```
 
-## How to Add/Edit pages
+### Editing Page Content
 
-We are using [MDX](https://mdxjs.com/) pages, which is markdown with JSX support.
-
-- Pages are in the [`pages/`](/pages/) directory
-- The navigation menu is in [`pages/_menu.ts`](/pages/_menu.ts)
-
-There are a few custom components you can add to pages
-
-- `HeaderImage`, `DividerImage` and `FooterImage`
-- `Title` to set the browser page title
-- `InlineMap` to show the Maplibre map component
+- Page content is stored in `/src/routes/`
+  - ex. for the url `https://osgeo-oceania.github.io/foss4g-2025-dev/attend/call-for-papers/`
+  - the content is at `/src/routes/attend/call-for-papers/+page.svx`

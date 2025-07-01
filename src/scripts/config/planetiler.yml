@@ -1,0 +1,272 @@
+schema_name: Auckland Map
+schema_description: Auckland Map
+attribution: <a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>, <a href="https://www.aucklandcouncil.govt.nz/" target="_blank">Auckland Council</a>
+
+args:
+  minzoom: 4
+  maxzoom: 14
+
+sources:
+  buildings:
+    # source data: https://data.linz.govt.nz/layer/101290-nz-building-outlines/
+    type: geopackage
+    local_path: src/data/buildings.gpkg
+
+  linz-coastline:
+    # https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
+    type: shapefile
+    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
+
+  linz-road-centrelines:
+    # https://data.linz.govt.nz/layer/50329-nz-road-centrelines-topo-150k/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-road-centrelines-topo-150k-GPKG.zip
+
+  linz-places:
+    # https://data.linz.govt.nz/layer/51681-nz-place-names-nzgb/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-place-names-nzgb-GPKG.zip
+
+  linz-suburbs-localities:
+    # https://data.linz.govt.nz/layer/113764-nz-suburbs-and-localities/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-suburbs-and-localities-GPKG.zip
+
+  linz-airports:
+    # https://data.linz.govt.nz/layer/50237-nz-airport-polygons-topo-150k/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-airport-polygons-topo-150k-GPKG.zip
+
+  auckland-parks:
+    # https://data-aucklandcouncil.opendata.arcgis.com/datasets/3135043373ba48b7a9b5240370cb53ac_0/explore
+    type: geopackage
+    local_path: src/data/raw/Park_Extents.gpkg
+
+  auckland-alcohol-control-area:
+    # https://data-aucklandcouncil.opendata.arcgis.com/datasets/af300c4cc33b4dff8218394a1eeefe50_0/explore
+    type: geopackage
+    local_path: src/data/raw/Alcohol_Control_Area.gpkg
+
+  auckland-bus-routes:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=2
+    type: geojson
+    local_path: src/data/raw/Bus_Route.geojson
+
+  auckland-bus-stops:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=0
+    type: geojson
+    local_path: src/data/raw/Bus_Stop.geojson
+
+  auckland-ferry-routes:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1
+    type: geojson
+    local_path: src/data/raw/Ferry_Routes.geojson
+
+  auckland-ferry-stops:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1
+    type: geojson
+    local_path: src/data/raw/Ferry_Stop.geojson
+
+  auckland-train-routes:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::trainservice?layer=1
+    type: geojson
+    local_path: src/data/raw/Train_Route.geojson
+
+  auckland-train-stops:
+    # https://data-atgis.opendata.arcgis.com/datasets/ATgis::trainservice?layer=0
+    type: geojson
+    local_path: src/data/raw/Train_Station.geojson
+
+
+layers:
+  - id: coastline
+    features:
+      - source: linz-coastline
+        geometry: polygon
+        min_zoom: 4
+
+  - id: buildings
+    features:
+      - source: buildings
+        geometry: polygon
+        min_zoom: 12
+        min_size: 0
+        attributes:
+          - key: height
+            tag_value: height
+    tile_post_process:
+      merge_polygons:
+        min_area: 0
+
+  - id: roads
+    features:
+      - source: linz-road-centrelines
+        geometry: line
+        min_size: 0
+        min_zoom:
+          default_value: 11
+          overrides:
+            6:
+              hway_num: 1
+            8:
+              hway_num: __any__
+            11:
+              hway_num: ''
+        attributes:
+          - key: name
+            tag_value: name
+          - key: hway_num
+            tag_value: hway_num
+    tile_post_process:
+      merge_line_strings:
+        min_length: 0
+
+  - id: areas
+    features:
+      - source: auckland-alcohol-control-area
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: alcohol-control-area
+
+      - source: linz-airports
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: airport
+          - key: name
+            tag_value: name
+
+      - source: auckland-parks
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: type
+            value: park
+
+  - id: places
+    features:
+      - source: linz-places
+        geometry: point
+        min_zoom: 4
+        include_when:
+          feat_type:
+            - Bay
+            - Hill
+            - City
+            - Town
+            - Village
+            - Island
+            - Point
+            - Locality
+            - Beach
+            - Lake
+        attributes:
+          - key: name
+            tag_value: name
+          - key: type
+            value: '${ feature.tags.feat_type.lowerAscii() }'
+
+      - source: linz-suburbs-localities
+        geometry: innermost_point
+        min_zoom: 7
+        include_when:
+          type: Suburb
+          major_name: Auckland
+        attributes:
+          - key: name
+            tag_value: name
+          - key: type
+            value: suburb
+
+      - source: auckland-parks
+        geometry: innermost_point
+        min_zoom:
+          default_value: 14
+          overrides:
+            13: '${ double(feature.area("km2")) > 0.1 }'
+        attributes:
+          - key: name
+            tag_value: SITEDESCRIPTION
+          - key: type
+            value: park
+          - key: area
+            value: ${ feature.area("km2") }
+
+  - id: routes
+    features:
+      - source: auckland-bus-routes
+        geometry: line
+        min_zoom: 12
+        attributes:
+          - key: type
+            value: bus
+          - key: name
+            tag_value: ROUTENAME
+          - key: number
+            tag_value: ROUTENUMBER
+            
+      - source: auckland-ferry-routes
+        geometry: line
+        min_zoom: 12
+        attributes:
+          - key: type
+            value: ferry
+          - key: name
+            tag_value: ROUTENAME
+          - key: number
+            tag_value: ROUTENUMBER
+
+      - source: auckland-train-routes
+        geometry: line
+        min_zoom: 11
+        include_when:
+          ROUTEPATTERN:
+            - 810006
+            - 800005
+            - 840051
+            - 820002
+        attributes:
+          - key: type
+            value: train
+          - key: name
+            tag_value: ROUTENAME
+          - key: number
+            tag_value: ROUTENUMBER
+
+  - id: stops
+    features:
+      - source: auckland-bus-stops
+        geometry: point
+        min_zoom: 14
+        attributes:
+          - key: type
+            value: bus
+          - key: id
+            tag_value: STOPCODE
+          - key: name
+            tag_value: STOPNAME
+
+      - source: auckland-ferry-stops
+        geometry: point
+        min_zoom: 12
+        attributes:
+          - key: type
+            value: ferry
+          - key: id
+            tag_value: STOPCODE
+          - key: name
+            tag_value: STOPNAME
+
+      - source: auckland-train-stops
+        geometry: point
+        min_zoom: 12
+        attributes:
+          - key: type
+            value: train
+          - key: id
+            tag_value: STOPCODE
+          - key: name
+            tag_value: STOPNAME
