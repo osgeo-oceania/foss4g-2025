@@ -1,3 +1,0 @@
-Dr Andrea Jalandoni is a pioneering digital archaeologist specialising in rock art recording and enhancement using photogrammetry and other remote sensing techniques including lidar and unmanned aerial systems. She has almost 20 years of archaeological experience in Australia, Southeast Asia, and Micronesia working on some of the most famous World Heritage Sites like Kakadu National Park (NT), Niah Cave (Malaysia), and Nan Madol (Pohnpei).
-
-Andrea is a Senior Research Fellow at Griffith University currently working on an Australian Research Council DECRA fellowship (‘Revealing ancient decision-making by applying digital archaeology to rock art placement’).
