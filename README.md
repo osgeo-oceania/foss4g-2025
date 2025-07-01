@@ -1,7 +1,9 @@
 # FOSS4G 2025 Auckland Website
 
 <img src="/src/images/svg/foss4g-2025-logo-banner.svg" width="460px">
-Link: https://osgeo-oceania.github.io/foss4g-2025-dev/
+
+- Prod: https://2025.foss4g.org/
+- Dev: https://osgeo-oceania.github.io/foss4g-2025-dev/
 
 ## Website Development
 
