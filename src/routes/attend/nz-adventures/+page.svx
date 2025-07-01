@@ -1,0 +1,173 @@
+---
+title: Adventures in Auckland
+---
+
+<svelte:head>
+  <title>Register</title>
+</svelte:head>
+
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+  import Countdown from '$components/Countdown.svelte';
+</script>
+
+
+<Heading>Family-Friendly Events and Activities in Auckland </Heading>
+
+![Auckland]($images/stock/aps_6811_rtf.jpg)
+
+
+## Cultural & Nature Experiences
+
+### [Auckland Zoo](https://www.aucklandzoo.co.nz/)
+Explore animals from all over the world, with interactive exhibits and kid-friendly activities.
+
+**Admission Fees:**
+- **Adults:** ~NZD 24.00  
+- **Children (4–14 years):** ~NZD 13.00  
+- **Children under 4:** Free  
+- **Family Pass (2 adults + 2 children):** ~NZD 65.00  
+
+### [Auckland Museum](https://www.aucklandmuseum.com/)
+Features Māori and Pacific Island cultural exhibits, with interactive kids’ sections.
+
+#### International Visitors:
+- **Adults:** NZD 32.00  
+- **Children (5–15 years):** NZD 16.00  
+- **Children under 5:** Free  
+- **Family Pass (2 adults + 2 children):** NZD 86.00  
+
+#### New Zealand Residents:
+- Entry by donation  
+
+#### Auckland Residents:
+- Free (proof of address required)  
+
+### [Auckland Domain and Wintergardens](https://www.gardens.org.nz/visit/auckland-domain-wintergardens)
+Great for a relaxing stroll, picnics, and exploring the lush botanical gardens.  
+
+- **Admission:** Free  
+
+#### Other Small Hikes:
+- **[One Tree Hill](https://www.aucklandcouncil.govt.nz/parks-recreation/get-outdoors/aklpaths/Pages/path-detail.aspx?ItemId=399):** Free admission  
+- **[Mount Eden](https://www.aucklandcouncil.govt.nz/parks-recreation/Pages/park-details.aspx?Location=58):** Free admission  
+
+---
+
+## Adventure Activities
+
+### [Waiheke Island](https://www.waiheke.co.nz/)
+Take a ferry to this stunning island for beaches, family-friendly vineyards, and walking trails.
+
+**Ferry Ride (Round Trip):**  
+- **Adults:** ~NZD 42.00  
+- **Children (5–15 years):** ~NZD 21.00  
+- **Children under 5:** Free  
+
+**Activities:** Prices vary by activity (e.g., vineyard tours, bike rentals).  
+
+**Bus Options:**
+- **[Fullers Hop on and Off Bus Service](https://www.fullers.co.nz/destinations-and-experiences/experiences/day-tours/waiheke-western-explorer-hop-on-hop-off-bus/):** More expensive but tourist-friendly.  
+- **[Public Bus](http://www.waihekelocal.co.nz/travel/waiheke-bus-service/waiheke-local-bus-service/):** Cheaper but requires planning. Buses are frequent.  
+
+#### Highlights:
+- **Onetangi Beach** – A beautiful beach for a stroll and a meal at *Charley Farley’s*.  
+- **Oneroa Bay** –  
+  - *Agent Jones Gift Shop*: Unique NZ map-themed gifts.  
+  - *Gelato* – A must-try!  
+  - *Art Gallery* – Local artwork on display.  
+
+
+### [Kelly Tarlton’s SEA LIFE Aquarium](https://www.visitsealife.com/auckland/)
+Walk through underwater tunnels and enjoy penguin encounters.
+
+**Admission Fees:**
+- **Adults:** ~NZD 39.00  
+- **Children (3–15 years):** ~NZD 22.00  
+- **Children under 3:** Free  
+- **Family Pass (2 adults + 2 children):** ~NZD 99.00  
+- *Note:* Online bookings may offer discounted rates.  
+
+
+### [Sky Tower](xhttps://skycityauckland.co.nz/sky-tower/)
+Incredible views of the city, plus the **SkyWalk** and **SkyJump** for thrill-seekers.
+
+**Admission Fees:**
+- **Adults:** ~NZD 32.00  
+- **Children (6–14 years):** ~NZD 13.00  
+- **Children under 6:** Free  
+- **Family Pass (2 adults + 2 children):** ~NZD 75.00  
+- *Note:* Prices may vary for additional activities like SkyWalk or SkyJump.  
+
+---
+
+## Day Trips Outside Auckland
+
+### [Rangitoto Island](https://www.newzealand.com/int/rangitoto-island/)
+A volcanic island perfect for hiking and exploring caves (suitable for older children).
+
+**Ferry Ride (Round Trip):**  
+- **Adults:** ~NZD 39.00  
+- **Children (5–15 years):** ~NZD 19.50  
+- **Children under 5:** Free  
+
+**Activities:**  
+- Hiking is free; guided tours may have additional costs.  
+
+
+### [Hobbiton Movie Set (Matamata)](https://www.hobbitontours.com/)
+A must-see for families who love *The Lord of the Rings* and *The Hobbit*.
+
+**Admission Fees:**  
+- **Adults:** ~NZD 89.00  
+- **Youth (9–16 years):** ~NZD 44.00  
+- **Children (8 years and under):** Free (with a paying adult)  
+- **Family Pass (2 adults + 2 youths):** ~NZD 225.00  
+
+*Note:* Advance booking is recommended.  
+
+
+### [Waitomo Glowworm Caves](https://www.waitomo.com/glowworms-and-caves/waitomo-glowworm-caves)
+A magical underground boat ride surrounded by glowworms.
+
+**Admission Fees:**  
+- **Adults:** ~NZD 55.00  
+- **Children (4–14 years):** ~NZD 24.00  
+- **Children under 4:** Free  
+- **Family Pass (2 adults + 2 children):** ~NZD 136.00  
+
+*Note:* Combo tours with other caves are available at different rates.  
+
+
+### [Hamilton Gardens](https://hamiltongardens.co.nz/)
+About an hour and a half south of Auckland, this enchanting set of ‘garden rooms’ offers amusement for all and a perfect Insta shot for the disenchanted and judgy teen. There is a café on-site.
+
+**Admission Fees:**  
+- **Adults:** ~NZD 20.00  
+- **Children (under 16 years):** Free  
+
+**Opening Hours:** 10:00 AM - 5:00 PM  
+
+
+### Other Activities to Consider:
+- **[Escape Rooms](https://escapemasters.co.nz/prices/auckland-cbd)** – ~NZD 35 per person  
+- **[Bungy Jumping](https://www.bungy.co.nz/auckland/auckland-bridge/auckland-bridge-bungy/)** – ~NZD 260 per person  
+- **[Whale and Dolphin Watching](https://whalewatchingauckland.com/)** –  
+  - **Adults:** ~NZD 209.00  
+  - **Family Pass (2 adults + 2 children):** ~NZD 525.00  
+
+---
+
+*Please note that prices are subject to change, and it's advisable to check the official websites for the most current information.*
+
+
+<!-- <InlineMap
+  bottom
+  initialViewState={{
+    longitude: 173.1,
+    latitude: -41.35,
+    zoom: 3.87,
+  }}
+/> -->

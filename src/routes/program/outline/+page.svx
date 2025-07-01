@@ -1,0 +1,54 @@
+---
+title: Program Outline
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import ProgramOutline from '$images/foss4g2025_program_outline.jpg?enhanced';
+</script>
+
+<!-- TODO -->
+
+<Heading>Program Outline</Heading>
+
+![Auckland]($images/main-room.jpg)
+
+The general program outline for sessions and social events:
+
+
+| Date                  | Session       | Social                             | Other             |
+| --------------------- | ------------- | ---------------------------------- | ----------------- |
+| Monday 17 November    | Workshops     | Informal Meetup                    | OSGeo Oceania AGM |
+| Tuesday 18 November   | Workshops     | Ice Breaker                        |                   |
+| Wednesday 19 November | Conference    | Conference Dinner                  |                   |
+| Thursday 20 November  | Conference    | Geochicas and Women+ in Geospatial | B2B Session       |
+| Friday 21 November    | Conference    |                                    | OSGeo AGM         |
+| Saturday 22 November  | Community Day |                                    |                   |
+| Sunday 23 November    | Community Day |                                    |                   |
+
+<picture class="no-border-radius">
+  <enhanced:img src={ProgramOutline} alt="Program Outline" />
+</picture>
+
+
+We expect to have the first full detailed schedule released by the end of August 2025.
+
+![Auckland]($images/auckland.jpg)
+
+<!-- {/* For more information, please see
+
+- [Conference Schedule](program/schedule)
+- [Workshop Schedule](program/workshops)
+- [Social Events Schedule](program/social-events)
+
+Conference registration is still open!
+
+<StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025">
+  Conference Registration
+</StyledButton>
+
+Workshop registration is also still open!
+
+<StyledButton target="https://ti.to/osgeo-oceania/foss4g-2025-workshops">
+  Workshop Registration
+</StyledButton> */} -->
