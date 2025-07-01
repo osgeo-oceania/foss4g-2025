@@ -3,10 +3,10 @@ export const LEVELS = {
   GOLD: 1,
   SILVER: 2,
   BRONZE: 3,
-  PARTNER: 4,
-  SUPPORTER: 5,
+  VENUE: 4,
+  PARTNER: 5,
+  SUPPORTER: 6,
   CHILDCARE: 10,
-  VENUE: 100
 };
 
 export default {
