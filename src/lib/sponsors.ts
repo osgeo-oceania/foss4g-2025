@@ -3,10 +3,10 @@ export const LEVELS = {
   GOLD: 1,
   SILVER: 2,
   BRONZE: 3,
-  PARTNER: 4,
-  SUPPORTER: 5,
+  VENUE: 4,
+  PARTNER: 5,
+  SUPPORTER: 6,
   CHILDCARE: 10,
-  VENUE: 100
 };
 
 export default {
@@ -76,10 +76,22 @@ export default {
     link: 'https://www.tomtom.com/',
     level: LEVELS.BRONZE
   },
+  auspatious: {
+    name: 'Auspatious',
+    logo: () => import('$images/logos/auspatious.png?enhanced'),
+    link: 'https://auspatious.com/',
+    level: LEVELS.BRONZE
+  },
   wdc: {
     name: 'WDC',
     logo: () => import('$images/logos/wdc.png?enhanced'),
     link: 'https://geospatial.whanganui.govt.nz/',
     level: LEVELS.PARTNER
+  },
+  gscience: {
+    name: 'Geoscience Society of NZ',
+    logo: () => import('$images/logos/gsnz.gif?enhanced'),
+    link: 'https://confer.eventsair.com/gsnz-2025/',
+    level: LEVELS.SUPPORTER
   }
 };
