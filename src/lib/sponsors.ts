@@ -87,5 +87,11 @@ export default {
     logo: () => import('$images/logos/wdc.png?enhanced'),
     link: 'https://geospatial.whanganui.govt.nz/',
     level: LEVELS.PARTNER
+  },
+  gscience: {
+    name: 'Geoscience Society of NZ',
+    logo: () => import('$images/logos/gsnz.gif?enhanced'),
+    link: 'https://confer.eventsair.com/gsnz-2025/',
+    level: LEVELS.SUPPORTER
   }
 };
