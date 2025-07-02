@@ -99,5 +99,11 @@ export default {
     logo: () => import('$images/logos/survey-and-spatial-nz.png?enhanced'),
     link: 'https://www.surveyspatialnzconference.org/',
     level: LEVELS.SUPPORTER
+  },
+  qgisau: {
+    name: 'QGIS Australia',
+    logo: () => import('$images/logos/qgisau.png?enhanced'),
+    link: 'https://qgis-australia.org/',
+    level: LEVELS.SUPPORTER
   }
 };
