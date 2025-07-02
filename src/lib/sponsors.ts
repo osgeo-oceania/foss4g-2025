@@ -93,5 +93,11 @@ export default {
     logo: () => import('$images/logos/gsnz.gif?enhanced'),
     link: 'https://confer.eventsair.com/gsnz-2025/',
     level: LEVELS.SUPPORTER
+  },
+  surveyspatial: {
+    name: 'Survey & Spatial NZ',
+    logo: () => import('$images/logos/survey-and-spatial-nz.png?enhanced'),
+    link: 'https://www.surveyspatialnzconference.org/',
+    level: LEVELS.SUPPORTER
   }
 };
