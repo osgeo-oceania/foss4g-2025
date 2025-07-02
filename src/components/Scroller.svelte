@@ -1,27 +1,20 @@
 <script>
-  import { onMount } from 'svelte';
+  import { page } from '$app/stores';
 
-  let threshold = 400;
+  // Add any paths where the button should not be showns
+  const ingnoredPaths = ['/map'];
 
-  let showButton = false;
-
-  function handleScroll() {
-    showButton = document.body.scrollTop > threshold;
-  }
+  let show = true;
+  $: show = !ingnoredPaths.some((path) => $page.url.pathname.startsWith(path));
 
   function scrollToTop() {
     document.body.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  onMount(() => {
-    document.body.addEventListener('scroll', handleScroll);
-    return () => document.body.removeEventListener('scroll', handleScroll);
-  });
 </script>
 
 <button
   id="scroll-to-top"
-  class="scroll-to-top bg-secondary text-primary {showButton ? 'active' : 'hidden'}"
+  class="scroll-to-top bg-secondary text-primary {show ? '' : 'hidden'}"
   on:click={scrollToTop}
   aria-label="Scroll to top"
 >
@@ -44,15 +37,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
     z-index: 1000;
+    opacity: 0.8;
     transition: opacity 0.2s;
   }
   .scroll-to-top:hover {
     opacity: 1;
   }
-  .active {
-    opacity: 0.9;
-  }
   .hidden {
-    opacity: 0.7;
+    display: none;
   }
 </style>
