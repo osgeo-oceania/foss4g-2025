@@ -63,12 +63,25 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
     projection: { type: 'globe' },
     sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
     glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
+    terrain: { source: 'dem-terrain', exaggeration: 1.5 },
     sources: {
       auckland: {
         type: 'vector',
         url: `pmtiles://${config.pmtiles.auckland}`,
         attribution:
           '<a href="https://www.linz.govt.nz/" target="_blank">LINZ</a>, <a href="https://www.aucklandcouncil.govt.nz/" target="_blank">Auckland Council</a>'
+      },
+      "dem-terrain": {
+        type: 'raster-dem',
+        tiles: [
+          'https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01jyfz7gm9zw4kvew5a1zsmk6w&pipeline=terrain-rgb'
+        ]
+      },
+      "dem-hillshade": {
+        type: 'raster-dem',
+        tiles: [
+          'https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01jyfz7gm9zw4kvew5a1zsmk6w&pipeline=terrain-rgb'
+        ]
       }
     },
     layers: [
@@ -103,13 +116,22 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         }
       },
       {
+        id: 'hillshade',
+        source: 'dem-hillshade',
+        type: 'hillshade',
+        paint: {
+          'hillshade-method': 'igor'
+        }
+      },
+      {
         id: 'parks',
         source: 'auckland',
         'source-layer': 'areas',
         type: 'fill',
         filter: ['==', ['get', 'type'], 'park'],
         paint: {
-          'fill-color': '#c6eebe' // park fill
+          'fill-color': '#c6eebe', // park fill
+          'fill-opacity': 0.5
         }
       },
 
@@ -222,15 +244,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         minzoom: 12,
         paint: {
           'fill-extrusion-color': '#e3dcd9',
-          'fill-extrusion-height': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            14,
-            0,
-            14.05,
-            ['get', 'height']
-          ],
+          'fill-extrusion-height': ['get', 'height'],
           'fill-extrusion-vertical-gradient': true,
           'fill-extrusion-opacity': 0.8
         }
