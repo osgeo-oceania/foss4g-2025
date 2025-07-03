@@ -19,6 +19,29 @@
       url: '/attend/call-for-papers'
     },
     {
+      label: 'About',
+      url: '/organisers',
+      subMenu: [
+        {
+          label: 'Organisers',
+          url: '/organisers'
+        },
+
+        {
+          label: 'Code of Conduct',
+          url: '/attend/code-of-conduct'
+        },
+        {
+          label: 'Privacy Policy',
+          url: '/attend/privacy-policy'
+        },
+        {
+          label: 'Terms and Conditions',
+          url: '/attend/terms-and-conditions'
+        }
+      ]
+    },
+    {
       label: 'Attend',
       url: '/attend/register',
       subMenu: [
@@ -35,28 +58,16 @@
           url: '/attend/conference-venue'
         },
         {
+          label: 'Entry into New Zealand',
+          url: '/attend/travelling-to-nz'
+        },
+        {
           label: 'Travel Guide',
           url: '/attend/nz-travel-guide'
         },
         {
           label: 'Adventure Guide',
           url: '/attend/nz-adventures'
-        },
-        {
-          label: 'Entry into New Zealand',
-          url: '/attend/travelling-to-nz'
-        },
-        {
-          label: 'Terms and Conditions',
-          url: '/attend/terms-and-conditions'
-        },
-        {
-          label: 'Code of Conduct',
-          url: '/attend/code-of-conduct'
-        },
-        {
-          label: 'Privacy Policy',
-          url: '/attend/privacy-policy'
         }
       ]
     },
@@ -64,6 +75,10 @@
       label: 'Program',
       url: '/program/outline',
       subMenu: [
+        {
+          label: 'Call For Papers',
+          url: '/attend/call-for-papers'
+        },
         {
           label: 'Outline',
           url: '/program/outline'
@@ -73,10 +88,6 @@
     {
       label: 'Sponsorship',
       url: '/sponsorship'
-    },
-    {
-      label: 'Organisers',
-      url: '/organisers'
     }
   ];
 </script>
