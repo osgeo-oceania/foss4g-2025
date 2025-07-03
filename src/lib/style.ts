@@ -122,7 +122,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'dem-hillshade',
         type: 'hillshade',
         paint: {
-          'hillshade-method': 'igor'
+          'hillshade-method': 'combined'
         }
       },
       {
