@@ -73,12 +73,14 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       },
       "dem-terrain": {
         type: 'raster-dem',
+        maxzoom: 13,
         tiles: [
           'https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01jyfz7gm9zw4kvew5a1zsmk6w&pipeline=terrain-rgb'
         ]
       },
       "dem-hillshade": {
         type: 'raster-dem',
+        maxzoom: 13,
         tiles: [
           'https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01jyfz7gm9zw4kvew5a1zsmk6w&pipeline=terrain-rgb'
         ]
@@ -178,26 +180,6 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           ]
         }
       },
-      // major-roads outline
-      {
-        id: 'major-roads-outline',
-        source: 'auckland',
-        'source-layer': 'roads',
-        type: 'line',
-        filter: ['has', 'hway_num'],
-        paint: {
-          'line-color': '#fff',
-          'line-width': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            6,
-            1.5, // width 1.5 at zoom 6
-            18,
-            10 // width 10 at zoom 18
-          ]
-        }
-      },
       // major-roads fill
       {
         id: 'major-roads',
@@ -210,15 +192,15 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'line-join': 'round'
         },
         paint: {
-          'line-color': '#b97979', // before: #c4b7ab'
+          'line-color': 'white',
           'line-width': [
             'interpolate',
             ['linear'],
             ['zoom'],
             6,
-            1, // width 1 at zoom 6
+            1,
             14,
-            9 // width 9 at zoom 18
+            4
           ]
         }
       },
