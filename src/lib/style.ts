@@ -73,7 +73,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       },
       "dem-terrain": {
         type: 'raster-dem',
-        maxzoom: 13,
+        maxzoom: 12,
         tiles: [
           'https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01jyfz7gm9zw4kvew5a1zsmk6w&pipeline=terrain-rgb'
         ]
