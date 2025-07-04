@@ -10,7 +10,7 @@ export const defaultMapConfig: MapConfig = {
   },
   landcover: {
     ocean: {
-      color: '#ADE0EB',
+      color: '#79bbf5',
       classes: [-99]
     },
     'built-up': {
@@ -18,7 +18,7 @@ export const defaultMapConfig: MapConfig = {
       classes: [1, 5, 6]
     },
     water: {
-      color: '#ADE0EB',
+      color: '#79bbf5',
       classes: [20, 21, 22]
     },
     cropland: {
@@ -132,7 +132,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'fill',
         filter: ['==', ['get', 'type'], 'park'],
         paint: {
-          'fill-color': '#c6eebe', // park fill
+          'fill-color': '##8EEA64', // park fill
           'fill-opacity': 0.5
         }
       },
