@@ -10,7 +10,7 @@ export const defaultMapConfig: MapConfig = {
   },
   landcover: {
     ocean: {
-      color: '#ADE0EB',
+      color: '#79bbf5',
       classes: [-99]
     },
     'built-up': {
@@ -18,7 +18,7 @@ export const defaultMapConfig: MapConfig = {
       classes: [1, 5, 6]
     },
     water: {
-      color: '#ADE0EB',
+      color: '#79bbf5',
       classes: [20, 21, 22]
     },
     cropland: {
