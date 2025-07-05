@@ -132,7 +132,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'fill',
         filter: ['==', ['get', 'type'], 'park'],
         paint: {
-          'fill-color': '##8EEA64', // park fill
+          'fill-color': '#8EEA64', // park fill
           'fill-opacity': 0.5
         }
       },
