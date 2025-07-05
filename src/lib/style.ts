@@ -228,7 +228,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'fill-extrusion-color': '#e3dcd9',
           'fill-extrusion-height': ['get', 'height'],
           'fill-extrusion-vertical-gradient': true,
-          'fill-extrusion-opacity': 0.8
+          'fill-extrusion-opacity': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            12, 0, // no extrusion opacity at zoom 12
+            16, 0.5 // 50% extrusion opacity at zoom 16
+          ]
         }
       },
 
@@ -241,7 +247,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'routes',
         filter: ['==', ['get', 'type'], 'bus'],
         type: 'line',
-        minzoom: 10,
+        minzoom: 12,
         layout: {
           visibility: 'none'
         },
@@ -255,9 +261,10 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'routes',
         filter: ['==', ['get', 'type'], 'ferry'],
         type: 'line',
-        minzoom: 10,
+        minzoom: 12,
         paint: {
-          'line-color': '#1B2430'
+          'line-color': '#2795F6',
+          'line-dasharray': [4, 2] // 4px dash, 2px gap
         }
       },
       {
@@ -272,13 +279,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'line-width': 2,
           'line-color': [
             'case',
-            ['==', ['get', 'number'], 'STH'],
+            ['==', ['get', 'number'], 'STH'], // red line for Southern Line
             '#ee3a31',
-            ['==', ['get', 'number'], 'WEST'],
+            ['==', ['get', 'number'], 'WEST'], // green line for Western Line
             '#8bc750',
-            ['==', ['get', 'number'], 'ONE'],
+            ['==', ['get', 'number'], 'ONE'], // blue line for Onehunga Line
             '#00b1ee',
-            ['==', ['get', 'number'], 'EAST'],
+            ['==', ['get', 'number'], 'EAST'], // yellow line for Eastern Line
             '#fcb52d',
             'black'
           ],
