@@ -36,7 +36,7 @@
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
-    z-index: 1000;
+    z-index: 5;
     opacity: 0.8;
     transition: opacity 0.2s;
   }
