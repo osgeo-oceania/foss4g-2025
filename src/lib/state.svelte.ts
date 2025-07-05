@@ -36,9 +36,11 @@ export class AppState {
           url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}/`)
         };
       },
+      maxPitch: 70,
       attributionControl: false, // TODO add custom control
-      center: [174.76479, -36.85125],
-      pitch: 0,
+      center: [174.7668, -36.85775],
+      bearing: 172.4,
+      pitch: 70,
 
       zoom: 14,
       hash: true,
