@@ -68,6 +68,10 @@
         {
           label: 'Adventure Guide',
           url: '/attend/nz-adventures'
+        },
+        {
+          label: 'Accomodation',
+          url: '/attend/accomodation'
         }
       ]
     },
