@@ -202,9 +202,11 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
             ['linear'],
             ['zoom'],
             14,
-            0.5,
+            0.25,
+            16,
+            1,
             18,
-            2
+            4
           ]
         }
       },
