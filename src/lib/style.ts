@@ -345,7 +345,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'Bay'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['Arvo Regular']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10
         },
         paint: {
@@ -363,13 +363,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'park'],
         layout: {
           'text-field': ['get', 'name'],
-          'text-font': ['literal', ['Arvo Regular']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10
         },
         paint: {
           'text-color': '#1B2430',
-          'text-halo-color': '#F2F2F2',
-          'text-halo-width': 1
+          'text-halo-color': '#D9EED1',
+          'text-halo-width': 0
         }
       },
 
@@ -381,7 +381,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'hill'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['Arvo Regular']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10,
           visibility: 'none'
         },
@@ -419,8 +419,8 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'island'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['Arvo Regular']],
-          'text-size': 12
+          'text-font': ['literal', ['Arvo Italic']],
+          'text-size': 10
         },
         paint: {
           'text-color': '#1B2430',
