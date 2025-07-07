@@ -51,7 +51,7 @@ export default {
     name: 'Greg Lauer',
     title: 'Sponsorship, Travel Grant Program',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the word together!"
+    bio: "Greg is a Geographer and is passionate about open data and geospatial technology. Originally from Auckland and now living in Brisbane he has worked in a range of technical and consulting roles across multiple industries including defence, construction and mining. He was a founding Director of OSGeo Oceania, and has been actively involved in organising FOSS4G SotM Oceania events. Outside of work Greg is an avid off road enthusiast and frequent traveler, especially in the Pacific region."
   },
   hamish: {
     name: 'Hamish Campbell',
