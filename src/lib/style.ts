@@ -274,7 +274,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 
         filter: ['all', ['==', ['get', 'type'], 'train'], ['!=', ['get', 'number'], 'HUIA']],
         type: 'line',
-        minzoom: 10,
+        minzoom: 12,
         paint: {
           'line-width': 2,
           'line-color': [
