@@ -26,7 +26,10 @@
           label: 'Organisers',
           url: '/organisers'
         },
-
+        {
+          label: 'Our Logo',
+          url: '/about/logo'
+        },
         {
           label: 'Code of Conduct',
           url: '/attend/code-of-conduct'
@@ -68,6 +71,10 @@
         {
           label: 'Adventure Guide',
           url: '/attend/nz-adventures'
+        },
+        {
+          label: 'Accomodation',
+          url: '/attend/accomodation'
         }
       ]
     },

@@ -1,0 +1,46 @@
+---
+title: About our Logo
+---
+
+<svelte:head>
+  <title>About our Logo</title>
+</svelte:head>
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+  import LogoSrc from '$images/svg/foss4g-2025-logo.svg';
+</script>
+
+<Heading>About our Logo</Heading>
+
+<div class="flex flex-col items-center my-8">
+  <img src={LogoSrc} alt="FOSS4G Logo" class="max-w-[420px]" />
+  <div class="mt-2 text-sm text-gray-500 italic">"Waves and Patterns" by Rua Puka</div>
+</div>
+
+FOSS4G conference logos are designed and voted on by the community. This year's logo was submitted by <Link href="https://www.linkedin.com/in/rua-puka-0a4645b6/" target="_blank">Rua Puka</Link>. In Rua's words:
+
+<div class="relative my-8">
+  <span class="absolute text-6xl font-serif select-none">&ldquo;</span>
+  <span class="absolute text-6xl font-serif select-none bottom-8 -right-0 h-0">&rdquo;</span>
+  <div class="px-10">
+    I’m Rua Puka, a GIS Specialist based in Papua New Guinea, working in the East and West Sepik Provinces 
+    through the EU-funded STREIT Programme. My work focuses on using mapping and spatial data to support 
+    rural development.
+
+    The logo design was inspired by the Pacific’s rich cultural and natural landscapes, with the blue 
+    colour scheme reflecting both the ocean that connects our region and the open, inclusive nature of 
+    the FOSS4G community.
+
+    <strong>Ocean Waves</strong> – Represent the Pacific Ocean and the spirit of movement, exploration, and open-source collaboration.<br />
+    <strong>Spearhead Shape</strong> – Symbolizes leadership, protection, and cultural strength across the Pacific.<br />
+    <strong>Sailboat (Canoe Motif)</strong> – Reflects ancestral navigation and the knowledge-sharing nature of the FOSS4G community.<br />
+    <strong>Cultural Patterns</strong> – Inspired by Pacific tapa, tattoos, and carvings—telling stories of identity and place.<br />
+    <strong>Circular Whorls</strong> – Represent connection, continuity, and the open-source ecosystem
+  </div>
+</div>
+
+### Marketing Resources
+
+Our logo is available for use in social media and marketing material. You can find the mark in various forms for download here at: <Link href="https://drive.google.com/drive/folders/1QpWI9fF-2IZyWsOI8y4ytnKnht_b0UmU" target="_blank">https://drive.google.com/drive/folders/1QpWI9fF-2IZyWsOI8y4ytnKnht_b0UmU</Link>.

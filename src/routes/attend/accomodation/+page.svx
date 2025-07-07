@@ -1,0 +1,48 @@
+---
+title: Accomodation
+---
+
+<svelte:head>
+  <title>Accomodation</title>
+</svelte:head>
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
+<Heading>Accomodation</Heading>
+
+Auckland has a wide range of accomodation options, from 5-star hotels, to backpackers and vacation rental houses.
+
+### Conference Discounts
+
+The following providers have offered discounts for conference attendees:
+
+[Pullman Hotal](https://accorevents.com/offers/foss4g-conference)<br/>
+Corner Waterloo Quadrant &, Princes Street<br/>
+15% OFF on flexible rate for accommodation at Pullman Auckland for the FOSS4G Conference using the above link.
+
+[Four Points by Sheraton](https://www.marriott.com/event-reservations/reservation-link.mi?id=1744068961146&key=CORP&guestreslink2=true&app=resvlink)<br/>
+396 Queen Street
+
+### Other Hotels
+
+[LyLo](https://www.lylo.com/auckland/)<br/>
+54 Cook St
+
+[Sofitel](https://www.sofitel-auckland.com/)<br/>
+21 Viaduct Harbour Avenue
+
+[Ibis Central](https://all.accor.com/hotel/6487/index.en.shtml)<br/>
+20 Wyndham Street
+
+[Avani Auckland Metropolis Residences](https://www.avanihotels.com/metropolis-auckland)<br/>
+40 Kitchener Street
+
+### Vacation rentals
+
+[Airbnb](https://www.airbnb.co.nz/)
+
+[Bookabach](https://www.bookabach.co.nz/)
+

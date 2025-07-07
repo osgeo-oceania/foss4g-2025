@@ -111,5 +111,11 @@ export default {
     logo: () => import('$images/logos/qgisau.png?enhanced'),
     link: 'https://qgis-australia.org/',
     level: LEVELS.SUPPORTER
+  },
+  aws: {
+    name: 'AWS',
+    logo: () => import('$images/logos/aws-logo.png?enhanced'),
+    link: 'https://aws.amazon.com/',
+    level: LEVELS.GOLD
   }
 };

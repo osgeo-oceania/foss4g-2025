@@ -2,6 +2,7 @@
   import { afterNavigate } from '$app/navigation';
   import Footer from '$components/Footer.svelte';
   import Header from '$components/Header.svelte';
+  import Scroller from '$components/Scroller.svelte';
   import '../app.css';
 
   let { children } = $props();
@@ -23,4 +24,5 @@
   <Header />
   <div class="px-2">{@render children()}</div>
   <Footer />
+  <Scroller />
 </div>
