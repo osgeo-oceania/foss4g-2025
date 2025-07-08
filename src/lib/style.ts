@@ -267,6 +267,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'line-dasharray': [4, 2] // 4px dash, 2px gap
         }
       },
+      /*
       {
         id: 'routes-train',
         source: 'auckland',
@@ -303,6 +304,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           ]
         }
       },
+      */
       //
       // places labels
       //
