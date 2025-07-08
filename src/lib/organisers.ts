@@ -31,7 +31,7 @@ export default {
   },
   kammy: {
     name: 'Kamsin Raju (Kammy)',
-    title: 'Women in Geospatial breakfast, Geochicas event, and adventure guide',
+    title: 'Side Events and adventure guide',
     photo: () => import('$images/team/kammy.jpg?enhanced'),
     bio: "Kamsin is one of the creative chaos agents behind the scenes! She is helping organise the Women in Geospatial Breakfast and the Geochicas side event - two spaces extremely close to her heart. She also dips her toes into various planning bits and pieces, and proudly crafted a playful adventure guide to help attendees explore Auckland. At work, she plays at the intersection of geospatial technology and climate resilience, focusing on remote sensing, blue carbon ecosystems, and disaster risk reduction in the Pacific. Her background includes everything from writing adaptation concept notes and slum upgrading strategies to leading user engagement for digital Earth platforms; a love of using GIS and storytelling to bring technical work to life and make it accessible for communities and decision-makers alike. Outside of work, you’ll find her lost in fantasy romance novels, experimenting in the kitchen, or planning her next escape. Kamsin has been part of the FOSS4G community since 2019, which has proven itself an inspiring space to grow in. She says: 'Bringing FOSS4G to Auckland this year is such an exciting full-circle moment!'<br/><a href='https://www.linkedin.com/in/kamsin-raju-200bb1118' target=_blank>LinkedIn</a>"
   },
@@ -51,11 +51,11 @@ export default {
     name: 'Greg Lauer',
     title: 'Sponsorship, Travel Grant Program',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the word together!"
+    bio: "Greg is a Geographer and is passionate about open data and geospatial technology. Originally from Auckland and now living in Brisbane he has worked in a range of technical and consulting roles across multiple industries including defence, construction and mining. He was a founding Director of OSGeo Oceania, and has been actively involved in organising FOSS4G SotM Oceania events. Outside of work Greg is an avid off road enthusiast and frequent traveler, especially in the Pacific region."
   },
   hamish: {
     name: 'Hamish Campbell',
-    title: 'Venues',
+    title: 'Venues and Events',
     photo: () => import('$images/team/hamish.jpg?enhanced'),
     bio: "Hamish is a software engineering manager who’s been working in and around geospatial tech for over 15 years. He’s been a committed contributor to open source software and chaired the FOSS4G Oceania committee that brought the regional conference to New Zealand in 2023. He recently started a new role as Head of Engineering for Urban Intelligence - building software for resilient communities in the face of a changing environment.<br/><a href='https://www.linkedin.com/in/hncampbell/' target=_blank>https://www.linkedin.com/in/hncampbell/</a><br/><a href='https://bsky.app/profile/polemic.nz' target=_blank>https://bsky.app/profile/polemic.nz</a>"
   },
@@ -75,7 +75,7 @@ export default {
     name: 'Martin Tomko',
     title: 'Academic Papers',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
+    bio: "Martin is a spatial information scientist at the Univeristy of Melbourne. He mostly does computational research in how people interact in and about space now and in the past, using and developing open-source tools. He has work on mobility, Geo question-answering, epidemiology, cultural heritage, and more."
   },
   david: {
     name: 'David Ramiro',

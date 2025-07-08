@@ -63,7 +63,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
     projection: { type: 'globe' },
     sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
     glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
-    terrain: { source: 'dem-terrain', exaggeration: 1.5 },
+    terrain: { source: 'dem-terrain', exaggeration: 2 },
     sources: {
       auckland: {
         type: 'vector',
@@ -100,29 +100,53 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         'source-layer': 'coastline',
         type: 'fill',
         paint: {
-          'fill-color': '#ece7e4' // colour for land fill
+          'fill-color': '#F2F2F2',
+          'fill-opacity': 1
         }
       },
-      {
-        id: 'alcohol-control-area',
-        source: 'auckland',
-        'source-layer': 'areas',
-        type: 'fill',
-        filter: ['==', ['get', 'type'], 'alcohol-control-area'],
-        layout: {
-          visibility: 'none'
-        },
-        paint: {
-          'fill-color': 'red',
-          'fill-opacity': 0.2
-        }
-      },
+      // {
+      //   id: 'coastline-border',
+      //   source: 'auckland',
+      //   'source-layer': 'coastline',
+      //   type: 'line',
+      //   paint: {
+      //     'line-color': '#79BAC9',
+      //     'line-width': [
+      //       'interpolate',
+      //       ['linear'],
+      //       ['zoom'],
+      //       12,
+      //       5, // width 1 at zoom 12
+      //       18,
+      //       10 // width 11 at zoom 18
+      //     ],
+      //     'line-opacity': 1
+      //   }
+      // },
+
+      // {
+      //   id: 'alcohol-control-area',
+      //   source: 'auckland',
+      //   'source-layer': 'areas',
+      //   type: 'fill',
+      //   filter: ['==', ['get', 'type'], 'alcohol-control-area'],
+      //   layout: {
+      //     visibility: 'none'
+      //   },
+      //   paint: {
+      //     'fill-color': 'red',
+      //     'fill-opacity': 0.2
+      //   }
+      // },
       {
         id: 'hillshade',
         source: 'dem-hillshade',
         type: 'hillshade',
         paint: {
-          'hillshade-method': 'combined'
+          'hillshade-method': 'combined',
+          'hillshade-shadow-color': '#F2F2F2',
+          'hillshade-highlight-color': '#1B2430',
+          'hillshade-accent-color': '#F2F2F2'
         }
       },
       {
@@ -132,8 +156,8 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         type: 'fill',
         filter: ['==', ['get', 'type'], 'park'],
         paint: {
-          'fill-color': '#c6eebe', // park fill
-          'fill-opacity': 0.5
+          'fill-color': '#88F15E', // park fill
+          'fill-opacity': 0.2
         }
       },
 
@@ -141,46 +165,52 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       // roads
       //
       // minor-roads outline
-      {
-        id: 'minor-roads-outline',
-        source: 'auckland',
-        'source-layer': 'roads',
-        type: 'line',
-        filter: ['!', ['has', 'hway_num']],
-        paint: {
-          'line-color': '#d1d6e0',
-          'line-width': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            12,
-            1, // width 1 at zoom 12
-            18,
-            11 // width 11 at zoom 18
-          ]
-        }
-      },
-      // minor-roads fill
+      // {
+      //   id: 'minor-roads-outline',
+      //   source: 'auckland',
+      //   'source-layer': 'roads',
+      //   type: 'line',
+      //   minzoom: 16,
+      //   filter: ['!', ['has', 'hway_num']],
+      //   paint: {
+      //     'line-color': '#8D9197',
+      //     'line-opacity': 1,
+      //     'line-width': [
+      //       'interpolate',
+      //       ['linear'],
+      //       ['zoom'],
+      //       12,
+      //       0.5, // width 1 at zoom 12
+      //       18,
+      //       2 // width 11 at zoom 18
+      //     ]
+      //   }
+      // },
+      // // minor-roads fill
       {
         id: 'minor-roads',
         source: 'auckland',
         'source-layer': 'roads',
         type: 'line',
+        minzoom: 14,
         filter: ['!', ['has', 'hway_num']],
         paint: {
-          'line-color': '#fff',
+          'line-color': '#8D9197',
+          'line-opacity': 1,
           'line-width': [
             'interpolate',
             ['linear'],
             ['zoom'],
-            12,
-            0.5, // width 0.5 at zoom 12
+            14,
+            0.25,
+            16,
+            1,
             18,
-            10 // width 10 at zoom 18
+            4
           ]
         }
       },
-      // major-roads fill
+      // // major-roads fill
       {
         id: 'major-roads',
         source: 'auckland',
@@ -192,15 +222,18 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
           'line-join': 'round'
         },
         paint: {
-          'line-color': 'white',
+          'line-color': '#8D9197',
+          'line-opacity': 1,
           'line-width': [
             'interpolate',
             ['linear'],
             ['zoom'],
-            6,
-            1,
+            12,
+            0.5,
             14,
-            4
+            1,
+            18,
+            2
           ]
         }
       },
@@ -208,56 +241,60 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
       //
       // buildings
       //
-      {
-        id: 'buildings-fill',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill',
-        minzoom: 12,
-        paint: {
-          'fill-color': '#e3dcd9'
-        }
-      },
-      {
-        id: 'buildings-extrusion',
-        source: 'auckland',
-        'source-layer': 'buildings',
-        type: 'fill-extrusion',
-        minzoom: 12,
-        paint: {
-          'fill-extrusion-color': '#e3dcd9',
-          'fill-extrusion-height': ['get', 'height'],
-          'fill-extrusion-vertical-gradient': true,
-          'fill-extrusion-opacity': 0.8
-        }
-      },
+      // {
+      //   id: 'buildings-fill',
+      //   source: 'auckland',
+      //   'source-layer': 'buildings',
+      //   type: 'fill',
+      //   minzoom: 12,
+      //   paint: {
+      //     'fill-color': '#fff'
+      //   }
+      // },
+      // {
+      //   id: 'buildings-extrusion',
+      //   source: 'auckland',
+      //   'source-layer': 'buildings',
+      //   type: 'fill-extrusion',
+      //   minzoom: 12,
+      //   paint: {
+      //     'fill-extrusion-color': '#fff',
+      //     'fill-extrusion-height': ['get', 'height'],
+      //     'fill-extrusion-vertical-gradient': true,
+      //     'fill-extrusion-opacity': 0.8
+      //   }
+      // },
 
       //
       // routes
       //
-      {
-        id: 'routes-bus',
-        source: 'auckland',
-        'source-layer': 'routes',
-        filter: ['==', ['get', 'type'], 'bus'],
-        type: 'line',
-        minzoom: 10,
-        layout: {
-          visibility: 'none'
-        },
-        paint: {
-          'line-color': 'black'
-        }
-      },
+      // {
+      //   id: 'routes-bus',
+      //   source: 'auckland',
+      //   'source-layer': 'routes',
+      //   filter: ['==', ['get', 'type'], 'bus'],
+      //   type: 'line',
+      //   minzoom: 10,
+      //   layout: {
+      //     visibility: 'none'
+      //   },
+      //   paint: {
+      //     'line-color': 'black',
+      //     'line-width': 0.5,
+      //     'line-dasharray': [4, 4]
+      //   }
+      // },
       {
         id: 'routes-ferry',
         source: 'auckland',
         'source-layer': 'routes',
         filter: ['==', ['get', 'type'], 'ferry'],
         type: 'line',
-        minzoom: 10,
+        minzoom: 12,
         paint: {
-          'line-color': '#1B2430'
+          'line-color': '#1B2430',
+          'line-width': 0.5,
+          'line-dasharray': [4, 4]
         }
       },
       {
@@ -267,9 +304,9 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
 
         filter: ['all', ['==', ['get', 'type'], 'train'], ['!=', ['get', 'number'], 'HUIA']],
         type: 'line',
-        minzoom: 10,
+        minzoom: 12,
         paint: {
-          'line-width': 2,
+          'line-width': 1,
           'line-color': [
             'case',
             ['==', ['get', 'number'], 'STH'],
@@ -308,12 +345,12 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'Bay'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Italic']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10
         },
         paint: {
-          'text-color': 'darkblue',
-          'text-halo-color': '#fff',
+          'text-color': '#1B2430',
+          'text-halo-color': '#F2F2F2',
           'text-halo-width': 1
         }
       },
@@ -326,13 +363,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'park'],
         layout: {
           'text-field': ['get', 'name'],
-          'text-font': ['literal', ['BellTopo Sans Italic']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10
         },
         paint: {
-          'text-color': 'green',
-          'text-halo-color': '#fff',
-          'text-halo-width': 1
+          'text-color': '#1B2430',
+          'text-halo-color': '#D9EED1',
+          'text-halo-width': 0
         }
       },
 
@@ -344,13 +381,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'hill'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Regular']],
+          'text-font': ['literal', ['Arvo Italic']],
           'text-size': 10,
           visibility: 'none'
         },
         paint: {
-          'text-color': 'darkgreen',
-          'text-halo-color': '#fff',
+          'text-color': '#1B2430',
+          'text-halo-color': '#F2F2F2',
           'text-halo-width': 1
         }
       },
@@ -363,15 +400,15 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'suburb'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Italic']],
+          'text-font': ['literal', ['Arvo Regular']],
           'text-size': 10,
           'text-max-width': 7
         },
         paint: {
-          'text-color': '#222',
-          'text-halo-color': '#fff',
+          'text-color': '#1B2430',
+          'text-halo-color': '#F2F2F2',
           'text-halo-width': 1,
-          'text-halo-blur': 2
+          // 'text-halo-blur': 2
         }
       },
       {
@@ -382,13 +419,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'island'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Regular']],
-          'text-size': 12
+          'text-font': ['literal', ['Arvo Italic']],
+          'text-size': 10
         },
         paint: {
-          'text-color': '#aaa',
-          'text-halo-color': '#fff',
-          'text-halo-width': 2
+          'text-color': '#1B2430',
+          'text-halo-color': '#57A9BB',
+          'text-halo-width': 0
         }
       },
       {
@@ -399,13 +436,13 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         filter: ['==', ['get', 'type'], 'town'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Bold']],
-          'text-size': 14
+          'text-font': ['literal', ['Arvo Regular']],
+          'text-size': 16
         },
         paint: {
-          'text-color': '#111',
-          'text-halo-color': '#fff',
-          'text-halo-width': 2
+          'text-color': '#1B2430',
+          'text-halo-color': '#F2F2F2',
+          'text-halo-width': 1
         }
       },
       {
@@ -413,17 +450,17 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
-        maxzoom: 14, // set a max zoom level
+        maxzoom: 18, // set a max zoom level
         filter: ['==', ['get', 'type'], 'city'],
         layout: {
           'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
+          'text-font': ['literal', ['Arvo Regular']],
           'text-size': 20 // used to be 18
         },
         paint: {
-          'text-color': '#111',
-          'text-halo-color': '#fff',
-          'text-halo-width': 2
+          'text-color': '#1B2430',
+          'text-halo-color': '#F2F2F2',
+          'text-halo-width': 1
         }
       }
     ]

@@ -6,7 +6,7 @@ export const LEVELS = {
   VENUE: 4,
   PARTNER: 5,
   SUPPORTER: 6,
-  CHILDCARE: 10,
+  CHILDCARE: 10
 };
 
 export default {
@@ -58,17 +58,23 @@ export default {
     link: 'https://qfield.cloud/',
     level: LEVELS.SILVER
   },
+  sparkgeo: {
+    name: 'SparkGEO',
+    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
+    link: 'https://sparkgeo.com/',
+    level: LEVELS.SILVER
+  },
+  sparkgeochildcare: {
+    name: 'SparkGEO-Childcare',
+    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
+    link: 'https://sparkgeo.com/',
+    level: LEVELS.CHILDCARE
+  },
   sotm2025: {
     name: 'SOTM2025',
     logo: () => import('$images/logos/sotm2025.png?enhanced'),
     link: 'https://2025.stateofthemap.org/',
     level: LEVELS.SUPPORTER
-  },
-  sparkgeo: {
-    name: 'SparkGEO',
-    logo: () => import('$images/logos/sparkgeo.png?enhanced'),
-    link: 'https://sparkgeo.com/',
-    level: LEVELS.SILVER + LEVELS.CHILDCARE
   },
   tomtom: {
     name: 'TomTom',
@@ -105,5 +111,11 @@ export default {
     logo: () => import('$images/logos/qgisau.png?enhanced'),
     link: 'https://qgis-australia.org/',
     level: LEVELS.SUPPORTER
+  },
+  aws: {
+    name: 'AWS',
+    logo: () => import('$images/logos/aws-logo.png?enhanced'),
+    link: 'https://aws.amazon.com/',
+    level: LEVELS.GOLD
   }
 };
