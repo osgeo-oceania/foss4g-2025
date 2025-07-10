@@ -11,6 +11,7 @@
   import Team from '$lib/organisers';
   import Button from '$components/Button.svelte';
   import Card from '../components/Card.svelte';
+  import News from '$lib/news';
 
   const whyAttends = [
     {
@@ -44,6 +45,30 @@
   <title>FOSS4G 2025</title>
 </svelte:head>
 
+{#if News.length > 0}
+  <div class="bg-primary/90 mb-6 flex items-center gap-4 rounded-xl px-4 py-3 text-white">
+    <span class="hidden whitespace-nowrap sm:inline">{News[0].date}</span>
+    <span class="hidden whitespace-nowrap sm:inline">|</span>
+    <Link
+      href={News[0].link}
+      target="_blank"
+      class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap"
+    >
+      {News[0].title}
+    </Link>
+    <div class="flex-shrink-0">
+      <Link
+        href={News[0].link}
+        target="_blank"
+        class="flex items-center gap-1 text-xs whitespace-nowrap"
+      >
+        Read more
+        <span class="icon-[lucide--external-link] inline-block h-4 w-4"></span>
+      </Link>
+    </div>
+  </div>
+{/if}
+
 <!-- Hero -->
 <main class="m:space-y-12 mb-8 space-y-12 sm:space-y-16">
   <div class="hero flex">
@@ -51,7 +76,7 @@
       class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-10 sm:py-12"
     >
       <div
-        class="[&_path]:!fill-primary [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96 [&_svg]:max-h-72 absolute -z-10 h-72 w-72 right-0 bottom-0 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8"
+        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8 [&_svg]:max-h-72 [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96"
       >
         {@html Foss4g2025Logo}
         <div

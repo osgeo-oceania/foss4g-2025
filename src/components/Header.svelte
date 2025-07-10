@@ -23,6 +23,10 @@
       url: '/organisers',
       subMenu: [
         {
+          label: 'News',
+          url: '/news'
+        },
+        {
           label: 'Organisers',
           url: '/organisers'
         },
