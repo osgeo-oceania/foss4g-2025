@@ -19,7 +19,9 @@ title: News
     <section>
         <h3>{item.date}</h3>
         <strong>{item.title}</strong>
+        {#if item.content}
         <Markdown source={item.content} />
+        {/if}
         {#if item.link}
             <Link href={item.link} target="_blank">Read more...</Link>
         {/if}
