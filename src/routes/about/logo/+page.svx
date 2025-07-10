@@ -19,7 +19,7 @@ title: About our Logo
   <div class="mt-2 text-sm text-gray-500 italic">"Waves and Patterns" by Rua Puka</div>
 </div>
 
-FOSS4G conference logos are designed and voted on by the community. This year's logo was submitted by <Link href="https://www.linkedin.com/in/rua-puka-0a4645b6/" target="_blank">Rua Pula</Link>. In Rua's words:
+FOSS4G conference logos are designed and voted on by the community. This year's logo was submitted by <Link href="https://www.linkedin.com/in/rua-puka-0a4645b6/" target="_blank">Rua Puka</Link>. In Rua's words:
 
 <div class="relative my-8">
   <span class="absolute text-6xl font-serif select-none">&ldquo;</span>
