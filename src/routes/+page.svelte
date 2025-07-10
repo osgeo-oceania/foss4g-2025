@@ -51,7 +51,7 @@
       class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-10 sm:py-12"
     >
       <div
-        class="[&_path]:!fill-primary [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96 [&_svg]:max-h-72 absolute -z-10 h-72 w-72 right-0 bottom-0 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8"
+        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8 [&_svg]:max-h-72 [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96"
       >
         {@html Foss4g2025Logo}
         <div

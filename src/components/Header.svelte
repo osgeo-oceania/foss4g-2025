@@ -89,6 +89,10 @@
         {
           label: 'Outline',
           url: '/program/outline'
+        },
+        {
+          label: 'Events',
+          url: '/program/events'
         }
       ]
     },

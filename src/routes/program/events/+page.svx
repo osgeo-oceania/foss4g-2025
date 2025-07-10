@@ -1,0 +1,51 @@
+---
+title: Events
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
+  import Dinner from '$images/conference-dinner-2023.png?enhanced';
+</script>
+
+<Heading>Events</Heading>
+
+<enhanced:img src={Dinner} />
+
+### Business 2 Business
+
+Tuesday 18th November, 2.00pm (to be confirmed)
+
+An afternoon session of networking over canapes and drinks. This will be held in the AUT conference venue.
+
+### Ice Breaker
+
+Tuesday 18th November from 6.30pm
+
+Our Ice Breaker event will be held at the Maritime Room, New Zealand Maritime Museum.
+
+Corner of Quay and Hobson Street, Auckland
+
+### Gala Dinner
+
+Wednesday 19th November - Evening
+
+Out gala dinner is at the Hilton, Auckland.
+
+147 Quay Street, Auckland Central
+
+### GeoChicas
+
+Thursday 20th November – Evening
+
+Held at RocketMan
+
+8 Roukai Lane, Auckland Central
+
+### Rangitoto Island Day Trip
+
+Saturday 22nd November – All Day (Weather Permittion)
+
+Watch this space!
+
+<enhanced:img src={Rangitoto} alt="Rangitoto Island" />
