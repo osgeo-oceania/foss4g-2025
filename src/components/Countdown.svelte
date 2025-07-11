@@ -9,7 +9,7 @@
     currentTime = new Date();
   });
 
-  const diff = $derived(targetTime.getTime() - currentTime.getTime());
+  const diff = $derived(Math.max(0, targetTime.getTime() - currentTime.getTime()));
   const days = $derived(Math.floor(diff / (1000 * 60 * 60 * 24)));
   const hours = $derived(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
   const minutes = $derived(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
@@ -27,28 +27,28 @@
       <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
         {days.toString().padStart(2, '0')}
       </div>
-      <div class="text-center text-xs uppercase mt-5">days</div>
+      <div class="mt-5 text-center text-xs uppercase">days</div>
     </div>
     <div class="text-3xl sm:text-8xl">:</div>
     <div>
       <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
         {hours.toString().padStart(2, '0')}
       </div>
-      <div class="text-center text-xs uppercase mt-5">hours</div>
+      <div class="mt-5 text-center text-xs uppercase">hours</div>
     </div>
     <div class="text-3xl sm:text-8xl">:</div>
     <div>
       <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
         {minutes.toString().padStart(2, '0')}
       </div>
-      <div class="text-center text-xs uppercase mt-5">minutes</div>
+      <div class="mt-5 text-center text-xs uppercase">minutes</div>
     </div>
     <div class="text-3xl sm:text-8xl">:</div>
     <div>
       <div class="w-[50px] text-center text-3xl sm:w-[120px] sm:text-8xl">
         {seconds.toString().padStart(2, '0')}
       </div>
-      <div class="text-center text-xs uppercase mt-5">seconds</div>
+      <div class="mt-5 text-center text-xs uppercase">seconds</div>
     </div>
   </div>
   <div class="absolute top-0 right-0 flex h-full justify-center">
