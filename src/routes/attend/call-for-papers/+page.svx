@@ -18,7 +18,7 @@ title: Call for Papers
 
 <main class="my-4 space-y-5">
 
-<Countdown label="Call For Papers ends in:" time="2025-07-12T00:00:00" />
+<Countdown label="Call For Papers ends in:" time="2025-07-13T00:00:00+1200" />
 
 
 <!-- Cards -->
