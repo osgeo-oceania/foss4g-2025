@@ -3,9 +3,9 @@
 
   const ticketOptions = [
     {
-      title: 'Early Bird Ticket',
+      title: 'Standard Conference Ticket',
       description:
-        'Limited Time Offer. Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
+        'Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
       price: '$700',
       currency: 'NZD',
       cardClass: 'bg-success',

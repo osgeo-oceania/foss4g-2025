@@ -19,7 +19,7 @@ title: Register
 
 <main class="my-4 space-y-5">
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-07-18T00:00:00+12:00" />
+  <Countdown label="Standard pricing ends in:" time="2025-09-21T00:00:00+12:00" />
 
   ## Get Your Tickets
 
@@ -36,7 +36,7 @@ It also includes access to the Icebreaker on Tuesday 18th November and the Commu
 
 | Type                  | Details                                                                                                                   | Cost (NZD) |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| Early Bird            | Early bird registration, available until 18th July (NZT).                                                                 | $700       |
+| ~~Early Bird~~        | ~~Early bird registration, available until 18th July (NZT).~~                                                             | ~~$700~~   |
 | Standard              | General registration, available from 19th July until 20th September.                                                      | $950       |
 | Last Chance           | Last minute registration after 20th September.                                                                            | $1500      |
 | True Believer         | Also includes a dinner ticket and a contribution to the Travel Grant Program.                                             | $1950      |

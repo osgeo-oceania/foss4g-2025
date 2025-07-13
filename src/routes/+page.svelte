@@ -99,7 +99,7 @@
           developers, decision makers and researchers together from around the world
         </div>
         <div class="pt-4 sm:w-[240px]">
-          <Button href="/attend/register">Early bird tickets</Button>
+          <Button href="/attend/register">Buy tickets</Button>
         </div>
       </div>
     </div>
@@ -264,7 +264,7 @@
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-07-19T00:00:00+12:00" />
+  <Countdown label="Standard pricing ends in:" time="2025-09-21T00:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
