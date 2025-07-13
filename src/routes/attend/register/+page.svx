@@ -36,8 +36,8 @@ It also includes access to the Icebreaker on Tuesday 18th November and the Commu
 
 | Type                  | Details                                                                                                                   | Cost (NZD) |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| Early Bird            | Early bird registration, available until 28th June.                                                                       | $700       |
-| Standard              | General registration, available from 28th June until 20th September.                                                      | $950       |
+| Early Bird            | Early bird registration, available until 18th July (NZT).                                                                 | $700       |
+| Standard              | General registration, available from 19th July until 20th September.                                                      | $950       |
 | Last Chance           | Last minute registration after 20th September.                                                                            | $1500      |
 | True Believer         | Also includes a dinner ticket and a contribution to the Travel Grant Program.                                             | $1950      |
 | Student/Retired       | For secondary and tertiary students at any institution, and for people who are no longer in paid work.                    | $500       |
