@@ -1,5 +1,15 @@
 export default [
   {
+    date: '14th July 2025',
+    title: 'Call for Papers extended until 18 July',
+    content: `
+Send us your submission by Friday 18 July, 11:59pm NZST
+
+We have committed to openness and inclusion and are thrilled to see papers, lightning talks, workshops, and more coming in from all over; we encourage you to keep them coming!
+    `,
+    link: 'https://mailchi.mp/foss4g/foss4g-2025-auckland-newsletter-10338759'
+  },
+  {
     date: '30th June 2025',
     title: 'Call for Papers closing soon, early bird extended.',
     content: `
