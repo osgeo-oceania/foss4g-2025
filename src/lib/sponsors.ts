@@ -117,5 +117,11 @@ export default {
     logo: () => import('$images/logos/aws-logo.png?enhanced'),
     link: 'https://aws.amazon.com/',
     level: LEVELS.GOLD
+  },
+  devseed: {
+    name: 'Development Seed',
+    logo: () => import('$images/logos/devseed.png?enhanced'),
+    link: 'https://developmentseed.org/',
+    level: LEVELS.SILVER
   }
 };
