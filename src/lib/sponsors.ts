@@ -6,7 +6,8 @@ export const LEVELS = {
   VENUE: 4,
   PARTNER: 5,
   SUPPORTER: 6,
-  CHILDCARE: 10
+  CHILDCARE: 10,
+  WOMEN_IN_GEOSPATIAL_BREAKFAST: 11
 };
 
 export default {
@@ -117,5 +118,35 @@ export default {
     logo: () => import('$images/logos/aws-logo.png?enhanced'),
     link: 'https://aws.amazon.com/',
     level: LEVELS.GOLD
+  },
+  devseed: {
+    name: 'Development Seed',
+    logo: () => import('$images/logos/devseed.png?enhanced'),
+    link: 'https://developmentseed.org/',
+    level: LEVELS.SILVER
+  },
+  spc: {
+    name: 'SPC',
+    logo: () => import('$images/logos/spc.png?enhanced'),
+    link: 'https://www.spc.int/',
+    level: LEVELS.GOLD
+  },
+  dep: {
+    name: 'Digital Earth Pacific',
+    logo: () => import('$images/logos/dep.png?enhanced'),
+    link: 'https://digitalearthpacific.org/',
+    level: LEVELS.GOLD
+  },
+  spcwis: {
+    name: 'SPC',
+    logo: () => import('$images/logos/spc.png?enhanced'),
+    link: 'https://www.spc.int/',
+    level: LEVELS.WOMEN_IN_GEOSPATIAL_BREAKFAST
+  },
+  depwis: {
+    name: 'Digital Earth Pacific',
+    logo: () => import('$images/logos/dep.png?enhanced'),
+    link: 'https://digitalearthpacific.org/',
+    level: LEVELS.WOMEN_IN_GEOSPATIAL_BREAKFAST
   }
 };
