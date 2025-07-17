@@ -1,5 +1,17 @@
 export default [
   {
+    date: '17th July 2025',
+    title: 'Extended time is now coming to a close',
+    content: `
+We are thrilled to see papers, lightning talks, workshops, and more coming in from all over; we encourage you to keep them coming!
+
+So far we have submissions for over 160 talks, 46 lightning talks, 34 academic papers, and 44 workshops!
+
+As is the annual goal, this conference is all about accelerating the adoption and advancement of open geospatial solutions!
+`,
+    link: 'https://mailchi.mp/foss4g/foss4g-2025-auckland-newsletter-10338808'
+  },
+  {
     date: '14th July 2025',
     title: 'Call for Papers extended until 18 July',
     content: `
