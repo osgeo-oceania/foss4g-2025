@@ -174,24 +174,25 @@
     <Card
       title="Call For Papers"
       color="secondary"
-      button={{ href: '/attend/call-for-papers', text: 'Submit a Paper' }}
+      button={{ href: '/attend/call-for-papers', text: 'More Information' }}
     >
       <div>
-        We want you to share your fascinating stories about open source geospatial, open data, and
-        open street map. We're looking for a diverse range of presenters including women, people
-        from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal,
-        we need you to accept the challenge and put yourself forward, the community can't wait to
-        hear what you have to say!
-      </div>
-
-      <div>
-        Now is the time to submit your interest in one or more of the following categories:
+        <p>
+          Submissions have now closed! We have recieved a large number of proposals for the
+          following categories:
+        </p>
+        <br />
         <ul class="list-disc pl-4">
           <li>Presentations</li>
           <li>Lightning Talks</li>
           <li>Workshops</li>
           <li>Academic Papers</li>
         </ul>
+        <br />
+        <p>
+          Community voting will commence shortly, check back soon to see the results and the
+          schedule.
+        </p>
       </div>
     </Card>
 
