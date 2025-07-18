@@ -331,6 +331,37 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         }
       },
       //
+      // road labels
+      //
+    {
+        id: 'major-roads-label',
+        source: 'auckland',
+        'source-layer': 'roads',
+        type: 'symbol',
+        filter: ['has', 'hway_num'],
+        minzoom: 12,
+        layout: {
+          'text-field': ['get', 'name'],
+          'text-font': ['literal', ['BellTopo Sans Regular']],
+          'text-size': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            12, 12, // size 12 at zoom 10
+            18, 16  // size 16 at zoom 18
+          ],
+          'symbol-placement': 'line',
+          'text-max-width': 10,
+          'text-letter-spacing': 0.1
+        },
+        paint: {
+          'text-color': '#353D5A',
+          'text-halo-color': '#fff',
+          'text-halo-width': 1,
+          'text-halo-blur': 1
+        }
+      },
+      //
       // places labels
       //
       {
@@ -356,12 +387,20 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
-        minzoom: 10,
+        minzoom: 14,
         filter: ['==', ['get', 'type'], 'park'],
         layout: {
           'text-field': ['get', 'name'],
-          'text-font': ['literal', ['BellTopo Sans Italic']],
-          'text-size': 10
+          'text-font': ['literal', ['BellTopo Sans Regular']],
+          'text-size': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            10, 10, // size 10 at zoom 10
+            15, 15  // size 15 at zoom 15
+          ],
+          'text-max-width': 7,
+          'text-letter-spacing': 0.01 // <-- added letter spacing
         },
         paint: {
           'text-color': 'green',
@@ -393,16 +432,24 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
-        minzoom: 12,
+        minzoom: 10, // suburb
+        maxzoom: 15, // <-- added max zoom
         filter: ['==', ['get', 'type'], 'suburb'],
         layout: {
-          'text-field': name,
-          'text-font': ['literal', ['BellTopo Sans Italic']],
-          'text-size': 10,
-          'text-max-width': 7
+          'text-field': ['upcase', name], // <-- changed to uppercase
+          'text-font': ['literal', ['BellTopo Sans Regular']],
+          'text-size': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            10, 10, // size 10 at zoom 10
+            15, 15  // size 15 at zoom 15
+          ],
+          'text-max-width': 7,
+          'text-letter-spacing': 0.1 // <-- added letter spacing
         },
         paint: {
-          'text-color': '#222',
+          'text-color': '#353D5A', // dark blue-grey
           'text-halo-color': '#fff',
           'text-halo-width': 1,
           'text-halo-blur': 2
@@ -413,16 +460,25 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
+        minzoom: 9, // islands
         filter: ['==', ['get', 'type'], 'island'],
         layout: {
           'text-field': name,
           'text-font': ['literal', ['BellTopo Sans Regular']],
-          'text-size': 12
+          'text-size': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            10, 12, // size 12 at zoom 10
+            15, 16  // size 16 at zoom 15
+          ],
+          'text-max-width': 7,
+          'text-letter-spacing': 0.1 // <-- added letter spacing
         },
         paint: {
-          'text-color': '#aaa',
+          'text-color': '#423737',
           'text-halo-color': '#fff',
-          'text-halo-width': 2
+          'text-halo-width': 1.5
         }
       },
       {
@@ -434,7 +490,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         layout: {
           'text-field': name,
           'text-font': ['literal', ['BellTopo Sans Bold']],
-          'text-size': 14
+          'text-size': 14 // town
         },
         paint: {
           'text-color': '#111',
@@ -447,7 +503,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         source: 'auckland',
         'source-layer': 'places',
         type: 'symbol',
-        maxzoom: 14, // set a max zoom level
+        maxzoom: 13, // set a max zoom level for e.g. Aukland and Manukau
         filter: ['==', ['get', 'type'], 'city'],
         layout: {
           'text-field': name,
