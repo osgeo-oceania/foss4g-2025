@@ -264,7 +264,7 @@
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
-  <Countdown label="Standard pricing ends in:" time="2025-09-21T00:00:00+12:00" />
+  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
@@ -279,7 +279,7 @@
     {#if sponsorsAtLevel.length > 0}
       <div class="flex flex-col gap-2 sm:gap-6">
         <h3 class="text-center !font-serif !text-lg uppercase">
-          {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
+          {title.charAt(0).toUpperCase()}{title.replace(/_/g, ' ').slice(1).toLowerCase()} Sponsors
         </h3>
 
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
