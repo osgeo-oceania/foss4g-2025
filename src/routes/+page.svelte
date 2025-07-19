@@ -10,7 +10,8 @@
   import Sponsors, { LEVELS as SPONSOR_LEVELS } from '$lib/sponsors';
   import Team from '$lib/organisers';
   import Button from '$components/Button.svelte';
-  import Card from '../components/Card.svelte';
+  import Card from '$components/Card.svelte';
+  import Video from '$components/Video.svelte';
   import News from '$lib/news';
 
   const whyAttends = [
@@ -216,6 +217,10 @@
         </div>
       </Card>
     </div>
+  </div>
+
+  <div>
+    <Video src="https://www.youtube-nocookie.com/embed/HNxqnUhL-yM?si=Z5-6exzf98KhoHZy" />
   </div>
 
   <Heading>Agenda</Heading>
