@@ -16,9 +16,12 @@
 <style>
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 57%; /* 16:9 aspect ratio */
     padding-top: 25px;
     height: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 1;
   }
   .video-container iframe {
     position: absolute;
