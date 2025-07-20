@@ -18,17 +18,15 @@ title: Call for Papers
 
 <main class="my-4 space-y-5">
 
-<!--
-## Replace once community voting starts...
-<Countdown label="Call For Papers ends in:" time="2025-07-19T00:00:00+1200" />
--->
+<Countdown label="Vote For Papers ends in:" time="2025-08-17T00:00:00+1200" />
+
 
 <!-- Cards -->
 
-  <Card title="Submissions have closed" color="primary">
+  <Card title="Vote for Papers" color="primary" button={{ href: 'https://talks.osgeo.org/foss4g-2025/p/voting/signup/', text: 'Vote for Papers' }}>
     <div>
-      Thank you to everyone who submitted a proposal for a talk, presentation, academeic paper or workshop. Community voting
-      will commence shortly, check back soon!
+      Submissions have closed - thank you to everyone who submitted a proposal for a Talk, Lightning Talk, Workshop or Academic Paper.
+      <br/>Community voting for your favorite Talks, Lightning Talks, Workshops is now open!
     </div>
   </Card>
 
