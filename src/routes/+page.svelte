@@ -173,9 +173,9 @@
 -->
 
     <Card
-      title="Call For Papers"
+      title="Vote For Papers"
       color="secondary"
-      button={{ href: '/attend/call-for-papers', text: 'More Information' }}
+      button={{ href: '/attend/call-for-papers', text: 'Vote for Papers' }}
     >
       <div>
         <p>
@@ -184,15 +184,14 @@
         </p>
         <br />
         <ul class="list-disc pl-4">
-          <li>Presentations</li>
-          <li>Lightning Talks</li>
-          <li>Workshops</li>
-          <li>Academic Papers</li>
+          <li><strong>182</strong> Presentations</li>
+          <li><strong>50</strong> Lightning Talks</li>
+          <li><strong>49</strong> Workshops</li>
+          <li><strong>36</strong> Academic Papers</li>
         </ul>
         <br />
         <p>
-          Community voting will commence shortly, check back soon to see the results and the
-          schedule.
+          Community voting is now open for Talks, Lightning Talks and Workshops...
         </p>
       </div>
     </Card>
