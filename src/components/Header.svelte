@@ -27,6 +27,10 @@
           url: '/news'
         },
         {
+          label: 'About FOSS4G',
+          url: '/about/foss4g'
+        },
+        {
           label: 'Organisers',
           url: '/organisers'
         },
