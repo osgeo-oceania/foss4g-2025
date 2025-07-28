@@ -1,0 +1,59 @@
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+  import Countdown from '$components/Countdown.svelte';
+  import GiantButton from '$components/GiantButton.svelte';
+</script>
+
+<Heading>FOSS4G Conference</Heading>
+
+![Auckland]($images/foss4g-italy-group.jpg)
+
+FOSS4G is the acronym for Free and Open Source Software for Geospatial. It is the annual recurring global event hosted by [OSGeo](https://www.osgeo.org/), the non-profit organization that supports and promotes the collaborative development of free and open source geographic technologies and open geospatial data.
+
+The conference covers all kinds of topics related to geospatial information and earth observation openness from Software development to Transition to FOSS4G, Use cases and applications, Education and research and Open data.
+
+This event is for all kinds of people interested in sharing experiences about maps, from developers who write code to users of geomatics software, people who make decisions, researchers, students and anyone who wants to learn, share and meet like GIS interested people.
+
+It attracts over 1,000 practitioners and advocates for free and open source software for geospatial and the tendency is to increase this number every year. It is the main meeting place and educational outreach opportunity for OSGeo members, supporters and newcomers - to share and learn from one another in presentations, hands-on workshops and a conference exhibition.
+
+For appreciating the quality and variety of the presentations, you can watch video recordings of past FOSS4G events on the [FOSS4G YouTube channel](https://www.youtube.com/c/FOSS4G/)
+
+## Who hosts the event?
+
+FOSS4G is hosted by the Open Source Geospatial Foundation (OSGeo), in collaboration with the local community. OSGeo was founded to support and build the highest-quality open source geospatial software, and is the host of the annual FOSS4G global event.
+
+The foundation's goal is to encourage the use and collaborative development of community-led projects, data development and education. Many important open source geospatial projects live under the [OSGeo umbrella](https://www.osgeo.org/).
+
+<div class="grid grid-cols-1 sm:grid-cols-2">
+  <div>
+  <div class="text-xl">Who attends FOSS4G?</div>
+
+    Conference attendees are:
+    - Developers and Users of GeoSpatial Software
+    - Technical Leaders
+    - Private Companies
+    - Governmental Organizations
+    - Non-Governmental Organizations (NGO)
+    - Teachers and Education Professionals
+    - Scientific Communities and Researchers
+
+</div>
+
+<div>
+<div class="text-xl">What kind of topics are discussed?</div>
+
+- Software status, new software/project development, benchmarking
+- FOSS4G implementations in strategic application domains: land management, crisis/disaster response, smart cities, population mapping, climate change, ocean and marine monitoring, etc.
+- Data visualization: spatial analysis, manipulation and visualization of geospatial data
+- Data collection, data sharing, data science, open data, big data, data exploitation platforms
+- Sensors, remote sensing, laser-scanning, structure from motion
+- New trends: IoT, Indoor mapping, drones - UAV (unmanned aerial vehicle)-, Artificial intelligence - machine learning, deep learning-, geospatial data structures
+- Open and reproducible science
+- Standards, interoperability, SDIs
+- Community & participatory FOSS4G
+- FOSS4G at governmental institutions
+- FOSS4G in education
+- Business products powered by FOSS4G
+
+</div>
