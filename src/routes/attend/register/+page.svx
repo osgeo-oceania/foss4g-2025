@@ -19,7 +19,7 @@ title: Register
 
 <main class="my-4 space-y-5">
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-07-18T00:00:00+12:00" />
+  <Countdown label="Standard pricing closes in:" time="2025-09-20T00:00:00+12:00" />
 
   ## Get Your Tickets
 
@@ -36,8 +36,8 @@ It also includes access to the Icebreaker on Tuesday 18th November and the Commu
 
 | Type                  | Details                                                                                                                   | Cost (NZD) |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| Early Bird            | Early bird registration, available until 28th June.                                                                       | $700       |
-| Standard              | General registration, available from 28th June until 20th September.                                                      | $950       |
+| ~~Early Bird~~        | ~~Early bird registration, available until 18th July (NZT).~~                                                             | ~~$700~~   |
+| Standard              | General registration, available from 19th July until 20th September.                                                      | $950       |
 | Last Chance           | Last minute registration after 20th September.                                                                            | $1500      |
 | True Believer         | Also includes a dinner ticket and a contribution to the Travel Grant Program.                                             | $1950      |
 | Student/Retired       | For secondary and tertiary students at any institution, and for people who are no longer in paid work.                    | $500       |
@@ -51,10 +51,10 @@ Please note our [Privacy Policy.](/attend/privacy-policy)
 | Type                          | Details                                                                                                                                                                                                                                | Cost (NZD)   |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | Conference T-Shirt            | Limited edition conference T-Shirt. Available in either a men's or women's cut and in multiple sizes.                                                                                                                                  | $40          |
-| Conference Dinner             | Held on the evening of Wednesday 19th November, location TBC.                                                                                                                                                                          | $150         |
-| Women in Geospatial Breakfast | Held on the morning of Thursday 20th November, location TBC.                                                                                                                                                                           | $15          |
-| GeoChicas                     | Held on the evening of Thursday 20th November, location TBC.                                                                                                                                                                           | Your Choice! |
-| Business to Business          | Held on the evening of Thursday 20th November, location TBC.                                                                                                                                                                           | $25          |
+| Conference Dinner             | Held on the evening of Wednesday 19th November, Hilton Auckland.                                                                                                                                                                          | $150         |
+| Women in Geospatial Breakfast | Held on the morning of Thursday 20th November, Amano.                                                                                                                                                                           | $15          |
+| GeoChicas                     | Held on the evening of Thursday 20th November, Rocketman.                                                                                                                                                                           | Your Choice! |
+| Business to Business          | Held on the afternoon of Tuesday 18th November at AUT.                                                                                                                                                                           | $25          |
 | Good Mojo                     | FOSS4G 2025 is a community-run conference by OSGeo Oceania. As a not-for-profit organisation, any additional donations to our Good Mojo fund will go toward supporting community events, travel grant programs and future conferences. | Your Choice! |
 
 [Join our Mailing List](https://mailchi.mp/foss4g/mailing-list) to stay up-to-date with the latest news and announcements.

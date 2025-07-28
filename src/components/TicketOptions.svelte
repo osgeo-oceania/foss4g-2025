@@ -1,18 +1,18 @@
 <script lang="ts">
   import Button from './Button.svelte';
-  import Link from './Link.svelte';
 
   const ticketOptions = [
     {
-      title: 'Early Bird Pass',
-      description: 'Limited Time Offer',
-      price: '$700',
+      title: 'Standard Conference Ticket',
+      description:
+        'Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
+      price: '$950',
       currency: 'NZD',
       cardClass: 'bg-success',
       buttonClass: 'bg-white'
     },
     {
-      title: 'Student/Retired Pass',
+      title: 'Student/Retired Ticket',
       description:
         'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
       price: '$500',

@@ -10,7 +10,9 @@
   import Sponsors, { LEVELS as SPONSOR_LEVELS } from '$lib/sponsors';
   import Team from '$lib/organisers';
   import Button from '$components/Button.svelte';
-  import Card from '../components/Card.svelte';
+  import Card from '$components/Card.svelte';
+  import Video from '$components/Video.svelte';
+  import News from '$lib/news';
 
   const whyAttends = [
     {
@@ -44,6 +46,30 @@
   <title>FOSS4G 2025</title>
 </svelte:head>
 
+{#if News.length > 0}
+  <div class="bg-primary/90 mb-6 flex items-center gap-4 rounded-xl px-4 py-3 text-white">
+    <span class="hidden whitespace-nowrap sm:inline">{News[0].date}</span>
+    <span class="hidden whitespace-nowrap sm:inline">|</span>
+    <Link
+      href={News[0].link}
+      target="_blank"
+      class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap"
+    >
+      {News[0].title}
+    </Link>
+    <div class="flex-shrink-0">
+      <Link
+        href={News[0].link}
+        target="_blank"
+        class="flex items-center gap-1 text-xs whitespace-nowrap"
+      >
+        Read more
+        <span class="icon-[lucide--external-link] inline-block h-4 w-4"></span>
+      </Link>
+    </div>
+  </div>
+{/if}
+
 <!-- Hero -->
 <main class="m:space-y-12 mb-8 space-y-12 sm:space-y-16">
   <div class="hero flex">
@@ -51,7 +77,7 @@
       class="hero-content bg-secondary relative w-full flex-col rounded-4xl px-6 py-8 sm:min-h-[500px] sm:px-10 sm:py-12"
     >
       <div
-        class="[&_path]:!fill-primary [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96 [&_svg]:max-h-72 absolute -z-10 h-72 w-72 right-0 bottom-0 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8"
+        class="[&_path]:!fill-primary absolute right-0 bottom-0 -z-10 h-72 w-72 sm:h-96 sm:w-96 sm:pr-8 sm:pb-8 [&_svg]:max-h-72 [&_svg]:max-w-72 [&_svg]:sm:max-h-96 [&_svg]:sm:max-w-96"
       >
         {@html Foss4g2025Logo}
         <div
@@ -74,7 +100,7 @@
           developers, decision makers and researchers together from around the world
         </div>
         <div class="pt-4 sm:w-[240px]">
-          <Button href="/attend/register">Early bird tickets</Button>
+          <Button href="/attend/register">Buy tickets</Button>
         </div>
       </div>
     </div>
@@ -147,26 +173,26 @@
 -->
 
     <Card
-      title="Call For Papers"
+      title="Vote For Papers"
       color="secondary"
-      button={{ href: '/attend/call-for-papers', text: 'Submit a Paper' }}
+      button={{ href: '/attend/call-for-papers', text: 'Vote for Papers' }}
     >
       <div>
-        We want you to share your fascinating stories about open source geospatial, open data, and
-        open street map. We're looking for a diverse range of presenters including women, people
-        from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal,
-        we need you to accept the challenge and put yourself forward, the community can't wait to
-        hear what you have to say!
-      </div>
-
-      <div>
-        Now is the time to submit your interest in one or more of the following categories:
+        <p>
+          Submissions have now closed! We have recieved a large number of proposals for the
+          following categories:
+        </p>
+        <br />
         <ul class="list-disc pl-4">
-          <li>Presentations</li>
-          <li>Lightning Talks</li>
-          <li>Workshops</li>
-          <li>Academic Papers</li>
+          <li><strong>182</strong> Presentations</li>
+          <li><strong>50</strong> Lightning Talks</li>
+          <li><strong>49</strong> Workshops</li>
+          <li><strong>36</strong> Academic Papers</li>
         </ul>
+        <br />
+        <p>
+          Community voting is now open for Talks, Lightning Talks and Workshops...
+        </p>
       </div>
     </Card>
 
@@ -190,6 +216,10 @@
         </div>
       </Card>
     </div>
+  </div>
+
+  <div>
+    <Video src="https://www.youtube-nocookie.com/embed/HNxqnUhL-yM?si=Z5-6exzf98KhoHZy" />
   </div>
 
   <Heading>Agenda</Heading>
@@ -239,7 +269,7 @@
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-07-18T00:00:00+12:00" />
+  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
@@ -254,7 +284,7 @@
     {#if sponsorsAtLevel.length > 0}
       <div class="flex flex-col gap-2 sm:gap-6">
         <h3 class="text-center !font-serif !text-lg uppercase">
-          {title.charAt(0).toUpperCase()}{title.slice(1).toLowerCase()} Sponsors
+          {title.charAt(0).toUpperCase()}{title.replace(/_/g, ' ').slice(1).toLowerCase()} Sponsors
         </h3>
 
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">

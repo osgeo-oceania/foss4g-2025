@@ -19,12 +19,14 @@ The general program outline for sessions and social events:
 | Date                  | Session       | Social                             | Other             |
 | --------------------- | ------------- | ---------------------------------- | ----------------- |
 | Monday 17 November    | Workshops     | Informal Meetup                    | OSGeo Oceania AGM |
-| Tuesday 18 November   | Workshops     | Ice Breaker                        |                   |
+| Tuesday 18 November   | Workshops     | Ice Breaker                        | Business2Business |
 | Wednesday 19 November | Conference    | Conference Dinner                  |                   |
-| Thursday 20 November  | Conference    | Geochicas and Women+ in Geospatial | B2B Session       |
+| Thursday 20 November  | Conference    | Geochicas and Women+ in Geospatial |                   |
 | Friday 21 November    | Conference    |                                    | OSGeo AGM         |
 | Saturday 22 November  | Community Day |                                    |                   |
 | Sunday 23 November    | Community Day |                                    |                   |
+
+See our <a href="/program/events">events</a> page for more details on supporting events.
 
 <picture class="no-border-radius">
   <enhanced:img src={ProgramOutline} alt="Program Outline" />

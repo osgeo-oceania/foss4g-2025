@@ -15,13 +15,17 @@
 
   let menuItems = [
     {
-      label: 'Call For Papers',
+      label: 'Vote For Papers',
       url: '/attend/call-for-papers'
     },
     {
       label: 'About',
       url: '/organisers',
       subMenu: [
+        {
+          label: 'News',
+          url: '/news'
+        },
         {
           label: 'Organisers',
           url: '/organisers'
@@ -89,6 +93,10 @@
         {
           label: 'Outline',
           url: '/program/outline'
+        },
+        {
+          label: 'Events',
+          url: '/program/events'
         }
       ]
     },
