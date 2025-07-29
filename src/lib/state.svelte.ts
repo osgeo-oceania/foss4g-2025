@@ -3,7 +3,7 @@ import { Protocol } from 'pmtiles';
 import type { Map, StyleSpecification } from 'maplibre-gl';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
 
-import MapStyle, { defaultMapConfig } from './style/default';
+import MapStyle, { defaultMapConfig } from './style/rami';
 
 const protocol = new Protocol();
 MapLibre.addProtocol('pmtiles', protocol.tile);
