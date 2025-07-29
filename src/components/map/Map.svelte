@@ -1,16 +1,5 @@
-<script lang="ts">
-  import MapLibre from 'maplibre-gl';
-  import { Protocol } from 'pmtiles';
-  import type { StyleSpecification } from 'maplibre-gl';
-  import { PUBLIC_BASE_PATH } from '$env/static/public';
-
-  import AucklandPmtiles from '../data/auckland.pmtiles';
-  import Bounds from '../data/bounds.json';
-  import MapStyle from '../lib/style/rami';
-  import Attribution from './Attribution.svelte';
-  import { setContext, onMount } from 'svelte';
-
-  class MapState {
+<script module lang="ts">
+  export class MapState {
     map: MapLibre.Map | null = $state(null);
     mapViewport: MapViewport | null = $state(null);
     mapConfig: MapConfig = $state({
@@ -22,14 +11,6 @@
     });
 
     mapStyle: StyleSpecification = $derived(MapStyle.style(this.mapConfig));
-    mapAttribution = $derived([
-      ...new Set(
-        Object.values(this.mapStyle.sources)
-          .filter((src) => src.type != 'video' && src.type != 'image')
-          .map((src) => src?.attribution?.split(', ') ?? null)
-          .flat()
-      )
-    ]);
 
     initializeMap = (mapContainer: HTMLDivElement) => {
       const protocol = new Protocol();
@@ -58,9 +39,23 @@
       });
     };
   }
+</script>
+
+<script lang="ts">
+  import MapLibre from 'maplibre-gl';
+  import { Protocol } from 'pmtiles';
+  import type { StyleSpecification } from 'maplibre-gl';
+  import { PUBLIC_BASE_PATH } from '$env/static/public';
+
+  import AucklandPmtiles from '../../data/auckland.pmtiles';
+  import Bounds from '../../data/bounds.json';
+  import MapStyle from '../../lib/style/rami';
+  import Attribution from './Attribution.svelte';
+  import { setContext, onMount } from 'svelte';
+
   let mapState = new MapState();
   let mapContainer: HTMLDivElement;
-  setContext('mapState', mapState);
+  setContext<MapState>('mapState', mapState);
   
   let { children = null } = $props();
 
