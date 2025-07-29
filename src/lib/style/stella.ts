@@ -7,36 +7,6 @@ export const defaultMapConfig: MapConfig = {
   bounds: Bounds,
   pmtiles: {
     auckland: AucklandPmtiles
-  },
-  landcover: {
-    ocean: {
-      color: '#79bbf5',
-      classes: [-99]
-    },
-    'built-up': {
-      color: '#e5e7eb',
-      classes: [1, 5, 6]
-    },
-    water: {
-      color: '#79bbf5',
-      classes: [20, 21, 22]
-    },
-    cropland: {
-      color: '#fed7aa',
-      classes: [30, 33]
-    },
-    grassland: {
-      color: '#fde68a',
-      classes: [40, 41, 43, 44]
-    },
-    forest: {
-      color: '#a7f3d0',
-      classes: [64, 68, 69, 71]
-    },
-    default: {
-      color: '#fecdd3',
-      classes: [-99]
-    }
   }
 };
 
@@ -91,7 +61,7 @@ export default function MapStyle(config: MapConfig): StyleSpecification {
         id: 'background',
         type: 'background',
         paint: {
-          'background-color': config.landcover.ocean.color
+          'background-color': "#79bbf5"
         }
       },
       {
