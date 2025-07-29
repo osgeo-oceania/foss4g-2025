@@ -1,4 +1,4 @@
-import type { LngLat } from 'maplibre-gl';
+import type { LngLat, StyleSpecification } from 'maplibre-gl';
 
 declare global {
   export type LandcoverType =
@@ -16,8 +16,14 @@ declare global {
     classes: number[];
   }
 
+  export interface MapStyle {
+    name: string;
+    style: (config: MapConfig) => StyleSpecification
+  }
+
   export interface MapConfig {
     lang: 'en' | 'mi';
+    style: MapStyle;
     pmtiles: {
       [sourceName: string]: string;
     };
