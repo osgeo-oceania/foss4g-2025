@@ -8,7 +8,7 @@
   import Bounds from '../data/bounds.json';
   import MapStyle from '../lib/style/rami';
   import Attribution from './Attribution.svelte';
-  import { onMount } from 'svelte';
+  import { setContext, onMount } from 'svelte';
 
   class MapState {
     map: MapLibre.Map | null = $state(null);
@@ -60,7 +60,8 @@
   }
   let mapState = new MapState();
   let mapContainer: HTMLDivElement;
-
+  setContext('mapState', mapState);
+  
   let { children = null } = $props();
 
   onMount(() => {
