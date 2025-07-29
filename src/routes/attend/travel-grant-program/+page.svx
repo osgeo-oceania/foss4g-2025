@@ -20,18 +20,17 @@ title: Travel Grant Program
 
 The FOSS4G 2025 local organising committee is pleased to announce that it is again providing a Travel Grant Program (TGP). You will find below more details about eligibility requirements, what you will receive if successful and the timeline here on this page.
 
-Applications for the first round will open on the 17th of March and will be accepted until midnight on the 30th April 2025.
+Applications for the first round have closed on the 30th April 2025.
 
-<GiantButton href="https://forms.gle/U2VaANxgkqVe48mP9">
-  Apply for the Travel Grant Program
-</GiantButton>
+A possible second round for TGP can be opened closer to the conference date if more funding becomes available.
 
-| Timeline                       | Round 1       | Round 2      |
-| ------------------------------ | ------------- | ------------ |
-| Submissions open               | 17 March 2025 | 28 July 2025 |
-| Submission close               | 30 April 2025 | 29 Aug 2025  |
-| Applicants notified of outcome | 14 May 2025   | 15 Sept 2025 |
-| Applicants acceptance due by   | 28 May 2025   | 29 Sept 2025 |
+
+| Timeline                       | Round 1       |
+| ------------------------------ | ------------- |
+| Submissions open               | 17 March 2025 |
+| Submission close               | 30 April 2025 |
+| Applicants notified of outcome | 14 May 2025   |
+| Applicants acceptance due by   | 28 May 2025   |
 
 If your application is successful, you will receive the following:
 
