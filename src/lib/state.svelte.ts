@@ -39,10 +39,10 @@ export class AppState {
       maxPitch: 70,
       attributionControl: false, // TODO add custom control
       center: [174.7668, -36.85775],
-      bearing: 172.4,
-      pitch: 70,
+      bearing: -10,
+      pitch: 45,
 
-      zoom: 14,
+      zoom: 11,
       hash: true,
       style: this.mapStyle
     });
