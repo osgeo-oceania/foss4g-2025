@@ -1,14 +1,4 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import AucklandPmtiles from '../../data/auckland.pmtiles';
-import Bounds from '../../data/bounds.json';
-
-export const defaultMapConfig: MapConfig = {
-  lang: 'en',
-  bounds: Bounds,
-  pmtiles: {
-    auckland: AucklandPmtiles
-  }
-};
 
 export default {
   name: 'pierre',
