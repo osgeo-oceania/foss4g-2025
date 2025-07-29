@@ -3,7 +3,9 @@ import { Protocol } from 'pmtiles';
 import type { Map, StyleSpecification } from 'maplibre-gl';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
 
-import MapStyle, { defaultMapConfig } from './style/rami';
+import AucklandPmtiles from '../data/auckland.pmtiles';
+import Bounds from '../data/bounds.json';
+import MapStyle from './style/rami';
 
 const protocol = new Protocol();
 MapLibre.addProtocol('pmtiles', protocol.tile);
@@ -12,9 +14,15 @@ const MapLibreMap = MapLibre.Map;
 export class AppState {
   map: Map | null = $state(null);
   mapViewport: MapViewport | null = $state(null);
-  mapConfig: MapConfig = $state(defaultMapConfig);
+  mapConfig: MapConfig = $state({
+    lang: 'en',
+    bounds: Bounds,
+    pmtiles: {
+      auckland: AucklandPmtiles
+    }
+  });
 
-  mapStyle: StyleSpecification = $derived(MapStyle(this.mapConfig));
+  mapStyle: StyleSpecification = $derived(MapStyle.style(this.mapConfig));
   mapAttribution = $derived([
     ...new Set(
       Object.values(this.mapStyle.sources)
