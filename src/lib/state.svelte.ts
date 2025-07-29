@@ -6,6 +6,8 @@ import { PUBLIC_BASE_PATH } from '$env/static/public';
 import AucklandPmtiles from '../data/auckland.pmtiles';
 import Bounds from '../data/bounds.json';
 import MapStyle from './style/rami';
+import styles from './style';
+console.log(styles);
 
 const protocol = new Protocol();
 MapLibre.addProtocol('pmtiles', protocol.tile);
