@@ -1,5 +1,4 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import content from '$data/pois';
 
 export default {
   name: 'rami',
