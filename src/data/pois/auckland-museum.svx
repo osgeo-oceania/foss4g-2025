@@ -1,0 +1,6 @@
+---
+id: auckland-museum
+name: Auckland Museum
+type: attraction
+coordinates: [174.777891, -36.860794]
+---
