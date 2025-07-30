@@ -4,7 +4,6 @@
   import { getContext } from 'svelte';
 
   const mapState = getContext<() => MapState>('mapState')();
-  console.log(mapState.mapConfig.style.name);
 </script>
 
 {#if mapState.map}
