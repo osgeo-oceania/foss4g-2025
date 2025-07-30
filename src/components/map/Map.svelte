@@ -20,6 +20,7 @@
         auckland: AucklandPmtiles
       }
     });
+    isPreloading: boolean = $state(true);
 
     mapStyle: StyleSpecification = $derived(this.mapConfig.style.style(this.mapConfig));
 
@@ -48,6 +49,8 @@
         hash: true,
         style: this.mapStyle
       });
+
+      this.map.once("idle", () => this.isPreloading = false)
 
       $effect(() => {
         if (this.mapStyle) {
@@ -78,4 +81,7 @@
   {@render children?.()}
   <Attribution />
   <StyleSwitcher />
+  {#if mapState.isPreloading}
+    <div class="absolute loading loading-spinner w-16 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+  {/if}
 </div>
