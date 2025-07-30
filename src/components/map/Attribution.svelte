@@ -2,7 +2,7 @@
   import { MapState } from '$components/map/Map.svelte';
   import { getContext } from 'svelte';
 
-  const mapState = getContext<MapState>('mapState');
+  const mapState = getContext<() => MapState>('mapState')();
   const mapAttribution = $derived([
       ...new Set(
         Object.values(mapState.mapStyle.sources)
