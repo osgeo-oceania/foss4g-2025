@@ -1,1 +1,40 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"AUT","type":"venue"},"geometry":{"type":"Point","coordinates":[174.766478,-36.853157]}},{"type":"Feature","properties":{"name":"Pullman Hotel","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.770558,-36.847907]}},{"type":"Feature","properties":{"name":"Four Points","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.763746,-36.853727]}},{"type":"Feature","properties":{"name":"LyLo","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.758841,-36.851624]}},{"type":"Feature","properties":{"name":"Sofitel","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.757368,-36.844863]}},{"type":"Feature","properties":{"name":"ibis Central","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.764591,-36.847391]}},{"type":"Feature","properties":{"name":"Avani","type":"lodging"},"geometry":{"type":"Point","coordinates":[174.767238,-36.848542]}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "AUT", "type": "venue" },
+      "geometry": { "type": "Point", "coordinates": [174.766478, -36.853157] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pullman Hotel", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.770558, -36.847907] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Four Points", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.763746, -36.853727] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "LyLo", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.758841, -36.851624] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sofitel", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.757368, -36.844863] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "ibis Central", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.764591, -36.847391] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Avani", "type": "lodging" },
+      "geometry": { "type": "Point", "coordinates": [174.767238, -36.848542] }
+    }
+  ]
+}
