@@ -8,7 +8,7 @@
 
 {#if mapState.map}
   <div
-    class="absolute bottom-1 left-1 flex space-x-1 rounded-lg bg-white/80 p-1 sm:bottom-4 sm:left-4"
+    class="absolute bottom-1 left-1 flex space-x-1 rounded-lg bg-white/80 p-1 sm:bottom-4 sm:left-4 z-50"
   >
     {#each MapStyles as MapStyle}
       <div class="">
