@@ -1,4 +1,5 @@
 import type { StyleSpecification } from 'maplibre-gl';
+import content from '$data/pois';
 
 export default {
   name: 'rami',
@@ -13,12 +14,6 @@ export default {
         : ['slice', ['get', 'name'], 0, ['index-of', ' / ', ['get', 'name']]],
       ['get', 'name']
     ];
-
-    // const landcoverFillColor = [
-    // 	Object.entries(config.landcover)
-    // 		.filter(([lcName]) => !['ocean', 'default'].includes(lcName))
-    // 		.map(([lcName, lcStyle]) => [lcName, lcStyle.color])
-    // ].flat(3);
 
     return {
       version: 8,
