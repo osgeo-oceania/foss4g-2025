@@ -53,7 +53,7 @@
       this.map.once("idle", () => this.isPreloading = false)
 
       $effect(() => {
-        if (this.mapStyle) {
+        if (!this.isPreloading) {
           this.map?.setStyle(this.mapStyle);
         }
       });
