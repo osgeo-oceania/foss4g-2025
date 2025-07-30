@@ -19,7 +19,7 @@ export default {
       projection: { type: 'globe' },
       sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
-      terrain: { source: 'dem-terrain', exaggeration: 2 },
+      terrain: { source: 'dem-terrain', exaggeration: 1.5 },
       sources: {
         auckland: {
           type: 'vector',
