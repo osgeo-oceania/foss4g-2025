@@ -1,0 +1,6 @@
+---
+id: lylo
+name: LyLo
+type: lodging
+coordinates: [174.758841, -36.851624]
+---

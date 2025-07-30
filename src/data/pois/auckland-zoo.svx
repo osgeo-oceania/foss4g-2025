@@ -1,0 +1,6 @@
+---
+id: auckland-zoo
+name: Auckland Zoo
+type: attraction
+coordinates: [174.719782, -36.864135]
+---

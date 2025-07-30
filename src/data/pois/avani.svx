@@ -1,0 +1,6 @@
+---
+id: avani
+name: Avani
+type: lodging
+coordinates: [174.767238, -36.848542]
+---

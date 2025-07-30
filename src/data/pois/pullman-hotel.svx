@@ -1,0 +1,6 @@
+---
+id: pullman-hotel
+name: Pullman Hotel
+type: lodging
+coordinates: [174.770558, -36.847907]
+---
