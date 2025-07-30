@@ -61,10 +61,11 @@
 <script lang="ts">
   import Attribution from './Attribution.svelte';
   import { setContext, onMount } from 'svelte';
+  import StyleSwitcher from './StyleSwitcher.svelte';
 
   let mapContainer: HTMLDivElement;
   let mapState = new MapState();
-  setContext<MapState>('mapState', mapState);
+  setContext<() => MapState>('mapState', () => mapState);
 
   let { children = null } = $props();
 
@@ -76,4 +77,5 @@
 <div bind:this={mapContainer} class="h-full w-full">
   {@render children?.()}
   <Attribution />
+  <StyleSwitcher />
 </div>
