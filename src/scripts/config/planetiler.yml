@@ -13,9 +13,9 @@ sources:
     local_path: src/data/buildings.gpkg
 
   linz-coastline:
-    # https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
-    type: shapefile
-    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
+    # https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-150k-GPKG.zip
 
   linz-road-centrelines:
     # https://data.linz.govt.nz/layer/50329-nz-road-centrelines-topo-150k/
