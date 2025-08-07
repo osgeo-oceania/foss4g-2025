@@ -16,10 +16,8 @@ export default {
 
     return {
       version: 8,
-      projection: { type: 'globe' },
-      sprite: 'https://protomaps.github.io/basemaps-assets/sprites/v4/light',
+      sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
-      terrain: { source: 'dem-terrain', exaggeration: 1.5 },
       sources: {
         auckland: {
           type: 'vector',
@@ -47,7 +45,30 @@ export default {
           id: 'background',
           type: 'background',
           paint: {
-            'background-color': '#79bbf5'
+            'background-color': '#4795A3',
+          }
+        },
+        {
+          id: 'ocean',
+          type: 'background',
+          paint: {
+            'background-pattern': 'ocean',
+          }
+        },
+        {
+          id: 'coastline-glow',
+          source: 'auckland',
+          'source-layer': 'coastline',
+          type: 'line',
+          paint: {
+            'line-color': '#fff',
+            'line-opacity': 0.8,
+            'line-width': 20,
+            'line-blur': 10,
+          },
+          layout: {
+            'line-cap': 'round',
+            'line-join': 'round'
           }
         },
         {

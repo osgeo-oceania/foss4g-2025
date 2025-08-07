@@ -13,7 +13,8 @@
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
     "mapdata": "uv run --script src/scripts/mapdata.py",
-    "buildings": "uv run --script src/scripts/buildings.py"
+    "buildings": "uv run --script src/scripts/buildings.py",
+    "sprite": "spreet src/data/sprite static/sprite/sprite && spreet --retina src/data/sprite static/sprite/sprite@2x"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
