@@ -94,6 +94,54 @@ layers:
         attributes:
           - key: height
             tag_value: height
+        exclude_when:
+          building_id:
+            - 3972833 # aut
+            - 3919993 # aut 2
+            - 4015017 # auckland museum
+            - 3972670 # sky tower
+            - 3918942 # hotel sofitel
+            - 3973272 # hotel ibis central
+            - 3972825 # hotel avani
+            - 3973314 # hotel pullman
+            - 3920013 # hotel four points
+            - 3919098 # hotel lylo
+    tile_post_process:
+      merge_polygons:
+        min_area: 0
+
+  - id: buildings-selected
+    features:
+      - source: buildings
+        geometry: polygon
+        min_zoom: 12
+        min_size: 0
+        attributes:
+          - key: height
+            tag_value: height
+          - key: building_id
+            tag_value: building_id
+          - key: type
+            value:
+              - if:
+                  building_id: [3972833, 3919993] # aut
+                value: venue
+              - value: attraction
+                if:
+                  building_id: [4015017, 3972670] # attractions
+              - else: lodging
+        include_when:
+          building_id:
+            - 3972833 # aut
+            - 3919993 # aut 2
+            - 4015017 # auckland museum
+            - 3972670 # sky tower
+            - 3918942 # hotel sofitel
+            - 3973272 # hotel ibis central
+            - 3972825 # hotel avani
+            - 3973314 # hotel pullman
+            - 3920013 # hotel four points
+            - 3919098 # hotel lylo
     tile_post_process:
       merge_polygons:
         min_area: 0
