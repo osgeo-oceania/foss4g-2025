@@ -55,8 +55,10 @@
         style: this.mapStyle
       });
 
-      this.markers = PoiContent.map((poi) =>
-        new MapLibre.Marker({ anchor: 'bottom' }).setLngLat(poi.coordinates).addTo(this.map as MapLibre.Map)
+      this.markers = PoiContent.filter((poi) => poi.type != 'lodging').map((poi) =>
+        new MapLibre.Marker({ anchor: 'bottom' })
+          .setLngLat(poi.coordinates)
+          .addTo(this.map as MapLibre.Map)
       );
 
       this.map.once('idle', () => {
