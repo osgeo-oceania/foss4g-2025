@@ -56,6 +56,14 @@ export default {
           }
         },
         {
+          id: 'bg-overlay',
+          type: 'background',
+          paint: {
+            'background-color': '#fff',
+            'background-opacity': 0.3
+          }
+        },
+        {
           id: 'coastline-glow',
           source: 'auckland',
           'source-layer': 'coastline',
@@ -195,14 +203,14 @@ export default {
           minzoom: 12,
           paint: {
             'fill-extrusion-color': [
-              "case",
-              ["==", ["get", "type"], "lodging"],
-              "red",
-              ["==", ["get", "type"], "venue"],
-              "yellow",
-              ["==", ["get", "type"], "attraction"],
-              "green",
-              "black"
+              'case',
+              ['==', ['get', 'type'], 'lodging'],
+              'red',
+              ['==', ['get', 'type'], 'venue'],
+              'yellow',
+              ['==', ['get', 'type'], 'attraction'],
+              'green',
+              'black'
             ],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true,
@@ -219,7 +227,7 @@ export default {
             'fill-extrusion-color': '#e3dcd9',
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true,
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 16, 0.65]
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 16, 0.45]
           }
         },
 
