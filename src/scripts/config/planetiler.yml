@@ -77,6 +77,11 @@ sources:
     type: geojson
     local_path: src/data/raw/Train_Station.geojson
 
+  auckland-arterial-roads:
+    # https://www.arcgis.com/home/item.html?id=4673e8f3f20942d7a21cfcb36971e103
+    type: geopackage
+    local_path: src/data/raw/Arterial_Roads_1361457460508935892.gpkg
+
 
 layers:
   - id: coastline
@@ -169,6 +174,16 @@ layers:
       merge_line_strings:
         min_length: 0
 
+  - id: roads-arterial
+    features:
+      - source: auckland-arterial-roads
+        geometry: line
+        min_size: 0
+        min_zoom: 6
+    tile_post_process:
+      merge_line_strings:
+        min_length: 0
+        
   - id: areas
     features:
       - source: auckland-alcohol-control-area
