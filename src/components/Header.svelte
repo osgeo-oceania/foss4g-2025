@@ -15,8 +15,8 @@
 
   let menuItems = [
     {
-      label: 'Vote For Papers',
-      url: '/attend/call-for-papers'
+      label: 'Register',
+      url: '/attend/register'
     },
     {
       label: 'About',
