@@ -179,11 +179,11 @@ layers:
       - source: auckland-arterial-roads
         geometry: line
         min_size: 0
-        min_zoom: 6
+        min_zoom: 10
     tile_post_process:
       merge_line_strings:
         min_length: 0
-        
+
   - id: areas
     features:
       - source: auckland-alcohol-control-area
