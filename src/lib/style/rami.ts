@@ -126,25 +126,25 @@ export default {
         // roads
         //
         // minor-roads outline
-        {
-          id: 'minor-roads-outline',
-          source: 'auckland',
-          'source-layer': 'roads',
-          type: 'line',
-          filter: ['!', ['has', 'hway_num']],
-          paint: {
-            'line-color': '#d1d6e0',
-            'line-width': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              12,
-              1, // width 1 at zoom 12
-              18,
-              11 // width 11 at zoom 18
-            ]
-          }
-        },
+        // {
+        //   id: 'minor-roads-outline',
+        //   source: 'auckland',
+        //   'source-layer': 'roads',
+        //   type: 'line',
+        //   filter: ['!', ['has', 'hway_num']],
+        //   paint: {
+        //     'line-color': '#d1d6e0',
+        //     'line-width': [
+        //       'interpolate',
+        //       ['linear'],
+        //       ['zoom'],
+        //       12,
+        //       1, // width 1 at zoom 12
+        //       18,
+        //       11 // width 11 at zoom 18
+        //     ]
+        //   }
+        // },
         // minor-roads fill
         {
           id: 'minor-roads',
