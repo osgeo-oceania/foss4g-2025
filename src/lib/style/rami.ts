@@ -161,24 +161,42 @@ export default {
               12,
               0.5, // width 0.5 at zoom 12
               18,
-              10 // width 10 at zoom 18
+              6 // width 10 at zoom 18
             ]
           }
         },
         // major-roads fill
+        // {
+        //   id: 'major-roads',
+        //   source: 'auckland',
+        //   'source-layer': 'roads',
+        //   type: 'line',
+        //   filter: ['has', 'hway_num'],
+        //   layout: {
+        //     'line-cap': 'round',
+        //     'line-join': 'round'
+        //   },
+        //   paint: {
+        //     'line-color': 'white',
+        //     'line-width': ['interpolate', ['linear'], ['zoom'], 6, 1, 14, 4]
+        //   }
+        // },
         {
-          id: 'major-roads',
+          id: 'arterial-roads',
           source: 'auckland',
-          'source-layer': 'roads',
+          'source-layer': 'roads-arterial',
           type: 'line',
-          filter: ['has', 'hway_num'],
-          layout: {
-            'line-cap': 'round',
-            'line-join': 'round'
-          },
           paint: {
-            'line-color': 'white',
-            'line-width': ['interpolate', ['linear'], ['zoom'], 6, 1, 14, 4]
+            'line-color': '#fff',
+            'line-width': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              12,
+              1, // width 0.5 at zoom 12
+              18,
+              10 // width 10 at zoom 18
+            ]
           }
         },
 
