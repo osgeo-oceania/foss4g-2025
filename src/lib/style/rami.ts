@@ -88,6 +88,7 @@ export default {
             'fill-color': '#ece7e4' // colour for land fill
           }
         },
+
         {
           id: 'landuse',
           source: 'auckland',
@@ -118,6 +119,14 @@ export default {
               '#cfcfcf',
               'transparent'
             ]
+          }
+        },
+        {
+          id: 'hillshade',
+          source: 'dem-hillshade',
+          type: 'hillshade',
+          paint: {
+            'hillshade-method': 'combined'
           }
         },
         {
