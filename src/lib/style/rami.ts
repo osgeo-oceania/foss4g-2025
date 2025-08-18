@@ -89,6 +89,38 @@ export default {
           }
         },
         {
+          id: 'landuse',
+          source: 'auckland',
+          'source-layer': 'landuse',
+          type: 'fill',
+          paint: {
+            // 'fill-opacity': [
+            //   "case",
+            //   ['in', 'Residential', ['get', 'zone']],
+            //   1, 0
+            // ],
+            'fill-color': [
+              'case',
+              [
+                'any',
+                ['in', 'Business - Town Centre Zone', ['get', 'zone']],
+                ['in', 'Business - City Centre Zone', ['get', 'zone']],
+                ['in', 'Business - Metropolitan Centre Zone', ['get', 'zone']],
+                ['in', 'Business - Local Centre Zone', ['get', 'zone']],
+                ['in', 'Business - General Business Zone', ['get', 'zone']]
+              ],
+              '#f2f2d3',
+              ['in', 'Open Space', ['get', 'zone']],
+              '#c6eebe',
+              ['in', 'Hospital', ['get', 'zone']],
+              '#f5d5d5',
+              ['in', 'Airport', ['get', 'zone']],
+              '#cfcfcf',
+              'transparent'
+            ]
+          }
+        },
+        {
           id: 'alcohol-control-area',
           source: 'auckland',
           'source-layer': 'areas',
@@ -102,25 +134,18 @@ export default {
             'fill-opacity': 0.2
           }
         },
-        {
-          id: 'hillshade',
-          source: 'dem-hillshade',
-          type: 'hillshade',
-          paint: {
-            'hillshade-method': 'combined'
-          }
-        },
-        {
-          id: 'parks',
-          source: 'auckland',
-          'source-layer': 'areas',
-          type: 'fill',
-          filter: ['==', ['get', 'type'], 'park'],
-          paint: {
-            'fill-color': '#c6eebe', // park fill
-            'fill-opacity': 0.5
-          }
-        },
+
+        // {
+        //   id: 'parks',
+        //   source: 'auckland',
+        //   'source-layer': 'areas',
+        //   type: 'fill',
+        //   filter: ['==', ['get', 'type'], 'park'],
+        //   paint: {
+        //     'fill-color': '#c6eebe', // park fill
+        //     'fill-opacity': 0.5
+        //   }
+        // },
 
         //
         // roads
@@ -208,7 +233,7 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings',
           type: 'fill',
-          minzoom: 12,
+          minzoom: 13,
           paint: {
             'fill-color': '#e3dcd9'
           }
@@ -218,7 +243,7 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings-selected',
           type: 'fill-extrusion',
-          minzoom: 12,
+          minzoom: 13,
           paint: {
             'fill-extrusion-color': [
               'case',
@@ -240,7 +265,7 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings',
           type: 'fill-extrusion',
-          minzoom: 12,
+          minzoom: 13,
           paint: {
             'fill-extrusion-color': '#e3dcd9',
             'fill-extrusion-height': ['get', 'height'],
