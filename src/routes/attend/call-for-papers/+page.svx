@@ -18,17 +18,9 @@ title: Call for Papers
 
 <main class="my-4 space-y-5">
 
-<Countdown label="Vote For Papers ends in:" time="2025-08-17T00:00:00+1200" />
 
 
 <!-- Cards -->
-
-  <Card title="Vote for Papers" color="primary" button={{ href: 'https://talks.osgeo.org/foss4g-2025/p/voting/signup/', text: 'Vote for Papers' }}>
-    <div>
-      Submissions have closed - thank you to everyone who submitted a proposal for a Talk, Lightning Talk, Workshop or Academic Paper.
-      <br/>Community voting for your favorite Talks, Lightning Talks, Workshops is now open!
-    </div>
-  </Card>
 
   <div class="grid grid-cols-1 space-y-4 pb-4 my-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
@@ -93,3 +85,4 @@ We believe in equality, so all presenters have the same exact amount of time to 
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.
 
 ![Group Photo]($images/group-photo.jpg)
+
