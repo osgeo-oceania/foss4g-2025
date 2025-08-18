@@ -127,7 +127,7 @@
             <div
               tabindex="0"
               role="button"
-              class={`hover:bg-success hover:text-primary flex items-center rounded-full border px-4 py-2  text-sm font-light whitespace-nowrap transition-all duration-200 ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
+              class={` hover:bg-success hover:text-primary flex items-center rounded-full border px-4 py-2 text-sm  font-light whitespace-nowrap transition-all duration-200 hover:cursor-pointer ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
             >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
