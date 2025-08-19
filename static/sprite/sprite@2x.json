@@ -3,15 +3,15 @@
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 256,
-    "y": 0
+    "x": 196,
+    "y": 256
   },
   "lodging": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
     "x": 256,
-    "y": 136
+    "y": 0
   },
   "ocean": {
     "height": 256,
@@ -20,11 +20,18 @@
     "x": 0,
     "y": 0
   },
+  "pin": {
+    "height": 254,
+    "pixelRatio": 2,
+    "width": 196,
+    "x": 0,
+    "y": 256
+  },
   "train": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 0,
-    "y": 256
+    "x": 332,
+    "y": 136
   }
 }
