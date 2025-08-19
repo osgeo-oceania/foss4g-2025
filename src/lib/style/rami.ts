@@ -490,17 +490,45 @@ export default {
           }
         },
         {
+          id: 'train-stops',
+          source: 'auckland',
+          'source-layer': 'stops',
+          filter: ['==', ['get', 'type'], 'train'],
+          type: 'symbol',
+          layout: {
+            'icon-image': 'train',
+            'icon-size': 0.18,
+            'text-anchor': 'left',
+            'text-justify': 'left',
+            'text-offset': [1, 0],
+            'text-field': [
+              'step',
+              ['zoom'],
+              '',
+              12,
+              ['slice', ['get', 'name'], 0, ['-', ['length', ['get', 'name']], 16]]
+            ],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 12
+          },
+          paint: {
+            'text-color': '#3a7a7f',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1
+          }
+        },
+        {
           id: 'pois-lodging',
           source: 'pois',
           type: 'symbol',
-          minzoom: 12,
+          minzoom: 13,
           filter: ['==', ['get', 'type'], 'lodging'],
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.25,
             'text-anchor': 'left',
             'text-offset': [1, 0],
-            'text-field': ["step", ["zoom"], "", 15, name],
+            'text-field': ['step', ['zoom'], '', 15, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -514,7 +542,7 @@ export default {
           id: 'pois-attraction',
           source: 'pois',
           type: 'symbol',
-          minzoom: 12,
+          minzoom: 13,
           filter: ['==', ['get', 'type'], 'attraction'],
           layout: {
             'icon-image': ['get', 'type'],
@@ -522,7 +550,7 @@ export default {
             'icon-anchor': 'bottom',
             'text-anchor': 'top',
             'text-offset': [0, 0.25],
-            'text-field': ["step", ["zoom"], "", 14, name],
+            'text-field': ['step', ['zoom'], '', 14, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
