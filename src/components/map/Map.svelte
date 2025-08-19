@@ -52,7 +52,7 @@
         pitch: 58,
 
         zoom: 12,
-        hash: true,
+        hash: false,
         style: this.mapStyle
       });
 
