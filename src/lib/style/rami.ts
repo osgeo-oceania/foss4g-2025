@@ -411,7 +411,11 @@ export default {
           'source-layer': 'places',
           type: 'symbol',
           minzoom: 12,
-          filter: ['==', ['get', 'type'], 'suburb'],
+          filter: [
+            'all',
+            ['==', ['get', 'type'], 'suburb'],
+            ['!=', ['get', 'name'], 'Auckland Central']
+          ],
           layout: {
             'text-field': name,
             'text-font': ['literal', ['BellTopo Sans Italic']],
@@ -464,7 +468,7 @@ export default {
           source: 'auckland',
           'source-layer': 'places',
           type: 'symbol',
-          maxzoom: 14, // set a max zoom level
+          maxzoom: 13, // set a max zoom level
           filter: ['==', ['get', 'type'], 'city'],
           layout: {
             'text-field': name,
