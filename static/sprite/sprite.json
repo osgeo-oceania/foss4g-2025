@@ -1,4 +1,11 @@
 {
+  "lodging": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 128,
+    "y": 0
+  },
   "ocean": {
     "height": 128,
     "pixelRatio": 1,

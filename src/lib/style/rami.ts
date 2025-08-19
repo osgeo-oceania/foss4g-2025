@@ -21,9 +21,9 @@ export default {
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
         pois: {
-          type: "geojson",
+          type: 'geojson',
           data: {
-            type: "FeatureCollection",
+            type: 'FeatureCollection',
             features: PoiContent.map((poi) => poi.feature)
           }
         },
@@ -490,18 +490,23 @@ export default {
           }
         },
         {
-          id: 'pois',
+          id: 'pois-lodging',
           source: 'pois',
           type: 'symbol',
+          filter: ['==', ['get', 'type'], 'lodging'],
           layout: {
-            'text-field': name,
+            'icon-image': ['get', 'type'],
+            'icon-size': 0.25,
+            'text-anchor': 'left',
+            'text-offset': [1, 0],
+            'text-field': ["step", ["zoom"], "", 14, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
           paint: {
-            'text-color': '#111',
+            'text-color': '#f95d5d',
             'text-halo-color': '#fff',
-            'text-halo-width': 2
+            'text-halo-width': 1
           }
         }
       ]
