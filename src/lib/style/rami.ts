@@ -525,7 +525,7 @@ export default {
           filter: ['==', ['get', 'type'], 'lodging'],
           layout: {
             'icon-image': ['get', 'type'],
-            'icon-size': 0.25,
+            'icon-size': 0.2,
             'text-anchor': 'left',
             'text-offset': [1, 0],
             'text-field': ['step', ['zoom'], '', 15, name],
@@ -550,7 +550,7 @@ export default {
             'icon-anchor': 'bottom',
             'text-anchor': 'top',
             'text-offset': [0, 0.25],
-            'text-field': ['step', ['zoom'], '', 14, name],
+            'text-field': ['step', ['zoom'], '', 13, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
