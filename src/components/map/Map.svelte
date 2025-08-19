@@ -51,7 +51,7 @@
         // bearing: -10,
         pitch: 58,
 
-        zoom: 13,
+        zoom: 12,
         hash: true,
         style: this.mapStyle
       });
