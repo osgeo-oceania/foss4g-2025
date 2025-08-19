@@ -260,7 +260,7 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings-selected',
           type: 'fill-extrusion',
-          minzoom: 13,
+          minzoom: 12,
           filter: ['==', ['get', 'type'], 'venue'],
           paint: {
             'fill-extrusion-color': "#3a7a7f",
@@ -274,7 +274,7 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings-selected',
           type: 'fill-extrusion',
-          minzoom: 13,
+          minzoom: 12,
           paint: {
             'fill-extrusion-color': [
               'case',
@@ -286,7 +286,7 @@ export default {
               'green',
               'black'
             ],
-            'fill-extrusion-opacity': ["interpolate", ['exponential', 2], ['zoom'], 0, 0.5, 10, 1],
+            'fill-extrusion-opacity': ["interpolate", ['exponential', 2], ['zoom'], 13, 0, 16, 0.75],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
           }
@@ -296,12 +296,12 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings',
           type: 'fill-extrusion',
-          minzoom: 13,
+          minzoom: 12,
           paint: {
             'fill-extrusion-color': '#e3dcd9',
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': false,
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 16, 0.75]
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 16, 0.75]
           }
         },
 
