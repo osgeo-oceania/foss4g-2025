@@ -493,13 +493,14 @@ export default {
           id: 'pois-lodging',
           source: 'pois',
           type: 'symbol',
+          minzoom: 12,
           filter: ['==', ['get', 'type'], 'lodging'],
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.25,
             'text-anchor': 'left',
             'text-offset': [1, 0],
-            'text-field': ["step", ["zoom"], "", 14, name],
+            'text-field': ["step", ["zoom"], "", 15, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -513,12 +514,14 @@ export default {
           id: 'pois-attraction',
           source: 'pois',
           type: 'symbol',
+          minzoom: 12,
           filter: ['==', ['get', 'type'], 'attraction'],
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.25,
-            'text-anchor': 'left',
-            'text-offset': [1, 0],
+            'icon-anchor': 'bottom',
+            'text-anchor': 'top',
+            'text-offset': [0, 0.25],
             'text-field': ["step", ["zoom"], "", 14, name],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
