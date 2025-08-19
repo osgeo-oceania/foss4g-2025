@@ -46,11 +46,12 @@
         },
         maxPitch: 70,
         attributionControl: false, // TODO add custom control
-        center: [174.7668, -36.85775],
-        bearing: -10,
-        pitch: 45,
+        // #15.45/-36.849812/174.766349/0/58
+        center: [174.766349, -36.849812],
+        // bearing: -10,
+        pitch: 58,
 
-        zoom: 11,
+        zoom: 13,
         hash: true,
         style: this.mapStyle
       });
@@ -62,7 +63,10 @@
       // );
 
       this.map.once('idle', () => {
-        this.isPreloading = false;
+        this.map?.flyTo({ zoom: 15, duration: 2000 });
+        setTimeout(() => {
+          this.isPreloading = false;
+        }, 2000);
       });
 
       $effect(() => {
@@ -95,7 +99,7 @@
   <StyleSwitcher />
   {#if mapState.isPreloading}
     <div
-      class="loading loading-spinner absolute top-1/2 left-1/2 w-16 -translate-x-1/2 -translate-y-1/2 transform"
+      class="loading loading-spinner absolute top-1/2 left-1/2 w-16 -translate-x-1/2 -translate-y-1/2 transform z-50"
     ></div>
   {/if}
   {@render children?.()}

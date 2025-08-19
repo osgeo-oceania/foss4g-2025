@@ -1,5 +1,5 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import RamiStyle from './rami';
+import RamiStyle from './0rami';
 
 export default {
   name: 'satellite',
