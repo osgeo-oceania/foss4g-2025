@@ -382,7 +382,7 @@ export default {
           'source-layer': 'places',
           type: 'symbol',
           minzoom: 10,
-          filter: ['==', ['get', 'type'], 'park'],
+          filter: ['all', ['==', ['get', 'type'], 'park'], [">", ['get', 'area'], 0.01]],
           layout: {
             'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Italic']],
