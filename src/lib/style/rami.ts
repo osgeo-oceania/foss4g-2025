@@ -559,6 +559,27 @@ export default {
             'text-halo-color': '#fff',
             'text-halo-width': 1
           }
+        },
+        {
+          id: 'pois-venue',
+          source: 'pois',
+          type: 'symbol',
+          minzoom: 10,
+          filter: ['==', ['get', 'type'], 'venue'],
+          layout: {
+            'icon-image': 'pin',
+            'icon-anchor': 'bottom',
+            'icon-size': 0.35,
+            'text-offset': [0, 0.2],
+            'text-font': ['literal', ['BellTopo Sans Bold']],
+            'text-field': "FOSS4G 2025",
+            'text-anchor': 'top'
+          },
+          paint: {
+            'text-halo-color': '#fff',
+            'text-halo-width': 2,
+            'text-halo-blur': 1
+          }
         }
       ]
     } as StyleSpecification;
