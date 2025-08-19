@@ -564,7 +564,7 @@ export default {
           id: 'pois-venue',
           source: 'pois',
           type: 'symbol',
-          minzoom: 10,
+          minzoom: 13,
           filter: ['==', ['get', 'type'], 'venue'],
           layout: {
             'icon-image': 'pin',
