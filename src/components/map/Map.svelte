@@ -11,7 +11,6 @@
 
   import Bounds from '../../data/bounds.json';
   import PoiContent from '$data/pois';
-  console.log(PoiContent);
 
   export class MapState {
     map: MapLibre.Map | null = $state(null);
@@ -55,11 +54,11 @@
         style: this.mapStyle
       });
 
-      this.markers = PoiContent.filter((poi) => poi.type != 'lodging').map((poi) =>
-        new MapLibre.Marker({ anchor: 'bottom' })
-          .setLngLat(poi.coordinates)
-          .addTo(this.map as MapLibre.Map)
-      );
+      // this.markers = PoiContent.filter((poi) => poi.type != 'lodging').map((poi) =>
+      //   new MapLibre.Marker({ anchor: 'bottom' })
+      //     .setLngLat(poi.coordinates)
+      //     .addTo(this.map as MapLibre.Map)
+      // );
 
       this.map.once('idle', () => {
         this.isPreloading = false;
