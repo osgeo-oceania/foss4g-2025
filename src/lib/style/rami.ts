@@ -1,4 +1,5 @@
 import type { StyleSpecification } from 'maplibre-gl';
+import PoiContent from '$data/pois';
 
 export default {
   name: 'rami',
@@ -19,6 +20,13 @@ export default {
       sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
+        pois: {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: PoiContent.map((poi) => poi.feature)
+          }
+        },
         auckland: {
           type: 'vector',
           url: `pmtiles://${config.pmtiles.auckland}`,
@@ -264,9 +272,9 @@ export default {
               'green',
               'black'
             ],
+            'fill-extrusion-opacity': 0.5,
             'fill-extrusion-height': ['get', 'height'],
-            'fill-extrusion-vertical-gradient': true,
-            'fill-extrusion-opacity': 1
+            'fill-extrusion-vertical-gradient': true
           }
         },
         {
@@ -474,6 +482,21 @@ export default {
             'text-field': name,
             'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
             'text-size': 20 // used to be 18
+          },
+          paint: {
+            'text-color': '#111',
+            'text-halo-color': '#fff',
+            'text-halo-width': 2
+          }
+        },
+        {
+          id: 'pois',
+          source: 'pois',
+          type: 'symbol',
+          layout: {
+            'text-field': name,
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 12
           },
           paint: {
             'text-color': '#111',
