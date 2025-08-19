@@ -308,17 +308,17 @@ export default {
             'line-color': 'black'
           }
         },
-        {
-          id: 'routes-ferry',
-          source: 'auckland',
-          'source-layer': 'routes',
-          filter: ['==', ['get', 'type'], 'ferry'],
-          type: 'line',
-          minzoom: 10,
-          paint: {
-            'line-color': '#1B2430'
-          }
-        },
+        // {
+        //   id: 'routes-ferry',
+        //   source: 'auckland',
+        //   'source-layer': 'routes',
+        //   filter: ['==', ['get', 'type'], 'ferry'],
+        //   type: 'line',
+        //   minzoom: 10,
+        //   paint: {
+        //     'line-color': '#1B2430'
+        //   }
+        // },
         {
           id: 'routes-train',
           source: 'auckland',
