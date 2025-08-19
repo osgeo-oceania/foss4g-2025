@@ -11,6 +11,7 @@
 
   import Bounds from '../../data/bounds.json';
   import PoiContent from '$data/pois';
+  console.log(PoiContent);
 
   export class MapState {
     map: MapLibre.Map | null = $state(null);
