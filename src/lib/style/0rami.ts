@@ -256,6 +256,20 @@ export default {
           }
         },
         {
+          id: 'venue-extrusion',
+          source: 'auckland',
+          'source-layer': 'buildings-selected',
+          type: 'fill-extrusion',
+          minzoom: 13,
+          filter: ['==', ['get', 'type'], 'venue'],
+          paint: {
+            'fill-extrusion-color': "#3a7a7f",
+            'fill-extrusion-opacity': 1,
+            'fill-extrusion-height': ['get', 'height'],
+            'fill-extrusion-vertical-gradient': true
+          }
+        },
+        {
           id: 'buildings-selected-extrusion',
           source: 'auckland',
           'source-layer': 'buildings-selected',
@@ -267,7 +281,7 @@ export default {
               ['==', ['get', 'type'], 'lodging'],
               'red',
               ['==', ['get', 'type'], 'venue'],
-              'yellow',
+              '#3a7a7f',
               ['==', ['get', 'type'], 'attraction'],
               'green',
               'black'
@@ -286,8 +300,8 @@ export default {
           paint: {
             'fill-extrusion-color': '#e3dcd9',
             'fill-extrusion-height': ['get', 'height'],
-            'fill-extrusion-vertical-gradient': true,
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 16, 0.45]
+            'fill-extrusion-vertical-gradient': false,
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 16, 0.75]
           }
         },
 
@@ -382,7 +396,7 @@ export default {
           'source-layer': 'places',
           type: 'symbol',
           minzoom: 10,
-          filter: ['all', ['==', ['get', 'type'], 'park'], [">", ['get', 'area'], 0.01]],
+          filter: ['all', ['==', ['get', 'type'], 'park'], ['>', ['get', 'area'], 0.01]],
           layout: {
             'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Italic']],
@@ -570,10 +584,11 @@ export default {
             'icon-image': 'pin',
             'icon-anchor': 'bottom',
             'icon-size': 0.35,
+            'icon-offset': [0, -40],
             'text-offset': [0, 0.2],
             'text-font': ['literal', ['BellTopo Sans Bold']],
-            'text-field': "FOSS4G 2025",
-            'text-anchor': 'top'
+            'text-anchor': 'top',
+            'text-size': 13
           },
           paint: {
             'text-halo-color': '#fff',
