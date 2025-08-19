@@ -64,7 +64,7 @@
       // );
 
       this.map.once('idle', () => {
-        this.map?.flyTo({ zoom: 15, duration: 4000 });
+        this.map?.flyTo({ zoom: 15.15, duration: 4500 });
         setTimeout(() => {
           this.isPreloading = false;
         }, 2000);
