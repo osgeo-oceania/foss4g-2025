@@ -11,7 +11,7 @@ export default {
       tiles: [
         'https://tiles-cdn.koordinates.com/services;key=95fa766262344182bbf4b67d91b59c3c/tiles/v4/layer=121752/EPSG:3857/{z}/{x}/{y}.png'
       ],
-      tileSize: 128
+      tileSize: 256
     };
 
     rami.layers = rami.layers
