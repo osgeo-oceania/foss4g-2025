@@ -50,6 +50,7 @@
         center: [174.766349, -36.849812],
         // bearing: -10,
         pitch: 58,
+        cancelPendingTileRequestsWhileZooming: false,
 
         zoom: 12,
         hash: false,
@@ -63,7 +64,7 @@
       // );
 
       this.map.once('idle', () => {
-        this.map?.flyTo({ zoom: 15, duration: 2000 });
+        this.map?.flyTo({ zoom: 15, duration: 4000 });
         setTimeout(() => {
           this.isPreloading = false;
         }, 2000);

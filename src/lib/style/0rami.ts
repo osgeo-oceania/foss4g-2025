@@ -286,7 +286,7 @@ export default {
               'green',
               'black'
             ],
-            'fill-extrusion-opacity': 0.5,
+            'fill-extrusion-opacity': ["interpolate", ['exponential', 2], ['zoom'], 0, 0.5, 10, 1],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
           }
