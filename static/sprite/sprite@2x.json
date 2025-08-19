@@ -1,10 +1,17 @@
 {
-  "lodging": {
+  "attraction": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
     "x": 256,
     "y": 0
+  },
+  "lodging": {
+    "height": 136,
+    "pixelRatio": 2,
+    "width": 136,
+    "x": 256,
+    "y": 136
   },
   "ocean": {
     "height": 256,

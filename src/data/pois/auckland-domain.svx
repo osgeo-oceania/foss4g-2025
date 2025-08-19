@@ -1,6 +1,0 @@
----
-id: auckland-domain
-name: Auckland Domain
-type: attraction
-coordinates: [174.775272, -36.859386]
----

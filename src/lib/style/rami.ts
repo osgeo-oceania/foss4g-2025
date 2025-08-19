@@ -508,6 +508,26 @@ export default {
             'text-halo-color': '#fff',
             'text-halo-width': 1
           }
+        },
+        {
+          id: 'pois-attraction',
+          source: 'pois',
+          type: 'symbol',
+          filter: ['==', ['get', 'type'], 'attraction'],
+          layout: {
+            'icon-image': ['get', 'type'],
+            'icon-size': 0.25,
+            'text-anchor': 'left',
+            'text-offset': [1, 0],
+            'text-field': ["step", ["zoom"], "", 14, name],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 12
+          },
+          paint: {
+            'text-color': '#569b61',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1
+          }
         }
       ]
     } as StyleSpecification;
