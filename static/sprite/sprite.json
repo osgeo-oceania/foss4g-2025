@@ -19,5 +19,12 @@
     "width": 128,
     "x": 0,
     "y": 0
+  },
+  "train": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 0,
+    "y": 128
   }
 }
