@@ -16,7 +16,7 @@ export default {
 
     rami.layers = rami.layers
       .map((lyr) => {
-        if (lyr.type == 'symbol') return lyr;
+        if (lyr.type == 'symbol' || lyr.type == 'fill-extrusion') return lyr;
         else if (lyr.type == 'line') {
           // @ts-ignore
           lyr.paint['line-opacity'] = 0.6;
