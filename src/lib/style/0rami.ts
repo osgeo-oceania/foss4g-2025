@@ -286,7 +286,7 @@ export default {
               'green',
               'black'
             ],
-            'fill-extrusion-opacity': ["interpolate", ['exponential', 2], ['zoom'], 13, 0, 16, 0.75],
+            'fill-extrusion-opacity': ["interpolate", ['exponential', 2], ['zoom'], 13, 0, 16, 0.85],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
           }
@@ -301,7 +301,7 @@ export default {
             'fill-extrusion-color': '#e3dcd9',
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': false,
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 16, 0.75]
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 16, 0.45]
           }
         },
 
