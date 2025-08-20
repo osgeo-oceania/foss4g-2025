@@ -490,9 +490,11 @@ export default {
           source: 'auckland',
           'source-layer': 'places',
           type: 'symbol',
-          maxzoom: 13, // set a max zoom level
+          maxzoom: 14, // set a max zoom level
           filter: ['==', ['get', 'type'], 'city'],
           layout: {
+            'icon-allow-overlap': true,
+            'icon-ignore-placement': true,
             'text-field': name,
             'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
             'text-size': 20 // used to be 18
@@ -578,9 +580,11 @@ export default {
           id: 'pois-venue',
           source: 'pois',
           type: 'symbol',
-          minzoom: 13,
+          minzoom: 11,
           filter: ['==', ['get', 'type'], 'venue'],
           layout: {
+            'icon-allow-overlap': true,
+            'icon-ignore-placement': true,
             'icon-image': 'pin',
             'icon-anchor': 'bottom',
             'icon-size': 0.35,
