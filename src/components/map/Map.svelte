@@ -73,6 +73,9 @@
       $effect(() => {
         if (!this.isPreloading && this.map) {
           this.map.setStyle(this.mapStyle);
+          if("afterAdd" in this.mapConfig.style) {
+            this.mapConfig.style.afterAdd(this.map)
+          }
         }
       });
     };
