@@ -619,7 +619,7 @@ export default {
       ]
     } as StyleSpecification;
   },
-  afterAdd: (map: maplibregl.Map) => {
+  beforeAdd: (map: maplibregl.Map) => {
     if (!map.getLayer('sky-tower'))
       map.addLayer({
         id: 'sky-tower',

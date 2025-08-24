@@ -72,12 +72,12 @@
 
       $effect(() => {
         if (!this.isPreloading && this.map) {
-          this.map.setStyle(this.mapStyle);
-          if ('afterAdd' in this.mapConfig.style) {
+          if ('beforeAdd' in this.mapConfig.style) {
             setTimeout(() => {
-              this.mapConfig.style.afterAdd(this.map);
-            }, 100);
+              this.mapConfig.style.beforeAdd(this.map);
+            }, 0);
           }
+          this.map.setStyle(this.mapStyle);
         }
       });
     };
