@@ -73,8 +73,10 @@
       $effect(() => {
         if (!this.isPreloading && this.map) {
           this.map.setStyle(this.mapStyle);
-          if("afterAdd" in this.mapConfig.style) {
-            this.mapConfig.style.afterAdd(this.map)
+          if ('afterAdd' in this.mapConfig.style) {
+            setTimeout(() => {
+              this.mapConfig.style.afterAdd(this.map);
+            }, 100);
           }
         }
       });
@@ -103,7 +105,7 @@
   <StyleSwitcher />
   {#if mapState.isPreloading}
     <div
-      class="loading loading-spinner absolute top-1/2 left-1/2 w-16 -translate-x-1/2 -translate-y-1/2 transform z-50"
+      class="loading loading-spinner absolute top-1/2 left-1/2 z-50 w-16 -translate-x-1/2 -translate-y-1/2 transform"
     ></div>
   {/if}
   {@render children?.()}
