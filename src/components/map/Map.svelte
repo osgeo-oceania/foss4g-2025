@@ -53,7 +53,7 @@
         cancelPendingTileRequestsWhileZooming: false,
 
         zoom: 12,
-        hash: false,
+        hash: true,
         style: this.mapStyle
       });
 
@@ -64,7 +64,13 @@
       // );
 
       this.map.once('idle', () => {
-        this.map?.flyTo({ zoom: 15.15, duration: 4500 });
+        this.map?.flyTo({
+          center: [174.766358, -36.852899],
+          zoom: 17,
+          pitch: 0,
+          duration: 6500,
+          easing: (x) => 1 - Math.pow(1 - x, 4)
+        });
         this.isPreloading = false;
       });
 
