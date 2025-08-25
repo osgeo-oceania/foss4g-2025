@@ -69,7 +69,7 @@ export default {
     name: 'Jessie Lindsay',
     title: 'TGP Breakfast',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
+    bio: "Jessie is a geospatial analyst who has spent the past seven years working in environmental consulting. She’s passionate about using open source tools to tackle environmental challenges and is always keen to learn new approaches. At FOSS4G 2025 in Auckland, Jessie is excited to have the opportunity to work with the Travel Grant Program to help bring as many people to the FOSS4G conference as possible from across the world. When she’s not at a computer, you’ll usually find her out paddle boarding or tinkering with DIY electronics projects."
   },
   martin: {
     name: 'Martin Tomko',
