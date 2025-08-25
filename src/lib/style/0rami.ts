@@ -248,16 +248,16 @@ export default {
         //
         // buildings
         //
-        {
-          id: 'buildings-fill',
-          source: 'auckland',
-          'source-layer': 'buildings',
-          type: 'fill',
-          minzoom: 13,
-          paint: {
-            'fill-color': '#e3dcd9'
-          }
-        },
+        // {
+        //   id: 'buildings-fill',
+        //   source: 'auckland',
+        //   'source-layer': 'buildings',
+        //   type: 'fill',
+        //   minzoom: 13,
+        //   paint: {
+        //     'fill-color': '#e3dcd9'
+        //   }
+        // },
         {
           id: 'venue-extrusion',
           source: 'auckland',
@@ -310,10 +310,10 @@ export default {
           type: 'fill-extrusion',
           minzoom: 12,
           paint: {
-            'fill-extrusion-color': '#e3dcd9',
+            'fill-extrusion-color': 'white',
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': false,
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 16, 0.45]
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 16, 0.5]
           }
         },
 
@@ -574,7 +574,6 @@ export default {
           filter: [
             'all',
             ['==', ['get', 'type'], 'attraction'],
-            ['!=', ['get', 'name'], 'Sky Tower']
           ],
           layout: {
             'icon-image': ['get', 'type'],
