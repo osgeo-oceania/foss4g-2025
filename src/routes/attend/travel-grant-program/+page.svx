@@ -20,25 +20,17 @@ title: Travel Grant Program
 
 The FOSS4G 2025 local organising committee is pleased to announce that it is again providing a Travel Grant Program (TGP). You will find below more details about eligibility requirements, what you will receive if successful and the timeline here on this page.
 
-Applications for the first round have closed on the 30th April 2025.
+We’re excited to share that there is funding available for a second round of Travel Grant Program (TGP) applications for FOSS4G 2025! This round is open to applicants in Australia and New Zealand, and we’d love to see as many of you as possible join us in Auckland.
 
-A possible second round for TGP can be opened closer to the conference date if more funding becomes available.
+Applications open 5the September and close 22nd September, with successful applicants being notified 30th September.
 
+| Timeline                       | Round 2           |
+| ------------------------------ | -------------     |
+| Submissions open               | 5 September 2025  |
+| Submission close               | 22 September 2025 |
+| Applicants notified of outcome | 30 September 2025 |
+| Applicants acceptance due by   | 14 October 2025   |
 
-| Timeline                       | Round 1       |
-| ------------------------------ | ------------- |
-| Submissions open               | 17 March 2025 |
-| Submission close               | 30 April 2025 |
-| Applicants notified of outcome | 14 May 2025   |
-| Applicants acceptance due by   | 28 May 2025   |
-
-If your application is successful, you will receive the following:
-
-- Free registration to the conference
-- Free access to the workshop sessions
-- Breakfast on the first day of the conference with your fellow TGP recipients
-- Financial assistance to help cover eligible travel costs (including flights, accommodation and meals up to the set grant amount)
-- A supporting letter for a visa to New Zealand if required
 
 *All expenses must be paid upfront, with the grants provided as reimbursement upon arrival at the conference. If this arrangement is inconvenient for you, please let us know and we'll do our best to help.*
 
@@ -53,12 +45,10 @@ If your application is unsuccessful, we will let you know and possibly offer you
 
 **Grants will be issued in the following tiers:** 
 
-| **Tier**  |         	**Inclusions**          	| **Plus financial assistance (max)\*** |
+| **Tier**  | **Financial assistance (max)\*** |
 | :-------: | :-------------------------------------: | :----------------------------: |
-|   **1**   | Free conference & workshop registration |        	NZD $3500       	|
-|   **2**   | Free conference & workshop registration |        	NZD $2500       	|
-|   **3**   | Free conference & workshop registration |        	NZD $500        	|
-|   **4**   | Free conference & workshop registration |           	n/a          	|
+|   **1**   |      	NZD $1000       	|
+|   **2**   |       NZD $500        	|
 
 <sup>\* Financial assistance is awarded up to this amount for eligible travel costs e.g. accommodation, flights and meals.</sup>
 
