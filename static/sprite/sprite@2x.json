@@ -6,12 +6,19 @@
     "x": 196,
     "y": 256
   },
-  "lodging": {
+  "event": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
     "x": 256,
     "y": 0
+  },
+  "lodging": {
+    "height": 136,
+    "pixelRatio": 2,
+    "width": 136,
+    "x": 332,
+    "y": 136
   },
   "ocean": {
     "height": 256,
@@ -32,6 +39,6 @@
     "pixelRatio": 2,
     "width": 136,
     "x": 332,
-    "y": 136
+    "y": 272
   }
 }
