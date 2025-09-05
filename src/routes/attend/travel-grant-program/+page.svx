@@ -65,7 +65,11 @@ The aim of the program is to increase the chances of attendance and accessibilit
 
 ## How to apply
 
-You can find the application form [here](https://forms.gle/U2VaANxgkqVe48mP9).
+<GiantButton href="https://docs.google.com/forms/d/e/1FAIpQLSdvgzSbknd1NBXNDCc5Ozec84YbHm1NMFwfmpcvXl2tXbbR5w/viewform">
+  Apply for the Travel Grant Program
+</GiantButton>
+
+You can find the application form [here](https://docs.google.com/forms/d/e/1FAIpQLSdvgzSbknd1NBXNDCc5Ozec84YbHm1NMFwfmpcvXl2tXbbR5w/viewform).
 
 Applicant data will be kept confidential and only used for assessing TGP applications. Please ensure that the email address provided is regularly monitored as the selection committee may seek clarification of your response.
 
@@ -76,9 +80,9 @@ The Oceania FOSS4G Travel Grant Program initiative was established in 2018 by th
 
 The TGP is managed by the FOSS4G 2025 LOC Committee, in collaboration with the OSGeo Oceania Board. For more information, either on the disbursement of grants or guidance on the application process, please email us at tgp@foss4g.org and we will do our best to assist and accommodate you.
 
-<!-- <StyledButton target="https://forms.gle/U2VaANxgkqVe48mP9">
+<GiantButton href="https://docs.google.com/forms/d/e/1FAIpQLSdvgzSbknd1NBXNDCc5Ozec84YbHm1NMFwfmpcvXl2tXbbR5w/viewform">
   Apply for the Travel Grant Program
-</StyledButton> -->
+</GiantButton>
 
 
 If you have a query or require more information, please email the [TPG Committee](mailto:tgp@foss4g.org).
