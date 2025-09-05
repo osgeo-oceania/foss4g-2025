@@ -3,6 +3,10 @@ import PoiContent from '$data/pois';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
+import TreeGlb from '$data/tree.glb';
+import SkyTowerGlb from '$data/sky-tower.glb';
+import TreesLocations from '$data/notable-trees.json';
+import IndoorAUT from '$data/aut-indoor.json';
 
 export default {
   name: 'rami',
@@ -23,11 +27,53 @@ export default {
       sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
+        aut: {
+          type: 'geojson',
+          data: IndoorAUT
+        },
         pois: {
           type: 'geojson',
           data: {
             type: 'FeatureCollection',
-            features: PoiContent.map((poi) => poi.feature)
+            features: [
+              ...PoiContent.map((poi) => poi.feature),
+              {
+                type: 'Feature',
+                properties: {
+                  name: 'Conference Dinner',
+                  place: 'Auckland Hilton',
+                  type: 'event'
+                },
+                geometry: {
+                  type: 'Point',
+                  coordinates: [174.765769, -36.839703]
+                }
+              },
+              {
+                type: 'Feature',
+                properties: {
+                  name: 'Women in Geospatial',
+                  place: 'Amano',
+                  type: 'event'
+                },
+                geometry: {
+                  type: 'Point',
+                  coordinates: [174.770475, -36.844416]
+                }
+              },
+              {
+                type: 'Feature',
+                properties: {
+                  name: 'GeoChicas',
+                  place: 'Rocketman',
+                  type: 'event'
+                },
+                geometry: {
+                  type: 'Point',
+                  coordinates: [174.76935, -36.845192]
+                }
+              }
+            ]
           }
         },
         auckland: {
@@ -267,9 +313,18 @@ export default {
           filter: ['==', ['get', 'type'], 'venue'],
           paint: {
             'fill-extrusion-color': '#3a7a7f',
-            'fill-extrusion-opacity': 1,
+            'fill-extrusion-opacity': 0.2,
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
+          }
+        },
+        {
+          id: 'venue-indoor',
+          source: 'aut',
+          type: 'line',
+          minzoom: 12,
+          paint: {
+            'line-color': 'black'
           }
         },
         {
@@ -278,7 +333,7 @@ export default {
           'source-layer': 'buildings-selected',
           type: 'fill-extrusion',
           minzoom: 12,
-          filter: ['!=', ['get', 'type'], 'attraction'],
+          filter: ['all', ['!=', ['get', 'type'], 'venue'], ['!=', ['get', 'type'], 'attraction']],
           paint: {
             'fill-extrusion-color': [
               'case',
@@ -571,10 +626,7 @@ export default {
           source: 'pois',
           type: 'symbol',
           minzoom: 13,
-          filter: [
-            'all',
-            ['==', ['get', 'type'], 'attraction'],
-          ],
+          filter: ['all', ['==', ['get', 'type'], 'attraction']],
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.25,
@@ -592,6 +644,45 @@ export default {
           }
         },
         {
+          id: 'pois-event',
+          source: 'pois',
+          type: 'symbol',
+          minzoom: 13,
+          filter: ['all', ['==', ['get', 'type'], 'event']],
+          layout: {
+            'icon-image': ['get', 'type'],
+            'icon-size': 0.25,
+            'icon-anchor': 'right',
+            'text-anchor': 'left',
+            'text-allow-overlap': true,
+            'text-justify': 'left',
+            'text-offset': [0.25, 0],
+            'text-field': [
+              'step',
+              ['zoom'],
+              '',
+              14,
+              [
+                'format',
+                ['get', 'name'],
+                '\n',
+                {},
+                ['get', 'place'],
+                {
+                  'text-font': ['literal', ['BellTopo Sans Italic']]
+                }
+              ]
+            ],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 11
+          },
+          paint: {
+            'text-color': 'purple',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1
+          }
+        },
+        {
           id: 'pois-venue',
           source: 'pois',
           type: 'symbol',
@@ -602,7 +693,7 @@ export default {
             'icon-ignore-placement': true,
             'icon-image': 'pin',
             'icon-anchor': 'bottom',
-            'icon-size': 0.35,
+            'icon-size': 0.25,
             'icon-offset': [0, -40],
             'text-offset': [0, 0.2],
             'text-font': ['literal', ['BellTopo Sans Bold']],
@@ -619,6 +710,64 @@ export default {
     } as StyleSpecification;
   },
   beforeAdd: (map: maplibregl.Map) => {
+    if (!map.getLayer('3d-trees'))
+      map.addLayer({
+        id: '3d-trees',
+        type: 'custom',
+        renderingMode: '3d', // The layer MUST be marked as 3D in order to get the proper depth buffer with globe depths in it.
+        onAdd(map, gl) {
+          this.camera = new THREE.Camera();
+          this.scene = new THREE.Scene();
+
+          // create two three.js lights to illuminate the model
+          const directionalLight = new THREE.DirectionalLight(0xffffff);
+          directionalLight.position.set(0, -70, 100).normalize();
+          this.scene.add(directionalLight);
+
+          const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+          directionalLight2.position.set(0, 70, 100).normalize();
+          this.scene.add(directionalLight2);
+
+          // use the three.js GLTF loader to add the 3D model to the three.js scene
+          const loader = new GLTFLoader();
+          loader.load(TreeGlb, (gltf) => {
+            this.scene.add(gltf.scene);
+          });
+          this.map = map;
+
+          // use the MapLibre GL JS map canvas for three.js
+          this.renderer = new THREE.WebGLRenderer({
+            canvas: map.getCanvas(),
+            context: gl,
+            antialias: true
+          });
+
+          this.renderer.autoClear = false;
+        },
+        render(gl, args) {
+          // parameters to ensure the model is georeferenced correctly on the map
+          const modelOrigin = [174.762182, -36.848453];
+          const modelAltitude = 20;
+
+          // Make the object ~10s of km tall to make it visible at planetary scale.
+          const scaling = 2.0;
+
+          // We can use this API to get the correct model matrix.
+          // It will work regardless of current projection.
+          // See MapLibre source code, file "mercator_transform.ts" or "vertical_perspective_transform.ts".
+          const modelMatrix = map.transform.getMatrixForModel(modelOrigin, modelAltitude);
+          const m = new THREE.Matrix4().fromArray(args.defaultProjectionData.mainMatrix);
+          const l = new THREE.Matrix4()
+            .fromArray(modelMatrix)
+            .scale(new THREE.Vector3(scaling, scaling, scaling));
+
+          this.camera.projectionMatrix = m.multiply(l);
+          this.renderer.resetState();
+          this.renderer.render(this.scene, this.camera);
+          this.map.triggerRepaint();
+        }
+      });
+
     if (!map.getLayer('sky-tower'))
       map.addLayer({
         id: 'sky-tower',
@@ -639,12 +788,9 @@ export default {
 
           // use the three.js GLTF loader to add the 3D model to the three.js scene
           const loader = new GLTFLoader();
-          loader.load(
-            `${window.location.origin}${PUBLIC_BASE_PATH}/sprite/sky-tower.glb`,
-            (gltf) => {
-              this.scene.add(gltf.scene);
-            }
-          );
+          loader.load(SkyTowerGlb, (gltf) => {
+            this.scene.add(gltf.scene);
+          });
           this.map = map;
 
           // use the MapLibre GL JS map canvas for three.js
@@ -662,7 +808,7 @@ export default {
           const modelAltitude = 20;
 
           // Make the object ~10s of km tall to make it visible at planetary scale.
-          const scaling = 2.0;
+          const scaling = 1.6;
 
           // We can use this API to get the correct model matrix.
           // It will work regardless of current projection.
