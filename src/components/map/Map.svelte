@@ -49,11 +49,11 @@
         // #15.45/-36.849812/174.766349/0/58
         center: [174.766349, -36.849812],
         // bearing: -10,
-        pitch: 58,
+        pitch: 38,
         cancelPendingTileRequestsWhileZooming: false,
-
+        minZoom: 10,
         zoom: 12,
-        hash: true,
+        hash: false,
         style: this.mapStyle
       });
 
@@ -68,8 +68,8 @@
           center: [174.766358, -36.852899],
           zoom: 17,
           pitch: 0,
-          duration: 6500,
-          easing: (x) => 1 - Math.pow(1 - x, 4)
+          duration: 10500,
+          easing: (x) => 1 - Math.pow(1 - x, 3)
         });
         this.isPreloading = false;
       });
