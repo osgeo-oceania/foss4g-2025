@@ -233,12 +233,10 @@
   <div class="max-w-full py-8 sm:py-12">
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
-
-  <!--
-<Heading>Keynote Speakers</Heading>
+  
+  <Heading>Keynote Speakers</Heading>
 
   <Keynotes />
--->
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
     <div class="flex h-full w-full flex-1 py-1 text-white sm:p-2">
