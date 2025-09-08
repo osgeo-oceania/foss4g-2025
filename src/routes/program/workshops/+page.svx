@@ -12,6 +12,8 @@ title: Workshops
 
 <enhanced:img src={Workshops} />
 
+The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 20-30 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
+
 ### Monday 17th November - Morning Workshops
 
 9:00am to 12:30pm
@@ -29,6 +31,9 @@ title: Workshops
 • [Microwave Image Processing: Exploring realms of Earth through spaceborne Radars using Python Workshop](https://talks.osgeo.org/foss4g-2025/talk/EQTRSA/)<br>
 • [QField & QFieldCloud: Hands-On Fieldwork Workshop](https://talks.osgeo.org/foss4g-2025/talk/BJJF7M/)
 
+<GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
+  Register
+</GiantButton>
 
 ### Monday 17 November - Afternoon Workshops
 
@@ -47,6 +52,10 @@ title: Workshops
 • [QGIS Plugin Development](https://talks.osgeo.org/foss4g-2025/talk/ZFPBLE/)<br>
 • [Tile serving with MapLibre/Martin/Planetiler - base and overlays Workshop](https://talks.osgeo.org/foss4g-2025/talk/PGV8BG/)
 
+<GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
+  Register
+</GiantButton>
+
 ### Tuesday 18 November - Morning Workshops
 
 9:00am to 12:30pm
@@ -64,6 +73,10 @@ title: Workshops
 • [PMTiles for Hobbyists: An Introduction Workshop](https://talks.osgeo.org/foss4g-2025/talk/BMWWR9/)<br>
 • [Terra Draw - cross-platform drawing library for all map applications Workshop](https://talks.osgeo.org/foss4g-2025/talk/7S9CLN/)
 
+<GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
+  Register
+</GiantButton>
+
 ### Tuesday 18 November - Afternoon Workshops
 
 1:30pm to 5:00pm
@@ -80,6 +93,10 @@ title: Workshops
 • [Semantic Interoperability made easy with OGC Building Blocks Workshop](https://talks.osgeo.org/foss4g-2025/talk/KZDMU9/)<br>
 • [Simulating Sustainable Urban Spaces on AWS Workshop](https://talks.osgeo.org/foss4g-2025/talk/XLSDYG/)<br>
 • [The Deep Magic of QGIS Cartography Workshop](https://talks.osgeo.org/foss4g-2025/talk/GLTDBP/)
+
+<GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
+  Register
+</GiantButton>
 
 
 
