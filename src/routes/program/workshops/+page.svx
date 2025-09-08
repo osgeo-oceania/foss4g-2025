@@ -6,6 +6,7 @@ title: Workshops
   import Heading from '$components/Heading.svelte';
   import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
   import Workshops from '$images/conference-dinner-2023.png?enhanced';
+  import GiantButton from '$components/GiantButton.svelte';
 </script>
 
 <Heading>Workshops</Heading>
