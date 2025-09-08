@@ -12,17 +12,9 @@
       buttonClass: 'bg-white'
     },
     {
-      title: 'Student/Retired Ticket',
+      title: 'Student / Retired / Community Contributor Ticket',
       description:
-        'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
-      price: '$500',
-      currency: 'NZD',
-      cardClass: 'bg-white border-1 border-primary/50'
-    },
-    {
-      title: 'Community Contributor',
-      description:
-        'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
+        'For secondary and tertiary students at any institution, for people who are no longer in paid work, and for community contributors who are not supported by an organization.',
       price: '$500',
       currency: 'NZD',
       cardClass: 'bg-white border-1 border-primary/50'
