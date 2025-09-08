@@ -173,26 +173,30 @@
 -->
 
     <Card
-      title="Vote For Papers"
+      title="Workshops are now on Sale"
       color="secondary"
-      button={{ href: '/attend/call-for-papers', text: 'Vote for Papers' }}
+      button={{ href: 'https://ti.to/osgeo-oceania/foss4g-2025', text: 'Register for Workshops' }}
     >
       <div>
+
         <p>
-          Submissions have now closed! We have recieved a large number of proposals for the
-          following categories:
+          At $50 NZD per workshop this is the most cost efective and valuable training you will ever undertake!
         </p>
+
+        <br />
+        <p>
+          Register for up to 4 from a selection of 44 workshops...
+        </p>
+
         <br />
         <ul class="list-disc pl-4">
-          <li><strong>182</strong> Presentations</li>
-          <li><strong>50</strong> Lightning Talks</li>
-          <li><strong>49</strong> Workshops</li>
-          <li><strong>36</strong> Academic Papers</li>
+          <li>Monday Morning: choose 1 from 11 available.</li>
+          <li>Monday Afternoon: choose 1 from 11 available.</li>
+          <li>Tuesday Morning: choose 1 from 11 available.</li>
+          <li>Tuesday Afternoon: choose 1 from 11 available.</li>
         </ul>
-        <br />
-        <p>
-          Community voting is now open for Talks, Lightning Talks and Workshops...
-        </p>
+
+
       </div>
     </Card>
 
