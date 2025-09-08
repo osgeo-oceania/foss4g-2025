@@ -95,6 +95,10 @@
           url: '/attend/call-for-papers'
         },
         {
+          label: 'Workshops',
+          url: '/attend/workshops'
+        },
+        {
           label: 'Outline',
           url: '/program/outline'
         },
