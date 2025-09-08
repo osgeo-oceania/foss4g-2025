@@ -1,0 +1,89 @@
+---
+title: Workshops
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
+  import Workshops from '$images/conference-dinner-2023.png?enhanced';
+</script>
+
+<Heading>Workshops</Heading>
+
+<enhanced:img src={Workshops} />
+
+### Monday 17th November - Morning Workshops
+
+9:00am to 12:30pm
+
+**You will be able to choose one of the following after purchase:**<br>
+• [Advanced PostGIS: Beyond the basics Workshop](https://talks.osgeo.org/foss4g-2025/talk/3CNAVV/)<br>
+• [Building Geospatial AI Applications: From Data to Insights with Open Source Tools Workshop](https://talks.osgeo.org/foss4g-2025/talk/NJERTQ/)<br>
+• [Build the Thing: A Hands-On Product Workshop for Geospatial Makers Workshop](https://talks.osgeo.org/foss4g-2025/talk/WZJEBN/)<br>
+• [Cloud-Native Geospatial for Earth Observation Workshop](https://talks.osgeo.org/foss4g-2025/talk/ZWVCEH/)<br>
+• [Diving into pygeoapi Workshop](https://talks.osgeo.org/foss4g-2025/talk/83XWUZ/)<br>
+• [Exploring the ZOO-Project-DRU and OGC Application Package Workshop](https://talks.osgeo.org/foss4g-2025/talk/AAVTUG/)<br>
+• [Hands-on DGGS and OGC DGGS-API with DGGRID and pydggsapi Workshop](https://talks.osgeo.org/foss4g-2025/talk/AGFBHA/)<br>
+• [Introduction to GeoServer Workshop](https://talks.osgeo.org/foss4g-2025/talk/H7LS7U/)<br>
+• [Let’s create Interactive Web Maps with the Open-Source WebGIS: Re:Earth - Visualizer + Re:Earth CMS Workshop](https://talks.osgeo.org/foss4g-2025/talk/RQLV9M/)<br>
+• [Microwave Image Processing: Exploring realms of Earth through spaceborne Radars using Python Workshop](https://talks.osgeo.org/foss4g-2025/talk/EQTRSA/)<br>
+• [QField & QFieldCloud: Hands-On Fieldwork Workshop](https://talks.osgeo.org/foss4g-2025/talk/BJJF7M/)
+
+
+### Monday 17 November - Afternoon Workshops
+
+1:30pm to 5:00pm
+
+**You will be able to choose one of the following after purchase:**<br>
+• [Achieving Reproducibility in Geospatial Data Processing with Apache Airflow Workshop](https://talks.osgeo.org/foss4g-2025/talk/VTVQQL/)<br>
+• [Cartography for Rebels: Building Beautiful Maps with Free Tools Workshop](https://talks.osgeo.org/foss4g-2025/talk/RUVQSJ/)<br>
+• [Doing Geospatial with Python Workshop](https://talks.osgeo.org/foss4g-2025/talk/XD8Z8K/)<br>
+• [Exploring Cloud-Native Geospatial Formats: Hands-on with Raster Data Workshop](https://talks.osgeo.org/foss4g-2025/talk/KZGHTZ/)<br>
+• [GeoTools Geospatial Introduction Workshop](https://talks.osgeo.org/foss4g-2025/talk/37MXUT/)<br>
+• [Getting Sentinel Data within Seconds with STAC Workshop](https://talks.osgeo.org/foss4g-2025/talk/CVT8GC/)<br>
+• [International QField Day Workshop](https://talks.osgeo.org/foss4g-2025/talk/YCAYBW/)<br>
+• [Scalable Remote Sensing Workflows with Xarray Workshop](https://talks.osgeo.org/foss4g-2025/talk/RBEXYV/)<br>
+• [QGIS Graphical Modeler: Build Smarter Workflows with Algorithms and Expressions Workshop](https://talks.osgeo.org/foss4g-2025/talk/PNHVDA/)<br>
+• [QGIS Plugin Development](https://talks.osgeo.org/foss4g-2025/talk/ZFPBLE/)<br>
+• [Tile serving with MapLibre/Martin/Planetiler - base and overlays Workshop](https://talks.osgeo.org/foss4g-2025/talk/PGV8BG/)
+
+### Tuesday 18 November - Morning Workshops
+
+9:00am to 12:30pm
+
+**You will be able to choose one of the following after purchase:**<br>
+• [Cloud-based Remote Sensing with QGIS and Google Earth Engine Workshop](https://talks.osgeo.org/foss4g-2025/talk/GQLTEA/)<br>
+• [Exploring Cloud-Native Geospatial Formats: Hands-on with Vector Data Workshop](https://talks.osgeo.org/foss4g-2025/talk/MHHJE7/)<br>
+• [FOSS4G with .NET: A Hands-On Introduction for Spatial Developers Workshop](https://talks.osgeo.org/foss4g-2025/talk/7PKNY3/)<br>
+• [GeoServer 3 Developers Workshop](https://talks.osgeo.org/foss4g-2025/talk/ZRFGZW/)<br>
+• [Introduction to QField plugin authoring Workshop](https://talks.osgeo.org/foss4g-2025/talk/MUKQWL/)<br>
+• [Mapping with Mini UAVs -- UAV build session Workshop](https://talks.osgeo.org/foss4g-2025/talk/ZACUVU/)<br>
+• [Modelling Climate Risks Using NASA Earthdata Cloud & Python APIs Workshop](https://talks.osgeo.org/foss4g-2025/talk/QTAWL7/)<br>
+• [Oxidize to Decarbonize. Building more sustainable geospatial processes with Rust Workshop](https://talks.osgeo.org/foss4g-2025/talk/RDZMQP/)<br>
+• [pgRouting basic Workshop](https://talks.osgeo.org/foss4g-2025/talk/FGATAY/)<br>
+• [PMTiles for Hobbyists: An Introduction Workshop](https://talks.osgeo.org/foss4g-2025/talk/BMWWR9/)<br>
+• [Terra Draw - cross-platform drawing library for all map applications Workshop](https://talks.osgeo.org/foss4g-2025/talk/7S9CLN/)
+
+### Tuesday 18 November - Afternoon Workshops
+
+1:30pm to 5:00pm
+
+**You will be able to choose one of the following after purchase:**<br>
+• [Building Spatial APIs in PostgreSQL with PostgREST Workshop](https://talks.osgeo.org/foss4g-2025/talk/G8XDLT/)<br>
+• [Collaborative Geospatial Workflows in Action: A Hands-On Alpha with Re:Earth Flow Workshop](https://talks.osgeo.org/foss4g-2025/talk/M3TF7B/)<br>
+• [Create and Customize Your Own 3D Web Maps with TerriaJS Workshop](https://talks.osgeo.org/foss4g-2025/talk/TG98J9/)<br>
+• [Getting Started with GeoNetwork 5: A Hands-On Developer Workshop](https://talks.osgeo.org/foss4g-2025/talk/9A37UM/)<br>
+• [H-O-T-T-O-G-O: Mobile Apps That Support Disaster Response and Climate Resilience Workshop](https://talks.osgeo.org/foss4g-2025/talk/ABSN39/)<br>
+• [Open Data, Open Source, Open Standard: Quickly build your digital twin city with mago3D Workshop](https://talks.osgeo.org/foss4g-2025/talk/VYW8GM/)<br>
+• [Participatory mapping field survey and computer lab: QField integration into machine learning landcover classification within Digital Earth Pacific Workshop](https://talks.osgeo.org/foss4g-2025/talk/S9ENL7/)<br>
+• [Running and Auto Scaling Geoserver and PostgreSQL/PostGIS without managing servers in the AWS cloud Workshop](https://talks.osgeo.org/foss4g-2025/talk/TAJSZZ/)<br>
+• [Semantic Interoperability made easy with OGC Building Blocks Workshop](https://talks.osgeo.org/foss4g-2025/talk/KZDMU9/)<br>
+• [Simulating Sustainable Urban Spaces on AWS Workshop](https://talks.osgeo.org/foss4g-2025/talk/XLSDYG/)<br>
+• [The Deep Magic of QGIS Cartography Workshop](https://talks.osgeo.org/foss4g-2025/talk/GLTDBP/)
+
+
+
+
+
+
+<enhanced:img src={Rangitoto} alt="Rangitoto Island" />
