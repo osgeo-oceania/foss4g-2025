@@ -12,8 +12,15 @@
       <div class="bg-primary flex h-full flex-1 flex-col rounded-4xl p-4">
         <div class="flex-shrink text-xl">{keynote.name}</div>
         <div class="flex-shrink text-xs">{keynote.title}</div>
-        <hr class="border-t border-white my-2 h-[1px]" />
-        <div class="flex-grow text-xs">texto</div>
+        <hr class="my-2 h-[1px] border-t border-white" />
+        <div class="relative line-clamp-2 flex-1 text-xs">
+          {@html keynote.bio}
+          <div
+            class=" bg-primary absolute bottom-0 left-0 flex h-[25px] w-full items-end justify-center"
+          >
+            (click to read full bio)
+          </div>
+        </div>
       </div>
     </div>
     <div class="relative h-full flex-1 p-2">
