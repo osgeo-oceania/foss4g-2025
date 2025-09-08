@@ -16,9 +16,20 @@
         <div class="relative line-clamp-2 flex-1 text-xs">
           {@html keynote.bio}
           <div
-            class=" bg-primary absolute bottom-0 left-0 flex h-[25px] w-full items-end justify-center"
+            class=" bg-primary absolute bottom-0 left-0 flex h-[30px] w-full items-end justify-center sm:h-[25px]"
           >
-            (click to read full bio)
+            <label class="hover:cursor-pointer hover:underline" for={`modal-${keynote.name}`}
+              >(click to read full bio)</label
+            >
+          </div>
+          <input type="checkbox" id={`modal-${keynote.name}`} class="modal-toggle" />
+          <div class="modal" role="dialog">
+            <div class="modal-box">
+              <p class="py-4 text-black">{@html keynote.bio}</p>
+              <div class="modal-action">
+                <label for={`modal-${keynote.name}`} class="btn btn-primary btn-round">close</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
