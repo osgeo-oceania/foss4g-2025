@@ -26,6 +26,14 @@
       price: '$500',
       currency: 'NZD',
       cardClass: 'bg-white border-1 border-primary/50'
+    },
+    {
+      title: 'Workshops',
+      description:
+        'Register for up to 4 workshops from a selection of 44, being held Monday 17th and Tuesday 18th November over Morning and Afternoon sessions.',
+      price: '$50',
+      currency: 'NZD per workshop',
+      cardClass: 'bg-white border-1 border-primary/50'
     }
   ];
 </script>
