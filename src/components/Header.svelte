@@ -96,7 +96,7 @@
         },
         {
           label: 'Workshops',
-          url: '/attend/workshops'
+          url: '/program/workshops'
         },
         {
           label: 'Outline',
