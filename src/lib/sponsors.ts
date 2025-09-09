@@ -160,5 +160,11 @@ export default {
     logo: () => import('$images/logos/geoscience-australia.png?enhanced'),
     link: 'https://www.ga.gov.au/',
     level: LEVELS.SILVER
+  },
+  cng: {
+    name: 'CNG / Source.coop',
+    logo: () => import('$images/logos/cng.png?enhanced'),
+    link: 'https://cloudnativegeo.org/',
+    level: LEVELS.SILVER
   }
 };
