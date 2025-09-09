@@ -1,5 +1,59 @@
 export default [
   {
+    date: '9th September 2025',
+    title: 'Announcing keynotes and workshops + round 2 of travel grants',
+    content: `
+Meet our keynote speakers.
+
+Workshop Tickets are now on sale!
+
+Round 2 of the Travel Grant Program is now open for applications!
+`,
+    link: 'https://mailchi.mp/foss4g/keynotes-workshops-tgp2?e=bf30a7e24a'
+  },
+  {
+    date: '2nd September 2025',
+    title: 'Register today. It\'s a once-a-year only meetup!',
+    content: `
+Our annual community global conference is coming up in only a couple of months! How time is flying…
+
+Coming soon = draft program, workshop registrations, keynote announcements, more fabulous sponsors, and plenty more.
+
+Important information you will need to travel to NZ is posted on the FOSS4G 2025 website.
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=57b8995252'
+  },
+  {
+    date: '14th August 2025',
+    title: '2 days left',
+    content: `
+Votes are still coming in for the talks, workshops, lightning talks, and presentations. Just a few days remaining to have your say!
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=021a3e7098'
+  },
+  {
+    date: '7th August 2025',
+    title: '9 days left',
+    content: `
+Review the submissions. Let us know what interests you.
+
+We did say 218 submissions for workshops, talks, presentations, and lightning talks in our last newsletter…it’s actually 281!
+
+9 days remaining. Pour yourself a warm or cool drink and open the voting platform.
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=c2e2c2b1ef'
+  },
+  {
+    date: '22nd July 2025',
+    title: 'Vote for workshops, talks, presentations you\'d like to attend',
+    content: `
+The choice is yours. There are 218 (!!) submissions for workshops, talks, presentations, and lightning talks.
+
+Now it is time to let us know what you want to hear or learn more about; time to select what looks delectable to you.
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=1c8843f780'
+  },
+  {
     date: '17th July 2025',
     title: 'Extended time is now coming to a close',
     content: `
@@ -49,7 +103,7 @@ Our Pacific family warmly welcomes you and are truly excited to have this opport
     link: 'https://mailchi.mp/foss4g/foss4g-2025-auckland-newsletter-10337308'
   },
   {
-    date: '31sr March 2025',
+    date: '31st March 2025',
     title: 'Early Bird FOSS4G 2025 Registration is open!',
     link: 'https://mailchi.mp/foss4g/foss4g-2025-auckland-newsletter-10336672'
   }
