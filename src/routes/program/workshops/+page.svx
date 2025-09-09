@@ -13,7 +13,9 @@ title: Workshops
 
 <enhanced:img src={Workshops} />
 
-The workshops are half day (3.5 hr) morning or afternoon time slots, held in a classroom setting and have a capacity of 20-30 participants. Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
+The workshops are half-day morning or afternoon time slots, held in a classroom setting and have a capacity of 20-30 participants.
+Held during our Monday 17th November 2025 and Tuesday 18th November 2025 workshop days, workshops can be up to 3.5 hours long.
+There will be catering on these days for workshop participants only.
 
 ### Monday 17th November - Morning Workshops
 
@@ -98,9 +100,6 @@ The workshops are half day (3.5 hr) morning or afternoon time slots, held in a c
 <GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
   Register
 </GiantButton>
-
-
-
 
 
 
