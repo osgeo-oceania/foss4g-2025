@@ -4,6 +4,7 @@
 
 {#snippet keynoteGrid(keynote: (typeof keynotes)[keyof typeof keynotes], i: number)}
   <div
+    id="keynotes"
     class="grid h-[240px] grid-cols-2 sm:h-[300px]"
     class:reverse-grid={i % 2 == 0}
     class:sm:reverse-grid={i % 4 >= 2}
