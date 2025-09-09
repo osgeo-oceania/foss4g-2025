@@ -154,5 +154,17 @@ export default {
     logo: () => import('$images/logos/gaia3d.png?enhanced'),
     link: 'https://www.gaia3d.com/eng',
     level: LEVELS.SILVER
+  },
+  geoscience_australia: {
+    name: 'GeoScience Australia',
+    logo: () => import('$images/logos/geoscience-australia.png?enhanced'),
+    link: 'https://www.ga.gov.au/',
+    level: LEVELS.SILVER
+  },
+  cng: {
+    name: 'CNG / Source.coop',
+    logo: () => import('$images/logos/cng.png?enhanced'),
+    link: 'https://cloudnativegeo.org/',
+    level: LEVELS.SILVER
   }
 };
