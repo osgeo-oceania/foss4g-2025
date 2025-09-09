@@ -10,7 +10,8 @@
   import Sponsors, { LEVELS as SPONSOR_LEVELS } from '$lib/sponsors';
   import Team from '$lib/organisers';
   import Button from '$components/Button.svelte';
-  import Card from '../components/Card.svelte';
+  import Card from '$components/Card.svelte';
+  import Video from '$components/Video.svelte';
   import News from '$lib/news';
 
   const whyAttends = [
@@ -99,7 +100,7 @@
           developers, decision makers and researchers together from around the world
         </div>
         <div class="pt-4 sm:w-[240px]">
-          <Button href="/attend/register">Early bird tickets</Button>
+          <Button href="/attend/register">Buy tickets</Button>
         </div>
       </div>
     </div>
@@ -172,26 +173,30 @@
 -->
 
     <Card
-      title="Call For Papers"
+      title="Workshops are now on Sale"
       color="secondary"
-      button={{ href: '/attend/call-for-papers', text: 'Submit a Paper' }}
+      button={{ href: 'https://ti.to/osgeo-oceania/foss4g-2025', text: 'Register for Workshops' }}
     >
       <div>
-        We want you to share your fascinating stories about open source geospatial, open data, and
-        open street map. We're looking for a diverse range of presenters including women, people
-        from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal,
-        we need you to accept the challenge and put yourself forward, the community can't wait to
-        hear what you have to say!
-      </div>
 
-      <div>
-        Now is the time to submit your interest in one or more of the following categories:
+        <p>
+          At $50 NZD per workshop this is the most cost efective and valuable training you will ever undertake!
+        </p>
+
+        <br />
+        <p>
+          Register for up to 4 from a selection of 44 workshops...
+        </p>
+
+        <br />
         <ul class="list-disc pl-4">
-          <li>Presentations</li>
-          <li>Lightning Talks</li>
-          <li>Workshops</li>
-          <li>Academic Papers</li>
+          <li>Monday Morning: choose 1 from 11 available.</li>
+          <li>Monday Afternoon: choose 1 from 11 available.</li>
+          <li>Tuesday Morning: choose 1 from 11 available.</li>
+          <li>Tuesday Afternoon: choose 1 from 11 available.</li>
         </ul>
+
+
       </div>
     </Card>
 
@@ -217,6 +222,10 @@
     </div>
   </div>
 
+  <div>
+    <Video src="https://www.youtube-nocookie.com/embed/HNxqnUhL-yM?si=Z5-6exzf98KhoHZy" />
+  </div>
+
   <Heading>Agenda</Heading>
 
   <Agenda />
@@ -224,12 +233,10 @@
   <div class="max-w-full py-8 sm:py-12">
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
-
-  <!--
-<Heading>Keynote Speakers</Heading>
+  
+  <Heading>Keynote Speakers</Heading>
 
   <Keynotes />
--->
 
   {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
     <div class="flex h-full w-full flex-1 py-1 text-white sm:p-2">
@@ -264,7 +271,7 @@
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
 
-  <Countdown label="Early Bird Pricing ends in:" time="2025-07-19T00:00:00+12:00" />
+  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
@@ -308,39 +315,6 @@
   </div>
 </main>
 
-<!-- FOSS4G stands for Free and Open Source Software for Geospatial, a conference
-series hosted in partnership with [OSGeo](https://www.osgeo.org/). FOSS4G
-brings open source geospatial users, software developers, decision makers and
-researchers together from around the world
-
-# Welcome to Auckland, the gateway to the South Pacific
-
-**_Tēnā koutou katoa (Greetings to all of you)_**
-
-The passionate geospatial community of OSGeo Oceania extends a warm invitation to the global FOSS4G conference in Auckland, New Zealand in 2025. We envision Auckland as the stage for a vibrant gathering that fosters collaboration and celebrates innovation in the exciting world of Free and Open Source Software for Geospatial (FOSS4G). Our Pacific family is a warm and welcoming group and it's exciting to have this opportunity to share our place with the global FOSS4G community.
-
-**A Commitment to Openness and Inclusion:**
-
-We are dedicated to creating an inclusive and welcoming environment for everyone at FOSS4G 2025. At this conference, we believe in hosting an environment where everyone feels welcome to participate and contribute. We celebrate diversity of thought, background, and experience, recognizing it enriches our discussions and leads to groundbreaking solutions. We'll provide a platform for diverse voices to be heard, offer resources to ensure accessibility, and cultivate a respectful atmosphere. We have a history of doing this for our Oceania conference series and continue to improve our work that supports diversity, equity and inclusion.
-
-**Join Us in Shaping the Future of Open Geospatial**
-
-We believe Auckland offers the perfect environment to host a successful and impactful FOSS4G conference in 2025. Our experienced team is dedicated to providing exceptional logistical support, innovative technological
-solutions, and a warm Kiwi welcome. Let's work together to make FOSS4G 2025 in Auckland a landmark event, accelerating the adoption and advancement of open geospatial solutions around the world!
-
-**_Kia Kaha, Kia Maia, Kia Ora! (Be strong, be brave, be well!)_**
-
-The Auckland FOSS4G 2025 Conference Organising Committee -->
-
-<!-- {/* <KeynoteSpeakers /> */} -->
-
-<!-- <hr class="my-8" /> -->
-
-<!-- # Our sponsors and partners -->
-
-<!-- <SponsorshipLevels /> -->
-
-<!-- <InlineMap bottom /> -->
 <style>
   .harmonized-logo {
     filter: grayscale(100%) sepia(100%) hue-rotate(180deg);

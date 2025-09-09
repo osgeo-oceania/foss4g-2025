@@ -18,26 +18,25 @@ title: Call for Papers
 
 <main class="my-4 space-y-5">
 
-<Countdown label="Call For Papers ends in:" time="2025-07-19T00:00:00+1200" />
 
 
 <!-- Cards -->
 
-
-  <div class="grid grid-cols-1 space-y-4 pb-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
+  <div class="grid grid-cols-1 space-y-4 pb-4 my-4 sm:grid-cols-2 sm:space-y-0 sm:space-x-4">
 
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
-      <Card title="Presentations and Lightning Talks" color="secondary" button={{ href: 'https://talks.osgeo.org/foss4g-2025/cfp', text: 'Submit a Presentation' }}>
+      <Card title="Presentations and Lightning Talks" color="secondary">
           <div>
             We want you to share your fascinating stories about open source geospatial, open data, and open street map. We're looking for a diverse range of presenters including women, people from a variety of ethnic backgrounds, young and old, urban and rural. To achieve this goal, we need you to accept the challenge and put yourself forward, the community can't wait to hear what you have to say!
           </div>
           <div>
               Time slots come in 20-minute conference presentations or 5-minute lightning talks during the main conference days held on Wednesday 19th November 2025, Thursday 20th November 2025 and Friday 21st November 2025.
-            </div>
+          </div>
+          
       </Card>
 
-      <Card title="Workshops" color="secondary" button={{ href: 'https://talks.osgeo.org/foss4g-2025/cfp', text: 'Submit a Workshop' }}>
+      <Card title="Workshops" color="secondary">
           <div>
             If you're passionate about a topic and you're skillful at conveying your hands-on knowledge and experience to others, this is for you! We are aiming to offer a diverse range of workshops for a variety of skill levels.
           </div>
@@ -50,7 +49,7 @@ title: Call for Papers
     <div class="flex flex-col gap-y-4 sm:flex-col">
 
 
-      <Card title="Academic Papers" color="secondary" button={{ href: 'https://talks.osgeo.org/foss4g-2025/cfp', text: 'Submit an Academic Paper' }}>
+      <Card title="Academic Papers" color="secondary">
         <div>
           Following an established tradition, FOSS4G organizes an Academic Track that will take place during the days of the Conference. The FOSS4G 2025 Scientific Committee invites original research contributions addressing any topic or domain related to open source geospatial software, including (but not limited to) open hardware, open software development, open GIS science, open geospatial data and systems, geospatial data exchange, open geospatial cloud platforms and services, open geospatial education, participatory cartography, digital twins, geoAI and geospatial machine learning.
         </div>
@@ -86,3 +85,4 @@ We believe in equality, so all presenters have the same exact amount of time to 
 And last, but not least, the success of this event lies in the responsible actions of all participants and organizers alike. If after you have confirmed participation, you or the co-authors are no longer able to present, please let us know as soon as possible.
 
 ![Group Photo]($images/group-photo.jpg)
+

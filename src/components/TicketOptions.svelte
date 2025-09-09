@@ -3,28 +3,28 @@
 
   const ticketOptions = [
     {
-      title: 'Early Bird Ticket',
+      title: 'Standard Conference Ticket',
       description:
-        'Limited Time Offer. Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
-      price: '$700',
+        'Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
+      price: '$950',
       currency: 'NZD',
       cardClass: 'bg-success',
       buttonClass: 'bg-white'
     },
     {
-      title: 'Student/Retired Ticket',
+      title: 'Student / Retired / Community Contributor Ticket',
       description:
-        'For secondary and tertiary students at any institution, and for people who are no longer in paid work.',
+        'For secondary and tertiary students at any institution, for people who are no longer in paid work, and for community contributors who are not supported by an organization.',
       price: '$500',
       currency: 'NZD',
       cardClass: 'bg-white border-1 border-primary/50'
     },
     {
-      title: 'Community Contributor',
+      title: 'Workshops',
       description:
-        'For open source, open data or volunteer community contributors otherwise not supported by another organisation to attend.',
-      price: '$500',
-      currency: 'NZD',
+        'Register for up to 4 workshops from a selection of 44, being held Monday 17th and Tuesday 18th November over Morning and Afternoon sessions.',
+      price: '$50',
+      currency: 'NZD per workshop',
       cardClass: 'bg-white border-1 border-primary/50'
     }
   ];

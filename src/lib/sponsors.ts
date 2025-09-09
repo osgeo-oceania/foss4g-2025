@@ -148,5 +148,11 @@ export default {
     logo: () => import('$images/logos/dep.png?enhanced'),
     link: 'https://digitalearthpacific.org/',
     level: LEVELS.WOMEN_IN_GEOSPATIAL_BREAKFAST
+  },
+  gaia3d: {
+    name: 'Gaia3D',
+    logo: () => import('$images/logos/gaia3d.png?enhanced'),
+    link: 'https://www.gaia3d.com/eng',
+    level: LEVELS.SILVER
   }
 };
