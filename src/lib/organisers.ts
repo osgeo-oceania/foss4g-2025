@@ -74,7 +74,7 @@ export default {
   martin: {
     name: 'Martin Tomko',
     title: 'Academic Papers',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    photo: () => import('$images/team/martin.jpg?enhanced'),
     bio: "Martin is a spatial information scientist at the Univeristy of Melbourne. He mostly does computational research in how people interact in and about space now and in the past, using and developing open-source tools. He has work on mobility, Geo question-answering, epidemiology, cultural heritage, and more."
   },
   ivana: {
