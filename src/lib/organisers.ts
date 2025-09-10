@@ -74,43 +74,49 @@ export default {
   martin: {
     name: 'Martin Tomko',
     title: 'Academic Papers',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    photo: () => import('$images/team/martin.jpg?enhanced'),
     bio: "Martin is a spatial information scientist at the Univeristy of Melbourne. He mostly does computational research in how people interact in and about space now and in the past, using and developing open-source tools. He has work on mobility, Geo question-answering, epidemiology, cultural heritage, and more."
+  },
+  ivana: {
+    name: 'Dr Ivana Ivánová',
+    title: 'Academic Papers',
+    photo: () => import('$images/team/ivana.jpg?enhanced'),
+    bio: "Ivana currently works as a senior teaching & research academic Spatial Sciences at Curtin University in Perth, Australia. Ivana’s research interests and expertise are in spatial data quality, metadata and provenance of spatial resources, and spatial information infrastructures. In her teaching, she is an advocate and promotor of the FOSS4G tools, currently helping students to develop open standards-compliant geoweb applications. Ivana is an OSGeo Charter Member and represents Curtin University at UN-GGIM Academic Network. She also volunteers at OSGeo’s Geo4All where she coordinates the PostGIS training for the UN OpenGIS Initiative. Ivana co-chairs Open Geospatial Consortium (OGC)’s Domain Working Group on Data Quality, and ISPRS ICWG IV/III on Global Mapping: Verification, Updating and Interoperability. She also represents Curtin University in IT-004 Geographic information/Geomatics working group at Standards Australia, on behalf of which she now co-leads the revision of ISO 19157 standard for geographic information quality."
   },
   david: {
     name: 'David Ramiro',
     title: 'Website',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
-  },
-  byron: {
-    name: 'Byron Cochrane',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
-  },
-  lani: {
-    name: 'Lanieta Rokotuiwakaya (Lani)',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
-  },
-  colin: {
-    name: 'Colin Mazengarb',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
-  },
-  anne: {
-    name: 'Anne Harper',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still puttin the words together!"
+    bio: "So much to say - we're still putting the words together!"
   },
   michel: {
     name: 'Michel M Nzikou',
     title: 'Committee Member',
     photo: () => import('$images/team/michel.jpg?enhanced'),
     bio: 'Michel works as a research fellow at the Center of Exploration Targeting (CET), at the University of Western Australia (UWA). He is a data enthusiast with a focus on building QGIS plugins for Geological and Geophysical 3D modelling. A part being an organising committee member, he is the ASEG WA Branch president and part of the MAG 24 committee. Outside work, he enjoys playing volleyball and is also a team member of Fury River Dragon boat for 4 years.'
+  },
+  byron: {
+    name: 'Byron Cochrane',
+    title: 'Committee Member',
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    bio: "So much to say - we're still putting the words together!"
+  },
+  lani: {
+    name: 'Lanieta Rokotuiwakaya (Lani)',
+    title: 'Committee Member',
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    bio: "So much to say - we're still putting the words together!"
+  },
+  colin: {
+    name: 'Colin Mazengarb',
+    title: 'Committee Member',
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    bio: "So much to say - we're still putting the words together!"
+  },
+  anne: {
+    name: 'Anne Harper',
+    title: 'Committee Member',
+    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    bio: "So much to say - we're still putting the words together!"
   }
 };
