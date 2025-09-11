@@ -91,8 +91,8 @@
       url: '/program/outline',
       subMenu: [
         {
-          label: 'Call For Papers',
-          url: '/attend/call-for-papers'
+          label: 'Schedule',
+          url: '/program/schedule'
         },
         {
           label: 'Workshops',

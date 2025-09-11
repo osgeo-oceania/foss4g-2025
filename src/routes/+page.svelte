@@ -99,8 +99,9 @@
           in partnership with OSGeo. FOSS4G brings open source geospatial users, software
           developers, decision makers and researchers together from around the world
         </div>
-        <div class="pt-4 sm:w-[240px]">
+        <div class="flex flex-row gap-4 pt-4 sm:w-[240px]">
           <Button href="/attend/register">Buy tickets</Button>
+          <Button href="/program/schedule">View schedule</Button>
         </div>
       </div>
     </div>
@@ -178,15 +179,13 @@
       button={{ href: 'https://ti.to/osgeo-oceania/foss4g-2025', text: 'Register for Workshops' }}
     >
       <div>
-
         <p>
-          At $50 NZD per workshop this is the most cost efective and valuable training you will ever undertake!
+          At $50 NZD per workshop this is the most cost efective and valuable training you will ever
+          undertake!
         </p>
 
         <br />
-        <p>
-          Register for up to 4 from a selection of 44 workshops...
-        </p>
+        <p>Register for up to 4 from a selection of 44 workshops...</p>
 
         <br />
         <ul class="list-disc pl-4">
@@ -195,8 +194,6 @@
           <li>Tuesday Morning: choose 1 from 11 available.</li>
           <li>Tuesday Afternoon: choose 1 from 11 available.</li>
         </ul>
-
-
       </div>
     </Card>
 
@@ -233,7 +230,7 @@
   <div class="max-w-full py-8 sm:py-12">
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
-  
+
   <Heading>Keynote Speakers</Heading>
 
   <Keynotes />

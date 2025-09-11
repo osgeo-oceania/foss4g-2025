@@ -5,11 +5,11 @@
 
 <div class="px-2 pb-8">
   <div class="bg-primary grid rounded-4xl sm:grid-cols-2">
-    <div class="flex flex-col space-y-6 p-6 sm:p-12 text-white">
+    <div class="flex flex-col space-y-6 p-6 text-white sm:p-12">
       <div class="text-xl">FOSS4G Auckland 2025</div>
       <div class="grid grid-cols-2">
         <ul class="space-y-3">
-          <li><Link href="/attend/call-for-papers">Call For Papers</Link></li>
+          <li><Link href="/program/schedule">Schedule</Link></li>
           <li><Link href="/attend/register">Register</Link></li>
           <li><Link href="/program/outline">Program</Link></li>
           <li><Link href="/sponsorship">Sponsorship</Link></li>
@@ -29,7 +29,7 @@
       <Link
         href="https://mailchi.mp/foss4g/mailing-list"
         target="_blank"
-        class="btn btn-block rounded-full border-none btn-sm text-sm min-w-fit font-light whitespace-nowrap shadow-none w-auto px-8 py-6 bg-primary text-white hover:bg-success hover:text-primary transition-all duration-200"
+        class="btn btn-block btn-sm bg-primary hover:bg-success hover:text-primary w-auto min-w-fit rounded-full border-none px-8 py-6 text-sm font-light whitespace-nowrap text-white shadow-none transition-all duration-200"
       >
         Join our Mailing List
         <span class="icon-[lucide--arrow-up-right] block"></span>
