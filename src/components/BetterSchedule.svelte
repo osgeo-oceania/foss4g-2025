@@ -311,8 +311,8 @@
         </div>
       </div>
     {:else}
-      <!-- List View -->
-      <div class="space-y-4">
+      <!-- Enhanced List View -->
+      <div class="space-y-6">
         {#if days[activeDay]}
           {@const dayData = days[activeDay]}
           {@const allEvents = Object.values(dayData.rooms)
@@ -321,48 +321,114 @@
 
           {#each allEvents as event}
             {#if !selectedRoom || event.room === selectedRoom}
-              <button
-                on:click={() => openEventModal(event)}
-                class="w-full rounded-lg border border-gray-200 bg-white p-3 text-left transition-shadow hover:shadow-lg sm:p-6"
-              >
-                <div
-                  class="mb-2 flex flex-col gap-2 sm:mb-3 sm:flex-row sm:items-start sm:justify-between"
+              <div class="group">
+                <button
+                  on:click={() => openEventModal(event)}
+                  class="w-full rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:shadow-xl hover:scale-[1.02] overflow-hidden"
+                  style="background: linear-gradient(135deg, {getTrackColor(event.track)}03 0%, {getTrackColor(event.track)}08 100%);"
                 >
-                  <div class="flex-1">
-                    <h3
-                      class="mb-1 line-clamp-2 text-base font-semibold text-gray-900 sm:mb-2 sm:text-xl"
-                    >
-                      {event.title}
-                    </h3>
-                    <div
-                      class="flex flex-col gap-1 text-xs text-gray-600 sm:flex-row sm:items-center sm:gap-4 sm:text-sm"
-                    >
-                      <span>{formatTime(event.start)} • {formatDuration(event.duration)}</span>
-                      <span class="truncate">{event.room}</span>
-                    </div>
-                  </div>
-                  {#if event.track}
-                    <div
-                      class="flex-shrink-0 self-start rounded-full px-2 py-1 text-xs font-medium text-white sm:px-3"
-                      style="background-color: {getTrackColor(event.track)}"
-                    >
-                      {event.track}
-                    </div>
-                  {/if}
-                </div>
+                  <!-- Gradient header bar -->
+                  <div 
+                    class="h-1 w-full"
+                    style="background: linear-gradient(90deg, {getTrackColor(event.track)}, {getTrackColor(event.track)}80);"
+                  ></div>
+                  
+                  <div class="p-6">
+                    <!-- Header with track badge -->
+                    <div class="mb-4 flex items-start justify-between gap-4">
+                      <div class="flex-1 min-w-0">
+                        <!-- Track badge -->
+                        {#if event.track}
+                          <div class="mb-3">
+                            <span
+                              class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold text-white shadow-sm"
+                              style="background: {getTrackColor(event.track)};"
+                            >
+                              <div class="w-2 h-2 bg-white/80 rounded-full mr-2"></div>
+                              {event.track}
+                            </span>
+                          </div>
+                        {/if}
 
-                {#if event.persons && event.persons.length > 0}
-                  <div class="mb-2 truncate text-xs text-gray-600 sm:mb-3 sm:text-sm">
-                    Speakers: {event.persons.map((p) => p.name || p.public_name).join(', ')}
-                  </div>
-                {/if}
+                        <!-- Title -->
+                        <h3 class="mb-3 text-xl font-bold text-gray-900 line-clamp-2 group-hover:text-gray-800 transition-colors">
+                          {event.title}
+                        </h3>
+                        
+                        <!-- Event details with icons -->
+                        <div class="flex flex-wrap gap-6 text-gray-600 mb-4">
+                          <div class="flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600">
+                              <circle cx="12" cy="12" r="10"/>
+                              <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <span class="font-medium text-sm">{formatTime(event.start)}</span>
+                          </div>
+                          
+                          <div class="flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-600">
+                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                              <line x1="16" y1="2" x2="16" y2="6"/>
+                              <line x1="8" y1="2" x2="8" y2="6"/>
+                              <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <span class="font-medium text-sm">{formatDuration(event.duration)}</span>
+                          </div>
+                          
+                          <div class="flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600">
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                              <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span class="font-medium text-sm truncate">{event.room}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Arrow indicator -->
+                      <div class="flex-shrink-0 p-2 rounded-full bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-600">
+                          <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                      </div>
+                    </div>
 
-                {#if event.abstract}
-                  <div class="line-clamp-2 text-xs text-gray-700 sm:line-clamp-3 sm:text-sm">
-                    {event.abstract.substring(0, 150)}{event.abstract.length > 150 ? '...' : ''}
+                    <!-- Speakers -->
+                    {#if event.persons && event.persons.length > 0}
+                      <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-2">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-orange-600">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                          </svg>
+                          <span class="text-sm font-semibold text-gray-700">
+                            {event.persons.length === 1 ? 'Speaker' : 'Speakers'}
+                          </span>
+                        </div>
+                        <div class="text-sm text-gray-600 font-medium">
+                          {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                        </div>
+                      </div>
+                    {/if}
+
+                    <!-- Abstract -->
+                    {#if event.abstract}
+                      <div class="border-t border-gray-100 pt-4">
+                        <div class="flex items-center gap-2 mb-2">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-indigo-600">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                          </svg>
+                          <span class="text-sm font-semibold text-gray-700">Abstract</span>
+                        </div>
+                        <div class="text-sm text-gray-700 leading-relaxed line-clamp-3">
+                          {event.abstract.substring(0, 200)}{event.abstract.length > 200 ? '...' : ''}
+                        </div>
+                      </div>
+                    {/if}
                   </div>
-                {/if}
-              </button>
+                </button>
+              </div>
             {/if}
           {/each}
         {/if}
