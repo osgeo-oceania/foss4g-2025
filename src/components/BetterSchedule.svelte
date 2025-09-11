@@ -31,6 +31,7 @@
   // View options
   let viewMode: 'grid' | 'list' = 'grid';
   let selectedRoom: string | null = null;
+  let searchQuery = '';
 
   // Utility Functions
   function formatTime(timeStr: string): string {
@@ -71,6 +72,47 @@
 
   function getEventsForRoom(day: any, roomName: string): any[] {
     return day.rooms?.[roomName] || [];
+  }
+
+  // Search functionality
+  function searchEvents(events: any[], query: string): any[] {
+    if (!query.trim()) return events;
+    
+    const searchTerm = query.toLowerCase().trim();
+    
+    return events.filter((event: any) => {
+      // Search in title
+      if (event.title && event.title.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
+      
+      // Search in abstract
+      if (event.abstract && event.abstract.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
+      
+      // Search in description
+      if (event.description && event.description.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
+      
+      // Search in track
+      if (event.track && event.track.toLowerCase().includes(searchTerm)) {
+        return true;
+      }
+      
+      // Search in speakers
+      if (event.persons && event.persons.length > 0) {
+        return event.persons.some((person: any) => {
+          const name = person.name || person.public_name || '';
+          const biography = person.biography || '';
+          return name.toLowerCase().includes(searchTerm) || 
+                 biography.toLowerCase().includes(searchTerm);
+        });
+      }
+      
+      return false;
+    });
   }
 
   // Data Fetching
@@ -126,6 +168,43 @@
       <p class="text-sm text-gray-600 sm:text-base">
         {formatDate(conference.start)} - {formatDate(conference.end)}
       </p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-6 px-2">
+      <div class="mx-auto max-w-md">
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </div>
+          <input
+            type="text"
+            bind:value={searchQuery}
+            placeholder="Search speakers, topics, or tracks..."
+            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
+          />
+          {#if searchQuery}
+            <button
+              on:click={() => (searchQuery = '')}
+              class="absolute inset-y-0 right-0 pr-3 flex items-center"
+              title="Clear search"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400 hover:text-gray-600">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+          {/if}
+        </div>
+        {#if searchQuery}
+          <div class="mt-2 text-xs text-gray-500 text-center">
+            Searching for "{searchQuery}"
+          </div>
+        {/if}
+      </div>
     </div>
 
     <!-- Controls -->
@@ -204,7 +283,8 @@
           {#if days[activeDay]}
             {@const dayData = days[activeDay]}
             {@const allEvents = Object.values(dayData.rooms).flat()}
-            {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
+            {@const filteredEvents = searchEvents(allEvents, searchQuery)}
+            {@const timeSlots = [...new Set(filteredEvents.map((event: any) => event.start))].sort()}
 
             {#each timeSlots as timeSlot}
               <div class="mb-1 flex min-h-28 items-start py-1 sm:mb-4 sm:min-h-40 sm:py-3">
@@ -243,13 +323,14 @@
             {#if days[activeDay]}
               {@const dayData = days[activeDay]}
               {@const allEvents = Object.values(dayData.rooms).flat()}
-              {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
+              {@const filteredEvents = searchEvents(allEvents, searchQuery)}
+              {@const timeSlots = [...new Set(filteredEvents.map((event: any) => event.start))].sort()}
 
               {#each timeSlots as timeSlot}
                 <div class="mb-1 flex min-h-20 gap-2 sm:mb-4 sm:min-h-24 sm:gap-4">
                   <!-- Room Columns -->
                   {#each filteredRooms as room}
-                    {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot)] as roomEvents}
+                    {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot && filteredEvents.includes(event))] as roomEvents}
                       <div class="w-48 flex-shrink-0 sm:w-64">
                         {#if roomEvents.length > 0}
                           {#each roomEvents as event}
@@ -359,13 +440,14 @@
       <div class="space-y-6">
         {#if days[activeDay]}
           {@const dayData = days[activeDay]}
-          {@const allEvents = Object.values(dayData.rooms)
-            .flat()
+          {@const allEvents = Object.values(dayData.rooms).flat()}
+          {@const filteredEvents = searchEvents(allEvents, searchQuery)}
+          {@const sortedEvents = filteredEvents
+            .filter((event: any) => !selectedRoom || event.room === selectedRoom)
             .sort((a: any, b: any) => a.start.localeCompare(b.start))}
 
-          {#each allEvents as event}
-            {#if !selectedRoom || event.room === selectedRoom}
-              <div class="group">
+          {#each sortedEvents as event}
+            <div class="group">
                 <button
                   on:click={() => openEventModal(event)}
                   class="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
@@ -578,7 +660,6 @@
                   </div>
                 </button>
               </div>
-            {/if}
           {/each}
         {/if}
       </div>
