@@ -19,8 +19,8 @@
   let modalOpen = false;
   let isReloading = false;
 
-  // Track colors by event type/track
-  const trackColors = {
+  // Default fallback colors
+  const fallbackTrackColors = {
     Talk: '#1f4182',
     Workshop: '#ef8427',
     Keynote: '#aa1456',
@@ -97,7 +97,18 @@
   }
 
   function getTrackColor(track: string): string {
-    return trackColors[track as keyof typeof trackColors] || trackColors.default;
+    // First try to get color from API tracks data
+    if (conference?.tracks) {
+      const trackData = conference.tracks.find((t: any) => t.name === track);
+      if (trackData?.color) {
+        return trackData.color;
+      }
+    }
+
+    // Fall back to hardcoded colors
+    return (
+      fallbackTrackColors[track as keyof typeof fallbackTrackColors] || fallbackTrackColors.default
+    );
   }
 
   function formatDate(dateStr: string): string {
