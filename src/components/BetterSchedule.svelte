@@ -378,7 +378,7 @@
         <button
           on:click={reloadSchedule}
           disabled={isReloading || loading}
-          class="flex-shrink-0 rounded-xl border border-gray-300 bg-white p-3 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+          class="flex-shrink-0 rounded-xl border border-gray-300 bg-white p-3 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
           title="Reload schedule data"
           aria-label="Reload schedule data"
         >
@@ -470,7 +470,7 @@
                 <div class="min-w-48 flex-shrink-0 sm:min-w-64">
                   <button
                     on:click={() => openRoomModal(room)}
-                    class="flex h-12 w-full items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none sm:h-16 sm:p-3 sm:text-sm"
+                    class="flex h-12 w-full items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none cursor-pointer sm:h-16 sm:p-3 sm:text-sm"
                     title="Click for room information: {room}"
                   >
                     <span class="hidden sm:inline">{room}</span>
@@ -501,7 +501,7 @@
                           {#each roomEvents as event}
                             <button
                               on:click={() => openEventModal(event)}
-                              class="flex min-h-28 w-full flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
+                              class="flex min-h-28 w-full flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg cursor-pointer sm:min-h-40 sm:p-3"
                               style="border-left-color: {getTrackColor(
                                 event.track
                               )}; background: linear-gradient(135deg, {getTrackColor(
@@ -615,7 +615,7 @@
             <div class="group">
               <button
                 on:click={() => openEventModal(event)}
-                class="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                class="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer"
                 style="background: linear-gradient(135deg, {getTrackColor(
                   event.track
                 )}03 0%, {getTrackColor(event.track)}08 100%);"
