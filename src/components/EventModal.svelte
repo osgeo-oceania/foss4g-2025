@@ -4,6 +4,7 @@
   export let open = false;
   export let event: any = null;
   export let setIsOpen: (open: boolean) => void;
+  export let openRoomModal: ((roomName: string) => void) | undefined = undefined;
 
   let modalContainer: HTMLDivElement;
 
@@ -188,7 +189,20 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span class="font-medium">{event.room}</span>
+                  {#if openRoomModal}
+                    <span
+                      on:click={() => openRoomModal?.(event.room)}
+                      on:keydown={(e) => e.key === 'Enter' && openRoomModal?.(event.room)}
+                      class="font-medium text-purple-600 hover:text-purple-800 hover:underline cursor-pointer"
+                      title="Click for room information"
+                      tabindex="0"
+                      role="button"
+                    >
+                      {event.room}
+                    </span>
+                  {:else}
+                    <span class="font-medium">{event.room}</span>
+                  {/if}
                 </div>
               {/if}
             </div>
