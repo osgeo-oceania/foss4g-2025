@@ -125,7 +125,7 @@
     selectedEvent = event;
     modalOpen = true;
   }
-  
+
   function openRoomModal(roomName: string) {
     if (conference?.rooms) {
       const roomInfo = conference.rooms.find((r: any) => r.name === roomName);
@@ -280,6 +280,29 @@
         {#if version}
           <span class="ml-2 text-xs text-gray-500">(ver {version})</span>
         {/if}
+        <!-- Reload Button -->
+        <button
+          on:click={reloadSchedule}
+          disabled={isReloading || loading}
+          class="ml-2 flex-shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-2 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+          title="Reload schedule data"
+          aria-label="Reload schedule data"
+        >
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="{isReloading ? 'animate-spin' : ''} text-gray-600"
+          >
+            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+            <path d="M21 3v5h-5" />
+            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+            <path d="M3 21v-5h5" />
+          </svg>
+        </button>
       </p>
     </div>
 
@@ -374,29 +397,6 @@
 
       <!-- View Controls -->
       <div class="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center">
-        <!-- Reload Button -->
-        <button
-          on:click={reloadSchedule}
-          disabled={isReloading || loading}
-          class="flex-shrink-0 rounded-xl border border-gray-300 bg-white p-3 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
-          title="Reload schedule data"
-          aria-label="Reload schedule data"
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="{isReloading ? 'animate-spin' : ''} text-gray-600"
-          >
-            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-            <path d="M21 3v5h-5" />
-            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-            <path d="M3 21v-5h5" />
-          </svg>
-        </button>
         <!-- Room Filter -->
         <select
           bind:value={selectedRoom}
@@ -470,7 +470,7 @@
                 <div class="min-w-48 flex-shrink-0 sm:min-w-64">
                   <button
                     on:click={() => openRoomModal(room)}
-                    class="flex h-12 w-full items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none cursor-pointer sm:h-16 sm:p-3 sm:text-sm"
+                    class="flex h-12 w-full cursor-pointer items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none sm:h-16 sm:p-3 sm:text-sm"
                     title="Click for room information: {room}"
                   >
                     <span class="hidden sm:inline">{room}</span>
@@ -501,7 +501,7 @@
                           {#each roomEvents as event}
                             <button
                               on:click={() => openEventModal(event)}
-                              class="flex min-h-28 w-full flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg cursor-pointer sm:min-h-40 sm:p-3"
+                              class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
                               style="border-left-color: {getTrackColor(
                                 event.track
                               )}; background: linear-gradient(135deg, {getTrackColor(
@@ -615,7 +615,7 @@
             <div class="group">
               <button
                 on:click={() => openEventModal(event)}
-                class="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-pointer"
+                class="w-full cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
                 style="background: linear-gradient(135deg, {getTrackColor(
                   event.track
                 )}03 0%, {getTrackColor(event.track)}08 100%);"
@@ -703,8 +703,9 @@
                           </svg>
                           <span
                             on:click|stopPropagation={() => openRoomModal(event.room)}
-                            on:keydown|stopPropagation={(e) => e.key === 'Enter' && openRoomModal(event.room)}
-                            class="truncate text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline cursor-pointer"
+                            on:keydown|stopPropagation={(e) =>
+                              e.key === 'Enter' && openRoomModal(event.room)}
+                            class="cursor-pointer truncate text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline"
                             title="Click for room information"
                             tabindex="0"
                             role="button"
@@ -839,11 +840,11 @@
 </div>
 
 <!-- Event Modal -->
-<EventModal 
-  open={modalOpen} 
-  event={selectedEvent} 
+<EventModal
+  open={modalOpen}
+  event={selectedEvent}
   setIsOpen={(open) => (modalOpen = open)}
-  openRoomModal={openRoomModal}
+  {openRoomModal}
 />
 
 <!-- Room Modal -->
@@ -858,13 +859,20 @@
           class="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
           aria-label="Close room information"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <line x1="18" y1="6" x2="6" y2="18" />
             <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
       </div>
-      
+
       <!-- Content -->
       <div class="p-4">
         {#if selectedRoomInfo.description}
