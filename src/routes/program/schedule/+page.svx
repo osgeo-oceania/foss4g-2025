@@ -1,0 +1,13 @@
+---
+title: Schedule
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import BetterSchedule from '$components/BetterSchedule.svelte';
+</script>
+
+
+<Heading>Schedule</Heading>
+
+<BetterSchedule></BetterSchedule>
