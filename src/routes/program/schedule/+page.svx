@@ -5,9 +5,10 @@ title: Schedule
 <script lang="ts">
   import Heading from '$components/Heading.svelte';
   import Schedule from '$components/Schedule.svelte';
+  import BetterSchedule from '$components/BetterSchedule.svelte';
 </script>
 
 
 <Heading>Schedule</Heading>
 
-<Schedule></Schedule>
+<BetterSchedule></BetterSchedule>
