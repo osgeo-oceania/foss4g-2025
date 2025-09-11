@@ -278,10 +278,54 @@
                                 <span class="sm:hidden">{formatDuration(event.duration)}</span>
                               </div>
                               {#if event.persons && event.persons.length > 0}
-                                <div class="hidden truncate text-xs text-gray-500 sm:block">
-                                  {event.persons
-                                    .map((p: any) => p.name || p.public_name)
-                                    .join(', ')}
+                                <div class="hidden items-center gap-2 sm:flex">
+                                  <!-- Speaker avatars -->
+                                  <div class="flex -space-x-1">
+                                    {#each event.persons.slice(0, 3) as person, index}
+                                      {#if person.avatar}
+                                        <img
+                                          src={person.avatar}
+                                          alt={person.name || person.public_name || 'Speaker'}
+                                          class="not-prose h-4 w-4 rounded-full border border-white shadow-sm"
+                                          style="z-index: {10 - index}"
+                                          title={person.name || person.public_name}
+                                        />
+                                      {:else}
+                                        <div
+                                          class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-300 shadow-sm"
+                                          style="z-index: {10 - index}"
+                                          title={person.name || person.public_name}
+                                        >
+                                          <svg
+                                            width="8"
+                                            height="8"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            class="text-gray-500"
+                                          >
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                          </svg>
+                                        </div>
+                                      {/if}
+                                    {/each}
+                                    {#if event.persons.length > 3}
+                                      <div
+                                        class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-400 text-xs font-bold text-white shadow-sm"
+                                        style="z-index: 7; font-size: 8px;"
+                                        title="+{event.persons.length - 3} more speakers"
+                                      >
+                                        +{event.persons.length - 3}
+                                      </div>
+                                    {/if}
+                                  </div>
+                                  <div class="min-w-0 flex-1 truncate text-xs text-gray-500">
+                                    {event.persons
+                                      .map((p: any) => p.name || p.public_name)
+                                      .join(', ')}
+                                  </div>
                                 </div>
                               {/if}
                               {#if event.track}
@@ -437,7 +481,7 @@
                     <!-- Speakers -->
                     {#if event.persons && event.persons.length > 0}
                       <div class="mb-4">
-                        <div class="mb-2 flex items-center gap-2">
+                        <div class="mb-3 flex items-center gap-2">
                           <svg
                             width="16"
                             height="16"
@@ -454,8 +498,52 @@
                             {event.persons.length === 1 ? 'Speaker' : 'Speakers'}
                           </span>
                         </div>
-                        <div class="text-sm font-medium text-gray-600">
-                          {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                        <div class="flex items-center gap-3">
+                          <!-- Speaker avatars -->
+                          <div class="flex -space-x-2">
+                            {#each event.persons.slice(0, 4) as person, index}
+                              {#if person.avatar}
+                                <img
+                                  src={person.avatar}
+                                  alt={person.name || person.public_name || 'Speaker'}
+                                  class="not-prose h-8 w-8 rounded-full border-2 border-white shadow-lg"
+                                  style="z-index: {10 - index}"
+                                  title={person.name || person.public_name}
+                                />
+                              {:else}
+                                <div
+                                  class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-300 shadow-lg"
+                                  style="z-index: {10 - index}"
+                                  title={person.name || person.public_name}
+                                >
+                                  <svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    class="text-gray-500"
+                                  >
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                  </svg>
+                                </div>
+                              {/if}
+                            {/each}
+                            {#if event.persons.length > 4}
+                              <div
+                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-500 text-xs font-bold text-white shadow-lg"
+                                style="z-index: 6"
+                                title="+{event.persons.length - 4} more speakers"
+                              >
+                                +{event.persons.length - 4}
+                              </div>
+                            {/if}
+                          </div>
+                          <div class="flex-1 text-sm font-medium text-gray-600">
+                            {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                          </div>
                         </div>
                       </div>
                     {/if}
