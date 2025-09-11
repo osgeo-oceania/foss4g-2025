@@ -292,7 +292,7 @@
       <p class="text-sm text-gray-600 sm:text-base">
         {formatDate(conference.start)} - {formatDate(conference.end)}
         {#if version}
-          <span class="ml-2 text-xs text-gray-500">(ver {version})</span>
+          <span class="ml-2 text-xs whitespace-nowrap text-gray-500">(ver {version})</span>
         {/if}
         <!-- Reload Button -->
         <button
