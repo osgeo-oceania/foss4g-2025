@@ -18,6 +18,8 @@
   let selectedEvent: any = null;
   let modalOpen = false;
   let isReloading = false;
+  let selectedRoomInfo: any = null;
+  let roomModalOpen = false;
 
   // Default fallback colors
   const fallbackTrackColors = {
@@ -122,6 +124,16 @@
   function openEventModal(event: any) {
     selectedEvent = event;
     modalOpen = true;
+  }
+  
+  function openRoomModal(roomName: string) {
+    if (conference?.rooms) {
+      const roomInfo = conference.rooms.find((r: any) => r.name === roomName);
+      if (roomInfo) {
+        selectedRoomInfo = roomInfo;
+        roomModalOpen = true;
+      }
+    }
   }
 
   function getRoomsForDay(day: any): string[] {
@@ -456,15 +468,16 @@
             <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
               {#each filteredRooms as room}
                 <div class="min-w-48 flex-shrink-0 sm:min-w-64">
-                  <div
-                    class="flex h-12 items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 sm:h-16 sm:p-3 sm:text-sm"
-                    title={room}
+                  <button
+                    on:click={() => openRoomModal(room)}
+                    class="flex h-12 w-full items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none sm:h-16 sm:p-3 sm:text-sm"
+                    title="Click for room information: {room}"
                   >
                     <span class="hidden sm:inline">{room}</span>
                     <span class="sm:hidden"
                       >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
                     >
-                  </div>
+                  </button>
                 </div>
               {/each}
             </div>
@@ -688,7 +701,16 @@
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                             <circle cx="12" cy="10" r="3" />
                           </svg>
-                          <span class="truncate text-sm font-medium">{event.room}</span>
+                          <span
+                            on:click|stopPropagation={() => openRoomModal(event.room)}
+                            on:keydown|stopPropagation={(e) => e.key === 'Enter' && openRoomModal(event.room)}
+                            class="truncate text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline cursor-pointer"
+                            title="Click for room information"
+                            tabindex="0"
+                            role="button"
+                          >
+                            {event.room}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -817,7 +839,45 @@
 </div>
 
 <!-- Event Modal -->
-<EventModal open={modalOpen} event={selectedEvent} setIsOpen={(open) => (modalOpen = open)} />
+<EventModal 
+  open={modalOpen} 
+  event={selectedEvent} 
+  setIsOpen={(open) => (modalOpen = open)}
+  openRoomModal={openRoomModal}
+/>
+
+<!-- Room Modal -->
+{#if roomModalOpen && selectedRoomInfo}
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    <div class="w-full max-w-md rounded-xl bg-white shadow-xl">
+      <!-- Header -->
+      <div class="flex items-center justify-between border-b border-gray-200 p-4">
+        <h3 class="text-lg font-semibold text-gray-900">{selectedRoomInfo.name}</h3>
+        <button
+          on:click={() => (roomModalOpen = false)}
+          class="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+          aria-label="Close room information"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Content -->
+      <div class="p-4">
+        {#if selectedRoomInfo.description}
+          <div class="prose prose-sm max-w-none text-gray-700">
+            {@html marked(selectedRoomInfo.description)}
+          </div>
+        {:else}
+          <p class="text-gray-500">No additional information available for this room.</p>
+        {/if}
+      </div>
+    </div>
+  </div>
+{/if}
 
 <style>
   :global(.full-width) {
