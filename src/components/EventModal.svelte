@@ -91,12 +91,12 @@
     <!-- Modal with enhanced styling and animations -->
     <div
       bind:this={modalContainer}
-      class="animate-in zoom-in-95 slide-in-from-bottom-4 relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl duration-300"
+      class="animate-in zoom-in-95 slide-in-from-bottom-4 relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl duration-300 flex flex-col"
       style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)); backdrop-filter: blur(20px);"
     >
       <!-- Gradient header with track color -->
       <div
-        class="relative overflow-hidden"
+        class="relative overflow-hidden flex-shrink-0"
         style="background: linear-gradient(135deg, {getTrackColor(event.track)}15, {getTrackColor(
           event.track
         )}25);"
@@ -216,7 +216,7 @@
       </div>
 
       <!-- Content area with enhanced styling -->
-      <div class="overflow-y-auto" style="max-height: calc(90vh - 200px);">
+      <div class="flex-1 overflow-y-auto">
         <div class="space-y-8 p-8">
           <!-- Abstract with enhanced typography -->
           {#if event.abstract}
@@ -344,7 +344,7 @@
       </div>
 
       <!-- Enhanced footer -->
-      <div class="border-t border-gray-200 bg-gradient-to-r from-gray-50 to-white px-8 py-6">
+      <div class="border-t border-gray-200 bg-gradient-to-r from-gray-50 to-white px-8 py-6 flex-shrink-0">
         <div class="flex items-center justify-between">
           <div class="text-sm text-gray-500">
             Press <kbd class="rounded bg-gray-200 px-2 py-1 text-xs">Esc</kbd> to close
