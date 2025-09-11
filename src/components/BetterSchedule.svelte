@@ -291,32 +291,34 @@
       </h1>
       <p class="text-sm text-gray-600 sm:text-base">
         {formatDate(conference.start)} - {formatDate(conference.end)}
-        {#if version}
-          <span class="ml-2 text-xs whitespace-nowrap text-gray-500">(ver {version})</span>
-        {/if}
-        <!-- Reload Button -->
-        <button
-          on:click={reloadSchedule}
-          disabled={isReloading || loading}
-          class="ml-2 flex-shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-2 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-          title="Reload schedule data"
-          aria-label="Reload schedule data"
-        >
-          <svg
-            width="10"
-            height="10"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            class="{isReloading ? 'animate-spin' : ''} text-gray-600"
+        <span class="whitespace-nowrap">
+          {#if version}
+            <span class="ml-2 text-xs text-gray-500">(ver {version})</span>
+          {/if}
+          <!-- Reload Button -->
+          <button
+            on:click={reloadSchedule}
+            disabled={isReloading || loading}
+            class="ml-2 flex-shrink-0 cursor-pointer rounded-lg border border-gray-300 bg-white p-2 text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:bg-blue-50 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+            title="Reload schedule data"
+            aria-label="Reload schedule data"
           >
-            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-            <path d="M21 3v5h-5" />
-            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-            <path d="M3 21v-5h5" />
-          </svg>
-        </button>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="{isReloading ? 'animate-spin' : ''} text-gray-600"
+            >
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+              <path d="M3 21v-5h5" />
+            </svg>
+          </button>
+        </span>
       </p>
     </div>
 
