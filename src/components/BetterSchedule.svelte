@@ -31,6 +31,7 @@
     Break: '#16a34a',
     Lunch: '#16a34a',
     'Community Day Event': '#ea4ced',
+    'Associated Event': '#9a5bd7',
     default: '#6b7280'
   };
 
