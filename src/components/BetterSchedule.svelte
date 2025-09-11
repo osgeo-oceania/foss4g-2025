@@ -198,8 +198,8 @@
         <!-- Fixed Time Column -->
         <div class="flex-shrink-0">
           <!-- Time Header Spacer -->
-          <div class="mb-2 sm:mb-4 h-12 sm:h-16"></div>
-          
+          <div class="mb-2 h-12 sm:mb-4 sm:h-16"></div>
+
           <!-- Time Slots -->
           {#if days[activeDay]}
             {@const dayData = days[activeDay]}
@@ -207,8 +207,10 @@
             {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
 
             {#each timeSlots as timeSlot}
-              <div class="mb-1 sm:mb-2 py-1 sm:py-2 h-20 sm:h-24 flex items-start">
-                <div class="w-16 sm:w-20 pr-2 sm:pr-4 text-right text-xs sm:text-sm text-gray-600 sticky left-0 bg-white">
+              <div class="mb-1 flex h-20 items-start py-1 sm:mb-2 sm:h-24 sm:py-2">
+                <div
+                  class="sticky left-0 w-16 bg-white pr-2 text-right text-xs text-gray-600 sm:w-20 sm:pr-4 sm:text-sm"
+                >
                   <span class="hidden sm:inline">{formatTime(timeSlot)}</span>
                   <span class="sm:hidden">{timeSlot.substring(0, 5)}</span>
                 </div>
@@ -224,15 +226,15 @@
             <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
               {#each filteredRooms as room}
                 <div class="min-w-48 flex-shrink-0 sm:min-w-64">
-                  <h3
-                    class="truncate rounded-lg bg-gray-100 p-2 text-sm font-semibold text-gray-900 sm:p-3 sm:text-lg h-12 sm:h-16 flex items-center justify-center"
+                  <div
+                    class="flex h-12 items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 sm:h-16 sm:p-3 sm:text-sm"
                     title={room}
                   >
                     <span class="hidden sm:inline">{room}</span>
                     <span class="sm:hidden"
                       >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
                     >
-                  </h3>
+                  </div>
                 </div>
               {/each}
             </div>
@@ -244,7 +246,7 @@
               {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
 
               {#each timeSlots as timeSlot}
-                <div class="mb-1 flex gap-2 sm:mb-2 sm:gap-4 min-h-20 sm:min-h-24">
+                <div class="mb-1 flex min-h-20 gap-2 sm:mb-2 sm:min-h-24 sm:gap-4">
                   <!-- Room Columns -->
                   {#each filteredRooms as room}
                     {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot)] as roomEvents}
@@ -253,21 +255,33 @@
                           {#each roomEvents as event}
                             <button
                               on:click={() => openEventModal(event)}
-                              class="w-full mb-1 rounded-lg border-l-4 p-2 text-left transition-all duration-200 hover:shadow-lg hover:scale-[1.02] sm:p-3 overflow-hidden shadow-sm"
-                              style="border-left-color: {getTrackColor(event.track)}; background: linear-gradient(135deg, {getTrackColor(event.track)}08 0%, {getTrackColor(event.track)}15 100%); backdrop-filter: blur(10px);"
+                              class="mb-1 w-full overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:p-3"
+                              style="border-left-color: {getTrackColor(
+                                event.track
+                              )}; background: linear-gradient(135deg, {getTrackColor(
+                                event.track
+                              )}08 0%, {getTrackColor(
+                                event.track
+                              )}15 100%); backdrop-filter: blur(10px);"
                             >
-                              <div class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm">
+                              <div
+                                class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
+                              >
                                 {event.title}
                               </div>
-                              <div class="mb-1 text-xs text-gray-600 font-medium">
+                              <div class="mb-1 text-xs font-medium text-gray-600">
                                 <span class="hidden sm:inline"
-                                  >{formatTime(event.start)} • {formatDuration(event.duration)}</span
+                                  >{formatTime(event.start)} • {formatDuration(
+                                    event.duration
+                                  )}</span
                                 >
                                 <span class="sm:hidden">{formatDuration(event.duration)}</span>
                               </div>
                               {#if event.persons && event.persons.length > 0}
                                 <div class="hidden truncate text-xs text-gray-500 sm:block">
-                                  {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                                  {event.persons
+                                    .map((p: any) => p.name || p.public_name)
+                                    .join(', ')}
                                 </div>
                               {/if}
                               {#if event.track}
@@ -283,7 +297,7 @@
                           {/each}
                         {:else}
                           <!-- Empty time slot -->
-                          <div class="w-full h-16 sm:h-20"></div>
+                          <div class="h-16 w-full sm:h-20"></div>
                         {/if}
                       </div>
                     {/each}
