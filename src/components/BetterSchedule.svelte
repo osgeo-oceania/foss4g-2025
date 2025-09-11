@@ -38,6 +38,7 @@
   let viewMode: 'grid' | 'list' = 'grid';
   let selectedRoom: string | null = null;
   let searchQuery = '';
+  let filteredRooms: string[] = [];
 
   // Cache Functions
   function getCachedData(): any | null {
@@ -251,7 +252,20 @@
   });
 
   $: activeRooms = days[activeDay] ? getRoomsForDay(days[activeDay]) : [];
-  $: filteredRooms = selectedRoom ? [selectedRoom] : activeRooms;
+  $: {
+    if (selectedRoom) {
+      filteredRooms = [selectedRoom];
+    } else if (searchQuery && days[activeDay]) {
+      // Filter rooms to only show those with matching events
+      const dayData = days[activeDay];
+      const allEvents = Object.values(dayData.rooms).flat();
+      const filteredEvents = searchEvents(allEvents, searchQuery);
+      const roomsWithEvents = [...new Set(filteredEvents.map((event: any) => event.room))];
+      filteredRooms = activeRooms.filter((room) => roomsWithEvents.includes(room));
+    } else {
+      filteredRooms = activeRooms;
+    }
+  }
 </script>
 
 <div class="full-width m-4 bg-gray-100 p-2 sm:p-4">
@@ -278,7 +292,7 @@
       <p class="text-sm text-gray-600 sm:text-base">
         {formatDate(conference.start)} - {formatDate(conference.end)}
         {#if version}
-          <span class="ml-2 text-xs text-gray-500">(ver {version})</span>
+          <span class="ml-2 text-xs whitespace-nowrap text-gray-500">(ver {version})</span>
         {/if}
         <!-- Reload Button -->
         <button
@@ -432,174 +446,236 @@
 
     <!-- Schedule Content -->
     {#if viewMode === 'grid'}
-      <!-- Grid View with Fixed Time Column -->
-      <div class="flex">
-        <!-- Fixed Time Column -->
-        <div class="flex-shrink-0">
-          <!-- Time Header Spacer -->
-          <div class="mb-2 h-12 sm:mb-2 sm:h-16"></div>
+      <!-- Check if there are any events to show -->
+      {#if days[activeDay]}
+        {@const dayData = days[activeDay]}
+        {@const allEvents = Object.values(dayData.rooms).flat()}
+        {@const filteredEvents = searchEvents(allEvents, searchQuery)}
 
-          <!-- Time Slots -->
-          {#if days[activeDay]}
-            {@const dayData = days[activeDay]}
-            {@const allEvents = Object.values(dayData.rooms).flat()}
-            {@const filteredEvents = searchEvents(allEvents, searchQuery)}
-            {@const timeSlots = [
-              ...new Set(filteredEvents.map((event: any) => event.start))
-            ].sort()}
-
-            {#each timeSlots as timeSlot}
-              <div class="mb-1 flex min-h-28 items-start py-1 sm:mb-4 sm:min-h-40 sm:py-3">
-                <div
-                  class="sticky left-0 w-16 pr-2 text-right text-xs text-gray-600 sm:w-20 sm:pr-3 sm:text-sm"
+        {#if filteredEvents.length === 0}
+          <!-- No results message -->
+          <div class="flex min-h-96 items-center justify-center">
+            <div class="text-center">
+              <div
+                class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="text-gray-400"
                 >
-                  <span class="hidden sm:inline">{formatTime(timeSlot)}</span>
-                  <span class="sm:hidden">{timeSlot.substring(0, 5)}</span>
-                </div>
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="M21 21l-4.35-4.35" />
+                </svg>
               </div>
-            {/each}
-          {/if}
-        </div>
-
-        <!-- Scrollable Content Area -->
-        <div class="flex-1 overflow-x-auto">
-          <div class="min-w-max">
-            <!-- Room Headers -->
-            <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
-              {#each filteredRooms as room}
-                <div class="min-w-48 flex-shrink-0 sm:min-w-64">
-                  <button
-                    on:click={() => openRoomModal(room)}
-                    class="flex h-12 w-full cursor-pointer items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none sm:h-16 sm:p-3 sm:text-sm"
-                    title="Click for room information: {room}"
+              <h3 class="mb-2 text-lg font-medium text-gray-900">No events found for this day</h3>
+              <p class="mb-4 text-gray-500">
+                {#if searchQuery}
+                  No events match your search for "{searchQuery}".
+                {:else if selectedRoom}
+                  No events found in {selectedRoom}.
+                {:else}
+                  No events available for this day.
+                {/if}
+              </p>
+              {#if searchQuery}
+                <button
+                  on:click={() => (searchQuery = '')}
+                  class="bg-secondary inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                   >
-                    <span class="hidden sm:inline">{room}</span>
-                    <span class="sm:hidden"
-                      >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  Clear search
+                </button>
+              {/if}
+            </div>
+          </div>
+        {:else}
+          <!-- Grid View with Fixed Time Column -->
+          <div class="flex">
+            <!-- Fixed Time Column -->
+            <div class="flex-shrink-0">
+              <!-- Time Header Spacer -->
+              <div class="mb-2 h-12 sm:mb-2 sm:h-16"></div>
+
+              <!-- Time Slots -->
+              {#if days[activeDay]}
+                {@const dayData = days[activeDay]}
+                {@const allEvents = Object.values(dayData.rooms).flat()}
+                {@const filteredEvents = searchEvents(allEvents, searchQuery)}
+                {@const timeSlots = [
+                  ...new Set(filteredEvents.map((event: any) => event.start))
+                ].sort()}
+
+                {#each timeSlots as timeSlot}
+                  <div class="mb-1 flex min-h-28 items-start py-1 sm:mb-4 sm:min-h-40 sm:py-3">
+                    <div
+                      class="sticky left-0 w-16 pr-2 text-right text-xs text-gray-600 sm:w-20 sm:pr-3 sm:text-sm"
                     >
-                  </button>
-                </div>
-              {/each}
+                      <span class="hidden sm:inline">{formatTime(timeSlot)}</span>
+                      <span class="sm:hidden">{timeSlot.substring(0, 5)}</span>
+                    </div>
+                  </div>
+                {/each}
+              {/if}
             </div>
 
-            <!-- Time-based Grid Content -->
-            {#if days[activeDay]}
-              {@const dayData = days[activeDay]}
-              {@const allEvents = Object.values(dayData.rooms).flat()}
-              {@const filteredEvents = searchEvents(allEvents, searchQuery)}
-              {@const timeSlots = [
-                ...new Set(filteredEvents.map((event: any) => event.start))
-              ].sort()}
-
-              {#each timeSlots as timeSlot}
-                <div class="mb-1 flex min-h-20 gap-2 sm:mb-4 sm:min-h-24 sm:gap-4">
-                  <!-- Room Columns -->
+            <!-- Scrollable Content Area -->
+            <div class="flex-1 overflow-x-auto">
+              <div class="min-w-max">
+                <!-- Room Headers -->
+                <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
                   {#each filteredRooms as room}
-                    {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot && filteredEvents.includes(event))] as roomEvents}
-                      <div class="w-48 flex-shrink-0 sm:w-64">
-                        {#if roomEvents.length > 0}
-                          {#each roomEvents as event}
-                            <button
-                              on:click={() => openEventModal(event)}
-                              class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
-                              style="border-left-color: {getTrackColor(
-                                event.track
-                              )}; background: linear-gradient(135deg, {getTrackColor(
-                                event.track
-                              )}08 0%, {getTrackColor(
-                                event.track
-                              )}15 100%); backdrop-filter: blur(10px);"
-                            >
-                              <div
-                                class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
-                              >
-                                {event.title}
-                              </div>
-                              <div class="mb-1 text-xs font-medium text-gray-600">
-                                <span class="hidden sm:inline"
-                                  >{formatTime(event.start)} • {formatDuration(
-                                    event.duration
-                                  )}</span
-                                >
-                                <span class="sm:hidden">{formatDuration(event.duration)}</span>
-                              </div>
-                              {#if event.persons && event.persons.length > 0}
-                                <div class="hidden items-center gap-2 sm:flex">
-                                  <!-- Speaker avatars -->
-                                  <div class="flex -space-x-1">
-                                    {#each event.persons.slice(0, 3) as person, index}
-                                      {#if person.avatar}
-                                        <img
-                                          src={person.avatar}
-                                          alt={person.name || person.public_name || 'Speaker'}
-                                          class="not-prose h-4 w-4 rounded-full border border-white shadow-sm"
-                                          style="z-index: {10 - index}"
-                                          title={person.name || person.public_name}
-                                        />
-                                      {:else}
-                                        <div
-                                          class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-300 shadow-sm"
-                                          style="z-index: {10 - index}"
-                                          title={person.name || person.public_name}
-                                        >
-                                          <svg
-                                            width="8"
-                                            height="8"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            class="text-gray-500"
-                                          >
-                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                            <circle cx="12" cy="7" r="4" />
-                                          </svg>
-                                        </div>
-                                      {/if}
-                                    {/each}
-                                    {#if event.persons.length > 3}
-                                      <div
-                                        class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-400 text-xs font-bold text-white shadow-sm"
-                                        style="z-index: 7; font-size: 8px;"
-                                        title="+{event.persons.length - 3} more speakers"
-                                      >
-                                        +{event.persons.length - 3}
-                                      </div>
-                                    {/if}
-                                  </div>
-                                  <div class="min-w-0 flex-1 truncate text-xs text-gray-500">
-                                    {event.persons
-                                      .map((p: any) => p.name || p.public_name)
-                                      .join(', ')}
-                                  </div>
-                                </div>
-                              {/if}
-                              {#if event.track}
-                                <div>
-                                  <div
-                                    class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
-                                    style="background-color: {getTrackColor(event.track)};"
-                                  >
-                                    <span class="hidden sm:inline">{event.track}</span>
-                                    <span class="sm:hidden">{event.track.substring(0, 8)}</span>
-                                  </div>
-                                </div>
-                              {/if}
-                            </button>
-                          {/each}
-                        {:else}
-                          <!-- Empty time slot -->
-                          <div class="h-16 w-full sm:h-20"></div>
-                        {/if}
-                      </div>
-                    {/each}
+                    <div class="min-w-48 flex-shrink-0 sm:min-w-64">
+                      <button
+                        on:click={() => openRoomModal(room)}
+                        class="flex h-12 w-full cursor-pointer items-center justify-center truncate rounded-lg bg-gray-100 p-2 text-xs font-semibold text-gray-900 transition-colors hover:bg-gray-200 focus:bg-gray-200 focus:outline-none sm:h-16 sm:p-3 sm:text-sm"
+                        title="Click for room information: {room}"
+                      >
+                        <span class="hidden sm:inline">{room}</span>
+                        <span class="sm:hidden"
+                          >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
+                        >
+                      </button>
+                    </div>
                   {/each}
                 </div>
-              {/each}
-            {/if}
+
+                <!-- Time-based Grid Content -->
+                {#if days[activeDay]}
+                  {@const dayData = days[activeDay]}
+                  {@const allEvents = Object.values(dayData.rooms).flat()}
+                  {@const filteredEvents = searchEvents(allEvents, searchQuery)}
+                  {@const timeSlots = [
+                    ...new Set(filteredEvents.map((event: any) => event.start))
+                  ].sort()}
+
+                  {#each timeSlots as timeSlot}
+                    <div class="mb-1 flex min-h-20 gap-2 sm:mb-4 sm:min-h-24 sm:gap-4">
+                      <!-- Room Columns -->
+                      {#each filteredRooms as room}
+                        {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot && filteredEvents.includes(event))] as roomEvents}
+                          <div class="w-48 flex-shrink-0 sm:w-64">
+                            {#if roomEvents.length > 0}
+                              {#each roomEvents as event}
+                                <button
+                                  on:click={() => openEventModal(event)}
+                                  class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
+                                  style="border-left-color: {getTrackColor(
+                                    event.track
+                                  )}; background: linear-gradient(135deg, {getTrackColor(
+                                    event.track
+                                  )}08 0%, {getTrackColor(
+                                    event.track
+                                  )}15 100%); backdrop-filter: blur(10px);"
+                                >
+                                  <div
+                                    class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
+                                  >
+                                    {event.title}
+                                  </div>
+                                  <div class="mb-1 text-xs font-medium text-gray-600">
+                                    <span class="hidden sm:inline"
+                                      >{formatTime(event.start)} • {formatDuration(
+                                        event.duration
+                                      )}</span
+                                    >
+                                    <span class="sm:hidden">{formatDuration(event.duration)}</span>
+                                  </div>
+                                  {#if event.persons && event.persons.length > 0}
+                                    <div class="hidden items-center gap-2 sm:flex">
+                                      <!-- Speaker avatars -->
+                                      <div class="flex -space-x-1">
+                                        {#each event.persons.slice(0, 3) as person, index}
+                                          {#if person.avatar}
+                                            <img
+                                              src={person.avatar}
+                                              alt={person.name || person.public_name || 'Speaker'}
+                                              class="not-prose h-4 w-4 rounded-full border border-white shadow-sm"
+                                              style="z-index: {10 - index}"
+                                              title={person.name || person.public_name}
+                                            />
+                                          {:else}
+                                            <div
+                                              class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-300 shadow-sm"
+                                              style="z-index: {10 - index}"
+                                              title={person.name || person.public_name}
+                                            >
+                                              <svg
+                                                width="8"
+                                                height="8"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                class="text-gray-500"
+                                              >
+                                                <path
+                                                  d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                                                />
+                                                <circle cx="12" cy="7" r="4" />
+                                              </svg>
+                                            </div>
+                                          {/if}
+                                        {/each}
+                                        {#if event.persons.length > 3}
+                                          <div
+                                            class="flex h-4 w-4 items-center justify-center rounded-full border border-white bg-gray-400 text-xs font-bold text-white shadow-sm"
+                                            style="z-index: 7; font-size: 8px;"
+                                            title="+{event.persons.length - 3} more speakers"
+                                          >
+                                            +{event.persons.length - 3}
+                                          </div>
+                                        {/if}
+                                      </div>
+                                      <div class="min-w-0 flex-1 truncate text-xs text-gray-500">
+                                        {event.persons
+                                          .map((p: any) => p.name || p.public_name)
+                                          .join(', ')}
+                                      </div>
+                                    </div>
+                                  {/if}
+                                  {#if event.track}
+                                    <div>
+                                      <div
+                                        class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
+                                        style="background-color: {getTrackColor(event.track)};"
+                                      >
+                                        <span class="hidden sm:inline">{event.track}</span>
+                                        <span class="sm:hidden">{event.track.substring(0, 8)}</span>
+                                      </div>
+                                    </div>
+                                  {/if}
+                                </button>
+                              {/each}
+                            {:else}
+                              <!-- Empty time slot -->
+                              <div class="h-16 w-full sm:h-20"></div>
+                            {/if}
+                          </div>
+                        {/each}
+                      {/each}
+                    </div>
+                  {/each}
+                {/if}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        {/if}
+      {/if}
     {:else}
       <!-- Enhanced List View -->
       <div class="space-y-6">
@@ -611,228 +687,284 @@
             .filter((event: any) => !selectedRoom || event.room === selectedRoom)
             .sort((a: any, b: any) => a.start.localeCompare(b.start))}
 
-          {#each sortedEvents as event}
-            <div class="group">
-              <button
-                on:click={() => openEventModal(event)}
-                class="w-full cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
-                style="background: linear-gradient(135deg, {getTrackColor(
-                  event.track
-                )}03 0%, {getTrackColor(event.track)}08 100%);"
-              >
-                <!-- Gradient header bar -->
+          {#if sortedEvents.length === 0}
+            <!-- No results message -->
+            <div class="flex min-h-96 items-center justify-center">
+              <div class="text-center">
                 <div
-                  class="h-1 w-full"
-                  style="background: linear-gradient(90deg, {getTrackColor(
+                  class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="text-gray-400"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="M21 21l-4.35-4.35" />
+                  </svg>
+                </div>
+                <h3 class="mb-2 text-lg font-medium text-gray-900">No events found</h3>
+                <p class="mb-4 text-gray-500">
+                  {#if searchQuery}
+                    No events match your search for "{searchQuery}".
+                  {:else if selectedRoom}
+                    No events found in {selectedRoom}.
+                  {:else}
+                    No events available for this day.
+                  {/if}
+                </p>
+                {#if searchQuery}
+                  <button
+                    on:click={() => (searchQuery = '')}
+                    class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                    Clear search
+                  </button>
+                {/if}
+              </div>
+            </div>
+          {:else}
+            {#each sortedEvents as event}
+              <div class="group">
+                <button
+                  on:click={() => openEventModal(event)}
+                  class="w-full cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                  style="background: linear-gradient(135deg, {getTrackColor(
                     event.track
-                  )}, {getTrackColor(event.track)}80);"
-                ></div>
+                  )}03 0%, {getTrackColor(event.track)}08 100%);"
+                >
+                  <!-- Gradient header bar -->
+                  <div
+                    class="h-1 w-full"
+                    style="background: linear-gradient(90deg, {getTrackColor(
+                      event.track
+                    )}, {getTrackColor(event.track)}80);"
+                  ></div>
 
-                <div class="p-6">
-                  <!-- Header with track badge -->
-                  <div class="mb-4 flex items-start justify-between gap-4">
-                    <div class="min-w-0 flex-1">
-                      <!-- Track badge -->
-                      {#if event.track}
-                        <div class="mb-3">
-                          <span
-                            class="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm"
-                            style="background: {getTrackColor(event.track)};"
-                          >
-                            <div class="mr-2 h-2 w-2 rounded-full bg-white/80"></div>
-                            {event.track}
-                          </span>
-                        </div>
-                      {/if}
+                  <div class="p-6">
+                    <!-- Header with track badge -->
+                    <div class="mb-4 flex items-start justify-between gap-4">
+                      <div class="min-w-0 flex-1">
+                        <!-- Track badge -->
+                        {#if event.track}
+                          <div class="mb-3">
+                            <span
+                              class="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm"
+                              style="background: {getTrackColor(event.track)};"
+                            >
+                              <div class="mr-2 h-2 w-2 rounded-full bg-white/80"></div>
+                              {event.track}
+                            </span>
+                          </div>
+                        {/if}
 
-                      <!-- Title -->
-                      <h3
-                        class="mb-3 line-clamp-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-gray-800"
-                      >
-                        {event.title}
-                      </h3>
+                        <!-- Title -->
+                        <h3
+                          class="mb-3 line-clamp-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-gray-800"
+                        >
+                          {event.title}
+                        </h3>
 
-                      <!-- Event details with icons -->
-                      <div class="mb-4 flex flex-wrap gap-6 text-gray-600">
-                        <div class="flex items-center gap-2">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            class="text-blue-600"
-                          >
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12,6 12,12 16,14" />
-                          </svg>
-                          <span class="text-sm font-medium">{formatTime(event.start)}</span>
-                        </div>
+                        <!-- Event details with icons -->
+                        <div class="mb-4 flex flex-wrap gap-6 text-gray-600">
+                          <div class="flex items-center gap-2">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              class="text-blue-600"
+                            >
+                              <circle cx="12" cy="12" r="10" />
+                              <polyline points="12,6 12,12 16,14" />
+                            </svg>
+                            <span class="text-sm font-medium">{formatTime(event.start)}</span>
+                          </div>
 
-                        <div class="flex items-center gap-2">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            class="text-green-600"
-                          >
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                            <line x1="16" y1="2" x2="16" y2="6" />
-                            <line x1="8" y1="2" x2="8" y2="6" />
-                            <line x1="3" y1="10" x2="21" y2="10" />
-                          </svg>
-                          <span class="text-sm font-medium">{formatDuration(event.duration)}</span>
-                        </div>
+                          <div class="flex items-center gap-2">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              class="text-green-600"
+                            >
+                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                              <line x1="16" y1="2" x2="16" y2="6" />
+                              <line x1="8" y1="2" x2="8" y2="6" />
+                              <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span class="text-sm font-medium">{formatDuration(event.duration)}</span
+                            >
+                          </div>
 
-                        <div class="flex items-center gap-2">
-                          <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            class="text-purple-600"
-                          >
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                            <circle cx="12" cy="10" r="3" />
-                          </svg>
-                          <span
-                            on:click|stopPropagation={() => openRoomModal(event.room)}
-                            on:keydown|stopPropagation={(e) =>
-                              e.key === 'Enter' && openRoomModal(event.room)}
-                            class="cursor-pointer truncate text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline"
-                            title="Click for room information"
-                            tabindex="0"
-                            role="button"
-                          >
-                            {event.room}
-                          </span>
+                          <div class="flex items-center gap-2">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              class="text-purple-600"
+                            >
+                              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                              <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span
+                              on:click|stopPropagation={() => openRoomModal(event.room)}
+                              on:keydown|stopPropagation={(e) =>
+                                e.key === 'Enter' && openRoomModal(event.room)}
+                              class="cursor-pointer truncate text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline"
+                              title="Click for room information"
+                              tabindex="0"
+                              role="button"
+                            >
+                              {event.room}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <!-- Arrow indicator -->
-                    <div
-                      class="flex-shrink-0 rounded-full bg-gray-100 p-2 transition-colors group-hover:bg-gray-200"
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        class="text-gray-600"
+                      <!-- Arrow indicator -->
+                      <div
+                        class="flex-shrink-0 rounded-full bg-gray-100 p-2 transition-colors group-hover:bg-gray-200"
                       >
-                        <path d="M9 18l6-6-6-6" />
-                      </svg>
-                    </div>
-                  </div>
-
-                  <!-- Speakers -->
-                  {#if event.persons && event.persons.length > 0}
-                    <div class="mb-4">
-                      <div class="mb-3 flex items-center gap-2">
                         <svg
-                          width="16"
-                          height="16"
+                          width="20"
+                          height="20"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
                           stroke-width="2"
-                          class="text-orange-600"
+                          class="text-gray-600"
                         >
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                          <circle cx="12" cy="7" r="4" />
+                          <path d="M9 18l6-6-6-6" />
                         </svg>
-                        <span class="text-sm font-semibold text-gray-700">
-                          {event.persons.length === 1 ? 'Speaker' : 'Speakers'}
-                        </span>
                       </div>
-                      <div class="flex items-center gap-3">
-                        <!-- Speaker avatars -->
-                        <div class="flex -space-x-2">
-                          {#each event.persons.slice(0, 4) as person, index}
-                            {#if person.avatar}
-                              <img
-                                src={person.avatar}
-                                alt={person.name || person.public_name || 'Speaker'}
-                                class="not-prose h-8 w-8 rounded-full border-2 border-white shadow-lg"
-                                style="z-index: {10 - index}"
-                                title={person.name || person.public_name}
-                              />
-                            {:else}
-                              <div
-                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-300 shadow-lg"
-                                style="z-index: {10 - index}"
-                                title={person.name || person.public_name}
-                              >
-                                <svg
-                                  width="12"
-                                  height="12"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                  class="text-gray-500"
+                    </div>
+
+                    <!-- Speakers -->
+                    {#if event.persons && event.persons.length > 0}
+                      <div class="mb-4">
+                        <div class="mb-3 flex items-center gap-2">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            class="text-orange-600"
+                          >
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                          </svg>
+                          <span class="text-sm font-semibold text-gray-700">
+                            {event.persons.length === 1 ? 'Speaker' : 'Speakers'}
+                          </span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                          <!-- Speaker avatars -->
+                          <div class="flex -space-x-2">
+                            {#each event.persons.slice(0, 4) as person, index}
+                              {#if person.avatar}
+                                <img
+                                  src={person.avatar}
+                                  alt={person.name || person.public_name || 'Speaker'}
+                                  class="not-prose h-8 w-8 rounded-full border-2 border-white shadow-lg"
+                                  style="z-index: {10 - index}"
+                                  title={person.name || person.public_name}
+                                />
+                              {:else}
+                                <div
+                                  class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-300 shadow-lg"
+                                  style="z-index: {10 - index}"
+                                  title={person.name || person.public_name}
                                 >
-                                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                  <circle cx="12" cy="7" r="4" />
-                                </svg>
+                                  <svg
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    class="text-gray-500"
+                                  >
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                  </svg>
+                                </div>
+                              {/if}
+                            {/each}
+                            {#if event.persons.length > 4}
+                              <div
+                                class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-500 text-xs font-bold text-white shadow-lg"
+                                style="z-index: 6"
+                                title="+{event.persons.length - 4} more speakers"
+                              >
+                                +{event.persons.length - 4}
                               </div>
                             {/if}
-                          {/each}
-                          {#if event.persons.length > 4}
-                            <div
-                              class="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-500 text-xs font-bold text-white shadow-lg"
-                              style="z-index: 6"
-                              title="+{event.persons.length - 4} more speakers"
-                            >
-                              +{event.persons.length - 4}
-                            </div>
-                          {/if}
-                        </div>
-                        <div class="flex-1 text-sm font-medium text-gray-600">
-                          {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                          </div>
+                          <div class="flex-1 text-sm font-medium text-gray-600">
+                            {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  {/if}
+                    {/if}
 
-                  <!-- Abstract -->
-                  {#if event.abstract}
-                    <div class="border-t border-gray-100 pt-4">
-                      <div class="mb-2 flex items-center gap-2">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          class="text-indigo-600"
-                        >
-                          <path
-                            d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
-                          />
-                          <polyline points="14,2 14,8 20,8" />
-                        </svg>
-                        <span class="text-sm font-semibold text-gray-700">Abstract</span>
+                    <!-- Abstract -->
+                    {#if event.abstract}
+                      <div class="border-t border-gray-100 pt-4">
+                        <div class="mb-2 flex items-center gap-2">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            class="text-indigo-600"
+                          >
+                            <path
+                              d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                            />
+                            <polyline points="14,2 14,8 20,8" />
+                          </svg>
+                          <span class="text-sm font-semibold text-gray-700">Abstract</span>
+                        </div>
+                        <div class="line-clamp-3 text-sm leading-relaxed text-gray-700">
+                          {event.abstract.substring(0, 200)}{event.abstract.length > 200
+                            ? '...'
+                            : ''}
+                        </div>
                       </div>
-                      <div class="line-clamp-3 text-sm leading-relaxed text-gray-700">
-                        {event.abstract.substring(0, 200)}{event.abstract.length > 200 ? '...' : ''}
-                      </div>
-                    </div>
-                  {/if}
-                </div>
-              </button>
-            </div>
-          {/each}
+                    {/if}
+                  </div>
+                </button>
+              </div>
+            {/each}
+          {/if}
         {/if}
       </div>
     {/if}

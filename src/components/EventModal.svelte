@@ -92,12 +92,12 @@
     <!-- Modal with enhanced styling and animations -->
     <div
       bind:this={modalContainer}
-      class="animate-in zoom-in-95 slide-in-from-bottom-4 relative max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl duration-300 flex flex-col"
+      class="animate-in zoom-in-95 slide-in-from-bottom-4 relative flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl shadow-2xl duration-300"
       style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)); backdrop-filter: blur(20px);"
     >
       <!-- Gradient header with track color -->
       <div
-        class="relative overflow-hidden flex-shrink-0"
+        class="relative flex-shrink-0 overflow-hidden"
         style="background: linear-gradient(135deg, {getTrackColor(event.track)}15, {getTrackColor(
           event.track
         )}25);"
@@ -114,8 +114,8 @@
           ></div>
         </div>
 
-        <div class="relative flex items-start justify-between p-8">
-          <div class="flex-1 pr-8">
+        <div class="relative flex items-start justify-between p-4 sm:p-8">
+          <div class="flex-1 pr-4 sm:pr-8">
             <!-- Track badge -->
             {#if event.track}
               <div class="mb-4">
@@ -130,15 +130,15 @@
             {/if}
 
             <!-- Title with gradient text -->
-            <h2
+            <div
               id="modal-title"
-              class="mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-3xl leading-tight font-bold text-transparent"
+              class="mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-xl leading-tight font-bold text-transparent sm:text-3xl"
             >
               {event.title}
-            </h2>
+            </div>
 
             <!-- Event details with icons -->
-            <div class="flex flex-wrap gap-6 text-gray-700">
+            <div class="flex flex-wrap gap-3 text-gray-700">
               {#if event.start}
                 <div class="flex items-center gap-2">
                   <svg
@@ -193,7 +193,7 @@
                     <span
                       on:click={() => openRoomModal?.(event.room)}
                       on:keydown={(e) => e.key === 'Enter' && openRoomModal?.(event.room)}
-                      class="font-medium text-purple-600 hover:text-purple-800 hover:underline cursor-pointer"
+                      class="cursor-pointer font-medium text-purple-600 hover:text-purple-800 hover:underline"
                       title="Click for room information"
                       tabindex="0"
                       role="button"
@@ -207,38 +207,19 @@
               {/if}
             </div>
           </div>
-
-          <!-- Enhanced close button -->
-          <button
-            on:click={closeModal}
-            class="rounded-full bg-white/80 p-3 text-gray-500 transition-all duration-200 hover:scale-110 hover:bg-white hover:shadow-lg"
-            aria-label="Close modal"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
         </div>
       </div>
 
       <!-- Content area with enhanced styling -->
       <div class="flex-1 overflow-y-auto">
-        <div class="space-y-8 p-8">
+        <div class="space-y-6 p-4 sm:space-y-8 sm:p-8">
           <!-- Abstract with enhanced typography -->
           {#if event.abstract}
             <div class="prose prose-lg prose-gray max-w-none">
               <div
-                class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-indigo-50 p-6"
+                class="rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6"
               >
-                <h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-gray-900">
+                <div class="mb-4 flex items-center gap-2 text-lg font-semibold text-gray-900">
                   <svg
                     width="20"
                     height="20"
@@ -254,7 +235,7 @@
                     <polyline points="14,2 14,8 20,8" />
                   </svg>
                   Abstract
-                </h3>
+                </div>
                 {@html renderMarkdown(event.abstract)}
               </div>
             </div>
@@ -281,7 +262,7 @@
               <div class="grid gap-6 sm:grid-cols-2">
                 {#each event.persons as person}
                   <div
-                    class="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-6 shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md"
+                    class="rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-4 shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md sm:p-6"
                   >
                     <div class="flex items-start gap-4">
                       {#if person.avatar}
@@ -358,7 +339,9 @@
       </div>
 
       <!-- Enhanced footer -->
-      <div class="border-t border-gray-200 bg-gradient-to-r from-gray-50 to-white px-8 py-6 flex-shrink-0">
+      <div
+        class="flex-shrink-0 border-t border-gray-200 bg-gradient-to-r from-gray-50 to-white px-4 py-4 sm:px-8 sm:py-6"
+      >
         <div class="flex items-center justify-between">
           <div class="text-sm text-gray-500">
             Press <kbd class="rounded bg-gray-200 px-2 py-1 text-xs">Esc</kbd> to close
