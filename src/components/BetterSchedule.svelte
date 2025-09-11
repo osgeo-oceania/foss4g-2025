@@ -9,7 +9,6 @@
   // Component State
   let loading = true;
   let error = '';
-  let scheduleData: any = null;
   let conference: any = null;
   let days: any[] = [];
   let activeDay = 0;
@@ -83,7 +82,6 @@
       }
 
       const data = await response.json();
-      scheduleData = data;
       conference = data.schedule.conference;
       days = conference.days;
 
@@ -195,83 +193,105 @@
 
     <!-- Schedule Content -->
     {#if viewMode === 'grid'}
-      <!-- Grid View -->
-      <div class="-mx-2 overflow-x-auto sm:mx-0">
-        <div class="min-w-full px-2 sm:px-0">
-          <!-- Room Headers -->
-          <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
-            <div class="w-16 flex-shrink-0 sm:w-20"></div>
-            <!-- Time column spacer -->
-            {#each filteredRooms as room}
-              <div class="min-w-48 flex-1 sm:min-w-64">
-                <h3
-                  class="truncate rounded-lg bg-gray-100 p-2 text-sm font-semibold text-gray-900 sm:p-3 sm:text-lg"
-                  title={room}
-                >
-                  <span class="hidden sm:inline">{room}</span>
-                  <span class="sm:hidden"
-                    >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
-                  >
-                </h3>
-              </div>
-            {/each}
-          </div>
-
-          <!-- Time-based Grid -->
+      <!-- Grid View with Fixed Time Column -->
+      <div class="flex">
+        <!-- Fixed Time Column -->
+        <div class="flex-shrink-0">
+          <!-- Time Header Spacer -->
+          <div class="mb-2 sm:mb-4 h-12 sm:h-16"></div>
+          
+          <!-- Time Slots -->
           {#if days[activeDay]}
             {@const dayData = days[activeDay]}
             {@const allEvents = Object.values(dayData.rooms).flat()}
-            {@const timeSlots = [...new Set(allEvents.map((event) => event.start))].sort()}
+            {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
 
             {#each timeSlots as timeSlot}
-              <div class="mb-1 flex gap-2 sm:mb-2 sm:gap-4">
-                <!-- Time Column -->
-                <div
-                  class="w-16 flex-shrink-0 py-1 text-right text-xs text-gray-600 sm:w-20 sm:py-2 sm:text-sm"
-                >
+              <div class="mb-1 sm:mb-2 py-1 sm:py-2 h-20 sm:h-24 flex items-start">
+                <div class="w-16 sm:w-20 pr-2 sm:pr-4 text-right text-xs sm:text-sm text-gray-600 sticky left-0 bg-white">
                   <span class="hidden sm:inline">{formatTime(timeSlot)}</span>
                   <span class="sm:hidden">{timeSlot.substring(0, 5)}</span>
                 </div>
-
-                <!-- Room Columns -->
-                {#each filteredRooms as room}
-                  <div class="min-w-48 flex-1 sm:min-w-64">
-                    {#each getEventsForRoom(dayData, room).filter((event) => event.start === timeSlot) as event}
-                      <button
-                        on:click={() => openEventModal(event)}
-                        class="mb-1 w-full rounded-lg border-l-4 bg-white p-2 text-left transition-shadow hover:shadow-md sm:mb-2 sm:p-3"
-                        style="border-left-color: {getTrackColor(event.track)}"
-                      >
-                        <div class="mb-1 line-clamp-2 text-xs font-medium text-gray-900 sm:text-sm">
-                          {event.title}
-                        </div>
-                        <div class="mb-1 text-xs text-gray-600">
-                          <span class="hidden sm:inline"
-                            >{formatTime(event.start)} • {formatDuration(event.duration)}</span
-                          >
-                          <span class="sm:hidden">{formatDuration(event.duration)}</span>
-                        </div>
-                        {#if event.persons && event.persons.length > 0}
-                          <div class="hidden truncate text-xs text-gray-500 sm:block">
-                            {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
-                          </div>
-                        {/if}
-                        {#if event.track}
-                          <div
-                            class="mt-1 inline-block rounded px-1 py-1 text-xs font-medium text-white sm:mt-2 sm:px-2"
-                            style="background-color: {getTrackColor(event.track)}"
-                          >
-                            <span class="hidden sm:inline">{event.track}</span>
-                            <span class="sm:hidden">{event.track.substring(0, 8)}</span>
-                          </div>
-                        {/if}
-                      </button>
-                    {/each}
-                  </div>
-                {/each}
               </div>
             {/each}
           {/if}
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="flex-1 overflow-x-auto">
+          <div class="min-w-max">
+            <!-- Room Headers -->
+            <div class="mb-2 flex gap-2 sm:mb-4 sm:gap-4">
+              {#each filteredRooms as room}
+                <div class="min-w-48 flex-shrink-0 sm:min-w-64">
+                  <h3
+                    class="truncate rounded-lg bg-gray-100 p-2 text-sm font-semibold text-gray-900 sm:p-3 sm:text-lg h-12 sm:h-16 flex items-center justify-center"
+                    title={room}
+                  >
+                    <span class="hidden sm:inline">{room}</span>
+                    <span class="sm:hidden"
+                      >{room.length > 12 ? room.substring(0, 12) + '...' : room}</span
+                    >
+                  </h3>
+                </div>
+              {/each}
+            </div>
+
+            <!-- Time-based Grid Content -->
+            {#if days[activeDay]}
+              {@const dayData = days[activeDay]}
+              {@const allEvents = Object.values(dayData.rooms).flat()}
+              {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
+
+              {#each timeSlots as timeSlot}
+                <div class="mb-1 flex gap-2 sm:mb-2 sm:gap-4 min-h-20 sm:min-h-24">
+                  <!-- Room Columns -->
+                  {#each filteredRooms as room}
+                    {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot)] as roomEvents}
+                      <div class="w-48 flex-shrink-0 sm:w-64">
+                        {#if roomEvents.length > 0}
+                          {#each roomEvents as event}
+                            <button
+                              on:click={() => openEventModal(event)}
+                              class="w-full mb-1 rounded-lg border-l-4 p-2 text-left transition-all duration-200 hover:shadow-lg hover:scale-[1.02] sm:p-3 overflow-hidden shadow-sm"
+                              style="border-left-color: {getTrackColor(event.track)}; background: linear-gradient(135deg, {getTrackColor(event.track)}08 0%, {getTrackColor(event.track)}15 100%); backdrop-filter: blur(10px);"
+                            >
+                              <div class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm">
+                                {event.title}
+                              </div>
+                              <div class="mb-1 text-xs text-gray-600 font-medium">
+                                <span class="hidden sm:inline"
+                                  >{formatTime(event.start)} • {formatDuration(event.duration)}</span
+                                >
+                                <span class="sm:hidden">{formatDuration(event.duration)}</span>
+                              </div>
+                              {#if event.persons && event.persons.length > 0}
+                                <div class="hidden truncate text-xs text-gray-500 sm:block">
+                                  {event.persons.map((p: any) => p.name || p.public_name).join(', ')}
+                                </div>
+                              {/if}
+                              {#if event.track}
+                                <div
+                                  class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
+                                  style="background-color: {getTrackColor(event.track)};"
+                                >
+                                  <span class="hidden sm:inline">{event.track}</span>
+                                  <span class="sm:hidden">{event.track.substring(0, 8)}</span>
+                                </div>
+                              {/if}
+                            </button>
+                          {/each}
+                        {:else}
+                          <!-- Empty time slot -->
+                          <div class="w-full h-16 sm:h-20"></div>
+                        {/if}
+                      </div>
+                    {/each}
+                  {/each}
+                </div>
+              {/each}
+            {/if}
+          </div>
         </div>
       </div>
     {:else}
