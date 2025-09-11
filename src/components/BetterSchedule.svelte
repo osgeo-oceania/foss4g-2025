@@ -21,7 +21,7 @@
     Workshop: '#ef8427',
     Keynote: '#aa1456',
     Panel: '#6ac2ea',
-    'Lightning Talk': '#fab919',
+    'Lightning talk': '#fab919',
     Break: '#16a34a',
     Lunch: '#16a34a',
     'Community Day Event': '#ea4ced',
@@ -198,7 +198,7 @@
         <!-- Fixed Time Column -->
         <div class="flex-shrink-0">
           <!-- Time Header Spacer -->
-          <div class="mb-2 h-12 sm:mb-4 sm:h-16"></div>
+          <div class="mb-2 h-12 sm:mb-2 sm:h-16"></div>
 
           <!-- Time Slots -->
           {#if days[activeDay]}
@@ -207,9 +207,9 @@
             {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
 
             {#each timeSlots as timeSlot}
-              <div class="mb-1 flex h-20 items-start py-1 sm:mb-2 sm:h-24 sm:py-2">
+              <div class="mb-1 flex min-h-28 items-start py-1 sm:mb-4 sm:min-h-40 sm:py-3">
                 <div
-                  class="sticky left-0 w-16 bg-white pr-2 text-right text-xs text-gray-600 sm:w-20 sm:pr-4 sm:text-sm"
+                  class="sticky left-0 w-16 bg-white pr-2 text-right text-xs text-gray-600 sm:w-20 sm:pr-3 sm:text-sm"
                 >
                   <span class="hidden sm:inline">{formatTime(timeSlot)}</span>
                   <span class="sm:hidden">{timeSlot.substring(0, 5)}</span>
@@ -246,7 +246,7 @@
               {@const timeSlots = [...new Set(allEvents.map((event: any) => event.start))].sort()}
 
               {#each timeSlots as timeSlot}
-                <div class="mb-1 flex min-h-20 gap-2 sm:mb-2 sm:min-h-24 sm:gap-4">
+                <div class="mb-1 flex min-h-20 gap-2 sm:mb-4 sm:min-h-24 sm:gap-4">
                   <!-- Room Columns -->
                   {#each filteredRooms as room}
                     {#each [getEventsForRoom(dayData, room).filter((event: any) => event.start === timeSlot)] as roomEvents}
@@ -255,7 +255,7 @@
                           {#each roomEvents as event}
                             <button
                               on:click={() => openEventModal(event)}
-                              class="mb-1 w-full overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:p-3"
+                              class="flex min-h-28 w-full flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
                               style="border-left-color: {getTrackColor(
                                 event.track
                               )}; background: linear-gradient(135deg, {getTrackColor(
@@ -285,12 +285,14 @@
                                 </div>
                               {/if}
                               {#if event.track}
-                                <div
-                                  class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
-                                  style="background-color: {getTrackColor(event.track)};"
-                                >
-                                  <span class="hidden sm:inline">{event.track}</span>
-                                  <span class="sm:hidden">{event.track.substring(0, 8)}</span>
+                                <div>
+                                  <div
+                                    class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
+                                    style="background-color: {getTrackColor(event.track)};"
+                                  >
+                                    <span class="hidden sm:inline">{event.track}</span>
+                                    <span class="sm:hidden">{event.track.substring(0, 8)}</span>
+                                  </div>
                                 </div>
                               {/if}
                             </button>
