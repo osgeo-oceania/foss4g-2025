@@ -99,7 +99,7 @@
           in partnership with OSGeo. FOSS4G brings open source geospatial users, software
           developers, decision makers and researchers together from around the world
         </div>
-        <div class="flex flex-row gap-4 pt-4 sm:w-[240px]">
+        <div class="flex flex-col gap-4 pt-4 sm:w-[240px] sm:flex-row">
           <Button href="/attend/register">Buy tickets</Button>
           <Button href="/program/schedule">View schedule</Button>
         </div>
