@@ -30,11 +30,10 @@ Community Events and Code Sprints will be hosted at the Conference Venue at AUT.
 
 ##How to register
 
-Community Events and Code Sprints are free of charge but we kindly ask you to enter you details for better planning on the following OSGeo Wiki page...
+Community Events and Code Sprints are free of charge but we kindly ask you to enter you details for better planning on the <a href="https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint" target="_blank">OSGeo Wiki</a>
 
-https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint
+If you dont have an OSGeo login, simply sent us an email at <a href="mailto:program@foss4g-oceania.org">program@foss4g-oceania.org</a> detailing:
 
-If you dont have an OSGeo login, simply sent us an email at program@foss4g-oceania.org detailing:
  - Your Name
  - Email
  - Project or event you'd like to be involved in
