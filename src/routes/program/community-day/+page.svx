@@ -18,19 +18,19 @@ Participation is free of charge and anyone involved or interested in getting inv
 You can choose to contribute to one or more projects. The sky is the limit. There’s always plenty to do – and it’s not all about programming. Translation, documentation, feedback, discussions, and testing are very important for projects! Conference registration is not a prerequisite for participation in the community sprint.
 
 
-##When
+## When
 
 Community Events and Code Sprints will be held on 
  - **Saturday 22nd November 2025, 9am - 5pm**
  - **Sunday 23rd November 2025, 9am - 5pm**
 
-##Where
+## Where
 
 Community Events and Code Sprints will be hosted at the Conference Venue at AUT.
 
-##How to register
+## How to register
 
-Community Events and Code Sprints are free of charge but we kindly ask you to enter you details for better planning on the <a href="https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint" target="_blank">OSGeo Wiki</a>
+Community Events and Code Sprints are free of charge but we kindly ask you to enter you details on the <a href="https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint" target="_blank">OSGeo Wiki</a>.
 
 If you dont have an OSGeo login, simply sent us an email at <a href="mailto:program@foss4g-oceania.org">program@foss4g-oceania.org</a> detailing:
 
