@@ -1,0 +1,23 @@
+---
+title: Community Day
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
+  import Meet from '$images/stock/male-and-female-delegate-meet.jpg?enhanced';
+</script>
+
+<Heading>Community Day</Heading>
+
+<enhanced:img src={Meet} />
+
+
+
+### Rangitoto Island Day Trip
+
+Saturday 22nd November – All Day (weather permitting)
+
+Watch this space!
+
+<enhanced:img src={Rangitoto} alt="Rangitoto Island" />
