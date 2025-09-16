@@ -105,6 +105,10 @@
         {
           label: 'Events',
           url: '/program/events'
+        },
+        {
+          label: 'Community Events and Code Sprints',
+          url: 'program/community-day'
         }
       ]
     },
