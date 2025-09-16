@@ -8,7 +8,7 @@ title: Community Day
   import Meet from '$images/stock/male-and-female-delegate-meet.jpg?enhanced';
 </script>
 
-<Heading>Community Day</Heading>
+<Heading>Community Events and Code Sprints</Heading>
 
 <enhanced:img src={Meet} />
 
@@ -20,15 +20,17 @@ You can choose to contribute to one or more projects. The sky is the limit. Ther
 
 ##When
 
-The community days will be held on Saturday 22nd November 2025 and Sunday 23rd November 2025.
+Community Events and Code Sprints will be held on 
+ - **Saturday 22nd November 2025, 9am - 5pm**
+ - **Sunday 23rd November 2025, 9am - 5pm**
 
 ##Where
 
-The community days will be hosted at the Conference Venue at AUT.
+Community Events and Code Sprints will be hosted at the Conference Venue at AUT.
 
 ##How to register
 
-The community days are free of charge but we kindly ask you to enter you details for better planning on the following OSGeo Wiki page...
+Community Events and Code Sprints are free of charge but we kindly ask you to enter you details for better planning on the following OSGeo Wiki page...
 
 https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint
 
