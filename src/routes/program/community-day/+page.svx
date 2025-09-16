@@ -13,11 +13,33 @@ title: Community Day
 <enhanced:img src={Meet} />
 
 
+Participation is free of charge and anyone involved or interested in getting involved in OSGeo community projects is welcome.
 
-### Rangitoto Island Day Trip
+You can choose to contribute to one or more projects. The sky is the limit. There’s always plenty to do – and it’s not all about programming. Translation, documentation, feedback, discussions, and testing are very important for projects! Conference registration is not a prerequisite for participation in the community sprint.
 
-Saturday 22nd November – All Day (weather permitting)
 
-Watch this space!
+##When
+
+The community days will be held on Saturday 22nd November 2025 and Sunday 23rd November 2025.
+
+##Where
+
+The community days will be hosted at the Conference Venue at AUT.
+
+##How to register
+
+The community days are free of charge but we kindly ask you to enter you details for better planning on the following OSGeo Wiki page...
+
+https://wiki.osgeo.org/wiki/FOSS4G_2025/Community_sprint
+
+If you dont have an OSGeo login, simply sent us an email at program@foss4g-oceania.org detailing:
+ - Your Name
+ - Email
+ - Project or event you'd like to be involved in
+ - Yes/No if you are registered for the confernece
+ - Yes/No if you are present on Saturday 22nd November 2025
+ - Yes/No if you are present on Sunday 23rd November 2025
+
+
 
 <enhanced:img src={Rangitoto} alt="Rangitoto Island" />
