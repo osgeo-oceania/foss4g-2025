@@ -5,7 +5,7 @@ title: Community Day
 <script lang="ts">
   import Heading from '$components/Heading.svelte';
   import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
-  import Meet from '$images/stock/male-and-female-delegate-meet.jpg?enhanced';
+  import Meet from '$images/stock/man-demonstrating-virtual-reality-machine.jpg?enhanced';
 </script>
 
 <Heading>Community Events and Code Sprints</Heading>
