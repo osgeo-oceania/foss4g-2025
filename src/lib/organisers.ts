@@ -89,6 +89,12 @@ export default {
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still putting the words together!"
   },
+  phoebe: {
+    name: 'Phoebe Adams',
+    title: 'Volunteers',
+    photo: () => import('$images/team/phoebe.jpg?enhanced'),
+    bio: "Phoebe is a contributor to many open source projects, in the Geospatial space, mostly OpenStreetMap. Currently living in Auckland, she is studying towards a Bachelor of Computer and Information Science majoring in Software Development and Digital Communication at AUT."
+  },
   michel: {
     name: 'Michel M Nzikou',
     title: 'Committee Member',
