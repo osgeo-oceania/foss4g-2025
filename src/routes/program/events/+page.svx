@@ -12,11 +12,13 @@ title: Events
 
 <enhanced:img src={Dinner} />
 
-### Business 2 Business
+### [Business 2 Business](/program/b2b-event)
 
-Tuesday 18th November, 2.00pm (to be confirmed)
+Tuesday 18th November, 2:00pm - 5:30pm
 
-An afternoon session of networking over canapes and drinks. This will be held in the AUT conference venue.
+An afternoon session of networking over canapes and drinks with brief talks from industry leaders. This will be held in the AUT conference venue.
+
+[Learn more and purchase tickets →](/program/b2b-event)
 
 ### Ice Breaker
 
