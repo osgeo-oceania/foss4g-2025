@@ -1,0 +1,37 @@
+---
+title: B2B Event
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+</script>
+
+<Heading>B2B Event</Heading>
+
+## Business to Business Networking
+
+**Tuesday 18th November, 2:00pm - 5:30pm**
+
+Join us for an afternoon of networking over canapes and drinks with people inside and outside of the FOSS4G community. This special event will feature:
+
+- **Brief talks** from industry leaders
+- **Canapes and drinks** in a relaxed atmosphere
+- **Networking opportunities** to connect with professionals across the geospatial industry
+- **Community building** bringing together diverse perspectives
+
+This B2B networking event is designed to foster connections between businesses, organizations, and individuals working in and around the open source geospatial ecosystem.
+
+### Event Details
+
+- **Date:** Tuesday 18th November 2025
+- **Time:** 2:00pm - 5:30pm
+- **Venue:** AUT Conference Centre - Forum
+- **Cost:** $25 NZD per person
+
+### Tickets
+
+Tickets are available for anyone to purchase and all are invited to join this networking opportunity.
+
+**[Purchase Tickets - $25 NZD](https://ti.to/osgeo-oceania/foss4g-2025/with/business-to-business-networking)**
+
+This is a great opportunity to expand your professional network, learn from industry peers, and contribute to the vibrant FOSS4G community while enjoying good food and conversation.
