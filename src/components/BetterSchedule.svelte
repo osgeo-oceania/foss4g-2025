@@ -25,6 +25,9 @@
   const fallbackTrackColors = {
     Talk: '#1f4182',
     Workshop: '#ef8427',
+    'Workshop - Beginner Friendly': '#EFEA56',
+    'Workshop - Intermediate Level': '#EF8427',
+    'Workshop - Advanced Level': '#EB6437',
     Keynote: '#aa1456',
     Panel: '#6ac2ea',
     'Lightning talk': '#fab919',
