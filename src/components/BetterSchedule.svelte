@@ -120,10 +120,12 @@
   }
 
   function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString('en-US', {
+    const date = new Date(dateStr + 'T00:00:00+13:00');
+    return date.toLocaleDateString('en-US', {
       weekday: 'short',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'Pacific/Auckland'
     });
   }
 
@@ -207,7 +209,7 @@
           days = cachedData.days;
 
           // Set active day to today or first day
-          const today = new Date().toISOString().split('T')[0];
+          const today = new Date().toLocaleDateString('en-US', { timeZone: 'Pacific/Auckland' });
           const todayIndex = days.findIndex((day: any) => day.date === today);
           activeDay = todayIndex >= 0 ? todayIndex : 0;
 
@@ -231,7 +233,7 @@
       setCachedData({ version, conference, days });
 
       // Set active day to today or first day
-      const today = new Date().toISOString().split('T')[0];
+      const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Pacific/Auckland' });
       const todayIndex = days.findIndex((day: any) => day.date === today);
       activeDay = todayIndex >= 0 ? todayIndex : 0;
 
@@ -434,7 +436,8 @@
             <span class="sm:hidden"
               >{new Date(day.date).toLocaleDateString('en-US', {
                 weekday: 'short',
-                day: 'numeric'
+                day: 'numeric',
+                timeZone: 'Pacific/Auckland'
               })}</span
             >
           </button>
