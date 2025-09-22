@@ -3,7 +3,6 @@ import PoiContent from '$data/pois';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
-import TreeGlb from '$data/tree.glb';
 import SkyTowerGlb from '$data/sky-tower.glb';
 import TreesLocations from '$data/notable-trees.json';
 import IndoorAUT from '$data/aut-indoor.json';
@@ -710,63 +709,63 @@ export default {
     } as StyleSpecification;
   },
   beforeAdd: (map: maplibregl.Map) => {
-    if (!map.getLayer('3d-trees'))
-      map.addLayer({
-        id: '3d-trees',
-        type: 'custom',
-        renderingMode: '3d', // The layer MUST be marked as 3D in order to get the proper depth buffer with globe depths in it.
-        onAdd(map, gl) {
-          this.camera = new THREE.Camera();
-          this.scene = new THREE.Scene();
+    // if (!map.getLayer('3d-trees'))
+    //   map.addLayer({
+    //     id: '3d-trees',
+    //     type: 'custom',
+    //     renderingMode: '3d', // The layer MUST be marked as 3D in order to get the proper depth buffer with globe depths in it.
+    //     onAdd(map, gl) {
+    //       this.camera = new THREE.Camera();
+    //       this.scene = new THREE.Scene();
 
-          // create two three.js lights to illuminate the model
-          const directionalLight = new THREE.DirectionalLight(0xffffff);
-          directionalLight.position.set(0, -70, 100).normalize();
-          this.scene.add(directionalLight);
+    //       // create two three.js lights to illuminate the model
+    //       const directionalLight = new THREE.DirectionalLight(0xffffff);
+    //       directionalLight.position.set(0, -70, 100).normalize();
+    //       this.scene.add(directionalLight);
 
-          const directionalLight2 = new THREE.DirectionalLight(0xffffff);
-          directionalLight2.position.set(0, 70, 100).normalize();
-          this.scene.add(directionalLight2);
+    //       const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+    //       directionalLight2.position.set(0, 70, 100).normalize();
+    //       this.scene.add(directionalLight2);
 
-          // use the three.js GLTF loader to add the 3D model to the three.js scene
-          const loader = new GLTFLoader();
-          loader.load(TreeGlb, (gltf) => {
-            this.scene.add(gltf.scene);
-          });
-          this.map = map;
+    //       // use the three.js GLTF loader to add the 3D model to the three.js scene
+    //       const loader = new GLTFLoader();
+    //       loader.load(TreeGlb, (gltf) => {
+    //         this.scene.add(gltf.scene);
+    //       });
+    //       this.map = map;
 
-          // use the MapLibre GL JS map canvas for three.js
-          this.renderer = new THREE.WebGLRenderer({
-            canvas: map.getCanvas(),
-            context: gl,
-            antialias: true
-          });
+    //       // use the MapLibre GL JS map canvas for three.js
+    //       this.renderer = new THREE.WebGLRenderer({
+    //         canvas: map.getCanvas(),
+    //         context: gl,
+    //         antialias: true
+    //       });
 
-          this.renderer.autoClear = false;
-        },
-        render(gl, args) {
-          // parameters to ensure the model is georeferenced correctly on the map
-          const modelOrigin = [174.762182, -36.848453];
-          const modelAltitude = 20;
+    //       this.renderer.autoClear = false;
+    //     },
+    //     render(gl, args) {
+    //       // parameters to ensure the model is georeferenced correctly on the map
+    //       const modelOrigin = [174.762182, -36.848453];
+    //       const modelAltitude = 20;
 
-          // Make the object ~10s of km tall to make it visible at planetary scale.
-          const scaling = 2.0;
+    //       // Make the object ~10s of km tall to make it visible at planetary scale.
+    //       const scaling = 2.0;
 
-          // We can use this API to get the correct model matrix.
-          // It will work regardless of current projection.
-          // See MapLibre source code, file "mercator_transform.ts" or "vertical_perspective_transform.ts".
-          const modelMatrix = map.transform.getMatrixForModel(modelOrigin, modelAltitude);
-          const m = new THREE.Matrix4().fromArray(args.defaultProjectionData.mainMatrix);
-          const l = new THREE.Matrix4()
-            .fromArray(modelMatrix)
-            .scale(new THREE.Vector3(scaling, scaling, scaling));
+    //       // We can use this API to get the correct model matrix.
+    //       // It will work regardless of current projection.
+    //       // See MapLibre source code, file "mercator_transform.ts" or "vertical_perspective_transform.ts".
+    //       const modelMatrix = map.transform.getMatrixForModel(modelOrigin, modelAltitude);
+    //       const m = new THREE.Matrix4().fromArray(args.defaultProjectionData.mainMatrix);
+    //       const l = new THREE.Matrix4()
+    //         .fromArray(modelMatrix)
+    //         .scale(new THREE.Vector3(scaling, scaling, scaling));
 
-          this.camera.projectionMatrix = m.multiply(l);
-          this.renderer.resetState();
-          this.renderer.render(this.scene, this.camera);
-          this.map.triggerRepaint();
-        }
-      });
+    //       this.camera.projectionMatrix = m.multiply(l);
+    //       this.renderer.resetState();
+    //       this.renderer.render(this.scene, this.camera);
+    //       this.map.triggerRepaint();
+    //     }
+    //   });
 
     if (!map.getLayer('sky-tower'))
       map.addLayer({
