@@ -166,5 +166,11 @@ export default {
     logo: () => import('$images/logos/cng.png?enhanced'),
     link: 'https://cloudnativegeo.org/',
     level: LEVELS.SILVER
+  },
+  terria: {
+    name: 'Terria',
+    logo: () => import('$images/logos/terria.png?enhanced'),
+    link: 'https://terria.io/',
+    level: LEVELS.SILVER
   }
 };
