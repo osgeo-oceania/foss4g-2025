@@ -18,6 +18,10 @@ export default {
       sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
+        "aut-indoor": {
+          type: 'geojson',
+          data: IndoorAUT,
+        },
         pois: {
           type: 'geojson',
           data: Pois
@@ -98,11 +102,6 @@ export default {
           'source-layer': 'landuse',
           type: 'fill',
           paint: {
-            // 'fill-opacity': [
-            //   "case",
-            //   ['in', 'Residential', ['get', 'zone']],
-            //   1, 0
-            // ],
             'fill-color': [
               'case',
               [
@@ -146,43 +145,6 @@ export default {
             'fill-opacity': 0.2
           }
         },
-
-        // {
-        //   id: 'parks',
-        //   source: 'auckland',
-        //   'source-layer': 'areas',
-        //   type: 'fill',
-        //   filter: ['==', ['get', 'type'], 'park'],
-        //   paint: {
-        //     'fill-color': '#c6eebe', // park fill
-        //     'fill-opacity': 0.5
-        //   }
-        // },
-
-        //
-        // roads
-        //
-        // minor-roads outline
-        // {
-        //   id: 'minor-roads-outline',
-        //   source: 'auckland',
-        //   'source-layer': 'roads',
-        //   type: 'line',
-        //   filter: ['!', ['has', 'hway_num']],
-        //   paint: {
-        //     'line-color': '#d1d6e0',
-        //     'line-width': [
-        //       'interpolate',
-        //       ['linear'],
-        //       ['zoom'],
-        //       12,
-        //       1, // width 1 at zoom 12
-        //       18,
-        //       11 // width 11 at zoom 18
-        //     ]
-        //   }
-        // },
-        // minor-roads fill
         {
           id: 'minor-roads',
           source: 'auckland',
@@ -202,22 +164,6 @@ export default {
             ]
           }
         },
-        // major-roads fill
-        // {
-        //   id: 'major-roads',
-        //   source: 'auckland',
-        //   'source-layer': 'roads',
-        //   type: 'line',
-        //   filter: ['has', 'hway_num'],
-        //   layout: {
-        //     'line-cap': 'round',
-        //     'line-join': 'round'
-        //   },
-        //   paint: {
-        //     'line-color': 'white',
-        //     'line-width': ['interpolate', ['linear'], ['zoom'], 6, 1, 14, 4]
-        //   }
-        // },
         {
           id: 'arterial-roads',
           source: 'auckland',
@@ -237,19 +183,6 @@ export default {
           }
         },
 
-        //
-        // buildings
-        //
-        // {
-        //   id: 'buildings-fill',
-        //   source: 'auckland',
-        //   'source-layer': 'buildings',
-        //   type: 'fill',
-        //   minzoom: 13,
-        //   paint: {
-        //     'fill-color': '#e3dcd9'
-        //   }
-        // },
         {
           id: 'venue-highlight',
           source: 'auckland',
@@ -336,17 +269,6 @@ export default {
             'line-color': 'black'
           }
         },
-        // {
-        //   id: 'routes-ferry',
-        //   source: 'auckland',
-        //   'source-layer': 'routes',
-        //   filter: ['==', ['get', 'type'], 'ferry'],
-        //   type: 'line',
-        //   minzoom: 10,
-        //   paint: {
-        //     'line-color': '#1B2430'
-        //   }
-        // },
         {
           id: 'routes-train',
           source: 'auckland',
@@ -499,26 +421,6 @@ export default {
             'text-halo-width': 2
           }
         },
-        // {
-        //   id: 'places-city',
-        //   source: 'auckland',
-        //   'source-layer': 'places',
-        //   type: 'symbol',
-        //   maxzoom: 14, // set a max zoom level
-        //   filter: ['==', ['get', 'type'], 'city'],
-        //   layout: {
-        //     'icon-allow-overlap': true,
-        //     'icon-ignore-placement': true,
-        //     'text-field': ['get', 'name'],
-        //     'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
-        //     'text-size': 20 // used to be 18
-        //   },
-        //   paint: {
-        //     'text-color': '#111',
-        //     'text-halo-color': '#fff',
-        //     'text-halo-width': 2
-        //   }
-        // },
         {
           id: 'train-stops',
           source: 'auckland',
@@ -573,28 +475,6 @@ export default {
             'text-halo-width': 1
           }
         },
-        // {
-        //   id: 'pois-attraction',
-        //   source: 'pois',
-        //   type: 'symbol',
-        //   minzoom: 13,
-        //   filter: ['all', ['==', ['get', 'type'], 'attraction']],
-        //   layout: {
-        //     'icon-image': ['get', 'type'],
-        //     'icon-size': 0.25,
-        //     'icon-anchor': 'bottom',
-        //     'text-anchor': 'top',
-        //     'text-offset': [0, 0.25],
-        //     'text-field': ['step', ['zoom'], '', 13, ['get', 'name']],
-        //     'text-font': ['literal', ['BellTopo Sans Regular']],
-        //     'text-size': 12
-        //   },
-        //   paint: {
-        //     'text-color': '#569b61',
-        //     'text-halo-color': '#fff',
-        //     'text-halo-width': 1
-        //   }
-        // },
         {
           id: 'pois-event',
           source: 'pois',
