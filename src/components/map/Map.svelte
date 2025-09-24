@@ -5,6 +5,9 @@
   import type { StyleSpecification } from 'maplibre-gl';
   import MapLibre from 'maplibre-gl';
   import MapStyles from '../../lib/style';
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/addons';
+  import * as MTP from '@dvt3d/maplibre-three-plugin';
   import { Protocol } from 'pmtiles';
 
   import AucklandPmtiles from '../../data/auckland.pmtiles';
@@ -13,6 +16,7 @@
 
   export class MapState {
     map: MapLibre.Map | null = $state(null);
+    mapScene: MTP.MapScene | null = $state(null);
     mapConfig: MapConfig = $state({
       lang: 'en',
       bounds: Bounds,
@@ -48,6 +52,9 @@
         hash: false,
         style: this.mapStyle
       });
+
+      this.mapScene = new MTP.MapScene(this.map);
+      this.mapScene.addLight(new THREE.AmbientLight())
 
       this.map.once('idle', () => {
         this.map?.flyTo({
