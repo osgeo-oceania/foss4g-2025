@@ -18,10 +18,6 @@ export default {
       sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
-        aut: {
-          type: 'geojson',
-          data: IndoorAUT
-        },
         pois: {
           type: 'geojson',
           data: Pois
@@ -266,15 +262,6 @@ export default {
             'fill-extrusion-opacity': 0.2,
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
-          }
-        },
-        {
-          id: 'venue-indoor',
-          source: 'aut',
-          type: 'line',
-          minzoom: 12,
-          paint: {
-            'line-color': 'black'
           }
         },
         {
@@ -617,13 +604,13 @@ export default {
                 ['get', 'name'],
                 '\n',
                 {},
-                ['get', 'place'],
+                ['concat', ['get', 'date'], ' at ', ['get', 'place']],
                 {
                   'text-font': ['literal', ['BellTopo Sans Italic']]
                 }
               ]
             ],
-            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-font': ['literal', ['BellTopo Sans Bold']],
             'text-size': 11
           },
           paint: {
