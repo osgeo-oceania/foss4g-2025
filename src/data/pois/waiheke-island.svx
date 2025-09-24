@@ -1,6 +1,0 @@
----
-id: waiheke-island
-name: Waiheke Island
-type: attraction
-coordinates: [175.012711, -36.785368]
----

@@ -1,6 +1,0 @@
----
-id: four-points
-name: Four Points
-type: lodging
-coordinates: [174.763746, -36.853727]
----

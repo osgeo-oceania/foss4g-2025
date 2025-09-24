@@ -1,6 +1,0 @@
----
-id: sea-life-aquarium
-name: SEA LIFE Aquarium
-type: attraction
-coordinates: [174.817616, -36.846906]
----
