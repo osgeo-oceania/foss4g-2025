@@ -499,26 +499,26 @@ export default {
             'text-halo-width': 2
           }
         },
-        {
-          id: 'places-city',
-          source: 'auckland',
-          'source-layer': 'places',
-          type: 'symbol',
-          maxzoom: 14, // set a max zoom level
-          filter: ['==', ['get', 'type'], 'city'],
-          layout: {
-            'icon-allow-overlap': true,
-            'icon-ignore-placement': true,
-            'text-field': ['get', 'name'],
-            'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
-            'text-size': 20 // used to be 18
-          },
-          paint: {
-            'text-color': '#111',
-            'text-halo-color': '#fff',
-            'text-halo-width': 2
-          }
-        },
+        // {
+        //   id: 'places-city',
+        //   source: 'auckland',
+        //   'source-layer': 'places',
+        //   type: 'symbol',
+        //   maxzoom: 14, // set a max zoom level
+        //   filter: ['==', ['get', 'type'], 'city'],
+        //   layout: {
+        //     'icon-allow-overlap': true,
+        //     'icon-ignore-placement': true,
+        //     'text-field': ['get', 'name'],
+        //     'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
+        //     'text-size': 20 // used to be 18
+        //   },
+        //   paint: {
+        //     'text-color': '#111',
+        //     'text-halo-color': '#fff',
+        //     'text-halo-width': 2
+        //   }
+        // },
         {
           id: 'train-stops',
           source: 'auckland',
@@ -649,14 +649,10 @@ export default {
           layout: {
             'icon-allow-overlap': true,
             'icon-ignore-placement': true,
-            'icon-image': 'pin',
+            'icon-image': 'pin-logo',
             'icon-anchor': 'bottom',
-            'icon-size': 0.25,
-            'icon-offset': [0, -40],
-            'text-offset': [0, 0.2],
-            'text-font': ['literal', ['BellTopo Sans Bold']],
-            'text-anchor': 'top',
-            'text-size': 13
+            'icon-offset': [160, 0],
+            'icon-size': 0.3,
           },
           paint: {
             'text-halo-color': '#fff',
