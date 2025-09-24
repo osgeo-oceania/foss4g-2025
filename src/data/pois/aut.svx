@@ -1,6 +1,0 @@
----
-id: aut
-name: AUT
-type: venue
-coordinates: [174.766478, -36.853157]
----

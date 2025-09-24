@@ -1,6 +1,0 @@
----
-id: rangitoto-island
-name: Rangitoto Island
-type: attraction
-coordinates: [174.863301, -36.784698]
----

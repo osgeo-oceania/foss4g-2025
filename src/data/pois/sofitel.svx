@@ -1,6 +1,0 @@
----
-id: sofitel
-name: Sofitel
-type: lodging
-coordinates: [174.757368, -36.844863]
----

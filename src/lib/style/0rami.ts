@@ -1,5 +1,5 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import PoiContent from '$data/pois';
+import Pois from '$data/pois.json';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
@@ -32,48 +32,7 @@ export default {
         },
         pois: {
           type: 'geojson',
-          data: {
-            type: 'FeatureCollection',
-            features: [
-              ...PoiContent.map((poi) => poi.feature),
-              {
-                type: 'Feature',
-                properties: {
-                  name: 'Conference Dinner',
-                  place: 'Auckland Hilton',
-                  type: 'event'
-                },
-                geometry: {
-                  type: 'Point',
-                  coordinates: [174.765769, -36.839703]
-                }
-              },
-              {
-                type: 'Feature',
-                properties: {
-                  name: 'Women in Geospatial',
-                  place: 'Amano',
-                  type: 'event'
-                },
-                geometry: {
-                  type: 'Point',
-                  coordinates: [174.770475, -36.844416]
-                }
-              },
-              {
-                type: 'Feature',
-                properties: {
-                  name: 'GeoChicas',
-                  place: 'Rocketman',
-                  type: 'event'
-                },
-                geometry: {
-                  type: 'Point',
-                  coordinates: [174.76935, -36.845192]
-                }
-              }
-            ]
-          }
+          data: Pois
         },
         auckland: {
           type: 'vector',

@@ -1,6 +1,0 @@
----
-id: sky-tower
-name: Sky Tower
-type: attraction
-coordinates: [174.762182, -36.848468]
----

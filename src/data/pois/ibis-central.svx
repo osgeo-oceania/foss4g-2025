@@ -1,6 +1,0 @@
----
-id: ibis-central
-name: ibis Central
-type: lodging
-coordinates: [174.764591, -36.847391]
----
