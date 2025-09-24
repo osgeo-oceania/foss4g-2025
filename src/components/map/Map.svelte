@@ -13,7 +13,6 @@
 
   export class MapState {
     map: MapLibre.Map | null = $state(null);
-    mapViewport: MapViewport | null = $state(null);
     mapConfig: MapConfig = $state({
       lang: 'en',
       bounds: Bounds,
@@ -33,20 +32,15 @@
 
       this.map = new MapLibre.Map({
         container: mapContainer,
-        transformCameraUpdate: ({ bearing, center, elevation, pitch, roll, zoom, ...rest }) => {
-          this.mapViewport = { bearing, center, elevation, pitch, roll, zoom };
-          return { ...this.mapViewport, ...rest };
-        },
+
         transformRequest: (url) => {
           return {
             url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}/`)
           };
         },
         maxPitch: 70,
-        attributionControl: false, // TODO add custom control
-        // #15.45/-36.849812/174.766349/0/58
+        attributionControl: false,
         center: [174.766349, -36.849812],
-        // bearing: -10,
         pitch: 38,
         cancelPendingTileRequestsWhileZooming: false,
         minZoom: 10,
@@ -54,12 +48,6 @@
         hash: false,
         style: this.mapStyle
       });
-
-      // this.markers = PoiContent.filter((poi) => poi.type != 'lodging').map((poi) =>
-      //   new MapLibre.Marker({ anchor: 'bottom' })
-      //     .setLngLat(poi.coordinates)
-      //     .addTo(this.map as MapLibre.Map)
-      // );
 
       this.map.once('idle', () => {
         this.map?.flyTo({
