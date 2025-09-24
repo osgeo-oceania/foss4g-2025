@@ -48,7 +48,7 @@
         pitch: 0,
         cancelPendingTileRequestsWhileZooming: false,
         minZoom: 10,
-        zoom: 12,
+        zoom: 13,
         hash: false,
         style: this.mapStyle
       });
