@@ -172,5 +172,11 @@ export default {
     logo: () => import('$images/logos/terria.png?enhanced'),
     link: 'https://terria.io/',
     level: LEVELS.SILVER
+  },
+  arkedgespace: {
+    name: 'ArkEdge Space',
+    logo: () => import('$images/logos/arkedgespace.png?enhanced'),
+    link: 'https://arkedgespace.com/en',
+    level: LEVELS.SILVER
   }
 };
