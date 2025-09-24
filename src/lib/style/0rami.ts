@@ -9,7 +9,9 @@ import TreesLocations from '$data/notable-trees.json';
 import IndoorAUT from '$data/aut-indoor.json';
 import type { MapScene } from '@dvt3d/maplibre-three-plugin';
 import * as MTP from '@dvt3d/maplibre-three-plugin';
+import { pointOnFeature } from '@turf/point-on-feature';
 
+console.log([...IndoorAUT.features, ...IndoorAUT.features.map((feat) => pointOnFeature(feat))]);
 export default {
   name: 'rami',
   style: (config: MapConfig): StyleSpecification => {
@@ -18,9 +20,21 @@ export default {
       sprite: 'http://{base_url}/sprite/sprite',
       glyphs: 'http://{base_url}/glyphs/{fontstack}/{range}.pbf',
       sources: {
-        "aut-indoor": {
+        'aut-indoor': {
           type: 'geojson',
-          data: IndoorAUT,
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              ...IndoorAUT.features,
+              ...IndoorAUT.features.map((feat) => ({
+                type: 'Feature',
+                properties: {
+                  name: feat.properties.identifier
+                },
+                geometry: { type: 'Point', coordinates: pointOnFeature(feat).geometry.coordinates }
+              }))
+            ]
+          }
         },
         pois: {
           type: 'geojson',
@@ -191,6 +205,39 @@ export default {
           filter: ['all', ['==', ['get', 'type'], 'venue']],
           paint: {
             'line-color': '#3a7a7f'
+          }
+        },
+        {
+          id: 'venue-indoor',
+          source: 'aut-indoor',
+          filter: ['==', ['geometry-type'], 'Polygon'],
+          type: 'fill',
+          paint: {
+            'fill-color': '#eee'
+          }
+        },
+        {
+          id: 'venue-indoor-line',
+          filter: ['==', ['geometry-type'], 'Polygon'],
+          source: 'aut-indoor',
+          type: 'line',
+          paint: {
+            'line-color': '#ccc'
+          }
+        },
+        {
+          id: 'venue-indoor-label',
+          filter: ['==', ['geometry-type'], 'Point'],
+          source: 'aut-indoor',
+          type: 'symbol',
+          minzoom: 16,
+          layout: {
+            'text-field': ['get', 'name'],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 10
+          },
+          paint: {
+            'text-color': '#222'
           }
         },
         {
@@ -524,7 +571,7 @@ export default {
           id: 'pois-venue',
           source: 'pois',
           type: 'symbol',
-          minzoom: 11,
+          minzoom: 10,
           maxzoom: 17,
           filter: ['==', ['get', 'type'], 'venue'],
           layout: {
@@ -533,8 +580,7 @@ export default {
             'icon-image': 'pin-logo',
             'icon-anchor': 'bottom',
             'icon-offset': [160, 0],
-            'icon-size': 0.3,
-            
+            'icon-size': 0.3
           },
           paint: {
             'text-halo-color': '#fff',
