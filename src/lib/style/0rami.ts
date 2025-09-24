@@ -251,6 +251,16 @@ export default {
         //   }
         // },
         {
+          id: 'venue-highlight',
+          source: 'auckland',
+          'source-layer': 'buildings-selected',
+          type: 'line',
+          filter: ['all', ['==', ['get', 'type'], 'venue']],
+          paint: {
+            'line-color': '#3a7a7f'
+          }
+        },
+        {
           id: 'venue-extrusion',
           source: 'auckland',
           'source-layer': 'buildings-selected',
