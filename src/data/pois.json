@@ -190,6 +190,7 @@
         "id": "conference-dinner",
         "name": "Conference Dinner",
         "place": "Auckland Hilton",
+        "date": "Nov 19",
         "type": "event"
       },
       "geometry": {
@@ -204,6 +205,7 @@
         "id": "women-in-geospatial",
         "name": "Women in Geospatial",
         "place": "Amano",
+        "date": "Nov 20",
         "type": "event"
       },
       "geometry": {
@@ -218,6 +220,7 @@
         "id": "geochicas",
         "name": "GeoChicas",
         "place": "Rocketman",
+        "date": "Nov 20",
         "type": "event"
       },
       "geometry": {
@@ -232,6 +235,7 @@
         "id": "tgp-breakfast",
         "name": "TGP Breakfast",
         "place": "Scarecrow",
+        "date": "Nov 19",
         "type": "event"
       },
       "geometry": {
