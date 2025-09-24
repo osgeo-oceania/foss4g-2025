@@ -71,7 +71,7 @@
         if (!this.isPreloading && this.map) {
           if ('beforeAdd' in this.mapConfig.style) {
             setTimeout(() => {
-              this.mapConfig.style.beforeAdd(this.map);
+              this.mapConfig.style.beforeAdd(this.map, this.mapScene);
             }, 0);
           }
           this.map.setStyle(this.mapStyle);

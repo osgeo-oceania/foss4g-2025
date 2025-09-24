@@ -4,9 +4,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { PUBLIC_BASE_PATH } from '$env/static/public';
 import SkyTowerGlb from '$data/sky-tower.glb';
+import TreeGlb from '$data/tree.glb';
 import TreesLocations from '$data/notable-trees.json';
 import IndoorAUT from '$data/aut-indoor.json';
 import type { MapScene } from '@dvt3d/maplibre-three-plugin';
+import * as MTP from '@dvt3d/maplibre-three-plugin';
 
 export default {
   name: 'rami',
@@ -395,7 +397,7 @@ export default {
           minzoom: 13,
           filter: ['==', ['get', 'type'], 'Bay'],
           layout: {
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Italic']],
             'text-size': 10
           },
@@ -431,7 +433,7 @@ export default {
           type: 'symbol',
           filter: ['==', ['get', 'type'], 'hill'],
           layout: {
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 10,
             visibility: 'none'
@@ -454,7 +456,7 @@ export default {
             ['!=', ['get', 'name'], 'Auckland Central']
           ],
           layout: {
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Italic']],
             'text-size': 10,
             'text-max-width': 7
@@ -473,7 +475,7 @@ export default {
           type: 'symbol',
           filter: ['==', ['get', 'type'], 'island'],
           layout: {
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -490,7 +492,7 @@ export default {
           type: 'symbol',
           filter: ['==', ['get', 'type'], 'town'],
           layout: {
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Bold']],
             'text-size': 14
           },
@@ -510,7 +512,7 @@ export default {
           layout: {
             'icon-allow-overlap': true,
             'icon-ignore-placement': true,
-            'text-field': ["get", "name"],
+            'text-field': ['get', 'name'],
             'text-font': ['literal', ['BellTopo Sans Bold']], // DIN Pro Medium or a Roboto Medium
             'text-size': 20 // used to be 18
           },
@@ -559,7 +561,7 @@ export default {
             'icon-size': 0.2,
             'text-anchor': 'left',
             'text-offset': [1, 0],
-            'text-field': ['step', ['zoom'], '', 15, ["get", "name"]],
+            'text-field': ['step', ['zoom'], '', 15, ['get', 'name']],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -581,7 +583,7 @@ export default {
             'icon-anchor': 'bottom',
             'text-anchor': 'top',
             'text-offset': [0, 0.25],
-            'text-field': ['step', ['zoom'], '', 13, ["get", "name"]],
+            'text-field': ['step', ['zoom'], '', 13, ['get', 'name']],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -658,54 +660,65 @@ export default {
     } as StyleSpecification;
   },
   beforeAdd: (map: maplibregl.Map, mapScene: MapScene) => {
-    // if (!map.getLayer('sky-tower'))
-    //   map.addLayer({
-    //     id: 'sky-tower',
-    //     type: 'custom',
-    //     renderingMode: '3d', // The layer MUST be marked as 3D in order to get the proper depth buffer with globe depths in it.
-    //     onAdd(map, gl) {
-    //       this.camera = new THREE.Camera();
-    //       this.scene = new THREE.Scene();
-    //       // create two three.js lights to illuminate the model
-    //       const directionalLight = new THREE.DirectionalLight(0xffffff);
-    //       directionalLight.position.set(0, -70, 100).normalize();
-    //       this.scene.add(directionalLight);
-    //       const directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    //       directionalLight2.position.set(0, 70, 100).normalize();
-    //       this.scene.add(directionalLight2);
-    //       // use the three.js GLTF loader to add the 3D model to the three.js scene
-    //       const loader = new GLTFLoader();
-    //       loader.load(SkyTowerGlb, (gltf) => {
-    //         this.scene.add(gltf.scene);
-    //       });
-    //       this.map = map;
-    //       // use the MapLibre GL JS map canvas for three.js
-    //       this.renderer = new THREE.WebGLRenderer({
-    //         canvas: map.getCanvas(),
-    //         context: gl,
-    //         antialias: true
-    //       });
-    //       this.renderer.autoClear = false;
-    //     },
-    //     render(gl, args) {
-    //       // parameters to ensure the model is georeferenced correctly on the map
-    //       const modelOrigin = [174.762182, -36.848453];
-    //       const modelAltitude = 20;
-    //       // Make the object ~10s of km tall to make it visible at planetary scale.
-    //       const scaling = 1.6;
-    //       // We can use this API to get the correct model matrix.
-    //       // It will work regardless of current projection.
-    //       // See MapLibre source code, file "mercator_transform.ts" or "vertical_perspective_transform.ts".
-    //       const modelMatrix = map.transform.getMatrixForModel(modelOrigin, modelAltitude);
-    //       const m = new THREE.Matrix4().fromArray(args.defaultProjectionData.mainMatrix);
-    //       const l = new THREE.Matrix4()
-    //         .fromArray(modelMatrix)
-    //         .scale(new THREE.Vector3(scaling, scaling, scaling));
-    //       this.camera.projectionMatrix = m.multiply(l);
-    //       this.renderer.resetState();
-    //       this.renderer.render(this.scene, this.camera);
-    //       this.map.triggerRepaint();
-    //     }
-    //   });
+    const glTFLoader = new GLTFLoader();
+
+    glTFLoader.load(TreeGlb, (gltf) => {
+      TreesLocations.features.forEach((feat) => {
+        let scene = gltf.scene.clone()
+        let rtcGroup = MTP.Creator.createRTCGroup(feat.geometry.coordinates);
+        rtcGroup.add(scene);
+        mapScene.addObject(rtcGroup);
+      })
+    });
+
+    if (!map.getLayer('sky-tower'))
+      map.addLayer({
+        id: 'sky-tower',
+        type: 'custom',
+        renderingMode: '3d', // The layer MUST be marked as 3D in order to get the proper depth buffer with globe depths in it.
+        onAdd(map, gl) {
+          this.camera = new THREE.Camera();
+          this.scene = new THREE.Scene();
+          // create two three.js lights to illuminate the model
+          const directionalLight = new THREE.DirectionalLight(0xffffff);
+          directionalLight.position.set(0, -70, 100).normalize();
+          this.scene.add(directionalLight);
+          const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+          directionalLight2.position.set(0, 70, 100).normalize();
+          this.scene.add(directionalLight2);
+          // use the three.js GLTF loader to add the 3D model to the three.js scene
+          const loader = new GLTFLoader();
+          loader.load(SkyTowerGlb, (gltf) => {
+            this.scene.add(gltf.scene);
+          });
+          this.map = map;
+          // use the MapLibre GL JS map canvas for three.js
+          this.renderer = new THREE.WebGLRenderer({
+            canvas: map.getCanvas(),
+            context: gl,
+            antialias: true
+          });
+          this.renderer.autoClear = false;
+        },
+        render(gl, args) {
+          // parameters to ensure the model is georeferenced correctly on the map
+          const modelOrigin = [174.762182, -36.848453];
+          const modelAltitude = 20;
+          // Make the object ~10s of km tall to make it visible at planetary scale.
+          const scaling = 1.6;
+          // We can use this API to get the correct model matrix.
+          // It will work regardless of current projection.
+          // See MapLibre source code, file "mercator_transform.ts" or "vertical_perspective_transform.ts".
+          const modelMatrix = map.transform.getMatrixForModel(modelOrigin, modelAltitude);
+          const m = new THREE.Matrix4().fromArray(args.defaultProjectionData.mainMatrix);
+          const l = new THREE.Matrix4()
+            .fromArray(modelMatrix)
+            .scale(new THREE.Vector3(scaling, scaling, scaling));
+          this.camera.projectionMatrix = m.multiply(l);
+          this.renderer.resetState();
+          this.renderer.render(this.scene, this.camera);
+          this.map.triggerRepaint();
+        }
+      });
   }
 };
