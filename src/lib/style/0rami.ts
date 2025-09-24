@@ -645,6 +645,7 @@ export default {
           source: 'pois',
           type: 'symbol',
           minzoom: 11,
+          maxzoom: 17,
           filter: ['==', ['get', 'type'], 'venue'],
           layout: {
             'icon-allow-overlap': true,
@@ -653,11 +654,13 @@ export default {
             'icon-anchor': 'bottom',
             'icon-offset': [160, 0],
             'icon-size': 0.3,
+            
           },
           paint: {
             'text-halo-color': '#fff',
             'text-halo-width': 2,
-            'text-halo-blur': 1
+            'text-halo-blur': 1,
+            'icon-opacity': ['interpolate', ['linear'], ['zoom'], 16, 1, 16.5, 0]
           }
         }
       ]
