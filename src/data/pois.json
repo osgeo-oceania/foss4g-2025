@@ -7,8 +7,7 @@
       "properties": {
         "id": "auckland-museum",
         "name": "Auckland Museum",
-        "type": "attraction",
-        "coordinates": [174.777891, -36.860794]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -21,8 +20,7 @@
       "properties": {
         "id": "auckland-zoo",
         "name": "Auckland Zoo",
-        "type": "attraction",
-        "coordinates": [174.719782, -36.864135]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -35,8 +33,7 @@
       "properties": {
         "id": "aut",
         "name": "AUT",
-        "type": "venue",
-        "coordinates": [174.766478, -36.853157]
+        "type": "venue"
       },
       "geometry": {
         "type": "Point",
@@ -49,8 +46,7 @@
       "properties": {
         "id": "avani",
         "name": "Avani",
-        "type": "lodging",
-        "coordinates": [174.767238, -36.848542]
+        "type": "lodging"
       },
       "geometry": {
         "type": "Point",
@@ -64,7 +60,7 @@
         "id": "four-points",
         "name": "Four Points",
         "type": "lodging",
-        "coordinates": [174.763746, -36.853727]
+        "orientation": "left"
       },
       "geometry": {
         "type": "Point",
@@ -77,8 +73,7 @@
       "properties": {
         "id": "ibis-central",
         "name": "ibis Central",
-        "type": "lodging",
-        "coordinates": [174.764591, -36.847391]
+        "type": "lodging"
       },
       "geometry": {
         "type": "Point",
@@ -91,8 +86,7 @@
       "properties": {
         "id": "lylo",
         "name": "LyLo",
-        "type": "lodging",
-        "coordinates": [174.758841, -36.851624]
+        "type": "lodging"
       },
       "geometry": {
         "type": "Point",
@@ -105,8 +99,7 @@
       "properties": {
         "id": "pullman-hotel",
         "name": "Pullman Hotel",
-        "type": "lodging",
-        "coordinates": [174.770558, -36.847907]
+        "type": "lodging"
       },
       "geometry": {
         "type": "Point",
@@ -119,8 +112,7 @@
       "properties": {
         "id": "rangitoto-island",
         "name": "Rangitoto Island",
-        "type": "attraction",
-        "coordinates": [174.863301, -36.784698]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -133,8 +125,7 @@
       "properties": {
         "id": "sea-life-aquarium",
         "name": "SEA LIFE Aquarium",
-        "type": "attraction",
-        "coordinates": [174.817616, -36.846906]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -147,8 +138,7 @@
       "properties": {
         "id": "sky-tower",
         "name": "Sky Tower",
-        "type": "attraction",
-        "coordinates": [174.762182, -36.848468]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -161,8 +151,7 @@
       "properties": {
         "id": "sofitel",
         "name": "Sofitel",
-        "type": "lodging",
-        "coordinates": [174.757368, -36.844863]
+        "type": "lodging"
       },
       "geometry": {
         "type": "Point",
@@ -175,8 +164,7 @@
       "properties": {
         "id": "waiheke-island",
         "name": "Waiheke Island",
-        "type": "attraction",
-        "coordinates": [175.012711, -36.785368]
+        "type": "attraction"
       },
       "geometry": {
         "type": "Point",
@@ -221,7 +209,8 @@
         "name": "GeoChicas",
         "place": "Rocketman",
         "date": "Nov 20",
-        "type": "event"
+        "type": "event",
+        "orientation": "left"
       },
       "geometry": {
         "type": "Point",

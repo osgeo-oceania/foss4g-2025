@@ -45,7 +45,7 @@
         maxPitch: 70,
         attributionControl: false,
         center: [174.766349, -36.849812],
-        pitch: 38,
+        pitch: 0,
         cancelPendingTileRequestsWhileZooming: false,
         minZoom: 10,
         zoom: 12,
@@ -59,9 +59,9 @@
       this.map.once('idle', () => {
         this.map?.flyTo({
           center: [174.766358, -36.852899],
-          zoom: 17,
+          zoom: 15,
           pitch: 0,
-          duration: 10500,
+          duration: 5500,
           easing: (x) => 1 - Math.pow(1 - x, 3)
         });
         this.isPreloading = false;

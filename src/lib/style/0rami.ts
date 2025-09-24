@@ -546,9 +546,14 @@ export default {
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.2,
-            'text-anchor': 'left',
-            'text-offset': [1, 0],
-            'text-field': ['step', ['zoom'], '', 15, ['get', 'name']],
+            'text-anchor': ['case', ['==', ['get', 'orientation'], 'left'], 'right', 'left'],
+            'text-offset': [
+              'case',
+              ['==', ['get', 'orientation'], 'left'],
+              ['literal', [-1, 0]],
+              ['literal', [1, 0]]
+            ],
+            'text-field': ['step', ['zoom'], '', 14, ['get', 'name']],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -558,28 +563,28 @@ export default {
             'text-halo-width': 1
           }
         },
-        {
-          id: 'pois-attraction',
-          source: 'pois',
-          type: 'symbol',
-          minzoom: 13,
-          filter: ['all', ['==', ['get', 'type'], 'attraction']],
-          layout: {
-            'icon-image': ['get', 'type'],
-            'icon-size': 0.25,
-            'icon-anchor': 'bottom',
-            'text-anchor': 'top',
-            'text-offset': [0, 0.25],
-            'text-field': ['step', ['zoom'], '', 13, ['get', 'name']],
-            'text-font': ['literal', ['BellTopo Sans Regular']],
-            'text-size': 12
-          },
-          paint: {
-            'text-color': '#569b61',
-            'text-halo-color': '#fff',
-            'text-halo-width': 1
-          }
-        },
+        // {
+        //   id: 'pois-attraction',
+        //   source: 'pois',
+        //   type: 'symbol',
+        //   minzoom: 13,
+        //   filter: ['all', ['==', ['get', 'type'], 'attraction']],
+        //   layout: {
+        //     'icon-image': ['get', 'type'],
+        //     'icon-size': 0.25,
+        //     'icon-anchor': 'bottom',
+        //     'text-anchor': 'top',
+        //     'text-offset': [0, 0.25],
+        //     'text-field': ['step', ['zoom'], '', 13, ['get', 'name']],
+        //     'text-font': ['literal', ['BellTopo Sans Regular']],
+        //     'text-size': 12
+        //   },
+        //   paint: {
+        //     'text-color': '#569b61',
+        //     'text-halo-color': '#fff',
+        //     'text-halo-width': 1
+        //   }
+        // },
         {
           id: 'pois-event',
           source: 'pois',
@@ -589,11 +594,17 @@ export default {
           layout: {
             'icon-image': ['get', 'type'],
             'icon-size': 0.25,
-            'icon-anchor': 'right',
-            'text-anchor': 'left',
+            'icon-anchor': ['case', ['==', ['get', 'orientation'], 'left'], 'left', 'right'],
+            'text-anchor': ['case', ['==', ['get', 'orientation'], 'left'], 'right', 'left'],
             'text-allow-overlap': true,
-            'text-justify': 'left',
-            'text-offset': [0.25, 0],
+            'text-justify': ['case', ['==', ['get', 'orientation'], 'left'], 'right', 'left'],
+            'text-offset': [
+              'case',
+              ['==', ['get', 'orientation'], 'left'],
+              ['literal', [-0.25, 0]],
+              ['literal', [0.25, 0]]
+            ],
+            'text-max-width': 999,
             'text-field': [
               'step',
               ['zoom'],
@@ -651,11 +662,11 @@ export default {
 
     glTFLoader.load(TreeGlb, (gltf) => {
       TreesLocations.features.forEach((feat) => {
-        let scene = gltf.scene.clone()
+        let scene = gltf.scene.clone();
         let rtcGroup = MTP.Creator.createRTCGroup(feat.geometry.coordinates);
         rtcGroup.add(scene);
         mapScene.addObject(rtcGroup);
-      })
+      });
     });
 
     if (!map.getLayer('sky-tower'))
