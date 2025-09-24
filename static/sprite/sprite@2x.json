@@ -3,42 +3,49 @@
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 196,
-    "y": 256
+    "x": 856,
+    "y": 0
   },
   "event": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 256,
-    "y": 0
+    "x": 856,
+    "y": 136
   },
   "lodging": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 332,
-    "y": 136
+    "x": 452,
+    "y": 256
   },
   "ocean": {
     "height": 256,
     "pixelRatio": 2,
     "width": 256,
     "x": 0,
-    "y": 0
+    "y": 256
   },
   "pin": {
     "height": 254,
     "pixelRatio": 2,
     "width": 196,
-    "x": 0,
+    "x": 256,
     "y": 256
+  },
+  "pin-logo": {
+    "height": 256,
+    "pixelRatio": 2,
+    "width": 856,
+    "x": 0,
+    "y": 0
   },
   "train": {
     "height": 136,
     "pixelRatio": 2,
     "width": 136,
-    "x": 332,
-    "y": 272
+    "x": 588,
+    "y": 256
   }
 }
