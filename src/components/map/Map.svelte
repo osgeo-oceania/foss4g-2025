@@ -85,7 +85,7 @@
 <script lang="ts">
   import Attribution from './Attribution.svelte';
   import { setContext, onMount } from 'svelte';
-  import StyleSwitcher from './StyleSwitcher.svelte';
+  import MapMenu from './MapMenu.svelte';
 
   let mapContainer: HTMLDivElement;
   let mapState = new MapState();
@@ -100,7 +100,7 @@
 
 <div bind:this={mapContainer} class="h-full w-full">
   <Attribution />
-  <StyleSwitcher />
+  <MapMenu />
   {#if mapState.isPreloading}
     <div
       class="loading loading-spinner absolute top-1/2 left-1/2 z-50 w-16 -translate-x-1/2 -translate-y-1/2 transform"
