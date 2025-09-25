@@ -14,6 +14,7 @@
           <li><Link href="/program/outline">Program</Link></li>
           <li><Link href="/sponsorship">Sponsorship</Link></li>
           <li><Link href="/organisers">Organisers</Link></li>
+          <li><Link href="/attend/volunteering">Volunteering</Link></li>
         </ul>
         <ul class="space-y-3">
           <li><Link href="/attend/terms-and-conditions">Terms &amp; Conditions</Link></li>

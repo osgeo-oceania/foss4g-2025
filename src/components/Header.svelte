@@ -61,6 +61,10 @@
           url: '/attend/register'
         },
         {
+          label: 'Volunteering',
+          url: '/attend/volunteering'
+        },
+        {
           label: 'Travel Grant Program',
           url: '/attend/travel-grant-program'
         },
