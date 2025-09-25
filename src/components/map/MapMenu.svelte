@@ -22,7 +22,7 @@
 
 <div class="group absolute bottom-1 left-1 z-50 rounded-md sm:bottom-4 sm:left-4">
   <div
-    class="absolute border-white bottom-0 left-0 z-10 border-2 flex flex-col-reverse max-h-18 max-w-0 overflow-hidden opacity-0 group-hover:opacity-100 rounded-lg transition-all duration-300 ease-out group-hover:max-h-[9999px] group-hover:max-w-[300px] group-hover:bg-white"
+    class="absolute group-hover:border-white border-transparent bottom-0 left-0 z-10 border-4 invisible flex flex-col-reverse max-h-[9999px] max-w-0 overflow-hidden rounded-lg transition-[max-width] duration-300 ease-out group-hover:visible group-hover:max-h-[9999px] group-hover:max-w-[300px] group-hover:bg-white"
   >
     <div class="flex gap-x-0.5">
       {@render square(WaveImg)}
@@ -33,7 +33,7 @@
       omg
     </div>
   </div>
-  <div class="absolute bottom-0 left-0 z-50 border-2 border-transparent">
+  <div class="absolute bottom-0 left-0 z-50 border-4 border-transparent">
     {@render square(WaveImg)}
   </div>
 </div>
