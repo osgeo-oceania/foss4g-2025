@@ -178,5 +178,11 @@ export default {
     logo: () => import('$images/logos/arkedgespace.png?enhanced'),
     link: 'https://arkedgespace.com/en',
     level: LEVELS.SILVER
+  },
+  reearth: {
+    name: 'Re:Earth',
+    logo: () => import('$images/logos/reearth.png?enhanced'),
+    link: 'https://reearth.io/home',
+    level: LEVELS.PLATINUM
   }
 };
