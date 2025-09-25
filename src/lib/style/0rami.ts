@@ -202,20 +202,22 @@ export default {
           source: 'auckland',
           'source-layer': 'buildings-selected',
           type: 'line',
+          minzoom: 12,
           filter: ['all', ['==', ['get', 'type'], 'venue']],
           paint: {
             'line-color': '#3a7a7f',
-
-            'line-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 13, 1]
+            'line-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 14, 1]
           }
         },
         {
           id: 'venue-indoor',
           source: 'aut-indoor',
           filter: ['==', ['geometry-type'], 'Polygon'],
+          minzoom: 12,
           type: 'fill',
           paint: {
-            'fill-color': '#eee'
+            'fill-color': '#eee',
+            'fill-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 14, 1]
           }
         },
         {
@@ -226,7 +228,8 @@ export default {
           minzoom: 12,
           layout: {},
           paint: {
-            'line-color': '#ccc'
+            'line-color': '#ccc',
+            'line-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 14, 1]
           }
         },
         {
@@ -253,7 +256,7 @@ export default {
           filter: ['==', ['get', 'type'], 'venue'],
           paint: {
             'fill-extrusion-color': '#3a7a7f',
-            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 13, 0.2],
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 13, 0, 14, 0.2],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
           }
