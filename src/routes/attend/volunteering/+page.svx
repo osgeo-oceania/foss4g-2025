@@ -1,0 +1,44 @@
+---
+title: Volunteering
+---
+
+<svelte:head>
+  <title>Volunteering</title>
+</svelte:head>
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
+<Heading>Volunteering</Heading>
+
+![Auckland]($images/group-photo.jpg)
+
+
+
+## Who can volunteer?
+Anyone who would like to attend can volunteer!
+
+## What will you be doing as a volunteer?
+We need help with some of the day-to-day running of the conference and we think you’ll be perfect for the job. As a volunteer, we’d like you to support us across the seven day conference. You’ll be assigned to a role half the time or less, the rest of the time you have full access to the conference.
+
+Things we need help with include:
+- Helping out on the registration desk
+- Setting up and tidying up conference/workshop rooms
+- Helping people find conference/workshop rooms
+- Supporting the presenters in each room
+- Guiding people from the conference to social events (and then joining us at the social events!)
+
+## What’s in it for me?
+We have a range of perks to offer you for your help during our conference including:
+- Free registration to the conference (including catering for lunch)
+- Expand your knowledge and expertise in the field, and interact with other industry experts.
+- When not on duty, enjoy free access to the full conference experience, including over 100 insightful talks and 44 hands-on workshops.
+
+## Expression of interest details
+If you’ve made it this far, you must be interested! 
+
+Please [fill in this form](https://docs.google.com/forms/d/e/1FAIpQLSfhAuBfrJKc5GpUHecQ4dgxMP_LF0VuTPG-PuSXUzaAMFV3Sg/viewform?usp=sharing&ouid=110063076206005231651), and we will be in touch. 
+
+You’ll then be sent a link closer to the conference to sign up for further registration including food allergies and shirt sizing, and will be invited to the group chat used to communicate throughout the conference.
