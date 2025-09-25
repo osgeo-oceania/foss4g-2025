@@ -204,7 +204,9 @@ export default {
           type: 'line',
           filter: ['all', ['==', ['get', 'type'], 'venue']],
           paint: {
-            'line-color': '#3a7a7f'
+            'line-color': '#3a7a7f',
+
+            'line-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 13, 1]
           }
         },
         {
@@ -221,6 +223,8 @@ export default {
           filter: ['==', ['geometry-type'], 'Polygon'],
           source: 'aut-indoor',
           type: 'line',
+          minzoom: 12,
+          layout: {},
           paint: {
             'line-color': '#ccc'
           }
@@ -249,7 +253,7 @@ export default {
           filter: ['==', ['get', 'type'], 'venue'],
           paint: {
             'fill-extrusion-color': '#3a7a7f',
-            'fill-extrusion-opacity': 0.2,
+            'fill-extrusion-opacity': ['interpolate', ['linear'], ['zoom'], 12, 0, 13, 0.2],
             'fill-extrusion-height': ['get', 'height'],
             'fill-extrusion-vertical-gradient': true
           }
@@ -438,6 +442,7 @@ export default {
           id: 'places-island',
           source: 'auckland',
           'source-layer': 'places',
+          minzoom: 14,
           type: 'symbol',
           filter: ['==', ['get', 'type'], 'island'],
           layout: {
@@ -451,23 +456,23 @@ export default {
             'text-halo-width': 2
           }
         },
-        {
-          id: 'places-town',
-          source: 'auckland',
-          'source-layer': 'places',
-          type: 'symbol',
-          filter: ['==', ['get', 'type'], 'town'],
-          layout: {
-            'text-field': ['get', 'name'],
-            'text-font': ['literal', ['BellTopo Sans Bold']],
-            'text-size': 14
-          },
-          paint: {
-            'text-color': '#111',
-            'text-halo-color': '#fff',
-            'text-halo-width': 2
-          }
-        },
+        // {
+        //   id: 'places-town',
+        //   source: 'auckland',
+        //   'source-layer': 'places',
+        //   type: 'symbol',
+        //   filter: ['==', ['get', 'type'], 'town'],
+        //   layout: {
+        //     'text-field': ['get', 'name'],
+        //     'text-font': ['literal', ['BellTopo Sans Bold']],
+        //     'text-size': 14
+        //   },
+        //   paint: {
+        //     'text-color': '#111',
+        //     'text-halo-color': '#fff',
+        //     'text-halo-width': 2
+        //   }
+        // },
         {
           id: 'train-stops',
           source: 'auckland',
@@ -580,6 +585,7 @@ export default {
             'icon-image': 'pin-logo',
             'icon-anchor': 'bottom',
             'icon-offset': [160, 0],
+
             'icon-size': 0.3
           },
           paint: {

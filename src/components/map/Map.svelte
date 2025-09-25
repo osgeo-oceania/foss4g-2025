@@ -45,25 +45,26 @@
         maxPitch: 70,
         attributionControl: false,
         center: [174.766349, -36.849812],
-        pitch: 0,
+        pitch: 28,
         cancelPendingTileRequestsWhileZooming: false,
         minZoom: 10,
         zoom: 13,
-        hash: false,
+        hash: true,
         style: this.mapStyle
       });
 
       this.mapScene = new MTP.MapScene(this.map);
-      this.mapScene.addLight(new THREE.AmbientLight())
+      this.mapScene.addLight(new THREE.AmbientLight());
 
       this.map.once('idle', () => {
-        this.map?.flyTo({
-          center: [174.766358, -36.852899],
-          zoom: 15,
-          pitch: 0,
-          duration: 5500,
-          easing: (x) => 1 - Math.pow(1 - x, 3)
-        });
+        if (true)
+          this.map?.flyTo({
+            center: [174.7661, -36.84945],
+            zoom: 15,
+            pitch: 28,
+            duration: 5500,
+            easing: (x) => 1 - Math.pow(1 - x, 3)
+          });
         this.isPreloading = false;
       });
 
