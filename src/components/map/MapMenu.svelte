@@ -6,16 +6,17 @@
   const mapState = getContext<() => MapState>('mapState')();
 </script>
 
+<div class="absolute bottom-1 left-1 z-50 rounded-lg sm:bottom-4 sm:left-4">
+  <div class="absolute"></div>
   <div
-    class="absolute bottom-1 left-1 z-50 rounded-lg sm:bottom-4 sm:left-4"
+    class="btn btn-lg bg-primary btn-square aspect-square h-18 w-18 items-center justify-center rounded-lg border-0 p-0.5 !text-xs font-normal hover:cursor-pointer"
   >
+    <enhanced:img src={WaveImg} class={'h-full w-full overflow-clip rounded-md'} />
     <div
-      class="btn btn-lg border-0 w-18 h-18 bg-primary btn-square p-0.5 aspect-square items-center justify-center rounded-lg !text-xs font-normal hover:cursor-pointer"
+      class="justify-left text-shadow absolute bottom-0 left-0 flex w-full items-center gap-x-0.5 pb-0.5 pl-1"
     >
-      <enhanced:img src={WaveImg} class={'rounded-md overflow-clip w-full h-full'} />
-      <div class="absolute w-full bottom-0 left-0 flex items-center justify-left pl-1 text-shadow pb-0.5 gap-x-0.5">
-        <span class="icon-[tabler--stack] text-primary w-4 h-4"></span>
-        <span class="font-sans text-[11px]">Layers</span>
-      </div>
+      <span class="icon-[tabler--stack] text-primary h-4 w-4"></span>
+      <span class="font-sans text-[11px]">Layers</span>
     </div>
   </div>
+</div>
