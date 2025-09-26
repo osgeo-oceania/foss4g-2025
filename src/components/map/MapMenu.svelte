@@ -19,7 +19,7 @@
       {#if isActive}
         <span class="icon-[tabler--stack] text-primary -ml-1 h-4 w-4"></span>
       {/if}
-      <span class="font-sans text-[11px]">{style.name}</span>
+      <span class="font-sans text-[11px]">{isActive ? 'Layers' : style.name}</span>
     </div>
   </button>
 {/snippet}

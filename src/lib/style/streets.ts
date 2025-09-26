@@ -11,11 +11,12 @@ import type { MapScene } from '@dvt3d/maplibre-three-plugin';
 import * as MTP from '@dvt3d/maplibre-three-plugin';
 import { pointOnFeature } from '@turf/point-on-feature';
 
-import DefaultOverview from '$images/map/default.png?enhanced';
+import StreetsOverview from '$images/map/default.png?enhanced';
 
 export default {
-  name: 'Default',
-  image: DefaultOverview,
+  name: 'Streets',
+  image: StreetsOverview,
+  textColor: 'black',
   style: (config: MapConfig): StyleSpecification => {
     return {
       version: 8,

@@ -1,14 +1,15 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import RamiStyle from './0rami';
+import StreetsStyle from './streets';
 import Pmtiles1920s from '$data/1920s.pmtiles';
 
-import SatelliteOverview from '$images/map/1920s.png?enhanced';
+import Nineteen20sOverview from '$images/map/1920s.png?enhanced';
 
 export default {
   name: '1920s',
-  image: SatelliteOverview,
+  image: Nineteen20sOverview,
+  textColor: 'black',
   style: (config: MapConfig): StyleSpecification => {
-    const rami = RamiStyle.style(config);
+    const rami = StreetsStyle.style(config);
 
     rami.sources['bg'] = {
       type: 'raster',
