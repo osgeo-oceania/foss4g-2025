@@ -19,6 +19,7 @@ export default {
 
     rami.layers = rami.layers
       .map((lyr) => {
+        if (lyr.id.includes('uilding')) return null;
         if (lyr.type == 'symbol' || lyr.type == 'fill-extrusion') return lyr;
         else if (lyr.type == 'line') {
           // @ts-ignore
