@@ -1,7 +1,9 @@
 import type { StyleSpecification } from 'maplibre-gl';
+import DefaultOverview from '$images/map-overview.png?enhanced';
 
 export default {
-  name: 'pierre',
+  name: 'Pierre',
+  image: DefaultOverview,
   style: (config: MapConfig): StyleSpecification => {
     const name = [
       'case',

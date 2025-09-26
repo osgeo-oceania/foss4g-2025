@@ -1,8 +1,11 @@
 import type { StyleSpecification } from 'maplibre-gl';
 import RamiStyle from './0rami';
 
+import SatelliteOverview from '$images/map-overview.png?enhanced';
+
 export default {
-  name: 'satellite',
+  name: 'Satellite',
+  image: SatelliteOverview,
   style: (config: MapConfig): StyleSpecification => {
     const rami = RamiStyle.style(config);
 
