@@ -1,13 +1,14 @@
 import type { StyleSpecification } from 'maplibre-gl';
-import RamiStyle from './0rami';
+import StreetsStyle from './streets';
 
 import SatelliteOverview from '$images/map/satellite.png?enhanced';
 
 export default {
   name: 'Satellite',
   image: SatelliteOverview,
+  textColor: 'white',
   style: (config: MapConfig): StyleSpecification => {
-    const rami = RamiStyle.style(config);
+    const rami = StreetsStyle.style(config);
 
     rami.sources['satellite'] = {
       type: 'raster',
