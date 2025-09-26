@@ -2,7 +2,7 @@ import type { StyleSpecification } from 'maplibre-gl';
 import RamiStyle from './0rami';
 import Pmtiles1920s from '$data/1920s.pmtiles';
 
-import SatelliteOverview from '$images/map-overview.png?enhanced';
+import SatelliteOverview from '$images/map/1920s.png?enhanced';
 
 export default {
   name: '1920s',

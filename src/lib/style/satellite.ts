@@ -1,7 +1,7 @@
 import type { StyleSpecification } from 'maplibre-gl';
 import RamiStyle from './0rami';
 
-import SatelliteOverview from '$images/map-overview.png?enhanced';
+import SatelliteOverview from '$images/map/satellite.png?enhanced';
 
 export default {
   name: 'Satellite',
