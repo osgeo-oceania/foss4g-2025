@@ -1,4 +1,5 @@
 import type { LngLat, StyleSpecification } from 'maplibre-gl';
+import type { Picture } from 'imagetools-core';
 
 declare global {
   export type LandcoverType =
@@ -18,6 +19,7 @@ declare global {
 
   export interface MapStyle {
     name: string;
+    image: Picture;
     style: (config: MapConfig) => StyleSpecification
   }
 

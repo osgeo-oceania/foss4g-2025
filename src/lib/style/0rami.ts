@@ -11,9 +11,11 @@ import type { MapScene } from '@dvt3d/maplibre-three-plugin';
 import * as MTP from '@dvt3d/maplibre-three-plugin';
 import { pointOnFeature } from '@turf/point-on-feature';
 
-console.log([...IndoorAUT.features, ...IndoorAUT.features.map((feat) => pointOnFeature(feat))]);
+import DefaultOverview from '$images/map-overview.png?enhanced';
+
 export default {
-  name: 'rami',
+  name: 'Default',
+  image: DefaultOverview,
   style: (config: MapConfig): StyleSpecification => {
     return {
       version: 8,
