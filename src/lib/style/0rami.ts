@@ -11,7 +11,7 @@ import type { MapScene } from '@dvt3d/maplibre-three-plugin';
 import * as MTP from '@dvt3d/maplibre-three-plugin';
 import { pointOnFeature } from '@turf/point-on-feature';
 
-import DefaultOverview from '$images/map-overview.png?enhanced';
+import DefaultOverview from '$images/map/default.png?enhanced';
 
 export default {
   name: 'Default',
@@ -577,29 +577,29 @@ export default {
             'text-halo-width': 1
           }
         },
-        {
-          id: 'pois-venue',
-          source: 'pois',
-          type: 'symbol',
-          minzoom: 10,
-          maxzoom: 17,
-          filter: ['==', ['get', 'type'], 'venue'],
-          layout: {
-            'icon-allow-overlap': true,
-            'icon-ignore-placement': true,
-            'icon-image': 'pin-logo',
-            'icon-anchor': 'bottom',
-            'icon-offset': [160, 0],
+        // {
+        //   id: 'pois-venue',
+        //   source: 'pois',
+        //   type: 'symbol',
+        //   minzoom: 10,
+        //   maxzoom: 17,
+        //   filter: ['==', ['get', 'type'], 'venue'],
+        //   layout: {
+        //     'icon-allow-overlap': true,
+        //     'icon-ignore-placement': true,
+        //     'icon-image': 'pin-logo',
+        //     'icon-anchor': 'bottom',
+        //     'icon-offset': [160, 0],
 
-            'icon-size': 0.3
-          },
-          paint: {
-            'text-halo-color': '#fff',
-            'text-halo-width': 2,
-            'text-halo-blur': 1,
-            'icon-opacity': ['interpolate', ['linear'], ['zoom'], 16, 1, 16.5, 0]
-          }
-        }
+        //     'icon-size': 0.3
+        //   },
+        //   paint: {
+        //     'text-halo-color': '#fff',
+        //     'text-halo-width': 2,
+        //     'text-halo-blur': 1,
+        //     'icon-opacity': ['interpolate', ['linear'], ['zoom'], 16, 1, 16.5, 0]
+        //   }
+        // }
       ]
     } as StyleSpecification;
   },
