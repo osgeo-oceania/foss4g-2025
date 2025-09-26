@@ -1,7 +1,6 @@
 <script lang="ts">
   import { MapState } from '$components/map/Map.svelte';
   import { getContext } from 'svelte';
-  import WaveImg from '$images/map-overview.png?enhanced';
 
   const mapState = getContext<() => MapState>('mapState')();
   import mapStyles from '$lib/style';
@@ -39,7 +38,7 @@
     </div>
     <div class="flex flex-col overflow-visible whitespace-nowrap">
       <div class="border-b-primary border-b font-serif text-sm">FOSS4G 2025 Auckland Map</div>
-      <div class="py-1 text-xs whitespace-nowrap italic">&quot;100% Free and Open Source&quot;</div>
+      <div class="py-1 text-xs whitespace-nowrap italic">&quot;100% Free and Open Source&quot; <span class="not-italic">(i)</span></div>
     </div>
   </div>
   <div class="absolute bottom-0 left-0 z-50 border-4 border-transparent">
