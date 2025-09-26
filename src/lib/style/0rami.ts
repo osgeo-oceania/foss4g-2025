@@ -604,18 +604,18 @@ export default {
     } as StyleSpecification;
   },
   beforeAdd: (map: maplibregl.Map, mapScene: MapScene) => {
-    const glTFLoader = new GLTFLoader();
+    if (!map.getLayer('sky-tower')) {
+      const glTFLoader = new GLTFLoader();
 
-    glTFLoader.load(TreeGlb, (gltf) => {
-      TreesLocations.features.forEach((feat) => {
-        let scene = gltf.scene.clone();
-        let rtcGroup = MTP.Creator.createRTCGroup(feat.geometry.coordinates);
-        rtcGroup.add(scene);
-        mapScene.addObject(rtcGroup);
+      glTFLoader.load(TreeGlb, (gltf) => {
+        TreesLocations.features.forEach((feat) => {
+          let scene = gltf.scene.clone();
+          let rtcGroup = MTP.Creator.createRTCGroup(feat.geometry.coordinates);
+          rtcGroup.add(scene);
+          mapScene.addObject(rtcGroup);
+        });
       });
-    });
-
-    if (!map.getLayer('sky-tower'))
+      
       map.addLayer({
         id: 'sky-tower',
         type: 'custom',
@@ -664,5 +664,6 @@ export default {
           this.map.triggerRepaint();
         }
       });
+    }
   }
 };
