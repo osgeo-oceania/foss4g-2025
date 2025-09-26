@@ -1,18 +1,18 @@
 import type { StyleSpecification } from 'maplibre-gl';
 import RamiStyle from './0rami';
-import Pmtiles1930 from '$data/1930.pmtiles';
+import Pmtiles1920s from '$data/1920s.pmtiles';
 
 import SatelliteOverview from '$images/map-overview.png?enhanced';
 
 export default {
-  name: '1930',
+  name: '1920s',
   image: SatelliteOverview,
   style: (config: MapConfig): StyleSpecification => {
     const rami = RamiStyle.style(config);
 
     rami.sources['bg'] = {
       type: 'raster',
-      url: `pmtiles://${Pmtiles1930}`,
+      url: `pmtiles://${Pmtiles1920s}`,
       tileSize: 512
     };
 
