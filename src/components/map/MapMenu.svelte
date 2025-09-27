@@ -14,7 +14,9 @@
   >
     <enhanced:img src={style.image} class={'h-full w-full overflow-clip rounded-md'} />
     <div
-      class="text-shadow absolute bottom-0 left-0 z-50 flex w-full items-center justify-center gap-x-0.5 pb-0.5"
+      class="text-shadow absolute bottom-0 left-0 z-50 flex w-full items-center justify-center gap-x-0.5 pb-0.5 text-shadow-md"
+      class:text-shadow-black={style.textColor == 'white'}
+      style={`color: ${style.textColor}`}
     >
       {#if isActive}
         <span class="icon-[tabler--stack] text-primary -ml-1 h-4 w-4"></span>
