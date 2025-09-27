@@ -2,7 +2,6 @@ import type { StyleSpecification } from 'maplibre-gl';
 import Pois from '$data/pois.json';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { PUBLIC_BASE_PATH } from '$env/static/public';
 import SkyTowerGlb from '$data/sky-tower.glb';
 import TreeGlb from '$data/tree.glb';
 import TreesLocations from '$data/notable-trees.json';
