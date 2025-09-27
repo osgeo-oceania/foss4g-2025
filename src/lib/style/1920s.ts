@@ -8,6 +8,7 @@ export default {
   name: '1920s',
   image: Nineteen20sOverview,
   textColor: 'black',
+  order: 2,
   style: (config: MapConfig): StyleSpecification => {
     const rami = StreetsStyle.style(config);
 

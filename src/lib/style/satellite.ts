@@ -7,6 +7,7 @@ export default {
   name: 'Satellite',
   image: SatelliteOverview,
   textColor: 'white',
+  order: 1,
   style: (config: MapConfig): StyleSpecification => {
     const rami = StreetsStyle.style(config);
 
