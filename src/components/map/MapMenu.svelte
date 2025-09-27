@@ -29,18 +29,18 @@
 {/snippet}
 
 <div
-  class="group absolute bottom-1 left-1 rounded-md sm:bottom-4 sm:left-4"
+  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
   onmouseout={() => (isOpen = false)}
 >
   <div
-    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out"
+    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 sm:border-8 border-transparent shadow-lg transition-all duration-300 ease-out"
     class:visible={isOpen}
     class:max-h-96={isOpen}
     class:max-w-96={isOpen}
     class:border-white={isOpen}
     class:bg-white={isOpen}
   >
-    <div class="flex gap-x-0.5">
+    <div class="flex gap-x-1 sm:gap-x-2">
       {@render MapSquare(mapState.mapConfig.style, true)}
       {#each mapStyles as mapStyle}
         {#if mapStyle.name != mapState.mapConfig.style.name}
@@ -48,15 +48,15 @@
         {/if}
       {/each}
     </div>
-    <div class="flex flex-col overflow-visible whitespace-nowrap">
-      <div class="border-b-primary border-b font-serif text-sm">FOSS4G 2025 Auckland Map</div>
-      <div class="py-1 text-xs whitespace-nowrap italic">
+    <div class="flex flex-col overflow-visible whitespace-nowrap mb-2">
+      <div class="font-serif text-sm -mb-1">FOSS4G 2025 Auckland Map</div>
+      <div class="py-1 text-xs whitespace-nowrap italic border-b-primary border-b ">
         &quot;100% Free and Open Source&quot; <span class="not-italic">(i)</span>
       </div>
     </div>
   </div>
   <div
-    class="absolute bottom-0 left-0 z-50 border-4 border-transparent"
+    class="absolute bottom-0 left-0 z-50 border-4 sm:border-8 border-transparent"
     ontouchend={() => (isOpen = !isOpen)}
     onmouseover={() => (isOpen = true)}
   >
