@@ -29,7 +29,7 @@
 
 <div class="group absolute bottom-1 left-1 rounded-md sm:bottom-4 sm:left-4">
   <div
-    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out group-hover:visible group-hover:max-h-[300px] group-hover:max-w-[340px] group-hover:border-white group-hover:bg-white"
+    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out group-focus-within:visible group-focus-within:max-h-[300px] group-focus-within:max-w-[340px] group-focus-within:border-white group-focus-within:bg-white group-hover:visible group-hover:max-h-[300px] group-hover:max-w-[340px] group-hover:border-white group-hover:bg-white"
   >
     <div class="flex gap-x-0.5">
       {@render MapSquare(mapState.mapConfig.style, true)}
