@@ -3,11 +3,12 @@
   import { getContext } from 'svelte';
 
   const mapState = getContext<() => MapState>('mapState')();
+  let isOpen: boolean = $state(false);
   import mapStyles from '$lib/style';
-  console.log(mapState.mapConfig.style.name)
+  console.log(mapState.mapConfig.style.name);
 </script>
 
-{#snippet MapSquare(style: MapStyle, isActive: bool)}
+{#snippet MapSquare(style: MapStyle, isActive: boolean)}
   <button
     class="btn btn-lg bg-primary btn-square relative aspect-square h-18 w-18 items-center justify-center rounded-lg border-0 p-0.5 !text-xs font-normal hover:cursor-pointer"
     onclick={() => (mapState.mapConfig.style = style)}
@@ -27,9 +28,17 @@
   </button>
 {/snippet}
 
-<div class="group absolute bottom-1 left-1 rounded-md sm:bottom-4 sm:left-4">
+<div
+  class="group absolute bottom-1 left-1 rounded-md sm:bottom-4 sm:left-4"
+  onmouseout={() => (isOpen = false)}
+>
   <div
-    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out group-focus-within:visible group-focus-within:max-h-[300px] group-focus-within:max-w-[340px] group-focus-within:border-white group-focus-within:bg-white group-hover:visible group-hover:max-h-[300px] group-hover:max-w-[340px] group-hover:border-white group-hover:bg-white"
+    class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out"
+    class:visible={isOpen}
+    class:max-h-96={isOpen}
+    class:max-w-96={isOpen}
+    class:border-white={isOpen}
+    class:bg-white={isOpen}
   >
     <div class="flex gap-x-0.5">
       {@render MapSquare(mapState.mapConfig.style, true)}
@@ -41,10 +50,16 @@
     </div>
     <div class="flex flex-col overflow-visible whitespace-nowrap">
       <div class="border-b-primary border-b font-serif text-sm">FOSS4G 2025 Auckland Map</div>
-      <div class="py-1 text-xs whitespace-nowrap italic">&quot;100% Free and Open Source&quot; <span class="not-italic">(i)</span></div>
+      <div class="py-1 text-xs whitespace-nowrap italic">
+        &quot;100% Free and Open Source&quot; <span class="not-italic">(i)</span>
+      </div>
     </div>
   </div>
-  <div class="absolute bottom-0 left-0 z-50 border-4 border-transparent">
+  <div
+    class="absolute bottom-0 left-0 z-50 border-4 border-transparent"
+    ontouchend={() => (isOpen = !isOpen)}
+    onmouseover={() => (isOpen = true)}
+  >
     {@render MapSquare(mapState.mapConfig.style, true)}
   </div>
 </div>
