@@ -29,10 +29,14 @@
 {/snippet}
 
 <div
-  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2 z-50"
-  
+  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
   onmouseleave={(e) => {
-    console.log(e);
+    console.log('leave');
+    isOpen = false;
+  }}
+
+  onmouseout={(e) => {
+    console.log('out');
     isOpen = false;
   }}
 >
@@ -43,6 +47,10 @@
     class:max-w-96={isOpen}
     class:border-white={isOpen}
     class:bg-white={isOpen}
+    onmouseleave={(e) => {
+      console.log('leave');
+      isOpen = false;
+    }}
   >
     <div class="flex gap-x-1 sm:gap-x-2">
       {@render MapSquare(mapState.mapConfig.style, true)}
@@ -61,7 +69,7 @@
   </div>
   <div
     class="absolute bottom-0 left-0 z-50 border-4 border-transparent sm:border-8"
-    ontouchend={() => (isOpen = !isOpen)}
+    ontouchend={() => (isOpen = true)}
     onmouseover={() => (isOpen = true)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
