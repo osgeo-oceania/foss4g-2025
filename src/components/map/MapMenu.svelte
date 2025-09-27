@@ -29,7 +29,7 @@
 {/snippet}
 
 <div
-  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
+  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2 z-50"
   
   onmouseleave={(e) => {
     console.log(e);
