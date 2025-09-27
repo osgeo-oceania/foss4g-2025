@@ -16,6 +16,7 @@ export default {
   name: 'Streets',
   image: StreetsOverview,
   textColor: 'black',
+  order: 0,
   style: (config: MapConfig): StyleSpecification => {
     return {
       version: 8,
