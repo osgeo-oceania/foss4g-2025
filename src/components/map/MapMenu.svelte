@@ -7,6 +7,35 @@
   import mapStyles from '$lib/style';
   import { Source } from 'three';
 
+  const software = [
+    {
+      name: 'GDAL',
+      category: 'processing',
+      link: 'https://gdal.org/'
+    },
+    {
+      name: 'QGIS',
+      category: 'processing',
+      link: 'https://qgis.org/'
+    },
+    {
+      name: 'planetiler',
+      category: 'processing',
+      link: 'https://github.com/onthegomap/planetiler'
+    },
+    { name: 'rasterio', category: 'processing', link: 'https://rasterio.readthedocs.io/' },
+    { name: 'geopandas', category: 'processing', link: 'https://geopandas.org/' },
+    {
+      name: 'exactextract',
+      category: 'processing',
+      link: 'https://github.com/isciences/exactextract'
+    },
+    { name: 'MapLibre', category: 'visualization', link: 'https://maplibre.org' },
+    { name: 'Svelte', category: 'visualization', link: 'https://svelte.dev/' },
+    { name: 'PMTiles', category: 'visualization', link: 'https://docs.protomaps.com/' },
+    { name: 'three.js', category: 'visualization', link: 'https://threejs.org/' }
+  ];
+
   const mapSources = [
     {
       name: 'Buildings',
@@ -44,31 +73,6 @@
       link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/3135043373ba48b7a9b5240370cb53ac_0/explore'
     },
     {
-      name: 'Alcohol Control Area',
-      source: 'Auckland Council',
-      link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/af300c4cc33b4dff8218394a1eeefe50_0/explore'
-    },
-    {
-      name: 'Bus Routes',
-      source: 'Auckland Council',
-      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=2'
-    },
-    {
-      name: 'Bus Stops',
-      source: 'Auckland Council',
-      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=0'
-    },
-    {
-      name: 'Ferry Routes',
-      source: 'Auckland Council',
-      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1'
-    },
-    {
-      name: 'Ferry Stops',
-      source: 'Auckland Council',
-      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1'
-    },
-    {
       name: 'Train Routes',
       source: 'Auckland Council',
       link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::trainservice?layer=1'
@@ -87,6 +91,11 @@
       name: 'Unitary Plan Base Zone',
       source: 'Auckland Council',
       link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/232d7b39839d4616bcbfc0509e26d9b3_0/explore'
+    },
+    {
+      name: 'Notable Trees',
+      source: 'Auckland Council',
+      link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/notable-trees-overlay'
     }
   ];
 </script>
@@ -129,11 +138,7 @@
 <div
   class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
   onmouseleave={(e) => {
-    console.log('leave');
     isOpen = false;
-  }}
-  onmouseout={(e) => {
-    console.log('out');
   }}
 >
   <div
@@ -233,13 +238,58 @@
           </div>
         </div>
         <div>
+          <div class="mt-2 text-base">3D Models</div>
+          <div class="ml-2 flex flex-wrap">
+            <a
+              href="https://www.printables.com/model/402895-auckland-sky-tower-new-zealand"
+              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              target="_blank"
+              ><span class="underline">Sky Tower</span>
+              <span class="icon-[lucide--external-link] ml-0.5"></span></a
+            >
+            <a
+              href="https://free3d.com/3d-model/low_poly_tree-816203.html"
+              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              target="_blank"
+              ><span class="underline">Tree</span>
+              <span class="icon-[lucide--external-link] ml-0.5"></span></a
+            >
+          </div>
+        </div>
+        <div>
           <div class="mt-2 text-base">0% OpenStreetMap Data</div>
         </div>
       </div>
       <div class="divider divider-start text-base">
-        <span class="icon-[gis--split-line] -mr-2 ml-1 h-10 w-10"></span> Data Processing
+        <span class="icon-[gis--split-line] -mr-2 ml-1 h-10 w-10"></span>Software
       </div>
-      <div class="card bg-base-300 rounded-box grid h-20">content</div>
+      <div class="card bg-base-300 rounded-box grid p-2">
+        <div class="text-base">Data Processing</div>
+        <div class="ml-2 flex flex-wrap">
+          {#each software.filter((software) => software.category == 'processing') as software_}
+            <a
+              href={software_.link}
+              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              target="_blank"
+              ><span class="underline">{software_.name}</span>
+              <span class="icon-[lucide--external-link] ml-0.5"></span></a
+            >
+          {/each}
+        </div>
+
+        <div class="mt-2 text-base">Visualization</div>
+        <div class="ml-2 flex flex-wrap">
+          {#each software.filter((software) => software.category == 'visualization') as software_}
+            <a
+              href={software_.link}
+              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              target="_blank"
+              ><span class="underline">{software_.name}</span>
+              <span class="icon-[lucide--external-link] ml-0.5"></span></a
+            >
+          {/each}
+        </div>
+      </div>
       <div class="divider divider-start text-base">Source Code</div>
     </div>
     <div class="modal-action">
