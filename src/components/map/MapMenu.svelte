@@ -214,6 +214,7 @@
       <label for="poisModal" class="btn">Close!</label>
     </div>
   </div>
+  <label class="modal-backdrop" for="mapInfoModal">Close</label>
 </div>
 
 <!-- Map Info modal -->
@@ -326,6 +327,7 @@
       <label for="mapInfoModal" class="btn btn-sm">close</label>
     </div>
   </div>
+  <label class="modal-backdrop" for="mapInfoModal">Close</label>
 </div>
 
 <a href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">buildings</a>
