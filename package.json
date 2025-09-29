@@ -62,9 +62,12 @@
     "@loaders.gl/i3s": "^4.3.3",
     "@turf/point-on-feature": "^7.2.0",
     "deck.gl": "^9.1.12",
+    "file-saver": "^2.0.5",
     "maplibre-gl": "^5.5.0",
     "math.gl": "^4.1.0",
     "pmtiles": "^4.3.0",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "togpx": "^0.5.4",
+    "tokml": "^0.4.0"
   }
 }
