@@ -231,7 +231,7 @@
     </div>
     <div class="mt-2">
       Click the buttons below to download the Points of Interest (POIs) of the conference, including
-      the conference venue, suggested lodging, events, and activities.
+      the conference venue, events, and activities.
     </div>
     <div class="my-4 flex justify-center gap-x-2">
       <button
