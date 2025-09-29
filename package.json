@@ -54,6 +54,7 @@
     "@fontsource/arvo": "^5.2.6",
     "@fontsource/inter": "^5.2.6",
     "@fontsource/kameron": "^5.2.6",
+    "@iconify-json/bi": "^1.2.6",
     "@iconify-json/fluent": "^1.2.31",
     "@iconify-json/solar": "^1.2.4",
     "@iconify-json/tabler": "^1.2.23",

@@ -560,10 +560,10 @@ export default {
               15,
               [
                 'format',
-                ['get', 'name'],
+                ['get', 'event'],
                 '\n',
                 {},
-                ['concat', ['get', 'date'], ' at ', ['get', 'place']],
+                ['concat', ['get', 'date'], ' at ', ['get', 'name']],
                 {
                   'text-font': ['literal', ['BellTopo Sans Italic']]
                 }

@@ -68,7 +68,7 @@
           ><span class="icon-[lucide--download]"></span> Download POIs</label
         >
         <label class="btn btn-xs" for="mapInfoModal"
-          ><span class="icon-[bi--info-circle]"></span> Map Information</label
+          ><span class="icon-[bi--info-circle]"></span> About the Map</label
         >
       </div>
     </div>
