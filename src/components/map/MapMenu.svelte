@@ -195,7 +195,7 @@
 <!-- Map Info modal -->
 <input type="checkbox" id="mapInfoModal" class="modal-toggle" />
 <div class="modal" role="dialog">
-  <div class="modal-box max-h-[80vh] max-w-96">
+  <div class="modal-box max-h-[60vh] max-w-96">
     <div class="flex items-center border-b border-b-black font-serif text-lg">Map Information</div>
     <div class="flex w-full flex-col">
       <div class="divider divider-start text-base">
