@@ -172,12 +172,7 @@
   </button>
 {/snippet}
 
-<div
-  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
-  onmouseleave={(e) => {
-    isOpen = false;
-  }}
->
+<div class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2">
   <div
     class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out sm:border-8"
     class:visible={isOpen}
@@ -185,10 +180,6 @@
     class:max-w-96={isOpen}
     class:border-white={isOpen}
     class:bg-white={isOpen}
-    onmouseleave={(e) => {
-      console.log('leave');
-      isOpen = false;
-    }}
   >
     <div class="flex gap-x-1 sm:gap-x-2">
       {@render MapSquare(mapState.mapConfig.style, true)}
@@ -217,13 +208,14 @@
     class="absolute bottom-0 left-0 z-50 border-4 border-transparent sm:border-8"
     ontouchend={() => (isOpen = true)}
     onmouseover={() => (isOpen = true)}
+    onfocusout={() => (isOpen = false)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
   </div>
 </div>
 
 <!-- POIs modal -->
-<input type="checkbox" id="poisModal" class="modal-toggle" checked={true} />
+<input type="checkbox" id="poisModal" class="modal-toggle" />
 <div class="modal" role="dialog">
   <div class="modal-box max-h-[60vh] max-w-96">
     <div class="flex items-center border-b border-b-black font-serif text-lg">
