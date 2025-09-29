@@ -61,7 +61,7 @@
         if (true)
           this.map?.flyTo({
             center: [174.7661, -36.84945],
-            zoom: 15,
+            zoom: 14,
             pitch: 28,
             duration: 5500,
             easing: (x) => 1 - Math.pow(1 - x, 3)
