@@ -193,9 +193,9 @@
 </div>
 
 <!-- Map Info modal -->
-<input type="checkbox" id="mapInfoModal" class="modal-toggle"/>
+<input type="checkbox" id="mapInfoModal" class="modal-toggle" />
 <div class="modal" role="dialog">
-  <div class="modal-box max-w-96 max-h-[80vh]">
+  <div class="modal-box max-h-[80vh] max-w-96">
     <div class="flex items-center border-b border-b-black font-serif text-lg">Map Information</div>
     <div class="flex w-full flex-col">
       <div class="divider divider-start text-base">
@@ -204,9 +204,13 @@
       <div class="card bg-base-300 rounded-box grid p-2">
         <div>
           <div class="text-base">LINZ (Land Information New Zealand)</div>
-          <div class="flex flex-wrap ml-2">
+          <div class="ml-2 flex flex-wrap">
             {#each mapSources.filter((source) => source.source == 'LINZ') as mapSource}
-              <a class="inline-flex items-center sm:w-36 mr-2 sm:mr-0" href={mapSource.link}>
+              <a
+                class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+                target="_blank"
+                href={mapSource.link}
+              >
                 <span class="underline">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
@@ -215,9 +219,13 @@
         </div>
         <div>
           <div class="mt-2 text-base">Auckland Council</div>
-          <div class="flex flex-wrap ml-2">
+          <div class="ml-2 flex flex-wrap">
             {#each mapSources.filter((source) => source.source == 'Auckland Council') as mapSource}
-              <a class="inline-flex items-center sm:w-36 mr-2 sm:mr-0" href={mapSource.link}>
+              <a
+                class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+                target="_blank"
+                href={mapSource.link}
+              >
                 <span class="underline">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
@@ -225,7 +233,8 @@
           </div>
         </div>
         <div>
-          <div class="text-base mt-2">0% OpenStreetMap Data</div></div>
+          <div class="mt-2 text-base">0% OpenStreetMap Data</div>
+        </div>
       </div>
       <div class="divider divider-start text-base">
         <span class="icon-[gis--split-line] -mr-2 ml-1 h-10 w-10"></span> Data Processing
