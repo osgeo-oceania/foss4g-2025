@@ -11,7 +11,21 @@
 {#snippet MapSquare(style: MapStyle, isActive: boolean)}
   <button
     class="btn btn-lg bg-primary btn-square relative aspect-square h-18 w-18 items-center justify-center rounded-lg border-0 p-0.5 !text-xs font-normal hover:cursor-pointer"
-    onclick={() => (mapState.mapConfig.style = style)}
+    onclick={() => {
+
+      mapState.isLoading = true;
+
+      const nextSourcesLoaded = (e) => {
+        console.log(e)
+        if (e.isSourceLoaded && e.sourceId == 'bg') {
+          mapState.isLoading = false;
+          mapState.map?.off('sourcedata', nextSourcesLoaded);
+        }
+      };
+      mapState.map?.on('sourcedata', nextSourcesLoaded);
+      mapState.mapConfig.style = style;
+      //mapState.map?.once('move', () => (mapState.isPreloading = false));
+    }}
   >
     <enhanced:img src={style.image} class={'h-full w-full overflow-clip rounded-md'} />
     <div

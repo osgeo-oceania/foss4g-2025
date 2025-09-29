@@ -26,6 +26,7 @@
       }
     });
     isPreloading: boolean = $state(true);
+    isLoading: boolean = $state(false);
 
     mapStyle: StyleSpecification = $derived(this.mapConfig.style.style(this.mapConfig));
     markers: MapLibre.Marker[] = $state([]);
@@ -101,7 +102,7 @@
 <div bind:this={mapContainer} class="h-full w-full">
   <Attribution />
   <MapMenu />
-  {#if mapState.isPreloading}
+  {#if mapState.isPreloading || mapState.isLoading}
     <div
       class="loading loading-spinner absolute top-1/2 left-1/2 z-50 w-16 -translate-x-1/2 -translate-y-1/2 transform"
     ></div>
