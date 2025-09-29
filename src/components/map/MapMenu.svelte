@@ -34,7 +34,6 @@
     console.log('leave');
     isOpen = false;
   }}
-
   onmouseout={(e) => {
     console.log('out');
   }}
@@ -65,8 +64,12 @@
         &quot;100% Free and Open Source&quot;
       </div>
       <div class="pt-2">
-        <button class="btn btn-xs"><span class="icon-[lucide--download]"></span> Download POIs</button>
-        <button class="btn btn-xs"><span class="icon-[bi--info-circle]"></span> Map Information</button>
+        <label class="btn btn-xs" for="poisModal"
+          ><span class="icon-[lucide--download]"></span> Download POIs</label
+        >
+        <label class="btn btn-xs" for="mapInfoModal"
+          ><span class="icon-[bi--info-circle]"></span> Map Information</label
+        >
       </div>
     </div>
   </div>
@@ -76,5 +79,29 @@
     onmouseover={() => (isOpen = true)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
+  </div>
+</div>
+
+<!-- POIs modal -->
+<input type="checkbox" id="poisModal" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="poisModal" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+
+<!-- POIs modal -->
+<input type="checkbox" id="mapInfoModal" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="mapInfoModal" class="btn">Close!</label>
+    </div>
   </div>
 </div>
