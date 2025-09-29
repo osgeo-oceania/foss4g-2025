@@ -21,22 +21,29 @@ export default {
 
     rami.layers = rami.layers
       .map((lyr) => {
+        // remove buildings
         if (lyr.id.includes('uilding')) return null;
-        if (lyr.type == 'symbol' || lyr.type == 'fill-extrusion') return lyr;
-        else if (lyr.type == 'line') {
+
+        // make roads a little transparent
+        if (lyr.id.includes('oad')) {
           // @ts-ignore
-          lyr.paint['line-opacity'] = 0.6;
-          
+          lyr.paint['line-opacity'] = 0.7;
+
           return lyr;
-        } else return null;
+        }
+        return lyr;
       })
       .filter((lyr) => lyr !== null);
 
-    rami.layers.unshift({
-      id: 'satellite',
-      type: 'raster',
-      source: 'satellite'
-    });
+    rami.layers.splice(
+      rami.layers.findIndex((lyr) => lyr.id == 'landuse') + 1,
+      0,
+      {
+        id: 'satellite',
+        type: 'raster',
+        source: 'satellite'
+      }
+    );
     return rami;
   }
 };
