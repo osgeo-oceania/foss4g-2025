@@ -36,6 +36,25 @@
     { name: 'three.js', category: 'visualization', link: 'https://threejs.org/' }
   ];
 
+  const sourceCode = [
+    {
+      name: 'MapLibre Svelte Component',
+      link: 'https://github.com/rami-dv/foss4g-2025/blob/main/src/components/map/Map.svelte'
+    },
+    {
+      name: 'MapLibre Streets Style',
+      link: 'https://github.com/rami-dv/foss4g-2025/blob/main/src/lib/style/streets.ts'
+    },
+    {
+      name: 'Calculate building heights with LINZ building footprints, DEM and DSM, using GDAL and exactextract',
+      link: 'https://github.com/rami-dv/foss4g-2025/blob/main/src/scripts/buildings.py'
+    },
+    {
+      name: 'Planetiler config for vector tile building from LINZ & Auckland Council data',
+      link: 'https://github.com/rami-dv/foss4g-2025/blob/main/src/scripts/config/planetiler.yml'
+    }
+  ];
+
   const mapSources = [
     {
       name: 'Buildings',
@@ -291,6 +310,17 @@
         </div>
       </div>
       <div class="divider divider-start text-base">Source Code</div>
+      <div class="card bg-base-300 rounded-box grid p-2">
+        {#each sourceCode as sourceCode_}
+          <div class="">
+            •
+            <a href={sourceCode_.link} class="" target="_blank"
+              ><span class="underline">{sourceCode_.name}</span>
+              <span class="icon-[lucide--external-link] ml-0.5"></span></a
+            >
+          </div>
+        {/each}
+      </div>
     </div>
     <div class="modal-action">
       <label for="mapInfoModal" class="btn btn-sm">close</label>
