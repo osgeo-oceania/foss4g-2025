@@ -5,7 +5,90 @@
   const mapState = getContext<() => MapState>('mapState')();
   let isOpen: boolean = $state(false);
   import mapStyles from '$lib/style';
-  console.log(mapState.mapConfig.style.name);
+  import { Source } from 'three';
+
+  const mapSources = [
+    {
+      name: 'Buildings',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/101290-nz-building-outlines/'
+    },
+    {
+      name: 'Coastline',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/'
+    },
+    {
+      name: 'Road Centrelines',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/50329-nz-road-centrelines-topo-150k/'
+    },
+    {
+      name: 'Places',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/51681-nz-place-names-nzgb/'
+    },
+    {
+      name: 'Suburbs & Localities',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/113764-nz-suburbs-and-localities/'
+    },
+    {
+      name: 'Airports',
+      source: 'LINZ',
+      link: 'https://data.linz.govt.nz/layer/50237-nz-airport-polygons-topo-150k/'
+    },
+    {
+      name: 'Parks',
+      source: 'Auckland Council',
+      link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/3135043373ba48b7a9b5240370cb53ac_0/explore'
+    },
+    {
+      name: 'Alcohol Control Area',
+      source: 'Auckland Council',
+      link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/af300c4cc33b4dff8218394a1eeefe50_0/explore'
+    },
+    {
+      name: 'Bus Routes',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=2'
+    },
+    {
+      name: 'Bus Stops',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::busservice?layer=0'
+    },
+    {
+      name: 'Ferry Routes',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1'
+    },
+    {
+      name: 'Ferry Stops',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::ferryservice?layer=1'
+    },
+    {
+      name: 'Train Routes',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::trainservice?layer=1'
+    },
+    {
+      name: 'Train Stations',
+      source: 'Auckland Council',
+      link: 'https://data-atgis.opendata.arcgis.com/datasets/ATgis::trainservice?layer=0'
+    },
+    {
+      name: 'Arterial Roads',
+      source: 'Auckland Council',
+      link: 'https://www.arcgis.com/home/item.html?id=4673e8f3f20942d7a21cfcb36971e103'
+    },
+    {
+      name: 'Unitary Plan Base Zone',
+      source: 'Auckland Council',
+      link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/232d7b39839d4616bcbfc0509e26d9b3_0/explore'
+    }
+  ];
 </script>
 
 {#snippet MapSquare(style: MapStyle, isActive: boolean)}
@@ -24,7 +107,7 @@
         mapState.map?.on('sourcedata', bgSourceLoaded);
         mapState.map?.once('move', () => (mapState.isPreloading = false));
       }
-      
+
       mapState.mapConfig.style = style;
     }}
   >
@@ -109,14 +192,51 @@
   </div>
 </div>
 
-<!-- POIs modal -->
-<input type="checkbox" id="mapInfoModal" class="modal-toggle" />
+<!-- Map Info modal -->
+<input type="checkbox" id="mapInfoModal" class="modal-toggle" checked />
 <div class="modal" role="dialog">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">This modal works with a hidden checkbox!</p>
+  <div class="modal-box max-w-96">
+    <div class="flex items-center border-b border-b-black font-serif text-lg">Map Information</div>
+    <div class="flex w-full flex-col">
+      <div class="divider divider-start text-base">
+        <span class="icon-[gis--satellite-earth] -mr-2 ml-1 h-10 w-10"></span>Data Sources
+      </div>
+      <div class="card bg-base-300 rounded-box grid p-2">
+        <div>
+          <div class="text-base">LINZ (Land Information New Zealand)</div>
+          <div class="flex flex-wrap ml-2">
+            {#each mapSources.filter((source) => source.source == 'LINZ') as mapSource}
+              <a class="inline-flex items-center sm:w-36 mr-2 sm:mr-0" href={mapSource.link}>
+                <span class="underline">{mapSource.name}</span>
+                <span class="icon-[lucide--external-link] ml-0.5"></span></a
+              >
+            {/each}
+          </div>
+        </div>
+        <div>
+          <div class="mt-2 text-base">Auckland Council</div>
+          <div class="flex flex-wrap ml-2">
+            {#each mapSources.filter((source) => source.source == 'Auckland Council') as mapSource}
+              <a class="inline-flex items-center sm:w-36 mr-2 sm:mr-0" href={mapSource.link}>
+                <span class="underline">{mapSource.name}</span>
+                <span class="icon-[lucide--external-link] ml-0.5"></span></a
+              >
+            {/each}
+          </div>
+        </div>
+        <div>
+          <div class="text-base mt-2">0% OpenStreetMap Data</div></div>
+      </div>
+      <div class="divider divider-start text-base">
+        <span class="icon-[gis--split-line] -mr-2 ml-1 h-10 w-10"></span> Data Processing
+      </div>
+      <div class="card bg-base-300 rounded-box grid h-20">content</div>
+      <div class="divider divider-start text-base">Source Code</div>
+    </div>
     <div class="modal-action">
-      <label for="mapInfoModal" class="btn">Close!</label>
+      <label for="mapInfoModal" class="btn btn-sm">close</label>
     </div>
   </div>
 </div>
+
+<a href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">buildings</a>
