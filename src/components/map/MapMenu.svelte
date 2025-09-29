@@ -37,7 +37,6 @@
 
   onmouseout={(e) => {
     console.log('out');
-    isOpen = false;
   }}
 >
   <div
@@ -63,7 +62,11 @@
     <div class="mb-2 flex flex-col overflow-visible whitespace-nowrap">
       <div class="-mb-1 font-serif text-sm">FOSS4G 2025 Auckland Map</div>
       <div class="border-b-primary border-b py-1 text-xs whitespace-nowrap italic">
-        &quot;100% Free and Open Source&quot; <span class="not-italic">(i)</span>
+        &quot;100% Free and Open Source&quot;
+      </div>
+      <div class="pt-2">
+        <button class="btn btn-xs"><span class="icon-[lucide--download]"></span> Download POIs</button>
+        <button class="btn btn-xs"><span class="icon-[bi--info-circle]"></span> Map Information</button>
       </div>
     </div>
   </div>
