@@ -10,32 +10,40 @@ export default {
   textColor: 'black',
   order: 2,
   style: (config: MapConfig): StyleSpecification => {
-    const rami = StreetsStyle.style(config);
+    const streets = StreetsStyle.style(config);
 
-    rami.sources['bg'] = {
+    streets.sources['bg'] = {
       type: 'raster',
       url: `pmtiles://${Pmtiles1920s}`,
       tileSize: 512
     };
 
-    rami.layers = rami.layers
+    streets.layers = streets.layers
       .map((lyr) => {
+        // remove buildings
         if (lyr.id.includes('uilding')) return null;
-        if (lyr.type == 'symbol' || lyr.type == 'fill-extrusion') return lyr;
-        else if (lyr.type == 'line') {
+
+        // make roads a little transparent
+        if (lyr.id.includes('oad')) {
           // @ts-ignore
-          lyr.paint['line-opacity'] = 0.6;
-          
+          lyr.paint['line-opacity'] = 0.7;
+
           return lyr;
-        } else return null;
+        }
+        return lyr;
       })
       .filter((lyr) => lyr !== null);
 
-    rami.layers.unshift({
-      id: 'bg',
-      type: 'raster',
-      source: 'bg'
-    });
-    return rami;
+    streets.layers.splice(
+      streets.layers.findIndex((lyr) => lyr.id == 'landuse') + 1,
+      0,
+      {
+        id: 'bg',
+        type: 'raster',
+        source: 'bg'
+      }
+    );
+    
+    return streets;
   }
 };
