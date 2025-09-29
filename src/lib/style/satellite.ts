@@ -9,9 +9,9 @@ export default {
   textColor: 'white',
   order: 1,
   style: (config: MapConfig): StyleSpecification => {
-    const rami = StreetsStyle.style(config);
+    const streets = StreetsStyle.style(config);
 
-    rami.sources['bg'] = {
+    streets.sources['bg'] = {
       type: 'raster',
       tiles: [
         'https://tiles-cdn.koordinates.com/services;key=95fa766262344182bbf4b67d91b59c3c/tiles/v4/layer=121752/EPSG:3857/{z}/{x}/{y}.png'
@@ -19,7 +19,7 @@ export default {
       tileSize: 256
     };
 
-    rami.layers = rami.layers
+    streets.layers = streets.layers
       .map((lyr) => {
         // remove buildings
         if (lyr.id.includes('uilding')) return null;
@@ -35,8 +35,8 @@ export default {
       })
       .filter((lyr) => lyr !== null);
 
-    rami.layers.splice(
-      rami.layers.findIndex((lyr) => lyr.id == 'landuse') + 1,
+    streets.layers.splice(
+      streets.layers.findIndex((lyr) => lyr.id == 'landuse') + 1,
       0,
       {
         id: 'bg',
@@ -44,6 +44,6 @@ export default {
         source: 'bg'
       }
     );
-    return rami;
+    return streets;
   }
 };
