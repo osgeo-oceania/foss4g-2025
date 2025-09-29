@@ -523,7 +523,7 @@ export default {
               ['literal', [-1, 0]],
               ['literal', [1, 0]]
             ],
-            'text-field': ['step', ['zoom'], '', 14, ['get', 'name']],
+            'text-field': ['step', ['zoom'], '', 15, ['get', 'name']],
             'text-font': ['literal', ['BellTopo Sans Regular']],
             'text-size': 12
           },
@@ -557,7 +557,7 @@ export default {
               'step',
               ['zoom'],
               '',
-              14,
+              15,
               [
                 'format',
                 ['get', 'name'],

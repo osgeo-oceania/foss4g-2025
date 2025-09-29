@@ -21,7 +21,6 @@
     "@eslint/js": "^9.18.0",
     "@iconify-json/lucide": "^1.2.47",
     "@iconify-json/material-symbols-light": "^1.2.25",
-    "@iconify-json/uil": "^1.2.3",
     "@iconify/tailwind4": "^1.0.6",
     "@magidoc/plugin-svelte-marked": "^6.2.0",
     "@sveltejs/adapter-static": "^3.0.8",
