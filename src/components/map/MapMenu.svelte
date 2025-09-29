@@ -1,11 +1,27 @@
 <script lang="ts">
   import { MapState } from '$components/map/Map.svelte';
   import { getContext } from 'svelte';
+  import poisGeojson from '$data/pois.json';
+
+  import fileSaver from 'file-saver';
+  import tokml from 'tokml';
+
+  const poisTransformed = {
+    type: 'FeatureCollection',
+    features: poisGeojson.features.map((feat) => ({
+      ...feat,
+      properties: {
+        name:
+          feat.properties.type == 'event'
+            ? `${feat.properties.name} - ${feat.properties.event} on ${feat.properties.date}`
+            : feat.properties.name
+      }
+    }))
+  };
 
   const mapState = getContext<() => MapState>('mapState')();
   let isOpen: boolean = $state(false);
   import mapStyles from '$lib/style';
-  import { Source } from 'three';
 
   const software = [
     {
@@ -205,16 +221,35 @@
 </div>
 
 <!-- POIs modal -->
-<input type="checkbox" id="poisModal" class="modal-toggle" />
+<input type="checkbox" id="poisModal" class="modal-toggle" checked={true} />
 <div class="modal" role="dialog">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">This modal works with a hidden checkbox!</p>
-    <div class="modal-action">
-      <label for="poisModal" class="btn">Close!</label>
+  <div class="modal-box max-h-[60vh] max-w-96">
+    <div class="flex items-center border-b border-b-black font-serif text-lg">
+      Download Map POIs
+    </div>
+    <div class="mt-2">
+      Click the buttons below to download the Points of Interest (POIs) of the conference, including
+      the conference venue, suggested lodging, events, and activities.
+    </div>
+    <div class="my-4 flex justify-center gap-x-2">
+      <button
+        class="btn btn-xs"
+        onclick={() => {
+          const kmlString = tokml(poisTransformed);
+
+          const blob = new Blob([kmlString], { type: 'application/vnd.google-earth.kml+xml' });
+          fileSaver.saveAs(blob, 'foss4g2025.kml');
+        }}><span class="icon-[lucide--download]"></span> Download KML</button
+      >
+      <button class="btn btn-xs" onclick={() => window.alert('Sorry, we ran out of shapefiles!')}
+        ><span class="icon-[lucide--download]"></span> Download SHP</button
+      >
+    </div>
+    <div class="modal-action mt-2">
+      <label for="poisModal" class="btn btn-sm">Close!</label>
     </div>
   </div>
-  <label class="modal-backdrop" for="mapInfoModal">Close</label>
+  <label class="modal-backdrop" for="poisModal">Close</label>
 </div>
 
 <!-- Map Info modal -->
@@ -310,7 +345,9 @@
           {/each}
         </div>
       </div>
-      <div class="divider divider-start text-base">Source Code</div>
+      <div class="divider divider-start text-base">
+        <span class="icon-[tabler--source-code] -mr-2 ml-1 h-10 w-10"></span> Source Code
+      </div>
       <div class="card bg-base-300 rounded-box grid p-2">
         {#each sourceCode as sourceCode_}
           <div class="">
