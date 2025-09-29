@@ -8,15 +8,17 @@
 
   const poisTransformed = {
     type: 'FeatureCollection',
-    features: poisGeojson.features.map((feat) => ({
-      ...feat,
-      properties: {
-        name:
-          feat.properties.type == 'event'
-            ? `${feat.properties.name} - ${feat.properties.event} on ${feat.properties.date}`
-            : feat.properties.name
-      }
-    }))
+    features: poisGeojson.features
+      .filter((feat) => feat.properties.type != 'lodging')
+      .map((feat) => ({
+        ...feat,
+        properties: {
+          name:
+            feat.properties.type == 'event'
+              ? `${feat.properties.name} - ${feat.properties.event} on ${feat.properties.date}`
+              : feat.properties.name
+        }
+      }))
   };
 
   const mapState = getContext<() => MapState>('mapState')();
