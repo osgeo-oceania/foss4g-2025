@@ -176,8 +176,8 @@
       "id": 13,
       "properties": {
         "id": "conference-dinner",
-        "name": "Conference Dinner",
-        "place": "Auckland Hilton",
+        "name": "Auckland Hilton",
+        "event": "Conference Dinner",
         "date": "Nov 19",
         "type": "event"
       },
@@ -191,8 +191,8 @@
       "id": 14,
       "properties": {
         "id": "women-in-geospatial",
-        "name": "Women in Geospatial",
-        "place": "Amano",
+        "name": "Amano",
+        "event": "Women in Geospatial",
         "date": "Nov 20",
         "type": "event"
       },
@@ -206,8 +206,8 @@
       "id": 15,
       "properties": {
         "id": "geochicas",
-        "name": "GeoChicas",
-        "place": "Rocketman",
+        "name": "Rocketman",
+        "event": "GeoChicas",
         "date": "Nov 20",
         "type": "event",
         "orientation": "left"
@@ -222,8 +222,8 @@
       "id": 16,
       "properties": {
         "id": "tgp-breakfast",
-        "name": "TGP Breakfast",
-        "place": "Scarecrow",
+        "name": "Scarecrow",
+        "event": "TGP Breakfast",
         "date": "Nov 19",
         "type": "event"
       },
