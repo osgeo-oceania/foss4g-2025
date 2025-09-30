@@ -49,7 +49,7 @@
         pitch: 28,
         cancelPendingTileRequestsWhileZooming: false,
         minZoom: 10,
-        zoom: 13,
+        zoom: 10,
         hash: true,
         style: this.mapStyle
       });
@@ -63,7 +63,7 @@
             center: [174.7661, -36.84945],
             zoom: 14,
             pitch: 28,
-            duration: 5500,
+            duration: 7500,
             easing: (x) => 1 - Math.pow(1 - x, 3)
           });
         this.isPreloading = false;
@@ -99,7 +99,7 @@
   });
 </script>
 
-<div bind:this={mapContainer} class="h-full w-full">
+<div class:visibile={mapState.isPreloading} class="h-full w-full">
   <Attribution />
   <MapMenu />
   {#if mapState.isPreloading || mapState.isLoading}
@@ -107,5 +107,10 @@
       class="loading loading-spinner absolute top-1/2 left-1/2 z-50 w-16 -translate-x-1/2 -translate-y-1/2 transform"
     ></div>
   {/if}
+  <div
+    bind:this={mapContainer}
+    class="opacity-0 duration-700 h-full w-full transition-all"
+    class:opacity-100={!mapState.isPreloading}
+  ></div>
   {@render children?.()}
 </div>

@@ -360,5 +360,3 @@
   </div>
   <label class="modal-backdrop" for="mapInfoModal">Close</label>
 </div>
-
-<a href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">buildings</a>
