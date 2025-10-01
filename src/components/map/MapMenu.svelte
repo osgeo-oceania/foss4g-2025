@@ -223,13 +223,13 @@
     <div class="flex items-center border-b border-b-black font-serif text-lg">
       Download Map POIs
     </div>
-    <div class="mt-2">
+    <div class="mt-2 text-xs">
       Click the buttons below to download the Points of Interest (POIs) of the conference, including
       the conference venue, events, and activities.
     </div>
     <div class="my-4 flex justify-center gap-x-2">
       <button
-        class="btn btn-xs"
+        class="btn btn-xs font-normal"
         onclick={() => {
           const kmlString = tokml(poisTransformed);
 
@@ -237,7 +237,7 @@
           fileSaver.saveAs(blob, 'foss4g2025.kml');
         }}><span class="icon-[lucide--download]"></span> Download KML</button
       >
-      <button class="btn btn-xs" onclick={() => window.alert('Sorry, we ran out of shapefiles!')}
+      <button class="btn btn-xs font-normal" onclick={() => window.alert('Sorry, we ran out of shapefiles!')}
         ><span class="icon-[lucide--download]"></span> Download SHP</button
       >
     </div>
@@ -245,7 +245,7 @@
       <label for="poisModal" class="btn btn-sm">Close!</label>
     </div>
   </div>
-  <label class="modal-backdrop" for="poisModal">Close</label>
+  <label class="modal-backdrop font-normal" for="poisModal">Close</label>
 </div>
 
 <!-- Map Info modal -->
