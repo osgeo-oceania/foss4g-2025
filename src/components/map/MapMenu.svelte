@@ -125,7 +125,9 @@
       link: 'https://www.arcgis.com/home/item.html?id=4673e8f3f20942d7a21cfcb36971e103'
     },
     {
-      name: 'Unitary Plan Base Zone',
+
+
+      name: 'Unitary Plan Base',
       source: 'Auckland Council',
       link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/232d7b39839d4616bcbfc0509e26d9b3_0/explore'
     },
@@ -195,10 +197,10 @@
         &quot;100% Free and Open Source&quot;
       </div>
       <div class="pt-2">
-        <label class="btn btn-xs" for="poisModal"
+        <label class="btn btn-xs font-normal" for="poisModal"
           ><span class="icon-[lucide--download]"></span> Download POIs</label
         >
-        <label class="btn btn-xs" for="mapInfoModal"
+        <label class="btn btn-xs font-normal" for="mapInfoModal"
           ><span class="icon-[bi--info-circle]"></span> About the Map</label
         >
       </div>
@@ -257,15 +259,15 @@
       </div>
       <div class="card bg-base-300 rounded-box grid p-2">
         <div>
-          <div class="text-base">LINZ (Land Information New Zealand)</div>
+          <div class="text-sm">LINZ (Land Information New Zealand)</div>
           <div class="ml-2 flex flex-wrap">
             {#each mapSources.filter((source) => source.source == 'LINZ') as mapSource}
               <a
-                class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+                class="mr-2 block items-center sm:mr-0 sm:w-36"
                 target="_blank"
                 href={mapSource.link}
               >
-                <span class="underline">{mapSource.name}</span>
+                <span class="underline text-xs">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
             {/each}
@@ -276,11 +278,11 @@
           <div class="ml-2 flex flex-wrap">
             {#each mapSources.filter((source) => source.source == 'Auckland Council') as mapSource}
               <a
-                class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+                class="mr-2 block items-center sm:mr-0 sm:w-36"
                 target="_blank"
                 href={mapSource.link}
               >
-                <span class="underline">{mapSource.name}</span>
+                <span class="underline text-xs">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
             {/each}
@@ -291,16 +293,16 @@
           <div class="ml-2 flex flex-wrap">
             <a
               href="https://www.printables.com/model/402895-auckland-sky-tower-new-zealand"
-              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline">Sky Tower</span>
+              ><span class="underline text-xs">Sky Tower</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
             <a
               href="https://free3d.com/3d-model/low_poly_tree-816203.html"
-              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline">Tree</span>
+              ><span class="underline text-xs">Tree</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           </div>
@@ -318,9 +320,9 @@
           {#each software.filter((software) => software.category == 'processing') as software_}
             <a
               href={software_.link}
-              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline">{software_.name}</span>
+              ><span class="underline text-xs">{software_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           {/each}
@@ -331,9 +333,9 @@
           {#each software.filter((software) => software.category == 'visualization') as software_}
             <a
               href={software_.link}
-              class="mr-2 inline-flex items-center sm:mr-0 sm:w-36"
+              class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline">{software_.name}</span>
+              ><span class="underline text-xs">{software_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           {/each}
@@ -347,7 +349,7 @@
           <div class="">
             •
             <a href={sourceCode_.link} class="" target="_blank"
-              ><span class="underline">{sourceCode_.name}</span>
+              ><span class="underline text-xs">{sourceCode_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           </div>
