@@ -19,7 +19,7 @@ title: Register
 
 <main class="my-4 space-y-5">
 
-  <Countdown label="Standard pricing closes in:" time="2025-10-04T00:00:00+12:00" />
+  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   ## Get Your Tickets
 
