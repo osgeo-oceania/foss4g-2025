@@ -1,5 +1,27 @@
 export default [
   {
+    date: '3rd October 2025',
+    title: 'Standard Pricing ends today',
+    content: `
+Standard pricing ends today.
+
+Jumping from $950 to $1250 NZD tomorrow.
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=a52070e1ad'
+  },
+  {
+    date: '22nd September 2025',
+    title: 'The program is live + short extension of standard pricing and TGP',
+    content: `
+We've extended standard pricing for 2 weeks.
+
+Round 2 of the Travel Grant Program is also extended.
+
+The full week-long program is live!
+`,
+    link: 'https://us14.campaign-archive.com/?u=b871212546ebe0a91f640e01f&id=2fb2c17cd0'
+  }, 
+  {
     date: '9th September 2025',
     title: 'Announcing keynotes and workshops + round 2 of travel grants',
     content: `
