@@ -1,9 +1,9 @@
 ---
-title: Accomodation
+title: Accommodation
 ---
 
 <svelte:head>
-  <title>Accomodation</title>
+  <title>Accommodation</title>
 </svelte:head>
 
 <script lang="ts">
@@ -11,9 +11,9 @@ title: Accomodation
   import Link from '$components/Link.svelte';
 </script>
 
-<Heading>Accomodation</Heading>
+<Heading>Accommodation</Heading>
 
-Auckland has a wide range of accomodation options, from 5-star hotels, to backpackers and vacation rental houses.
+Auckland has a wide range of accommodation options, from 5-star hotels, to backpackers and vacation rental houses.
 
 ### Conference Discounts
 

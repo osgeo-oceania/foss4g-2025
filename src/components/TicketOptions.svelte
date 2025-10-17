@@ -3,7 +3,7 @@
 
   const ticketOptions = [
     {
-      title: 'Standard Conference Ticket',
+      title: 'Last Chance Conference Ticket',
       description:
         'Includes full conference registration for Wednesday 19th, Thursday 20th and Friday 21st November as well as access to the icebreaker on Tuesday night.',
       price: '$1250',
