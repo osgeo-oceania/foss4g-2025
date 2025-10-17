@@ -85,8 +85,8 @@
           url: '/attend/nz-adventures'
         },
         {
-          label: 'Accomodation',
-          url: '/attend/accomodation'
+          label: 'Accommodation',
+          url: '/attend/accommodation'
         }
       ]
     },
