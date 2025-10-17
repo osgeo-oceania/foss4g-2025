@@ -31,7 +31,6 @@ There will be catering on these days for workshop participants only.
 • [Hands-on DGGS and OGC DGGS-API with DGGRID and pydggsapi Workshop](https://talks.osgeo.org/foss4g-2025/talk/AGFBHA/)<br>
 • [Introduction to GeoServer Workshop](https://talks.osgeo.org/foss4g-2025/talk/H7LS7U/)<br>
 • [Let’s create Interactive Web Maps with the Open-Source WebGIS: Re:Earth - Visualizer + Re:Earth CMS Workshop](https://talks.osgeo.org/foss4g-2025/talk/RQLV9M/)<br>
-• [Microwave Image Processing: Exploring realms of Earth through spaceborne Radars using Python Workshop](https://talks.osgeo.org/foss4g-2025/talk/EQTRSA/)<br>
 • [QField & QFieldCloud: Hands-On Fieldwork Workshop](https://talks.osgeo.org/foss4g-2025/talk/BJJF7M/)
 
 <GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
@@ -43,7 +42,6 @@ There will be catering on these days for workshop participants only.
 1:30pm to 5:00pm
 
 **You will be able to choose one of the following after purchase:**<br>
-• [Achieving Reproducibility in Geospatial Data Processing with Apache Airflow Workshop](https://talks.osgeo.org/foss4g-2025/talk/VTVQQL/)<br>
 • [Cartography for Rebels: Building Beautiful Maps with Free Tools Workshop](https://talks.osgeo.org/foss4g-2025/talk/RUVQSJ/)<br>
 • [Doing Geospatial with Python Workshop](https://talks.osgeo.org/foss4g-2025/talk/XD8Z8K/)<br>
 • [Exploring Cloud-Native Geospatial Formats: Hands-on with Raster Data Workshop](https://talks.osgeo.org/foss4g-2025/talk/KZGHTZ/)<br>
@@ -73,7 +71,7 @@ There will be catering on these days for workshop participants only.
 • [Modelling Climate Risks Using NASA Earthdata Cloud & Python APIs Workshop](https://talks.osgeo.org/foss4g-2025/talk/QTAWL7/)<br>
 • [Oxidize to Decarbonize. Building more sustainable geospatial processes with Rust Workshop](https://talks.osgeo.org/foss4g-2025/talk/RDZMQP/)<br>
 • [pgRouting basic Workshop](https://talks.osgeo.org/foss4g-2025/talk/FGATAY/)<br>
-• [PMTiles for Hobbyists: An Introduction Workshop](https://talks.osgeo.org/foss4g-2025/talk/BMWWR9/)<br>
+• [Standalone Web Maps, No Platform Required Workshop](https://talks.osgeo.org/foss4g-2025/talk/BMWWR9/)<br>
 • [Terra Draw - cross-platform drawing library for all map applications Workshop](https://talks.osgeo.org/foss4g-2025/talk/7S9CLN/)
 
 <GiantButton href="https://ti.to/osgeo-oceania/foss4g-2025/">
