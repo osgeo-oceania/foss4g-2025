@@ -5,12 +5,34 @@ title: Events
 <script lang="ts">
   import Heading from '$components/Heading.svelte';
   import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
+  import MaritimeRoom from '$images/maritime-room.jpg?enhanced';
   import Dinner from '$images/conference-dinner-2023.png?enhanced';
+  import Button from '$components/Button.svelte';
 </script>
 
-<Heading>Events</Heading>
+
 
 <enhanced:img src={Dinner} />
+
+<div class="flex flex-row justify-between">
+<Heading>Events</Heading>
+<Button class="w-50" href="/program/schedule">View full schedule</Button>
+</div>
+
+We're excited to offer a range of supporting events around this years conference.
+
+### Movie screening
+
+Monday 17th November, 6pm
+
+A free movie screening held at the AUT conference centre, room WG403.
+
+**I am the River, the River is Me**
+
+> A canoe trip down the Whanganui River in New Zealand, led by a Māori elder, awakens 
+> spiritual belief and practice, and becomes a call to action to draw closer to nature 
+> and fight climate change through a fundamental value shift.
+
 
 ### [Business 2 Business](/program/b2b-event)
 
@@ -24,10 +46,11 @@ An afternoon session of networking over canapes and drinks with brief talks from
 
 Tuesday 18th November from 6.30pm
 
-Our Ice Breaker event will be held at the Maritime Room, New Zealand Maritime Museum.
+Our Ice Breaker event will be held at the Maritime Room, New Zealand Maritime Museum, Corner of Quay and Hobson Street, Auckland.
 
-Corner of Quay and Hobson Street, Auckland
+This is a relaxed event to meet your fellow delegates over canapes and drinks.
 
+<enhanced:img src={MaritimeRoom} alt="Maritime Room View" />
 
 ### Travel Grant Program Breakfast
 
@@ -37,22 +60,33 @@ Held at Scarecrow
 
 33 Victoria Street East, Auckland Central
 
+This event is available to our Travel Grant recipients.
 
 ### Gala Dinner
 
 Wednesday 19th November - Evening
 
-Our gala dinner is at the Hilton, Auckland.
+Our gala dinner is at the Hilton, Auckland. Join the community in celebrating FOSS4G over dinner and live music.
 
 147 Quay Street, Auckland Central
+
+[Purchase Tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/conference-dinner)
+
+### Women in Spatial Breakfast
+
+Thursday 20th November – Morning
+
+7 pm at Amano, 66 - 68, Tyler Street, Britomart Place, Auckland
+
+*Tickets are sold out!* [Join Waitlist →](https://ti.to/osgeo-oceania/foss4g-2025/with/women-in-geospatial-breakfast)
 
 ### GeoChicas
 
 Thursday 20th November – Evening
 
-Held at RocketMan
+Held at RocketMan, 8 Roukai Lane, Auckland Central
 
-8 Roukai Lane, Auckland Central
+[Pay what you want for tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/geochickas)
 
 ### Rangitoto Island Day Trip
 
