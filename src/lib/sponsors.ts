@@ -89,6 +89,12 @@ export default {
     link: 'https://auspatious.com/',
     level: LEVELS.BRONZE
   },
+  geosolutions: {
+    name: 'GeoSolutions',
+    logo: () => import('$images/logos/geosolutions.png?enhanced'),
+    link: 'https://www.geosolutionsgroup.com/',
+    level: LEVELS.BRONZE
+  },
   wdc: {
     name: 'WDC',
     logo: () => import('$images/logos/wdc.png?enhanced'),
