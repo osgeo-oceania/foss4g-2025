@@ -5,5 +5,5 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [enhancedImages(), tailwindcss(), sveltekit()],
-  assetsInclude: ['src/data/*.glb', 'src/data/*.pmtiles', 'src/data/glyphs/**/*.pbf']
+  assetsInclude: ['src/data/*.glb', 'src/data/*.pmtiles*', 'src/data/glyphs/**/*.pbf']
 });

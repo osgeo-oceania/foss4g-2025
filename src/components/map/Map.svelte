@@ -10,7 +10,7 @@
   import * as MTP from '@dvt3d/maplibre-three-plugin';
   import { Protocol } from 'pmtiles';
 
-  import AucklandPmtiles from '../../data/auckland.pmtiles';
+  import AucklandPmtiles from '../../data/auckland.pmtiles.gz';
 
   import Bounds from '../../data/bounds.json';
 
