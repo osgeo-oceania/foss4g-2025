@@ -24,43 +24,30 @@
           <li><Link href="/attend/privacy-policy">Privacy Policy</Link></li>
         </ul>
       </div>
-      <div class="bg-secondary text-primary space-y-4 rounded-4xl p-6 sm:p-12">
-        <div class="text-md mb-2 uppercase">Stay Updated</div>
-        <div class="text-sm">Subscribe for event updates</div>
-        <Link
-          href="https://mailchi.mp/foss4g/mailing-list"
-          target="_blank"
-          class="btn btn-block btn-sm bg-primary hover:bg-success hover:text-primary w-auto min-w-fit rounded-full border-none px-8 py-6 text-sm font-light whitespace-nowrap text-white shadow-none transition-all duration-200"
+      <div class="mt-8 text-xs">&copy; FOSS4G Oceania - All rights reserved</div>
+    </div>
+    <div class="bg-secondary text-primary space-y-4 rounded-4xl p-6 sm:p-12">
+      <div class="text-md mb-2 uppercase">Stay Updated</div>
+      <div class="text-sm">Subscribe for event updates</div>
+      <Link
+        href="https://mailchi.mp/foss4g/mailing-list"
+        target="_blank"
+        class="btn btn-block btn-sm bg-primary hover:bg-success hover:text-primary w-auto min-w-fit rounded-full border-none px-8 py-6 text-sm font-light whitespace-nowrap text-white shadow-none transition-all duration-200"
+      >
+        Join our Mailing List
+        <span class="icon-[lucide--arrow-up-right] block"></span>
+      </Link>
+      <div class="text-md pt-8 uppercase">Follow Us</div>
+      <div class=" flex space-x-2 text-2xl uppercase">
+        <Link href="https://www.facebook.com/foss4g2025/"
+          ><span class="icon-[uil--facebook] block"></span></Link
         >
-          Join our Mailing List
-          <span class="icon-[lucide--arrow-up-right] block"></span>
-        </Link>
-        <div class="text-md pt-8 uppercase">Follow Us</div>
-        <div class=" flex space-x-2 text-2xl uppercase">
-          <Link href="https://www.facebook.com/foss4g2025/"
-            ><span class="icon-[uil--facebook] block"></span></Link
-          >
-          <Link href="https://www.linkedin.com/company/foss4g2025/"
-            ><span class="icon-[uil--linkedin] block"></span></Link
-          >
-          <Link href="https://www.youtube.com/c/FOSS4G"
-            ><span class="icon-[uil--youtube] block"></span>
-            Join our Mailing List
-            <span class="icon-[lucide--arrow-up-right] block"></span>
-          </Link>
-          <div class="text-md pt-8 uppercase">Follow Us</div>
-          <div class=" flex space-x-2 text-2xl uppercase">
-            <Link href="https://www.facebook.com/foss4g2025/"
-              ><span class="icon-[uil--facebook] block"></span></Link
-            >
-            <Link href="https://www.linkedin.com/company/foss4g2025/"
-              ><span class="icon-[uil--linkedin] block"></span></Link
-            >
-            <Link href="https://www.youtube.com/c/FOSS4G"
-              ><span class="icon-[uil--youtube] block"></span></Link
-            >
-          </div>
-        </div>
+        <Link href="https://www.linkedin.com/company/foss4g2025/"
+          ><span class="icon-[uil--linkedin] block"></span></Link
+        >
+        <Link href="https://www.youtube.com/c/FOSS4G"
+          ><span class="icon-[uil--youtube] block"></span></Link
+        >
       </div>
     </div>
   </div>
