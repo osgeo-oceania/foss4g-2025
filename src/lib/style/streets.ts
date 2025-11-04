@@ -29,6 +29,7 @@ export default {
             type: 'FeatureCollection',
             features: [
               ...IndoorAUT.features,
+              // label points
               ...IndoorAUT.features.map((feat) => ({
                 type: 'Feature',
                 properties: {
@@ -38,6 +39,10 @@ export default {
               }))
             ]
           }
+        },
+        entrance: {
+          type: 'geojson',
+          data: { type: "Feature", properties: {}, geometry: { type: "Point", coordinates: [174.7656241, -36.8533270] } }
         },
         pois: {
           type: 'geojson',
@@ -600,7 +605,30 @@ export default {
             'text-halo-blur': 1,
             'icon-opacity': ['interpolate', ['linear'], ['zoom'], 16, 1, 16.5, 0]
           }
-        }
+        },
+        {
+          id: 'entrance',
+          source: 'entrance',
+          type: 'symbol',
+          minzoom: 16,
+          maxzoom: 24,
+          layout: {
+            'icon-allow-overlap': true,
+            'icon-ignore-placement': true,
+            'icon-image': 'entrance',
+            'icon-anchor': 'bottom',
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-field': "Entrance",
+            'text-offset': [0, 0.6],
+
+            'icon-size': 0.3
+          },
+          paint: {
+            'text-halo-color': '#fff',
+            'text-halo-width': 2,
+            'text-halo-blur': 1,
+          }
+        },
       ]
     } as StyleSpecification;
   },
@@ -616,7 +644,7 @@ export default {
           mapScene.addObject(rtcGroup);
         });
       });
-      
+
       map.addLayer({
         id: 'sky-tower',
         type: 'custom',
