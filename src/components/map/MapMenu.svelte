@@ -10,6 +10,11 @@
     type: 'FeatureCollection',
     features: poisGeojson.features
       .filter((feat) => feat.properties.type != 'lodging')
+      .map((feat) => {
+        if (feat.properties.type == 'venue') feat.geometry.coordinates = [174.7656241, -36.853327];
+
+        return feat;
+      })
       .map((feat) => ({
         ...feat,
         properties: {
@@ -19,11 +24,6 @@
               : feat.properties.name
         }
       }))
-      .map((feat) => {
-        if (feat.properties.type == 'venue') feat.geometry.coordinates = [174.7656241, -36.853327];
-
-        return feat;
-      })
   };
 
   const mapState = getContext<() => MapState>('mapState')();
@@ -182,7 +182,7 @@
     class="fixed inset-0 z-[5]"
     onclick={() => (isOpen = false)}
     ontouchstart={() => (isOpen = false)}
-  onmouseover={() => (isOpen = false)}
+    onmouseover={() => (isOpen = false)}
   ></div>
 {/if}
 
