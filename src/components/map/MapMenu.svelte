@@ -125,8 +125,6 @@
       link: 'https://www.arcgis.com/home/item.html?id=4673e8f3f20942d7a21cfcb36971e103'
     },
     {
-
-
       name: 'Unitary Plan Base',
       source: 'Auckland Council',
       link: 'https://data-aucklandcouncil.opendata.arcgis.com/datasets/232d7b39839d4616bcbfc0509e26d9b3_0/explore'
@@ -176,14 +174,16 @@
 
 {#if isOpen}
   <div
-    class="fixed inset-0 z-0"
+    class="fixed inset-0 z-[5]"
     onclick={() => (isOpen = false)}
     ontouchstart={() => (isOpen = false)}
   ></div>
 {/if}
 
-<div class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
-    onfocusout={() => (isOpen = false)}>
+<div
+  class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2"
+  onfocusout={() => (isOpen = false)}
+>
   <div
     class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out sm:border-8"
     class:visible={isOpen}
@@ -219,6 +219,7 @@
     class="absolute bottom-0 left-0 z-50 border-4 border-transparent sm:border-8"
     ontouchend={() => (isOpen = true)}
     onmouseover={() => (isOpen = true)}
+    onmouseout={() => (isOpen = false)}
     onfocus={() => (isOpen = true)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
@@ -246,7 +247,9 @@
           fileSaver.saveAs(blob, 'foss4g2025.kml');
         }}><span class="icon-[lucide--download]"></span> Download KML</button
       >
-      <button class="btn btn-xs font-normal" onclick={() => window.alert('Sorry, we ran out of shapefiles!')}
+      <button
+        class="btn btn-xs font-normal"
+        onclick={() => window.alert('Sorry, we ran out of shapefiles!')}
         ><span class="icon-[lucide--download]"></span> Download SHP</button
       >
     </div>
@@ -276,7 +279,7 @@
                 target="_blank"
                 href={mapSource.link}
               >
-                <span class="underline text-xs">{mapSource.name}</span>
+                <span class="text-xs underline">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
             {/each}
@@ -291,7 +294,7 @@
                 target="_blank"
                 href={mapSource.link}
               >
-                <span class="underline text-xs">{mapSource.name}</span>
+                <span class="text-xs underline">{mapSource.name}</span>
                 <span class="icon-[lucide--external-link] ml-0.5"></span></a
               >
             {/each}
@@ -304,14 +307,14 @@
               href="https://www.printables.com/model/402895-auckland-sky-tower-new-zealand"
               class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline text-xs">Sky Tower</span>
+              ><span class="text-xs underline">Sky Tower</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
             <a
               href="https://free3d.com/3d-model/low_poly_tree-816203.html"
               class="mr-2 block items-center sm:mr-0 sm:w-36"
               target="_blank"
-              ><span class="underline text-xs">Tree</span>
+              ><span class="text-xs underline">Tree</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           </div>
@@ -327,11 +330,8 @@
         <div class="text-base">Data Processing</div>
         <div class="ml-2 flex flex-wrap">
           {#each software.filter((software) => software.category == 'processing') as software_}
-            <a
-              href={software_.link}
-              class="mr-2 block items-center sm:mr-0 sm:w-36"
-              target="_blank"
-              ><span class="underline text-xs">{software_.name}</span>
+            <a href={software_.link} class="mr-2 block items-center sm:mr-0 sm:w-36" target="_blank"
+              ><span class="text-xs underline">{software_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           {/each}
@@ -340,11 +340,8 @@
         <div class="mt-2 text-base">Visualization</div>
         <div class="ml-2 flex flex-wrap">
           {#each software.filter((software) => software.category == 'visualization') as software_}
-            <a
-              href={software_.link}
-              class="mr-2 block items-center sm:mr-0 sm:w-36"
-              target="_blank"
-              ><span class="underline text-xs">{software_.name}</span>
+            <a href={software_.link} class="mr-2 block items-center sm:mr-0 sm:w-36" target="_blank"
+              ><span class="text-xs underline">{software_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           {/each}
@@ -358,7 +355,7 @@
           <div class="">
             •
             <a href={sourceCode_.link} class="" target="_blank"
-              ><span class="underline text-xs">{sourceCode_.name}</span>
+              ><span class="text-xs underline">{sourceCode_.name}</span>
               <span class="icon-[lucide--external-link] ml-0.5"></span></a
             >
           </div>
