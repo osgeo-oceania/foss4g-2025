@@ -10,11 +10,6 @@
     type: 'FeatureCollection',
     features: poisGeojson.features
       .filter((feat) => feat.properties.type != 'lodging')
-      .map((feat) => {
-        if (feat.properties.type == 'venue') feat.geometry.coordinates = [174.7656241, -36.853327];
-
-        return feat;
-      })
       .map((feat) => ({
         ...feat,
         properties: {

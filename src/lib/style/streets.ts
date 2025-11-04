@@ -40,10 +40,6 @@ export default {
             ]
           }
         },
-        entrance: {
-          type: 'geojson',
-          data: { type: "Feature", properties: {}, geometry: { type: "Point", coordinates: [174.7656241, -36.8533270] } }
-        },
         pois: {
           type: 'geojson',
           data: Pois
@@ -608,8 +604,9 @@ export default {
         },
         {
           id: 'entrance',
-          source: 'entrance',
+          source: 'pois',
           type: 'symbol',
+          filter: ["==", ['get', 'type'], 'venue'],
           minzoom: 16,
           maxzoom: 24,
           layout: {
