@@ -324,9 +324,6 @@
             >
           </div>
         </div>
-        <div>
-          <div class="mt-2 text-base">0% OpenStreetMap Data</div>
-        </div>
       </div>
       <div class="divider divider-start text-base">
         <span class="icon-[gis--split-line] -mr-2 ml-1 h-10 w-10"></span>Software
