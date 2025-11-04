@@ -19,6 +19,11 @@
               : feat.properties.name
         }
       }))
+      .map((feat) => {
+        if (feat.properties.type == 'venue') feat.geometry.coordinates = [174.7656241, -36.853327];
+
+        return feat;
+      })
   };
 
   const mapState = getContext<() => MapState>('mapState')();
@@ -177,6 +182,7 @@
     class="fixed inset-0 z-[5]"
     onclick={() => (isOpen = false)}
     ontouchstart={() => (isOpen = false)}
+  onmouseover={() => (isOpen = false)}
   ></div>
 {/if}
 
@@ -219,7 +225,6 @@
     class="absolute bottom-0 left-0 z-50 border-4 border-transparent sm:border-8"
     ontouchend={() => (isOpen = true)}
     onmouseover={() => (isOpen = true)}
-    onmouseout={() => (isOpen = false)}
     onfocus={() => (isOpen = true)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
