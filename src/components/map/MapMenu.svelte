@@ -174,7 +174,8 @@
   </button>
 {/snippet}
 
-<div class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2">
+<div class="group absolute bottom-1 left-1 rounded-md sm:bottom-2 sm:left-2" 
+    onfocusout={() => (isOpen = false)}>
   <div
     class="invisible absolute bottom-0 left-0 z-10 flex max-h-0 max-w-0 flex-col-reverse overflow-hidden rounded-lg border-4 border-transparent shadow-lg transition-all duration-300 ease-out sm:border-8"
     class:visible={isOpen}
@@ -210,7 +211,7 @@
     class="absolute bottom-0 left-0 z-50 border-4 border-transparent sm:border-8"
     ontouchend={() => (isOpen = true)}
     onmouseover={() => (isOpen = true)}
-    onfocusout={() => (isOpen = false)}
+    onfocus={() => (isOpen = true)}
   >
     {@render MapSquare(mapState.mapConfig.style, true)}
   </div>
