@@ -1,0 +1,116 @@
+<script module lang="ts">
+  import { PUBLIC_BASE_PATH } from '$env/static/public';
+
+  import 'maplibre-gl/dist/maplibre-gl.css';
+  import type { StyleSpecification } from 'maplibre-gl';
+  import MapLibre from 'maplibre-gl';
+  import MapStyles from '../../lib/style';
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/addons';
+  import * as MTP from '@dvt3d/maplibre-three-plugin';
+  import { Protocol } from 'pmtiles';
+
+  import AucklandPmtiles from '../../data/auckland.pmtiles.gz';
+
+  import Bounds from '../../data/bounds.json';
+
+  export class MapState {
+    map: MapLibre.Map | null = $state(null);
+    mapScene: MTP.MapScene | null = $state(null);
+    mapConfig: MapConfig = $state({
+      lang: 'en',
+      bounds: Bounds,
+      style: MapStyles[0] as MapStyle,
+      pmtiles: {
+        auckland: AucklandPmtiles
+      }
+    });
+    isPreloading: boolean = $state(true);
+    isLoading: boolean = $state(false);
+
+    mapStyle: StyleSpecification = $derived(this.mapConfig.style.style(this.mapConfig));
+    markers: MapLibre.Marker[] = $state([]);
+
+    initializeMap = (mapContainer: HTMLDivElement) => {
+      const protocol = new Protocol();
+      MapLibre.addProtocol('pmtiles', protocol.tile);
+
+      this.map = new MapLibre.Map({
+        container: mapContainer,
+
+        transformRequest: (url) => {
+          return {
+            url: url.replace('http://{base_url}/', `${window.location.origin}${PUBLIC_BASE_PATH}/`)
+          };
+        },
+        maxPitch: 70,
+        attributionControl: false,
+        center: [174.766349, -36.849812],
+        pitch: 28,
+        cancelPendingTileRequestsWhileZooming: false,
+        minZoom: 10,
+        zoom: 10,
+        hash: true,
+        style: this.mapStyle
+      });
+
+      this.mapScene = new MTP.MapScene(this.map);
+      this.mapScene.addLight(new THREE.AmbientLight());
+
+      this.map.once('idle', () => {
+        if (true)
+          this.map?.flyTo({
+            center: [174.7661, -36.84945],
+            zoom: 14,
+            pitch: 28,
+            duration: 7500,
+            easing: (x) => 1 - Math.pow(1 - x, 3)
+          });
+        this.isPreloading = false;
+      });
+
+      $effect(() => {
+        if (!this.isPreloading && this.map) {
+          if ('beforeAdd' in this.mapConfig.style) {
+            setTimeout(() => {
+              this.mapConfig.style.beforeAdd(this.map, this.mapScene);
+            }, 0);
+          }
+          this.map.setStyle(this.mapStyle);
+        }
+      });
+    };
+  }
+</script>
+
+<script lang="ts">
+  import Attribution from './Attribution.svelte';
+  import { setContext, onMount } from 'svelte';
+  import MapMenu from './MapMenu.svelte';
+
+  let mapContainer: HTMLDivElement;
+  let mapState = new MapState();
+  setContext<() => MapState>('mapState', () => mapState);
+
+  let { children = null } = $props();
+
+  onMount(() => {
+    mapState.initializeMap(mapContainer);
+  });
+</script>
+
+<div class:visibile={mapState.isPreloading} class="h-full w-full">
+  <Attribution />
+  <MapMenu />
+  {#if mapState.isPreloading || mapState.isLoading}
+    <div
+      class="loading loading-spinner absolute top-1/2 left-1/2 z-50 w-16 -translate-x-1/2 -translate-y-1/2 transform"
+    ></div>
+  {/if}
+  <div
+    bind:this={mapContainer}
+    class="opacity-0 duration-700 h-full w-full transition-all"
+    class:opacity-100={!mapState.isPreloading}
+  ></div>
+  {@render children?.()}
+</div>

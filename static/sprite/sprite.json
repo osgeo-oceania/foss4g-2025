@@ -1,0 +1,65 @@
+{
+  "attraction": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 428,
+    "y": 0
+  },
+  "entrance": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 428,
+    "y": 68
+  },
+  "event": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 428,
+    "y": 136
+  },
+  "lodging": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 428,
+    "y": 204
+  },
+  "ocean": {
+    "height": 128,
+    "pixelRatio": 1,
+    "width": 128,
+    "x": 0,
+    "y": 256
+  },
+  "pin": {
+    "height": 127,
+    "pixelRatio": 1,
+    "width": 98,
+    "x": 0,
+    "y": 384
+  },
+  "pin-logo": {
+    "height": 128,
+    "pixelRatio": 1,
+    "width": 428,
+    "x": 0,
+    "y": 0
+  },
+  "pin-logo-notext": {
+    "height": 128,
+    "pixelRatio": 1,
+    "width": 428,
+    "x": 0,
+    "y": 128
+  },
+  "train": {
+    "height": 68,
+    "pixelRatio": 1,
+    "width": 68,
+    "x": 98,
+    "y": 384
+  }
+}

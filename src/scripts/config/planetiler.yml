@@ -13,9 +13,9 @@ sources:
     local_path: src/data/buildings.gpkg
 
   linz-coastline:
-    # https://data.linz.govt.nz/layer/51559-nz-coastlines-and-islands-polygons-topo-1250k/
-    type: shapefile
-    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-1250k-SHP.zip
+    # https://data.linz.govt.nz/layer/51153-nz-coastlines-and-islands-polygons-topo-150k/
+    type: geopackage
+    local_path: src/data/raw/lds-nz-coastlines-and-islands-polygons-topo-150k-GPKG.zip
 
   linz-road-centrelines:
     # https://data.linz.govt.nz/layer/50329-nz-road-centrelines-topo-150k/
@@ -77,6 +77,15 @@ sources:
     type: geojson
     local_path: src/data/raw/Train_Station.geojson
 
+  auckland-arterial-roads:
+    # https://www.arcgis.com/home/item.html?id=4673e8f3f20942d7a21cfcb36971e103
+    type: geopackage
+    local_path: src/data/raw/Arterial_Roads_1361457460508935892.gpkg
+
+  auckland-unitary-base-zone:
+    # https://data-aucklandcouncil.opendata.arcgis.com/datasets/232d7b39839d4616bcbfc0509e26d9b3_0/explore
+    type: shapefile
+    local_path: src/data/raw/Unitary_Plan_Base_Zone.zip
 
 layers:
   - id: coastline
@@ -94,6 +103,54 @@ layers:
         attributes:
           - key: height
             tag_value: height
+        exclude_when:
+          building_id:
+            - 3972833 # aut
+            - 3919993 # aut 2
+            - 4015017 # auckland museum
+            - 3972670 # sky tower
+            - 3918942 # hotel sofitel
+            - 3973272 # hotel ibis central
+            - 3972825 # hotel avani
+            - 3973314 # hotel pullman
+            - 3920013 # hotel four points
+            - 3919098 # hotel lylo
+    tile_post_process:
+      merge_polygons:
+        min_area: 0
+
+  - id: buildings-selected
+    features:
+      - source: buildings
+        geometry: polygon
+        min_zoom: 12
+        min_size: 0
+        attributes:
+          - key: height
+            tag_value: height
+          - key: building_id
+            tag_value: building_id
+          - key: type
+            value:
+              - if:
+                  building_id: [3972833, 3919993] # aut
+                value: venue
+              - value: attraction
+                if:
+                  building_id: [4015017, 3972670] # attractions
+              - else: lodging
+        include_when:
+          building_id:
+            - 3972833 # aut
+            - 3919993 # aut 2
+            - 4015017 # auckland museum
+            - 3972670 # sky tower
+            - 3918942 # hotel sofitel
+            - 3973272 # hotel ibis central
+            - 3972825 # hotel avani
+            - 3973314 # hotel pullman
+            - 3920013 # hotel four points
+            - 3919098 # hotel lylo
     tile_post_process:
       merge_polygons:
         min_area: 0
@@ -120,6 +177,25 @@ layers:
     tile_post_process:
       merge_line_strings:
         min_length: 0
+
+  - id: roads-arterial
+    features:
+      - source: auckland-arterial-roads
+        geometry: line
+        min_size: 0
+        min_zoom: 10
+    tile_post_process:
+      merge_line_strings:
+        min_length: 0
+
+  - id: landuse
+    features:
+      - source: auckland-unitary-base-zone
+        geometry: polygon
+        min_zoom: 10
+        attributes:
+          - key: zone
+            tag_value: ZONE
 
   - id: areas
     features:
@@ -221,7 +297,7 @@ layers:
 
       - source: auckland-train-routes
         geometry: line
-        min_zoom: 11
+        min_zoom: 10
         include_when:
           ROUTEPATTERN:
             - 810006

@@ -1,4 +1,5 @@
-import type { LngLat } from 'maplibre-gl';
+import type { LngLat, StyleSpecification } from 'maplibre-gl';
+import type { Picture } from 'imagetools-core';
 
 declare global {
   export type LandcoverType =
@@ -16,16 +17,20 @@ declare global {
     classes: number[];
   }
 
+  export interface MapStyle {
+    name: string;
+    image: Picture;
+    style: (config: MapConfig) => StyleSpecification
+  }
+
   export interface MapConfig {
     lang: 'en' | 'mi';
+    style: MapStyle;
     pmtiles: {
       [sourceName: string]: string;
     };
     bounds: {
       [type in 'mapdata' | 'viewport']: number[];
-    };
-    landcover: {
-      [type in LandcoverType]: LandcoverStyle;
     };
   }
 

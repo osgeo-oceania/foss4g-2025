@@ -1,0 +1,236 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "properties": {
+        "id": "auckland-museum",
+        "name": "Auckland Museum",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.777891, -36.860794]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "id": "auckland-zoo",
+        "name": "Auckland Zoo",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.719782, -36.864135]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "id": "aut",
+        "name": "AUT",
+        "type": "venue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.7656241, -36.8533270]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "id": "avani",
+        "name": "Avani",
+        "type": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.767238, -36.848542]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "id": "four-points",
+        "name": "Four Points",
+        "type": "lodging",
+        "orientation": "left"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.763746, -36.853727]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "id": "ibis-central",
+        "name": "ibis Central",
+        "type": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.764591, -36.847391]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "id": "lylo",
+        "name": "LyLo",
+        "type": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.758841, -36.851624]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "id": "pullman-hotel",
+        "name": "Pullman Hotel",
+        "type": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.770558, -36.847907]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "id": "rangitoto-island",
+        "name": "Rangitoto Island",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.863301, -36.784698]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "id": "sea-life-aquarium",
+        "name": "SEA LIFE Aquarium",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.817616, -36.846906]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "id": "sky-tower",
+        "name": "Sky Tower",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.762182, -36.848468]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "id": "sofitel",
+        "name": "Sofitel",
+        "type": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.757368, -36.844863]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "id": "waiheke-island",
+        "name": "Waiheke Island",
+        "type": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [175.012711, -36.785368]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "id": "conference-dinner",
+        "name": "Auckland Hilton",
+        "event": "Conference Dinner",
+        "date": "Nov 19",
+        "type": "event"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.765769, -36.839703]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "id": "women-in-geospatial",
+        "name": "Amano",
+        "event": "Women in Geospatial",
+        "date": "Nov 20",
+        "type": "event"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.770475, -36.844416]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "id": "geochicas",
+        "name": "Rocketman",
+        "event": "GeoChicas",
+        "date": "Nov 20",
+        "type": "event",
+        "orientation": "left"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.76935, -36.845192]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "id": "tgp-breakfast",
+        "name": "Scarecrow",
+        "event": "TGP Breakfast",
+        "date": "Nov 19",
+        "type": "event"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.766565, -36.849591]
+      }
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 <script lang="ts">
   import Link from '$components/Link.svelte';
   import Button from './Button.svelte';
+  import { page } from '$app/state';
 </script>
 
+{#if page.route.id != '/map'}
 <div class="px-2 pb-8">
   <div class="bg-primary grid rounded-4xl sm:grid-cols-2">
     <div class="flex flex-col space-y-6 p-6 text-white sm:p-12">
@@ -50,6 +52,7 @@
     </div>
   </div>
 </div>
+{/if}
 
 <style>
 </style>
