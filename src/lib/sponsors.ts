@@ -59,6 +59,12 @@ export default {
     link: 'https://www.isprs.org/',
     level: LEVELS.SUPPORTER
   },
+  at: {
+    name: 'Auckland Transport',
+    logo: () => import('$images/logos/AT.png?enhanced'),
+    link: 'https://at.govt.nz/',
+    level: LEVELS.SUPPORTER
+  },
   qfieldcloud: {
     name: 'QFieldCloud',
     logo: () => import('$images/logos/qfieldcloud.png?enhanced'),
