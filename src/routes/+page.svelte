@@ -204,6 +204,9 @@
           beautiful harbours, and fertile soils. They speak of the coming together of different iwi
           (tribes) to meet and trade.
         </div>
+        <div class="w-50">
+          <Button href="/map">Map</Button>
+        </div>
       </Card>
       <Card title="Our Conference Venue" color="secondary">
         <div>

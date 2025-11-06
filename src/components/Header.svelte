@@ -27,6 +27,10 @@
           url: '/news'
         },
         {
+          label: 'Map',
+          url: '/map'
+        },
+        {
           label: 'About FOSS4G',
           url: '/about/foss4g'
         },
