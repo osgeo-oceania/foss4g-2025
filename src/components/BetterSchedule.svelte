@@ -3,10 +3,10 @@
   import { marked } from 'marked';
   import EventModal from './EventModal.svelte';
 
-  // API Configuration
-  const SCHEDULE_API_URL = 'https://talks.osgeo.org/foss4g-2025/schedule/export/schedule.json';
+  // Schedule data path (relative to public directory)
+  const SCHEDULE_DATA_PATH = '/data/schedule.json';
   const CACHE_KEY = 'foss4g-2025-schedule-cache';
-  const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes in milliseconds
+  const CACHE_DURATION = 10 * 60 * 1000;
 
   // Component State
   let loading = true;
@@ -320,8 +320,8 @@
         }
       }
 
-      // Fetch fresh data from API
-      const response = await fetch(SCHEDULE_API_URL);
+      // Fetch data from local JSON file
+      const response = await fetch(SCHEDULE_DATA_PATH);
       if (!response.ok) {
         throw new Error(`Failed to fetch schedule: ${response.status}`);
       }
