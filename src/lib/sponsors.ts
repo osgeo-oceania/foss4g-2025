@@ -53,6 +53,12 @@ export default {
     link: 'https://pgrsc.org/',
     level: LEVELS.SUPPORTER
   },
+  isprs: {
+    name: 'ISPRS',
+    logo: () => import('$images/logos/isprs.png?enhanced'),
+    link: 'https://www.isprs.org/',
+    level: LEVELS.SUPPORTER
+  },
   qfieldcloud: {
     name: 'QFieldCloud',
     logo: () => import('$images/logos/qfieldcloud.png?enhanced'),
