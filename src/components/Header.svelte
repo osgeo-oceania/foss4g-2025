@@ -43,6 +43,10 @@
           url: '/about/logo'
         },
         {
+          label: 'Volunteering',
+          url: '/attend/volunteering'
+        },
+        {
           label: 'Code of Conduct',
           url: '/attend/code-of-conduct'
         },
@@ -65,20 +69,16 @@
           url: '/attend/register'
         },
         {
-          label: 'Volunteering',
-          url: '/attend/volunteering'
+          label: 'Entry into New Zealand',
+          url: '/attend/travelling-to-nz'
         },
         {
-          label: 'Travel Grant Program',
-          url: '/attend/travel-grant-program'
+          label: 'Transport Information',
+          url: '/attend/transport'
         },
         {
           label: 'Conference Venue',
           url: '/attend/conference-venue'
-        },
-        {
-          label: 'Entry into New Zealand',
-          url: '/attend/travelling-to-nz'
         },
         {
           label: 'Travel Guide',
@@ -91,6 +91,10 @@
         {
           label: 'Accommodation',
           url: '/attend/accommodation'
+        },
+        {
+          label: 'Travel Grant Program',
+          url: '/attend/travel-grant-program'
         }
       ]
     },

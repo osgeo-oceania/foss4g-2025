@@ -53,6 +53,18 @@ export default {
     link: 'https://pgrsc.org/',
     level: LEVELS.SUPPORTER
   },
+  isprs: {
+    name: 'ISPRS',
+    logo: () => import('$images/logos/isprs.png?enhanced'),
+    link: 'https://www.isprs.org/',
+    level: LEVELS.SUPPORTER
+  },
+  at: {
+    name: 'Auckland Transport',
+    logo: () => import('$images/logos/AT.png?enhanced'),
+    link: 'https://at.govt.nz/',
+    level: LEVELS.SUPPORTER
+  },
   qfieldcloud: {
     name: 'QFieldCloud',
     logo: () => import('$images/logos/qfieldcloud.png?enhanced'),

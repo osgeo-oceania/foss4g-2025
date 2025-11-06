@@ -1,0 +1,56 @@
+---
+title: Transport
+---
+
+<svelte:head>
+  <title>Transport Information</title>
+</svelte:head>
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
+# Transport Information
+
+### Airport
+
+Auckland Airport is located about 20km from the centre of Auckland City. There are a number
+of options for getting there and back:
+
+  * Public Transport via bus & train is available from stop 51473 at the airport transport hub. The cost is NZ$6.25 and 
+    takes about 1.30hrs. See the <Link target="_blank" href="https://at.govt.nz/bus-train-ferry/journey-planner?fromAddress=51473+-+Auckland+International+Airport&fromCoordinates=-37.00436%2C174.78453&toAddress=AUT%2C+9+Mount+St%2C+Auckland+Central%2C+Auckland%2C+1010&toCoordinates=-36.85449862%2C174.76696327&searchType=TIME_MODE&timeMode=Leaving+now&date=2025-11-06T00%3A00%3A00%2B13%3A00&time=6%3A25pm&transportMode=bus%2Cferry%2Ctrain&fareType=ADULT&maxWalkingTime=20&walkingSpeed=4.5&showExternalProviders=true&preferredRoute=FEWEST_TRANSFERS&tab=pt">Auckland Transport's Travel Planner</Link>
+    for more info. This involves a transfer between services. See the Public Transport section below for more information about
+    using public transport in Auckland.
+  * SkyDrive Express provide a shuttle bus service every 30 minutes between the Airport and downtown for NZ$20. See 
+    <Link target="_blank" href="https://www.skydrive.co.nz/auckland/">SkyDrive Auckland</Link> to book in advance.
+  * SuperShuttle provides services from the Airport direct to your accomodation in small shared shuttles for about NZ$35. Book 
+    at the <Link target="_blank" href="https://www.supershuttle.co.nz/">SuperShuttle website</Link>.
+  * Uber is widely available as are standard Taxis. Fares will vary from NZ$60 to NZ$90 depending on traffic. See <Link href="https://www.aucklandairport.co.nz/transport/taxis-and-shuttles" target="_blank">the Airport information page</Link> for locations.
+
+### Public Transport
+
+Auckland's public transport network (buses, trains and ferries) is run by <Link href="https://at.govt.nz/" target="_blank">Auckland Transport</Link> (AT) and is a convenient, cost‑effective way to get around the city.
+
+  * Tickets & payment: fares are zone‑based. The cheapest option for multiple trips is an AT HOP card (discounted fares). Many services also accept contactless debit/credit cards and mobile wallets — remember to tap on and tap off where required. AT HOP cards can be bought and topped up at stations, kiosks and selected retailers.
+  * Planning journeys: use the <Link href="https://at.govt.nz/bus-train-ferry/journey-planner" target="_blank">AT Journey Planner</Link> or the AT Mobile app for planning your trip and live timetables,. Trains and many frequent buses run on weekdays from early morning until around midnight; frequencies reduce in evenings and on weekends.
+  * Accessibility & luggage: most trains and newer buses are accessible and have space for luggage, but services vary — if you have large bags, consider a shuttle or taxi.
+  * Safety & tips: keep belongings secure, check the last service times late at night, and allow a buffer for transfers.
+
+### Other Transport Options
+
+  * <Link target="_blank" href="https://www.li.me/en-au/locations/auckland">Lime</Link> and <Link target="_blank" href="https://flamingoscooters.com/city/auckland">Flamingo</Link> e-scooters can be
+    rented via their apps from various locations in the city.
+  * Uber is ubiquitous and often a cheaper option than standard taxi services.
+  * If you are booking a taxi, we recommend Auckland Co-op Taxi's. You can order via phone on 09 300 3000
+  * Rental cars are available from Auckland Airport.
+  * Note that car-parking in Auckland CBD is expensive, especially for longer periods.
+
+### Getting to the Venue
+
+Our primary venue is the AUT (Auckland University of Technology) campus, 55 Wellesley Street East, Auckland CBD. The venue is approximatley 15min walk from downtown
+Waitematā Train Station.
+
+### More Information
+
+For more information see our <Link href="attend/nz-travel-guide">NZ Travel Guide</Link> and our conference <Link href="/map">Map</Link>.
