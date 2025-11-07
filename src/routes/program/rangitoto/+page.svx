@@ -13,7 +13,7 @@ title: Rangitoto Day Trip
 
 <div class="flex flex-row justify-between">
 <Heading>Rangitoto Day Trip</Heading>
-<Button class="w-50" href="https://example.com">Purchase Tickets</Button>
+<Button class="w-50" href="https://ti.to/osgeo-oceania/foss4g-2025/with/rangitoto-island-day-trip">Purchase Tickets</Button>
 </div>
 
 **Saturday 22nd November – All Day (weather permitting)**
@@ -23,7 +23,7 @@ Join fellow FOSS4G attendees for an unforgettable outdoor adventure to Rangitoto
 **Trip Details:**
 - Departs from Downtown Ferry Terminal, 99 Quay St - Pier 13 at 9:15am
 - Returns to Auckland around 3:00pm
-- Cost: $60 per person - [Purchase tickets →](https://example.com)
+- Cost: $60 per person - [Purchase tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/rangitoto-island-day-trip)
 
 **What to bring:**
 - All food and water needed for the day
