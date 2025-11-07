@@ -5,6 +5,8 @@
   export let event: any = null;
   export let setIsOpen: (open: boolean) => void;
   export let openRoomModal: ((roomName: string) => void) | undefined = undefined;
+  export let isFavorite: ((event: any) => boolean) | undefined = undefined;
+  export let toggleFavorite: ((event: any, e?: Event) => void) | undefined = undefined;
 
   let modalContainer: HTMLDivElement;
 
@@ -206,6 +208,52 @@
                 </div>
               {/if}
             </div>
+          </div>
+
+          <!-- Star button in header -->
+          <div class="flex flex-shrink-0 gap-2">
+            {#if toggleFavorite && isFavorite}
+              <button
+                on:click={(e) => toggleFavorite?.(event, e)}
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-lg transition-all hover:scale-110 hover:bg-white sm:h-12 sm:w-12"
+                title={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+                aria-label={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill={isFavorite(event) ? 'currentColor' : 'none'}
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class={isFavorite(event) ? 'text-yellow-500' : 'text-gray-600'}
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </button>
+            {/if}
+
+            <!-- Close button -->
+            <button
+              on:click={closeModal}
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-lg transition-all hover:scale-110 hover:bg-white sm:h-12 sm:w-12"
+              aria-label="Close modal"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="text-gray-600"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

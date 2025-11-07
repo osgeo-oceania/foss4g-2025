@@ -20,6 +20,8 @@
   let isReloading = false;
   let selectedRoomInfo: any = null;
   let roomModalOpen = false;
+  let favoriteEventIds: Set<string> = new Set();
+  let showOnlyFavorites = false;
 
   // Default fallback colors
   const fallbackTrackColors = {
@@ -132,6 +134,7 @@
   function openEventModal(event: any) {
     selectedEvent = event;
     modalOpen = true;
+    updateURLWithEvent(event);
   }
 
   function openRoomModal(roomName: string) {
@@ -144,6 +147,55 @@
     }
   }
 
+  // Favorites Functions
+  const FAVORITES_KEY = 'foss4g-2025-favorites';
+
+  function loadFavorites(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      const stored = localStorage.getItem(FAVORITES_KEY);
+      if (stored) {
+        favoriteEventIds = new Set(JSON.parse(stored));
+      }
+    } catch (err) {
+      console.error('Error loading favorites:', err);
+    }
+  }
+
+  function saveFavorites(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      localStorage.setItem(FAVORITES_KEY, JSON.stringify([...favoriteEventIds]));
+    } catch (err) {
+      console.error('Error saving favorites:', err);
+    }
+  }
+
+  function toggleFavorite(event: any, e?: Event) {
+    if (e) {
+      e.stopPropagation();
+    }
+
+    const eventId = event.id || event.guid;
+    if (!eventId) return;
+
+    if (favoriteEventIds.has(eventId)) {
+      favoriteEventIds.delete(eventId);
+    } else {
+      favoriteEventIds.add(eventId);
+    }
+
+    favoriteEventIds = favoriteEventIds; // Trigger reactivity
+    saveFavorites();
+  }
+
+  function isFavorite(event: any): boolean {
+    const eventId = event.id || event.guid;
+    return eventId ? favoriteEventIds.has(eventId) : false;
+  }
+
   function getRoomsForDay(day: any): string[] {
     return Object.keys(day.rooms || {});
   }
@@ -152,13 +204,65 @@
     return day.rooms?.[roomName] || [];
   }
 
-  // Search functionality
+  // Day Navigation and Hash Management
+  function setInitialActiveDay(): void {
+    // First, check if there's a day in the URL hash
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#day-')) {
+      const dayIndexStr = hash.substring(5);
+      if (dayIndexStr === 'all') {
+        activeDay = -1;
+        return;
+      }
+      const dayIndex = parseInt(dayIndexStr);
+      if (!isNaN(dayIndex) && dayIndex >= 0 && dayIndex < days.length) {
+        activeDay = dayIndex;
+        return;
+      }
+    }
+
+    // Otherwise, try to set to today's date
+    const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Pacific/Auckland' });
+    const todayIndex = days.findIndex((day: any) => day.date === today);
+
+    if (todayIndex >= 0) {
+      activeDay = todayIndex;
+      setDayHash(todayIndex);
+    } else {
+      // Default to "All Days" if today is not in the schedule
+      activeDay = -1;
+      setDayHash(-1);
+    }
+  }
+
+  function setDayHash(dayIndex: number): void {
+    if (typeof window === 'undefined') return;
+
+    // Don't update hash if we're on an event page
+    if (window.location.hash.startsWith('#event-')) return;
+
+    if (dayIndex === -1) {
+      window.history.pushState(null, '', '#day-all');
+    } else {
+      window.history.pushState(null, '', `#day-${dayIndex}`);
+    }
+  }
+
+  // Search and filter functionality
   function searchEvents(events: any[], query: string): any[] {
-    if (!query.trim()) return events;
+    let filtered = events;
+
+    // Apply favorites filter first
+    if (showOnlyFavorites) {
+      filtered = filtered.filter((event: any) => isFavorite(event));
+    }
+
+    // Apply search query
+    if (!query.trim()) return filtered;
 
     const searchTerm = query.toLowerCase().trim();
 
-    return events.filter((event: any) => {
+    return filtered.filter((event: any) => {
       // Search in title
       if (event.title && event.title.toLowerCase().includes(searchTerm)) {
         return true;
@@ -208,10 +312,8 @@
           version = cachedData.version;
           days = cachedData.days;
 
-          // Set active day to today or first day
-          const today = new Date().toLocaleDateString('en-US', { timeZone: 'Pacific/Auckland' });
-          const todayIndex = days.findIndex((day: any) => day.date === today);
-          activeDay = todayIndex >= 0 ? todayIndex : 0;
+          // Set active day based on URL hash or today or all days
+          setInitialActiveDay();
 
           loading = false;
           return;
@@ -232,10 +334,8 @@
       // Cache the data
       setCachedData({ version, conference, days });
 
-      // Set active day to today or first day
-      const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Pacific/Auckland' });
-      const todayIndex = days.findIndex((day: any) => day.date === today);
-      activeDay = todayIndex >= 0 ? todayIndex : 0;
+      // Set active day based on URL hash or today or all days
+      setInitialActiveDay();
 
       loading = false;
     } catch (err) {
@@ -253,10 +353,81 @@
     await loadScheduleData(true);
   }
 
+  // Handle deep linking to specific events
+  function checkForEventInURL() {
+    if (typeof window === 'undefined') return;
+
+    const hash = window.location.hash;
+    if (hash && hash.startsWith('#event-')) {
+      // Extract just the ID part (everything between #event- and the first hyphen after the ID)
+      // Format: #event-{id}-{slug} or #event-{id}
+      const hashContent = hash.substring(7); // Remove '#event-' prefix
+      const eventId = hashContent.split('-')[0]; // Get just the ID part
+
+      // Wait for data to load, then find and open the event
+      if (days.length > 0) {
+        const allEvents = days.flatMap((day) => Object.values(day.rooms).flat());
+        const event = allEvents.find(
+          (e: any) => e.id?.toString() === eventId || e.guid === eventId
+        );
+
+        if (event) {
+          // Set the active day to the event's day
+          const eventDayIndex = days.findIndex((day) =>
+            Object.values(day.rooms)
+              .flat()
+              .some((e: any) => e.id?.toString() === eventId || e.guid === eventId)
+          );
+          if (eventDayIndex >= 0) {
+            activeDay = eventDayIndex;
+          }
+
+          // Open the event modal
+          setTimeout(() => openEventModal(event), 100);
+        }
+      }
+    }
+  }
+
+  function createSlug(text: string): string {
+    return text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '') // Remove special characters
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+      .trim();
+  }
+
+  function updateURLWithEvent(event: any) {
+    if (typeof window === 'undefined') return;
+
+    const eventId = event.id || event.guid;
+    if (eventId && event.title) {
+      const slug = createSlug(event.title);
+      window.history.pushState(null, '', `#event-${eventId}-${slug}`);
+    } else if (eventId) {
+      window.history.pushState(null, '', `#event-${eventId}`);
+    }
+  }
+
+  function clearEventFromURL() {
+    if (typeof window === 'undefined') return;
+
+    if (window.location.hash.startsWith('#event-')) {
+      window.history.pushState(null, '', window.location.pathname + window.location.search);
+    }
+  }
+
   // Data Fetching
   onMount(() => {
     loadScheduleData();
+    loadFavorites();
   });
+
+  // Watch for data changes and check URL
+  $: if (days.length > 0 && !loading) {
+    checkForEventInURL();
+  }
 
   $: activeRooms =
     activeDay === -1
@@ -412,6 +583,7 @@
           on:click={() => {
             activeDay = -1;
             selectedRoom = null;
+            setDayHash(-1);
           }}
           class="rounded-lg border px-2 py-1 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm {activeDay ===
           -1
@@ -426,6 +598,7 @@
             on:click={() => {
               activeDay = index;
               selectedRoom = null;
+              setDayHash(index);
             }}
             class="rounded-lg border px-2 py-1 text-xs transition-colors sm:px-4 sm:py-2 sm:text-sm {activeDay ===
             index
@@ -446,16 +619,52 @@
 
       <!-- View Controls -->
       <div class="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center">
-        <!-- Room Filter -->
-        <select
-          bind:value={selectedRoom}
-          class="flex-1 rounded-lg border border-gray-300 px-2 py-2 text-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 sm:flex-none sm:px-3"
-        >
-          <option value={null}>All Rooms</option>
-          {#each activeRooms as room}
-            <option value={room}>{room.length > 20 ? room.substring(0, 20) + '...' : room}</option>
-          {/each}
-        </select>
+        <div class="flex w-full flex-row items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center">
+          <!-- Favorites Filter Button -->
+          <button
+            on:click={() => (showOnlyFavorites = !showOnlyFavorites)}
+            class="flex items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors {showOnlyFavorites
+              ? 'border-yellow-500 bg-yellow-50 text-yellow-700'
+              : 'border-gray-300 bg-white text-gray-700 hover:border-yellow-300 hover:bg-yellow-50'}"
+            title={showOnlyFavorites ? 'Show all events' : 'Show only favorites'}
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill={showOnlyFavorites ? 'currentColor' : 'none'}
+              stroke="currentColor"
+              stroke-width="2"
+              class={showOnlyFavorites ? 'text-yellow-600' : 'text-gray-600'}
+            >
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            <span class="hidden sm:inline">
+              {showOnlyFavorites ? 'Favorites' : 'Favorites'}
+            </span>
+            {#if favoriteEventIds.size > 0}
+              <span
+                class="flex h-5 min-w-5 items-center justify-center rounded-full bg-yellow-500 px-1.5 text-xs font-bold text-white"
+              >
+                {favoriteEventIds.size}
+              </span>
+            {/if}
+          </button>
+
+          <!-- Room Filter -->
+          <select
+            bind:value={selectedRoom}
+            class="flex-1 rounded-lg border border-gray-300 px-2 py-2 text-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 sm:flex-none sm:px-3"
+          >
+            <option value={null}>All Rooms</option>
+            {#each activeRooms as room}
+              <option value={room}>{room.length > 20 ? room.substring(0, 20) + '...' : room}</option
+              >
+            {/each}
+          </select>
+        </div>
 
         <!-- View Mode Toggle -->
         <div class="flex flex-1 overflow-hidden rounded-lg border border-gray-300 sm:flex-none">
@@ -510,7 +719,8 @@
                 </svg>
               </div>
               <h3 class="mb-2 text-lg font-medium text-gray-900">
-                No events found{#if activeDay !== -1}for this day{/if}
+                No events found{#if activeDay !== -1}
+                  {' '}for this day{/if}
               </h3>
               <p class="mb-4 text-gray-500">
                 {#if searchQuery}
@@ -619,46 +829,80 @@
                               <div class="w-48 flex-shrink-0 sm:w-64">
                                 {#if roomEvents.length > 0}
                                   {#each roomEvents as event}
-                                    <button
-                                      on:click={() => openEventModal(event)}
-                                      class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
-                                      style="border-left-color: {getTrackColor(
-                                        event.track
-                                      )}; background: linear-gradient(135deg, {getTrackColor(
-                                        event.track
-                                      )}08 0%, {getTrackColor(
-                                        event.track
-                                      )}15 100%); backdrop-filter: blur(10px);"
-                                    >
-                                      <div
-                                        class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
+                                    <div class="group/card relative">
+                                      <button
+                                        on:click={() => openEventModal(event)}
+                                        class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
+                                        style="border-left-color: {getTrackColor(
+                                          event.track
+                                        )}; background: linear-gradient(135deg, {getTrackColor(
+                                          event.track
+                                        )}08 0%, {getTrackColor(
+                                          event.track
+                                        )}15 100%); backdrop-filter: blur(10px);"
                                       >
-                                        {event.title}
-                                      </div>
-                                      <div class="mb-1 text-xs font-medium text-gray-600">
-                                        <span class="hidden sm:inline"
-                                          >{formatTime(event.start)} • {formatDuration(
-                                            event.duration
-                                          )}</span
+                                        <div
+                                          class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
                                         >
-                                        <span class="sm:hidden"
-                                          >{formatDuration(event.duration)}</span
-                                        >
-                                      </div>
-                                      {#if event.track}
-                                        <div>
-                                          <div
-                                            class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
-                                            style="background-color: {getTrackColor(event.track)};"
-                                          >
-                                            <span class="hidden sm:inline">{event.track}</span>
-                                            <span class="sm:hidden"
-                                              >{event.track.substring(0, 8)}</span
-                                            >
-                                          </div>
+                                          {event.title}
                                         </div>
-                                      {/if}
-                                    </button>
+                                        <div class="mb-1 text-xs font-medium text-gray-600">
+                                          <span class="hidden sm:inline"
+                                            >{formatTime(event.start)} • {formatDuration(
+                                              event.duration
+                                            )}</span
+                                          >
+                                          <span class="sm:hidden"
+                                            >{formatDuration(event.duration)}</span
+                                          >
+                                        </div>
+                                        {#if event.track}
+                                          <div>
+                                            <div
+                                              class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
+                                              style="background-color: {getTrackColor(
+                                                event.track
+                                              )};"
+                                            >
+                                              <span class="hidden sm:inline">{event.track}</span>
+                                              <span class="sm:hidden"
+                                                >{event.track.substring(0, 8)}</span
+                                              >
+                                            </div>
+                                          </div>
+                                        {/if}
+                                      </button>
+                                      <button
+                                        on:click={(e) => toggleFavorite(event, e)}
+                                        class="absolute top-1 right-1 rounded bg-white/90 p-1 opacity-0 shadow-sm transition-opacity group-hover/card:opacity-100 hover:bg-white sm:top-2 sm:right-2 sm:p-1.5 {isFavorite(
+                                          event
+                                        )
+                                          ? 'opacity-100'
+                                          : ''}"
+                                        title={isFavorite(event)
+                                          ? 'Remove from favorites'
+                                          : 'Add to favorites'}
+                                        aria-label={isFavorite(event)
+                                          ? 'Remove from favorites'
+                                          : 'Add to favorites'}
+                                      >
+                                        <svg
+                                          width="14"
+                                          height="14"
+                                          viewBox="0 0 24 24"
+                                          fill={isFavorite(event) ? 'currentColor' : 'none'}
+                                          stroke="currentColor"
+                                          stroke-width="2"
+                                          class={isFavorite(event)
+                                            ? 'text-yellow-500'
+                                            : 'text-gray-600'}
+                                        >
+                                          <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </div>
                                   {/each}
                                 {:else}
                                   <div class="h-16 w-full sm:h-20"></div>
@@ -744,42 +988,77 @@
                           <div class="w-48 flex-shrink-0 sm:w-64">
                             {#if roomEvents.length > 0}
                               {#each roomEvents as event}
-                                <button
-                                  on:click={() => openEventModal(event)}
-                                  class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
-                                  style="border-left-color: {getTrackColor(
-                                    event.track
-                                  )}; background: linear-gradient(135deg, {getTrackColor(
-                                    event.track
-                                  )}08 0%, {getTrackColor(
-                                    event.track
-                                  )}15 100%); backdrop-filter: blur(10px);"
-                                >
-                                  <div
-                                    class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
+                                <div class="group/card relative">
+                                  <button
+                                    on:click={() => openEventModal(event)}
+                                    class="flex min-h-28 w-full cursor-pointer flex-col place-content-between overflow-hidden rounded-lg border-l-4 p-2 text-left shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-lg sm:min-h-40 sm:p-3"
+                                    style="border-left-color: {getTrackColor(
+                                      event.track
+                                    )}; background: linear-gradient(135deg, {getTrackColor(
+                                      event.track
+                                    )}08 0%, {getTrackColor(
+                                      event.track
+                                    )}15 100%); backdrop-filter: blur(10px);"
                                   >
-                                    {event.title}
-                                  </div>
-                                  <div class="mb-1 text-xs font-medium text-gray-600">
-                                    <span class="hidden sm:inline"
-                                      >{formatTime(event.start)} • {formatDuration(
-                                        event.duration
-                                      )}</span
+                                    <div
+                                      class="mb-1 line-clamp-2 text-xs font-semibold text-gray-900 sm:text-sm"
                                     >
-                                    <span class="sm:hidden">{formatDuration(event.duration)}</span>
-                                  </div>
-                                  {#if event.track}
-                                    <div>
-                                      <div
-                                        class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
-                                        style="background-color: {getTrackColor(event.track)};"
-                                      >
-                                        <span class="hidden sm:inline">{event.track}</span>
-                                        <span class="sm:hidden">{event.track.substring(0, 8)}</span>
-                                      </div>
+                                      {event.title}
                                     </div>
-                                  {/if}
-                                </button>
+                                    <div class="mb-1 text-xs font-medium text-gray-600">
+                                      <span class="hidden sm:inline"
+                                        >{formatTime(event.start)} • {formatDuration(
+                                          event.duration
+                                        )}</span
+                                      >
+                                      <span class="sm:hidden">{formatDuration(event.duration)}</span
+                                      >
+                                    </div>
+                                    {#if event.track}
+                                      <div>
+                                        <div
+                                          class="mt-1 inline-block rounded-full px-2 py-1 text-xs font-bold text-white shadow-sm sm:mt-2"
+                                          style="background-color: {getTrackColor(event.track)};"
+                                        >
+                                          <span class="hidden sm:inline">{event.track}</span>
+                                          <span class="sm:hidden"
+                                            >{event.track.substring(0, 8)}</span
+                                          >
+                                        </div>
+                                      </div>
+                                    {/if}
+                                  </button>
+                                  <button
+                                    on:click={(e) => toggleFavorite(event, e)}
+                                    class="absolute top-1 right-1 rounded bg-white/90 p-1 opacity-0 shadow-sm transition-opacity group-hover/card:opacity-100 hover:bg-white sm:top-2 sm:right-2 sm:p-1.5 {isFavorite(
+                                      event
+                                    )
+                                      ? 'opacity-100'
+                                      : ''}"
+                                    title={isFavorite(event)
+                                      ? 'Remove from favorites'
+                                      : 'Add to favorites'}
+                                    aria-label={isFavorite(event)
+                                      ? 'Remove from favorites'
+                                      : 'Add to favorites'}
+                                  >
+                                    <svg
+                                      width="14"
+                                      height="14"
+                                      viewBox="0 0 24 24"
+                                      fill={isFavorite(event) ? 'currentColor' : 'none'}
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      class={isFavorite(event)
+                                        ? 'text-yellow-500'
+                                        : 'text-gray-600'}
+                                    >
+                                      <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                                      />
+                                    </svg>
+                                  </button>
+                                </div>
                               {/each}
                             {:else}
                               <!-- Empty time slot -->
@@ -817,7 +1096,7 @@
               <!-- Day Events -->
               <div class="-mt-6 space-y-6">
                 {#each daySortedEvents as event}
-                  <div class="group">
+                  <div class="group relative">
                     <button
                       on:click={() => openEventModal(event)}
                       class="w-full cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
@@ -913,21 +1192,6 @@
                               </div>
                             </div>
                           </div>
-                          <div
-                            class="flex-shrink-0 rounded-full bg-gray-100 p-2 transition-colors group-hover:bg-gray-200"
-                          >
-                            <svg
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                              class="text-gray-600"
-                            >
-                              <path d="M9 18l6-6-6-6" />
-                            </svg>
-                          </div>
                         </div>
                         <!-- Truncated speakers and abstract sections for brevity -->
                         {#if event.abstract}
@@ -940,6 +1204,26 @@
                           </div>
                         {/if}
                       </div>
+                    </button>
+                    <button
+                      on:click={(e) => toggleFavorite(event, e)}
+                      class="absolute top-4 right-4 z-10 rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-50"
+                      title={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+                      aria-label={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill={isFavorite(event) ? 'currentColor' : 'none'}
+                        stroke="currentColor"
+                        stroke-width="2"
+                        class={isFavorite(event) ? 'text-yellow-500' : 'text-gray-600'}
+                      >
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
+                      </svg>
                     </button>
                   </div>
                 {/each}
@@ -1008,7 +1292,7 @@
             </div>
           {:else}
             {#each sortedEvents as event}
-              <div class="group">
+              <div class="group relative">
                 <button
                   on:click={() => openEventModal(event)}
                   class="w-full cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white text-left shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
@@ -1112,23 +1396,6 @@
                           </div>
                         </div>
                       </div>
-
-                      <!-- Arrow indicator -->
-                      <div
-                        class="flex-shrink-0 rounded-full bg-gray-100 p-2 transition-colors group-hover:bg-gray-200"
-                      >
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          class="text-gray-600"
-                        >
-                          <path d="M9 18l6-6-6-6" />
-                        </svg>
-                      </div>
                     </div>
 
                     <!-- Speakers -->
@@ -1230,6 +1497,26 @@
                     {/if}
                   </div>
                 </button>
+                <button
+                  on:click={(e) => toggleFavorite(event, e)}
+                  class="absolute top-4 right-4 z-10 rounded-full bg-white p-2 shadow-md transition-colors hover:bg-gray-50"
+                  title={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+                  aria-label={isFavorite(event) ? 'Remove from favorites' : 'Add to favorites'}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill={isFavorite(event) ? 'currentColor' : 'none'}
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class={isFavorite(event) ? 'text-yellow-500' : 'text-gray-600'}
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    />
+                  </svg>
+                </button>
               </div>
             {/each}
           {/if}
@@ -1243,8 +1530,15 @@
 <EventModal
   open={modalOpen}
   event={selectedEvent}
-  setIsOpen={(open) => (modalOpen = open)}
+  setIsOpen={(open) => {
+    modalOpen = open;
+    if (!open) {
+      clearEventFromURL();
+    }
+  }}
   {openRoomModal}
+  {isFavorite}
+  {toggleFavorite}
 />
 
 <!-- Room Modal -->
