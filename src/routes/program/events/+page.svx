@@ -21,17 +21,15 @@ title: Events
 
 We're excited to offer a range of supporting events around this years conference.
 
-### Movie screening
+### [Movie Screening](/program/movie-screening)
 
 Monday 17th November, 6pm
 
 A free movie screening held at the AUT conference centre, room WG403.
 
-**I am the River, the River is Me**
+**I am the River, the River is Me** - A powerful documentary exploring Māori perspectives on environmental stewardship and the revolutionary legal recognition of the Whanganui River as a living entity.
 
-> A canoe trip down the Whanganui River in New Zealand, led by a Māori elder, awakens 
-> spiritual belief and practice, and becomes a call to action to draw closer to nature 
-> and fight climate change through a fundamental value shift.
+[Learn more →](/program/movie-screening)
 
 
 ### [Business 2 Business](/program/b2b-event)
@@ -42,35 +40,37 @@ An afternoon session of networking over canapes and drinks with brief talks from
 
 [Learn more and purchase tickets →](/program/b2b-event)
 
-### Ice Breaker
+### [Ice Breaker](/program/ice-breaker)
 
-Tuesday 18th November from 6.30pm
+Tuesday 18th November from 6:30pm
 
 Our Ice Breaker event will be held at the Maritime Room, New Zealand Maritime Museum, Corner of Quay and Hobson Street, Auckland.
 
-This is a relaxed event to meet your fellow delegates over canapes and drinks.
+Start your FOSS4G experience by connecting with fellow attendees over canapes and drinks in this relaxed waterfront venue.
+
+[Learn more →](/program/ice-breaker)
 
 <enhanced:img src={MaritimeRoom} alt="Maritime Room View" />
 
-### Travel Grant Program Breakfast
+### [Travel Grant Program Breakfast](/program/travel-grant-breakfast)
 
 Wednesday 19th November - Morning
 
-Held at Scarecrow
+A special breakfast gathering for Travel Grant recipients at Scarecrow, 33 Victoria Street East, Auckland Central.
 
-33 Victoria Street East, Auckland Central
+This exclusive event is an opportunity to meet fellow grant awardees and connect with the FOSS4G organizing team.
 
-This event is available to our Travel Grant recipients.
+[Learn more →](/program/travel-grant-breakfast)
 
-### Gala Dinner
+### [Gala Dinner](/program/gala-dinner)
 
 Wednesday 19th November - Evening
 
-Our gala dinner is at the Hilton, Auckland. Join the community in celebrating FOSS4G over dinner and live music.
+Join the global FOSS4G community for an unforgettable evening of celebration at the Hilton Auckland. Enjoy fine dining, live music, and spectacular waterfront views.
 
 147 Quay Street, Auckland Central
 
-[Purchase Tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/conference-dinner)
+[Learn more and purchase tickets →](/program/gala-dinner)
 
 ### Women in Spatial Breakfast
 
@@ -80,13 +80,15 @@ Thursday 20th November – Morning
 
 *Tickets are sold out!* [Join Waitlist →](https://ti.to/osgeo-oceania/foss4g-2025/with/women-in-geospatial-breakfast)
 
-### GeoChicas
+### [GeoChicas](/program/geochicas)
 
 Thursday 20th November – Evening
 
+Join GeoChicas, the international women's collective focused on closing gender gaps in the OpenStreetMap and open geospatial communities, for an evening of networking and community building.
+
 Held at RocketMan, 8 Roukai Lane, Auckland Central
 
-[Pay what you want for tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/geochickas)
+[Learn more and get tickets →](/program/geochicas)
 
 ### [Rangitoto Island Day Trip](/program/rangitoto)
 

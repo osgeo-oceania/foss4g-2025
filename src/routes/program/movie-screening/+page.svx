@@ -1,0 +1,28 @@
+---
+title: Movie Screening
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+</script>
+
+<Heading>Movie Screening</Heading>
+
+**Monday 17th November, 6pm**
+
+Join us for a free movie screening at the AUT conference centre, room WG403.
+
+## I am the River, the River is Me
+
+> A canoe trip down the Whanganui River in New Zealand, led by a Māori elder, awakens
+> spiritual belief and practice, and becomes a call to action to draw closer to nature
+> and fight climate change through a fundamental value shift.
+
+This inspiring documentary explores the deep connection between people and nature, showcasing Māori perspectives on environmental stewardship and the revolutionary legal recognition of the Whanganui River as a living entity with its own rights.
+
+**Details:**
+- Free admission
+- Location: AUT Conference Centre, Room WG403
+- Duration: Approximately 90 minutes
+
+No registration required - simply turn up and enjoy!

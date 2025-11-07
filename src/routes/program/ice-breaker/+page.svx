@@ -1,0 +1,35 @@
+---
+title: Ice Breaker
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import MaritimeRoom from '$images/maritime-room.jpg?enhanced';
+</script>
+
+<enhanced:img src={MaritimeRoom} alt="Maritime Room View" />
+
+<Heading>Ice Breaker</Heading>
+
+**Tuesday 18th November from 6:30pm**
+
+Start your FOSS4G experience by connecting with fellow attendees at our welcoming Ice Breaker event! This is the perfect opportunity to meet new colleagues, reconnect with old friends, and begin building the collaborative spirit that makes FOSS4G conferences so special.
+
+## Venue
+
+Maritime Room
+New Zealand Maritime Museum
+Corner of Quay and Hobson Street
+Auckland
+
+The Maritime Room offers stunning harbour views and a relaxed atmosphere, providing the perfect backdrop for informal networking and conversation.
+
+## What to Expect
+
+This is a relaxed social event where you can:
+- Meet your fellow delegates in a casual setting
+- Enjoy complimentary canapes and drinks
+- Start making connections before the main conference begins
+- Explore the unique venue overlooking Auckland's waterfront
+
+Come as you are, grab a drink, and start your FOSS4G journey surrounded by the global open source geospatial community!

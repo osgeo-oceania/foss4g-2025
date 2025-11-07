@@ -1,0 +1,43 @@
+---
+title: GeoChicas
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Button from '$components/Button.svelte';
+</script>
+
+<div class="flex flex-row justify-between">
+<Heading>GeoChicas</Heading>
+<Button class="w-50" href="https://ti.to/osgeo-oceania/foss4g-2025/with/geochickas">Get Tickets</Button>
+</div>
+
+**Thursday 20th November - Evening**
+
+Join GeoChicas, the international women's collective focused on closing gender gaps in the OpenStreetMap and open geospatial communities, for an evening of networking, sharing, and community building.
+
+## Venue
+
+RocketMan
+8 Roukai Lane
+Auckland Central
+
+RocketMan is a vibrant bar in central Auckland, offering a relaxed and welcoming atmosphere perfect for community gathering and conversation.
+
+## About GeoChicas
+
+GeoChicas is a women's group within the OpenStreetMap and broader geospatial communities, working to increase the participation and visibility of women in these spaces. This gathering provides an opportunity to:
+
+- Connect with women and allies in the geospatial community
+- Share experiences and insights
+- Discuss challenges and opportunities for gender equity in open source geospatial
+- Build solidarity and support networks across borders
+- Celebrate the contributions of women in our field
+
+All genders welcome! GeoChicas events are inclusive spaces for anyone who supports gender equity in the geospatial community.
+
+## Tickets
+
+This event operates on a pay-what-you-want model, making it accessible to all who wish to attend.
+
+[Get your tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/geochickas)
