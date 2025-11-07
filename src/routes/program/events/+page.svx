@@ -88,10 +88,12 @@ Held at RocketMan, 8 Roukai Lane, Auckland Central
 
 [Pay what you want for tickets →](https://ti.to/osgeo-oceania/foss4g-2025/with/geochickas)
 
-### Rangitoto Island Day Trip
+### [Rangitoto Island Day Trip](/program/rangitoto)
 
 Saturday 22nd November – All Day (weather permitting)
 
-Watch this space!
+Join fellow FOSS4G attendees for an unforgettable outdoor adventure to Rangitoto Island, Auckland's iconic volcanic cone! This is a perfect opportunity to connect with the community while exploring one of New Zealand's most unique natural landmarks, with breathtaking 360-degree views of Auckland and the Hauraki Gulf from the summit.
+
+See [Rangitoto Day Trip](/program/rangitoto) for more information and to purhcase tickets.
 
 <enhanced:img src={Rangitoto} alt="Rangitoto Island" />

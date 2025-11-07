@@ -119,11 +119,15 @@
           url: '/program/events'
         },
         {
-          label: 'B2B Event',
+          label: '- B2B Event',
           url: '/program/b2b-event'
         },
         {
-          label: 'Community Events and Code Sprints',
+          label: '- Rangitoto Day Trip',
+          url: '/program/rangitoto'
+        },
+        {
+          label: '- Community Events and Code Sprints',
           url: '/program/community-day'
         }
       ]

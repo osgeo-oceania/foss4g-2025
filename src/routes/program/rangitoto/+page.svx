@@ -1,0 +1,47 @@
+---
+title: Rangitoto Day Trip
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Rangitoto from '$images/rangitoto-island-auckland.jpeg?enhanced';
+  import Button from '$components/Button.svelte';
+  import Link from '$components/Link.svelte';
+</script>
+
+<enhanced:img src={Rangitoto} />
+
+<div class="flex flex-row justify-between">
+<Heading>Rangitoto Day Trip</Heading>
+<Button class="w-50" href="https://example.com">Purchase Tickets</Button>
+</div>
+
+**Saturday 22nd November – All Day (weather permitting)**
+
+Join fellow FOSS4G attendees for an unforgettable outdoor adventure to Rangitoto Island, Auckland's iconic volcanic cone! This is a perfect opportunity to connect with the community while exploring one of New Zealand's most unique natural landmarks, with breathtaking 360-degree views of Auckland and the Hauraki Gulf from the summit.
+
+**Trip Details:**
+- Departs from Downtown Ferry Terminal, 99 Quay St - Pier 13 at 9:15am
+- Returns to Auckland around 3:00pm
+- Cost: $60 per person - [Purchase tickets →](https://example.com)
+
+**What to bring:**
+- All food and water needed for the day
+- Sturdy, comfortable walking shoes
+- Sunblock, hat, and sun protection
+- Weather-appropriate clothing
+
+**Important - Pest-Free Requirements:**
+
+Rangitoto Island is a pest-free sanctuary. To help protect this precious ecosystem:
+- Ensure your footwear, clothing and bags are clean and free of soil and seeds
+- Your lunch must be packed in a rodent-proof/sealed container (e.g. hard plastic)
+- No open bags or boxes will be allowed onboard - everything you bring must be sealed or zipped closed
+
+**About the Walk:**
+
+The walk to the summit is moderately easy, featuring well-maintained stairs and gravel tracks. It's suitable for most fitness levels and takes approximately 1 hour to reach the top, where you'll be rewarded with stunning panoramic views.
+
+<Link href="https://www.fullers.co.nz/destinations-and-experiences/destinations/rangitoto-island/" target="_blank">Learn more about Rangitoto Island →</Link>
+
+
