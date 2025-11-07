@@ -149,6 +149,10 @@
         {
           label: '- Community Events and Code Sprints',
           url: '/program/community-day'
+        },
+        {
+          label: '- Birds of a Feather',
+          url: '/program/bof'
         }
       ]
     },

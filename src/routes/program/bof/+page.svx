@@ -1,0 +1,21 @@
+---
+title: Birds of a Feather
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+</script>
+
+<Heading>Birds of a Feather</Heading>
+
+Birds of a Feather (BoF) sessions are informal, self-organized gatherings that take place during lunch times throughout the conference. These sessions provide an opportunity for attendees with shared interests to come together, discuss specific topics, share experiences, and collaborate on ideas in a relaxed setting.
+
+Anyone can propose and host a BoF session. We will make rooms available over lunch time.
+
+Have a topic you're passionate about? Submit a PR to [edit this page](https://github.com/osgeo-oceania/foss4g-2025/edit/main/src/routes/program/bof/%2Bpage.svx)!
+
+Watch this space for the BoF schedule and session proposals!
+
+Date    | Room    | Owner              | Topic
+------- | ------- | -------------------| -------------------------
+Wed     | xxx     | [your name here]   | [brief topic description]
