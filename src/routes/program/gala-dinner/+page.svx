@@ -15,7 +15,7 @@ title: Gala Dinner
 <Button class="w-50" href="https://ti.to/osgeo-oceania/foss4g-2025/with/conference-dinner">Purchase Tickets</Button>
 </div>
 
-**Wednesday 19th November - Evening**
+**Wednesday 19th November - 6pm until late**
 
 Join the global FOSS4G community for an unforgettable evening of celebration, connection, and entertainment at our Gala Dinner. This is the highlight social event of the conference, bringing together attendees from around the world for an evening of fine dining, live music, and celebration of our shared passion for open source geospatial technology.
 
@@ -30,10 +30,11 @@ The Hilton Auckland offers spectacular waterfront views and world-class dining f
 ## What to Expect
 
 - **Exceptional Dining**: Enjoy a multi-course dinner prepared by the Hilton's culinary team
-- **Live Music**: Dance and enjoy live entertainment throughout the evening
+- **Live Music & Dancing**: Dance the night away to live music from **Wolves and Ravens** on our dedicated dance floor
+- **Inspiring Speakers**: Hear from local GIS legend **Kim Ollivier** about his experiences in the geospatial industry, and from **Rua Puka**, our talented logo designer, about the story behind the FOSS4G 2025 conference logo
 - **Networking**: Connect with colleagues and friends from the global geospatial community
 - **Celebration**: Toast to another successful FOSS4G conference
-- **Stunning Views**: Take in Auckland's waterfront ambiance from one of the city's premier venues
+- **Stunning Views**: Take in amazing views of Auckland's harbour and city skyline from one of the waterfront's premier venues
 
 The Gala Dinner is a highlight of every FOSS4G conference - an opportunity to celebrate our community's achievements, forge new friendships, and create lasting memories with fellow open source enthusiasts from around the world.
 
