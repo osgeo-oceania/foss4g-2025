@@ -1,0 +1,33 @@
+---
+title: Travel Grant Program Breakfast
+---
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+</script>
+
+<Heading>Travel Grant Program Breakfast</Heading>
+
+**Wednesday 19th November - Morning**
+
+A special breakfast gathering exclusively for our Travel Grant recipients, providing an opportunity to meet fellow grant awardees and connect with members of the FOSS4G organizing team.
+
+## Venue
+
+Scarecrow
+33 Victoria Street East
+Auckland Central
+
+Scarecrow is a charming local café in the heart of Auckland, known for its welcoming atmosphere and excellent breakfast menu.
+
+## About This Event
+
+This breakfast is our way of welcoming Travel Grant recipients to FOSS4G 2025. It's a chance to:
+- Meet other grant recipients from around the world
+- Connect with organizers and community leaders
+- Share your experiences and learn from others
+- Start building meaningful connections within the FOSS4G community
+
+**This event is available exclusively to Travel Grant recipients.** If you've received a travel grant, you should have received details about this breakfast in your grant notification.
+
+We look forward to meeting you and hearing about your journey to FOSS4G!

@@ -111,8 +111,28 @@
           url: '/program/events'
         },
         {
+          label: '- Movie Screening',
+          url: '/program/movie-screening'
+        },
+        {
           label: '- B2B Event',
           url: '/program/b2b-event'
+        },
+        {
+          label: '- Ice Breaker',
+          url: '/program/ice-breaker'
+        },
+        {
+          label: '- Travel Grant Breakfast',
+          url: '/program/travel-grant-breakfast'
+        },
+        {
+          label: '- Gala Dinner',
+          url: '/program/gala-dinner'
+        },
+        {
+          label: '- GeoChicas',
+          url: '/program/geochicas'
         },
         {
           label: '- Rangitoto Day Trip',
