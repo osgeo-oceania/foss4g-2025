@@ -22,7 +22,11 @@ title: Adventures in Auckland
 ## Cultural & Nature Experiences
 
 ### [Auckland Zoo](https://www.aucklandzoo.co.nz/)
-Explore animals from all over the world, with interactive exhibits and kid-friendly activities.
+Explore animals from New Zealand and around the world, with interactive exhibits, kid-friendly activities and the Kiwi house.
+
+<Link target="_blank" href="https://www.google.com/maps/place/Auckland+Zoo/@-36.8641087,174.7171101,913m/">99 Motions Rd, Western Springs, Auckland 1022</Link>
+
+Easily accessibly by bus from the city - see the <Link target="_blank" href="https://at.govt.nz/bus-train-ferry/journey-planner">AT Travel Planner</Link>.
 
 **Admission Fees:**
 - **Adults:** ~NZD 24.00  
@@ -31,7 +35,9 @@ Explore animals from all over the world, with interactive exhibits and kid-frien
 - **Family Pass (2 adults + 2 children):** ~NZD 65.00  
 
 ### [Auckland Museum](https://www.aucklandmuseum.com/)
-Features Māori and Pacific Island cultural exhibits, with interactive kids’ sections.
+Features Māori and Pacific Island cultural exhibits, geophysical and cultural history of Auckland and more.
+
+<Link target="_blank" href="https://www.google.com/maps/place/Auckland+War+Memorial+Museum/@-36.8607134,174.7751789,913m/">Auckland Domain</Link>
 
 #### International Visitors:
 - **Adults:** NZD 32.00  
@@ -43,7 +49,28 @@ Features Māori and Pacific Island cultural exhibits, with interactive kids’ s
 - Entry by donation  
 
 #### Auckland Residents:
-- Free (proof of address required)  
+- Free (proof of address required)
+
+### [Auckland Art Gallery Toi o Tāmaki](https://www.aucklandartgallery.com/)
+
+New Zealand's largest art institution, featuring an impressive collection of New Zealand, Pacific, and international art. The gallery offers free admission to most exhibitions and is housed in a beautiful heritage building in the heart of the city.
+
+Very close to the FOSS4G conference centre and free for all visitors.
+
+<Link target="_blank" href="https://www.google.com/maps/place/Auckland+Art+Gallery/@-36.851354,174.7636621,916m/">Wellesley Street East, Auckland Central</Link>
+
+**Admission Fees:**
+- **General Admission:** Free
+- **Special Exhibitions:** Prices vary (typically NZD 10–25)
+- **Children:** Free
+
+**Opening Hours:**
+- **Daily:** 10:00 AM – 5:00 PM
+
+**Highlights:**
+- Extensive collection of New Zealand and Māori art
+- Family-friendly interactive spaces
+- Café with city views
 
 ### [Auckland Domain and Wintergardens](https://www.gardens.org.nz/visit/auckland-domain-wintergardens)
 Great for a relaxing stroll, picnics, and exploring the lush botanical gardens.  
@@ -58,7 +85,20 @@ Great for a relaxing stroll, picnics, and exploring the lush botanical gardens.
 
 ## Adventure Activities
 
+### [Devonport Village and North Head](https://devonport.co.nz/)
+
+Ferry ride from the CBD to the seaside suburb of Devonport. Walk to <Link target="_blank" href="https://new.aucklandcouncil.govt.nz/en/parks-recreation/find-park-beach/park-detail/1402.html">Maungauika / North Head</Link> to
+investigate war-time tunnels and stunning views of the harbour.
+
+**Ferry Ride (Round Trip):**  
+- **Adults:** ~NZD 7.40
+- **Children (5–15 years):** ~NZD 4.44 with a HOP card
+- **Children under 5:** Free  
+
+See the <Link target="_blank" href="https://at.govt.nz/bus-train-ferry/journey-planner">AT Travel Planner</Link> for timetables and fare details.
+
 ### [Waiheke Island](https://www.waiheke.co.nz/)
+
 Take a ferry to this stunning island for beaches, family-friendly vineyards, and walking trails.
 
 **Ferry Ride (Round Trip):**  
@@ -109,8 +149,8 @@ Incredible views of the city, plus the **SkyWalk** and **SkyJump** for thrill-se
 A volcanic island perfect for hiking and exploring caves (suitable for older children).
 
 **Ferry Ride (Round Trip):**  
-- **Adults:** ~NZD 39.00  
-- **Children (5–15 years):** ~NZD 19.50  
+- **Adults:** ~NZD 60
+- **Children (5–15 years):** ~NZD 27
 - **Children under 5:** Free  
 
 **Activities:**  
@@ -162,12 +202,3 @@ About an hour and a half south of Auckland, this enchanting set of ‘garden roo
 
 *Please note that prices are subject to change, and it's advisable to check the official websites for the most current information.*
 
-
-<!-- <InlineMap
-  bottom
-  initialViewState={{
-    longitude: 173.1,
-    latitude: -41.35,
-    zoom: 3.87,
-  }}
-/> -->
