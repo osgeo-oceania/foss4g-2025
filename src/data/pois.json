@@ -37,7 +37,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [174.7656241, -36.8533270]
+        "coordinates": [174.7656241, -36.853327]
       }
     },
     {
@@ -230,6 +230,36 @@
       "geometry": {
         "type": "Point",
         "coordinates": [174.766565, -36.849591]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "id": "icebreaker",
+        "name": "Maritime Room",
+        "event": "Icebreaker",
+        "date": "Nov 18",
+        "type": "event"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.7641304, -36.8423192]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "id": "rangitoto-island",
+        "name": "Pier 13",
+        "event": "Rangitoto Island Day Trip",
+        "date": "Nov 22",
+        "type": "event"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [174.7654545, -36.8425659]
       }
     }
   ]
