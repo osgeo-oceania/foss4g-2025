@@ -8,14 +8,34 @@ title: Birds of a Feather
 
 <Heading>Birds of a Feather</Heading>
 
-Birds of a Feather (BoF) sessions are informal, self-organized gatherings that take place during lunch times throughout the conference. These sessions provide an opportunity for attendees with shared interests to come together, discuss specific topics, share experiences, and collaborate on ideas in a relaxed setting.
+Birds of a Feather (BoF) sessions are informal, self-organized gatherings that take place during lunch times throughout the conference.
+These sessions provide an opportunity for attendees with shared interests to come together, discuss specific topics, share
+experiences, and collaborate on ideas in a relaxed setting.
 
-Anyone can propose and host a BoF session. We will make rooms available over lunch time.
+Anyone can propose and host a BoF session. We will make rooms available over lunch time (12.30 - 1.30 pm).
 
 Have a topic you're passionate about? Submit a PR to [edit this page](https://github.com/osgeo-oceania/foss4g-2025/edit/main/src/routes/program/bof/%2Bpage.svx)!
 
 Watch this space for the BoF schedule and session proposals!
 
+
 Date    | Room    | Owner              | Topic
 ------- | ------- | -------------------| -------------------------
-Wed     | xxx     | [your name here]   | [brief topic description]
+Wednesday    | WG403     | [your name here]   | [brief topic description]
+Wednesday    | WG308     | [your name here]   | [brief topic description]
+Wednesday    | WG126     | [your name here]   | [brief topic description]
+Wednesday    | WA220     | [your name here]   | [brief topic description]
+Wednesday    | WG404     | [your name here]   | [brief topic description]
+Wednesday    | WG607     | [your name here]   | [brief topic description]
+Thursday     | WG403     | [your name here]   | [brief topic description]
+Thursday     | WG308     | [your name here]   | [brief topic description]
+Thursday     | WG126     | [your name here]   | [brief topic description]
+Thursday     | WA220     | [your name here]   | [brief topic description]
+Thursday     | WG404     | [your name here]   | [brief topic description]
+Thursday     | WG607     | [your name here]   | [brief topic description]
+Friday       | WG403     | [your name here]   | [brief topic description]
+Friday       | WG308     | Michelle Roby, Alex Leith and Matt Hanson | Spatio-Temporal Asset Catalog (STAC)
+Friday       | WG126     | [your name here]   | [brief topic description]
+Friday       | WA220     | [your name here]   | [brief topic description]
+Friday       | WG404     | [your name here]   | [brief topic description]
+Friday       | WG607     | [your name here]   | [brief topic description]
