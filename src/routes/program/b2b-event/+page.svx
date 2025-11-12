@@ -4,17 +4,23 @@ title: B2B Event
 
 <script lang="ts">
   import Heading from '$components/Heading.svelte';
+  import AUTForum from '$images/aut_forum.jpg?enhanced';
+  import Button from '$components/Button.svelte';
 </script>
 
-<Heading>B2B Event</Heading>
+<enhanced:img src={AUTForum} />
 
-## Business to Business Networking
+<div class="flex flex-row justify-between">
+<Heading>Business to Business</Heading>
+<Button class="w-50" href="https://ti.to/osgeo-oceania/foss4g-2025/with/business-to-business-networking">Purchase Tickets</Button>
+</div>
+
 
 **Tuesday 18th November, 2:00pm - 5:30pm**
 
 Join us for an afternoon of networking over canapes and drinks with people inside and outside of the FOSS4G community. This special event will feature:
 
-- **Brief talks** from industry leaders
+- **Brief talks** from industry leaders, including Terria Co-Leader Ana Belgun
 - **Canapes and drinks** in a relaxed atmosphere
 - **Networking opportunities** to connect with professionals across the geospatial industry
 - **Community building** bringing together diverse perspectives
