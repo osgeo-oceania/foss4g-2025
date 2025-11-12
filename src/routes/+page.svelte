@@ -13,33 +13,6 @@
   import Card from '$components/Card.svelte';
   import Video from '$components/Video.svelte';
   import News from '$lib/news';
-
-  const whyAttends = [
-    {
-      number: '01',
-      title: 'cutting-edge-insights',
-      description:
-        'Gain firsthand knowledge from top geo experts and pioneers shaping the industry.'
-    },
-    {
-      number: '02',
-      title: 'hands-on learning',
-      description:
-        'Participate in interactive workshops, live demos, and deep-dive sessions to sharpen your skills.'
-    },
-    {
-      number: '03',
-      title: 'exclusive networking',
-      description:
-        'Connect with geo leaders, startups, and fellow professionals at community events.'
-    },
-    {
-      number: '04',
-      title: 'innovation showcase',
-      description:
-        'Explore geo solutions, from emerging startups to tech giants redefining the future.'
-    }
-  ];
 </script>
 
 <svelte:head>
@@ -204,8 +177,9 @@
           beautiful harbours, and fertile soils. They speak of the coming together of different iwi
           (tribes) to meet and trade.
         </div>
-        <div class="w-50">
+        <div class="flex flex-col gap-x-4 sm:w-[180px] sm:flex-row">
           <Button href="/map">Map</Button>
+          <Button href="/attend/nz-adventures">City Guide</Button>
         </div>
       </Card>
       <Card title="Our Conference Venue" color="secondary">
@@ -226,6 +200,10 @@
     <Video src="https://www.youtube-nocookie.com/embed/HNxqnUhL-yM?si=Z5-6exzf98KhoHZy" />
   </div>
 
+  <Heading>Keynote Speakers</Heading>
+
+  <Keynotes />
+
   <Heading>Agenda</Heading>
 
   <Agenda />
@@ -234,44 +212,9 @@
     <img src={Rangitoto} alt="Rangitoto" />
   </div>
 
-  <Heading>Keynote Speakers</Heading>
-
-  <Keynotes />
-
-  {#snippet whyAttendGrid(reason: (typeof whyAttends)[0], i: number)}
-    <div class="flex h-full w-full flex-1 py-1 text-white sm:p-2">
-      <div class="bg-primary h-full min-h-[240px] w-full overflow-clip rounded-4xl px-8 py-8">
-        <div class="pb-4 text-sm font-normal uppercase">{reason.title}</div>
-        <div
-          class="grid h-full grid-cols-2"
-          class:reverse-grid={i % 2 == 1}
-          class:sm:reverse-grid={i % 4 >= 2}
-        >
-          <div class="relative text-9xl font-medium">
-            <div class="text-secondary absolute -bottom-[20%]">
-              {reason.number}
-              <div class="from-primary absolute inset-0 bg-gradient-to-t to-transparent"></div>
-            </div>
-          </div>
-          <div class="-mt-[20%] mb-[20%] flex items-end justify-end text-sm">
-            {reason.description}
-          </div>
-        </div>
-      </div>
-    </div>
-  {/snippet}
-
-  <Heading class="mt-16 sm:mt-28">Why Attend?</Heading>
-
-  <div class="grid gap-2 pt-4 pb-8 sm:grid-cols-2 sm:gap-2 sm:pt-4 sm:pb-8">
-    {#each whyAttends as whyAttend, i}
-      {@render whyAttendGrid(whyAttend, i)}
-    {/each}
-  </div>
+  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   <Heading class="mt-16 sm:mt-28">Register Now</Heading>
-
-  <Countdown label="Conference starts in:" time="2025-11-17T09:00:00+12:00" />
 
   <Heading size="sm" class="mt-8 sm:mt-14">Ticket Options</Heading>
 
