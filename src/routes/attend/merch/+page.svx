@@ -1,0 +1,43 @@
+---
+title: Merchandise
+---
+
+<svelte:head>
+  <title>Merchandise</title>
+</svelte:head>
+
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+  import Button from '$components/Button.svelte';
+  import TeaTowel from '$images/tea-towel.jpg?enhanced';
+  import Mug from '$images/mug.jpeg?enhanced';
+  import Patch from '$images/patch.jpg?enhanced';
+</script>
+
+<div class="flex flex-row justify-between">
+<Heading>Merchandise</Heading>
+<Button class="w-50" href="https://ti.to/osgeo-oceania/foss4g-2025/with/foss4g-2025-embroided-patch,foss4g-2025-mug,foss4g-2025-tea-towel">Purchase</Button>
+</div>
+
+We are pleased to offer a range of merchandise. <Link target="_blank" href="https://ti.to/osgeo-oceania/foss4g-2025/with/foss4g-2025-embroided-patch,foss4g-2025-mug,foss4g-2025-tea-towel">Purchase online</Link> and pickup from the registration desk.
+
+<div class="p-10 bg-primary/5 rounded-4xl">
+
+    <div class="text-lg">Tea Towel – $NZ 25</div>
+    <div>Limited-run 100% linen tea towel with large colour FOSS4G 2025 logo print.</div>
+
+    <enhanced:img src={TeaTowel} />
+
+    <div class="text-lg">Mug – $NZ 20</div>
+    <div>Limited-run 330ml two-tone ceramic mug with FOSS4G 2025 logo. Matte white outer glaze with gloss teal inner glaze.</div>
+
+    <enhanced:img src={Mug} />
+
+    <div class="text-lg">Embroided Patch – $NZ 10</div>
+    <div>Limited-run circular embroided patch of the FOSS4G 2025 logo with iron-on backing, 7cm diameter.</div>
+
+    <enhanced:img src={Patch} />
+
+</div>

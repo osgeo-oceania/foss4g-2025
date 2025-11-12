@@ -69,6 +69,10 @@
           url: '/attend/register'
         },
         {
+          label: 'Merchandise',
+          url: '/attend/merch'
+        },
+        {
           label: 'Entry into New Zealand',
           url: '/attend/travelling-to-nz'
         },
