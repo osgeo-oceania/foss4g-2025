@@ -105,7 +105,7 @@ export default {
     name: 'GeoSolutions',
     logo: () => import('$images/logos/geosolutions.png?enhanced'),
     link: 'https://www.geosolutionsgroup.com/',
-    level: LEVELS.BRONZE
+    level: LEVELS.SILVER
   },
   wdc: {
     name: 'WDC',

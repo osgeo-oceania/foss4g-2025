@@ -200,6 +200,47 @@ export default {
             ]
           }
         },
+        {
+          id: 'arterial-roads-label',
+          source: 'auckland',
+          'source-layer': 'roads-arterial',
+          type: 'symbol',
+          minzoom: 14,
+          layout: {
+            'text-field': ['get', 'name'],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 16,
+            'symbol-placement': 'line',
+            'text-rotation-alignment': 'map',
+            'text-pitch-alignment': 'viewport'
+          },
+          paint: {
+            'text-color': '#666',
+            'text-halo-color': '#fff',
+            'text-halo-width': 2
+          }
+        },
+        {
+          id: 'minor-roads-label',
+          source: 'auckland',
+          'source-layer': 'roads',
+          type: 'symbol',
+          minzoom: 15,
+          filter: ['!', ['has', 'hway_num']],
+          layout: {
+            'text-field': ['get', 'name'],
+            'text-font': ['literal', ['BellTopo Sans Regular']],
+            'text-size': 12,
+            'symbol-placement': 'line',
+            'text-rotation-alignment': 'map',
+            'text-pitch-alignment': 'viewport'
+          },
+          paint: {
+            'text-color': '#888',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1.5
+          }
+        },
 
         {
           id: 'venue-highlight',
@@ -606,7 +647,7 @@ export default {
           id: 'entrance',
           source: 'pois',
           type: 'symbol',
-          filter: ["==", ['get', 'type'], 'venue'],
+          filter: ['==', ['get', 'type'], 'venue'],
           minzoom: 16,
           maxzoom: 24,
           layout: {
@@ -615,7 +656,7 @@ export default {
             'icon-image': 'entrance',
             'icon-anchor': 'bottom',
             'text-font': ['literal', ['BellTopo Sans Regular']],
-            'text-field': "Entrance",
+            'text-field': 'Entrance',
             'text-offset': [0, 0.6],
 
             'icon-size': 0.3
@@ -623,9 +664,9 @@ export default {
           paint: {
             'text-halo-color': '#fff',
             'text-halo-width': 2,
-            'text-halo-blur': 1,
+            'text-halo-blur': 1
           }
-        },
+        }
       ]
     } as StyleSpecification;
   },
