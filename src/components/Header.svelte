@@ -57,6 +57,10 @@
         {
           label: 'Terms and Conditions',
           url: '/attend/terms-and-conditions'
+        },
+        {
+          label: 'Sponsorship',
+          url: '/sponsorship'
         }
       ]
     },
@@ -157,10 +161,31 @@
       ]
     },
     {
-      label: 'Sponsorship',
-      url: '/sponsorship'
+      label: 'Schedule',
+      url: '/program/schedule'
     }
   ];
+
+  // Helper function to check if current page matches a menu item
+  function isMenuItemActive(menuItem: (typeof menuItems)[0]) {
+    // First check if any top-level menu item (without submenu) matches the current page
+    const topLevelMatch = menuItems.find(
+      (item) => !item.subMenu && item.url === page.route.id
+    );
+
+    // If there's a top-level match and this isn't it, don't highlight
+    if (topLevelMatch && topLevelMatch !== menuItem) return false;
+
+    // If current menu item is a direct match, highlight it
+    if (page.route.id === menuItem.url) return true;
+
+    // For items with submenus, check if any submenu item matches
+    if (menuItem.subMenu) {
+      return menuItem.subMenu.some((subItem) => page.route.id === subItem.url);
+    }
+
+    return false;
+  }
 </script>
 
 <div
@@ -180,7 +205,7 @@
             <div
               tabindex="0"
               role="button"
-              class={` hover:bg-success hover:text-primary flex items-center rounded-full border px-4 py-2 text-sm  font-light whitespace-nowrap transition-all duration-200 hover:cursor-pointer ${page.route.id === menuItem.url || menuItem.subMenu.some((subItem) => page.route.id === subItem.url) ? 'border-primary/50' : 'border-transparent'}`}
+              class={` hover:bg-success hover:text-primary flex items-center rounded-full border px-4 py-2 text-sm  font-light whitespace-nowrap transition-all duration-200 hover:cursor-pointer ${isMenuItemActive(menuItem) ? 'border-primary/50' : 'border-transparent'}`}
             >
               {menuItem.label}{#if menuItem.subMenu}
                 <span class="icon-[material-symbols-light--arrow-drop-down] -mx-1 h-5 w-5"></span>
@@ -207,7 +232,7 @@
           <Link
             aria-label={menuItem.label}
             href={menuItem.url}
-            class={` hover:bg-success hover:text-primary rounded-full border px-4 py-2 text-sm font-light whitespace-nowrap transition-all duration-200 ${page.route.id === menuItem.url ? 'border-primary/50' : 'border-transparent'}`}
+            class={` hover:bg-success hover:text-primary rounded-full border px-4 py-2 text-sm font-light whitespace-nowrap transition-all duration-200 ${isMenuItemActive(menuItem) ? 'border-primary/50' : 'border-transparent'}`}
             >{menuItem.label}
           </Link>
         {/if}
