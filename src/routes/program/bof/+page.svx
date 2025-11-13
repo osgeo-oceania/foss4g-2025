@@ -22,7 +22,7 @@ Watch this space for the BoF schedule and session proposals!
 Date    | Room    | Owner              | Topic
 ------- | ------- | -------------------| -------------------------
 Wednesday    | WG403     | [your name here]   | [brief topic description]
-Wednesday    | WG308     | [your name here]   | [brief topic description]
+Wednesday    | WG308     | Martin Tomko   | Academics and researchers @FOSS4G
 Wednesday    | WG126     | [your name here]   | [brief topic description]
 Wednesday    | WA220     | [your name here]   | [brief topic description]
 Wednesday    | WG404     | [your name here]   | [brief topic description]
