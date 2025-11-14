@@ -1,0 +1,45 @@
+name: Update Schedule Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch schedule from API
+        run: |
+          echo "Fetching schedule data from API..."
+          curl -f -o static/data/schedule.json https://talks.osgeo.org/foss4g-2025/schedule/export/schedule.json
+          echo "Schedule data fetched successfully"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet static/data/schedule.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in schedule data"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in schedule data"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/data/schedule.json
+          git commit -m "Update schedule data from API"
+          git push
+
+      - name: No changes
+        if: steps.check_changes.outputs.changed == 'false'
+        run: |
+          echo "Schedule is already up to date. No commit needed."
