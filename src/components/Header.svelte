@@ -77,6 +77,10 @@
           url: '/attend/merch'
         },
         {
+          label: 'Conference QField App',
+          url: '/attend/app'
+        },
+        {
           label: 'Entry into New Zealand',
           url: '/attend/travelling-to-nz'
         },
@@ -173,9 +177,7 @@
   // Helper function to check if current page matches a menu item
   function isMenuItemActive(menuItem: (typeof menuItems)[0]) {
     // First check if any top-level menu item (without submenu) matches the current page
-    const topLevelMatch = menuItems.find(
-      (item) => !item.subMenu && item.url === page.route.id
-    );
+    const topLevelMatch = menuItems.find((item) => !item.subMenu && item.url === page.route.id);
 
     // If there's a top-level match and this isn't it, don't highlight
     if (topLevelMatch && topLevelMatch !== menuItem) return false;
