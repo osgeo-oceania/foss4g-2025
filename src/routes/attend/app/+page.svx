@@ -1,0 +1,37 @@
+---
+title: QField App
+---
+
+<svelte:head>
+  <title>Conference QField Appp</title>
+</svelte:head>
+
+<script lang="ts">
+  import Heading from '$components/Heading.svelte';
+  import Link from '$components/Link.svelte';
+  import Card from '$components/Card.svelte';
+  import App from '$images/qfield_app.jpeg?enhanced';
+</script>
+
+
+<Heading>Conference QField App</Heading>
+
+<enhanced:img src={App} class="w-50/>
+
+QField is a mobile app for field data collection and editing, built on QGIS. It allows 
+you to access your QGIS projects and data on your mobile device, enabling you to work 
+in the field without needing an internet connection.
+
+OPENGIS.ch has generously provided us with a QField project providing a lot of information 
+about the conference:
+
+- Fully searchable conference schedule
+- multifloor rooms selector
+- Real-time public transport information
+- Points of interest - restaurants, hotels, bars, and more
+- A private memory layer - take your own notes, photos, videos, and audio
+
+Everything (except real-time data) works entirely offline.
+To get started, install QField (https://qfield.org/get) on your device and scan the QR code 
+or visit https://onelink.to/foss4g25
+
