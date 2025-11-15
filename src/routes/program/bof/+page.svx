@@ -28,7 +28,7 @@ Wednesday    | WA220     | [your name here]   | [brief topic description]
 Wednesday    | WG404     | [your name here]   | [brief topic description]
 Wednesday    | WG607     | [your name here]   | [brief topic description]
 Thursday     | WG403     | [your name here]   | [brief topic description]
-Thursday     | WG308     | [your name here]   | [brief topic description]
+Thursday     | WG308     | Anthony Lukach & Michelle Roby   | Source Cooperative Office Hours
 Thursday     | WG126     | [your name here]   | [brief topic description]
 Thursday     | WA220     | [your name here]   | [brief topic description]
 Thursday     | WG404     | [your name here]   | [brief topic description]
