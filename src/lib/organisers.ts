@@ -19,7 +19,7 @@ export default {
   },
   dawn: {
     name: 'Dawn Hendrick',
-    title: "Communications, Merch",
+    title: 'Communications, Merch',
     photo: () => import('$images/team/dawn.jpg?enhanced'),
     bio: "Starting her professional career as a geologist/seismic geophysicist, Dawn now has more than 40 years of cartographic experience. She runs her own part-time consultancy, DH Geodata Services, compiling maps for mining, engineering and environmental companies both in Australia and overseas. Though based in Tasmania, she was a Spatial Science Teacher with TafeNSW for 5 years, a position she retired from in 2023. She has run courses using QGIS for the Surveying and Spatial Sciences Institute (SSSI), now GeoSpatial Council of Australia (GCA), and for commercial operations with Alex Leith. She uses QGIS software with two volunteer organisations who would not have a mapping capability otherwise. Dawn attended the first FOSS4G SotM Oceania conference in Melbourne back in 2018 and has attended every year (except 2022 in Fiji) since then.  During COVID, she organised the Hobart Hub for 2020 and 2021. In November 2024, Dawn was an Organising Committee member for the Annual FOSS4G SotM Oceania Conference held in Hobart.<br/><a href='https://www.linkedin.com/in/dawnhendrick/' target=_blank>LinkedIn</a>"
   },
@@ -37,7 +37,7 @@ export default {
   },
   leo: {
     name: 'Leo Ghignone',
-    title: "Volunteers, Program, Merch",
+    title: 'Volunteers, Program, Merch',
     photo: () => import('$images/team/leo.jpg?enhanced'),
     bio: "Leo is an all-round helper for FOSS4G 2025 - doing the odd jobs, the invaluable bits ‘n’ pieces! By day, he is a computer scientist and software engineer. His focus and experience is in artificial intelligence as a data engineer for cloud-optimised geospatial data. Split between the AI and geospatial worlds, Leo’s current project naturally includes elements of both. He is thrilled to be part of a newly-established institute for international cooperation focused on developing technological tools and building expertise in local organisations operating in at-risk states in the Indo-Pacific region. His experience with FOSS4G started in 2023 with the Oceania conference in Auckland. Followed by volunteering to be part of the organising team for the 2024 edition in Hobart, where he lives, and is now excited to head back to Auckland for his first global FOSS4G experience.<br/><a href='https://www.linkedin.com/in/leo-ghignone/' target=_blank>LinkedIn</a>"
   },
@@ -50,50 +50,50 @@ export default {
   greg: {
     name: 'Greg Lauer',
     title: 'Sponsorship, Travel Grant Program',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "Greg is a Geographer and is passionate about open data and geospatial technology. Originally from Auckland and now living in Brisbane he has worked in a range of technical and consulting roles across multiple industries including defence, construction and mining. He was a founding Director of OSGeo Oceania, and has been actively involved in organising FOSS4G SotM Oceania events. Outside of work Greg is an avid off road enthusiast and frequent traveler, especially in the Pacific region."
+    photo: () => import('$images/team/greg.jpg?enhanced'),
+    bio: 'Greg is a Geographer and is passionate about open data and geospatial technology. Originally from Auckland and now living in Brisbane he has worked in a range of technical and consulting roles across multiple industries including defence, construction and mining. He was a founding Director of OSGeo Oceania, and has been actively involved in organising FOSS4G SotM Oceania events. Outside of work Greg is an avid off road enthusiast and frequent traveler, especially in the Pacific region.'
   },
   hamish: {
     name: 'Hamish Campbell',
-    title: 'Venues and Events',
+    title: 'Venues and Events, Website',
     photo: () => import('$images/team/hamish.jpg?enhanced'),
     bio: "Hamish is a software engineering manager who’s been working in and around geospatial tech for over 15 years. He’s been a committed contributor to open source software and chaired the FOSS4G Oceania committee that brought the regional conference to New Zealand in 2023. He recently started a new role as Head of Engineering for Urban Intelligence - building software for resilient communities in the face of a changing environment.<br/><a href='https://www.linkedin.com/in/hncampbell/' target=_blank>https://www.linkedin.com/in/hncampbell/</a><br/><a href='https://bsky.app/profile/polemic.nz' target=_blank>https://bsky.app/profile/polemic.nz</a>"
   },
   daniel: {
     name: 'Daniel Silk',
-    title: 'Registrations',
+    title: 'Registrations, Ticketing',
     photo: () => import('$images/team/daniel.jpg?enhanced'),
-    bio: "Daniel is a data engineering product owner who works with Aotearoa’s openly available aerial imagery, elevation and bathymetry data holdings. Daniel has been working with open geospatial technologies for over 10 years and was a founding director of OSGeo Oceania. He has also previously chaired the FOSS4G SotM Oceania conference series, bringing it to Wellington in 2019. Outside of work, he enjoys hiking in our native forests (tramping!), tackling a long list of DIY projects and trying to keep up with three kids."
+    bio: 'Daniel is a data engineering product owner who works with Aotearoa’s openly available aerial imagery, elevation and bathymetry data holdings. Daniel has been working with open geospatial technologies for over 10 years and was a founding director of OSGeo Oceania. He has also previously chaired the FOSS4G SotM Oceania conference series, bringing it to Wellington in 2019. Outside of work, he enjoys hiking in our native forests (tramping!), tackling a long list of DIY projects and trying to keep up with three kids.'
   },
   jessie: {
     name: 'Jessie Lindsay',
-    title: 'TGP Breakfast',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "Jessie is a geospatial analyst who has spent the past seven years working in environmental consulting. She’s passionate about using open source tools to tackle environmental challenges and is always keen to learn new approaches. At FOSS4G 2025 in Auckland, Jessie is excited to have the opportunity to work with the Travel Grant Program to help bring as many people to the FOSS4G conference as possible from across the world. When she’s not at a computer, you’ll usually find her out paddle boarding or tinkering with DIY electronics projects."
+    title: 'TGP Breakfast, Childcare Coordinator',
+    photo: () => import('$images/team/jessie.jpeg?enhanced'),
+    bio: 'Jessie is a geospatial analyst who has spent the past seven years working in environmental consulting. She’s passionate about using open source tools to tackle environmental challenges and is always keen to learn new approaches. At FOSS4G 2025 in Auckland, Jessie is excited to have the opportunity to work with the Travel Grant Program to help bring as many people to the FOSS4G conference as possible from across the world. When she’s not at a computer, you’ll usually find her out paddle boarding or tinkering with DIY electronics projects.'
   },
   martin: {
     name: 'Martin Tomko',
-    title: 'Academic Papers',
+    title: 'Academic Papers, Movie Night',
     photo: () => import('$images/team/martin.jpg?enhanced'),
-    bio: "Martin is a spatial information scientist at the Univeristy of Melbourne. He mostly does computational research in how people interact in and about space now and in the past, using and developing open-source tools. He has work on mobility, Geo question-answering, epidemiology, cultural heritage, and more."
+    bio: 'Martin is a spatial information scientist at the Univeristy of Melbourne. He mostly does computational research in how people interact in and about space now and in the past, using and developing open-source tools. He has work on mobility, Geo question-answering, epidemiology, cultural heritage, and more.'
   },
   ivana: {
     name: 'Dr Ivana Ivánová',
     title: 'Academic Papers',
     photo: () => import('$images/team/ivana.jpg?enhanced'),
-    bio: "Ivana currently works as a senior teaching & research academic Spatial Sciences at Curtin University in Perth, Australia. Ivana’s research interests and expertise are in spatial data quality, metadata and provenance of spatial resources, and spatial information infrastructures. In her teaching, she is an advocate and promotor of the FOSS4G tools, currently helping students to develop open standards-compliant geoweb applications. Ivana is an OSGeo Charter Member and represents Curtin University at UN-GGIM Academic Network. She also volunteers at OSGeo’s Geo4All where she coordinates the PostGIS training for the UN OpenGIS Initiative. Ivana co-chairs Open Geospatial Consortium (OGC)’s Domain Working Group on Data Quality, develops ISO standards for geographic information quality and convenes various advisory groups at ISO/TC211."
+    bio: 'Ivana currently works as a senior teaching & research academic Spatial Sciences at Curtin University in Perth, Australia. Ivana’s research interests and expertise are in spatial data quality, metadata and provenance of spatial resources, and spatial information infrastructures. In her teaching, she is an advocate and promotor of the FOSS4G tools, currently helping students to develop open standards-compliant geoweb applications. Ivana is an OSGeo Charter Member and represents Curtin University at UN-GGIM Academic Network. She also volunteers at OSGeo’s Geo4All where she coordinates the PostGIS training for the UN OpenGIS Initiative. Ivana co-chairs Open Geospatial Consortium (OGC)’s Domain Working Group on Data Quality, develops ISO standards for geographic information quality and convenes various advisory groups at ISO/TC211.'
   },
   david: {
     name: 'David Ramiro',
-    title: 'Website',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
+    title: 'Website, Map',
+    photo: () => import('$images/team/rami.jpeg?enhanced'),
     bio: "So much to say - we're still putting the words together!"
   },
   phoebe: {
     name: 'Phoebe Adams',
     title: 'Volunteers',
     photo: () => import('$images/team/phoebe.jpg?enhanced'),
-    bio: "Phoebe is a contributor to many open source projects, in the Geospatial space, mostly OpenStreetMap. Currently living in Auckland, she is studying towards a Bachelor of Computer and Information Science majoring in Software Development and Digital Communication at AUT."
+    bio: 'Phoebe is a contributor to many open source projects, in the Geospatial space, mostly OpenStreetMap. Currently living in Auckland, she is studying towards a Bachelor of Computer and Information Science majoring in Software Development and Digital Communication at AUT.'
   },
   michel: {
     name: 'Michel M Nzikou',
@@ -103,24 +103,6 @@ export default {
   },
   byron: {
     name: 'Byron Cochrane',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still putting the words together!"
-  },
-  lani: {
-    name: 'Lanieta Rokotuiwakaya (Lani)',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still putting the words together!"
-  },
-  colin: {
-    name: 'Colin Mazengarb',
-    title: 'Committee Member',
-    photo: () => import('$images/team/placeholder.jpg?enhanced'),
-    bio: "So much to say - we're still putting the words together!"
-  },
-  anne: {
-    name: 'Anne Harper',
     title: 'Committee Member',
     photo: () => import('$images/team/placeholder.jpg?enhanced'),
     bio: "So much to say - we're still putting the words together!"
