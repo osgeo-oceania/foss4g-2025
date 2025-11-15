@@ -23,7 +23,7 @@ Date    | Room    | Owner              | Topic
 ------- | ------- | -------------------| -------------------------
 Wednesday    | WG403     | [your name here]   | [brief topic description]
 Wednesday    | WG308     | Martin Tomko   | Academics and researchers @FOSS4G
-Wednesday    | WG126     | [your name here]   | [brief topic description]
+Wednesday    | WG126     | [Marian Neagul, Vasile Crăciuescu]   | [EOPECA+ - ESA EO Exploitation Platform Common Architecture ]
 Wednesday    | WA220     | [your name here]   | [brief topic description]
 Wednesday    | WG404     | [your name here]   | [brief topic description]
 Wednesday    | WG607     | [your name here]   | [brief topic description]
