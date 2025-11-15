@@ -31,7 +31,7 @@ Thursday     | WG403     | [your name here]   | [brief topic description]
 Thursday     | WG308     | Anthony Lukach & Michelle Roby   | Source Cooperative Office Hours
 Thursday     | WG126     | [your name here]   | [brief topic description]
 Thursday     | WA220     | [your name here]   | [brief topic description]
-Thursday     | WG404     | [your name here]   | [brief topic description]
+Thursday     | WG404     | [Oscar So]   | [Building and Sustaining Community Groups]
 Thursday     | WG607     | Leo Hardtke   |  Reproducible Systems and workflows
 Friday       | WG403     | [your name here]   | [brief topic description]
 Friday       | WG308     | Michelle Roby, Alex Leith and Matt Hanson | Spatio-Temporal Asset Catalog (STAC)
