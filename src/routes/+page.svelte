@@ -187,10 +187,10 @@
         </p>
         <h4>Presentation Videos</h4>
         <p>
-          Presentations will be posted to the <Link
-            href="https://www.youtube.com/@FOSS4G/playlists"
-            target="_blank">FOSS4G YouTube Channel</Link
-          > when they become available
+          Presentations from the conference can be rewatched through <Link
+            href="https://youtube.com/playlist?list=PLlZzWSPAR5GYPAGSgs1Z6ydhoVgL7CAHd&si=IHYkEW5LS8qMaKdC"
+            target="_blank">this playlist</Link> from the <Link href="https://www.youtube.com/@foss4g-sotm-oceania"
+            target="_blank">FOSS4G Oceania YouTube Channel</Link>
         </p>
         <h4>Post-conference Survey</h4>
         <p>
